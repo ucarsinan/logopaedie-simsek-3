@@ -1,0 +1,184 @@
+<section class="kontakt" id="kontakt" aria-labelledby="kontakt-heading">
+  <div class="container">
+    <header class="kontakt__header">
+      <span class="label reveal">Kontakt</span>
+      <h2 class="section-title reveal reveal-delay-1" id="kontakt-heading">Termin anfragen</h2>
+      <p class="section-subtitle reveal reveal-delay-2">Nehmen Sie Kontakt auf – wir beraten Sie gerne und finden gemeinsam den passenden Therapieplatz für Sie oder Ihr Kind.</p>
+    </header>
+    <div class="kontakt__inner">
+      <form class="kontakt__form reveal" id="contactForm" novalidate aria-label="Terminanfrage">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="vorname">Vorname <span class="required" aria-hidden="true">*</span></label>
+            <input class="form-input" type="text" id="vorname" name="vorname" autocomplete="given-name" required placeholder="Max" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nachname">Nachname <span class="required" aria-hidden="true">*</span></label>
+            <input class="form-input" type="text" id="nachname" name="nachname" autocomplete="family-name" required placeholder="Mustermann" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">E-Mail <span class="required" aria-hidden="true">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" autocomplete="email" required placeholder="max@beispiel.de" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="telefon">Telefon</label>
+          <input class="form-input" type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+49 203 ..." />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="bereich">Therapiebereich</label>
+          <select class="form-select" id="bereich" name="bereich">
+            <option value="">Bitte wählen...</option>
+            <option value="sprache">Sprachstörungen</option>
+            <option value="sprechen">Sprechstörungen</option>
+            <option value="stimme">Stimmstörungen</option>
+            <option value="schlucken">Schluckstörungen (Dysphagie)</option>
+            <option value="allgemein">Allgemeine Beratung</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="nachricht">Ihre Nachricht</label>
+          <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Schildern Sie kurz Ihr Anliegen – wir melden uns schnellstmöglich bei Ihnen."></textarea>
+        </div>
+        <p class="form-disclaimer"><span class="form-disclaimer__asterisk">*</span> Pflichtfelder. Ihre Daten werden vertraulich behandelt und nicht weitergegeben.</p>
+        <button type="submit" id="submitBtn" class="btn btn-accent form-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Anfrage senden
+        </button>
+      </form>
+      <div class="kontakt__info">
+        <div class="contact-card reveal reveal-delay-1">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card__title">Telefon</div>
+            <div class="contact-card__value"><a href="tel:+4920334868690">0203 – 34 86 86 90</a></div>
+            <div class="contact-card__note">Mo–Fr 08:00–18:00 Uhr</div>
+          </div>
+        </div>
+        <div class="contact-card reveal reveal-delay-2">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-card__title">E-Mail</div>
+            <div class="contact-card__value"><a href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a></div>
+            <div class="contact-card__note">Wir antworten innerhalb von 24 Stunden</div>
+          </div>
+        </div>
+        <div class="contact-card reveal reveal-delay-3">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-card__title">Adresse</div>
+            <div class="contact-card__value">Tonhallenstraße 21, 47051 Duisburg</div>
+            <div class="contact-card__note">3. OG · Aufzug vorhanden · 2 min. vom HBf</div>
+          </div>
+        </div>
+        <div class="contact-card reveal reveal-delay-4">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card__title">Sprachen</div>
+            <div class="contact-card__value">Deutsch &amp; Türkçe</div>
+            <div class="contact-card__note">Therapy available in both languages</div>
+          </div>
+        </div>
+        <div class="insurance-card">
+          <p><strong>Kassenrezept oder Selbstzahler?</strong><br>Wir arbeiten mit allen gesetzlichen Krankenkassen und nehmen auch Privatpatienten sowie Selbstzahler an. Bei Fragen zur Abrechnung beraten wir Sie gerne.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const submitBtn = document.getElementById('submitBtn');
+    const originalBtnClone = submitBtn.cloneNode(true);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = '✓ Anfrage gesendet!';
+      btn.style.background = 'var(--color-primary)';
+      btn.disabled = true;
+      setTimeout(() => {
+        const restored = originalBtnClone.cloneNode(true);
+        btn.replaceWith(restored);
+      }, 4000);
+    });
+  }
+</script>
+
+<style>
+  .kontakt { padding: 96px 0; background: var(--color-bg-alt); }
+  .kontakt__header {
+    text-align: center; margin-bottom: 56px;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .kontakt__inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+  }
+  @media (max-width: 768px) { .kontakt__inner { grid-template-columns: 1fr; } }
+  .kontakt__form {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 36px; box-shadow: var(--shadow-sm);
+  }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .form-group:last-of-type { margin-bottom: 0; }
+  .form-label { font-size: .875rem; font-weight: 600; color: var(--color-text); }
+  .form-label .required { color: var(--color-accent); }
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%; padding: 12px 16px;
+    border: 1.5px solid var(--color-border); border-radius: var(--radius-sm);
+    font-family: var(--font-body); font-size: .9375rem; color: var(--color-text);
+    background: var(--color-bg); transition: border-color .2s, box-shadow .2s;
+    outline: none; min-height: 48px;
+  }
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(42, 127, 111, .12);
+  }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+  .form-submit { width: 100%; margin-top: 24px; justify-content: center; }
+  .form-disclaimer {
+    font-size: .8125rem; color: var(--color-text-muted); line-height: 1.5; margin-top: 4px;
+  }
+  .form-disclaimer__asterisk { color: var(--color-accent); }
+  .kontakt__info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .contact-card__icon {
+    width: 44px; height: 44px; background: var(--color-primary-light);
+    border-radius: var(--radius-sm); display: flex; align-items: center;
+    justify-content: center; color: var(--color-primary); flex-shrink: 0;
+  }
+  .contact-card__title {
+    font-size: .8rem; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--color-text-light); margin-bottom: 4px;
+  }
+  .contact-card__value { font-size: .9375rem; font-weight: 600; color: var(--color-text); }
+  .contact-card__value a { color: var(--color-primary); }
+  .contact-card__value a:hover { text-decoration: underline; }
+  .contact-card__note { font-size: .8125rem; color: var(--color-text-muted); margin-top: 2px; }
+  .insurance-card {
+    background: var(--color-accent-light);
+    border: 1px solid rgba(196, 113, 79, .2);
+    border-radius: var(--radius-md);
+    padding: 24px;
+  }
+  .insurance-card p { font-size: .9375rem; color: var(--color-text); line-height: 1.7; }
+</style>
