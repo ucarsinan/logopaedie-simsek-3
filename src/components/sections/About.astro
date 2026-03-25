@@ -1,0 +1,73 @@
+---
+// No props
+---
+
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about__inner">
+      <div class="about__quote reveal">
+        „Exzellente Therapie entsteht nur dort, wo sich <strong>Therapeuten wohlfühlen</strong> – und Patienten sich <strong>verstanden fühlen</strong>."
+      </div>
+      <div class="about__text">
+        <div class="reveal reveal-delay-1">
+          <span class="label">Über die Praxis</span>
+          <h2 class="section-title" id="about-heading" style="margin-top:12px;margin-bottom:16px;">Logopädie mit Herz und Verstand</h2>
+          <p class="section-subtitle">
+            Unter der Leitung der staatlich geprüften Logopädin <strong>Emel Şimşek-Uçar</strong> bietet unsere moderne Praxis fundierte Diagnostik, Beratung und Therapie für Menschen aller Altersgruppen – von der frühen Kindheit bis ins Seniorenalter.
+          </p>
+        </div>
+        <div class="about__stats reveal reveal-delay-2">
+          <div class="stat-card">
+            <div class="stat-card__number">100%</div>
+            <div class="stat-card__label">Zweisprachige Versorgung DE &amp; TR</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">4</div>
+            <div class="stat-card__label">Therapiebereiche für alle Altersgruppen</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">2 min</div>
+            <div class="stat-card__label">vom Duisburger Hauptbahnhof</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number">3. OG</div>
+            <div class="stat-card__label">Barrierefrei per Aufzug erreichbar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave-divider" aria-hidden="true" style="margin-top:64px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#F3EDE5"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .about { padding: 96px 0 80px; background: var(--color-bg); }
+  .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about__quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem,3vw,2.5rem);
+    font-weight: 400; font-style: italic; line-height: 1.3;
+    color: var(--color-text); position: relative; padding-left: 28px;
+  }
+  .about__quote::before {
+    content: ''; position: absolute; left: 0; top: 6px; bottom: 6px;
+    width: 4px; background: var(--color-accent); border-radius: 4px;
+  }
+  .about__quote strong { font-weight: 600; font-style: normal; color: var(--color-primary); }
+  .about__text { display: flex; flex-direction: column; gap: 20px; }
+  .about__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+  .stat-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm);
+  }
+  .stat-card__number {
+    font-family: var(--font-display); font-size: 2rem; font-weight: 700;
+    color: var(--color-primary); line-height: 1; margin-bottom: 4px;
+  }
+  .stat-card__label { font-size: .8125rem; color: var(--color-text-muted); font-weight: 500; }
+  @media (max-width: 768px) { .about__inner { grid-template-columns: 1fr; gap: 48px; } }
+</style>
