@@ -98,19 +98,22 @@
 <script>
   const form = document.getElementById('contactForm');
   if (form) {
-    const submitBtn = document.getElementById('submitBtn');
-    const originalBtnClone = submitBtn.cloneNode(true);
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      btn.textContent = '✓ Anfrage gesendet!';
-      btn.style.background = 'var(--color-primary)';
-      btn.disabled = true;
-      setTimeout(() => {
-        const restored = originalBtnClone.cloneNode(true);
-        btn.replaceWith(restored);
-      }, 4000);
-    });
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement | null;
+    if (submitBtn) {
+      const originalBtnClone = submitBtn.cloneNode(true);
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn') as HTMLButtonElement | null;
+        if (!btn) return;
+        btn.textContent = '✓ Anfrage gesendet!';
+        btn.style.background = 'var(--color-primary)';
+        btn.disabled = true;
+        setTimeout(() => {
+          const restored = originalBtnClone.cloneNode(true);
+          btn.replaceWith(restored);
+        }, 4000);
+      });
+    }
   }
 </script>
 
