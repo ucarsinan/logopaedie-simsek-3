@@ -1,17 +1,30 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro';
+import Services from '../components/sections/Services.astro';
+import Bilingual from '../components/sections/Bilingual.astro';
+import Team from '../components/sections/Team.astro';
+import Praxis from '../components/sections/Praxis.astro';
+import Karriere from '../components/sections/Karriere.astro';
+import Kontakt from '../components/sections/Kontakt.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Logopädie Şimşek – Sprechen. Verstehen. Verbinden." description="Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR.">
+  <Header />
+  <Nav />
+  <main>
+    <Hero />
+    <About />
+    <Services />
+    <Bilingual />
+    <Team />
+    <Praxis />
+    <Karriere />
+    <Kontakt />
+  </main>
+  <Footer />
+</Layout>
