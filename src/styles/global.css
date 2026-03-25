@@ -3,26 +3,26 @@
 /* ─── Tailwind v4 Theme Tokens ─── */
 @theme {
   /* Colors */
-  --color-bg: #FAF8F5;
-  --color-bg-alt: #F3EDE5;
-  --color-surface: #FFFFFF;
-  --color-surface-2: #F0EBE3;
-  --color-primary: #2A7F6F;
-  --color-primary-dark: #1F6056;
-  --color-primary-light: #E6F4F1;
-  --color-accent: #C4714F;
-  --color-accent-dark: #A85D3D;
-  --color-accent-light: #F9EDE7;
-  --color-text: #1C1916;
-  --color-text-muted: #6B6560;
-  --color-text-light: #9A928D;
-  --color-border: #E2D8CF;
-  --color-topbar-green: #8DC63F;
-  --color-topbar-dark: #1C2A38;
+  --color-bg: #faf8f5;
+  --color-bg-alt: #f3ede5;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0ebe3;
+  --color-primary: #2a7f6f;
+  --color-primary-dark: #1f6056;
+  --color-primary-light: #e6f4f1;
+  --color-accent: #c4714f;
+  --color-accent-dark: #a85d3d;
+  --color-accent-light: #f9ede7;
+  --color-text: #1c1916;
+  --color-text-muted: #6b6560;
+  --color-text-light: #9a928d;
+  --color-border: #e2d8cf;
+  --color-topbar-green: #8dc63f;
+  --color-topbar-dark: #1c2a38;
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
 
   /* Border radius */
   --radius-sm: 8px;
@@ -30,9 +30,9 @@
   --radius-lg: 24px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(28,25,22,.06);
-  --shadow-md: 0 4px 24px rgba(28,25,22,.08);
-  --shadow-lg: 0 12px 48px rgba(28,25,22,.12);
+  --shadow-sm: 0 2px 8px rgba(28, 25, 22, 0.06);
+  --shadow-md: 0 4px 24px rgba(28, 25, 22, 0.08);
+  --shadow-lg: 0 12px 48px rgba(28, 25, 22, 0.12);
 }
 
 /* ─── Layout Constants (used in calc() and JavaScript) ─── */
@@ -43,12 +43,18 @@
   --noise-bg: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C%2Ffilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'%2F%3E%3C%2Fsvg%3E");
 }
 @media (max-width: 768px) {
-  :root { --header-h: 64px; --nav-h: 48px; }
+  :root {
+    --header-h: 64px;
+    --nav-h: 48px;
+  }
 }
 
 /* ─── Base ─── */
 @layer base {
-  html { scroll-behavior: smooth; font-size: 16px; }
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
   body {
     font-family: var(--font-body);
     background: var(--color-bg);
@@ -73,9 +79,9 @@
   padding: 13px 26px;
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
   cursor: pointer;
   border: 2px solid transparent;
@@ -91,7 +97,7 @@
     background: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(42,127,111,.3);
+    box-shadow: 0 6px 20px rgba(42, 127, 111, 0.3);
   }
 }
 
@@ -103,7 +109,7 @@
     background: var(--color-accent-dark);
     border-color: var(--color-accent-dark);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(196,113,79,.3);
+    box-shadow: 0 6px 20px rgba(196, 113, 79, 0.3);
   }
 }
 
@@ -121,9 +127,9 @@
 @utility btn-outline-white {
   background: transparent;
   color: #fff;
-  border-color: rgba(255,255,255,.5);
+  border-color: rgba(255, 255, 255, 0.5);
   &:hover {
-    background: rgba(255,255,255,.12);
+    background: rgba(255, 255, 255, 0.12);
     border-color: #fff;
   }
 }
@@ -132,7 +138,9 @@
 @utility reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity .65s ease, transform .65s ease;
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
 }
 
 @utility reveal-visible {
@@ -140,12 +148,26 @@
   transform: none;
 }
 
-@utility reveal-delay-1 { transition-delay: .1s; }
-@utility reveal-delay-2 { transition-delay: .2s; }
-@utility reveal-delay-3 { transition-delay: .3s; }
-@utility reveal-delay-4 { transition-delay: .4s; }
-@utility reveal-delay-5 { transition-delay: .5s; }
+@utility reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+@utility reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+@utility reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+@utility reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+@utility reveal-delay-5 {
+  transition-delay: 0.5s;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
