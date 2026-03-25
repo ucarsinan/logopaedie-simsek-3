@@ -37,55 +37,31 @@ const icons = [
 ];
 ---
 
-<section class="services" id="leistungen" aria-labelledby="services-heading">
+<section class="pt-20 pb-24 bg-bg-alt" id="leistungen" aria-labelledby="services-heading">
   <div class="container">
-    <header class="services__header">
-      <span class="label reveal">Unser Leistungsangebot</span>
-      <h2 class="section-title reveal reveal-delay-1" id="services-heading">Alle Bereiche der Logopädie</h2>
-      <p class="section-subtitle reveal reveal-delay-2">Wir behandeln das vollständige Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.</p>
+    <header class="text-center mb-14 flex flex-col items-center gap-4">
+      <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">Unser Leistungsangebot</span>
+      <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="services-heading">Alle Bereiche der Logopädie</h2>
+      <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-150 reveal reveal-delay-2">Wir behandeln das vollständige Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.</p>
     </header>
-    <div class="services__grid">
+    <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1">
       {services.map((service, i) => (
-        <article class={`service-card reveal${i > 0 ? ` reveal-delay-${i}` : ''}`}>
-          <div class="service-card__icon" aria-hidden="true" set:html={icons[i]} />
-          <h3 class="service-card__title">{service.title}</h3>
-          <p class="service-card__text">{service.text}</p>
-          <div class="service-card__tags">
-            {service.tags.map(tag => <span class="tag">{tag}</span>)}
+        <article class={`bg-surface border border-border rounded-md p-8 shadow-sm transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary reveal${i > 0 ? ` reveal-delay-${i}` : ''}`}>
+          <div class="w-13 h-13 rounded-sm bg-primary-light flex items-center justify-center mb-5 text-primary" aria-hidden="true" set:html={icons[i]} />
+          <h3 class="font-display text-xl font-semibold mb-2.5 text-text">{service.title}</h3>
+          <p class="text-[.9375rem] text-text-muted leading-[1.65]">{service.text}</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            {service.tags.map(tag => (
+              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
+            ))}
           </div>
         </article>
       ))}
     </div>
   </div>
-  <div class="wave-divider services-wave" aria-hidden="true">
+  <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full mt-20" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
       <path d="M0,30 C360,60 1080,0 1440,35 L1440,60 L0,60 Z" fill="#2A7F6F"/>
     </svg>
   </div>
 </section>
-
-<style>
-  .services { padding: 80px 0 96px; background: var(--color-bg-alt); }
-  .services__header {
-    text-align: center; margin-bottom: 56px;
-    display: flex; flex-direction: column; align-items: center; gap: 16px;
-  }
-  .services__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
-  @media (max-width: 640px) { .services__grid { grid-template-columns: 1fr; } }
-  .service-card {
-    background: var(--color-surface); border: 1px solid var(--color-border);
-    border-radius: var(--radius-md); padding: 32px; box-shadow: var(--shadow-sm);
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-primary); }
-  .service-card__icon {
-    width: 52px; height: 52px; border-radius: var(--radius-sm);
-    background: var(--color-primary-light);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 20px; color: var(--color-primary);
-  }
-  .service-card__title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; color: var(--color-text); }
-  .service-card__text { font-size: .9375rem; color: var(--color-text-muted); line-height: 1.65; }
-  .service-card__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-  .services-wave { margin-top: 80px; }
-</style>

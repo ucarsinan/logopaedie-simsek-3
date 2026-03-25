@@ -2,69 +2,41 @@
 // No props
 ---
 
-<section class="bilingual" aria-labelledby="bilingual-heading">
+<section
+  class="py-24 bg-primary relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_80%_50%,rgba(255,255,255,.06)_0%,transparent_60%)]"
+  aria-labelledby="bilingual-heading">
   <div class="container">
-    <div class="bilingual__inner">
-      <div class="bilingual__text">
-        <span class="label reveal">Unser Alleinstellungsmerkmal</span>
-        <h2 class="section-title reveal reveal-delay-1" id="bilingual-heading">Zweisprachige Therapie –<br>Deutsch &amp; Türkisch</h2>
-        <p class="section-subtitle reveal reveal-delay-2">Wir bieten Diagnostik, Beratung und Therapie <strong>vollständig in beiden Sprachen</strong> an. Besonders in der Frühförderung zweisprachig aufwachsender Kinder ist diese interkulturelle Kompetenz von unschätzbarem Wert und schließt eine wichtige Versorgungslücke im Ruhrgebiet.</p>
-        <a href="#kontakt" class="btn btn-outline-white bilingual__cta-btn reveal reveal-delay-3">Beratungsgespräch anfragen</a>
+    <div class="relative grid grid-cols-2 gap-20 items-center max-[768px]:grid-cols-1 max-[768px]:gap-12">
+      <div class="text-white">
+        <span class="text-xs font-semibold tracking-widest uppercase text-white/70 reveal">Unser Alleinstellungsmerkmal</span>
+        <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-white mt-4 mb-4 reveal reveal-delay-1" id="bilingual-heading">Zweisprachige Therapie –<br>Deutsch &amp; Türkisch</h2>
+        <p class="text-[1.0625rem] text-white/80 leading-[1.7] max-w-120 reveal reveal-delay-2">Wir bieten Diagnostik, Beratung und Therapie <strong>vollständig in beiden Sprachen</strong> an. Besonders in der Frühförderung zweisprachig aufwachsender Kinder ist diese interkulturelle Kompetenz von unschätzbarem Wert und schließt eine wichtige Versorgungslücke im Ruhrgebiet.</p>
+        <a href="#kontakt" class="btn btn-outline-white mt-8 reveal reveal-delay-3">Beratungsgespräch anfragen</a>
       </div>
-      <div class="bilingual__card reveal reveal-delay-2">
-        <div class="lang-block">
-          <div class="lang-block__flag">
+      <div class="bg-white/10 border border-white/20 rounded-lg p-10 backdrop-blur-md reveal reveal-delay-2">
+        <div class="py-5">
+          <div class="inline-flex items-center gap-2 text-[.8rem] font-bold tracking-[.08em] uppercase text-white/60 mb-2.5">
             <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><rect width="18" height="14" rx="2" fill="#eee"/><rect width="18" height="4.67" fill="#000"/><rect y="4.67" width="18" height="4.67" fill="#D00"/><rect y="9.33" width="18" height="4.67" fill="#FFCE00"/></svg>
             Deutsch
           </div>
-          <p class="lang-block__text">„Wir sprechen Ihre Sprache – und meinen das wortwörtlich."</p>
+          <p class="font-display text-[1.3rem] italic text-white leading-[1.45]">„Wir sprechen Ihre Sprache – und meinen das wortwörtlich."</p>
         </div>
-        <div class="lang-block">
-          <div class="lang-block__flag">
+        <div class="py-5 border-t border-white/15">
+          <div class="inline-flex items-center gap-2 text-[.8rem] font-bold tracking-[.08em] uppercase text-white/60 mb-2.5">
             <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><rect width="18" height="14" rx="2" fill="#E30A17"/><circle cx="7" cy="7" r="3.5" fill="#fff"/><circle cx="8.5" cy="7" r="2.8" fill="#E30A17"/><polygon points="11.5,7 12.8,5.5 12.8,8.5" fill="#fff"/></svg>
             Türkçe
           </div>
-          <p class="lang-block__text">„Dilinizi konuşuyoruz – her anlamda."</p>
+          <p class="font-display text-[1.3rem] italic text-white leading-[1.45]">„Dilinizi konuşuyoruz – her anlamda."</p>
         </div>
-        <div class="bilingual__card-footer">
-          <p>Auch Hausbesuche in Duisburg und Umgebung sind Teil unseres Serviceangebots – für mehr Flexibilität und Komfort.</p>
+        <div class="pt-6 border-t border-white/15">
+          <p class="text-sm text-white/75 leading-[1.6]">Auch Hausbesuche in Duisburg und Umgebung sind Teil unseres Serviceangebots – für mehr Flexibilität und Komfort.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="wave-divider bilingual-wave" aria-hidden="true">
+  <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full mt-16" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
       <path d="M0,20 C400,60 1040,0 1440,25 L1440,60 L0,60 Z" fill="#FAF8F5"/>
     </svg>
   </div>
 </section>
-
-<style>
-  .bilingual { padding: 96px 0; background: var(--color-primary); position: relative; overflow: hidden; }
-  .bilingual::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 80% 50%,rgba(255,255,255,.06) 0%,transparent 60%);
-  }
-  .bilingual__inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-  .bilingual__text { color: #fff; }
-  .bilingual__text .label { color: rgba(255,255,255,.7); }
-  .bilingual__text .section-title { color: #fff; margin: 16px 0; }
-  .bilingual__text .section-subtitle { color: rgba(255,255,255,.8); max-width: 480px; }
-  .bilingual__cta-btn { margin-top: 32px; }
-  .bilingual__card {
-    background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.20);
-    border-radius: var(--radius-lg); padding: 40px; backdrop-filter: blur(12px);
-  }
-  .lang-block { padding: 20px 0; }
-  .lang-block + .lang-block { border-top: 1px solid rgba(255,255,255,.15); }
-  .lang-block__flag {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-    color: rgba(255,255,255,.6); margin-bottom: 10px;
-  }
-  .lang-block__text { font-family: var(--font-display); font-size: 1.3rem; font-style: italic; color: #fff; line-height: 1.45; }
-  .bilingual__card-footer { padding-top: 24px; border-top: 1px solid rgba(255,255,255,.15); }
-  .bilingual__card-footer p { font-size: .875rem; color: rgba(255,255,255,.75); line-height: 1.6; }
-  .bilingual-wave { margin-top: 64px; }
-  @media (max-width: 768px) { .bilingual__inner { grid-template-columns: 1fr; gap: 48px; } }
-</style>

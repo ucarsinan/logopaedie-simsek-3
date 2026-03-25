@@ -2,72 +2,44 @@
 // No props
 ---
 
-<section class="about" id="about" aria-labelledby="about-heading">
+<section class="pt-24 pb-20 bg-bg" id="about" aria-labelledby="about-heading">
   <div class="container">
-    <div class="about__inner">
-      <div class="about__quote reveal">
+    <div class="grid grid-cols-2 gap-20 items-center max-[768px]:grid-cols-1 max-[768px]:gap-12">
+      <div class="font-display text-[clamp(1.75rem,3vw,2.5rem)] font-normal italic leading-[1.3] text-text relative pl-7 before:content-[''] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-1 before:bg-accent before:rounded [&_strong]:font-semibold [&_strong]:not-italic [&_strong]:text-primary reveal">
         „Exzellente Therapie entsteht nur dort, wo sich <strong>Therapeuten wohlfühlen</strong> – und Patienten sich <strong>verstanden fühlen</strong>."
       </div>
-      <div class="about__text">
+      <div class="flex flex-col gap-5">
         <div class="reveal reveal-delay-1">
-          <span class="label">Über die Praxis</span>
-          <h2 class="section-title" id="about-heading" style="margin-top:12px;margin-bottom:16px;">Logopädie mit Herz und Verstand</h2>
-          <p class="section-subtitle">
+          <span class="text-xs font-semibold tracking-widest uppercase text-primary">Über die Praxis</span>
+          <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text mt-3 mb-4" id="about-heading">Logopädie mit Herz und Verstand</h2>
+          <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-150">
             Unter der Leitung der staatlich geprüften Logopädin <strong>Emel Şimşek-Uçar</strong> bietet unsere moderne Praxis fundierte Diagnostik, Beratung und Therapie für Menschen aller Altersgruppen – von der frühen Kindheit bis ins Seniorenalter.
           </p>
         </div>
-        <div class="about__stats reveal reveal-delay-2">
-          <div class="stat-card">
-            <div class="stat-card__number">100%</div>
-            <div class="stat-card__label">Zweisprachige Versorgung DE &amp; TR</div>
+        <div class="grid grid-cols-2 gap-4 mt-2 reveal reveal-delay-2">
+          <div class="bg-surface border border-border rounded-md p-5 shadow-sm">
+            <div class="font-display text-[2rem] font-bold text-primary leading-none mb-1">100%</div>
+            <div class="text-[.8125rem] text-text-muted font-medium">Zweisprachige Versorgung DE &amp; TR</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__number">4</div>
-            <div class="stat-card__label">Therapiebereiche für alle Altersgruppen</div>
+          <div class="bg-surface border border-border rounded-md p-5 shadow-sm">
+            <div class="font-display text-[2rem] font-bold text-primary leading-none mb-1">4</div>
+            <div class="text-[.8125rem] text-text-muted font-medium">Therapiebereiche für alle Altersgruppen</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__number">2 min</div>
-            <div class="stat-card__label">vom Duisburger Hauptbahnhof</div>
+          <div class="bg-surface border border-border rounded-md p-5 shadow-sm">
+            <div class="font-display text-[2rem] font-bold text-primary leading-none mb-1">2 min</div>
+            <div class="text-[.8125rem] text-text-muted font-medium">vom Duisburger Hauptbahnhof</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__number">3. OG</div>
-            <div class="stat-card__label">Barrierefrei per Aufzug erreichbar</div>
+          <div class="bg-surface border border-border rounded-md p-5 shadow-sm">
+            <div class="font-display text-[2rem] font-bold text-primary leading-none mb-1">3. OG</div>
+            <div class="text-[.8125rem] text-text-muted font-medium">Barrierefrei per Aufzug erreichbar</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="wave-divider" aria-hidden="true" style="margin-top:64px;">
+  <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full mt-16" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
       <path d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#F3EDE5"/>
     </svg>
   </div>
 </section>
-
-<style>
-  .about { padding: 96px 0 80px; background: var(--color-bg); }
-  .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-  .about__quote {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem,3vw,2.5rem);
-    font-weight: 400; font-style: italic; line-height: 1.3;
-    color: var(--color-text); position: relative; padding-left: 28px;
-  }
-  .about__quote::before {
-    content: ''; position: absolute; left: 0; top: 6px; bottom: 6px;
-    width: 4px; background: var(--color-accent); border-radius: 4px;
-  }
-  .about__quote strong { font-weight: 600; font-style: normal; color: var(--color-primary); }
-  .about__text { display: flex; flex-direction: column; gap: 20px; }
-  .about__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
-  .stat-card {
-    background: var(--color-surface); border: 1px solid var(--color-border);
-    border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm);
-  }
-  .stat-card__number {
-    font-family: var(--font-display); font-size: 2rem; font-weight: 700;
-    color: var(--color-primary); line-height: 1; margin-bottom: 4px;
-  }
-  .stat-card__label { font-size: .8125rem; color: var(--color-text-muted); font-weight: 500; }
-  @media (max-width: 768px) { .about__inner { grid-template-columns: 1fr; gap: 48px; } }
-</style>
