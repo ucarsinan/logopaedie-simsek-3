@@ -1,0 +1,118 @@
+---
+interface BenefitCard {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+const benefits: BenefitCard[] = [
+  {
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
+    title: 'Top-Gehalt',
+    desc: 'Deutlich über dem Branchendurchschnitt – weil gute Arbeit fair entlohnt werden sollte.',
+  },
+  {
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+    title: '100% Fortbildungskosten',
+    desc: 'Wir übernehmen sämtliche Kosten für Weiterbildungen – plus bezahlter Sonderurlaub.',
+  },
+  {
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>`,
+    title: '4-Tage-Woche',
+    desc: 'Work-Life-Balance ist keine Phrase – die 4-Tage-Woche ist bei uns möglich.',
+  },
+  {
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    title: 'Flache Hierarchien',
+    desc: 'Ehrlicher, familiärer Austausch auf Augenhöhe – keine verstaubten Strukturen.',
+  },
+  {
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    title: 'Sonderurlaub',
+    desc: 'Bezahlter Sonderurlaub für Fortbildungen – Zeit fürs Lernen gehört zum Job.',
+  },
+  {
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    title: 'Familiäres Team',
+    desc: 'Ein echtes Miteinander, gegenseitige Unterstützung und eine Praxis, in der man gerne ist.',
+  },
+];
+
+const revealDelays = ['', 'reveal-delay-1', 'reveal-delay-2', 'reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3'];
+---
+
+<section class="karriere" id="karriere" aria-labelledby="karriere-heading">
+  <div class="container">
+    <header class="karriere__header">
+      <span class="label reveal">Karriere</span>
+      <div class="karriere__hashtag reveal reveal-delay-1">#TeamSimsek</div>
+      <h2 class="section-title reveal reveal-delay-2" id="karriere-heading">Werde Teil unseres Teams</h2>
+      <p class="section-subtitle reveal reveal-delay-3">Eine exzellente Therapie entsteht nur dort, wo sich Therapeutinnen und Therapeuten wohlfühlen. Deshalb bieten wir ein Umfeld, das Leistung honoriert und Work-Life-Balance ernst nimmt.</p>
+    </header>
+    <div class="benefits-grid">
+      {benefits.map((benefit, i) => (
+        <div class={`benefit-card reveal${revealDelays[i] ? ` ${revealDelays[i]}` : ''}`}>
+          <div class="benefit-card__icon" aria-hidden="true" set:html={benefit.icon} />
+          <div class="benefit-card__title">{benefit.title}</div>
+          <div class="benefit-card__desc">{benefit.desc}</div>
+        </div>
+      ))}
+    </div>
+    <div class="karriere__cta reveal reveal-delay-2">
+      <div class="karriere__hashtag">#TeamSimsek</div>
+      <h3 class="karriere__cta-title">Klingt das nach dir?</h3>
+      <p>Wir freuen uns auf deine Bewerbung – gerne formlos per E-Mail mit Lebenslauf. Wir melden uns schnell und unkompliziert.</p>
+      <a href="mailto:bewerbung@logopaedie-simsek.de" class="btn btn-accent">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Jetzt bewerben
+      </a>
+    </div>
+  </div>
+  <div class="wave-divider karriere-wave" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#F3EDE5"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .karriere { padding: 96px 0; background: var(--color-bg); }
+  .karriere__header {
+    text-align: center; margin-bottom: 56px;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .karriere__hashtag {
+    font-family: var(--font-display); font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 500; font-style: italic; color: var(--color-accent);
+  }
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px;
+  }
+  @media (max-width: 860px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .benefits-grid { grid-template-columns: 1fr; } }
+  .benefit-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 28px 24px; box-shadow: var(--shadow-sm);
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .benefit-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--color-accent); }
+  .benefit-card__icon {
+    width: 48px; height: 48px; background: var(--color-accent-light);
+    border-radius: var(--radius-sm); display: flex; align-items: center;
+    justify-content: center; color: var(--color-accent); margin-bottom: 16px;
+  }
+  .benefit-card__title { font-weight: 700; font-size: .9375rem; margin-bottom: 6px; color: var(--color-text); }
+  .benefit-card__desc { font-size: .875rem; color: var(--color-text-muted); line-height: 1.6; }
+  .karriere__cta {
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-primary-light) 100%);
+    border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 48px 32px;
+  }
+  .karriere__cta p { font-size: 1rem; color: var(--color-text-muted); max-width: 480px; }
+  .karriere__cta-title {
+    font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.875rem);
+    font-weight: 600; color: var(--color-text);
+  }
+  .karriere-wave { margin-top: 80px; }
+</style>
