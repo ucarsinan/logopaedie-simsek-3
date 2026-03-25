@@ -1,0 +1,141 @@
+---
+interface TeamMember {
+  initials: string;
+  name: string;
+  role: string;
+  extra: string;
+  isLead?: boolean;
+  badge?: string;
+}
+
+const members: TeamMember[] = [
+  {
+    initials: "EŞ",
+    name: "Emel Şimşek-Uçar",
+    role: "Staatl. gepr. Logopädin",
+    extra: "Gründerin und Leitung der Praxis. Spezialisiert auf zweisprachige Diagnostik und Therapie (DE/TR), mit besonderer Expertise in der interkulturellen Frühförderung.",
+    isLead: true,
+    badge: "Praxisleitung",
+  },
+  {
+    initials: "SP",
+    name: "Sarah P.",
+    role: "Logopädin B.Sc.",
+    extra: "Bachelor of Science in Logopädie. Schwerpunkt: Sprachentwicklungsstörungen bei Kindern. Zusatzqualifikation als Theaterpädagogin.",
+  },
+  {
+    initials: "LK",
+    name: "Lena K.",
+    role: "Logopädin B.H.",
+    extra: "Bachelor of Health in Logopädie. Spezialisiert auf Stimmstörungen und Dysphagie. Ausgebildete Erzieherin mit Herz für Kinder.",
+  },
+  {
+    initials: "MA",
+    name: "Mira A.",
+    role: "Logopädin",
+    extra: "Fokus auf Redeflusstörungen (Stottern, Poltern) und Sprechapraxie. Mehrjährige Erfahrung in der stationären Rehabilitation.",
+  },
+  {
+    initials: "YD",
+    name: "Yasemin D.",
+    role: "Logopädin",
+    extra: "Zweisprachige Logopädin (DE/TR). Schwerpunkt: Sprachentwicklungsstörungen bei mehrsprachig aufwachsenden Kindern und interkulturelle Familienberatung.",
+  },
+];
+---
+
+<section class="team" id="team" aria-labelledby="team-heading">
+  <div class="container">
+    <header class="team__header">
+      <span class="label reveal">Unser Team</span>
+      <h2 class="section-title reveal reveal-delay-1" id="team-heading">#TeamSimsek</h2>
+      <p class="section-subtitle reveal reveal-delay-2">Hochqualifizierte Logopädinnen mit interdisziplinären Hintergründen – vereint durch Fachkompetenz, Herzlichkeit und echte Leidenschaft für die Therapie.</p>
+    </header>
+    <div class="team__grid">
+      {members.map((member, index) => (
+        <article class={`team-card${member.isLead ? ' team-card--lead' : ''} reveal${index === 0 ? '' : ` reveal-delay-${index}`}`}>
+          <div class="team-card__avatar" aria-hidden="true">
+            <div class="avatar-initials">{member.initials}</div>
+            {member.badge && <span class="team-card__badge">{member.badge}</span>}
+          </div>
+          <div class="team-card__body">
+            <h3 class="team-card__name">{member.name}</h3>
+            <p class="team-card__role">{member.role}</p>
+            <p class="team-card__extra">{member.extra}</p>
+          </div>
+        </article>
+      ))}
+      <article class="team-card team-card--vacant reveal reveal-delay-5">
+        <div class="team-card__avatar" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="team-card--vacant-icon"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="team-card__body">
+          <h3 class="team-card__name">Du fehlst noch hier!</h3>
+          <p class="team-card__role">Werde Teil des Teams</p>
+          <p class="team-card__extra">Wir suchen engagierte Kolleginnen und Kollegen, die mit uns wachsen möchten.</p>
+          <a href="#karriere" class="btn btn-accent team-card--vacant-btn">Jetzt bewerben</a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="wave-divider" aria-hidden="true" style="margin-top:80px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,40 C480,0 960,60 1440,20 L1440,60 L0,60 Z" fill="#F3EDE5"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+  /* TEAM */
+  .team { padding: 96px 0; background: var(--color-bg); }
+  .team__header { text-align: center; margin-bottom: 56px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .team__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 860px) { .team__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .team__grid { grid-template-columns: 1fr; } }
+  .team-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+  .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .team-card__avatar { height: 200px; background: var(--color-surface-2); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .avatar-initials { width: 80px; height: 80px; border-radius: 50%; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.75rem; font-weight: 600; }
+  .team-card--lead .team-card__avatar { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%); }
+  .team-card--lead .avatar-initials { width: 88px; height: 88px; font-size: 2rem; box-shadow: 0 8px 24px rgba(42, 127, 111, .3); }
+  .team-card__badge { position: absolute; top: 16px; right: 16px; background: var(--color-accent); color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+  .team-card__body { padding: 24px; }
+  .team-card__name { font-family: var(--font-display); font-size: 1.1875rem; font-weight: 600; margin-bottom: 4px; color: var(--color-text); }
+  .team-card__role { font-size: .875rem; color: var(--color-primary); font-weight: 600; margin-bottom: 10px; }
+  .team-card__extra { font-size: .8125rem; color: var(--color-text-muted); line-height: 1.5; }
+
+  /* VACANT CARD */
+  .team-card--vacant {
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-primary-light));
+    border: 2px dashed var(--color-border);
+    display: flex;
+    flex-direction: column;
+  }
+  .team-card--vacant .team-card__avatar {
+    background: transparent;
+    height: 200px;
+  }
+  .team-card--vacant .team-card__body {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+  .team-card--vacant .team-card__role {
+    color: var(--color-accent);
+  }
+  .team-card--vacant .team-card__extra {
+    margin-bottom: 16px;
+  }
+  .team-card--vacant-btn {
+    font-size: .875rem;
+    padding: 10px 20px;
+  }
+  .team-card--vacant-icon {
+    color: var(--color-primary);
+    opacity: .5;
+  }
+</style>
