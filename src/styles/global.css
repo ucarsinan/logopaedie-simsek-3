@@ -39,13 +39,13 @@
 :root {
   --max-w: 1200px;
   --header-h: 80px;
-  --nav-h: 50px;
+  --nav-h: 44px;
   --noise-bg: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C%2Ffilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'%2F%3E%3C%2Fsvg%3E");
 }
 @media (max-width: 768px) {
   :root {
     --header-h: 64px;
-    --nav-h: 48px;
+    --nav-h: 40px;
   }
 }
 

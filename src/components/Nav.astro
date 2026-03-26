@@ -1,72 +1,143 @@
 ---
-// No props
+// Navigation — lightweight, modern, mobile-first
 ---
 
-<nav class="fixed left-0 right-0 z-[1000] bg-topbar-dark top-[var(--header-h)]" id="site-nav" role="navigation" aria-label="Hauptnavigation">
-  <div class="container flex items-center h-full gap-0">
-    <ul class="flex items-stretch h-full flex-1 max-[991px]:hidden" role="list">
-      <li><a href="#" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] border-l border-l-white/[.08] hover:bg-white/10 hover:text-white [&.active]:bg-primary [&.active]:text-white active">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        HOME</a></li>
-      <li><a href="#leistungen" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] hover:bg-white/10 hover:text-white">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        THERAPIE</a></li>
-      <li><a href="#praxis" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] hover:bg-white/10 hover:text-white">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        PRAXIS</a></li>
-      <li><a href="#team" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] hover:bg-white/10 hover:text-white">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        TEAM</a></li>
-      <li><a href="#praxis" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] hover:bg-white/10 hover:text-white">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        ANFAHRT</a></li>
-      <li><a href="#kontakt" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] hover:bg-white/10 hover:text-white">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        KONTAKT</a></li>
-      <li><a href="#" class="inline-flex items-center gap-[6px] px-[14px] text-[.78rem] font-semibold tracking-[.07em] uppercase text-white/[.78] no-underline transition-[background,color] duration-200 whitespace-nowrap border-r border-white/[.08] hover:bg-white/10 hover:text-white">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        SPRACHEN</a></li>
+<nav class="fixed left-0 right-0 z-[1000] bg-surface/95 backdrop-blur-sm border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="container flex items-center h-[var(--nav-h)] gap-1">
+    <!-- Desktop links -->
+    <ul class="flex items-center h-full gap-0.5 max-[991px]:hidden" role="list">
+      <li><a href="#" class="nav-link active" aria-current="page">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Home</a></li>
+      <li><a href="#leistungen" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        Therapie</a></li>
+      <li><a href="#praxis" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+        Praxis</a></li>
+      <li><a href="#team" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team</a></li>
+      <li><a href="#anfahrt" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Anfahrt</a></li>
+      <li><a href="#kontakt" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Kontakt</a></li>
+      <li><a href="#" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        Sprachen</a></li>
     </ul>
+
+    <!-- Spacer -->
+    <div class="flex-1"></div>
+
+    <!-- Mobile: address + phone (tablet only, 768–991px) -->
     <a href="https://goo.gl/maps/cGPVX58woxP2" target="_blank" rel="noopener noreferrer"
-       class="hidden max-[991px]:inline-flex items-center gap-[7px] px-[14px] py-[6px] rounded-[5px] bg-topbar-green text-[#1C1916] text-xs tracking-[.05em] uppercase whitespace-nowrap no-underline transition-colors duration-200 hover:bg-[#7ab52f] shrink-0 max-[767px]:flex-1 max-[767px]:justify-center max-[767px]:rounded-none max-[767px]:px-2 max-[767px]:py-[5px] max-[767px]:min-w-0 max-[767px]:overflow-hidden max-[480px]:text-[.68rem]"
+       class="hidden max-[991px]:inline-flex max-[767px]:hidden items-center gap-2 px-3 py-1.5 rounded-md bg-primary text-white text-xs font-medium tracking-wide no-underline transition-colors duration-200 hover:bg-primary-dark shrink-0"
        aria-label="Adresse öffnen">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span class="max-[767px]:hidden">TONHALLENSTR. 21 – 47051 DUISBURG</span><span class="hidden max-[767px]:inline">TONHALLENSTR. 21</span>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Tonhallenstr. 21 – 47051 Duisburg
     </a>
-    <a href="tel:+4920334868690"
-       class="hidden max-[767px]:inline-flex items-center gap-[7px] px-3 py-[6px] rounded-[5px] bg-topbar-green text-[#1C1916] text-xs whitespace-nowrap no-underline transition-colors duration-200 hover:bg-[#7ab52f] shrink-0 max-[767px]:flex-1 max-[767px]:justify-center max-[767px]:rounded-none max-[767px]:px-2 max-[767px]:py-[5px] max-[767px]:min-w-0 max-[480px]:text-[.68rem]"
-       aria-label="Anrufen">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      0203 – 34 86 86 90
-    </a>
-    <div class="flex-1 max-[767px]:hidden"></div>
+
+    <!-- Mobile: compact buttons (< 768px) -->
+    <div class="hidden max-[767px]:flex items-center gap-2 flex-1">
+      <a href="https://goo.gl/maps/cGPVX58woxP2" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center justify-center gap-1.5 flex-1 px-2 py-1.5 rounded-md bg-primary text-white text-[.7rem] font-medium no-underline transition-colors duration-200 hover:bg-primary-dark"
+         aria-label="Adresse öffnen">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Tonhallenstr. 21
+      </a>
+      <a href="tel:+4920334868690"
+         class="inline-flex items-center justify-center gap-1.5 flex-1 px-2 py-1.5 rounded-md bg-primary text-white text-[.7rem] font-medium no-underline transition-colors duration-200 hover:bg-primary-dark"
+         aria-label="Anrufen">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0203 – 34 86 86 90
+      </a>
+    </div>
+
+    <!-- Hamburger -->
     <button
-      class="group hidden max-[991px]:flex flex-col gap-[5px] w-10 h-10 items-center justify-center rounded-[4px] transition-colors duration-200 hover:bg-white/[.12] shrink-0 ml-2"
+      class="group hidden max-[991px]:flex flex-col gap-[5px] w-10 h-10 items-center justify-center rounded-md transition-colors duration-200 hover:bg-primary-light shrink-0 ml-2"
       id="hamburger"
       data-open="false"
       aria-label="Menü öffnen"
       aria-expanded="false">
-      <span class="block w-[22px] h-0.5 bg-white rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:translate-y-[7px] group-data-[open=true]:rotate-45"></span>
-      <span class="block w-[22px] h-0.5 bg-white rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:opacity-0"></span>
-      <span class="block w-[22px] h-0.5 bg-white rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:-translate-y-[7px] group-data-[open=true]:-rotate-45"></span>
+      <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:translate-y-[7px] group-data-[open=true]:rotate-45"></span>
+      <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:opacity-0"></span>
+      <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:-translate-y-[7px] group-data-[open=true]:-rotate-45"></span>
     </button>
   </div>
 </nav>
 
+<!-- Mobile menu (slide-down) -->
 <div
-  class="hidden data-[open=true]:block fixed left-0 right-0 bg-bg border-b border-border px-6 pb-6 pt-4 z-[999] shadow-md top-[calc(var(--header-h)+var(--nav-h))]"
+  class="fixed left-0 right-0 bg-surface z-[999] border-b border-border shadow-md top-[calc(var(--header-h)+var(--nav-h))] transition-[max-height,opacity] duration-300 ease-in-out max-h-0 opacity-0 overflow-hidden data-[open=true]:max-h-[500px] data-[open=true]:opacity-100"
   id="mobileMenu"
   data-open="false"
   role="navigation"
   aria-label="Mobile Navigation">
-  <a href="#" class="mobile-link block text-base font-medium text-text py-[13px] border-b border-border transition-colors duration-200 hover:text-primary">Home</a>
-  <a href="#leistungen" class="mobile-link block text-base font-medium text-text py-[13px] border-b border-border transition-colors duration-200 hover:text-primary">Therapie &amp; Leistungen</a>
-  <a href="#praxis" class="mobile-link block text-base font-medium text-text py-[13px] border-b border-border transition-colors duration-200 hover:text-primary">Praxis &amp; Standort</a>
-  <a href="#team" class="mobile-link block text-base font-medium text-text py-[13px] border-b border-border transition-colors duration-200 hover:text-primary">Team</a>
-  <a href="#karriere" class="mobile-link block text-base font-medium text-text py-[13px] border-b border-border transition-colors duration-200 hover:text-primary">Karriere</a>
-  <a href="#kontakt" class="mobile-link block text-base font-medium text-text py-[13px] border-b border-border transition-colors duration-200 hover:text-primary">Kontakt</a>
-  <a href="#kontakt" class="btn btn-accent w-full justify-center mt-4">Termin anfragen</a>
+  <div class="px-6 pb-6 pt-2">
+    <a href="#" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Home</a>
+    <a href="#leistungen" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      Therapie & Leistungen</a>
+    <a href="#praxis" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+      Praxis & Standort</a>
+    <a href="#team" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Team</a>
+    <a href="#anfahrt" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Anfahrt</a>
+    <a href="#kontakt" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Kontakt</a>
+    <a href="#kontakt" class="btn btn-accent w-full justify-center mt-4">Termin anfragen</a>
+  </div>
 </div>
+
+<style>
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+    white-space: nowrap;
+    position: relative;
+  }
+  .nav-link:hover {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+  }
+  .nav-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  .nav-link.active {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: 1px;
+  }
+</style>
 
 <script>
   const hamburger = document.getElementById('hamburger') as HTMLButtonElement;
