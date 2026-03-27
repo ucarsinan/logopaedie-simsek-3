@@ -4,8 +4,66 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  ogImage?: string;
 }
-const { title, description } = Astro.props;
+
+const { title, description, ogImage = '/logo.png' } = Astro.props;
+
+const siteUrl = 'https://logopaedie-simsek.de';
+const canonicalUrl = `${siteUrl}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}` || siteUrl;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "MedicalBusiness"],
+      "@id": `${siteUrl}/#business`,
+      "name": "Logopädie Şimşek",
+      "description": "Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR.",
+      "url": siteUrl,
+      "telephone": "+4920334868690",
+      "email": "info@logopaedie-simsek.de",
+      "image": `${siteUrl}/logo.png`,
+      "logo": `${siteUrl}/logo.png`,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tonhallenstraße 21",
+        "addressLocality": "Duisburg",
+        "postalCode": "47051",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.4292,
+        "longitude": 6.7681
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "€€",
+      "paymentAccepted": "Kassenrezept, Privatrezept, Selbstzahler",
+      "availableLanguage": [
+        { "@type": "Language", "name": "German" },
+        { "@type": "Language", "name": "Turkish" }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Duisburg"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Emel Şimşek-Uçar",
+        "jobTitle": "Staatlich geprüfte Logopädin"
+      }
+    }
+  ]
+};
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -14,6 +72,35 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <meta name="theme-color" content="#2a7f6f" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Logopädie Şimşek" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
