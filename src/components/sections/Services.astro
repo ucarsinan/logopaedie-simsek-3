@@ -3,6 +3,7 @@ interface ServiceCard {
   title: string;
   text: string;
   tags: string[];
+  href: string;
 }
 
 const services: ServiceCard[] = [
@@ -10,21 +11,25 @@ const services: ServiceCard[] = [
     title: 'Sprachstörungen',
     text: 'Diagnostik und Therapie bei Beeinträchtigungen im Sprachverstehen und Sprachausdruck – von der kindlichen Sprachentwicklungsverzögerung bis zur erworbenen Aphasie nach Schlaganfall.',
     tags: ['Sprachentwicklung', 'Aphasie', 'Frühförderung'],
+    href: '/leistungen/sprachstoerungen',
   },
   {
     title: 'Sprechstörungen',
     text: 'Behandlung motorisch bedingter Sprechstörungen sowie Redefluss- und Aussprachestörungen. Ob Stottern, Poltern oder Lispeln – wir begleiten Sie auf Ihrem Weg.',
     tags: ['Dysarthrie', 'Stottern', 'Lispeln', 'Sprechapraxie'],
+    href: '/leistungen/sprechstoerungen',
   },
   {
     title: 'Stimmstörungen',
     text: 'Therapie bei funktionellen und organischen Stimmstörungen. Wir helfen dabei, die Stimme als wichtigstes Kommunikationsmittel zu stärken und langfristig zu schützen.',
     tags: ['Dysphonie', 'Stimme', 'Funktionell'],
+    href: '/leistungen/stimmtherapie',
   },
   {
     title: 'Schluckstörungen (Dysphagie)',
     text: 'Diagnostik und Therapie von Schluckstörungen bei Erwachsenen und Kindern – zur Sicherung der Ernährung, Lebensqualität und Vermeidung von Folgeerkrankungen.',
     tags: ['Dysphagie', 'Schlucken', 'Ernährung'],
+    href: '/leistungen/schluckstoerungen',
   },
 ];
 
@@ -55,8 +60,18 @@ const icons = [
               <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
             ))}
           </div>
+          <a href={service.href} class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:underline">
+            Mehr erfahren
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
         </article>
       ))}
+    </div>
+    <div class="flex justify-center mt-10 reveal reveal-delay-3">
+      <a href="/leistungen" class="btn btn-ghost">
+        Alle Leistungen im Überblick
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
     </div>
   </div>
   <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full mt-20" aria-hidden="true">

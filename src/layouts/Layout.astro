@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  additionalSchemas?: Record<string, unknown>[];
 }
 
-const { title, description, ogImage = '/logo.png' } = Astro.props;
+const { title, description, ogImage = '/logo.png', additionalSchemas = [] } = Astro.props;
 
 const siteUrl = 'https://logopaedie-simsek.de';
 const canonicalUrl = `${siteUrl}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}` || siteUrl;
@@ -60,6 +61,16 @@ const jsonLd = {
         "@type": "Person",
         "name": "Emel Şimşek-Uçar",
         "jobTitle": "Staatlich geprüfte Logopädin"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Logopädische Leistungen",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sprachtherapie", "url": `${siteUrl}/leistungen/sprachstoerungen` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sprechtherapie", "url": `${siteUrl}/leistungen/sprechstoerungen` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stimmtherapie", "url": `${siteUrl}/leistungen/stimmtherapie` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dysphagietherapie", "url": `${siteUrl}/leistungen/schluckstoerungen` } }
+        ]
       }
     }
   ]
@@ -99,6 +110,9 @@ const jsonLd = {
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {additionalSchemas.map(schema => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

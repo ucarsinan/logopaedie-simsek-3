@@ -1,0 +1,56 @@
+---
+interface Testimonial {
+  quote: string;
+  author: string;
+  detail: string;
+  stars: number;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    quote: 'Nach nur wenigen Monaten Therapie spricht mein Sohn so viel mehr. Das Team geht sehr einfühlsam auf Kinder ein. Besonders schätzen wir, dass wir auf Türkisch kommunizieren können – das erleichtert vieles.',
+    author: 'Mutter eines 4-jährigen Patienten',
+    detail: 'Sprachentwicklungsverzögerung, Duisburg',
+    stars: 5,
+  },
+  {
+    quote: 'Nach meinem Schlaganfall konnte ich kaum noch sprechen. Dank der intensiven Aphasie-Therapie und des geduldigen Teams habe ich meine Sprache Schritt für Schritt zurückgewonnen. Ich bin sehr dankbar.',
+    author: 'Patient, 64 Jahre',
+    detail: 'Aphasie nach Schlaganfall, Duisburg',
+    stars: 5,
+  },
+  {
+    quote: 'Als Lehrerin ist meine Stimme mein wichtigstes Werkzeug. Die Stimmtherapie hat mir geholfen, meine chronische Heiserkeit in den Griff zu bekommen. Professionell, herzlich und sehr kompetent.',
+    author: 'Lehrerin, 41 Jahre',
+    detail: 'Funktionelle Stimmstörung, Duisburg',
+    stars: 5,
+  },
+];
+---
+
+<section class="py-24 bg-bg-alt" id="bewertungen" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <header class="text-center mb-14 flex flex-col items-center gap-4">
+      <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">Patientenstimmen</span>
+      <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="testimonials-heading">Was unsere Patientinnen und Patienten sagen</h2>
+      <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-150 reveal reveal-delay-2">Anonymisierte Patientenberichte – Erfahrungen, die uns antreiben.</p>
+    </header>
+    <div class="grid grid-cols-3 gap-6 max-[860px]:grid-cols-1">
+      {testimonials.map((t, i) => (
+        <article class={`bg-surface border border-border rounded-md p-8 shadow-sm flex flex-col gap-5 reveal${i > 0 ? ` reveal-delay-${i}` : ''}`}>
+          <div class="flex gap-0.5" aria-label={`Bewertung: ${t.stars} von 5 Sternen`}>
+            {Array.from({ length: t.stars }).map(() => (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-accent" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
+          <blockquote class="font-display text-[1.0625rem] italic leading-[1.55] text-text flex-1">„{t.quote}"</blockquote>
+          <footer class="border-t border-border pt-4">
+            <p class="font-semibold text-text text-sm">{t.author}</p>
+            <p class="text-xs text-text-muted mt-0.5">{t.detail}</p>
+          </footer>
+        </article>
+      ))}
+    </div>
+    <p class="text-center text-xs text-text-light mt-8">Die Berichte basieren auf echten Patientenerfahrungen und wurden zum Schutz der Privatsphäre anonymisiert.</p>
+  </div>
+</section>

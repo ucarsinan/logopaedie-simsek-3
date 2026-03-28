@@ -1,0 +1,104 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Stimmtherapie: Stimmstörungen behandeln in Duisburg",
+  "description": "Logopädische Stimmtherapie in Duisburg bei Dysphonie, Heiserkeit und organischen Stimmstörungen. Für Berufssprecher, Sänger und alle Altersgruppen.",
+  "url": "https://logopaedie-simsek.de/leistungen/stimmtherapie",
+  "about": { "@type": "MedicalCondition", "name": "Stimmstörung" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://logopaedie-simsek.de/leistungen" },
+      { "@type": "ListItem", "position": 3, "name": "Stimmtherapie", "item": "https://logopaedie-simsek.de/leistungen/stimmtherapie" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Stimmtherapie & Stimmstörungen | Logopädie Şimşek Duisburg"
+  description="Logopädische Stimmtherapie in Duisburg – bei Dysphonie, Heiserkeit und funktionellen Stimmstörungen. Für Berufssprecher, Lehrerinnen, Sänger und alle Altersgruppen."
+  serviceTitle="Stimmtherapie: Ihre Stimme – unsere Expertise"
+  breadcrumbLabel="Stimmtherapie"
+  tags={['Dysphonie', 'Heiserkeit', 'Stimmbildung', 'Berufssprecher']}
+  additionalSchemas={[schema]}
+  relatedServices={[
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen', description: 'Sprachentwicklungsverzögerung, Aphasie, Frühförderung' },
+    { title: 'Sprechstörungen', href: '/leistungen/sprechstoerungen', description: 'Stottern, Lispeln, Dysarthrie und Sprechapraxie' },
+    { title: 'Schluckstörungen', href: '/leistungen/schluckstoerungen', description: 'Dysphagie bei Erwachsenen und Kindern' },
+  ]}
+>
+  <h2>Was sind Stimmstörungen?</h2>
+  <p>
+    Die Stimme ist unser wichtigstes und persönlichstes Kommunikationsinstrument. Stimmstörungen –
+    medizinisch als <strong>Dysphonie</strong> bezeichnet – umfassen alle Veränderungen von Stimmklang,
+    Stimmstärke oder Stimmausdauer, die von der altersentsprechenden Norm abweichen und die
+    Kommunikation oder das Wohlbefinden beeinträchtigen.
+  </p>
+  <p>
+    Heiserkeit, rauhe Stimme, Stimmversagen, Tonlosigkeit oder Schmerzen beim Sprechen können
+    Zeichen einer behandlungsbedürftigen Stimmstörung sein. Logopädische Stimmtherapie ist
+    häufig sehr effektiv und kann operative Eingriffe vermeiden oder deren Ergebnis sichern.
+  </p>
+
+  <h2>Arten von Stimmstörungen</h2>
+  <ul>
+    <li><strong>Funktionelle Stimmstörungen:</strong> Entstehen durch falsche Stimmtechnik, Überbelastung, ungünstige Sprechangewohnheiten oder chronischen Stress – ohne strukturelle Schädigung der Stimmlippen.</li>
+    <li><strong>Organische Stimmstörungen:</strong> Strukturelle Veränderungen der Stimmlippen wie Knötchen, Polypen, Ödeme oder Narben – oft als Folge chronischer funktioneller Fehlbelastung.</li>
+    <li><strong>Psychogene Stimmstörungen:</strong> Durch psychische Belastung ausgelöste Stimmverluste oder -einschränkungen ohne organischen Befund (z. B. psychogene Aphonie).</li>
+    <li><strong>Neurogene Stimmstörungen:</strong> Nach Recurrensparese (Stimmbandlähmung), neurologischen Erkrankungen oder Operationen im Halsbereich.</li>
+    <li><strong>Stimmstörungen bei Kindern:</strong> Z. B. Stimmknötchen durch übermäßiges Schreien oder lautes Sprechen.</li>
+  </ul>
+
+  <h2>Wer ist besonders betroffen?</h2>
+  <p>
+    Stimmstörungen betreffen besonders Berufsgruppen mit hoher täglicher Stimmbelastung:
+  </p>
+  <ul>
+    <li>Lehrerinnen und Lehrer</li>
+    <li>Erzieherinnen und Erzieher</li>
+    <li>Sängerinnen und Sänger</li>
+    <li>Schauspielerinnen und Schauspieler</li>
+    <li>Call-Center-Mitarbeiterinnen</li>
+    <li>Führungskräfte mit vielen Präsentationen</li>
+  </ul>
+  <p>
+    Auch nach Kehlkopfoperationen, bei anhaltender Heiserkeit ohne erkennbare Ursache oder
+    nach schweren Erkrankungen (z. B. COVID-19) ist eine logopädische Stimmtherapie sinnvoll.
+  </p>
+
+  <div class="info-box">
+    <p>
+      <strong>Wann zum Arzt?</strong> Heiserkeit, die länger als 2–3 Wochen anhält, sollte zunächst
+      ärztlich abgeklärt werden (HNO). Erst nach einer laryngoskopischen Untersuchung beginnen wir
+      mit der Stimmtherapie – so ist die Behandlung sicher und zielgerichtet.
+    </p>
+  </div>
+
+  <h2>Unser Therapieansatz</h2>
+  <p>
+    Wir beginnen mit einer <strong>gründlichen Stimmdiagnostik</strong>: Wir erheben Ihre Stimmanamnese,
+    analysieren Ihre Stimmqualität und sprechen die Befunde mit Ihrem behandelnden HNO-Arzt ab.
+    Darauf aufbauend entwickeln wir einen individuellen Therapieplan.
+  </p>
+  <p>Typische Therapiebausteine der Stimmtherapie:</p>
+  <ul>
+    <li><strong>Stimmhygiene:</strong> Verhaltensregeln zum Schutz der Stimme im Alltag</li>
+    <li><strong>Atemschulung:</strong> Aufbau einer stützenden Atemtechnik als Basis der Stimmgebung</li>
+    <li><strong>Resonanzübungen:</strong> Optimierung des Klangkörpers und Lockerung der Artikulationsorgane</li>
+    <li><strong>Stimmeinsatz und Phonationsübungen:</strong> Abbau von Überspannung, weicher Stimmeinsatz</li>
+    <li><strong>Körperarbeit:</strong> Haltung, Entspannung und Körperbewusstsein als Grundlage gesunden Sprechens</li>
+    <li><strong>Transfer in den Alltag:</strong> Übertragung der erlernten Techniken auf reale Sprechsituationen</li>
+  </ul>
+
+  <h2>Präventive Stimmbildung</h2>
+  <p>
+    Neben der Behandlung bestehender Stimmstörungen bieten wir auch präventive Stimmbildungskurse
+    für stimmintensive Berufsgruppen an. Wer seine Stimme kennt und pflegt, schützt sich langfristig
+    vor Erkrankungen und Ausfällen. Sprechen Sie uns an.
+  </p>
+</ServicePage>
