@@ -1,0 +1,125 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Sprachstörungen: Diagnose und Therapie in Duisburg",
+  "description": "Logopädische Behandlung von Sprachstörungen in Duisburg – Sprachentwicklungsverzögerung, Aphasie, Frühförderung für Kinder und Erwachsene.",
+  "url": "https://logopaedie-simsek.de/leistungen/sprachstoerungen",
+  "about": { "@type": "MedicalCondition", "name": "Sprachstörung" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://logopaedie-simsek.de/leistungen" },
+      { "@type": "ListItem", "position": 3, "name": "Sprachstörungen", "item": "https://logopaedie-simsek.de/leistungen/sprachstoerungen" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Sprachstörungen behandeln | Logopädie Şimşek Duisburg"
+  description="Professionelle Diagnose und Therapie von Sprachstörungen in Duisburg – für Kinder und Erwachsene. Sprachentwicklungsstörungen, Aphasie, Frühförderung. Zweisprachig DE/TR."
+  serviceTitle="Sprachstörungen: Diagnose und Therapie in Duisburg"
+  breadcrumbLabel="Sprachstörungen"
+  tags={['Sprachentwicklung', 'Aphasie', 'Frühförderung', 'Zweisprachig']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/sprachstoerungen' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/dil-bozuklugu' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/sprachstoerungen' },
+  ]}
+  alternateUrl="/tr/hizmetler/dil-bozuklugu"
+  relatedServices={[
+    { title: 'Sprechstörungen', href: '/leistungen/sprechstoerungen', description: 'Stottern, Lispeln, Dysarthrie und Sprechapraxie' },
+    { title: 'Stimmtherapie', href: '/leistungen/stimmtherapie', description: 'Heiserkeit, Dysphonie, funktionelle Stimmstörungen' },
+    { title: 'Schluckstörungen', href: '/leistungen/schluckstoerungen', description: 'Dysphagie bei Erwachsenen und Kindern' },
+  ]}
+>
+  <h2>Was sind Sprachstörungen?</h2>
+  <p>
+    Sprachstörungen beeinträchtigen die Fähigkeit, Sprache zu verstehen oder sich sprachlich auszudrücken.
+    Sie betreffen das <strong>linguistische System</strong> – also Wortschatz, Grammatik, Sprachverständnis
+    und die kommunikative Nutzung von Sprache – unabhängig davon, ob der Sprechapparat selbst betroffen ist.
+  </p>
+  <p>
+    Sprachstörungen können in jedem Lebensalter auftreten: bei Kleinkindern als Entwicklungsverzögerung,
+    bei Schulkindern als umschriebene Sprachentwicklungsstörung und bei Erwachsenen als erworbene Störung
+    nach neurologischen Ereignissen wie einem Schlaganfall.
+  </p>
+
+  <h2>Häufige Sprachstörungen im Überblick</h2>
+  <ul>
+    <li><strong>Sprachentwicklungsverzögerung (SEV):</strong> Kinder entwickeln Sprache langsamer als ihre Altersgruppe – zum Beispiel sprechen sie mit 2 Jahren noch keine ersten Wörter.</li>
+    <li><strong>Umschriebene Sprachentwicklungsstörung (USES/SES):</strong> Qualitative Abweichungen in Grammatik, Wortschatz oder Sprachverständnis, die nicht durch andere Ursachen erklärbar sind.</li>
+    <li><strong>Aphasie:</strong> Erworbene Sprachstörung nach Schlaganfall, Schädel-Hirn-Trauma oder Tumor – betrifft Sprechen, Verstehen, Lesen und Schreiben.</li>
+    <li><strong>Semantisch-pragmatische Störungen:</strong> Schwierigkeiten im situationsangemessenen Sprachgebrauch und im Sprachverständnis in sozialen Kontexten.</li>
+    <li><strong>Lese-Rechtschreib-Schwäche (LRS/Legasthenie):</strong> Störung im schriftsprachlichen Bereich, die logopädisch mitbehandelt werden kann.</li>
+  </ul>
+
+  <h2>Sprachtherapie bei Kindern</h2>
+  <p>
+    Bei Kindern beginnen wir mit einer <strong>altersgerechten Diagnostik</strong>, um den genauen Förderbedarf
+    zu ermitteln. Wir setzen standardisierte Testverfahren ein und beobachten das Kind im freien Spiel,
+    um ein vollständiges Bild zu gewinnen.
+  </p>
+  <p>
+    Frühförderung vor dem Schuleintritt ist besonders effektiv, da das Gehirn in den ersten Lebensjahren
+    besonders plastisch ist. Die Therapie ist <strong>spielbasiert, motivierend und auf das einzelne Kind</strong>
+    abgestimmt – und schließt die Familie aktiv ein.
+  </p>
+  <p>Wir behandeln unter anderem:</p>
+  <ul>
+    <li>Verzögerte Sprachentwicklung bei Kindern ab dem 2. Lebensjahr</li>
+    <li>Grammatik- und Wortschatzstörungen im Kindergarten- und Grundschulalter</li>
+    <li>Sprachverständnisprobleme</li>
+    <li>Sprachentwicklung bei mehrsprachig aufwachsenden Kindern (Deutsch/Türkisch)</li>
+    <li>Begleitung bei Lese-Rechtschreib-Schwäche</li>
+  </ul>
+
+  <h2>Sprachtherapie bei Erwachsenen – Aphasie</h2>
+  <p>
+    Sprachstörungen im Erwachsenenalter entstehen häufig durch neurologische Erkrankungen wie
+    <strong>Schlaganfall</strong>, Schädel-Hirn-Trauma, Tumorerkrankungen des Gehirns oder degenerative
+    Erkrankungen. Die Aphasie betrifft alle sprachlichen Modalitäten: Sprechen, Verstehen, Lesen und Schreiben.
+  </p>
+  <p>
+    Unsere Aphasie-Therapie zielt darauf ab, verloren gegangene Sprachfähigkeiten zurückzugewinnen oder
+    effektive Kompensationsstrategien zu entwickeln. Dabei arbeiten wir eng mit Angehörigen zusammen,
+    die eine wichtige Rolle im Genesungsprozess spielen.
+  </p>
+  <p>Wir behandeln alle Formen der Aphasie, darunter:</p>
+  <ul>
+    <li>Broca-Aphasie (motorisch, non-fluent)</li>
+    <li>Wernicke-Aphasie (sensorisch, fluent)</li>
+    <li>Globale Aphasie (schwerwiegende Beeinträchtigung aller Sprachbereiche)</li>
+    <li>Amnestische Aphasie (Wortfindungsstörungen)</li>
+  </ul>
+
+  <h2>Zweisprachige Sprachdiagnostik und Therapie</h2>
+  <p>
+    Für mehrsprachig aufwachsende Kinder ist es entscheidend, eine echte Sprachentwicklungsstörung von
+    normalen Phasen des bilingualen Spracherwerbs zu unterscheiden. Fehlerhafte Diagnosen können zu
+    unnötiger Therapie führen – oder notwendige Förderung verzögern.
+  </p>
+  <div class="info-box">
+    <p>
+      Unsere Therapeutinnen sprechen <strong>Deutsch und Türkisch</strong> und können Kinder und Erwachsene
+      in beiden Sprachen diagnostizieren und therapieren. Dieses Angebot ist im Ruhrgebiet selten und
+      schließt eine wichtige Versorgungslücke für türkischsprachige Familien.
+    </p>
+  </div>
+
+  <h2>Unser Therapieablauf</h2>
+  <p>
+    Jede Behandlung beginnt mit einer <strong>ausführlichen Diagnostik</strong> und Anamnese, in der wir
+    gemeinsam mit Ihnen Therapieziele festlegen. Anschließend erfolgt die strukturierte, individuelle Therapie
+    mit regelmäßiger Verlaufskontrolle. Heimübungen sind ein wichtiger Bestandteil und werden verständlich erklärt.
+  </p>
+  <p>
+    Für Kinder binden wir die Eltern aktiv ein – mit klaren Anleitungen für den Alltag, die Therapiefortschritte
+    im täglichen Leben festigen.
+  </p>
+</ServicePage>

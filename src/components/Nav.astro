@@ -1,32 +1,39 @@
 ---
-// Navigation — lightweight, modern, mobile-first
+interface Props {
+  lang?: 'de' | 'tr';
+}
+
+const { lang = 'de' } = Astro.props;
+const isTR = lang === 'tr';
+
+const homeHref = isTR ? '/tr/' : '/';
+const labels = isTR
+  ? { home: 'Ana Sayfa', therapy: 'Tedavi', practice: 'Muayenehane', team: 'Ekip', directions: 'Konum', contact: 'İletişim', appointment: 'Randevu Talebi' }
+  : { home: 'Home', therapy: 'Therapie', practice: 'Praxis', team: 'Team', directions: 'Anfahrt', contact: 'Kontakt', appointment: 'Termin anfragen' };
 ---
 
-<nav class="fixed left-0 right-0 z-[1000] bg-surface/95 backdrop-blur-sm border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+<nav class="fixed left-0 right-0 z-[1000] bg-surface/95 backdrop-blur-sm border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label={isTR ? 'Ana Navigasyon' : 'Hauptnavigation'}>
   <div class="container flex items-center h-[var(--nav-h)] gap-1">
     <!-- Desktop links -->
     <ul class="flex items-center h-full gap-0.5 max-[991px]:hidden" role="list">
-      <li><a href="#" class="nav-link active" aria-current="page">
+      <li><a href={homeHref} class="nav-link" aria-current="page">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        Home</a></li>
+        {labels.home}</a></li>
       <li><a href="#leistungen" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-        Therapie</a></li>
+        {labels.therapy}</a></li>
       <li><a href="#praxis" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-        Praxis</a></li>
+        {labels.practice}</a></li>
       <li><a href="#team" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Team</a></li>
+        {labels.team}</a></li>
       <li><a href="#anfahrt" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        Anfahrt</a></li>
+        {labels.directions}</a></li>
       <li><a href="#kontakt" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Kontakt</a></li>
-      <li><a href="#" class="nav-link">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-        Sprachen</a></li>
+        {labels.contact}</a></li>
     </ul>
 
     <!-- Spacer -->
@@ -61,7 +68,7 @@
       class="group hidden max-[991px]:flex flex-col gap-[5px] w-10 h-10 items-center justify-center rounded-md transition-colors duration-200 hover:bg-primary-light shrink-0 ml-2"
       id="hamburger"
       data-open="false"
-      aria-label="Menü öffnen"
+      aria-label={isTR ? 'Menüyü aç' : 'Menü öffnen'}
       aria-expanded="false">
       <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:translate-y-[7px] group-data-[open=true]:rotate-45"></span>
       <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:opacity-0"></span>
@@ -76,27 +83,27 @@
   id="mobileMenu"
   data-open="false"
   role="navigation"
-  aria-label="Mobile Navigation">
+  aria-label={isTR ? 'Mobil Navigasyon' : 'Mobile Navigation'}>
   <div class="px-6 pb-6 pt-2">
-    <a href="#" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={homeHref} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-      Home</a>
+      {labels.home}</a>
     <a href="#leistungen" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-      Therapie & Leistungen</a>
+      {isTR ? 'Tedavi & Hizmetler' : 'Therapie & Leistungen'}</a>
     <a href="#praxis" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-      Praxis & Standort</a>
+      {isTR ? 'Muayenehane & Konum' : 'Praxis & Standort'}</a>
     <a href="#team" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      Team</a>
+      {labels.team}</a>
     <a href="#anfahrt" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-      Anfahrt</a>
+      {labels.directions}</a>
     <a href="#kontakt" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      Kontakt</a>
-    <a href="#kontakt" class="btn btn-accent w-full justify-center mt-4">Termin anfragen</a>
+      {labels.contact}</a>
+    <a href="#kontakt" class="btn btn-accent w-full justify-center mt-4">{labels.appointment}</a>
   </div>
 </div>
 
@@ -147,7 +154,10 @@
     mobileMenu.dataset.open = String(open);
     hamburger.dataset.open = String(open);
     hamburger.setAttribute('aria-expanded', String(open));
-    hamburger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    const pageLang = document.documentElement.lang;
+    hamburger.setAttribute('aria-label', open
+      ? (pageLang === 'tr' ? 'Menüyü kapat' : 'Menü schließen')
+      : (pageLang === 'tr' ? 'Menüyü aç' : 'Menü öffnen'));
   }
 
   hamburger.addEventListener('click', () => {

@@ -1,0 +1,110 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Konuşma Bozuklukları Tedavisi: Kekemelik, Pelteklik, Dizartri – Duisburg",
+  "description": "Duisburg'da kekemelik, hızlı konuşma, pelteklik ve dizartri tedavisi. Çocuklar ve yetişkinler için profesyonel konuşma bozukluğu terapisi.",
+  "url": "https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu",
+  "about": { "@type": "MedicalCondition", "name": "Konuşma Bozukluğu" },
+  "inLanguage": "tr",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/tr" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://logopaedie-simsek.de/tr/hizmetler" },
+      { "@type": "ListItem", "position": 3, "name": "Konuşma Bozuklukları", "item": "https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Konuşma Bozuklukları: Kekemelik, Pelteklik, Dizartri | Logopädie Şimşek Duisburg"
+  description="Duisburg'da kekemelik, hızlı konuşma, pelteklik ve dizartri terapisi. Çocuklar ve yetişkinler için profesyonel konuşma bozukluğu tedavisi. Almanca ve Türkçe."
+  serviceTitle="Konuşma Bozuklukları: Kekemelik, Pelteklik ve Daha Fazlası"
+  breadcrumbLabel="Konuşma Bozuklukları"
+  tags={['Kekemelik', 'Pelteklik', 'Dizartri', 'Konuşma Apraksisi']}
+  lang="tr"
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/sprechstoerungen' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/sprechstoerungen' },
+  ]}
+  alternateUrl="/leistungen/sprechstoerungen"
+  relatedServices={[
+    { title: 'Dil Bozuklukları', href: '/tr/hizmetler/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
+    { title: 'Ses Terapisi', href: '/tr/hizmetler/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
+    { title: 'Yutma Bozuklukları', href: '/tr/hizmetler/yutma-bozuklugu', description: 'Yetişkinlerde ve çocuklarda disfaji' },
+  ]}
+>
+  <h2>Konuşma Bozuklukları Nedir?</h2>
+  <p>
+    Konuşma bozuklukları; dilin içeriğini değil, <strong>seslerin üretilmesini, akıcılığını
+    ve anlaşılırlığını</strong> etkiler. Konuşma kasları, koordinasyonu veya motor programlama
+    sorunlarından kaynaklanabilir. Dil bozukluklarından farklı olarak konuşma bozuklukları
+    öncelikle konuşma motorunu etkiler.
+  </p>
+
+  <h2>Önemli Konuşma Bozukluğu Türleri</h2>
+
+  <h3>Kekemelik (Tutuk konuşma)</h3>
+  <p>
+    Kekemelik; seslerin, hecelerin veya sözcüklerin yinelenmesi, uzatılması veya bloklanmasıyla
+    ortaya çıkan bir konuşma akıcılığı bozukluğudur. Konuşmayı düşünmek zorunda kalmak ya da
+    zorlanma hareketleri gibi eşlik eden davranışlar sık görülür.
+  </p>
+  <p>Kekemelik terapisinde kanıta dayalı yöntemler kullanıyoruz:</p>
+  <ul>
+    <li><strong>Akıcılık Şekillendirme:</strong> Yavaş konuşma, yumuşak başlangıç ve nazal rezonans gibi tekniklerle konuşma davranışı yeniden yapılandırılır.</li>
+    <li><strong>Kekemelikle Başa Çıkma:</strong> Blokları kolaylaştırmayı ve kekemelikten korkmadan konuşmayı öğrenmek.</li>
+    <li><strong>Bütüncül Yaklaşım:</strong> Psikolojik bileşenler ve sosyal kaygılar da tedaviye dahil edilir.</li>
+  </ul>
+
+  <h3>Hızlı Konuşma (Cluttering/Batarizma)</h3>
+  <p>
+    Hızlı konuşmada konuşma hızı çok yüksektir ve seslerin atlanması veya yutulması söz konusudur.
+    Bu durum anlaşılırlığı ciddi biçimde azaltabilir. Genellikle dikkat güçlükleriyle birlikte görülür.
+  </p>
+
+  <h3>Pelteklik (Dislali)</h3>
+  <p>
+    Pelteklik; seslerin hatalı ya da eksik üretilmesidir. "S" ve "z" seslerinin yanlış üretildiği
+    pelteklik (sigma) özellikle çocuklarda yaygındır. Bunların dışında "r", "k" veya "g" seslerinin
+    de etkilenebildiği konuşma ses bozuklukları tedavi edilmektedir.
+  </p>
+
+  <h3>Dizartri ve Konuşma Apraksisi</h3>
+  <p>
+    Dizartri; inme, Parkinson hastalığı veya Multiple Skleroz gibi nörolojik hastalıklar sonucu
+    konuşma kaslarının zayıflaması ya da felciyle ortaya çıkar. Konuşma apraksisi ise motor
+    programlama bozukluğudur; sesin kasılan bir kas olmaksızın düzensiz üretilmesine yol açar.
+  </p>
+
+  <h2>Çocuklarda Konuşma Terapisi</h2>
+  <p>
+    Çocuklarda konuşma sesi bozuklukları çok yaygındır ve tedavi olmadan okul başarısını
+    olumsuz etkileyebilir. Bireysel ve yaşa uygun bir yaklaşımla <strong>oyun temelli egzersizlerle</strong>
+    başarılı sonuçlar elde etmekteyiz.
+  </p>
+  <div class="info-box">
+    <p>
+      Çok dilli büyüyen çocuklarda <strong>ikinci dildeki konuşma seslerinin edinimi</strong>
+      farklı seyredebilir. Bu nedenle olası bir konuşma ses bozukluğunu
+      normal iki dilli dil gelişiminden dikkatle ayırt ediyoruz.
+    </p>
+  </div>
+
+  <h2>Yetişkinlerde Konuşma Terapisi</h2>
+  <p>
+    Yetişkinlerde konuşma bozuklukları genellikle nörolojik olaylardan kaynaklanır.
+    Dizartri ve konuşma apraksisinde anlaşılırlığı artırmak, yorgunluğu azaltmak ve
+    yaşam kalitesini geliştirmek temel hedeflerimizdir.
+  </p>
+  <p>
+    Terapi temposu ve hedefleri size özel belirlenir – hem mesleki hem günlük yaşam
+    gereklilikleri gözetilerek.
+  </p>
+</ServicePage>

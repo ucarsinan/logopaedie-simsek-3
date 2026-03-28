@@ -1,0 +1,115 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Ses Terapisi: Ses Bozukluklarının Tedavisi – Duisburg",
+  "description": "Duisburg'da disfoni, kısıklık ve organik ses bozukluklarının logopedik ses terapisi. Meslek sesi kullananlar, şarkıcılar ve tüm yaş grupları için.",
+  "url": "https://logopaedie-simsek.de/tr/hizmetler/ses-terapisi",
+  "about": { "@type": "MedicalCondition", "name": "Ses Bozukluğu" },
+  "inLanguage": "tr",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/tr" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://logopaedie-simsek.de/tr/hizmetler" },
+      { "@type": "ListItem", "position": 3, "name": "Ses Terapisi", "item": "https://logopaedie-simsek.de/tr/hizmetler/ses-terapisi" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Ses Terapisi ve Ses Bozuklukları | Logopädie Şimşek Duisburg"
+  description="Duisburg'da logopedik ses terapisi – disfoni, kısıklık ve fonksiyonel ses bozukluklarında. Meslek sesi kullananlar, öğretmenler, şarkıcılar ve tüm yaş grupları için."
+  serviceTitle="Ses Terapisi: Sesiniz – Uzmanlığımız"
+  breadcrumbLabel="Ses Terapisi"
+  tags={['Disfoni', 'Kısıklık', 'Ses Eğitimi', 'Meslek Sesi']}
+  lang="tr"
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/stimmtherapie' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/ses-terapisi' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/stimmtherapie' },
+  ]}
+  alternateUrl="/leistungen/stimmtherapie"
+  relatedServices={[
+    { title: 'Dil Bozuklukları', href: '/tr/hizmetler/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
+    { title: 'Konuşma Bozuklukları', href: '/tr/hizmetler/konusma-bozuklugu', description: 'Kekemelik, pelteklik, dizartri ve konuşma apraksisi' },
+    { title: 'Yutma Bozuklukları', href: '/tr/hizmetler/yutma-bozuklugu', description: 'Yetişkinlerde ve çocuklarda disfaji' },
+  ]}
+>
+  <h2>Ses Bozuklukları Nedir?</h2>
+  <p>
+    Ses bozuklukları (disfoni); <strong>ses kalitesini, ses yüksekliğini, tınısını veya ses
+    dayanıklılığını</strong> etkiler. Kısıklık, yorgun ses veya ses kırılması bu belirtilere
+    örnek gösterilebilir. Ses bozuklukları; fonksiyonel, organik, psikojenik veya nörolojik
+    kökenli olabilir.
+  </p>
+
+  <h2>Ses Bozukluğu Türleri</h2>
+
+  <h3>Fonksiyonel Ses Bozuklukları</h3>
+  <p>
+    Ses organları sağlıklı olmasına karşın ses üretimi bozulmuştur. Nedenler arasında yanlış
+    nefes tekniği, gerginlik, ses aşırı kullanımı veya yanlış ses davranışı sayılabilir.
+    Bu bozukluklar özellikle yoğun ses kullanan mesleklerde sık görülür.
+  </p>
+
+  <h3>Organik Ses Bozuklukları</h3>
+  <p>
+    Ses tellerinde yapısal değişiklikler söz konusudur – ses nodülleri ("öğretmen nodülleri"),
+    polip, kist veya laringit gibi. Bu durumlarda tıbbi tedavi genellikle logopedik terapiyle
+    birleştirilir.
+  </p>
+
+  <h3>Psikojenik Ses Bozuklukları</h3>
+  <p>
+    Ses organlarında organik bir neden bulunmayan ses kaybı (fonasteni veya psikojenik afoni)
+    çoğunlukla stres ve duygusal yüke bağlıdır. Bütüncül bir yaklaşım burada büyük önem taşır.
+  </p>
+
+  <h3>Nörolojik Ses Bozuklukları</h3>
+  <p>
+    Parkinson hastalığı, Multiple Skleroz veya inme gibi nörolojik hastalıklar ses üretimini
+    etkileyebilir. Nörolojik ses terapisinde bozukluğa özgü egzersiz programları uygulanır.
+  </p>
+
+  <h2>Kimler Risk Altında?</h2>
+  <p>
+    Ses bozuklukları mesleki açıdan sesi yoğun kullanan kişilerde özellikle sık görülür:
+  </p>
+  <ul>
+    <li><strong>Öğretmenler ve eğitimciler:</strong> Gün boyu yüksek sesle konuşma ciddi ses yükü oluşturur.</li>
+    <li><strong>Şarkıcılar ve müzisyenler:</strong> Aşırı kullanım ve teknik hatalar ses nodüllerine neden olabilir.</li>
+    <li><strong>Satış ve müşteri hizmetleri çalışanları:</strong> Uzun süreli telefon görüşmeleri sesi yorar.</li>
+    <li><strong>Yöneticiler ve sunucular:</strong> Sık kamuya açık konuşmalar ses gerginliğine yol açar.</li>
+  </ul>
+  <p>
+    Ses bozuklukları çocuklarda da görülür – özellikle aktif, yüksek sesli çocuklarda
+    ses nodülleri oluşabilir.
+  </p>
+
+  <h2>Ses Terapisi Nasıl İlerler?</h2>
+  <p>
+    Önce kapsamlı bir <strong>ses tanısı</strong> yapılır; ses kalitesi, nefes tekniği, rezonans
+    ve ses davranışı değerlendirilir. Buna dayanarak size özel bir terapi planı oluşturulur.
+  </p>
+  <p>Ses terapisinde kanıta dayalı teknikler uygularız:</p>
+  <ul>
+    <li><strong>Nefes çalışması:</strong> Doğru karın nefesini destekleyici egzersizler.</li>
+    <li><strong>Rezonans terapisi:</strong> Sesin vücutta optimal yayılımı için teknikler.</li>
+    <li><strong>Ses başlangıcı:</strong> Ses tellerini koruyan yumuşak ses başlangıcı egzersizleri.</li>
+    <li><strong>Ses hijyeni:</strong> Sesi destekleyen ve zararlı alışkanlıklardan kaçınan günlük yaşam önerileri.</li>
+    <li><strong>Stres yönetimi:</strong> Ses üzerindeki psikolojik etkenlerle başa çıkma yolları.</li>
+  </ul>
+
+  <div class="info-box">
+    <p>
+      Ses belirtileriniz için <strong>KBB uzmanına gittiniz mi?</strong> Logopedik ses terapisi;
+      tıbbi tedaviye ideal bir tamamlayıcıdır – ameliyat öncesi ve sonrasında da uygulanabilir.
+      Dilediğiniz zaman randevu alabilirsiniz.
+    </p>
+  </div>
+</ServicePage>

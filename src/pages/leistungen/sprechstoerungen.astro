@@ -1,0 +1,118 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Sprechstörungen behandeln: Stottern, Lispeln, Dysarthrie in Duisburg",
+  "description": "Logopädische Therapie bei Stottern, Poltern, Lispeln und Dysarthrie in Duisburg. Professionelle Behandlung für Kinder und Erwachsene.",
+  "url": "https://logopaedie-simsek.de/leistungen/sprechstoerungen",
+  "about": { "@type": "MedicalCondition", "name": "Sprechstörung" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://logopaedie-simsek.de/leistungen" },
+      { "@type": "ListItem", "position": 3, "name": "Sprechstörungen", "item": "https://logopaedie-simsek.de/leistungen/sprechstoerungen" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Sprechstörungen: Stottern, Lispeln, Dysarthrie | Logopädie Şimşek Duisburg"
+  description="Therapie bei Stottern, Poltern, Lispeln und Dysarthrie in Duisburg. Professionelle Behandlung von Sprechstörungen für Kinder und Erwachsene. Zweisprachig DE/TR."
+  serviceTitle="Sprechstörungen: Stottern, Lispeln & mehr"
+  breadcrumbLabel="Sprechstörungen"
+  tags={['Stottern', 'Lispeln', 'Dysarthrie', 'Sprechapraxie']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/sprechstoerungen' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/sprechstoerungen' },
+  ]}
+  alternateUrl="/tr/hizmetler/konusma-bozuklugu"
+  relatedServices={[
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen', description: 'Sprachentwicklungsverzögerung, Aphasie, Frühförderung' },
+    { title: 'Stimmtherapie', href: '/leistungen/stimmtherapie', description: 'Heiserkeit, Dysphonie, funktionelle Stimmstörungen' },
+    { title: 'Schluckstörungen', href: '/leistungen/schluckstoerungen', description: 'Dysphagie bei Erwachsenen und Kindern' },
+  ]}
+>
+  <h2>Was sind Sprechstörungen?</h2>
+  <p>
+    Sprechstörungen betreffen die <strong>motorische Ausführung des Sprechens</strong> – also wie Laute,
+    Silben und Wörter produziert werden. Im Gegensatz zu Sprachstörungen ist die zugrunde liegende
+    Sprachkompetenz (Wortschatz, Grammatik) dabei häufig intakt.
+  </p>
+  <p>
+    Sprechstörungen können die Verständlichkeit erheblich beeinträchtigen und gehen oft mit sozialem
+    Rückzug und Leidensdruck einher – besonders bei Kindern und Jugendlichen, aber auch bei Erwachsenen
+    im Berufsalltag.
+  </p>
+
+  <h2>Häufige Sprechstörungen im Überblick</h2>
+  <ul>
+    <li><strong>Stottern:</strong> Wiederholungen von Lauten, Silben oder Wörtern, Dehnungen und Blockierungen. Beginnt meist im Vorschulalter.</li>
+    <li><strong>Poltern:</strong> Überhastetes, unrhythmisches Sprechen mit undeutlicher Artikulation und verminderter Selbstwahrnehmung.</li>
+    <li><strong>Dyslalie / Sigmatismus (Lispeln):</strong> Fehlerhafte Aussprache einzelner Laute, besonders der S-Laute (interdental, lateral).</li>
+    <li><strong>Dysarthrie:</strong> Motorische Sprechstörung durch neurologische Schädigung – betrifft Artikulation, Stimme, Atmung und Prosodie.</li>
+    <li><strong>Sprechapraxie:</strong> Planungsstörung des Sprechmotorsystems – inkonsistente Aussprachefehler ohne motorische Lähmung.</li>
+    <li><strong>Rhinophonie:</strong> Veränderte Nasalität beim Sprechen (z. B. nach Gaumenspalten-OP).</li>
+  </ul>
+
+  <h2>Stottertherapie</h2>
+  <p>
+    Stottern ist eine der bekanntesten Sprechstörungen. Es betrifft Jungen häufiger als Mädchen und
+    beginnt meist im Alter von 2–6 Jahren. Viele Kinder entwickeln sich spontan zurück – bei etwa
+    einem Drittel der Betroffenen bleibt Stottern jedoch bestehen.
+  </p>
+  <p>
+    Unsere Stottertherapie kombiniert bewährte <strong>Sprechflüssigkeitstechniken</strong> (z. B.
+    weiches Stimmeinsatztraining, Verlangsamung) mit psychosozialer Begleitung, da Stottern oft mit
+    erheblichem Leidensdruck, Vermeideverhalten und sozialer Angst verbunden ist.
+  </p>
+  <div class="info-box">
+    <p>
+      <strong>Wichtig für Eltern:</strong> Ein leichtes Stottern im Alter von 2–4 Jahren ist häufig normal.
+      Wenn Ihr Kind jedoch mehr als 3 Monate lang stottert oder sichtbaren Leidensdruck zeigt,
+      empfehlen wir eine logopädische Abklärung.
+    </p>
+  </div>
+
+  <h2>Aussprachestörungen bei Kindern</h2>
+  <p>
+    Lispeln, Sigmatismus und andere Aussprachefehler können die schulische Entwicklung beeinflussen
+    und zu sozialem Rückzug führen. Mit spielerischen, altersgerechten Übungen und gezieltem Training
+    der Artikulationsorgane helfen wir Kindern, eine <strong>klare und verständliche Aussprache</strong>
+    zu entwickeln.
+  </p>
+  <p>
+    Wir behandeln alle Formen der Dyslalie: Ersetzungen, Auslassungen, Zusätze und inkonsistente
+    Aussprachefehler – in enger Zusammenarbeit mit den Eltern und dem schulischen Umfeld.
+  </p>
+
+  <h2>Dysarthrie und Sprechapraxie bei Erwachsenen</h2>
+  <p>
+    Bei neurologischen Erkrankungen wie <strong>Parkinson, Multipler Sklerose, Schlaganfall</strong>
+    oder nach Schädel-Hirn-Trauma können die Sprechmuskeln und die motorische Planung beeinträchtigt sein.
+  </p>
+  <p>
+    Die Dysarthrietherapie verbessert die Verständlichkeit durch gezielte Übungen der Sprechmuskulatur,
+    Atemsteuerung und Artikulationsdeutlichkeit. Bei der Sprechapraxie liegt der Fokus auf der
+    Reorganisation der Sprechplanung durch repetitive, strukturierte Übungssequenzen.
+  </p>
+  <p>Therapieziele bei Dysarthrie und Apraxie:</p>
+  <ul>
+    <li>Verbesserung der Artikulationsdeutlichkeit</li>
+    <li>Optimierung von Atmung, Stimmgebung und Prosodie</li>
+    <li>Erlernen von Kompensationsstrategien</li>
+    <li>Einsatz von Kommunikationshilfen bei schwerer Ausprägung</li>
+  </ul>
+
+  <h2>Poltern – unterschätzt und oft nicht erkannt</h2>
+  <p>
+    Poltern (Cluttering) ist weniger bekannt als Stottern, aber ebenso behandlungsbedürftig. Betroffene
+    sprechen überhetzt und undeutlich, oft ohne sich dessen bewusst zu sein. Die Selbstwahrnehmung ist
+    häufig eingeschränkt – ein zentraler Ansatzpunkt der Therapie.
+  </p>
+</ServicePage>

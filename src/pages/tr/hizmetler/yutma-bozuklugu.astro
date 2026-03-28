@@ -1,0 +1,114 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Disfaji Terapisi: Yutma Bozukluklarının Tedavisi – Duisburg",
+  "description": "Duisburg'da yetişkinlerde ve çocuklarda yutma bozukluklarının (disfaji) profesyonel tanı ve terapisi – inme, Parkinson veya nörolojik hastalıklar sonrası.",
+  "url": "https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu",
+  "about": { "@type": "MedicalCondition", "name": "Disfaji" },
+  "inLanguage": "tr",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/tr" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://logopaedie-simsek.de/tr/hizmetler" },
+      { "@type": "ListItem", "position": 3, "name": "Yutma Bozuklukları", "item": "https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Disfaji Terapisi | Yutma Bozuklukları | Logopädie Şimşek Duisburg"
+  description="Duisburg'da yetişkinlerde ve çocuklarda yutma bozukluklarının (disfaji) profesyonel tanı ve terapisi – inme, Parkinson veya nörolojik hastalıklar sonrası."
+  serviceTitle="Yutma Bozuklukları (Disfaji): Güvenli Yutmayı Öğrenmek"
+  breadcrumbLabel="Yutma Bozuklukları"
+  tags={['Disfaji', 'Yutma', 'Nöroloji', 'Rehabilitasyon']}
+  lang="tr"
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/schluckstoerungen' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/schluckstoerungen' },
+  ]}
+  alternateUrl="/leistungen/schluckstoerungen"
+  relatedServices={[
+    { title: 'Dil Bozuklukları', href: '/tr/hizmetler/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
+    { title: 'Konuşma Bozuklukları', href: '/tr/hizmetler/konusma-bozuklugu', description: 'Kekemelik, pelteklik, dizartri ve konuşma apraksisi' },
+    { title: 'Ses Terapisi', href: '/tr/hizmetler/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
+  ]}
+>
+  <h2>Yutma Bozukluğu (Disfaji) Nedir?</h2>
+  <p>
+    Disfaji; gıda veya sıvıların yutulmasındaki güçlükleri tanımlar.
+    Bu durum <strong>ağızdan yemek borusuna kadar uzanan yutma sürecinin herhangi bir
+    aşamasında</strong> ortaya çıkabilir. Ciddi komplikasyonlara yol açabileceğinden
+    – aspirasyon pnömonisi, yetersiz beslenme ve yaşam kalitesinin düşmesi gibi –
+    uzman tanı ve terapi büyük önem taşır.
+  </p>
+
+  <h2>Disfajinin Nedenleri</h2>
+  <p>Yutma bozuklukları genellikle şu durumlardan kaynaklanır:</p>
+  <ul>
+    <li><strong>İnme:</strong> Yutma bozukluğu inme geçirenlerde en sık görülen komplikasyonlardan biridir.</li>
+    <li><strong>Parkinson Hastalığı:</strong> Hastalık ilerledikçe yutma güçlüğü neredeyse tüm hastalarda görülür.</li>
+    <li><strong>Multiple Skleroz (MS):</strong> MS disfajiye yol açabilecek birçok nörolojik bozukluğa neden olur.</li>
+    <li><strong>ALS (Amyotrofik Lateral Skleroz):</strong> Tüm yutma kaslarını giderek etkiler.</li>
+    <li><strong>Demans:</strong> İleri evrelerde yutma güçlüğü sık görülür.</li>
+    <li><strong>Baş-Boyun Tümörleri veya Ameliyatları:</strong> Yapısal değişiklikler yutmayı doğrudan etkiler.</li>
+    <li><strong>Yenidoğan ve Çocuklarda:</strong> Prematüre doğum, serebral palsi veya çeşitli sendromlar yutma bozukluğuna neden olabilir.</li>
+  </ul>
+
+  <h2>Uyarı İşaretleri</h2>
+  <p>
+    Aşağıdaki belirtilerden birini veya birkaçını yaşıyorsanız bir logoped veya doktora başvurmanızı öneririz:
+  </p>
+  <ul>
+    <li>Yemek sırasında veya sonrasında öksürme ya da boğulma</li>
+    <li>Yemek veya sıvıların "yanlış gitmesi" hissi</li>
+    <li>Yutarken ağrı veya baskı hissi</li>
+    <li>Yemeklerin ağızda birikmesi</li>
+    <li>Açıklanamayan kilo kaybı</li>
+    <li>Akciğer enfeksiyonlarının sık tekrarlaması</li>
+  </ul>
+
+  <h2>Tanı Yaklaşımımız</h2>
+  <p>
+    Yutma tanısını <strong>klinik yutma muayenesi (KME)</strong> ile gerçekleştiriyoruz:
+    Farklı besin kıvamları kullanarak yutmanın tüm aşamalarını sistematik biçimde değerlendiriyoruz.
+  </p>
+  <p>
+    Tanı bulgularına dayanarak yutma sürecinin hangi aşamasının etkilendiği ve ne tür komplikasyon
+    risklerinin bulunduğu belirleniyor. Gerektiğinde ilgili uzman hekimlerle yakın iş birliği
+    içinde hareket ediyoruz.
+  </p>
+
+  <h2>Terapi Stratejileri</h2>
+  <p>
+    Disfaji terapisi bireysel olarak planlanır ve bozukluğun türü ile ciddiyetine göre şekillenir:
+  </p>
+  <ul>
+    <li><strong>Kas Güçlendirme:</strong> Yutmaya katılan kasların güçlendirilmesi için hedefli egzersizler.</li>
+    <li><strong>Yutma Teknikleri:</strong> Yutma sürecini kolaylaştıran özel manevralar (örn. Mendelsohn manevra, baş önde yutma).</li>
+    <li><strong>Pozisyonlama:</strong> Yutmayı güvenli kılan baş ve gövde pozisyonları.</li>
+    <li><strong>Kıvam Uyarlaması:</strong> Güvenli beslenmeyi sağlamak için yiyecek ve sıvıların uygun kıvama getirilmesi.</li>
+    <li><strong>Kompansatuar Stratejiler:</strong> Mevcut güçlükleri telafi eden yöntemler.</li>
+  </ul>
+
+  <div class="info-box">
+    <p>
+      Disfaji terapisi <strong>yatarak tedavi veya rehabilitasyon</strong> süreciyle eş zamanlı
+      yürütülebilir ya da taburculuk sonrasında yeni muayenehanemizde sürdürülebilir.
+      Ayrıca <strong>ev ziyareti</strong> hizmeti de sunmaktayız.
+    </p>
+  </div>
+
+  <h2>Aile ve Bakım Verenler için Bilgi</h2>
+  <p>
+    Disfaji yalnızca hastayı değil, tüm aileyi etkiler. Bu nedenle terapimize yakınları da dahil ediyoruz:
+    Güvenli yemek hazırlama, yutmayı destekleyici tekniklerin uygulanması ve acil durumlar için
+    net yönergeler sunuyoruz.
+  </p>
+</ServicePage>

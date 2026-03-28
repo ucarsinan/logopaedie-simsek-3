@@ -1,43 +1,63 @@
 ---
-// No props — static content
+interface Props {
+  lang?: 'de' | 'tr';
+  alternateUrl?: string;
+}
+
+const { lang = 'de', alternateUrl } = Astro.props;
+const isDE = lang === 'de';
 ---
 
 <header class="fixed top-0 left-0 right-0 z-[1001] h-[var(--header-h)] bg-white border-b border-border shadow-[0_1px_4px_rgba(0,0,0,.06)]" id="site-header" role="banner">
   <div class="container flex items-center justify-between h-full">
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-3.5 text-text shrink-0 min-w-0 no-underline" aria-label="Praxis für Logopädie Şimşek – Startseite">
-<div class="w-14 h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-          <img src="/favicon.svg" alt="" aria-hidden="true" />
-        </div>
+    <a href={isDE ? '/' : '/tr/'} class="flex items-center gap-3.5 text-text shrink-0 min-w-0 no-underline" aria-label="Praxis für Logopädie Şimşek – Startseite">
+      <div class="w-14 h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+        <img src="/favicon.svg" alt="" aria-hidden="true" />
+      </div>
       <div>
         <div class="text-[.875rem] font-bold leading-[1.25] text-text uppercase tracking-[.02em]">Praxis für Logopädie Şimşek</div>
-        <span class="block text-[.6875rem] font-normal text-text-muted tracking-[.03em] mt-px">Logopädie Duisburg</span>
+        <span class="block text-[.6875rem] font-normal text-text-muted tracking-[.03em] mt-px">{isDE ? 'Logopädie Duisburg' : 'Duisburg Logoterapi'}</span>
       </div>
     </a>
-    <!-- Contact buttons -->
-    <div class="flex items-stretch gap-[10px] shrink-0 max-[767px]:hidden"> 
-    
-    <a href="https://goo.gl/maps/cGPVX58woxP2" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="shadow-xl/20 flex-1 font-medium inline-flex items-center justify-center gap-2 px-[18px] py-2 rounded-[6px] tracking-[.04em] uppercase bg-topbar-green text-[#1C1916] transition-colors duration-200 whitespace-nowrap leading-[1.2] hover:bg-[#7ab52f] [&amp;_svg]:shrink-0 max-[991px]:hidden" 
-       aria-label="Adresse öffnen in Google Maps"> 
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-        </svg> 
-        <span>TONHALLENSTR. 21<br>47051 DUISBURG</span> 
-    </a> 
 
-    <a href="tel:+4920334868690" 
-       class="shadow-xl/20 font-medium flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-[6px] tracking-[.04em] uppercase bg-topbar-green text-[#1C1916] transition-colors duration-200 whitespace-nowrap leading-[1.2] hover:bg-[#2185C2] [&amp;_svg]:shrink-0" 
-       aria-label="Jetzt anrufen: 0203 34 86 86 90"> 
+    <!-- Right side: contact buttons + language switcher -->
+    <div class="flex items-stretch gap-[10px] shrink-0 max-[767px]:hidden">
+
+      <a href="https://goo.gl/maps/cGPVX58woxP2"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="shadow-xl/20 flex-1 font-medium inline-flex items-center justify-center gap-2 px-[18px] py-2 rounded-[6px] tracking-[.04em] uppercase bg-topbar-green text-[#1C1916] transition-colors duration-200 whitespace-nowrap leading-[1.2] hover:bg-[#7ab52f] [&_svg]:shrink-0 max-[991px]:hidden"
+         aria-label="Adresse öffnen in Google Maps">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>TONHALLENSTR. 21<br>47051 DUISBURG</span>
+      </a>
+
+      <a href="tel:+4920334868690"
+         class="shadow-xl/20 font-medium flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-[6px] tracking-[.04em] uppercase bg-topbar-green text-[#1C1916] transition-colors duration-200 whitespace-nowrap leading-[1.2] hover:bg-[#2185C2] [&_svg]:shrink-0"
+         aria-label="Jetzt anrufen: 0203 34 86 86 90">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
         <span>0203 – 34 86 86 90</span>
-    </a> 
-</div>
+      </a>
+
+      <!-- Language Switcher -->
+      {alternateUrl && (
+        <a
+          href={alternateUrl}
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-[6px] border border-border text-[.75rem] font-semibold tracking-[.06em] uppercase text-text-muted hover:text-primary hover:border-primary transition-colors duration-200"
+          aria-label={isDE ? 'Türkçe sürüme geç' : 'Deutsche Version aufrufen'}
+          title={isDE ? 'Türkçe' : 'Deutsch'}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          {isDE ? 'TR' : 'DE'}
+        </a>
+      )}
+    </div>
   </div>
 </header>
 

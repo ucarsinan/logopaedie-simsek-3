@@ -8,13 +8,61 @@ import Services from '../components/sections/Services.astro';
 import Bilingual from '../components/sections/Bilingual.astro';
 import Team from '../components/sections/Team.astro';
 import Praxis from '../components/sections/Praxis.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
 import Karriere from '../components/sections/Karriere.astro';
+import Faq from '../components/sections/Faq.astro';
 import Kontakt from '../components/sections/Kontakt.astro';
 import Footer from '../components/Footer.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was behandeln Logopädinnen und Logopäden?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Logopädinnen behandeln Störungen in den Bereichen Sprache (z. B. Sprachentwicklungsverzögerung, Aphasie), Sprechen (z. B. Stottern, Lispeln, Dysarthrie), Stimme (z. B. Heiserkeit, Dysphonie) und Schlucken (Dysphagie). Die Therapie richtet sich an Kinder, Erwachsene und Senioren." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ab welchem Alter kann mein Kind zur Logopädie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Logopädische Therapie ist ab dem Säuglingsalter möglich. Je früher eine Sprachentwicklungsverzögerung erkannt und behandelt wird, desto besser sind die Therapieerfolge. Frühförderung vor dem Schuleintritt ist besonders wirkungsvoll." }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich ein ärztliches Rezept für Logopädie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Für eine kassenfinanzierte Therapie benötigen Sie eine Heilmittelverordnung (Rezept) von Ihrem Haus- oder Facharzt. Als Selbstzahler können Sie auch ohne Rezept einen Termin vereinbaren." }
+    },
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten der Therapie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gesetzliche Krankenkassen übernehmen bei vorliegender Heilmittelverordnung den Großteil der Therapiekosten. Sie zahlen in der Regel eine Zuzahlung von 10 % plus 10 € Rezeptgebühr. Wir arbeiten mit allen gesetzlichen und privaten Krankenkassen zusammen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Bieten Sie Therapie auf Türkisch an?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja – wir bieten vollständige Diagnostik, Beratung und Therapie auf Deutsch und Türkisch an. Besonders für mehrsprachig aufwachsende Kinder ist diese interkulturelle Kompetenz ein großer Vorteil." }
+    },
+    {
+      "@type": "Question",
+      "name": "Sind Hausbesuche in Duisburg möglich?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten auf Wunsch Hausbesuche in Duisburg und der näheren Umgebung an – besonders für mobilitätseingeschränkte Patienten." }
+    }
+  ]
+};
 ---
 
-<Layout title="Logopädie Şimşek – Sprechen. Verstehen. Verbinden." description="Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR.">
-  <Header />
+<Layout
+  title="Logopädie Şimşek – Sprechen. Verstehen. Verbinden."
+  description="Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR."
+  additionalSchemas={[faqSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/' },
+  ]}
+>
+  <Header alternateUrl="/tr/" />
   <Nav />
   <main>
     <Hero />
@@ -23,7 +71,9 @@ import Footer from '../components/Footer.astro';
     <Bilingual />
     <Team />
     <Praxis />
+    <Testimonials />
     <Karriere />
+    <Faq />
     <Kontakt />
   </main>
   <Footer />

@@ -1,0 +1,41 @@
+<!-- Sarah P. – golden-blonde, shoulder-length straight hair -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#FFF3EA"/>
+
+  <!-- Shirt / body -->
+  <path d="M 28 200 L 22 162 Q 36 144 100 144 Q 164 144 178 162 L 172 200 Z" fill="#3B8B7C"/>
+  <path d="M 84 150 L 100 168 L 116 150" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+
+  <!-- Shoulder-length hair (behind body) -->
+  <rect x="56"  y="78"  width="18" height="80" rx="9" fill="#C8A04A"/>
+  <rect x="126" y="78"  width="18" height="80" rx="9" fill="#C8A04A"/>
+
+  <!-- Neck -->
+  <rect x="87" y="138" width="26" height="24" rx="7" fill="#C9906A"/>
+
+  <!-- Face -->
+  <ellipse cx="100" cy="106" rx="44" ry="47" fill="#D4956E"/>
+
+  <!-- Hair crown (on top of face) -->
+  <ellipse cx="100" cy="72" rx="44" ry="32" fill="#C8A04A"/>
+  <rect x="56"  y="68" width="88" height="20" rx="0" fill="#C8A04A"/>
+  <!-- Center part line -->
+  <line x1="100" y1="58" x2="100" y2="75" stroke="#B08830" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Eyes -->
+  <ellipse cx="86"  cy="105" rx="4" ry="4.5" fill="#3A2508"/>
+  <ellipse cx="114" cy="105" rx="4" ry="4.5" fill="#3A2508"/>
+  <circle cx="88"  cy="103" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="116" cy="103" r="1.5" fill="white" opacity="0.7"/>
+
+  <!-- Eyebrows (lighter for blonde) -->
+  <path d="M 80 96 Q 86 92 92 95"  stroke="#9A7020" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M 108 95 Q 114 92 120 96" stroke="#9A7020" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <path d="M 91 124 Q 100 130 109 124" stroke="#B87050" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Accent dot -->
+  <circle cx="158" cy="38" r="10" fill="#3B8B7C" opacity="0.2"/>
+  <circle cx="158" cy="38" r="5"  fill="#3B8B7C" opacity="0.4"/>
+</svg>

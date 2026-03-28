@@ -1,0 +1,116 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Dysphagie-Therapie: Schluckstörungen behandeln in Duisburg",
+  "description": "Professionelle Diagnostik und Therapie von Schluckstörungen (Dysphagie) in Duisburg – für Erwachsene und Kinder nach Schlaganfall, bei Parkinson oder neurologischen Erkrankungen.",
+  "url": "https://logopaedie-simsek.de/leistungen/schluckstoerungen",
+  "about": { "@type": "MedicalCondition", "name": "Dysphagie" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://logopaedie-simsek.de/leistungen" },
+      { "@type": "ListItem", "position": 3, "name": "Schluckstörungen", "item": "https://logopaedie-simsek.de/leistungen/schluckstoerungen" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Dysphagie Therapie | Schluckstörungen | Logopädie Şimşek Duisburg"
+  description="Professionelle Diagnostik und Therapie von Schluckstörungen (Dysphagie) in Duisburg – für Erwachsene und Kinder nach Schlaganfall, bei Parkinson oder neurologischen Erkrankungen."
+  serviceTitle="Schluckstörungen (Dysphagie): Sicher schlucken lernen"
+  breadcrumbLabel="Schluckstörungen"
+  tags={['Dysphagie', 'Schlucken', 'Neurologie', 'Rehabilitation']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/schluckstoerungen' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/schluckstoerungen' },
+  ]}
+  alternateUrl="/tr/hizmetler/yutma-bozuklugu"
+  relatedServices={[
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen', description: 'Sprachentwicklungsverzögerung, Aphasie, Frühförderung' },
+    { title: 'Sprechstörungen', href: '/leistungen/sprechstoerungen', description: 'Stottern, Lispeln, Dysarthrie und Sprechapraxie' },
+    { title: 'Stimmtherapie', href: '/leistungen/stimmtherapie', description: 'Heiserkeit, Dysphonie, funktionelle Stimmstörungen' },
+  ]}
+>
+  <h2>Was ist Dysphagie?</h2>
+  <p>
+    <strong>Dysphagie</strong> bezeichnet Schwierigkeiten beim Schlucken von Speisen, Getränken oder
+    dem eigenen Speichel. Schlucken ist ein komplexer neuromuskulärer Vorgang, an dem über 30 Muskeln
+    beteiligt sind – eine Störung an beliebiger Stelle kann den gesamten Ablauf beeinträchtigen.
+  </p>
+  <p>
+    Schluckstörungen können die Lebensqualität erheblich verringern: Essen und Trinken, das für
+    die meisten Menschen selbstverständlich ist, wird zur Herausforderung oder zur Gefahr.
+    Im schlimmsten Fall droht <strong>stille Aspiration</strong> – das Einatmen von Nahrung oder Flüssigkeit
+    in die Lunge, ohne dass es der Betroffene bemerkt – mit dem Risiko einer Aspirationspneumonie.
+  </p>
+
+  <h2>Häufige Ursachen von Schluckstörungen</h2>
+  <ul>
+    <li><strong>Schlaganfall</strong> – eine der häufigsten Ursachen, oft kombiniert mit Aphasie und Dysarthrie</li>
+    <li><strong>Morbus Parkinson</strong> – fortschreitende Verschlechterung der Schluckfunktion im Verlauf</li>
+    <li><strong>Multiple Sklerose</strong></li>
+    <li><strong>ALS (Amyotrophe Lateralsklerose)</strong></li>
+    <li><strong>Demenz</strong> – im fortgeschrittenen Stadium</li>
+    <li><strong>Kopf-Hals-Tumoren</strong> und deren Behandlung (Operation, Bestrahlung, Chemotherapie)</li>
+    <li><strong>Intensivmedizinische Behandlungen</strong> – z. B. nach Langzeitbeatmung</li>
+    <li><strong>Frühgeborene und Neugeborene</strong> – mit Saugstörungen oder oraler Hypersensitivität</li>
+  </ul>
+
+  <h2>Anzeichen einer Schluckstörung</h2>
+  <p>Typische Warnsignale, bei denen eine logopädische Abklärung sinnvoll ist:</p>
+  <ul>
+    <li>Häufiges Husten oder Räuspern beim Essen und Trinken</li>
+    <li>Gefühl, dass Speisen im Hals stecken bleiben</li>
+    <li>Nasse oder gurgelnd klingende Stimme nach dem Essen</li>
+    <li>Ungewollter Gewichtsverlust durch vermiedene Nahrungsaufnahme</li>
+    <li>Häufige Atemwegsinfekte (mögliche Folge stiller Aspiration)</li>
+    <li>Verlängerte Essenszeiten oder Vermeidung bestimmter Konsistenzen</li>
+    <li>Speichelfluss oder Nahrungsaustritt aus dem Mund</li>
+  </ul>
+
+  <div class="info-box">
+    <p>
+      <strong>Wichtig:</strong> Schluckstörungen werden oft unterschätzt oder zu spät erkannt. Bei
+      Verdacht auf Dysphagie empfehlen wir eine zeitnahe logopädische Diagnostik – Früherkennung
+      und konsequente Behandlung verbessern die Prognose erheblich.
+    </p>
+  </div>
+
+  <h2>Diagnostik</h2>
+  <p>
+    Eine gründliche Schluckdiagnostik ist die Grundlage jeder Therapie. In unserer Praxis erheben wir:
+  </p>
+  <ul>
+    <li>Ausführliche Anamnese (Krankheitsgeschichte, Ernährungssituation, Medikamente)</li>
+    <li>Klinische Schluckuntersuchung (Beobachtung und Palpation der Schluckbewegungen)</li>
+    <li>Überprüfung der oralen Motorik, Sensibilität und Reflexe</li>
+    <li>Beurteilung von Stimmklang und Husten als Schluckindikatoren</li>
+  </ul>
+  <p>
+    Bei Bedarf arbeiten wir eng mit dem behandelnden Arzt, dem HNO-Facharzt oder dem Gastroenterologen
+    für weiterführende Diagnostik (z. B. Videoendoskopie, Videofluoroskopie) zusammen.
+  </p>
+
+  <h2>Unser Therapieansatz</h2>
+  <p>Die Dysphagietherapie zielt darauf ab, das Schlucken <strong>sicherer und effizienter</strong> zu machen:</p>
+  <ul>
+    <li><strong>Kräftigung:</strong> Gezieltes Training der am Schlucken beteiligten Muskulatur</li>
+    <li><strong>Schlucktechniken:</strong> Erlernen kompensatorischer Strategien (z. B. Chin-Tuck, Supraglottisches Schlucken)</li>
+    <li><strong>Haltungsadaptation:</strong> Optimale Positionierung beim Essen und Trinken</li>
+    <li><strong>Kostadaptation:</strong> Anpassung von Speisen- und Getränkekonsistenz an die individuelle Fähigkeit</li>
+    <li><strong>Atemschutz:</strong> Absaugvorbereitung, Husten- und Räuspermanagement</li>
+    <li><strong>Beratung:</strong> Angehörige und Pflegepersonal in die Behandlung einbeziehen</li>
+  </ul>
+  <p>
+    Wir arbeiten eng mit Pflegeeinrichtungen, Krankenhäusern und niedergelassenen Ärzten in Duisburg
+    und Umgebung zusammen. Auf Wunsch sind auch <strong>Hausbesuche</strong> möglich – besonders für
+    bettlägerige oder mobilitätseingeschränkte Patientinnen und Patienten.
+  </p>
+</ServicePage>

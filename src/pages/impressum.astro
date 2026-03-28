@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Impressum – Logopädie Şimşek"
+  description="Impressum der Praxis für Logopädie Şimşek in Duisburg."
+>
+  <Header />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))] min-h-[60vh]">
+    <div class="container py-20 max-w-3xl">
+      <h1 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold mb-10 text-text">Impressum</h1>
+
+      <div class="flex flex-col gap-8 text-[.9375rem] text-text-muted leading-[1.7]">
+        <section>
+          <h2 class="font-semibold text-text text-lg mb-2">Angaben gemäß § 5 TMG</h2>
+          <p>
+            Emel Şimşek-Uçar<br />
+            Praxis für Logopädie Şimşek<br />
+            Tonhallenstraße 21<br />
+            47051 Duisburg
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-semibold text-text text-lg mb-2">Kontakt</h2>
+          <p>
+            Telefon: <a href="tel:+4920334868690" class="text-primary hover:underline">0203 – 34 86 86 90</a><br />
+            E-Mail: <a href="mailto:info@logopaedie-simsek.de" class="text-primary hover:underline">info@logopaedie-simsek.de</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-semibold text-text text-lg mb-2">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+          <p>
+            Berufsbezeichnung: Staatlich geprüfte Logopädin<br />
+            Verliehen in: Bundesrepublik Deutschland<br />
+            Zuständige Behörde: <span class="italic text-text-light">[wird ergänzt]</span>
+          </p>
+          <p class="mt-2">
+            Es gelten folgende berufsrechtliche Regelungen: Gesetz über den Beruf des Logopäden (LogopG) sowie die
+            entsprechenden Berufsordnungen.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-semibold text-text text-lg mb-2">Aufsichtsbehörde</h2>
+          <p><span class="italic text-text-light">[wird ergänzt]</span></p>
+        </section>
+
+        <section>
+          <h2 class="font-semibold text-text text-lg mb-2">Haftungsausschluss</h2>
+          <h3 class="font-semibold text-text mb-1">Haftung für Inhalte</h3>
+          <p>
+            Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
+            Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr. Als Diensteanbieter
+            sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+            verantwortlich.
+          </p>
+          <h3 class="font-semibold text-text mb-1 mt-4">Haftung für Links</h3>
+          <p>
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss
+            haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-semibold text-text text-lg mb-2">Urheberrecht</h2>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
+            deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung,
+            Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
+            bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
+        </section>
+
+        <p class="text-sm text-text-light italic border-t border-border pt-6">
+          * Dieses Impressum wird derzeit vervollständigt. Einige Angaben werden zeitnah ergänzt.
+        </p>
+      </div>
+
+      <div class="mt-12">
+        <a href="/" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Zurück zur Startseite
+        </a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

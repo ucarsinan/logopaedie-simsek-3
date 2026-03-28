@@ -1,0 +1,124 @@
+---
+import ServicePage from '../../../layouts/ServicePage.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Dil Bozuklukları: Duisburg'da Tanı ve Tedavi",
+  "description": "Duisburg'da dil bozukluklarının logopedik tedavisi – dil gelişim gecikmesi, afazi, erken müdahale, çocuklar ve yetişkinler için. Almanca ve Türkçe.",
+  "url": "https://logopaedie-simsek.de/tr/hizmetler/dil-bozuklugu",
+  "about": { "@type": "MedicalCondition", "name": "Dil Bozukluğu" },
+  "inLanguage": "tr",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/tr" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://logopaedie-simsek.de/tr/hizmetler" },
+      { "@type": "ListItem", "position": 3, "name": "Dil Bozuklukları", "item": "https://logopaedie-simsek.de/tr/hizmetler/dil-bozuklugu" }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Dil Bozuklukları Tedavisi | Logopädie Şimşek Duisburg"
+  description="Duisburg'da dil bozukluklarının profesyonel tanı ve tedavisi – çocuklar ve yetişkinler için. Dil gelişim bozuklukları, afazi, erken müdahale. Almanca ve Türkçe."
+  serviceTitle="Dil Bozuklukları: Duisburg'da Tanı ve Tedavi"
+  breadcrumbLabel="Dil Bozuklukları"
+  tags={['Dil Gelişimi', 'Afazi', 'Erken Müdahale', 'İki Dilli']}
+  lang="tr"
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/sprachstoerungen' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/dil-bozuklugu' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/sprachstoerungen' },
+  ]}
+  alternateUrl="/leistungen/sprachstoerungen"
+  relatedServices={[
+    { title: 'Konuşma Bozuklukları', href: '/tr/hizmetler/konusma-bozuklugu', description: 'Kekemelik, pelteklik, dizartri ve konuşma apraksisi' },
+    { title: 'Ses Terapisi', href: '/tr/hizmetler/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
+    { title: 'Yutma Bozuklukları', href: '/tr/hizmetler/yutma-bozuklugu', description: 'Yetişkinlerde ve çocuklarda disfaji' },
+  ]}
+>
+  <h2>Dil Bozuklukları Nedir?</h2>
+  <p>
+    Dil bozuklukları; dili anlama veya dil yoluyla kendini ifade etme yeteneğini etkiler.
+    Bunlar <strong>dilbilimsel sistemi</strong> – yani sözcük dağarcığı, dilbilgisi, dil anlama
+    ve dilin iletişimsel kullanımını – etkiler; konuşma organlarının kendisi etkilenmemiş olsa dahi.
+  </p>
+  <p>
+    Dil bozuklukları her yaşta ortaya çıkabilir: küçük çocuklarda gelişimsel gecikme,
+    okul çocuklarında spesifik dil gelişim bozukluğu ve yetişkinlerde inme gibi nörolojik olayların
+    ardından edinilmiş bozukluk olarak.
+  </p>
+
+  <h2>Yaygın Dil Bozuklukları</h2>
+  <ul>
+    <li><strong>Dil Gelişim Gecikmesi:</strong> Çocuklar yaşıtlarına göre daha yavaş dil geliştirir – örneğin 2 yaşında henüz ilk sözcükleri söylememek.</li>
+    <li><strong>Spesifik Dil Gelişim Bozukluğu:</strong> Başka bir nedenle açıklanamayan dilbilgisi, sözcük dağarcığı veya dil anlamada niteliksel sapmalar.</li>
+    <li><strong>Afazi:</strong> İnme, kafa travması veya beyin tümörü sonrası edinilmiş dil bozukluğu – konuşma, anlama, okuma ve yazmayı etkiler.</li>
+    <li><strong>Semantik-Pragmatik Bozukluklar:</strong> Duruma uygun dil kullanımında ve sosyal bağlamda dil anlamada güçlükler.</li>
+    <li><strong>Okuma-Yazma Güçlüğü (Disleksi):</strong> Logoterapi desteğiyle tedavi edilebilen yazılı dil bozukluğu.</li>
+  </ul>
+
+  <h2>Çocuklarda Dil Terapisi</h2>
+  <p>
+    Çocuklarda <strong>yaşa uygun tanı</strong> ile kesin destek ihtiyacını belirleyerek başlıyoruz.
+    Standartlaştırılmış test yöntemleri ve serbest oyun gözlemiyle tam bir tablo oluşturuyoruz.
+  </p>
+  <p>
+    Okul öncesi erken müdahale özellikle etkilidir; çünkü beyin ilk yaşlarda çok daha plastiktir.
+    Terapi <strong>oyun temelli, motive edici ve her çocuğa özel</strong> tasarlanır – aileyi aktif olarak sürece dahil eder.
+  </p>
+  <p>Tedavi ettiğimiz durumlar arasında şunlar yer alır:</p>
+  <ul>
+    <li>2 yaşından itibaren çocuklarda gecikmiş dil gelişimi</li>
+    <li>Anaokulu ve ilkokul çağında dilbilgisi ve sözcük dağarcığı bozuklukları</li>
+    <li>Dil anlama problemleri</li>
+    <li>Çok dilli büyüyen çocuklarda dil gelişimi (Almanca/Türkçe)</li>
+    <li>Okuma-yazma güçlüğünde destek</li>
+  </ul>
+
+  <h2>Yetişkinlerde Dil Terapisi – Afazi</h2>
+  <p>
+    Yetişkinlerde dil bozuklukları genellikle <strong>inme</strong>, kafa travması, beyin tümörleri
+    veya dejeneratif hastalıklar gibi nörolojik olaylardan kaynaklanır. Afazi; konuşma, anlama,
+    okuma ve yazmayı içeren tüm dil modalitelerini etkiler.
+  </p>
+  <p>
+    Afazi terapimiz kaybedilen dil becerilerini yeniden kazandırmayı veya etkili telafi stratejileri
+    geliştirmeyi hedefler. İyileşme sürecinde önemli rol oynayan yakınlarla birlikte çalışıyoruz.
+  </p>
+  <p>Tüm afazi türlerini tedavi ediyoruz:</p>
+  <ul>
+    <li>Broca Afazisi (motor, akıcı olmayan)</li>
+    <li>Wernicke Afazisi (duyusal, akıcı)</li>
+    <li>Global Afazi (tüm dil alanlarının ağır etkilenmesi)</li>
+    <li>Anomik Afazi (sözcük bulma bozuklukları)</li>
+  </ul>
+
+  <h2>İki Dilli Dil Tanısı ve Terapisi</h2>
+  <p>
+    Çok dilli büyüyen çocuklarda gerçek bir dil gelişim bozukluğunu normal iki dilli dil edinimi
+    aşamalarından ayırt etmek kritik önem taşır. Hatalı tanılar gereksiz terapiye yol açabilir
+    veya gerekli desteği geciktirebilir.
+  </p>
+  <div class="info-box">
+    <p>
+      Terapistlerimiz <strong>Almanca ve Türkçe</strong> konuşuyor; çocukları ve yetişkinleri
+      her iki dilde tanılayıp tedavi edebiliyor. Bu hizmet Ruhr Bölgesi'nde nadiren bulunur ve
+      Türkçe konuşan aileler için önemli bir bakım açığını kapatır.
+    </p>
+  </div>
+
+  <h2>Terapi Sürecimiz</h2>
+  <p>
+    Her tedavi; hedefleri birlikte belirlediğimiz kapsamlı bir <strong>tanı ve anamnez</strong>
+    ile başlar. Ardından düzenli ilerleme takibiyle yapılandırılmış, bireysel terapi uygulanır.
+    Ev ödevleri sürecin önemli bir parçasıdır ve anlaşılır biçimde açıklanır.
+  </p>
+  <p>
+    Çocuklarda aileleri aktif olarak dahil ediyoruz – terapi kazanımlarını günlük yaşamda
+    pekiştirecek net yönergeler sunuyoruz.
+  </p>
+</ServicePage>
