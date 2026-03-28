@@ -1,0 +1,185 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": `${siteUrl}/tr/` },
+    { "@type": "ListItem", "position": 2, "name": "Sigorta ve Ödeme", "item": `${siteUrl}/tr/kostenuebernahme` }
+  ]
+};
+---
+
+<Layout
+  title="Sigorta Kapsamı ve Ödeme – Logopedi Şimşek Duisburg"
+  description="Logopedi tedavisinin sağlık sigortası tarafından karşılanması hakkında bilgiler. Reçete, katkı payı ve özel ödeme seçenekleri. Türkçe bilgi."
+  additionalSchemas={[breadcrumbSchema]}
+  lang="tr"
+  hreflangAlternates={[
+    { lang: 'tr', url: `${siteUrl}/tr/kostenuebernahme` },
+    { lang: 'de', url: `${siteUrl}/kostenuebernahme` },
+    { lang: 'x-default', url: `${siteUrl}/kostenuebernahme` },
+  ]}
+>
+  <Header lang="tr" alternateUrl="/kostenuebernahme" />
+  <Nav lang="tr" />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/tr/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Sigorta ve Ödeme</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-3xl">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          Sigorta Kapsamı & Ödeme
+        </h1>
+        <p class="text-text-muted text-lg">
+          Logopedi tedavisi bir sağlık hizmetidir ve sağlık sigortası tarafından karşılanır.
+          Reçete, katkı payı ve ödeme seçenekleri hakkında tüm bilgiler burada.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container max-w-3xl py-14">
+      <div class="prose-section">
+
+        <h2>Sağlık Sigortası Kapsamı</h2>
+        <p>
+          Doktor tarafından reçete edilen logopedi tedavisi bir <strong>sağlık hizmeti</strong>
+          olarak temel tıbbi bakımın bir parçasıdır. Hem kamu sigortası (GKV) hem de özel
+          sağlık sigortası (PKV), bir hekim reçetesi (Heilmittelverordnung) olması koşuluyla
+          tedavi masraflarını karşılar.
+        </p>
+
+        <h2>Kim Reçete Yazabilir?</h2>
+        <p>Aşağıdaki uzman hekimler logopedi reçetesi yazabilir:</p>
+        <ul>
+          <li>Genel pratisyen hekimler</li>
+          <li>KBB (Kulak Burun Boğaz) uzmanları</li>
+          <li>İç hastalıkları uzmanları</li>
+          <li>Çocuk doktorları (Pediatristler)</li>
+          <li>Çocuk psikiyatristleri</li>
+          <li>Nörologlar</li>
+          <li>Ortopedistler</li>
+          <li>Foniatristler</li>
+          <li>Diş hekimleri</li>
+        </ul>
+
+        <h2>Ne Kadar Öderim?</h2>
+
+        <h3>Çocuklar ve Gençler (18 yaşın altında)</h3>
+        <p>
+          <strong>Katkı payı yok.</strong> 18 yaşını doldurmamış çocuklar ve gençler
+          katkı payından tamamen muaftır. Sağlık sigortası tüm tedavi masraflarını karşılar.
+        </p>
+
+        <h3>Yetişkinler (18 yaş ve üzeri)</h3>
+        <p>
+          Kamu sağlık sigortası olan yetişkinler her reçete için şunları öder:
+        </p>
+        <ul>
+          <li><strong>Tedavi masraflarının %10'u</strong> (katkı payı olarak)</li>
+          <li><strong>Reçete başına 10 € ücret</strong></li>
+        </ul>
+        <p>
+          Kalan tutarı sağlık sigortası karşılar.
+        </p>
+
+        <h2>Özel Sigortalılar</h2>
+        <p>
+          Özel sağlık sigortası olanlar da hekim reçetesiyle tedavi edilir.
+          Sigortanızın tedaviyı kapsayıp kapsamadığını önceden sigortanızla
+          netleştirmenizi öneririz.
+        </p>
+
+        <div class="info-box">
+          <p>
+            <strong>Bilgi için:</strong> Sigortanızın masrafları karşılayıp karşılamadığından
+            emin değilseniz, bize Türkçe veya Almanca olarak ulaşabilirsiniz.
+            Telefon: <a href="tel:+4920334868690">0203 34 86 86 90</a>
+          </p>
+        </div>
+
+        <p class="mt-6">
+          <a href="/kostenuebernahme/">→ Almanca versiyonu okuyun (Kosten & Kostenübernahme)</a>
+        </p>
+
+      </div>
+    </div>
+
+  </main>
+  <Footer lang="tr" />
+</Layout>
+
+<style>
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-section :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(ul) {
+    list-style: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .prose-section :global(ul li) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .prose-section :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+  .prose-section :global(a) { color: var(--color-primary); }
+  .info-box {
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>

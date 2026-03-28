@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten für Logopädie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Gesetzliche und private Krankenkassen übernehmen die Kosten logopädischer Therapie, wenn eine ärztliche Heilmittelverordnung vorliegt. Erwachsene zahlen 10% Zuzahlung plus 10 € Rezeptgebühr. Kinder und Jugendliche unter 18 Jahren sind von Zuzahlungen befreit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Welcher Arzt kann Logopädie verordnen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Folgende Fachärzte können eine Heilmittelverordnung für Logopädie ausstellen: Allgemeinmediziner, HNO-Ärzte, Internisten, Kinderärzte, Kinderpsychiater, Neurologen, Orthopäden, Phoniatriker und Zahnärzte." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet Logopädie als Selbstzahler?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ohne Rezept können Sie als Selbstzahler Logopädie in Anspruch nehmen. Die Kosten richten sich nach dem Heilmittelkatalog. Bitte kontaktieren Sie uns für aktuelle Informationen zu Selbstzahlertarifen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel zahle ich als Erwachsener selbst?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Als gesetzlich versicherter Erwachsener zahlen Sie 10% der Therapiekosten selbst, zuzüglich einer einmaligen Rezeptgebühr von 10 € pro Heilmittelverordnung. Die Krankenkasse übernimmt den Rest." }
+    },
+    {
+      "@type": "Question",
+      "name": "Müssen Kinder zuzahlen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nein. Kinder und Jugendliche unter 18 Jahren sind vollständig von Zuzahlungen befreit. Die Krankenkasse übernimmt alle Therapiekosten." }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Kosten & Kostenübernahme", "item": `${siteUrl}/kostenuebernahme` }
+  ]
+};
+---
+
+<Layout
+  title="Kosten & Kostenübernahme – Logopädie Duisburg | Praxis Şimşek"
+  description="Wer übernimmt die Kosten für Logopädie? Alles über Krankenkasse, Heilmittelverordnung, Zuzahlung und Selbstzahler. Logopädie Şimşek Duisburg."
+  additionalSchemas={[faqSchema, breadcrumbSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/kostenuebernahme` },
+    { lang: 'tr', url: `${siteUrl}/tr/kostenuebernahme` },
+    { lang: 'x-default', url: `${siteUrl}/kostenuebernahme` },
+  ]}
+>
+  <Header alternateUrl="/tr/kostenuebernahme" />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Kosten & Kostenübernahme</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-3xl">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          Kosten & Kostenübernahme
+        </h1>
+        <p class="text-text-muted text-lg">
+          Logopädische Therapie ist ein Heilmittel – und wird von gesetzlichen und privaten
+          Krankenkassen übernommen. Hier erfahren Sie alles über Rezept, Zuzahlung und Selbstzahler.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container max-w-3xl py-14">
+      <div class="prose-section">
+
+        <h2>Kostenübernahme durch die Krankenkasse</h2>
+        <p>
+          Eine ärztlich verordnete logopädische Behandlung ist als <strong>Heilmittel</strong>
+          Teil der medizinischen Grundversorgung. Sowohl gesetzliche (GKV) als auch private
+          Krankenkassen (PKV) tragen die Kosten – vorausgesetzt, es liegt eine
+          Heilmittelverordnung (Rezept) vor.
+        </p>
+
+        <h2>Wer kann Logopädie verordnen?</h2>
+        <p>Folgende Fachärzte können eine Heilmittelverordnung für Logopädie ausstellen:</p>
+        <ul>
+          <li>Allgemeinmedizinerinnen und Allgemeinmediziner</li>
+          <li>HNO-Ärztinnen und HNO-Ärzte</li>
+          <li>Internistinnen und Internisten</li>
+          <li>Kieferorthopädinnen und Kieferorthopäden</li>
+          <li>Kinderärztinnen und Kinderärzte (Pädiater)</li>
+          <li>Kinderpsychiaterinnen und Kinderpsychiater</li>
+          <li>Neurologinnen und Neurologen</li>
+          <li>Orthopädinnen und Orthopäden</li>
+          <li>Phoniatrinnen und Phoniater</li>
+          <li>Zahnärztinnen und Zahnärzte</li>
+        </ul>
+
+        <h2>Was zahle ich selbst?</h2>
+
+        <h3>Kinder und Jugendliche (unter 18 Jahren)</h3>
+        <p>
+          <strong>Keine Zuzahlung.</strong> Kinder und Jugendliche bis zur Vollendung des
+          18. Lebensjahres sind vollständig von Zuzahlungen befreit. Die Krankenkasse
+          übernimmt alle Therapiekosten.
+        </p>
+
+        <h3>Erwachsene (ab 18 Jahren)</h3>
+        <p>
+          Gesetzlich Versicherte zahlen pro Heilmittelverordnung:
+        </p>
+        <ul>
+          <li><strong>10 % der Therapiekosten</strong> als Eigenanteil</li>
+          <li><strong>10 € Rezeptgebühr</strong> (einmalig pro Verordnung)</li>
+        </ul>
+        <p>
+          Den Restbetrag übernimmt die gesetzliche Krankenkasse. Wer eine
+          <strong>Befreiungskarte</strong> von seiner Krankenkasse hat (bei Überschreiten
+          der Belastungsgrenze), zahlt keinen Eigenanteil.
+        </p>
+
+        <h3>Privat Versicherte</h3>
+        <p>
+          Privatversicherte werden nach Heilmittelverordnung behandelt. Die Abrechnung
+          richtet sich nach dem Heilmittelkatalog. Bitte klären Sie die Kostenübernahme
+          vorab mit Ihrer privaten Krankenversicherung.
+        </p>
+
+        <h2>Selbstzahler</h2>
+        <p>
+          Sie können logopädische Therapie auch ohne Rezept als Selbstzahler in
+          Anspruch nehmen – zum Beispiel für präventive Stimmbildung oder wenn Sie
+          rasch einen Termin ohne Wartezeit wünschen. Sprechen Sie uns für aktuelle
+          Informationen zu Selbstzahlertarifen an.
+        </p>
+
+        <div class="info-box">
+          <p>
+            <strong>Gut zu wissen:</strong> Wir arbeiten mit allen gesetzlichen und
+            privaten Krankenkassen zusammen. Wenn Sie unsicher sind, ob Ihre Krankenkasse
+            die Kosten übernimmt, helfen wir Ihnen gerne bei der Klärung.
+            Rufen Sie uns an: <a href="tel:+4920334868690">0203 34 86 86 90</a>
+          </p>
+        </div>
+
+        <h2>Häufige Fragen (FAQ)</h2>
+
+        <h3>Muss ich das Rezept vor Therapiebeginn einreichen?</h3>
+        <p>
+          Ja, die Heilmittelverordnung muss vor oder zu Beginn der ersten Therapieeinheit
+          vorliegen. Bitte bringen Sie Ihr Rezept zum Ersttermin mit.
+        </p>
+
+        <h3>Was passiert, wenn das Rezept aufgebraucht ist?</h3>
+        <p>
+          Bei Bedarf stellen wir Ihnen einen Folgerezept-Antrag an Ihren behandelnden Arzt.
+          Wir beraten Sie, wie das Verfahren läuft und was dokumentiert werden muss.
+        </p>
+
+        <h3>Kann ich ohne Überweisung kommen?</h3>
+        <p>
+          Als Selbstzahler ja. Für kassenfinanzierte Therapie benötigen Sie eine
+          Heilmittelverordnung von einem der oben genannten Fachärzte – keine Überweisung
+          zum Logopäden, sondern ein Heilmittelrezept.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="bg-primary py-12" aria-label="Termin anfragen">
+      <div class="container max-w-2xl text-center flex flex-col items-center gap-4">
+        <h2 class="font-display text-[clamp(1.375rem,2.5vw,2rem)] font-semibold text-white">Termin vereinbaren</h2>
+        <p class="text-white/80">Wir beantworten Ihre Fragen zur Kostenübernahme auch telefonisch.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/#kontakt" class="btn btn-outline-white">Kontaktformular</a>
+          <a href="tel:+4920334868690" class="btn btn-outline-white">0203 – 34 86 86 90</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+  .prose-section :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(ul) {
+    list-style: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .prose-section :global(ul li) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .prose-section :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+  .prose-section :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s;
+  }
+  .prose-section :global(a:hover) { text-decoration-color: currentColor; }
+  .info-box {
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>

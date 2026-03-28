@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": `${siteUrl}/anasayfa` },
+    { "@type": "ListItem", "position": 2, "name": "İletişim", "item": `${siteUrl}/iletisim` }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Praxis für Logopädie Şimşek",
+  "url": siteUrl,
+  "telephone": "+4920334868690",
+  "email": "info@logopaedie-simsek.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
+  },
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "hasMap": "https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
+};
+---
+
+<Layout
+  title="İletişim & Konum – Logopädie Şimşek Duisburg"
+  description="Duisburg'daki Şimşek Logopedi Muayenehanesi ile iletişime geçin. Randevu talebi, adres, telefon, e-posta, çalışma saatleri ve konum bilgisi. Ana tren garına yürüme mesafesinde."
+  lang="tr"
+  additionalSchemas={[breadcrumbSchema, localBusinessSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/kontakt` },
+    { lang: 'tr', url: `${siteUrl}/iletisim` },
+    { lang: 'x-default', url: `${siteUrl}/kontakt` },
+  ]}
+>
+  <Header lang="tr" alternateUrl="/kontakt" />
+  <Nav lang="tr" />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">İletişim</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-4xl">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          İletişim & Konum
+        </h1>
+        <p class="text-text-muted text-lg">
+          Tonhallenstraße 21, 47051 Duisburg · 3. kat · Asansör mevcut
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container max-w-4xl py-14">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Form -->
+        <form
+          class="bg-surface border border-border rounded-md p-9 shadow-sm"
+          id="contactForm"
+          action="/api/kontakt"
+          method="POST"
+          novalidate
+          aria-label="Randevu Talebi"
+        >
+          <h2 class="font-display text-xl font-semibold text-text mb-6">Randevu Talebi</h2>
+
+          <!-- Honeypot -->
+          <div class="hidden" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-5 max-[480px]:grid-cols-1">
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm font-semibold text-text" for="vorname">Ad <span class="text-accent" aria-hidden="true">*</span></label>
+              <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="text" id="vorname" name="vorname" autocomplete="given-name" required placeholder="Ayşe" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm font-semibold text-text" for="nachname">Soyad <span class="text-accent" aria-hidden="true">*</span></label>
+              <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="text" id="nachname" name="nachname" autocomplete="family-name" required placeholder="Yılmaz" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label class="text-sm font-semibold text-text" for="email">E-Posta <span class="text-accent" aria-hidden="true">*</span></label>
+            <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="email" id="email" name="email" autocomplete="email" required placeholder="ayse@ornek.de" />
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label class="text-sm font-semibold text-text" for="telefon">Telefon</label>
+            <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+49 203 ..." />
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label class="text-sm font-semibold text-text" for="bereich">Terapi Alanı</label>
+            <select class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" id="bereich" name="bereich">
+              <option value="">Lütfen seçin...</option>
+              <option value="sprache">Dil Bozuklukları</option>
+              <option value="sprechen">Konuşma Bozuklukları</option>
+              <option value="stimme">Ses Bozuklukları</option>
+              <option value="schlucken">Yutma Bozuklukları (Disfaji)</option>
+              <option value="allgemein">Genel Danışma</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label class="text-sm font-semibold text-text" for="nachricht">Mesajınız</label>
+            <textarea class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none resize-y min-h-30 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" id="nachricht" name="nachricht" placeholder="Talebinizi kısaca açıklayın – en kısa sürede size geri döneceğiz."></textarea>
+          </div>
+          <p class="text-[.8125rem] text-text-muted leading-normal mt-1"><span class="text-accent">*</span> Zorunlu alanlar. Bilgileriniz gizli tutulur ve üçüncü şahıslarla paylaşılmaz.</p>
+          <div aria-live="polite" aria-atomic="true" id="formStatus" class="hidden mt-4 px-4 py-3 rounded-sm text-sm font-medium"></div>
+          <button type="submit" id="submitBtn" class="btn btn-accent w-full mt-6 justify-center">
+            Talep Gönder
+          </button>
+        </form>
+
+        <!-- Contact info + directions -->
+        <div class="flex flex-col gap-5">
+          <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start">
+            <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="text-[.8rem] font-bold tracking-[.06em] uppercase text-text-light mb-1">Telefon</div>
+              <div class="text-[.9375rem] font-semibold text-text"><a class="text-primary hover:underline" href="tel:+4920334868690">0203 – 34 86 86 90</a></div>
+              <div class="text-[.8125rem] text-text-muted mt-0.5">Pzt–Cum 08:00–18:00</div>
+            </div>
+          </div>
+          <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start">
+            <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="text-[.8rem] font-bold tracking-[.06em] uppercase text-text-light mb-1">E-Posta</div>
+              <div class="text-[.9375rem] font-semibold text-text"><a class="text-primary hover:underline" href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a></div>
+              <div class="text-[.8125rem] text-text-muted mt-0.5">24 saat içinde yanıt veriyoruz</div>
+            </div>
+          </div>
+          <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start">
+            <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="text-[.8rem] font-bold tracking-[.06em] uppercase text-text-light mb-1">Adres</div>
+              <address class="not-italic">
+                <div class="text-[.9375rem] font-semibold text-text">Tonhallenstraße 21, 47051 Duisburg</div>
+                <div class="text-[.8125rem] text-text-muted mt-0.5">3. kat · Asansör mevcut</div>
+              </address>
+            </div>
+          </div>
+
+          <div class="bg-surface border border-border rounded-md p-6 shadow-sm">
+            <h3 class="font-display text-base font-semibold text-text mb-3">Ulaşım</h3>
+            <p class="text-sm text-text-muted mb-3">
+              Duisburg Ana Tren Garı'na yalnızca <strong class="text-text">2 dakika yürüme mesafesi</strong>.<br>
+              U79 · König-Heinrich-Platz · S-Bahn / RE / RB Duisburg Hbf
+            </p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary w-full justify-center"
+            >
+              Google Maps'te Aç
+            </a>
+          </div>
+
+          <div class="bg-surface border border-border rounded-md p-5 text-sm">
+            <p class="font-semibold text-text mb-1">İki Dilli Muayenehane</p>
+            <p class="text-text-muted">Randevu ve danışmanlık Türkçe olarak da mümkündür.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <Footer lang="tr" />
+</Layout>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const statusEl = document.getElementById('formStatus') as HTMLElement | null;
+
+  if (form && statusEl) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn') as HTMLButtonElement | null;
+      if (!btn) return;
+
+      const email = (form.querySelector('#email') as HTMLInputElement)?.value.trim();
+      const vorname = (form.querySelector('#vorname') as HTMLInputElement)?.value.trim();
+      const nachname = (form.querySelector('#nachname') as HTMLInputElement)?.value.trim();
+      if (!vorname || !nachname || !email) {
+        statusEl.textContent = 'Lütfen tüm zorunlu alanları doldurun.';
+        statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Gönderiliyor…';
+      statusEl.className = 'hidden';
+      statusEl.textContent = '';
+
+      try {
+        const res = await fetch('/api/kontakt', {
+          method: 'POST',
+          body: new FormData(form),
+        });
+        const json = await res.json() as { success: boolean; error?: string };
+
+        if (json.success) {
+          statusEl.textContent = '✓ Talebiniz başarıyla iletildi. 24 saat içinde size geri döneceğiz.';
+          statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-primary-light text-primary border border-[rgba(42,127,111,.3)]';
+          form.reset();
+        } else {
+          statusEl.textContent = json.error ?? 'Bir hata oluştu. Lütfen tekrar deneyin.';
+          statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
+        }
+      } catch {
+        statusEl.textContent = 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.';
+        statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Talep Gönder';
+    });
+  }
+</script>

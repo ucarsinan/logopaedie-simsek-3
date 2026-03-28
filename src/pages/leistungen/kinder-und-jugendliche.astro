@@ -1,0 +1,134 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Logopädie für Kinder und Jugendliche Duisburg",
+  "description": "Logopädische Therapie für Kinder und Jugendliche in Duisburg. Sprachentwicklungsverzögerung, Stottern, LRS, Aussprache und mehr.",
+  "url": `${siteUrl}/leistungen/kinder-und-jugendliche`,
+  "about": { "@type": "MedicalCondition", "name": "Sprachentwicklungsstörung" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": `${siteUrl}/leistungen` },
+      { "@type": "ListItem", "position": 3, "name": "Kinder und Jugendliche", "item": `${siteUrl}/leistungen/kinder-und-jugendliche` }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Logopädie für Kinder und Jugendliche Duisburg | Praxis Şimşek"
+  description="Logopädische Therapie für Kinder und Jugendliche in Duisburg – Sprachentwicklungsverzögerung, Stottern, LRS, Aussprache, auditive Verarbeitung. Zweisprachig DE/TR."
+  serviceTitle="Logopädie für Kinder und Jugendliche"
+  breadcrumbLabel="Kinder und Jugendliche"
+  tags={['Frühförderung', 'Sprachentwicklung', 'Stottern', 'LRS']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/leistungen/kinder-und-jugendliche` },
+    { lang: 'x-default', url: `${siteUrl}/leistungen/kinder-und-jugendliche` },
+  ]}
+  relatedServices={[
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Grammatik' },
+    { title: 'Sprechstörungen', href: '/leistungen/sprechstoerungen/', description: 'Stottern, Lispeln, Ausspracheprobleme' },
+    { title: 'Logopädie für Erwachsene', href: '/leistungen/erwachsene/', description: 'Aphasie, Dysarthrie, Stimmstörungen' },
+  ]}
+>
+  <h2>Wann braucht mein Kind Logopädie?</h2>
+  <p>
+    Kinder entwickeln Sprache in einem natürlichen Tempo – aber manchmal brauchen sie
+    gezielte Unterstützung. Je früher eine Sprach- oder Sprechstörung erkannt und behandelt
+    wird, desto besser sind die Therapieerfolge. Logopädische Therapie ist ab dem
+    <strong>Säuglingsalter</strong> möglich.
+  </p>
+  <p>
+    Hinweise, die eine logopädische Abklärung sinnvoll machen:
+  </p>
+  <ul>
+    <li>Das Kind spricht deutlich weniger als Gleichaltrige</li>
+    <li>Die Aussprache ist auch mit 4–5 Jahren noch schwer verständlich</li>
+    <li>Das Kind stottert oder klingt unflüssig</li>
+    <li>Es hat Schwierigkeiten, Anweisungen zu verstehen</li>
+    <li>Es weigert sich zu sprechen oder wirkt sozial gehemmt</li>
+    <li>Es hat Probleme beim Lesen- und Schreibenlernen</li>
+  </ul>
+
+  <h2>Behandelte Störungsbilder bei Kindern und Jugendlichen</h2>
+
+  <h3>Sprachentwicklungsverzögerung und -störung</h3>
+  <p>
+    Das häufigste Störungsbild: Das Kind entwickelt Sprache langsamer als erwartet oder
+    zeigt anhaltende Defizite in Wortschatz, Grammatik oder Sprachverständnis. Wir
+    unterscheiden zwischen vorübergehenden Verzögerungen und spezifischen
+    Sprachentwicklungsstörungen (SSES) und passen die Therapie entsprechend an.
+  </p>
+
+  <h3>Störungen der Lautbildung (Dyslalie)</h3>
+  <p>
+    Einzelne Laute oder Lautverbindungen werden falsch oder undeutlich gebildet –
+    z. B. Lispeln (Sigmatismus), Probleme mit R, CH oder anderen Lauten. Gezielte
+    Aussprache­therapie hilft, die korrekten Lautmuster zu festigen.
+  </p>
+
+  <h3>Stottern (Redeflussstörungen)</h3>
+  <p>
+    Stottern bei Kindern ist häufig und nicht selbstverschuldet. Therapie sollte zeitnah
+    beginnen, da frühe Behandlung die Chancen auf vollständige Remission deutlich erhöht.
+    Wir arbeiten mit kindgerechten Methoden, die Sprechen als positives Erlebnis erfahrbar machen.
+  </p>
+
+  <h3>Lese-Rechtschreib-Schwäche (LRS / Legasthenie)</h3>
+  <p>
+    LRS ist keine Faulheit und kein Intelligenzproblem – sie hat neurologische Ursachen.
+    Logopädische Therapie trainiert die phonologische Bewusstheit, das Laut-Buchstaben-Wissen
+    und die Verarbeitungsgeschwindigkeit. Wir arbeiten eng mit Schule und Eltern zusammen.
+  </p>
+
+  <h3>Auditive Verarbeitungs- und Wahrnehmungsstörungen (AVWS)</h3>
+  <p>
+    Kinder mit AVWS hören zwar, haben aber Schwierigkeiten, Gehörtes zu unterscheiden,
+    zu speichern oder zu verarbeiten. Das äußert sich in Aufmerksamkeitsproblemen,
+    Verständnisschwierigkeiten und schulischen Leistungsdefiziten.
+  </p>
+
+  <h3>Poltern</h3>
+  <p>
+    Poltern ist eine Redeflussstörung mit überhöhtem Sprechtempo, undeutlicher Aussprache
+    und mangelnder Selbstwahrnehmung. Therapie fokussiert auf Sprechtempokontrolle und
+    kommunikative Bewusstheit.
+  </p>
+
+  <h3>Mehrsprachige Kinder</h3>
+  <p>
+    Mehrsprachigkeit ist eine Ressource, keine Störung. Bei mehrsprachigen Kindern –
+    insbesondere mit Türkisch als Erstsprache – führen wir die Diagnostik in beiden
+    Sprachen durch. So unterscheiden wir zuverlässig zwischen sprachlicher Unsicherheit
+    durch Mehrsprachigkeit und einer tatsächlichen Sprachentwicklungsstörung.
+    Mehr dazu: <a href="/tuerkische-logopaedie/">Türkische Logopädie Duisburg</a>
+  </p>
+
+  <div class="info-box">
+    <p>
+      <strong>Wer verordnet Logopädie für Kinder?</strong> Kinderärzte, Allgemeinmediziner,
+      HNO-Ärzte, Kinderpsychiater und andere Fachärzte können eine Heilmittelverordnung
+      ausstellen. Kinder und Jugendliche unter 18 Jahren sind von Zuzahlungen befreit.
+      Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+    </p>
+  </div>
+
+  <h2>Unser Therapieansatz für Kinder</h2>
+  <p>
+    Kindertherapie bei Praxis Şimşek ist spielerisch, alltagsnah und kindgerecht.
+    Wir beziehen die Eltern aktiv ein – durch regelmäßige Elterngespräche und konkrete
+    Übungsempfehlungen für zuhause. So wird die Therapiezeit zwischen den Sitzungen
+    effektiv genutzt.
+  </p>
+  <p>
+    Für türkischsprachige Familien bieten wir Elterngespräche und Beratung vollständig
+    auf Türkisch an.
+  </p>
+</ServicePage>

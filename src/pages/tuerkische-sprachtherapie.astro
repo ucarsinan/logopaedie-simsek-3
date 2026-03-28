@@ -1,0 +1,109 @@
+---
+import ServicePage from '../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Türkische Sprachtherapie – Türkçe Dil Terapisi Duisburg",
+  "description": "Sprachtherapie auf Türkisch in Duisburg. Für Kinder mit Sprachentwicklungsverzögerung und Erwachsene mit Aphasie oder anderen Sprachstörungen. Türkçe Dil Terapisi.",
+  "url": `${siteUrl}/tuerkische-sprachtherapie`,
+  "inLanguage": ["de", "tr"],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Türkische Sprachtherapie", "item": `${siteUrl}/tuerkische-sprachtherapie` }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Türkische Sprachtherapie Duisburg – Türkçe Dil Terapisi | Praxis Şimşek"
+  description="Sprachtherapie auf Türkisch in Duisburg – für Kinder und Erwachsene. Diagnostik und Therapie von Sprachstörungen auf Türkisch. Türkçe Dil ve Konuşma Terapisi Duisburg."
+  serviceTitle="Türkische Sprachtherapie – Türkçe Dil ve Konuşma Terapisi"
+  breadcrumbLabel="Türkische Sprachtherapie"
+  tags={['Türkçe Dil Terapisi', 'Sprachtherapie', 'Zweisprachig', 'Duisburg']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/tuerkische-sprachtherapie` },
+    { lang: 'tr', url: `${siteUrl}/tr/hizmetler/dil-bozuklugu` },
+    { lang: 'x-default', url: `${siteUrl}/tuerkische-sprachtherapie` },
+  ]}
+  relatedServices={[
+    { title: 'Türkische Logopädie', href: '/tuerkische-logopaedie/', description: 'Vollständige Logopädie auf Türkisch in Duisburg' },
+    { title: 'Türkische Sprachtherapie Duisburg', href: '/tuerkische-sprachtherapie-duisburg/', description: 'Lokale Sprachtherapie für türkischsprachige Familien' },
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen/', description: 'Alle Leistungen zur Sprachtherapie im Überblick' },
+  ]}
+>
+  <h2>Was ist türkische Sprachtherapie?</h2>
+  <p>
+    Türkische Sprachtherapie (türkçe dil terapisi) bezeichnet die logopädische Behandlung
+    von Sprach- und Kommunikationsstörungen, die vollständig in türkischer Sprache
+    durchgeführt wird. Praxis Şimşek in Duisburg bietet diese Leistung für Kinder,
+    Jugendliche und Erwachsene an.
+  </p>
+  <p>
+    Türkçe dil terapisi, dil ve konuşma bozukluklarının Türkçe olarak teşhis ve tedavi
+    edilmesi demektir. Duisburg muayenehanemizde çocuklar, gençler ve yetişkinler için
+    bu hizmeti sunuyoruz.
+  </p>
+
+  <h2>Sprachtherapie für Kinder auf Türkisch</h2>
+  <p>
+    Bei mehrsprachig aufwachsenden Kindern mit Türkisch als Erstsprache ist eine
+    türkischsprachige Diagnostik besonders wichtig. Folgende Störungsbilder behandeln wir:
+  </p>
+  <ul>
+    <li><strong>Sprachentwicklungsverzögerung (dil gelişim gecikmesi):</strong> Das Kind spricht später als altersgemäß erwartet – in einer oder beiden Sprachen</li>
+    <li><strong>Störungen im Sprachverständnis:</strong> Das Kind versteht Anweisungen oder Fragen nicht zuverlässig</li>
+    <li><strong>Störungen im Wortschatz:</strong> Geringer aktiver oder passiver Wortschatz</li>
+    <li><strong>Grammatikstörungen:</strong> Fehlerhafte Satzbildung, Probleme mit Wortendungen</li>
+    <li><strong>Störungen der Lautbildung (artikülasyon bozukluğu):</strong> Einzelne Laute werden falsch gebildet</li>
+    <li><strong>Stottern (kekemelik):</strong> Flüssigkeitsstörungen im Redefluss</li>
+    <li><strong>Lese-Rechtschreib-Schwäche (LRS):</strong> Schwierigkeiten beim Lesen und Schreiben lernen</li>
+    <li><strong>Auditive Verarbeitungsstörungen:</strong> Schwierigkeiten beim Unterscheiden und Verarbeiten von Sprachlauten</li>
+  </ul>
+
+  <h2>Sprachtherapie für Erwachsene auf Türkisch</h2>
+  <p>
+    Für türkischsprachige Erwachsene bieten wir Diagnostik und Therapie folgender Störungsbilder:
+  </p>
+  <ul>
+    <li><strong>Aphasie (afazi):</strong> Sprachverlust oder Sprachabbau nach Schlaganfall oder Hirnverletzung</li>
+    <li><strong>Dysarthrie:</strong> Sprechstörungen durch neurologische Erkrankungen</li>
+    <li><strong>Sprechapraxie:</strong> Motorische Planungsstörungen beim Sprechen</li>
+    <li><strong>Wortfindungsstörungen:</strong> Schwierigkeiten, das richtige Wort zu finden</li>
+    <li><strong>Demenz-bedingte Sprachstörungen:</strong> Therapiebegleitende Maßnahmen bei Demenz</li>
+  </ul>
+
+  <div class="info-box">
+    <p>
+      <strong>Zweisprachige Diagnostik:</strong> Bei mehrsprachigen Patienten führen wir die
+      Sprachstandserhebung in beiden Sprachen durch (Türkisch und Deutsch). Nur so lässt sich
+      eine spezifische Sprachstörung von sprachlicher Unsicherheit durch Mehrsprachigkeit
+      zuverlässig unterscheiden.
+    </p>
+  </div>
+
+  <h2>Unser Ansatz in der türkischen Sprachtherapie</h2>
+  <p>
+    Unsere Therapeutin Emel Şimşek-Uçar ist staatlich geprüfte Logopädin und spricht
+    Deutsch und Türkisch auf muttersprachlichem Niveau. Die Therapie findet je nach
+    Bedarf auf Türkisch, Deutsch oder in beiden Sprachen abwechselnd statt.
+  </p>
+  <p>
+    Elterngespräche, Befundberichte und Therapieerläuterungen können vollständig auf
+    Türkisch geführt werden – damit Eltern die Therapie aktiv zu Hause unterstützen können.
+  </p>
+
+  <h2>Kostenübernahme durch die Krankenkasse</h2>
+  <p>
+    Türkische Sprachtherapie wird wie jede andere logopädische Therapie von gesetzlichen
+    und privaten Krankenkassen übernommen. Sie benötigen lediglich eine
+    <strong>Heilmittelverordnung</strong> vom Haus- oder Facharzt.
+    Mehr Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+  </p>
+</ServicePage>

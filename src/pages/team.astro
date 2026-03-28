@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Emel Şimşek-Uçar",
+  "jobTitle": "Staatlich anerkannte Logopädin",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Praxis für Logopädie Şimşek",
+    "url": siteUrl
+  },
+  "knowsLanguage": ["de", "tr"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team` }
+  ]
+};
+---
+
+<Layout
+  title="Unser Team – Logopädie Şimşek Duisburg"
+  description="Lernen Sie Emel Şimşek-Uçar kennen – staatlich anerkannte Logopädin mit über 10 Jahren Erfahrung. Zweisprachige Therapie auf Deutsch und Türkisch in Duisburg."
+  additionalSchemas={[personSchema, breadcrumbSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/team` },
+    { lang: 'tr', url: `${siteUrl}/ekip` },
+    { lang: 'x-default', url: `${siteUrl}/team` },
+  ]}
+>
+  <Header alternateUrl="/ekip" />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Team</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-3xl">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          Unser Team
+        </h1>
+        <p class="text-text-muted text-lg">
+          Logopädie ist Vertrauenssache. Lernen Sie die Menschen hinter der Praxis kennen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Profile -->
+    <div class="container max-w-3xl py-14">
+      <div class="prose-section">
+
+        <div class="bg-surface border border-border rounded-md p-8 shadow-sm mb-10 flex gap-8 items-start max-[640px]:flex-col">
+          <div class="w-24 h-24 rounded-sm bg-primary-light flex items-center justify-center text-primary shrink-0" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <h2 class="font-display text-2xl font-semibold text-text mb-1">Emel Şimşek-Uçar</h2>
+            <p class="text-primary font-medium text-sm mb-4">Praxisinhaberin · Staatlich anerkannte Logopädin</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Deutsch & Türkçe</span>
+              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">10+ Jahre Erfahrung</span>
+              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Kinder & Erwachsene</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Über Emel Şimşek-Uçar</h2>
+        <p>
+          Emel Şimşek-Uçar ist <strong>staatlich anerkannte Logopädin</strong> und Gründerin der
+          Praxis für Logopädie Şimşek in Duisburg-Mitte. Mit mehr als zehn Jahren klinischer
+          Erfahrung begleitet sie Kinder, Jugendliche und Erwachsene auf dem Weg zu mehr
+          Kommunikationsfähigkeit.
+        </p>
+
+        <h2>Schwerpunkte</h2>
+        <ul>
+          <li><strong>Kindersprachtherapie:</strong> Sprachentwicklungsverzögerungen, Lautbildungsstörungen, Stottern, LRS-Prävention</li>
+          <li><strong>Mehrsprachigkeit:</strong> Diagnostik und Therapie bei zweisprachig aufwachsenden Kindern (Deutsch/Türkisch)</li>
+          <li><strong>Erwachsenentherapie:</strong> Aphasie, Dysarthrie, Stimmstörungen, Schluckstörungen</li>
+          <li><strong>Frühförderung:</strong> Logopädische Intervention ab dem Säuglingsalter</li>
+        </ul>
+
+        <h2>Sprachen</h2>
+        <p>
+          Die Praxis bietet vollständige Diagnostik, Beratung und Therapie auf <strong>Deutsch und Türkisch</strong>.
+          Dies ist besonders wertvoll für zweisprachig aufwachsende Kinder und türkischsprachige
+          Patientinnen und Patienten, die in ihrer Muttersprache betreut werden möchten.
+        </p>
+
+        <div class="info-box">
+          <p>
+            <strong>Wir wachsen:</strong> Haben Sie Interesse, unser Team zu verstärken?
+            Wir suchen engagierte Logopädinnen und Logopäden.
+            <a href="/karriere/">Zur Stellenanzeige →</a>
+          </p>
+        </div>
+
+        <div class="mt-8 flex gap-4 flex-wrap">
+          <a href="/kontakt/" class="btn btn-primary">Termin anfragen</a>
+          <a href="/leistungen/" class="btn btn-ghost">Unsere Leistungen</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(ul) {
+    list-style: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .prose-section :global(ul li) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .prose-section :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+  .prose-section :global(a) { color: var(--color-primary); }
+  .info-box {
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>

@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Emel Şimşek-Uçar",
+  "jobTitle": "Devlet Onaylı Logoped",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Praxis für Logopädie Şimşek",
+    "url": siteUrl
+  },
+  "knowsLanguage": ["de", "tr"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": `${siteUrl}/anasayfa` },
+    { "@type": "ListItem", "position": 2, "name": "Ekip", "item": `${siteUrl}/ekip` }
+  ]
+};
+---
+
+<Layout
+  title="Ekibimiz – Logopädie Şimşek Duisburg"
+  description="Emel Şimşek-Uçar ile tanışın – 10 yılı aşkın deneyime sahip devlet onaylı logoped. Duisburg'da Almanca ve Türkçe iki dilli terapi."
+  lang="tr"
+  additionalSchemas={[personSchema, breadcrumbSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/team` },
+    { lang: 'tr', url: `${siteUrl}/ekip` },
+    { lang: 'x-default', url: `${siteUrl}/team` },
+  ]}
+>
+  <Header lang="tr" alternateUrl="/team" />
+  <Nav lang="tr" />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Ekip</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-3xl">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          Ekibimiz
+        </h1>
+        <p class="text-text-muted text-lg">
+          Logoterapi güven işidir. Muayehanemizdeki insanlarla tanışın.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Profile -->
+    <div class="container max-w-3xl py-14">
+      <div class="prose-section">
+
+        <div class="bg-surface border border-border rounded-md p-8 shadow-sm mb-10 flex gap-8 items-start max-[640px]:flex-col">
+          <div class="w-24 h-24 rounded-sm bg-primary-light flex items-center justify-center text-primary shrink-0" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <h2 class="font-display text-2xl font-semibold text-text mb-1">Emel Şimşek-Uçar</h2>
+            <p class="text-primary font-medium text-sm mb-4">Muayenehane Sahibi · Devlet Onaylı Logoped</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Deutsch & Türkçe</span>
+              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">10+ Yıl Deneyim</span>
+              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Çocuklar & Yetişkinler</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Emel Şimşek-Uçar Hakkında</h2>
+        <p>
+          Emel Şimşek-Uçar, <strong>devlet onaylı logoped</strong> ve Duisburg-Mitte'deki
+          Logopädie Şimşek Muayenehanesi'nin kurucusudur. On yılı aşkın klinik deneyimiyle
+          çocukları, gençleri ve yetişkinleri daha iyi iletişim kurabilmeleri yolunda desteklemektedir.
+        </p>
+
+        <h2>Uzmanlık Alanları</h2>
+        <ul>
+          <li><strong>Çocuk Dil Terapisi:</strong> Dil gelişim gecikmeleri, ses oluşturma bozuklukları, kekemelik, okuma-yazma güçlüğü önlemi</li>
+          <li><strong>Çok Dillilik:</strong> İki dilli büyüyen çocuklarda (Almanca/Türkçe) tanı ve terapi</li>
+          <li><strong>Yetişkin Terapisi:</strong> Afazi, dizartri, ses bozuklukları, yutma bozuklukları</li>
+          <li><strong>Erken Müdahale:</strong> Bebeklik döneminden itibaren logopedik tedavi</li>
+        </ul>
+
+        <h2>Diller</h2>
+        <p>
+          Muayenehane; tam tanı, danışmanlık ve terapi hizmetini <strong>Almanca ve Türkçe</strong>
+          olarak sunmaktadır. Bu durum özellikle iki dilli büyüyen çocuklar ve ana dillerinde
+          bakım almak isteyen Türkçe konuşan hastalar için büyük bir değer taşımaktadır.
+        </p>
+
+        <div class="info-box">
+          <p>
+            <strong>Büyüyoruz:</strong> Ekibimizi güçlendirmek ister misiniz?
+            Deneyimli logoped arıyoruz.
+            <a href="/karriere/">İş ilanına git →</a>
+          </p>
+        </div>
+
+        <div class="mt-8 flex gap-4 flex-wrap">
+          <a href="/iletisim/" class="btn btn-primary">Randevu Talebi</a>
+          <a href="/terapi/" class="btn btn-ghost">Hizmetlerimiz</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <Footer lang="tr" />
+</Layout>
+
+<style>
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(ul) {
+    list-style: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .prose-section :global(ul li) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .prose-section :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+  .prose-section :global(a) { color: var(--color-primary); }
+  .info-box {
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>

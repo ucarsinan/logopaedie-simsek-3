@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Anfahrt", "item": `${siteUrl}/anfahrt` }
+  ]
+};
+---
+
+<Layout
+  title="Anfahrt – Logopädie Şimşek Duisburg | Tonhallenstraße 21"
+  description="Anfahrt zur Praxis Logopädie Şimşek in Duisburg-Mitte. Tonhallenstraße 21, 47051 Duisburg – nur 2 Minuten vom Hauptbahnhof. Bus, Straßenbahn, U-Bahn und Parken."
+  additionalSchemas={[schema]}
+>
+  <Header />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Anfahrt</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-4xl">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          Anfahrt zur Praxis
+        </h1>
+        <p class="text-text-muted text-lg">
+          Tonhallenstraße 21, 47051 Duisburg · 3. Obergeschoss · Aufzug vorhanden
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container max-w-4xl py-14">
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Kontaktdaten -->
+        <div class="prose-section">
+          <h2>Adresse</h2>
+          <address class="not-italic text-text-muted text-[0.9375rem] leading-[1.75]">
+            <strong class="text-text">Praxis für Logopädie Şimşek</strong><br />
+            Tonhallenstraße 21<br />
+            47051 Duisburg<br />
+            3. Obergeschoss (Aufzug vorhanden)
+          </address>
+
+          <h2>Kontakt</h2>
+          <ul>
+            <li>
+              <strong>Telefon:</strong>
+              <a href="tel:+4920334868690">0203 34 86 86 90</a>
+            </li>
+            <li>
+              <strong>Fax:</strong> 0203 34 86 86 91
+            </li>
+            <li>
+              <strong>E-Mail:</strong>
+              <a href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a>
+            </li>
+          </ul>
+
+          <h2>Öffnungszeiten</h2>
+          <ul>
+            <li>Montag – Freitag: 08:00 – 18:00 Uhr</li>
+            <li>Nach Vereinbarung</li>
+          </ul>
+
+          <h2>Mit öffentlichen Verkehrsmitteln</h2>
+          <p>
+            Die Praxis liegt im Herzen von Duisburg, nur <strong>2 Gehminuten</strong>
+            vom Duisburger Hauptbahnhof entfernt. Von dort aus zu Fuß erreichbar.
+          </p>
+          <ul>
+            <li><strong>S-Bahn / RE / RB:</strong> Duisburg Hbf, dann 2 Min. zu Fuß</li>
+            <li><strong>U-Bahn:</strong> Linie U79, Haltestelle Duisburg Hbf</li>
+            <li><strong>Straßenbahn / Bus:</strong> Haltestelle König-Heinrich-Platz (mehrere Linien)</li>
+          </ul>
+
+          <h2>Mit dem Auto</h2>
+          <p>
+            Die Praxis liegt in der Duisburger Innenstadt. Parkmöglichkeiten befinden sich
+            in den umliegenden Parkhäusern (z. B. Hauptbahnhof-Parkhaus).
+          </p>
+
+          <div class="info-box">
+            <p>
+              <strong>Barrierefreiheit:</strong> Unsere Praxis im 3. Obergeschoss ist
+              mit einem Aufzug erreichbar. Bei besonderen Bedürfnissen kontaktieren
+              Sie uns bitte vorab.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="flex flex-col gap-5">
+          <!-- Google Maps Link -->
+          <div class="bg-surface border border-border rounded-lg p-6 shadow-sm">
+            <h3 class="font-display text-base font-semibold text-text mb-3">Route planen</h3>
+            <p class="text-sm text-text-muted mb-4">
+              Tonhallenstraße 21, 47051 Duisburg
+            </p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary w-full justify-center"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              In Google Maps öffnen
+            </a>
+          </div>
+
+          <!-- Termin -->
+          <div class="bg-primary-light border border-primary/20 rounded-lg p-5">
+            <p class="font-semibold text-primary mb-1">Termin vereinbaren</p>
+            <p class="text-sm text-text-muted mb-3">Bitte melden Sie sich vor Ihrem ersten Besuch telefonisch oder per Formular an.</p>
+            <div class="flex flex-col gap-2">
+              <a href="tel:+4920334868690" class="btn btn-primary text-sm py-2">0203 – 34 86 86 90</a>
+              <a href="/#kontakt" class="btn btn-ghost text-sm py-2">Kontaktformular</a>
+            </div>
+          </div>
+
+          <!-- Sprachen Hinweis -->
+          <div class="bg-surface border border-border rounded-lg p-5 text-sm">
+            <p class="font-semibold text-text mb-1">Zweisprachige Praxis</p>
+            <p class="text-text-muted">Terminfragen und Beratung auch auf Türkisch möglich.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+  .prose-section :global(ul) {
+    list-style: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .prose-section :global(ul li) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .prose-section :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+  .prose-section :global(a) { color: var(--color-primary); }
+  .info-box {
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>

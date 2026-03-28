@@ -1,20 +1,20 @@
 ---
-import ServicePage from '../../../layouts/ServicePage.astro';
+import ServicePage from '../../layouts/ServicePage.astro';
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Disfaji Terapisi: Yutma Bozukluklarının Tedavisi – Duisburg",
   "description": "Duisburg'da yetişkinlerde ve çocuklarda yutma bozukluklarının (disfaji) profesyonel tanı ve terapisi – inme, Parkinson veya nörolojik hastalıklar sonrası.",
-  "url": "https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu",
+  "url": "https://logopaedie-simsek.de/terapi/yutma-bozuklugu",
   "about": { "@type": "MedicalCondition", "name": "Disfaji" },
   "inLanguage": "tr",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/tr" },
-      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://logopaedie-simsek.de/tr/hizmetler" },
-      { "@type": "ListItem", "position": 3, "name": "Yutma Bozuklukları", "item": "https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu" }
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/anasayfa" },
+      { "@type": "ListItem", "position": 2, "name": "Terapi", "item": "https://logopaedie-simsek.de/terapi" },
+      { "@type": "ListItem", "position": 3, "name": "Yutma Bozuklukları", "item": "https://logopaedie-simsek.de/terapi/yutma-bozuklugu" }
     ]
   }
 };
@@ -30,14 +30,14 @@ const schema = {
   additionalSchemas={[schema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/schluckstoerungen' },
-    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/yutma-bozuklugu' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/yutma-bozuklugu' },
     { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/schluckstoerungen' },
   ]}
   alternateUrl="/leistungen/schluckstoerungen"
   relatedServices={[
-    { title: 'Dil Bozuklukları', href: '/tr/hizmetler/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
-    { title: 'Konuşma Bozuklukları', href: '/tr/hizmetler/konusma-bozuklugu', description: 'Kekemelik, pelteklik, dizartri ve konuşma apraksisi' },
-    { title: 'Ses Terapisi', href: '/tr/hizmetler/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
+    { title: 'Dil Bozuklukları', href: '/terapi/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
+    { title: 'Konuşma Bozuklukları', href: '/terapi/konusma-bozuklugu', description: 'Kekemelik, pelteklik, dizartri ve konuşma apraksisi' },
+    { title: 'Ses Terapisi', href: '/terapi/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
   ]}
 >
   <h2>Yutma Bozukluğu (Disfaji) Nedir?</h2>

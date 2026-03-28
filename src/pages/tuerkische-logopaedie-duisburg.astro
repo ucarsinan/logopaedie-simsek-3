@@ -1,0 +1,101 @@
+---
+import ServicePage from '../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Türkische Logopädie Duisburg – Türkçe Logopedi Duisburg",
+  "description": "Türkische Logopädie in Duisburg – Fachpraxis Şimşek in Duisburg-Mitte. Vollständige Diagnostik und Therapie auf Türkisch und Deutsch. Nur 2 Min. vom Hauptbahnhof.",
+  "url": `${siteUrl}/tuerkische-logopaedie-duisburg`,
+  "inLanguage": ["de", "tr"],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Türkische Logopädie Duisburg", "item": `${siteUrl}/tuerkische-logopaedie-duisburg` }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Türkische Logopädie Duisburg – Türkçe Logopedi | Praxis Şimşek"
+  description="Türkische Logopädie in Duisburg – Praxis Şimşek in Duisburg-Mitte. Therapie auf Türkisch und Deutsch. Alle Kassen. Nur 2 Minuten vom Hauptbahnhof Duisburg."
+  serviceTitle="Türkische Logopädie Duisburg – Türkçe Logopedi"
+  breadcrumbLabel="Türkische Logopädie Duisburg"
+  tags={['Duisburg', 'Türkçe Logopedi', 'Duisburg-Mitte', 'Alle Kassen']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/tuerkische-logopaedie-duisburg` },
+    { lang: 'tr', url: `${siteUrl}/tr/` },
+    { lang: 'x-default', url: `${siteUrl}/tuerkische-logopaedie-duisburg` },
+  ]}
+  relatedServices={[
+    { title: 'Türkische Logopädie', href: '/tuerkische-logopaedie/', description: 'Was türkische Logopädie bedeutet und warum sie wichtig ist' },
+    { title: 'Türkische Sprachtherapie Duisburg', href: '/tuerkische-sprachtherapie-duisburg/', description: 'Sprachtherapie auf Türkisch in Duisburg' },
+    { title: 'Logopädie Duisburg', href: '/logopaedie-duisburg/', description: 'Alle logopädischen Leistungen in Duisburg im Überblick' },
+  ]}
+>
+  <h2>Türkische Logopädie in Duisburg – Praxis Şimşek</h2>
+  <p>
+    Die Praxis für Logopädie Şimşek ist Ihre spezialisierte Anlaufstelle für
+    <strong>türkische Logopädie in Duisburg</strong>. Unsere Praxis befindet sich zentral
+    in Duisburg-Mitte, nur 2 Gehminuten vom Duisburger Hauptbahnhof entfernt – gut
+    erreichbar für türkischsprachige Patientinnen und Patienten aus dem gesamten Stadtgebiet.
+  </p>
+  <p>
+    Duisburg Logopedi – Şimşek muayenehanesi, Duisburg merkezinde Almanca ve Türkçe
+    logo­pedi hizmeti sunan uzman bir kliniğimizdir. Merkez istasyona 2 dakika yürüme
+    mesafesindeyiz.
+  </p>
+
+  <h2>Unsere Praxis in Duisburg</h2>
+  <ul>
+    <li><strong>Adresse:</strong> Tonhallenstraße 21, 47051 Duisburg (3. OG, Aufzug)</li>
+    <li><strong>Lage:</strong> Duisburg-Mitte, 2 Minuten vom Hauptbahnhof</li>
+    <li><strong>Erreichbarkeit:</strong> Sehr gut mit Bus, Straßenbahn und U-Bahn</li>
+    <li><strong>Öffnungszeiten:</strong> Montag–Freitag 08:00–18:00 Uhr (nach Vereinbarung)</li>
+    <li><strong>Sprachen:</strong> Vollständige Therapie auf Deutsch und Türkisch</li>
+    <li><strong>Kassen:</strong> Alle gesetzlichen und privaten Krankenkassen</li>
+  </ul>
+
+  <h2>Türkischsprachige Logopädie für alle Altersgruppen</h2>
+  <p>
+    Unsere Praxis behandelt türkischsprachige Patientinnen und Patienten aller Altersgruppen:
+  </p>
+  <ul>
+    <li><strong>Säuglinge und Kleinkinder:</strong> Frühförderung, Fütterstörungen, frühe Sprachentwicklung</li>
+    <li><strong>Kindergartenkinder:</strong> Aussprache, Sprachentwicklungsverzögerung, Stottern</li>
+    <li><strong>Schulkinder und Jugendliche:</strong> LRS, auditive Verarbeitung, Redeflussstörungen</li>
+    <li><strong>Erwachsene:</strong> Aphasie, Stimme, Schlucken, neurologische Erkrankungen</li>
+    <li><strong>Seniorinnen und Senioren:</strong> Demenz-begleitende Therapie, Dysphagie, Schlaganfall-Nachsorge</li>
+  </ul>
+
+  <h2>Warum Duisburg der richtige Ort für türkische Logopädie ist</h2>
+  <p>
+    Duisburg zählt zu den Städten in Deutschland mit dem höchsten Anteil türkischstämmiger
+    Bevölkerung. In Stadtteilen wie Marxloh, Hamborn, Hochfeld, Meiderich und Duisburg-Mitte
+    leben zahlreiche türkische Familien, für die eine muttersprachliche logopädische
+    Versorgung besonders wichtig ist. Unsere Praxis schließt diese Versorgungslücke seit
+    über zehn Jahren.
+  </p>
+
+  <div class="info-box">
+    <p>
+      <strong>Duisburg'daki ailelere:</strong> Çocuğunuzun dil gelişimi konusunda endişeleriniz
+      mi var? Bizimle Türkçe veya Almanca iletişime geçebilirsiniz.
+      Telefon: <a href="tel:+4920334868690">0203 34 86 86 90</a> –
+      E-Posta: <a href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a>
+    </p>
+  </div>
+
+  <h2>Kosten – was zahlt die Krankenkasse?</h2>
+  <p>
+    Türkische Logopädie wird von gesetzlichen und privaten Krankenkassen übernommen –
+    genauso wie deutschsprachige Therapie. Sie benötigen eine Heilmittelverordnung von
+    Ihrem Arzt. Kinder und Jugendliche bis 18 Jahre sind von Zuzahlungen befreit.
+    Ausführliche Informationen: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+  </p>
+</ServicePage>

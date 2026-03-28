@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const jobSchema = {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Logopädin / Logopäde (m/w/d)",
+  "description": "Wir suchen eine engagierte Logopädin / einen engagierten Logopäden für unsere Praxis in Duisburg. Voll- oder Teilzeit, überdurchschnittliches Gehalt, zweisprachiges Team.",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Praxis für Logopädie Şimşek",
+    "sameAs": siteUrl
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tonhallenstraße 21",
+      "addressLocality": "Duisburg",
+      "postalCode": "47051",
+      "addressCountry": "DE"
+    }
+  },
+  "employmentType": ["FULL_TIME", "PART_TIME"],
+  "workHours": "Vollzeit oder Teilzeit möglich",
+  "industry": "Logopädie / Sprachtherapie",
+  "occupationalCategory": "Logopädin / Logopäde"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Karriere", "item": `${siteUrl}/karriere` }
+  ]
+};
+---
+
+<Layout
+  title="Karriere & Jobs – Logopädie Şimşek Duisburg | Stellenangebote"
+  description="Logopädie Şimşek Duisburg sucht engagierte Logopädinnen und Logopäden. Überdurchschnittliches Gehalt, tolles Team, zweisprachige Praxis. Jetzt bewerben!"
+  additionalSchemas={[jobSchema, breadcrumbSchema]}
+>
+  <Header />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Karriere</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container max-w-3xl">
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Duisburg</span>
+          <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Vollzeit / Teilzeit</span>
+          <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Sofort oder nach Vereinbarung</span>
+        </div>
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
+          Karriere bei Logopädie Şimşek
+        </h1>
+        <p class="text-text-muted text-lg">
+          Werden Sie Teil unseres Teams. Wir suchen eine engagierte Logopädin oder einen
+          engagierten Logopäden für unsere Praxis in Duisburg.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container max-w-3xl py-14">
+      <div class="prose-section">
+
+        <h2>Stellenangebot: Logopädin / Logopäde (m/w/d)</h2>
+        <p>
+          Die Praxis für Logopädie Şimşek in Duisburg-Mitte sucht Verstärkung für unser
+          engagiertes Team. Ob Berufseinsteigerin oder erfahrene Fachkraft – wir freuen uns
+          auf Ihre Bewerbung.
+        </p>
+
+        <h2>Was wir uns von Ihnen wünschen</h2>
+        <ul>
+          <li>Abgeschlossene staatliche Ausbildung als Logopädin / Logopäde</li>
+          <li>Selbstständige und flexible Arbeitsweise</li>
+          <li>Einfühlungsvermögen und Offenheit im Umgang mit Patientinnen und Patienten</li>
+          <li>Interesse an Kindersprachtherapie und/oder Aphasietherapie bei Erwachsenen</li>
+          <li>Berufseinsteiger herzlich willkommen</li>
+          <li>Türkischkenntnisse sind ein Plus, aber keine Voraussetzung</li>
+        </ul>
+
+        <h2>Was wir Ihnen bieten</h2>
+        <ul>
+          <li><strong>Überdurchschnittliches Gehalt</strong> – faire und transparente Vergütung</li>
+          <li><strong>Strukturierte Einarbeitung</strong> – wir begleiten Sie von Beginn an</li>
+          <li><strong>Kollegiales Team</strong> – offene Kommunikation und gegenseitige Unterstützung</li>
+          <li><strong>Moderne Praxisräume</strong> – gut ausgestattete Therapieräume in zentraler Lage</li>
+          <li><strong>Fortbildungsunterstützung</strong> – wir fördern Ihre fachliche Weiterentwicklung</li>
+          <li><strong>Flexible Arbeitszeiten</strong> – Voll- oder Teilzeit nach Absprache</li>
+          <li><strong>Zentrale Lage</strong> – direkt am Duisburger Hauptbahnhof, gut mit ÖPNV erreichbar</li>
+        </ul>
+
+        <h2>Über unsere Praxis</h2>
+        <p>
+          Praxis Şimşek ist eine etablierte Logopädiepraxis in Duisburg-Mitte mit über zehn
+          Jahren Erfahrung. Wir bieten das vollständige Spektrum logopädischer Leistungen –
+          von der Frühförderung bis zur geriatrischen Therapie – und sind eine der wenigen
+          Praxen in der Region mit vollständig zweisprachigem Angebot auf Deutsch und Türkisch.
+        </p>
+
+        <div class="info-box">
+          <p>
+            <strong>Praktikum:</strong> Leider können wir derzeit keine Praktikumsplätze für
+            Studierende aus dem Ausland anbieten. Für inländische Praktikumsanfragen kontaktieren
+            Sie uns bitte direkt.
+          </p>
+        </div>
+
+        <h2>Bewerbung</h2>
+        <p>
+          Senden Sie Ihre Bewerbungsunterlagen (Anschreiben, Lebenslauf, Zeugnisse) per
+          E-Mail an <a href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a>
+          oder sprechen Sie uns direkt an:
+        </p>
+        <p>
+          <strong>Emel Şimşek-Uçar</strong><br />
+          Praxis für Logopädie Şimşek<br />
+          Tonhallenstraße 21, 47051 Duisburg<br />
+          <a href="tel:+4920334868690">0203 34 86 86 90</a>
+        </p>
+
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(ul) {
+    list-style: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .prose-section :global(ul li) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .prose-section :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+  .prose-section :global(a) { color: var(--color-primary); }
+  .info-box {
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>

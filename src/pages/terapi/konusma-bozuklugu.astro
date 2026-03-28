@@ -1,20 +1,20 @@
 ---
-import ServicePage from '../../../layouts/ServicePage.astro';
+import ServicePage from '../../layouts/ServicePage.astro';
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Konuşma Bozuklukları Tedavisi: Kekemelik, Pelteklik, Dizartri – Duisburg",
   "description": "Duisburg'da kekemelik, hızlı konuşma, pelteklik ve dizartri tedavisi. Çocuklar ve yetişkinler için profesyonel konuşma bozukluğu terapisi.",
-  "url": "https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu",
+  "url": "https://logopaedie-simsek.de/terapi/konusma-bozuklugu",
   "about": { "@type": "MedicalCondition", "name": "Konuşma Bozukluğu" },
   "inLanguage": "tr",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/tr" },
-      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://logopaedie-simsek.de/tr/hizmetler" },
-      { "@type": "ListItem", "position": 3, "name": "Konuşma Bozuklukları", "item": "https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu" }
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://logopaedie-simsek.de/anasayfa" },
+      { "@type": "ListItem", "position": 2, "name": "Terapi", "item": "https://logopaedie-simsek.de/terapi" },
+      { "@type": "ListItem", "position": 3, "name": "Konuşma Bozuklukları", "item": "https://logopaedie-simsek.de/terapi/konusma-bozuklugu" }
     ]
   }
 };
@@ -30,14 +30,14 @@ const schema = {
   additionalSchemas={[schema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen/sprechstoerungen' },
-    { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler/konusma-bozuklugu' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/konusma-bozuklugu' },
     { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen/sprechstoerungen' },
   ]}
   alternateUrl="/leistungen/sprechstoerungen"
   relatedServices={[
-    { title: 'Dil Bozuklukları', href: '/tr/hizmetler/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
-    { title: 'Ses Terapisi', href: '/tr/hizmetler/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
-    { title: 'Yutma Bozuklukları', href: '/tr/hizmetler/yutma-bozuklugu', description: 'Yetişkinlerde ve çocuklarda disfaji' },
+    { title: 'Dil Bozuklukları', href: '/terapi/dil-bozuklugu', description: 'Dil gelişim gecikmesi, afazi, erken müdahale' },
+    { title: 'Ses Terapisi', href: '/terapi/ses-terapisi', description: 'Kısıklık, disfoni, fonksiyonel ses bozuklukları' },
+    { title: 'Yutma Bozuklukları', href: '/terapi/yutma-bozuklugu', description: 'Yetişkinlerde ve çocuklarda disfaji' },
   ]}
 >
   <h2>Konuşma Bozuklukları Nedir?</h2>

@@ -1,0 +1,94 @@
+---
+import ServicePage from '../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Türkische Sprachtherapie Duisburg – Türkçe Dil Terapisi",
+  "description": "Türkische Sprachtherapie in Duisburg – Praxis Şimşek in Duisburg-Mitte. Dil ve konuşma terapisi auf Türkisch und Deutsch. Alle Kassen.",
+  "url": `${siteUrl}/tuerkische-sprachtherapie-duisburg`,
+  "inLanguage": ["de", "tr"],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Türkische Sprachtherapie Duisburg", "item": `${siteUrl}/tuerkische-sprachtherapie-duisburg` }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Türkische Sprachtherapie Duisburg – Türkçe Dil Terapisi | Praxis Şimşek"
+  description="Türkische Sprachtherapie in Duisburg – Praxis Şimşek, Duisburg-Mitte. Sprachtherapie auf Türkisch für Kinder und Erwachsene. Türkçe dil ve konuşma terapisi Duisburg."
+  serviceTitle="Türkische Sprachtherapie Duisburg – Türkçe Dil Terapisi"
+  breadcrumbLabel="Türkische Sprachtherapie Duisburg"
+  tags={['Duisburg', 'Türkçe Dil Terapisi', 'Sprachtherapie', 'Kinder & Erwachsene']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/tuerkische-sprachtherapie-duisburg` },
+    { lang: 'tr', url: `${siteUrl}/tr/hizmetler/dil-bozuklugu` },
+    { lang: 'x-default', url: `${siteUrl}/tuerkische-sprachtherapie-duisburg` },
+  ]}
+  relatedServices={[
+    { title: 'Türkische Sprachtherapie', href: '/tuerkische-sprachtherapie/', description: 'Was türkische Sprachtherapie bedeutet und wann sie hilft' },
+    { title: 'Türkische Logopädie Duisburg', href: '/tuerkische-logopaedie-duisburg/', description: 'Alle türkischen Logopädie-Leistungen in Duisburg' },
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen/', description: 'Diagnostik und Therapie von Sprachstörungen im Detail' },
+  ]}
+>
+  <h2>Türkische Sprachtherapie in Duisburg</h2>
+  <p>
+    Die Praxis für Logopädie Şimşek bietet <strong>türkische Sprachtherapie in Duisburg</strong>
+    für Kinder, Jugendliche und Erwachsene an. Unsere Praxis liegt zentral in Duisburg-Mitte,
+    2 Gehminuten vom Hauptbahnhof – gut erreichbar für Familien aus dem gesamten Stadtgebiet.
+  </p>
+  <p>
+    Duisburg'da Türkçe dil terapisi – Şimşek Logoepdi Kliniği, Duisburg Merkez'de çocuklar,
+    gençler ve yetişkinler için dil ve konuşma terapisi hizmeti sunmaktadır.
+  </p>
+
+  <h2>Sprachtherapie auf Türkisch – für wen?</h2>
+  <ul>
+    <li>Kinder mit Türkisch als Muttersprache oder Erstsprache</li>
+    <li>Mehrsprachige Kinder (Türkisch + Deutsch), bei denen eine fundierte Diagnostik in beiden Sprachen nötig ist</li>
+    <li>Erwachsene türkischer Herkunft mit erworbenen Sprachstörungen (z. B. nach Schlaganfall)</li>
+    <li>Familien, die Beratungsgespräche auf Türkisch bevorzugen</li>
+    <li>Patientinnen und Patienten, die sich in der Muttersprache besser ausdrücken können</li>
+  </ul>
+
+  <h2>Behandlungsschwerpunkte</h2>
+  <ul>
+    <li><strong>Sprachentwicklungsverzögerung (dil gelişim gecikmesi):</strong> Frühzeitige Erkennung und gezielte Förderung</li>
+    <li><strong>Aussprache- und Artikulationsstörungen:</strong> Einzelne Laute oder Lautverbindungen werden falsch gebildet</li>
+    <li><strong>Grammatik- und Wortschatzprobleme:</strong> Defizite in Satzstruktur oder Wortbedeutungen</li>
+    <li><strong>Stottern (kekemelik):</strong> Redeflussstörungen bei Kindern und Erwachsenen</li>
+    <li><strong>Aphasie (afazi):</strong> Sprachverlust nach Schlaganfall oder Hirnverletzung</li>
+    <li><strong>Lese-Rechtschreib-Schwäche:</strong> Unterstützung beim Schriftspracherwerb</li>
+  </ul>
+
+  <div class="info-box">
+    <p>
+      <strong>Randevu için:</strong> Türkçe veya Almanca randevu alabilirsiniz.
+      <a href="tel:+4920334868690">0203 34 86 86 90</a> –
+      Tonhallenstraße 21, Duisburg (3. Obergeschoss, Aufzug vorhanden).
+    </p>
+  </div>
+
+  <h2>Praxis Şimşek – Ihre Adresse für Sprachtherapie in Duisburg</h2>
+  <p>
+    Seit über zehn Jahren ist Praxis Şimşek eine feste Adresse für türkische und deutsche
+    Sprachtherapie in Duisburg. Inhaberin Emel Şimşek-Uçar, staatlich geprüfte Logopädin,
+    hat die interkulturelle und zweisprachige Arbeit von Beginn an als Schwerpunkt der
+    Praxis etabliert.
+  </p>
+
+  <h2>Kostenübernahme durch die Krankenkasse</h2>
+  <p>
+    Türkische Sprachtherapie wird von allen gesetzlichen und privaten Krankenkassen
+    übernommen – vorausgesetzt, es liegt eine ärztliche Heilmittelverordnung vor.
+    Kinder bis 18 Jahre sind von Zuzahlungen befreit.
+    Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+  </p>
+</ServicePage>

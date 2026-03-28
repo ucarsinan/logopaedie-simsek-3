@@ -1,0 +1,123 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Logopädie für Erwachsene Duisburg",
+  "description": "Logopädische Therapie für Erwachsene in Duisburg. Aphasie, Dysarthrie, Stimmstörungen, Schluckstörungen nach Schlaganfall oder neurologischen Erkrankungen.",
+  "url": `${siteUrl}/leistungen/erwachsene`,
+  "about": { "@type": "MedicalCondition", "name": "Aphasie" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": `${siteUrl}/leistungen` },
+      { "@type": "ListItem", "position": 3, "name": "Therapie für Erwachsene", "item": `${siteUrl}/leistungen/erwachsene` }
+    ]
+  }
+};
+---
+
+<ServicePage
+  title="Logopädie für Erwachsene Duisburg – Aphasie, Stimme, Schlucken | Praxis Şimşek"
+  description="Logopädische Therapie für Erwachsene in Duisburg – Aphasie nach Schlaganfall, Dysarthrie, Stimmstörungen, Dysphagie. Zweisprachig Deutsch & Türkisch."
+  serviceTitle="Logopädie für Erwachsene"
+  breadcrumbLabel="Therapie für Erwachsene"
+  tags={['Aphasie', 'Dysarthrie', 'Stimmtherapie', 'Neurologie']}
+  additionalSchemas={[schema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/leistungen/erwachsene` },
+    { lang: 'x-default', url: `${siteUrl}/leistungen/erwachsene` },
+  ]}
+  relatedServices={[
+    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen/', description: 'Aphasie, Wortfindung, Sprachverständnis' },
+    { title: 'Schluckstörungen', href: '/leistungen/schluckstoerungen/', description: 'Dysphagie-Therapie für Erwachsene und Senioren' },
+    { title: 'Stimmtherapie', href: '/leistungen/stimmtherapie/', description: 'Dysphonie, Heiserkeit, ISTP-Methode' },
+  ]}
+>
+  <h2>Logopädie für Erwachsene – wann ist sie sinnvoll?</h2>
+  <p>
+    Sprach-, Sprech-, Stimm- und Schluckstörungen können Menschen in jedem Lebensalter
+    treffen – häufig als Folge neurologischer Erkrankungen, nach Operationen oder durch
+    berufliche Überbelastung. Logopädische Therapie für Erwachsene ist ein anerkannter
+    Teil der medizinischen Versorgung und wird von den Krankenkassen übernommen.
+  </p>
+
+  <h2>Neurologisch bedingte Sprach- und Sprechstörungen</h2>
+
+  <h3>Aphasie – Sprachverlust nach Schlaganfall</h3>
+  <p>
+    Aphasie ist eine erworbene Sprachstörung infolge einer Hirnschädigung – meist
+    durch Schlaganfall, aber auch durch Hirnblutung, Tumor oder Schädel-Hirn-Trauma.
+    Betroffene haben Schwierigkeiten beim Sprechen, Verstehen, Lesen und/oder Schreiben.
+    Logopädische Aphasie-Therapie zielt auf die Wiederherstellung oder Kompensation
+    der sprachlichen Fähigkeiten.
+  </p>
+
+  <h3>Dysarthrie</h3>
+  <p>
+    Dysarthrie bezeichnet Sprechstörungen durch Schädigungen des zentralen oder peripheren
+    Nervensystems – erkennbar an undeutlicher, verlangsamter oder monotoner Sprache.
+    Ursachen: Schlaganfall, Parkinson, Multiple Sklerose, ALS und andere neurologische
+    Erkrankungen.
+  </p>
+
+  <h3>Sprechapraxie</h3>
+  <p>
+    Bei der Sprechapraxie ist die motorische Planung und Koordination der Sprechbewegungen
+    gestört – trotz intakter Muskulatur. Betroffene suchen nach der richtigen
+    Lautstellung, sprechen unflüssig oder machen inkonsistente Fehler.
+  </p>
+
+  <h2>Stimmstörungen bei Erwachsenen</h2>
+  <p>
+    Berufssprecher (Lehrerinnen, Erzieherinnen, Sänger, Führungskräfte) und Personen nach
+    Kehlkopfoperationen benötigen oft gezielte Stimmtherapie. Wir behandeln funktionelle,
+    organische, psychogene und neurogene Stimmstörungen.
+    Mehr Informationen: <a href="/leistungen/stimmtherapie/">Stimmtherapie</a>
+  </p>
+
+  <h2>Schluckstörungen (Dysphagie)</h2>
+  <p>
+    Schluckstörungen bei Erwachsenen entstehen häufig nach Schlaganfall, bei neurologischen
+    Erkrankungen (Parkinson, MS, ALS), nach Kopf-Hals-Operationen oder im Alter.
+    Unbehandelte Dysphagie erhöht das Risiko von Aspirationspneumonie und Mangelernährung.
+    Mehr Informationen: <a href="/leistungen/schluckstoerungen/">Schlucktherapie</a>
+  </p>
+
+  <h2>Stottern bei Erwachsenen</h2>
+  <p>
+    Stottern (Redeflussstörungen) ist nicht nur ein Kindheitsproblem – viele Erwachsene
+    stottern und leiden unter den kommunikativen und sozialen Einschränkungen. Modernes
+    Stottertherapie-Konzepte verbinden Sprechtechnik, Kommunikationstraining und den
+    Abbau von Vermeidungsverhalten.
+  </p>
+
+  <h2>Demenz und altersbedingte Kommunikationsstörungen</h2>
+  <p>
+    Bei Demenzerkrankungen verschlechtert sich die Kommunikationsfähigkeit schrittweise.
+    Logopädische Therapie in der Begleitung von Demenzpatienten zielt auf den Erhalt
+    der Alltagskommunikation und die Unterstützung von Angehörigen.
+  </p>
+
+  <div class="info-box">
+    <p>
+      <strong>Zweisprachige Therapie:</strong> Türkischsprachige Erwachsene können unsere
+      Therapie vollständig auf Türkisch in Anspruch nehmen – von der Erstdiagnostik bis
+      zum Therapieabschluss. Mehr dazu:
+      <a href="/tuerkische-logopaedie/">Türkische Logopädie Duisburg</a>
+    </p>
+  </div>
+
+  <h2>Verordnung und Kostenübernahme</h2>
+  <p>
+    Logopädische Therapie für Erwachsene wird von gesetzlichen und privaten Krankenkassen
+    übernommen, wenn eine <strong>Heilmittelverordnung</strong> (Rezept) vorliegt.
+    Verordnende Fachärzte: Neurologen, HNO-Ärzte, Internisten, Allgemeinmediziner,
+    Phoniatriker und weitere. Erwachsene zahlen 10% Zuzahlung plus 10 € Rezeptgebühr.
+    Alle Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+  </p>
+</ServicePage>
