@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none">
+  <!-- Soft background blobs -->
+  <circle cx="245" cy="245" r="210" fill="#2A7F6F" opacity="0.05"/>
+  <circle cx="320" cy="160" r="120" fill="#C4714F" opacity="0.04"/>
+
+  <!-- Central source – abstract pulsing circles -->
+  <circle cx="268" cy="252" r="60" fill="#2A7F6F" opacity="0.07"/>
+  <circle cx="268" cy="252" r="38" fill="#2A7F6F" opacity="0.12"/>
+  <circle cx="268" cy="252" r="20" fill="#2A7F6F" opacity="0.55"/>
+  <circle cx="268" cy="252" r="9"  fill="#2A7F6F" opacity="0.9"/>
+
+  <!-- Sound waves radiating left -->
+  <path d="M 218 220 Q 186 236 186 252 Q 186 268 218 284" stroke="#2A7F6F" stroke-width="4"   stroke-linecap="round" opacity="0.55"/>
+  <path d="M 198 204 Q 155 225 155 252 Q 155 279 198 300" stroke="#2A7F6F" stroke-width="3.5" stroke-linecap="round" opacity="0.38"/>
+  <path d="M 178 188 Q 124 214 124 252 Q 124 290 178 316" stroke="#2A7F6F" stroke-width="3"   stroke-linecap="round" opacity="0.22"/>
+  <path d="M 158 172 Q  93 203  93 252 Q  93 301 158 332" stroke="#2A7F6F" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+
+  <!-- Large speech bubble – top left -->
+  <rect x="22" y="62" width="182" height="114" rx="20" fill="white" stroke="#2A7F6F" stroke-width="2.5" opacity="0.95"/>
+  <!-- Bubble tail -->
+  <path d="M 54 176 L 42 206 L 74 176 Z" fill="white" stroke="#2A7F6F" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Text lines inside bubble -->
+  <rect x="44" y="91"  width="96"  height="8" rx="4" fill="#2A7F6F" opacity="0.42"/>
+  <rect x="44" y="108" width="130" height="8" rx="4" fill="#2A7F6F" opacity="0.27"/>
+  <rect x="44" y="125" width="80"  height="8" rx="4" fill="#2A7F6F" opacity="0.20"/>
+  <rect x="44" y="142" width="108" height="8" rx="4" fill="#2A7F6F" opacity="0.15"/>
+
+  <!-- Medium speech bubble – right (accent) -->
+  <rect x="318" y="108" width="148" height="92" rx="17" fill="none" stroke="#C4714F" stroke-width="2" opacity="0.35"/>
+  <rect x="318" y="108" width="148" height="92" rx="17" fill="#C4714F" opacity="0.07"/>
+  <path d="M 326 200 L 312 228 L 344 200 Z" fill="#C4714F" opacity="0.12"/>
+  <!-- Three dots inside -->
+  <circle cx="360" cy="154" r="8" fill="#C4714F" opacity="0.38"/>
+  <circle cx="385" cy="154" r="8" fill="#C4714F" opacity="0.38"/>
+  <circle cx="410" cy="154" r="8" fill="#C4714F" opacity="0.38"/>
+
+  <!-- Small speech bubble – bottom left -->
+  <rect x="48" y="338" width="118" height="74" rx="15" fill="none" stroke="#C4714F" stroke-width="1.5" opacity="0.28"/>
+  <rect x="48" y="338" width="118" height="74" rx="15" fill="#C4714F" opacity="0.05"/>
+  <path d="M 128 412 L 148 434 L 140 412 Z" fill="#C4714F" opacity="0.10"/>
+  <!-- Lines inside -->
+  <rect x="66" y="360" width="82" height="7" rx="3.5" fill="#C4714F" opacity="0.3"/>
+  <rect x="66" y="376" width="60" height="7" rx="3.5" fill="#C4714F" opacity="0.22"/>
+  <rect x="66" y="392" width="72" height="7" rx="3.5" fill="#C4714F" opacity="0.18"/>
+
+  <!-- Connection dots (communication / understanding) -->
+  <circle cx="174" cy="355" r="5.5" fill="#C4714F" opacity="0.32"/>
+  <circle cx="196" cy="374" r="4"   fill="#C4714F" opacity="0.24"/>
+  <circle cx="220" cy="390" r="6"   fill="#C4714F" opacity="0.18"/>
+  <circle cx="245" cy="402" r="4"   fill="#2A7F6F" opacity="0.2"/>
+
+  <!-- Decorative corner dots -->
+  <circle cx="424" cy="276" r="7"  fill="#2A7F6F" opacity="0.2"/>
+  <circle cx="446" cy="308" r="4.5" fill="#C4714F" opacity="0.2"/>
+  <circle cx="432" cy="344" r="6"  fill="#2A7F6F" opacity="0.15"/>
+  <circle cx="410" cy="372" r="4"  fill="#C4714F" opacity="0.18"/>
+
+  <!-- Top right sparkle dots -->
+  <circle cx="382" cy="64"  r="12" fill="#2A7F6F" opacity="0.11"/>
+  <circle cx="414" cy="82"  r="7"  fill="#C4714F" opacity="0.15"/>
+  <circle cx="400" cy="108" r="5"  fill="#2A7F6F" opacity="0.10"/>
+
+  <!-- Star sparkle (top right area) -->
+  <path d="M 452 174 L 456 186 L 468 186 L 458 194 L 462 206 L 452 198 L 442 206 L 446 194 L 436 186 L 448 186 Z"
+        fill="#C4714F" opacity="0.18"/>
+
+  <!-- Bottom right heart (warmth) -->
+  <path d="M 400 394 C 400 382 388 370 376 380 C 364 370 352 382 352 394 C 352 410 376 428 376 428 C 376 428 400 410 400 394 Z"
+        fill="#C4714F" opacity="0.16"/>
+</svg>

@@ -6,6 +6,7 @@ interface TeamMember {
   extra: string;
   isLead?: boolean;
   badge?: string;
+  avatar?: string;
 }
 
 const members: TeamMember[] = [
@@ -16,30 +17,35 @@ const members: TeamMember[] = [
     extra: "Gründerin und Leitung der Praxis. Spezialisiert auf zweisprachige Diagnostik und Therapie (DE/TR), mit besonderer Expertise in der interkulturellen Frühförderung.",
     isLead: true,
     badge: "Praxisleitung",
+    avatar: "/avatars/emel.svg",
   },
   {
     initials: "SP",
     name: "Sarah P.",
     role: "Logopädin B.Sc.",
     extra: "Bachelor of Science in Logopädie. Schwerpunkt: Sprachentwicklungsstörungen bei Kindern. Zusatzqualifikation als Theaterpädagogin.",
+    avatar: "/avatars/sarah.svg",
   },
   {
     initials: "LK",
     name: "Lena K.",
     role: "Logopädin B.H.",
     extra: "Bachelor of Health in Logopädie. Spezialisiert auf Stimmstörungen und Dysphagie. Ausgebildete Erzieherin mit Herz für Kinder.",
+    avatar: "/avatars/lena.svg",
   },
   {
     initials: "MA",
     name: "Mira A.",
     role: "Logopädin",
     extra: "Fokus auf Redeflusstörungen (Stottern, Poltern) und Sprechapraxie. Mehrjährige Erfahrung in der stationären Rehabilitation.",
+    avatar: "/avatars/mira.svg",
   },
   {
     initials: "YD",
     name: "Yasemin D.",
     role: "Logopädin",
     extra: "Zweisprachige Logopädin (DE/TR). Schwerpunkt: Sprachentwicklungsstörungen bei mehrsprachig aufwachsenden Kindern und interkulturelle Familienberatung.",
+    avatar: "/avatars/yasemin.svg",
   },
 ];
 ---
@@ -55,7 +61,10 @@ const members: TeamMember[] = [
       {members.map((member, index) => (
         <article class={`bg-surface border border-border rounded-md overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}${member.isLead ? ' [&_.avatar]:w-[88px] [&_.avatar]:h-[88px] [&_.avatar]:text-[2rem] [&_.avatar]:shadow-[0_8px_24px_rgba(42,127,111,.3)] [&_.avatar-bg]:bg-[linear-gradient(135deg,var(--color-primary-light)_0%,var(--color-accent-light)_100%)]' : ''}`}>
           <div class={`avatar-bg h-[200px] flex items-center justify-center relative overflow-hidden${member.isLead ? '' : ' bg-surface-2'}`}>
-            <div class="avatar w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display text-[1.75rem] font-semibold">{member.initials}</div>
+            {member.avatar
+              ? <img src={member.avatar} alt={member.name} class="avatar w-20 h-20 rounded-full object-cover" width="80" height="80" />
+              : <div class="avatar w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display text-[1.75rem] font-semibold">{member.initials}</div>
+            }
             {member.badge && (
               <span class="absolute top-4 right-4 bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full">{member.badge}</span>
             )}

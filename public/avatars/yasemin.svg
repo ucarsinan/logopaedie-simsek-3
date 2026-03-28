@@ -1,0 +1,40 @@
+<!-- Yasemin D. – black hair, long straight -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#E6F0F5"/>
+
+  <!-- Shirt / body -->
+  <path d="M 28 200 L 22 162 Q 36 144 100 144 Q 164 144 178 162 L 172 200 Z" fill="#C4714F"/>
+  <path d="M 84 150 L 100 168 L 116 150" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+
+  <!-- Long side hair (very long, behind body) -->
+  <rect x="54"  y="78"  width="17" height="100" rx="8.5" fill="#141414"/>
+  <rect x="129" y="78"  width="17" height="100" rx="8.5" fill="#141414"/>
+
+  <!-- Neck -->
+  <rect x="87" y="138" width="26" height="24" rx="7" fill="#C9906A"/>
+
+  <!-- Face -->
+  <ellipse cx="100" cy="106" rx="44" ry="47" fill="#D4956E"/>
+
+  <!-- Hair crown – sleek and smooth -->
+  <ellipse cx="100" cy="71" rx="44" ry="33" fill="#141414"/>
+  <rect x="54"  y="67" width="92" height="22" rx="0" fill="#141414"/>
+  <!-- Middle part highlight -->
+  <line x1="100" y1="56" x2="100" y2="74" stroke="#2A2A2A" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Eyes -->
+  <ellipse cx="86"  cy="105" rx="4" ry="4.5" fill="#0D0D0D"/>
+  <ellipse cx="114" cy="105" rx="4" ry="4.5" fill="#0D0D0D"/>
+  <circle cx="88"  cy="103" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="116" cy="103" r="1.5" fill="white" opacity="0.7"/>
+
+  <path d="M 80 96 Q 86 92 92 95"  stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M 108 95 Q 114 92 120 96" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <path d="M 91 124 Q 100 130 109 124" stroke="#B87050" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Accent dot -->
+  <circle cx="158" cy="38" r="10" fill="#C4714F" opacity="0.18"/>
+  <circle cx="158" cy="38" r="5"  fill="#C4714F" opacity="0.38"/>
+</svg>

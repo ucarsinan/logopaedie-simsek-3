@@ -6,6 +6,7 @@ interface TeamMember {
   extra: string;
   isLead?: boolean;
   badge?: string;
+  avatar?: string;
 }
 
 const members: TeamMember[] = [
@@ -16,30 +17,35 @@ const members: TeamMember[] = [
     extra: "Muayenehanenin kurucusu ve yöneticisi. İkidilli tanı ve terapi (DE/TR) ile kültürlerarası erken müdahalede uzman.",
     isLead: true,
     badge: "Muayenehane Yöneticisi",
+    avatar: "/avatars/emel.svg",
   },
   {
     initials: "SP",
     name: "Sarah P.",
     role: "Logoped B.Sc.",
     extra: "Logopedi Lisans mezunu. Uzmanlık: Çocuklarda dil gelişim bozuklukları. Drama pedagoji ek sertifikası.",
+    avatar: "/avatars/sarah.svg",
   },
   {
     initials: "LK",
     name: "Lena K.",
     role: "Logoped B.H.",
     extra: "Logopedi Sağlık Lisans mezunu. Ses bozuklukları ve disfaji uzmanı. Çocuklara özel ilgi gösteren eğitimci.",
+    avatar: "/avatars/lena.svg",
   },
   {
     initials: "MA",
     name: "Mira A.",
     role: "Logoped",
     extra: "Akıcılık bozuklukları (kekemelik, hızlı konuşma) ve konuşma apraksisine odaklanır. Yataklı rehabilitasyonda yıllarca deneyim.",
+    avatar: "/avatars/mira.svg",
   },
   {
     initials: "YD",
     name: "Yasemin D.",
     role: "Logoped",
     extra: "İkidilli logoped (DE/TR). Uzmanlık: Çok dilli çocuklarda dil gelişim bozuklukları ve kültürlerarası aile danışmanlığı.",
+    avatar: "/avatars/yasemin.svg",
   },
 ];
 ---
@@ -55,7 +61,10 @@ const members: TeamMember[] = [
       {members.map((member, index) => (
         <article class={`bg-surface border border-border rounded-md overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}${member.isLead ? ' [&_.avatar]:w-[88px] [&_.avatar]:h-[88px] [&_.avatar]:text-[2rem] [&_.avatar]:shadow-[0_8px_24px_rgba(42,127,111,.3)] [&_.avatar-bg]:bg-[linear-gradient(135deg,var(--color-primary-light)_0%,var(--color-accent-light)_100%)]' : ''}`}>
           <div class={`avatar-bg h-[200px] flex items-center justify-center relative overflow-hidden${member.isLead ? '' : ' bg-surface-2'}`}>
-            <div class="avatar w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display text-[1.75rem] font-semibold">{member.initials}</div>
+            {member.avatar
+              ? <img src={member.avatar} alt={member.name} class="avatar w-20 h-20 rounded-full object-cover" width="80" height="80" />
+              : <div class="avatar w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display text-[1.75rem] font-semibold">{member.initials}</div>
+            }
             {member.badge && (
               <span class="absolute top-4 right-4 bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full">{member.badge}</span>
             )}

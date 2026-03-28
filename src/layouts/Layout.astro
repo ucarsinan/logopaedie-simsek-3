@@ -15,7 +15,7 @@ interface Props {
   hreflangAlternates?: HreflangAlternate[];
 }
 
-const { title, description, ogImage = '/logo.png', additionalSchemas = [], lang = 'de', hreflangAlternates = [] } = Astro.props;
+const { title, description, ogImage = '/og-image.svg', additionalSchemas = [], lang = 'de', hreflangAlternates = [] } = Astro.props;
 
 const siteUrl = 'https://logopaedie-simsek.de';
 const canonicalUrl = `${siteUrl}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}` || siteUrl;
