@@ -1,0 +1,67 @@
+---
+const faqs = [
+  {
+    q: "Logopedistler ne tedavi eder?",
+    a: "Logopedistler; dil (örn. dil gelişim gecikmesi, afazi), konuşma (örn. kekemelik, pelteklik, dizartri), ses (örn. kısıklık, disfoni) ve yutma (disfaji) alanlarındaki bozuklukları tedavi eder. Çocuklar, yetişkinler ve yaşlılar tedavi alabilir.",
+  },
+  {
+    q: "Çocuğum logopediste ne yaşında gidebilir?",
+    a: "Logoterapi bebeklik döneminden itibaren uygulanabilir. Dil gelişim gecikmesi ne kadar erken fark edilip tedavi edilirse, sonuçlar o kadar iyi olur. Okul öncesi erken müdahale özellikle etkilidir.",
+  },
+  {
+    q: "Logoterapi için reçete gerekli mi?",
+    a: "Sigorta kapsamındaki terapi için aile hekiminizden veya uzman doktorunuzdan tıbbi reçete almanız gerekmektedir. Bireysel ödeme yapacaksanız reçetesiz randevu alabilirsiniz.",
+  },
+  {
+    q: "Sağlık sigortası logoterapi masraflarını karşılar mı?",
+    a: "Yasal sağlık sigortalıları, geçerli reçete ile terapi masraflarının büyük bölümünü karşılar. Genellikle tedavi ücretinin %10'u artı 10 € reçete ücreti katkı payı ödenir. Tüm yasal ve özel sigortalarla çalışıyoruz.",
+  },
+  {
+    q: "Türkçe terapi sunuyor musunuz?",
+    a: "Evet – Almanca ve Türkçe olarak tam tanı, danışmanlık ve terapi hizmeti sunuyoruz. Özellikle iki dilli büyüyen çocuklar için bu kültürlerarası yetkinlik büyük bir avantajdır.",
+  },
+  {
+    q: "Duisburg'da ev ziyareti yapıyor musunuz?",
+    a: "Evet, talep üzerine Duisburg ve çevresinde ev ziyareti yapıyoruz – özellikle hareket kabiliyeti kısıtlı hastalar için.",
+  },
+  {
+    q: "İlk seans nasıl geçer?",
+    a: "İlk seansta kapsamlı bir anamnez alır ve tanısal değerlendirme yaparız. Bu seans yaklaşık 60 dakika sürer. Birlikte terapi hedefleri belirler ve tedavi planını oluştururuz.",
+  },
+  {
+    q: "Bir seans ne kadar sürer?",
+    a: "Standart bir terapi seansı 30 ila 45 dakika sürer. Yoğun terapi programlarında veya özel endikasyonlarda daha uzun seanslar da planlanabilir.",
+  },
+  {
+    q: "Haftalık kaç seans gerekir?",
+    a: "Bu sorunun yanıtı bozukluğun türüne ve şiddetine bağlıdır. Çoğu durumda haftada 1-2 seans önerilir. Ev ödevleri terapi sürecinin önemli bir parçasını oluşturur.",
+  },
+  {
+    q: "Konuşma bozukluğu ile dil bozukluğu arasındaki fark nedir?",
+    a: "Dil bozukluğu; anlama, sözcük dağarcığı ve dilbilgisini etkiler. Konuşma bozukluğu ise seslerin telaffuzunu veya konuşmanın akıcılığını etkiler. Her iki bozukluk eş zamanlı da görülebilir ve her ikisi de logopedik tedavi gerektirir.",
+  },
+];
+---
+
+<section class="py-24 bg-bg-alt" aria-labelledby="faq-heading">
+  <div class="container max-w-3xl">
+    <header class="text-center mb-14 flex flex-col items-center gap-4">
+      <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">SSS</span>
+      <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="faq-heading">Sık Sorulan Sorular</h2>
+      <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-2xl reveal reveal-delay-2">Logoterapiye gelme yolunuzdaki en yaygın soruların yanıtları.</p>
+    </header>
+    <div class="flex flex-col gap-3">
+      {faqs.map((faq, i) => (
+        <details class={`group bg-surface border border-border rounded-md overflow-hidden shadow-sm reveal${i > 0 ? ` reveal-delay-${Math.min(i, 4)}` : ''}`}>
+          <summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-semibold text-text text-[.9375rem] leading-[1.5] select-none hover:text-primary transition-colors duration-200 [&::-webkit-details-marker]:hidden">
+            {faq.q}
+            <svg class="shrink-0 w-5 h-5 text-text-muted transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="px-6 pb-5 pt-0 text-[.9375rem] text-text-muted leading-[1.75] border-t border-border mt-0">
+            <p class="pt-4">{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

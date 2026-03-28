@@ -1,60 +1,61 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Nav from '../../components/Nav.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
 
 const services = [
   {
-    title: 'Sprachstörungen',
-    description: 'Sprachentwicklungsverzögerungen, Aphasie nach Schlaganfall, Frühförderung – für Kinder und Erwachsene.',
-    tags: ['Sprachentwicklung', 'Aphasie', 'Frühförderung'],
-    href: '/leistungen/sprachstoerungen',
+    title: 'Dil Bozuklukları',
+    description: 'Dil gelişim gecikmeleri, inme sonrası afazi, erken müdahale – çocuklar ve yetişkinler için.',
+    tags: ['Dil Gelişimi', 'Afazi', 'Erken Müdahale'],
+    href: '/tr/hizmetler/dil-bozuklugu',
     icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
   },
   {
-    title: 'Sprechstörungen',
-    description: 'Stottern, Poltern, Lispeln und motorisch bedingte Sprechstörungen wie Dysarthrie oder Sprechapraxie.',
-    tags: ['Stottern', 'Lispeln', 'Dysarthrie'],
-    href: '/leistungen/sprechstoerungen',
+    title: 'Konuşma Bozuklukları',
+    description: 'Kekemelik, hızlı konuşma, pelteklik ve dizartri veya konuşma apraksisi gibi motor kaynaklı konuşma bozuklukları.',
+    tags: ['Kekemelik', 'Pelteklik', 'Dizartri'],
+    href: '/tr/hizmetler/konusma-bozuklugu',
     icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>`,
   },
   {
-    title: 'Stimmtherapie',
-    description: 'Funktionelle und organische Stimmstörungen – bei Heiserkeit, Dysphonie, nach Operationen oder bei Berufssprechern.',
-    tags: ['Dysphonie', 'Heiserkeit', 'Stimmbildung'],
-    href: '/leistungen/stimmtherapie',
+    title: 'Ses Terapisi',
+    description: 'Fonksiyonel ve organik ses bozuklukları – kısıklık, disfoni, ameliyat sonrası veya meslek sesi kullananlar için.',
+    tags: ['Disfoni', 'Kısıklık', 'Ses Eğitimi'],
+    href: '/tr/hizmetler/ses-terapisi',
     icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
   },
   {
-    title: 'Schluckstörungen (Dysphagie)',
-    description: 'Diagnostik und Therapie von Dysphagie bei Erwachsenen und Kindern – nach Schlaganfall, bei Parkinson oder anderen neurologischen Erkrankungen.',
-    tags: ['Dysphagie', 'Schlucken', 'Neurologisch'],
-    href: '/leistungen/schluckstoerungen',
+    title: 'Yutma Bozuklukları (Disfaji)',
+    description: 'Yetişkinlerde ve çocuklarda disfajinin tanı ve tedavisi – inme, Parkinson veya diğer nörolojik hastalıklarda.',
+    tags: ['Disfaji', 'Yutma', 'Nöroloji'],
+    href: '/tr/hizmetler/yutma-bozuklugu',
     icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
   },
 ];
 ---
 
 <Layout
-  title="Leistungen | Logopädie Şimşek Duisburg"
-  description="Alle logopädischen Leistungen der Praxis Şimşek in Duisburg: Sprachstörungen, Sprechstörungen, Stimmtherapie und Dysphagie – für Kinder und Erwachsene."
+  title="Hizmetler | Logopädie Şimşek Duisburg"
+  description="Duisburg'daki Şimşek Logopedi Muayenehanesi'nin tüm logoterapi hizmetleri: dil bozuklukları, konuşma bozuklukları, ses terapisi ve disfaji – çocuklar ve yetişkinler için."
+  lang="tr"
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/leistungen' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/tr/hizmetler' },
     { lang: 'x-default', url: 'https://logopaedie-simsek.de/leistungen' },
   ]}
 >
-  <Header alternateUrl="/tr/hizmetler" />
-  <Nav />
+  <Header lang="tr" alternateUrl="/leistungen" />
+  <Nav lang="tr" />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
     <!-- Breadcrumb -->
-    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+    <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
       <div class="container py-3">
         <ol class="flex items-center gap-2 text-sm text-text-muted" role="list">
-          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li><a href="/tr/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
           <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
-          <li class="text-text font-medium" aria-current="page">Leistungen</li>
+          <li class="text-text font-medium" aria-current="page">Hizmetler</li>
         </ol>
       </div>
     </nav>
@@ -62,11 +63,11 @@ const services = [
     <!-- Hero -->
     <section class="bg-bg-alt pt-14 pb-12 border-b border-border">
       <div class="container max-w-3xl">
-        <span class="text-xs font-semibold tracking-widest uppercase text-primary">Leistungsangebot</span>
-        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mt-3 mb-4">Alle Bereiche der Logopädie</h1>
+        <span class="text-xs font-semibold tracking-widest uppercase text-primary">Hizmet Teklifimiz</span>
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mt-3 mb-4">Logoterapinin Tüm Alanları</h1>
         <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-2xl">
-          In unserer Praxis in Duisburg behandeln wir das vollständige Spektrum logopädischer Störungsbilder –
-          für Kinder, Erwachsene und Senioren. Auf Deutsch und Türkisch.
+          Duisburg'daki muayenehanemizde çocuklar, yetişkinler ve yaşlılar için logopedik bozuklukların
+          tam spektrumunu tedavi ediyoruz. Almanca ve Türkçe olarak.
         </p>
       </div>
     </section>
@@ -91,7 +92,7 @@ const services = [
                 ))}
               </div>
               <span class="text-sm font-semibold text-primary inline-flex items-center gap-1 mt-auto">
-                Mehr erfahren
+                Daha fazla bilgi
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
               </span>
             </a>
@@ -101,24 +102,24 @@ const services = [
     </section>
 
     <!-- USP Strip -->
-    <section class="py-14 bg-primary" aria-label="Unser Alleinstellungsmerkmal">
+    <section class="py-14 bg-primary" aria-label="Fark Yaratan Özelliğimiz">
       <div class="container max-w-3xl text-center flex flex-col items-center gap-5">
-        <h2 class="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white">Zweisprachige Therapie auf Deutsch und Türkisch</h2>
+        <h2 class="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white">Almanca ve Türkçe İki Dilli Terapi</h2>
         <p class="text-white/80 text-[1.0625rem] leading-[1.7] max-w-xl">
-          Ein seltenes Angebot im Ruhrgebiet – besonders wertvoll für mehrsprachig aufwachsende Kinder
-          und türkischsprachige Erwachsene. Wir schließen eine wichtige Versorgungslücke.
+          Ruhr Bölgesi'nde nadir bulunan bir hizmet – özellikle iki dilli büyüyen çocuklar
+          ve Türkçe konuşan yetişkinler için büyük değer taşıyor. Önemli bir bakım açığını kapatıyoruz.
         </p>
-        <a href="/#kontakt" class="btn btn-outline-white">Termin anfragen</a>
+        <a href="/tr/#kontakt" class="btn btn-outline-white">Randevu Talebi</a>
       </div>
     </section>
 
     <!-- Back link -->
     <div class="container py-10">
-      <a href="/" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+      <a href="/tr/" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        Zurück zur Startseite
+        Ana Sayfaya Dön
       </a>
     </div>
   </main>
-  <Footer />
+  <Footer lang="tr" />
 </Layout>

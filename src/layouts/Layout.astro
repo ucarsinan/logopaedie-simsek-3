@@ -1,18 +1,26 @@
 ---
 import '../styles/global.css';
 
+interface HreflangAlternate {
+  lang: string;
+  url: string;
+}
+
 interface Props {
   title: string;
   description: string;
   ogImage?: string;
   additionalSchemas?: Record<string, unknown>[];
+  lang?: 'de' | 'tr';
+  hreflangAlternates?: HreflangAlternate[];
 }
 
-const { title, description, ogImage = '/logo.png', additionalSchemas = [] } = Astro.props;
+const { title, description, ogImage = '/logo.png', additionalSchemas = [], lang = 'de', hreflangAlternates = [] } = Astro.props;
 
 const siteUrl = 'https://logopaedie-simsek.de';
 const canonicalUrl = `${siteUrl}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}` || siteUrl;
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+const ogLocale = lang === 'tr' ? 'tr_TR' : 'de_DE';
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -77,7 +85,7 @@ const jsonLd = {
 };
 ---
 <!DOCTYPE html>
-<html lang="de">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,6 +94,11 @@ const jsonLd = {
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- hreflang alternates -->
+    {hreflangAlternates.map(alt => (
+      <link rel="alternate" hreflang={alt.lang} href={alt.url} />
+    ))}
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -99,7 +112,7 @@ const jsonLd = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:site_name" content="Logopädie Şimşek" />
 
     <!-- Twitter Card -->
