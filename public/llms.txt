@@ -22,8 +22,8 @@
 
 ## Türkçe Hizmetler
 
-- [Türkçe ana sayfa](/tr/)
-- [Türkçe hizmetler](/tr/hizmetler/)
+- [Türkçe ana sayfa](/anasayfa/)
+- [Türkçe hizmetler](/terapi/)
 
 ## Standort & Kontakt
 
