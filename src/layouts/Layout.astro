@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { useTranslations } from '../i18n/index';
 
 interface HreflangAlternate {
   lang: string;
@@ -15,12 +16,13 @@ interface Props {
   hreflangAlternates?: HreflangAlternate[];
 }
 
-const { title, description, ogImage = '/og-image.svg', additionalSchemas = [], lang = 'de', hreflangAlternates = [] } = Astro.props;
+const { title, description, ogImage = '/og-image.png', additionalSchemas = [], lang = 'de', hreflangAlternates = [] } = Astro.props;
 
 const siteUrl = 'https://logopaedie-simsek.de';
-const canonicalUrl = `${siteUrl}${Astro.url.pathname === '/' ? '' : Astro.url.pathname}` || siteUrl;
+const canonicalUrl = `${siteUrl}${Astro.url.pathname}`;
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 const ogLocale = lang === 'tr' ? 'tr_TR' : 'de_DE';
+const s = useTranslations(lang).schema;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -28,8 +30,8 @@ const jsonLd = {
     {
       "@type": ["LocalBusiness", "MedicalBusiness"],
       "@id": `${siteUrl}/#business`,
-      "name": "Logopädie Şimşek",
-      "description": "Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR.",
+      "name": "Praxis für Logopädie Şimşek",
+      "description": s.business_description,
       "url": siteUrl,
       "telephone": "+4920334868690",
       "email": "info@logopaedie-simsek.de",
@@ -68,17 +70,15 @@ const jsonLd = {
       "founder": {
         "@type": "Person",
         "name": "Emel Şimşek-Uçar",
-        "jobTitle": "Staatlich geprüfte Logopädin"
+        "jobTitle": s.founder_title
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Logopädische Leistungen",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sprachtherapie", "url": `${siteUrl}/leistungen/sprachstoerungen` } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sprechtherapie", "url": `${siteUrl}/leistungen/sprechstoerungen` } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stimmtherapie", "url": `${siteUrl}/leistungen/stimmtherapie` } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dysphagietherapie", "url": `${siteUrl}/leistungen/schluckstoerungen` } }
-        ]
+        "name": s.offer_catalog_name,
+        "itemListElement": s.services.map(sv => ({
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": sv.name, "url": `${siteUrl}${sv.url}` }
+        }))
       }
     }
   ]
@@ -113,7 +113,7 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:locale" content={ogLocale} />
-    <meta property="og:site_name" content="Logopädie Şimşek" />
+    <meta property="og:site_name" content="Praxis für Logopädie Şimşek" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />

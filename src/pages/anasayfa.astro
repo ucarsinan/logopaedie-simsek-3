@@ -2,56 +2,31 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
-import Hero from '../components/sections/tr/Hero.astro';
-import About from '../components/sections/tr/About.astro';
-import Services from '../components/sections/tr/Services.astro';
-import Team from '../components/sections/tr/Team.astro';
-import Praxis from '../components/sections/tr/Praxis.astro';
-import Testimonials from '../components/sections/tr/Testimonials.astro';
-import Faq from '../components/sections/tr/Faq.astro';
-import Kontakt from '../components/sections/tr/Kontakt.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro';
+import Services from '../components/sections/Services.astro';
+import Team from '../components/sections/Team.astro';
+import Praxis from '../components/sections/Praxis.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import Faq from '../components/sections/Faq.astro';
+import Kontakt from '../components/sections/Kontakt.astro';
 import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/index';
 
+const t = useTranslations('tr');
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Logopedistler ne tedavi eder?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Logopedistler; dil (örn. dil gelişim gecikmesi, afazi), konuşma (örn. kekemelik, pelteklik, dizartri), ses (örn. kısıklık, disfoni) ve yutma (disfaji) alanlarındaki bozuklukları tedavi eder. Çocuklar, yetişkinler ve yaşlılar tedavi alabilir." }
-    },
-    {
-      "@type": "Question",
-      "name": "Çocuğum logopediste ne yaşında gidebilir?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Logoterapi bebeklik döneminden itibaren uygulanabilir. Dil gelişim gecikmesi ne kadar erken fark edilip tedavi edilirse, sonuçlar o kadar iyi olur. Okul öncesi erken müdahale özellikle etkilidir." }
-    },
-    {
-      "@type": "Question",
-      "name": "Logoterapi için reçete gerekli mi?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sigorta kapsamındaki terapi için aile hekiminizden veya uzman doktorunuzdan tıbbi reçete almanız gerekmektedir. Bireysel ödeme yapacaksanız reçetesiz randevu alabilirsiniz." }
-    },
-    {
-      "@type": "Question",
-      "name": "Sağlık sigortası logoterapi masraflarını karşılar mı?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yasal sağlık sigortalıları, geçerli reçete ile terapi masraflarının büyük bölümünü karşılar. Tüm yasal ve özel sigortalarla çalışıyoruz." }
-    },
-    {
-      "@type": "Question",
-      "name": "Türkçe terapi sunuyor musunuz?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Evet – Almanca ve Türkçe olarak tam tanı, danışmanlık ve terapi hizmeti sunuyoruz. Özellikle iki dilli büyüyen çocuklar için bu kültürlerarası yetkinlik büyük bir avantajdır." }
-    },
-    {
-      "@type": "Question",
-      "name": "Duisburg'da ev ziyareti yapıyor musunuz?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Evet, talep üzerine Duisburg ve çevresinde ev ziyareti yapıyoruz – özellikle hareket kabiliyeti kısıtlı hastalar için." }
-    }
-  ]
+  "mainEntity": t.faq.items.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a }
+  }))
 };
 ---
 
 <Layout
-  title="Logopädie Şimşek – Konuşun. Anlayın. Bağlanın."
+  title="Praxis für Logopädie Şimşek – Konuşun. Anlayın. Bağlanın."
   description="Duisburg'da logoterapi muayenehanesi – çocuklar ve yetişkinler için dil, konuşma ve ses bozukluklarında uzman. Almanca ve Türkçe iki dilli hizmet."
   lang="tr"
   additionalSchemas={[faqSchema]}
@@ -64,14 +39,14 @@ const faqSchema = {
   <Header lang="tr" alternateUrl="/" />
   <Nav lang="tr" />
   <main>
-    <Hero />
-    <About />
-    <Services />
-    <Team />
-    <Praxis />
-    <Testimonials />
-    <Faq />
-    <Kontakt />
+    <Hero lang="tr" />
+    <About lang="tr" />
+    <Services lang="tr" />
+    <Team lang="tr" />
+    <Praxis lang="tr" />
+    <Testimonials lang="tr" />
+    <Faq lang="tr" />
+    <Kontakt lang="tr" />
   </main>
   <Footer lang="tr" />
 </Layout>

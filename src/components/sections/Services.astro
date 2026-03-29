@@ -1,37 +1,13 @@
 ---
-interface ServiceCard {
-  title: string;
-  text: string;
-  tags: string[];
-  href: string;
+import { useTranslations } from '../../i18n/index';
+
+interface Props {
+  lang?: 'de' | 'tr';
 }
 
-const services: ServiceCard[] = [
-  {
-    title: 'Sprachstörungen',
-    text: 'Diagnostik und Therapie bei Beeinträchtigungen im Sprachverstehen und Sprachausdruck – von der kindlichen Sprachentwicklungsverzögerung bis zur erworbenen Aphasie nach Schlaganfall.',
-    tags: ['Sprachentwicklung', 'Aphasie', 'Frühförderung'],
-    href: '/leistungen/sprachstoerungen',
-  },
-  {
-    title: 'Sprechstörungen',
-    text: 'Behandlung motorisch bedingter Sprechstörungen sowie Redefluss- und Aussprachestörungen. Ob Stottern, Poltern oder Lispeln – wir begleiten Sie auf Ihrem Weg.',
-    tags: ['Dysarthrie', 'Stottern', 'Lispeln', 'Sprechapraxie'],
-    href: '/leistungen/sprechstoerungen',
-  },
-  {
-    title: 'Stimmstörungen',
-    text: 'Therapie bei funktionellen und organischen Stimmstörungen. Wir helfen dabei, die Stimme als wichtigstes Kommunikationsmittel zu stärken und langfristig zu schützen.',
-    tags: ['Dysphonie', 'Stimme', 'Funktionell'],
-    href: '/leistungen/stimmtherapie',
-  },
-  {
-    title: 'Schluckstörungen (Dysphagie)',
-    text: 'Diagnostik und Therapie von Schluckstörungen bei Erwachsenen und Kindern – zur Sicherung der Ernährung, Lebensqualität und Vermeidung von Folgeerkrankungen.',
-    tags: ['Dysphagie', 'Schlucken', 'Ernährung'],
-    href: '/leistungen/schluckstoerungen',
-  },
-];
+const { lang = 'de' } = Astro.props;
+const t = useTranslations(lang).services;
+const services = t.items;
 
 // SVG icons per service (index-matched)
 const icons = [
@@ -45,9 +21,9 @@ const icons = [
 <section class="pt-20 pb-24 bg-bg-alt" id="leistungen" aria-labelledby="services-heading">
   <div class="container">
     <header class="text-center mb-14 flex flex-col items-center gap-4">
-      <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">Unser Leistungsangebot</span>
-      <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="services-heading">Alle Bereiche der Logopädie</h2>
-      <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-150 reveal reveal-delay-2">Wir behandeln das vollständige Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.</p>
+      <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">{t.section_label}</span>
+      <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="services-heading">{t.heading}</h2>
+      <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-150 reveal reveal-delay-2">{t.description}</p>
     </header>
     <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1">
       {services.map((service, i) => (
@@ -61,15 +37,15 @@ const icons = [
             ))}
           </div>
           <a href={service.href} class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:underline">
-            Mehr erfahren
+            {t.more}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
           </a>
         </article>
       ))}
     </div>
     <div class="flex justify-center mt-10 reveal reveal-delay-3">
-      <a href="/leistungen" class="btn btn-ghost">
-        Alle Leistungen im Überblick
+      <a href={lang === 'tr' ? '/terapi/' : '/leistungen/'} class="btn btn-ghost">
+        {t.overview}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
       </a>
     </div>

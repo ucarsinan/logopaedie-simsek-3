@@ -1,23 +1,25 @@
 ---
+import { useTranslations } from '../i18n/index';
+
 interface Props {
   lang?: 'de' | 'tr';
   alternateUrl?: string;
 }
 
 const { lang = 'de', alternateUrl } = Astro.props;
-const isDE = lang === 'de';
+const t = useTranslations(lang).header;
 ---
 
 <header class="fixed top-0 left-0 right-0 z-[1001] h-[var(--header-h)] bg-white border-b border-border shadow-[0_1px_4px_rgba(0,0,0,.06)]" id="site-header" role="banner">
   <div class="container flex items-center justify-between h-full">
     <!-- Logo -->
-    <a href={isDE ? '/' : '/anasayfa/'} class="flex items-center gap-3.5 text-text shrink-0 min-w-0 no-underline" aria-label="Praxis für Logopädie Şimşek – Startseite">
+    <a href={t.home_href} class="flex items-center gap-3.5 text-text shrink-0 min-w-0 no-underline" aria-label="Praxis für Logopädie Şimşek – Startseite">
       <div class="w-14 h-14 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
         <img src="/favicon.svg" alt="" aria-hidden="true" />
       </div>
       <div>
         <div class="text-[.875rem] font-bold leading-[1.25] text-text uppercase tracking-[.02em]">Praxis für Logopädie Şimşek</div>
-        <span class="block text-[.6875rem] font-normal text-text-muted tracking-[.03em] mt-px">{isDE ? 'Logopädie Duisburg' : 'Duisburg Logoterapi'}</span>
+        <span class="block text-[.6875rem] font-normal text-text-muted tracking-[.03em] mt-px">{t.location}</span>
       </div>
     </a>
 
@@ -50,11 +52,11 @@ const isDE = lang === 'de';
         <a
           href={alternateUrl}
           class="inline-flex items-center gap-1.5 px-3 py-2 rounded-[6px] border border-border text-[.75rem] font-semibold tracking-[.06em] uppercase text-text-muted hover:text-primary hover:border-primary transition-colors duration-200"
-          aria-label={isDE ? 'Türkçe sürüme geç' : 'Deutsche Version aufrufen'}
-          title={isDE ? 'Türkçe' : 'Deutsch'}
+          aria-label={t.lang_label}
+          title={t.lang_title}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          {isDE ? 'TR' : 'DE'}
+          {t.lang_short}
         </a>
       )}
     </div>

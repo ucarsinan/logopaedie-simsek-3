@@ -1,43 +1,33 @@
 ---
+import { useTranslations } from '../i18n/index';
+
 interface Props {
   lang?: 'de' | 'tr';
 }
 
 const { lang = 'de' } = Astro.props;
-const isTR = lang === 'tr';
-
-const homeHref = isTR ? '/anasayfa/' : '/';
-const labels = isTR
-  ? { home: 'Anasayfa', therapy: 'Terapi', team: 'Ekip', jobs: 'Kariyer', contact: 'İletişim', cta: 'Randevu' }
-  : { home: 'Home', therapy: 'Therapie', team: 'Team', jobs: 'Jobs', contact: 'Kontakt', cta: 'Termin anfragen' };
-
-const links = {
-  therapy:  isTR ? '/terapi/'   : '/leistungen/',
-  team:     isTR ? '/ekip/'     : '/team/',
-  jobs:     '/karriere/',
-  contact:  isTR ? '/iletisim/' : '/kontakt/',
-};
+const t = useTranslations(lang).nav;
 ---
 
-<nav class="fixed left-0 right-0 z-[1000] bg-surface/95 backdrop-blur-sm border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label={isTR ? 'Ana Navigasyon' : 'Hauptnavigation'}>
+<nav class="fixed left-0 right-0 z-[1000] bg-surface/95 backdrop-blur-sm border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label={t.aria_main}>
   <div class="container flex items-center h-[var(--nav-h)] gap-1">
     <!-- Desktop links -->
     <ul class="flex items-center h-full gap-0.5 max-[991px]:hidden" role="list">
-      <li><a href={homeHref} class="nav-link" aria-current="page">
+      <li><a href={t.links.home} class="nav-link" aria-current="page">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        {labels.home}</a></li>
-      <li><a href={links.therapy} class="nav-link">
+        {t.home}</a></li>
+      <li><a href={t.links.therapy} class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-        {labels.therapy}</a></li>
-      <li><a href={links.team} class="nav-link">
+        {t.therapy}</a></li>
+      <li><a href={t.links.team} class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        {labels.team}</a></li>
-      <li><a href={links.jobs} class="nav-link">
+        {t.team}</a></li>
+      <li><a href={t.links.jobs} class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        {labels.jobs}</a></li>
-      <li><a href={links.contact} class="nav-link">
+        {t.jobs}</a></li>
+      <li><a href={t.links.contact} class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        {labels.contact}</a></li>
+        {t.contact}</a></li>
     </ul>
 
     <!-- Spacer -->
@@ -72,7 +62,7 @@ const links = {
       class="group hidden max-[991px]:flex flex-col gap-[5px] w-10 h-10 items-center justify-center rounded-md transition-colors duration-200 hover:bg-primary-light shrink-0 ml-2"
       id="hamburger"
       data-open="false"
-      aria-label={isTR ? 'Menüyü aç' : 'Menü öffnen'}
+      aria-label={t.aria_menu_open}
       aria-expanded="false">
       <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:translate-y-[7px] group-data-[open=true]:rotate-45"></span>
       <span class="block w-[22px] h-0.5 bg-text rounded-sm transition-[transform,opacity] duration-300 group-data-[open=true]:opacity-0"></span>
@@ -87,23 +77,23 @@ const links = {
   id="mobileMenu"
   data-open="false"
   role="navigation"
-  aria-label={isTR ? 'Mobil Navigasyon' : 'Mobile Navigation'}>
+  aria-label={t.aria_mobile}>
   <div class="px-6 pb-6 pt-2">
-    <a href={homeHref} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={t.links.home} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-      {labels.home}</a>
-    <a href={links.therapy} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      {t.home}</a>
+    <a href={t.links.therapy} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-      {labels.therapy}</a>
-    <a href={links.team} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      {t.therapy}</a>
+    <a href={t.links.team} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      {labels.team}</a>
-    <a href={links.jobs} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      {t.team}</a>
+    <a href={t.links.jobs} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      {labels.jobs}</a>
-    <a href={links.contact} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+      {t.jobs}</a>
+    <a href={t.links.contact} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      {labels.contact}</a>
+      {t.contact}</a>
   </div>
 </div>
 

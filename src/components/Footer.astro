@@ -1,25 +1,27 @@
 ---
+import { useTranslations } from '../i18n/index';
+
 interface Props {
   lang?: 'de' | 'tr';
 }
 
 const { lang = 'de' } = Astro.props;
-const isTR = lang === 'tr';
+const t = useTranslations(lang).footer;
 ---
 
 <footer class="bg-text text-white/70 pt-12 pb-8" role="contentinfo">
   <div class="container">
     <div class="flex flex-wrap justify-between items-center gap-6 pb-8 border-b border-white/10 mb-6">
       <div class="font-display text-[1.1875rem] font-semibold text-white leading-[1.2]">
-        Logopädie Şimşek
-        <span class="block text-xs font-body font-normal text-white/50 tracking-[.06em] uppercase mt-0.5">{isTR ? 'Duisburg Logoterapi' : 'Sprachtherapie Duisburg'}</span>
+        Praxis für Logopädie Şimşek
+        <span class="block text-xs font-body font-normal text-white/50 tracking-[.06em] uppercase mt-0.5">{t.tagline}</span>
       </div>
-      <nav class="flex gap-6 flex-wrap" aria-label={isTR ? 'Footer Navigasyonu' : 'Footer-Navigation'}>
-        <a href={isTR ? '/terapi/' : '/leistungen/'} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{isTR ? 'Terapi' : 'Leistungen'}</a>
-        <a href={isTR ? '/tr/kostenuebernahme/' : '/kostenuebernahme/'} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{isTR ? 'Sigorta' : 'Kostenübernahme'}</a>
-        <a href={isTR ? '/ekip/' : '/team/'} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{isTR ? 'Ekip' : 'Team'}</a>
-        <a href="/karriere/" class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{isTR ? 'Kariyer' : 'Karriere'}</a>
-        <a href={isTR ? '/iletisim/' : '/kontakt/'} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{isTR ? 'İletişim' : 'Kontakt'}</a>
+      <nav class="flex gap-6 flex-wrap" aria-label={t.nav_label}>
+        <a href={t.links.services.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.services.label}</a>
+        <a href={t.links.insurance.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.insurance.label}</a>
+        <a href={t.links.team.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.team.label}</a>
+        <a href={t.links.jobs.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.jobs.label}</a>
+        <a href={t.links.contact.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.contact.label}</a>
       </nav>
       <div class="flex gap-3">
         <a href="#" class="w-10 h-10 rounded-sm border border-white/15 flex items-center justify-center text-white/60 transition-[background,color,border-color] duration-200 hover:bg-white/10 hover:text-white hover:border-white/30" aria-label="Instagram" rel="noopener">
@@ -31,11 +33,11 @@ const isTR = lang === 'tr';
       </div>
     </div>
     <div class="flex flex-wrap justify-between items-center gap-3 text-[.8125rem]">
-      <p>&copy; 2025 Logopädie Şimşek · Emel Şimşek-Uçar · {isTR ? 'Tüm hakları saklıdır' : 'Alle Rechte vorbehalten'}</p>
+      <p>&copy; 2025 Praxis für Logopädie Şimşek · Emel Şimşek-Uçar · {t.copyright}</p>
       <div class="flex gap-5 flex-wrap">
         <a href="/impressum" class="text-white/50 transition-colors duration-200 hover:text-white">Impressum</a>
-        <a href="/datenschutz" class="text-white/50 transition-colors duration-200 hover:text-white">{isTR ? 'Gizlilik' : 'Datenschutz'}</a>
-        <a href="/barrierefreiheit" class="text-white/50 transition-colors duration-200 hover:text-white">{isTR ? 'Erişilebilirlik' : 'Barrierefreiheit'}</a>
+        <a href="/datenschutz" class="text-white/50 transition-colors duration-200 hover:text-white">{t.privacy}</a>
+        <a href="/barrierefreiheit" class="text-white/50 transition-colors duration-200 hover:text-white">{t.accessibility}</a>
       </div>
     </div>
   </div>

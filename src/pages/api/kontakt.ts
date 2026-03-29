@@ -1,5 +1,7 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
+import { useTranslations } from '../../i18n/index';
+import type { Lang } from '../../i18n/index';
 
 // This route is server-rendered (not pre-rendered)
 export const prerender = false;
@@ -24,6 +26,10 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
+  const rawLang = data.get('lang')?.toString() ?? 'de';
+  const lang: Lang = rawLang === 'tr' ? 'tr' : 'de';
+  const t = useTranslations(lang).contact_api;
+
   const vorname = data.get('vorname')?.toString().trim() ?? '';
   const nachname = data.get('nachname')?.toString().trim() ?? '';
   const email = data.get('email')?.toString().trim() ?? '';
@@ -39,7 +45,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   if (!vorname || !nachname || !email) {
     return new Response(
-      JSON.stringify({ success: false, error: 'Bitte füllen Sie alle Pflichtfelder aus.' }),
+      JSON.stringify({ success: false, error: t.error_required }),
       { status: 400, headers }
     );
   }
@@ -47,26 +53,26 @@ export const POST: APIRoute = async ({ request }) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return new Response(
-      JSON.stringify({ success: false, error: 'Bitte geben Sie eine gültige E-Mail-Adresse an.' }),
+      JSON.stringify({ success: false, error: t.error_email }),
       { status: 400, headers }
     );
   }
 
   const bereichLabels: Record<string, string> = {
-    sprache: 'Sprachstörungen',
-    sprechen: 'Sprechstörungen',
-    stimme: 'Stimmstörungen',
-    schlucken: 'Schluckstörungen (Dysphagie)',
-    allgemein: 'Allgemeine Beratung',
+    sprache: t.area_sprache,
+    sprechen: t.area_sprechen,
+    stimme: t.area_stimme,
+    schlucken: t.area_schlucken,
+    allgemein: t.area_allgemein,
   };
 
   const html = `
-    <h2 style="font-family:sans-serif;color:#1c1916;">Neue Terminanfrage</h2>
+    <h2 style="font-family:sans-serif;color:#1c1916;">${t.email_heading}</h2>
     <table style="font-family:sans-serif;font-size:15px;color:#1c1916;border-collapse:collapse;">
       <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Name:</td><td>${vorname} ${nachname}</td></tr>
       <tr><td style="padding:6px 16px 6px 0;font-weight:bold;">E-Mail:</td><td><a href="mailto:${email}">${email}</a></td></tr>
-      ${telefon ? `<tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Telefon:</td><td>${telefon}</td></tr>` : ''}
-      ${bereich ? `<tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Therapiebereich:</td><td>${bereichLabels[bereich] ?? bereich}</td></tr>` : ''}
+      ${telefon ? `<tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Tel:</td><td>${telefon}</td></tr>` : ''}
+      ${bereich ? `<tr><td style="padding:6px 16px 6px 0;font-weight:bold;">Bereich:</td><td>${bereichLabels[bereich] ?? bereich}</td></tr>` : ''}
     </table>
     ${nachricht ? `<h3 style="font-family:sans-serif;color:#1c1916;margin-top:20px;">Nachricht:</h3><p style="font-family:sans-serif;font-size:15px;color:#444;line-height:1.6;">${nachricht.replace(/\n/g, '<br>')}</p>` : ''}
     <hr style="border:none;border-top:1px solid #eee;margin:24px 0;">
@@ -78,7 +84,7 @@ export const POST: APIRoute = async ({ request }) => {
       from: FROM,
       to: [RECIPIENT],
       replyTo: email,
-      subject: `Neue Terminanfrage von ${vorname} ${nachname}`,
+      subject: `${t.subject_prefix} ${vorname} ${nachname}`,
       html,
     });
 
@@ -86,7 +92,7 @@ export const POST: APIRoute = async ({ request }) => {
   } catch (err) {
     console.error('[api/kontakt] Resend error:', err);
     return new Response(
-      JSON.stringify({ success: false, error: 'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns per Telefon.' }),
+      JSON.stringify({ success: false, error: t.error_send }),
       { status: 500, headers }
     );
   }
