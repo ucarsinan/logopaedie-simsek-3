@@ -249,53 +249,28 @@ export const de = {
   },
   kontakt: {
     section_label: "Kontakt",
-    heading: "Termin anfragen",
+    heading: "Termin vereinbaren",
     description:
-      "Nehmen Sie Kontakt auf – wir beraten Sie gerne und finden gemeinsam den passenden Therapieplatz für Sie oder Ihr Kind.",
-    form_id: "contactForm",
-    form_aria: "Terminanfrage",
-    label_firstname: "Vorname",
-    label_lastname: "Nachname",
-    label_email: "E-Mail",
-    label_phone: "Telefon",
-    label_area: "Therapiebereich",
-    label_message: "Ihre Nachricht",
-    placeholder_firstname: "Max",
-    placeholder_lastname: "Mustermann",
-    placeholder_email: "max@beispiel.de",
-    placeholder_phone: "+49 203 ...",
-    placeholder_area: "Bitte wählen...",
-    placeholder_message:
-      "Schildern Sie kurz Ihr Anliegen – wir melden uns schnellstmöglich bei Ihnen.",
-    privacy_note:
-      "Pflichtfelder. Ihre Daten werden vertraulich behandelt und nicht weitergegeben.",
-    submit: "Anfrage senden",
-    areas: [
-      { value: "sprache", label: "Sprachstörungen" },
-      { value: "sprechen", label: "Sprechstörungen" },
-      { value: "stimme", label: "Stimmstörungen" },
-      { value: "schlucken", label: "Schluckstörungen (Dysphagie)" },
-      { value: "allgemein", label: "Allgemeine Beratung" },
-    ],
+      "Termine vereinbaren wir ausschließlich telefonisch. Rufen Sie uns einfach an – wir finden gemeinsam den passenden Therapieplatz für Sie oder Ihr Kind.",
+    phone_only_notice:
+      "Termine werden ausschließlich <strong>telefonisch</strong> vereinbart. Eine Anfrage per E-Mail oder Kontaktformular ist nicht möglich.",
+    phone_cta_heading: "Jetzt anrufen",
+    phone_cta_sub:
+      "Rufen Sie uns direkt an – wir beraten Sie gerne und helfen Ihnen schnell und unkompliziert weiter.",
+    phone_cta_hours_label: "Erreichbar",
+    phone_cta_bilingual:
+      "Beratung auch auf <strong>Türkisch</strong> möglich.",
     info_phone_label: "Telefon",
     info_phone_hours: "Mo–Fr 08:00–18:00 Uhr",
     info_email_label: "E-Mail",
-    info_email_hours: "Wir antworten innerhalb von 24 Stunden",
+    info_email_hours: "Für allgemeine Fragen · Keine Terminvereinbarung",
     info_address_label: "Adresse",
     info_address_sub: "3. OG · Aufzug vorhanden · 2 min. vom HBf",
     info_lang_label: "Sprachen",
     info_lang_value: "Deutsch & Türkçe",
-    info_lang_sub: "Therapy available in both languages",
+    info_lang_sub: "Therapie auf Deutsch und Türkisch verfügbar",
     insurance_note:
       "<strong>Kassenrezept oder Selbstzahler?</strong><br>Wir arbeiten mit allen gesetzlichen Krankenkassen und nehmen auch Privatpatienten sowie Selbstzahler an. Bei Fragen zur Abrechnung beraten wir Sie gerne.",
-    js_validation: "Bitte füllen Sie alle Pflichtfelder aus.",
-    js_sending: "Wird gesendet…",
-    js_success:
-      "✓ Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns innerhalb von 24 Stunden.",
-    js_error_fallback:
-      "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
-    js_network_error:
-      "Verbindungsfehler. Bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
   },
   contact_api: {
     error_invalid_request: "Ungültige Anfrage.",

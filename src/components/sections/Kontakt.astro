@@ -17,65 +17,33 @@ const t = useTranslations(lang).kontakt;
       <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-150 reveal reveal-delay-2">{t.description}</p>
     </header>
     <div class="grid grid-cols-2 gap-12 items-start max-[768px]:grid-cols-1">
-      <form
-        class="bg-surface border border-border rounded-md p-9 shadow-sm reveal"
-        id="contactForm"
-        action="/api/kontakt"
-        method="POST"
-        novalidate
-        aria-label={t.form_aria}
-        data-msg-validation={t.js_validation}
-        data-msg-sending={t.js_sending}
-        data-msg-success={t.js_success}
-        data-msg-error={t.js_error_fallback}
-        data-msg-network={t.js_network_error}
-        data-submit-label={t.submit}
-      >
-        <!-- Honeypot: hidden from real users, catches bots -->
-        <div class="hidden" aria-hidden="true">
-          <label for="website">Website</label>
-          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      <!-- Phone-only appointment CTA -->
+      <div class="bg-surface border border-border rounded-md p-9 shadow-sm reveal flex flex-col gap-7">
+        <!-- Notice -->
+        <div class="bg-primary-light border border-[rgba(42,127,111,.25)] rounded-sm px-5 py-4 flex gap-3 items-start">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p class="text-sm text-primary leading-[1.65]" set:html={t.phone_only_notice} />
         </div>
-        <input type="hidden" name="lang" value={lang} />
 
-        <div class="grid grid-cols-2 gap-4 mb-5 max-[480px]:grid-cols-1">
-          <div class="flex flex-col gap-1.5">
-            <label class="text-sm font-semibold text-text" for="vorname">{t.label_firstname} <span class="text-accent" aria-hidden="true">*</span></label>
-            <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="text" id="vorname" name="vorname" autocomplete="given-name" required placeholder={t.placeholder_firstname} />
+        <!-- Large phone CTA -->
+        <div class="flex flex-col items-center text-center gap-5 py-4">
+          <div class="w-18 h-18 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_8px_24px_rgba(42,127,111,.35)]" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-          <div class="flex flex-col gap-1.5">
-            <label class="text-sm font-semibold text-text" for="nachname">{t.label_lastname} <span class="text-accent" aria-hidden="true">*</span></label>
-            <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="text" id="nachname" name="nachname" autocomplete="family-name" required placeholder={t.placeholder_lastname} />
+          <div>
+            <h3 class="font-display text-[1.5rem] font-semibold text-text mb-1.5">{t.phone_cta_heading}</h3>
+            <p class="text-text-muted text-[.9375rem] leading-[1.65] max-w-xs">{t.phone_cta_sub}</p>
           </div>
+          <a href="tel:+4920334868690" class="btn btn-primary w-full justify-center text-[1.0625rem] py-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0203 – 34 86 86 90
+          </a>
+          <p class="text-sm text-text-muted">{t.phone_cta_hours_label}: <strong class="text-text">{t.info_phone_hours}</strong></p>
         </div>
-        <div class="flex flex-col gap-1.5 mb-5">
-          <label class="text-sm font-semibold text-text" for="email">{t.label_email} <span class="text-accent" aria-hidden="true">*</span></label>
-          <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="email" id="email" name="email" autocomplete="email" required placeholder={t.placeholder_email} />
-        </div>
-        <div class="flex flex-col gap-1.5 mb-5">
-          <label class="text-sm font-semibold text-text" for="telefon">{t.label_phone}</label>
-          <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder={t.placeholder_phone} />
-        </div>
-        <div class="flex flex-col gap-1.5 mb-5">
-          <label class="text-sm font-semibold text-text" for="bereich">{t.label_area}</label>
-          <select class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" id="bereich" name="bereich">
-            <option value="">{t.placeholder_area}</option>
-            {t.areas.map(area => (
-              <option value={area.value}>{area.label}</option>
-            ))}
-          </select>
-        </div>
-        <div class="flex flex-col gap-1.5 mb-5">
-          <label class="text-sm font-semibold text-text" for="nachricht">{t.label_message}</label>
-          <textarea class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none resize-y min-h-30 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" id="nachricht" name="nachricht" placeholder={t.placeholder_message}></textarea>
-        </div>
-        <p class="text-[.8125rem] text-text-muted leading-normal mt-1"><span class="text-accent">*</span> {t.privacy_note}</p>
-        <div aria-live="polite" aria-atomic="true" id="formStatus" class="hidden mt-4 px-4 py-3 rounded-sm text-sm font-medium"></div>
-        <button type="submit" id="submitBtn" class="btn btn-accent w-full mt-6 justify-center">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          <span id="submitBtnText">{t.submit}</span>
-        </button>
-      </form>
+
+        <!-- Bilingual note -->
+        <div class="border-t border-border pt-5 text-[.875rem] text-text-muted text-center leading-[1.65]" set:html={t.phone_cta_bilingual} />
+      </div>
       <div class="flex flex-col gap-5">
         <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start reveal reveal-delay-1">
           <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
@@ -124,64 +92,3 @@ const t = useTranslations(lang).kontakt;
     </div>
   </div>
 </section>
-
-<script>
-  const form = document.getElementById('contactForm') as HTMLFormElement | null;
-  const statusEl = document.getElementById('formStatus') as HTMLElement | null;
-
-  if (form && statusEl) {
-    const msgValidation = form.dataset.msgValidation ?? 'Bitte füllen Sie alle Pflichtfelder aus.';
-    const msgSending = form.dataset.msgSending ?? 'Wird gesendet…';
-    const msgSuccess = form.dataset.msgSuccess ?? '✓ Ihre Anfrage wurde erfolgreich gesendet.';
-    const msgError = form.dataset.msgError ?? 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
-    const msgNetwork = form.dataset.msgNetwork ?? 'Verbindungsfehler. Bitte prüfen Sie Ihre Internetverbindung.';
-    const submitLabel = form.dataset.submitLabel ?? 'Anfrage senden';
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn') as HTMLButtonElement | null;
-      const btnText = document.getElementById('submitBtnText') as HTMLSpanElement | null;
-      if (!btn || !btnText) return;
-
-      const email = (form.querySelector('#email') as HTMLInputElement)?.value.trim();
-      const vorname = (form.querySelector('#vorname') as HTMLInputElement)?.value.trim();
-      const nachname = (form.querySelector('#nachname') as HTMLInputElement)?.value.trim();
-      if (!vorname || !nachname || !email) {
-        statusEl.textContent = msgValidation;
-        statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
-        return;
-      }
-
-      btn.disabled = true;
-      btnText.textContent = msgSending;
-      statusEl.className = 'hidden';
-      statusEl.textContent = '';
-
-      try {
-        const res = await fetch('/api/kontakt', {
-          method: 'POST',
-          body: new FormData(form),
-        });
-        const json = await res.json() as { success: boolean; error?: string };
-
-        if (json.success) {
-          statusEl.textContent = msgSuccess;
-          statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-primary-light text-primary border border-[rgba(42,127,111,.3)]';
-          form.reset();
-          btn.disabled = false;
-          btnText.textContent = submitLabel;
-        } else {
-          statusEl.textContent = json.error ?? msgError;
-          statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
-          btn.disabled = false;
-          btnText.textContent = submitLabel;
-        }
-      } catch {
-        statusEl.textContent = msgNetwork;
-        statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
-        btn.disabled = false;
-        btnText.textContent = submitLabel;
-      }
-    });
-  }
-</script>

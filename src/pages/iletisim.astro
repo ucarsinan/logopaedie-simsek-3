@@ -76,62 +76,35 @@ const localBusinessSchema = {
     <div class="container max-w-4xl py-14">
       <div class="grid md:grid-cols-2 gap-12 items-start">
 
-        <!-- Form -->
-        <form
-          class="bg-surface border border-border rounded-md p-9 shadow-sm"
-          id="contactForm"
-          action="/api/kontakt"
-          method="POST"
-          novalidate
-          aria-label="Randevu Talebi"
-        >
-          <h2 class="font-display text-xl font-semibold text-text mb-6">Randevu Talebi</h2>
-
-          <!-- Honeypot -->
-          <div class="hidden" aria-hidden="true">
-            <label for="website">Website</label>
-            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        <!-- Phone-only appointment CTA -->
+        <div class="bg-surface border border-border rounded-md p-9 shadow-sm flex flex-col gap-7">
+          <!-- Notice -->
+          <div class="bg-primary-light border border-[rgba(42,127,111,.25)] rounded-sm px-5 py-4 flex gap-3 items-start">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p class="text-sm text-primary leading-[1.65]">Randevular yalnızca <strong>telefonla</strong> alınmaktadır. E-posta veya form üzerinden randevu talep edilememektedir.</p>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 mb-5 max-[480px]:grid-cols-1">
-            <div class="flex flex-col gap-1.5">
-              <label class="text-sm font-semibold text-text" for="vorname">Ad <span class="text-accent" aria-hidden="true">*</span></label>
-              <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="text" id="vorname" name="vorname" autocomplete="given-name" required placeholder="Ayşe" />
+          <!-- Large phone CTA -->
+          <div class="flex flex-col items-center text-center gap-5 py-4">
+            <div class="w-18 h-18 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_8px_24px_rgba(42,127,111,.35)]" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-            <div class="flex flex-col gap-1.5">
-              <label class="text-sm font-semibold text-text" for="nachname">Soyad <span class="text-accent" aria-hidden="true">*</span></label>
-              <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="text" id="nachname" name="nachname" autocomplete="family-name" required placeholder="Yılmaz" />
+            <div>
+              <h2 class="font-display text-[1.5rem] font-semibold text-text mb-1.5">Hemen Arayın</h2>
+              <p class="text-text-muted text-[.9375rem] leading-[1.65] max-w-xs">Bizi doğrudan arayın – size yardımcı olmaktan memnuniyet duyarız.</p>
             </div>
+            <a href="tel:+4920334868690" class="btn btn-primary w-full justify-center text-[1.0625rem] py-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              0203 – 34 86 86 90
+            </a>
+            <p class="text-sm text-text-muted">Ulaşılabilirlik: <strong class="text-text">Pzt–Cum 08:00–18:00</strong></p>
           </div>
-          <div class="flex flex-col gap-1.5 mb-5">
-            <label class="text-sm font-semibold text-text" for="email">E-Posta <span class="text-accent" aria-hidden="true">*</span></label>
-            <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="email" id="email" name="email" autocomplete="email" required placeholder="ayse@ornek.de" />
+
+          <!-- Bilingual note -->
+          <div class="border-t border-border pt-5 text-[.875rem] text-text-muted text-center leading-[1.65]">
+            Danışmanlık <strong>Türkçe</strong> olarak da mümkündür.
           </div>
-          <div class="flex flex-col gap-1.5 mb-5">
-            <label class="text-sm font-semibold text-text" for="telefon">Telefon</label>
-            <input class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+49 203 ..." />
-          </div>
-          <div class="flex flex-col gap-1.5 mb-5">
-            <label class="text-sm font-semibold text-text" for="bereich">Terapi Alanı</label>
-            <select class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none min-h-12 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" id="bereich" name="bereich">
-              <option value="">Lütfen seçin...</option>
-              <option value="sprache">Dil Bozuklukları</option>
-              <option value="sprechen">Konuşma Bozuklukları</option>
-              <option value="stimme">Ses Bozuklukları</option>
-              <option value="schlucken">Yutma Bozuklukları (Disfaji)</option>
-              <option value="allgemein">Genel Danışma</option>
-            </select>
-          </div>
-          <div class="flex flex-col gap-1.5 mb-5">
-            <label class="text-sm font-semibold text-text" for="nachricht">Mesajınız</label>
-            <textarea class="w-full px-4 py-3 border-[1.5px] border-border rounded-sm text-[.9375rem] text-text bg-bg outline-none resize-y min-h-30 transition-[border-color,box-shadow] duration-200 focus:border-primary focus:shadow-[0_0_0_3px_rgba(42,127,111,.12)]" id="nachricht" name="nachricht" placeholder="Talebinizi kısaca açıklayın – en kısa sürede size geri döneceğiz."></textarea>
-          </div>
-          <p class="text-[.8125rem] text-text-muted leading-normal mt-1"><span class="text-accent">*</span> Zorunlu alanlar. Bilgileriniz gizli tutulur ve üçüncü şahıslarla paylaşılmaz.</p>
-          <div aria-live="polite" aria-atomic="true" id="formStatus" class="hidden mt-4 px-4 py-3 rounded-sm text-sm font-medium"></div>
-          <button type="submit" id="submitBtn" class="btn btn-accent w-full mt-6 justify-center">
-            Talep Gönder
-          </button>
-        </form>
+        </div>
 
         <!-- Contact info + directions -->
         <div class="flex flex-col gap-5">
@@ -152,7 +125,7 @@ const localBusinessSchema = {
             <div>
               <div class="text-[.8rem] font-bold tracking-[.06em] uppercase text-text-light mb-1">E-Posta</div>
               <div class="text-[.9375rem] font-semibold text-text"><a class="text-primary hover:underline" href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a></div>
-              <div class="text-[.8125rem] text-text-muted mt-0.5">24 saat içinde yanıt veriyoruz</div>
+              <div class="text-[.8125rem] text-text-muted mt-0.5">Genel sorular için · Randevu alınmaz</div>
             </div>
           </div>
           <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start">
@@ -195,53 +168,3 @@ const localBusinessSchema = {
   </main>
   <Footer lang="tr" />
 </Layout>
-
-<script>
-  const form = document.getElementById('contactForm') as HTMLFormElement | null;
-  const statusEl = document.getElementById('formStatus') as HTMLElement | null;
-
-  if (form && statusEl) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn') as HTMLButtonElement | null;
-      if (!btn) return;
-
-      const email = (form.querySelector('#email') as HTMLInputElement)?.value.trim();
-      const vorname = (form.querySelector('#vorname') as HTMLInputElement)?.value.trim();
-      const nachname = (form.querySelector('#nachname') as HTMLInputElement)?.value.trim();
-      if (!vorname || !nachname || !email) {
-        statusEl.textContent = 'Lütfen tüm zorunlu alanları doldurun.';
-        statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
-        return;
-      }
-
-      btn.disabled = true;
-      btn.textContent = 'Gönderiliyor…';
-      statusEl.className = 'hidden';
-      statusEl.textContent = '';
-
-      try {
-        const res = await fetch('/api/kontakt', {
-          method: 'POST',
-          body: new FormData(form),
-        });
-        const json = await res.json() as { success: boolean; error?: string };
-
-        if (json.success) {
-          statusEl.textContent = '✓ Talebiniz başarıyla iletildi. 24 saat içinde size geri döneceğiz.';
-          statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-primary-light text-primary border border-[rgba(42,127,111,.3)]';
-          form.reset();
-        } else {
-          statusEl.textContent = json.error ?? 'Bir hata oluştu. Lütfen tekrar deneyin.';
-          statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
-        }
-      } catch {
-        statusEl.textContent = 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.';
-        statusEl.className = 'block mt-4 px-4 py-3 rounded-sm text-sm font-medium bg-accent-light text-accent border border-[rgba(196,113,79,.3)]';
-      }
-
-      btn.disabled = false;
-      btn.textContent = 'Talep Gönder';
-    });
-  }
-</script>

@@ -255,38 +255,21 @@ export const tr: Translations = {
   },
   kontakt: {
     section_label: "İletişim",
-    heading: "Randevu Talebi",
+    heading: "Randevu Al",
     description:
-      "Bizimle iletişime geçin – size veya çocuğunuza en uygun terapi yerini birlikte bulalım.",
-    form_id: "contactFormTR",
-    form_aria: "Randevu Talebi",
-    label_firstname: "Ad",
-    label_lastname: "Soyad",
-    label_email: "E-Posta",
-    label_phone: "Telefon",
-    label_area: "Terapi Alanı",
-    label_message: "Mesajınız",
-    placeholder_firstname: "Ali",
-    placeholder_lastname: "Yılmaz",
-    placeholder_email: "ali@ornek.de",
-    placeholder_phone: "+49 203 ...",
-    placeholder_area: "Lütfen seçin...",
-    placeholder_message:
-      "Konunuzu kısaca açıklayın – en kısa sürede size geri döneceğiz.",
-    privacy_note:
-      "Zorunlu alanlar. Bilgileriniz gizlilik içinde işlenir ve üçüncü kişilerle paylaşılmaz.",
-    submit: "Talebi Gönder",
-    areas: [
-      { value: "sprache", label: "Dil Bozuklukları" },
-      { value: "sprechen", label: "Konuşma Bozuklukları" },
-      { value: "stimme", label: "Ses Bozuklukları" },
-      { value: "schlucken", label: "Yutma Bozuklukları (Disfaji)" },
-      { value: "allgemein", label: "Genel Danışmanlık" },
-    ],
+      "Randevular yalnızca telefonla alınmaktadır. Hemen arayın – size veya çocuğunuza en uygun terapi zamanını birlikte bulalım.",
+    phone_only_notice:
+      "Randevular yalnızca <strong>telefonla</strong> alınmaktadır. E-posta veya form üzerinden randevu talep edilememektedir.",
+    phone_cta_heading: "Hemen Arayın",
+    phone_cta_sub:
+      "Bizi doğrudan arayın – size yardımcı olmaktan memnuniyet duyarız.",
+    phone_cta_hours_label: "Ulaşılabilirlik",
+    phone_cta_bilingual:
+      "Danışmanlık <strong>Türkçe</strong> olarak da mümkündür.",
     info_phone_label: "Telefon",
     info_phone_hours: "Pzt–Cum 08:00–18:00",
     info_email_label: "E-Posta",
-    info_email_hours: "24 saat içinde yanıt veriyoruz",
+    info_email_hours: "Genel sorular için · Randevu alınmaz",
     info_address_label: "Adres",
     info_address_sub: "3. Kat · Asansör mevcut · Merkez'e 2 dk.",
     info_lang_label: "Diller",
@@ -294,13 +277,6 @@ export const tr: Translations = {
     info_lang_sub: "Her iki dilde terapi mevcuttur",
     insurance_note:
       "<strong>Sigorta kapsamı mı, bireysel ödeme mi?</strong><br>Tüm yasal sağlık sigortalarıyla çalışıyor, özel sigortalıları ve bireysel ödemeli hastaları da kabul ediyoruz. Ödeme ve sigorta konusundaki tüm sorularınızı yanıtlamaktan memnuniyet duyarız.",
-    js_validation: "Lütfen tüm zorunlu alanları doldurun.",
-    js_sending: "Gönderiliyor…",
-    js_success:
-      "✓ Talebiniz başarıyla iletildi. 24 saat içinde size geri döneceğiz.",
-    js_error_fallback: "Bir hata oluştu. Lütfen tekrar deneyin.",
-    js_network_error:
-      "Bağlantı hatası. İnternet bağlantınızı kontrol edip tekrar deneyin.",
   },
   contact_api: {
     error_invalid_request: "Geçersiz istek.",

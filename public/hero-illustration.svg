@@ -1,70 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none">
-  <!-- Soft background blobs -->
-  <circle cx="245" cy="245" r="210" fill="#2A7F6F" opacity="0.05"/>
-  <circle cx="320" cy="160" r="120" fill="#C4714F" opacity="0.04"/>
 
-  <!-- Central source – abstract pulsing circles -->
-  <circle cx="268" cy="252" r="60" fill="#2A7F6F" opacity="0.07"/>
-  <circle cx="268" cy="252" r="38" fill="#2A7F6F" opacity="0.12"/>
-  <circle cx="268" cy="252" r="20" fill="#2A7F6F" opacity="0.55"/>
-  <circle cx="268" cy="252" r="9"  fill="#2A7F6F" opacity="0.9"/>
+  <!-- Soft background washes -->
+  <circle cx="240" cy="230" r="205" fill="#2A7F6F" opacity="0.04"/>
+  <circle cx="145" cy="320" r="130" fill="#C4714F" opacity="0.05"/>
 
-  <!-- Sound waves radiating left -->
-  <path d="M 218 220 Q 186 236 186 252 Q 186 268 218 284" stroke="#2A7F6F" stroke-width="4"   stroke-linecap="round" opacity="0.55"/>
-  <path d="M 198 204 Q 155 225 155 252 Q 155 279 198 300" stroke="#2A7F6F" stroke-width="3.5" stroke-linecap="round" opacity="0.38"/>
-  <path d="M 178 188 Q 124 214 124 252 Q 124 290 178 316" stroke="#2A7F6F" stroke-width="3"   stroke-linecap="round" opacity="0.22"/>
-  <path d="M 158 172 Q  93 203  93 252 Q  93 301 158 332" stroke="#2A7F6F" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <!-- ═══ THERAPEUTIN (rechts, teal) ═══ -->
+  <!-- Kopf -->
+  <circle cx="354" cy="136" r="40" fill="#2A7F6F" opacity="0.18"/>
+  <!-- Haare (oben) -->
+  <path d="M318 126 Q354 95 390 126" fill="#2A7F6F" opacity="0.38"/>
+  <!-- Rumpf / Kittel -->
+  <path d="M322 184 Q322 170 354 170 Q386 170 386 184 L392 274 Q392 288 354 288 Q316 288 312 274 Z" fill="#2A7F6F" opacity="0.18"/>
+  <!-- Kragen-Detail -->
+  <path d="M340 170 L354 192 L368 170" fill="white" opacity="0.55"/>
+  <!-- Linker Arm (zum Kind gerichtet) -->
+  <path d="M322 202 Q296 225 285 255" stroke="#2A7F6F" stroke-width="10" stroke-linecap="round" opacity="0.20"/>
+  <!-- Rechter Arm (hält Klemmbrett) -->
+  <path d="M386 202 Q412 218 418 250" stroke="#2A7F6F" stroke-width="10" stroke-linecap="round" opacity="0.20"/>
+  <!-- Klemmbrett -->
+  <rect x="410" y="244" width="38" height="50" rx="5" fill="white" stroke="#2A7F6F" stroke-width="1.8" opacity="0.65"/>
+  <rect x="424" y="240" width="10" height="11" rx="4" fill="#2A7F6F" opacity="0.45"/>
+  <rect x="418" y="260" width="22" height="4" rx="2" fill="#2A7F6F" opacity="0.30"/>
+  <rect x="418" y="269" width="16" height="4" rx="2" fill="#2A7F6F" opacity="0.22"/>
+  <rect x="418" y="278" width="20" height="4" rx="2" fill="#2A7F6F" opacity="0.18"/>
+  <!-- Beine -->
+  <rect x="328" y="282" width="20" height="54" rx="10" fill="#2A7F6F" opacity="0.15"/>
+  <rect x="362" y="282" width="20" height="54" rx="10" fill="#2A7F6F" opacity="0.15"/>
 
-  <!-- Large speech bubble – top left -->
-  <rect x="22" y="62" width="182" height="114" rx="20" fill="white" stroke="#2A7F6F" stroke-width="2.5" opacity="0.95"/>
-  <!-- Bubble tail -->
-  <path d="M 54 176 L 42 206 L 74 176 Z" fill="white" stroke="#2A7F6F" stroke-width="2.5" stroke-linejoin="round"/>
-  <!-- Text lines inside bubble -->
-  <rect x="44" y="91"  width="96"  height="8" rx="4" fill="#2A7F6F" opacity="0.42"/>
-  <rect x="44" y="108" width="130" height="8" rx="4" fill="#2A7F6F" opacity="0.27"/>
-  <rect x="44" y="125" width="80"  height="8" rx="4" fill="#2A7F6F" opacity="0.20"/>
-  <rect x="44" y="142" width="108" height="8" rx="4" fill="#2A7F6F" opacity="0.15"/>
+  <!-- ═══ KIND (links, terracotta) ═══ -->
+  <!-- Kopf -->
+  <circle cx="126" cy="198" r="31" fill="#C4714F" opacity="0.20"/>
+  <!-- Haare (gewellt) -->
+  <path d="M100 192 Q108 166 126 163 Q144 166 152 192" fill="#C4714F" opacity="0.42"/>
+  <!-- Rumpf -->
+  <path d="M103 234 Q103 222 126 222 Q149 222 149 234 L154 304 Q154 316 126 316 Q98 316 100 304 Z" fill="#C4714F" opacity="0.18"/>
+  <!-- Linker Arm (angehoben – Kind spricht/gestikuliert) -->
+  <path d="M103 250 Q82 226 76 208" stroke="#C4714F" stroke-width="8" stroke-linecap="round" opacity="0.22"/>
+  <!-- Rechter Arm -->
+  <path d="M149 250 Q170 265 178 278" stroke="#C4714F" stroke-width="8" stroke-linecap="round" opacity="0.22"/>
+  <!-- Beine -->
+  <rect x="110" y="308" width="16" height="46" rx="8" fill="#C4714F" opacity="0.15"/>
+  <rect x="134" y="308" width="16" height="46" rx="8" fill="#C4714F" opacity="0.15"/>
 
-  <!-- Medium speech bubble – right (accent) -->
-  <rect x="318" y="108" width="148" height="92" rx="17" fill="none" stroke="#C4714F" stroke-width="2" opacity="0.35"/>
-  <rect x="318" y="108" width="148" height="92" rx="17" fill="#C4714F" opacity="0.07"/>
-  <path d="M 326 200 L 312 228 L 344 200 Z" fill="#C4714F" opacity="0.12"/>
-  <!-- Three dots inside -->
-  <circle cx="360" cy="154" r="8" fill="#C4714F" opacity="0.38"/>
-  <circle cx="385" cy="154" r="8" fill="#C4714F" opacity="0.38"/>
-  <circle cx="410" cy="154" r="8" fill="#C4714F" opacity="0.38"/>
+  <!-- ═══ SPRACHTHERAPIE-ELEMENTE ═══ -->
 
-  <!-- Small speech bubble – bottom left -->
-  <rect x="48" y="338" width="118" height="74" rx="15" fill="none" stroke="#C4714F" stroke-width="1.5" opacity="0.28"/>
-  <rect x="48" y="338" width="118" height="74" rx="15" fill="#C4714F" opacity="0.05"/>
-  <path d="M 128 412 L 148 434 L 140 412 Z" fill="#C4714F" opacity="0.10"/>
-  <!-- Lines inside -->
-  <rect x="66" y="360" width="82" height="7" rx="3.5" fill="#C4714F" opacity="0.3"/>
-  <rect x="66" y="376" width="60" height="7" rx="3.5" fill="#C4714F" opacity="0.22"/>
-  <rect x="66" y="392" width="72" height="7" rx="3.5" fill="#C4714F" opacity="0.18"/>
+  <!-- Haupt-Sprechblase (vom Kind, Audio-Waveform drin) -->
+  <rect x="152" y="138" width="164" height="90" rx="22" fill="white" stroke="#C4714F" stroke-width="2.2" opacity="0.90"/>
+  <!-- Schwanz zum Kind -->
+  <path d="M164 228 L148 258 L192 228 Z" fill="white" stroke="#C4714F" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Audio-Waveform (Sprach-Visualisierung) -->
+  <rect x="174" y="161" width="8" height="46" rx="4" fill="#C4714F" opacity="0.38"/>
+  <rect x="189" y="152" width="8" height="64" rx="4" fill="#C4714F" opacity="0.55"/>
+  <rect x="204" y="157" width="8" height="54" rx="4" fill="#C4714F" opacity="0.47"/>
+  <rect x="219" y="164" width="8" height="40" rx="4" fill="#C4714F" opacity="0.36"/>
+  <rect x="234" y="154" width="8" height="60" rx="4" fill="#C4714F" opacity="0.52"/>
+  <rect x="249" y="160" width="8" height="48" rx="4" fill="#C4714F" opacity="0.42"/>
+  <rect x="264" y="165" width="8" height="38" rx="4" fill="#C4714F" opacity="0.34"/>
+  <rect x="279" y="155" width="8" height="58" rx="4" fill="#C4714F" opacity="0.48"/>
 
-  <!-- Connection dots (communication / understanding) -->
-  <circle cx="174" cy="355" r="5.5" fill="#C4714F" opacity="0.32"/>
-  <circle cx="196" cy="374" r="4"   fill="#C4714F" opacity="0.24"/>
-  <circle cx="220" cy="390" r="6"   fill="#C4714F" opacity="0.18"/>
-  <circle cx="245" cy="402" r="4"   fill="#2A7F6F" opacity="0.2"/>
+  <!-- Therapeutin-Notizblase (oben, Zuhören + Dokumentieren) -->
+  <rect x="200" y="72" width="128" height="60" rx="18" fill="white" stroke="#2A7F6F" stroke-width="2" opacity="0.85"/>
+  <!-- Schwanz zur Therapeutin -->
+  <path d="M318 114 L340 136 L306 114 Z" fill="white" stroke="#2A7F6F" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Zeilen (Therapeutin macht Notizen) -->
+  <rect x="220" y="92" width="70" height="6" rx="3" fill="#2A7F6F" opacity="0.38"/>
+  <rect x="220" y="104" width="54" height="6" rx="3" fill="#2A7F6F" opacity="0.26"/>
+  <rect x="220" y="116" width="62" height="6" rx="3" fill="#2A7F6F" opacity="0.20"/>
 
-  <!-- Decorative corner dots -->
-  <circle cx="424" cy="276" r="7"  fill="#2A7F6F" opacity="0.2"/>
-  <circle cx="446" cy="308" r="4.5" fill="#C4714F" opacity="0.2"/>
-  <circle cx="432" cy="344" r="6"  fill="#2A7F6F" opacity="0.15"/>
-  <circle cx="410" cy="372" r="4"  fill="#C4714F" opacity="0.18"/>
+  <!-- Verbindungslinie Therapeutin ↔ Kind -->
+  <path d="M152 286 Q240 265 320 275" stroke="#2A7F6F" stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round" opacity="0.18"/>
 
-  <!-- Top right sparkle dots -->
-  <circle cx="382" cy="64"  r="12" fill="#2A7F6F" opacity="0.11"/>
-  <circle cx="414" cy="82"  r="7"  fill="#C4714F" opacity="0.15"/>
-  <circle cx="400" cy="108" r="5"  fill="#2A7F6F" opacity="0.10"/>
+  <!-- ═══ FORTSCHRITT / VERTRAUEN (unten) ═══ -->
+  <!-- Checkmark-Badge Mitte -->
+  <circle cx="240" cy="410" r="30" fill="#2A7F6F" opacity="0.09"/>
+  <circle cx="240" cy="410" r="21" fill="#2A7F6F" opacity="0.14"/>
+  <path d="M228 410 L237 419 L254 399" stroke="#2A7F6F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
 
-  <!-- Star sparkle (top right area) -->
-  <path d="M 452 174 L 456 186 L 468 186 L 458 194 L 462 206 L 452 198 L 442 206 L 446 194 L 436 186 L 448 186 Z"
-        fill="#C4714F" opacity="0.18"/>
+  <!-- Sterne links und rechts -->
+  <path d="M154 408 L157 418 L167 418 L159 424 L162 434 L154 428 L146 434 L149 424 L141 418 L151 418 Z" fill="#C4714F" opacity="0.28"/>
+  <path d="M328 408 L331 418 L341 418 L333 424 L336 434 L328 428 L320 434 L323 424 L315 418 L325 418 Z" fill="#C4714F" opacity="0.28"/>
 
-  <!-- Bottom right heart (warmth) -->
-  <path d="M 400 394 C 400 382 388 370 376 380 C 364 370 352 382 352 394 C 352 410 376 428 376 428 C 376 428 400 410 400 394 Z"
-        fill="#C4714F" opacity="0.16"/>
+  <!-- Label-Balken unter Badge -->
+  <rect x="208" y="446" width="64" height="7" rx="3.5" fill="#2A7F6F" opacity="0.18"/>
+
+  <!-- ═══ DEKORATIVE AKZENTE ═══ -->
+  <!-- Oben links -->
+  <path d="M48 78 L48 90 M42 84 L54 84" stroke="#2A7F6F" stroke-width="2.8" stroke-linecap="round" opacity="0.28"/>
+  <path d="M62 60 L62 68 M58 64 L66 64" stroke="#C4714F" stroke-width="2" stroke-linecap="round" opacity="0.22"/>
+
+  <!-- Oben rechts -->
+  <path d="M436 68 L436 80 M430 74 L442 74" stroke="#C4714F" stroke-width="2.5" stroke-linecap="round" opacity="0.26"/>
+  <circle cx="454" cy="106" r="8" fill="#2A7F6F" opacity="0.13"/>
+  <circle cx="462" cy="128" r="5" fill="#C4714F" opacity="0.15"/>
+
+  <!-- Unten links -->
+  <circle cx="50" cy="344" r="6.5" fill="#C4714F" opacity="0.18"/>
+  <circle cx="66" cy="368" r="4.5" fill="#2A7F6F" opacity="0.15"/>
+  <circle cx="44" cy="385" r="3.5" fill="#C4714F" opacity="0.12"/>
+
+  <!-- Unten rechts -->
+  <circle cx="430" cy="348" r="5.5" fill="#2A7F6F" opacity="0.18"/>
+  <circle cx="448" cy="370" r="3.5" fill="#C4714F" opacity="0.15"/>
+  <circle cx="434" cy="388" r="6" fill="#2A7F6F" opacity="0.12"/>
+
 </svg>
