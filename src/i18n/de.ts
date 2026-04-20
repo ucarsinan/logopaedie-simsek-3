@@ -29,6 +29,7 @@ export const de = {
     nav_label: "Footer-Navigation",
     links: {
       services: { label: "Therapieangebot", href: "/therapieangebot/" },
+      tuerkische: { label: "Türkische Logopädie", href: "/tuerkische-logopaedie/" },
       insurance: { label: "Kostenübernahme", href: "/kostenuebernahme/" },
       team: { label: "Team", href: "/team/" },
       karriere: { label: "Karriere", href: "/karriere/" },
