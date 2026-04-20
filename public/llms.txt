@@ -6,12 +6,12 @@
 
 ## Leistungen (Deutsch)
 
-- [Sprachstörungen – Sprachtherapie](/leistungen/sprachstoerungen/)
-- [Sprechstörungen – Sprechtherapie](/leistungen/sprechstoerungen/)
-- [Stimmtherapie – ISTP, Lax Vox](/leistungen/stimmtherapie/)
-- [Schluckstörungen – Dysphagietherapie](/leistungen/schluckstoerungen/)
-- [Therapie für Kinder und Jugendliche](/leistungen/kinder-und-jugendliche/)
-- [Therapie für Erwachsene](/leistungen/erwachsene/)
+- [Sprachstörungen – Sprachtherapie](/therapieangebot/sprachstoerungen/)
+- [Sprechstörungen – Sprechtherapie](/therapieangebot/sprechstoerungen/)
+- [Stimmtherapie – ISTP, Lax Vox](/therapieangebot/stimmtherapie/)
+- [Schluckstörungen – Dysphagietherapie](/therapieangebot/schluckstoerungen/)
+- [Therapie für Kinder und Jugendliche](/therapieangebot/kinder-und-jugendliche/)
+- [Therapie für Erwachsene](/therapieangebot/erwachsene/)
 
 ## Türkische Logopädie / Türkçe Logopedi
 
@@ -24,6 +24,23 @@
 
 - [Türkçe ana sayfa](/anasayfa/)
 - [Türkçe hizmetler](/terapi/)
+- [Dil Bozuklukları](/terapi/dil-bozuklugu/)
+- [Konuşma Bozuklukları](/terapi/konusma-bozuklugu/)
+- [Ses Terapisi](/terapi/ses-terapisi/)
+- [Yutma Bozuklukları](/terapi/yutma-bozuklugu/)
+
+## Spezialisierte Angebote
+
+- [Logopädische Frühförderung Duisburg](/fruehfoerderung-duisburg/)
+- [Logopädie Hausbesuche Duisburg](/hausbesuche-duisburg/)
+
+## Praxis-Informationen
+
+- [Logopädie Duisburg – Praxisinfo](/logopaedie-duisburg/)
+- [Kosten & Kostenübernahme durch Krankenkassen](/kostenuebernahme/)
+- [Team – Unsere Therapeutinnen](/team/)
+- [Kontakt & Anfahrt](/kontakt/)
+- [Karriere – Offene Stellen](/karriere/)
 
 ## Standort & Kontakt
 
@@ -32,13 +49,6 @@
 - Telefon: 0203 34 86 86 90
 - E-Mail: info@logopaedie-simsek.de
 - Öffnungszeiten: Montag–Freitag 08:00–18:00 Uhr (nach Vereinbarung)
-
-## Praxis-Informationen
-
-- [Logopädie Duisburg – Praxisinfo](/logopaedie-duisburg/)
-- [Kosten & Kostenübernahme durch Krankenkassen](/kostenuebernahme/)
-- [Kontakt & Anfahrt](/kontakt/)
-- [Team](/team/)
 
 ## Über die Praxis
 

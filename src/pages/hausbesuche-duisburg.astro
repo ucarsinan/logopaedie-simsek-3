@@ -1,0 +1,125 @@
+---
+import ServicePage from '../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Logopädie Hausbesuche Duisburg – Therapie zu Hause",
+  "description": "Logopädische Hausbesuche in Duisburg – Sprachtherapie für mobilitätseingeschränkte Patienten, Senioren und Pflegebedürftige im gewohnten Umfeld.",
+  "url": `${siteUrl}/hausbesuche-duisburg`,
+  "about": { "@type": "MedicalCondition", "name": "Logopädische Therapie" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Hausbesuche Duisburg", "item": `${siteUrl}/hausbesuche-duisburg` }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "In welchen Stadtteilen von Duisburg bieten Sie Hausbesuche an?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wir bieten Hausbesuche in Duisburg und der näheren Umgebung an – darunter Duisburg-Mitte, Duisburg-West, Rheinhausen, Hamborn, Marxloh, Meiderich und weitere Stadtteile. Bitte sprechen Sie uns direkt an, um Ihren Standort zu besprechen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten für Hausbesuche?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Hausbesuche sind bei medizinischer Notwendigkeit (z. B. eingeschränkte Mobilität) kassenfinanzierbar. Voraussetzung ist eine ärztliche Heilmittelverordnung mit dem Hinweis 'Hausbesuch'. Bitte klären Sie dies mit Ihrem Arzt oder kontaktieren Sie uns." }
+    },
+    {
+      "@type": "Question",
+      "name": "Für wen sind logopädische Hausbesuche besonders geeignet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hausbesuche sind geeignet für mobilitätseingeschränkte Patienten nach Schlaganfall oder bei neurologischen Erkrankungen, für Pflegebedürftige in häuslicher oder stationärer Pflege, für Senioren mit eingeschränkter Mobilität sowie für Kinder, bei denen die Therapie im vertrauten Lebensumfeld sinnvoller ist." }
+    }
+  ]
+};
+---
+
+<ServicePage
+  title="Logopädie Hausbesuche Duisburg – Therapie bei Ihnen zu Hause"
+  description="Logopädische Hausbesuche in Duisburg: Sprachtherapie für mobilitätseingeschränkte Patienten, Senioren und Pflegebedürftige. Zweisprachig Deutsch & Türkisch."
+  serviceTitle="Logopädie Hausbesuche in Duisburg"
+  breadcrumbLabel="Hausbesuche Duisburg"
+  tags={['Hausbesuche', 'Mobil', 'Senioren', 'Neurologisch']}
+  additionalSchemas={[schema, faqSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/hausbesuche-duisburg` },
+    { lang: 'x-default', url: `${siteUrl}/hausbesuche-duisburg` },
+  ]}
+  relatedServices={[
+    { title: 'Therapie für Erwachsene', href: '/therapieangebot/erwachsene/', description: 'Neurolog. Erkrankungen, Stimmbelastung, Schluckprobleme' },
+    { title: 'Schluckstörungen (Dysphagie)', href: '/therapieangebot/schluckstoerungen/', description: 'Dysphagietherapie nach Schlaganfall und neurologischen Erkrankungen' },
+    { title: 'Sprachstörungen (Aphasie)', href: '/therapieangebot/sprachstoerungen/', description: 'Aphasietherapie nach Schlaganfall oder Schädel-Hirn-Trauma' },
+  ]}
+>
+  <h2>Logopädie zu Hause – wenn der Weg in die Praxis nicht möglich ist</h2>
+  <p>
+    Manche Patientinnen und Patienten können unsere Praxis in Duisburg-Mitte nicht oder nur
+    schwer aufsuchen – etwa nach einem Schlaganfall, bei fortgeschrittenen neurologischen
+    Erkrankungen wie Parkinson oder ALS, bei eingeschränkter Mobilität oder in der häuslichen
+    Pflege. In diesen Fällen kommen wir zu Ihnen.
+  </p>
+  <p>
+    Ein weiterer Vorteil: Gerade bei Kindern und Senioren kann die Therapie im vertrauten
+    Lebensumfeld <strong>therapeutisch wertvoller</strong> sein als in der Praxis – das
+    Gelernte lässt sich direkt in den Alltag einbetten.
+  </p>
+
+  <h2>Für wen sind Hausbesuche geeignet?</h2>
+  <ul>
+    <li><strong>Patienten nach Schlaganfall</strong> mit Aphasie, Dysarthrie oder Dysphagie, die noch nicht mobil genug für Praxisbesuche sind</li>
+    <li><strong>Menschen mit neurologischen Erkrankungen</strong> (Parkinson, Multiple Sklerose, ALS, Demenz)</li>
+    <li><strong>Pflegebedürftige</strong> in häuslicher Pflege oder Pflegeeinrichtungen in Duisburg</li>
+    <li><strong>Senioren</strong> mit eingeschränkter Mobilität oder ohne Fahrmöglichkeit</li>
+    <li><strong>Kinder</strong>, bei denen die Therapie im häuslichen Umfeld sinnvoller ist</li>
+    <li><strong>Patienten mit Schluckstörungen (Dysphagie)</strong>, bei denen eine Therapie im Alltagskontext wichtig ist</li>
+  </ul>
+
+  <h2>Was wird beim Hausbesuch therapiert?</h2>
+  <p>
+    Logopädische Hausbesuche umfassen das gleiche Spektrum wie die Praxistherapie:
+  </p>
+  <ul>
+    <li><a href="/therapieangebot/sprachstoerungen/"><strong>Aphasie-Therapie</strong></a> – Sprachfähigkeiten nach Schlaganfall oder Hirnverletzung zurückgewinnen</li>
+    <li><a href="/therapieangebot/sprechstoerungen/"><strong>Dysarthrie-Therapie</strong></a> – Verständlichkeit beim Sprechen verbessern</li>
+    <li><a href="/therapieangebot/schluckstoerungen/"><strong>Dysphagie-Therapie</strong></a> – Sichere Nahrungsaufnahme fördern und Aspirationsrisiko senken</li>
+    <li><a href="/therapieangebot/stimmtherapie/"><strong>Stimmtherapie</strong></a> – Stimmklang und -ausdauer verbessern</li>
+    <li><strong>Angehörigenberatung</strong> – Pflegende anleiten, die Therapie im Alltag zu unterstützen</li>
+  </ul>
+
+  <h2>Zweisprachige Hausbesuche auf Deutsch und Türkisch</h2>
+  <p>
+    Viele ältere türkischsprachige Patienten in Duisburg sprechen vorwiegend Türkisch – besonders
+    nach einem Schlaganfall, wenn die zuerst erworbene Sprache dominanter wird. Wir können
+    Hausbesuche und alle therapeutischen Leistungen vollständig auf <strong>Türkisch und Deutsch</strong>
+    anbieten. Das ist im Ruhrgebiet außergewöhnlich und macht echten Unterschied im Therapieerfolg.
+  </p>
+
+  <h2>Kosten & Kassenabrechnung</h2>
+  <p>
+    Hausbesuche können über eine ärztliche Heilmittelverordnung kassenfinanziert werden.
+    Voraussetzung ist, dass der verordnende Arzt auf der Verordnung den Hausbesuch vermerkt
+    und die medizinische Notwendigkeit begründet. Gesetzliche und private Krankenkassen
+    übernehmen die Kosten bei vorliegender Verordnung.
+  </p>
+  <p>
+    Bitte klären Sie die Verordnung vorab mit Ihrem Haus- oder Facharzt. Wir unterstützen
+    Sie gerne dabei. Mehr Informationen: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+  </p>
+
+  <div class="info-box">
+    <p>
+      <strong>Hausbesuche in Duisburg anfragen:</strong> Rufen Sie uns unter
+      <a href="tel:+4920334868690">0203 34 86 86 90</a> an. Wir klären gemeinsam,
+      ob ein Hausbesuch für Sie sinnvoll ist, und besprechen das weitere Vorgehen.
+      Beratung auch auf Türkisch möglich.
+    </p>
+  </div>
+</ServicePage>

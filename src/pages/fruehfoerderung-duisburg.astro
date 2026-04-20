@@ -1,0 +1,133 @@
+---
+import ServicePage from '../layouts/ServicePage.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Logopädische Frühförderung Duisburg – Sprachtherapie für Kleinkinder",
+  "description": "Logopädische Frühförderung in Duisburg für Kinder ab dem Säuglingsalter. Früherkennung und Behandlung von Sprachentwicklungsverzögerungen. Zweisprachig DE/TR.",
+  "url": `${siteUrl}/fruehfoerderung-duisburg`,
+  "about": { "@type": "MedicalCondition", "name": "Sprachentwicklungsverzögerung" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+      { "@type": "ListItem", "position": 2, "name": "Frühförderung Duisburg", "item": `${siteUrl}/fruehfoerderung-duisburg` }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ab welchem Alter ist logopädische Frühförderung sinnvoll?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Logopädische Frühförderung ist ab dem Säuglingsalter möglich – auch bei Saugstörungen von Neugeborenen. Bei Sprachentwicklungsverzögerungen empfehlen wir eine Abklärung, sobald ein Kind mit 18–24 Monaten noch keine ersten Wörter spricht oder mit 3 Jahren noch keine Zwei-Wort-Sätze bildet." }
+    },
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten für Frühförderung?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Logopädische Frühförderung ist ein Heilmittel und wird bei vorliegender ärztlicher Heilmittelverordnung von gesetzlichen und privaten Krankenkassen übernommen. Kinder unter 18 Jahren sind vollständig von Zuzahlungen befreit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Welcher Arzt kann Frühförderung verordnen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kinderärzte, Allgemeinmediziner, Kinderpsychiater, Neurologen und Phoniatriker können eine Heilmittelverordnung für logopädische Frühförderung ausstellen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wächst sich eine Sprachentwicklungsverzögerung von selbst aus?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Manche sogenannten 'Late Talker' holen den Rückstand ohne Therapie auf. Ein Teil der Kinder entwickelt jedoch ohne Förderung anhaltende Sprachprobleme, die sich auf die schulische Entwicklung auswirken. Eine frühzeitige logopädische Abklärung gibt Sicherheit und verschafft wertvolle Zeit." }
+    }
+  ]
+};
+---
+
+<ServicePage
+  title="Logopädische Frühförderung Duisburg – Sprachtherapie für Kleinkinder"
+  description="Logopädische Frühförderung in Duisburg ab dem Säuglingsalter. Früherkennung und Therapie von Sprachentwicklungsverzögerungen für Kinder bis 6 Jahre. Zweisprachig DE/TR."
+  serviceTitle="Frühförderung Duisburg – Logopädie für Kleinkinder"
+  breadcrumbLabel="Frühförderung Duisburg"
+  tags={['Kleinkinder', 'Frühförderung', 'Sprachentwicklung', 'DE/TR']}
+  additionalSchemas={[schema, faqSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/fruehfoerderung-duisburg` },
+    { lang: 'x-default', url: `${siteUrl}/fruehfoerderung-duisburg` },
+  ]}
+  relatedServices={[
+    { title: 'Sprachstörungen', href: '/therapieangebot/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Frühförderung' },
+    { title: 'Therapie für Kinder', href: '/therapieangebot/kinder-und-jugendliche/', description: 'Das vollständige Therapieangebot für Kinder und Jugendliche' },
+    { title: 'Türkische Logopädie', href: '/tuerkische-logopaedie/', description: 'Zweisprachige Therapie auf Deutsch und Türkisch' },
+  ]}
+>
+  <h2>Was ist logopädische Frühförderung?</h2>
+  <p>
+    Logopädische Frühförderung bezeichnet die frühzeitige Erkennung und Behandlung von
+    Störungen in der Sprachentwicklung bei Säuglingen, Kleinkindern und Vorschulkindern.
+    Das Ziel: Sprachliche Grundlagen legen, bevor sich Verzögerungen verfestigen und den
+    Schuleintritt, das Lernen und die soziale Teilhabe beeinträchtigen.
+  </p>
+  <p>
+    Das Gehirn ist in den ersten Lebensjahren besonders plastisch – Veränderungen und
+    Förderimpulse wirken in diesem Fenster deutlich effektiver als zu einem späteren Zeitpunkt.
+    <strong>Früh zu handeln lohnt sich.</strong>
+  </p>
+
+  <h2>Wann sollte mein Kind zur Frühförderung?</h2>
+  <p>Die folgenden Zeichen können auf eine Sprachentwicklungsverzögerung hinweisen:</p>
+  <ul>
+    <li><strong>Mit 12 Monaten:</strong> Kein Zeigen, kein Winken, kein "Mama" oder "Papa"</li>
+    <li><strong>Mit 18 Monaten:</strong> Weniger als 10 Wörter im aktiven Wortschatz</li>
+    <li><strong>Mit 24 Monaten:</strong> Noch keine Zwei-Wort-Verbindungen (z. B. "Mama da")</li>
+    <li><strong>Mit 3 Jahren:</strong> Fremde verstehen das Kind kaum; kein Fragenstellen</li>
+    <li><strong>Mit 4–5 Jahren:</strong> Auffällige Grammatikfehler, eingeschränkter Wortschatz, Lautbildungsprobleme</li>
+  </ul>
+
+  <div class="info-box">
+    <p>
+      <strong>Unsicherheit ist kein Grund zu warten.</strong> Wenn Sie das Gefühl haben,
+      dass die Sprachentwicklung Ihres Kindes nicht stimmt, empfehlen wir eine logopädische
+      Abklärung. Sie dauert ca. 45–60 Minuten und gibt Ihnen Klarheit.
+    </p>
+  </div>
+
+  <h2>Frühförderung bei mehrsprachig aufwachsenden Kindern</h2>
+  <p>
+    Kinder, die mit zwei oder mehr Sprachen aufwachsen, zeigen manchmal eine verzögerte
+    Sprachentwicklung in einer der Sprachen – das ist normal. Problematisch wird es, wenn
+    Rückstände in <em>allen</em> Sprachen bestehen oder wenn die Entwicklung deutlich hinter
+    gleichaltrigen einsprachigen Kindern zurückliegt.
+  </p>
+  <p>
+    Eine zuverlässige Unterscheidung zwischen einer <strong>echten Sprachentwicklungsstörung</strong>
+    und normalen Phasen des bilingualen Spracherwerbs ist nur möglich, wenn die Diagnostik in
+    <em>beiden</em> Sprachen erfolgt. In unserer Praxis sprechen wir Deutsch und Türkisch – und können
+    Kinder daher in beiden Sprachen vollständig einschätzen und behandeln.
+  </p>
+
+  <h2>Was passiert beim Ersttermin?</h2>
+  <p>
+    Beim Ersttermin führen wir eine ausführliche <strong>Anamnese mit den Eltern</strong> durch und
+    erheben den Sprachentwicklungsstand des Kindes mit standardisierten, altersgerechten Tests.
+    Die Diagnostik erfolgt spielerisch, damit das Kind sich wohlfühlt.
+  </p>
+  <p>
+    Im Anschluss besprechen wir gemeinsam, ob und welche Therapie sinnvoll ist, welche Therapieziele
+    wir anstreben und wie Sie die Entwicklung Ihres Kindes zu Hause unterstützen können.
+  </p>
+
+  <h2>Frühförderung und Krankenkasse</h2>
+  <p>
+    Logopädische Frühförderung ist ein anerkanntes <strong>Heilmittel</strong>. Bei vorliegender
+    Heilmittelverordnung (Rezept) – ausgestellt vom Kinderarzt, HNO-Arzt oder Kinderpsychiater –
+    übernehmen gesetzliche und private Krankenkassen die Kosten.
+    <strong>Kinder unter 18 Jahren sind vollständig von Zuzahlungen befreit.</strong>
+  </p>
+  <p>
+    Mehr dazu: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+  </p>
+</ServicePage>

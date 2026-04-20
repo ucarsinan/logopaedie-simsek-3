@@ -1,6 +1,38 @@
 ---
 import ServicePage from '../../layouts/ServicePage.astro';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was sind Sprachstörungen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sprachstörungen beeinträchtigen die Fähigkeit, Sprache zu verstehen oder sich sprachlich auszudrücken. Sie betreffen Wortschatz, Grammatik, Sprachverständnis und die kommunikative Nutzung von Sprache – unabhängig davon, ob der Sprechapparat selbst betroffen ist." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen einer Sprachentwicklungsverzögerung und einer Sprachentwicklungsstörung?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bei einer Sprachentwicklungsverzögerung (SEV) entwickelt ein Kind Sprache langsamer als Gleichaltrige – oft holt es den Rückstand auf. Eine umschriebene Sprachentwicklungsstörung (USES/SES) bezeichnet qualitative Abweichungen in Grammatik, Wortschatz oder Sprachverständnis, die nicht durch andere Ursachen erklärbar sind und gezielte Therapie erfordern." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist Aphasie und wie wird sie behandelt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Aphasie ist eine erworbene Sprachstörung nach Schlaganfall, Schädel-Hirn-Trauma oder Tumor und betrifft alle sprachlichen Modalitäten: Sprechen, Verstehen, Lesen und Schreiben. Die Therapie zielt darauf ab, verloren gegangene Sprachfähigkeiten zurückzugewinnen oder Kompensationsstrategien zu entwickeln. Häufige Formen sind Broca-Aphasie, Wernicke-Aphasie, globale Aphasie und amnestische Aphasie." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ab wann sollte mein Kind wegen Sprachproblemen zur Logopädie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wenn ein Kind mit 2 Jahren noch keine ersten Wörter spricht oder mit 3 Jahren kaum Zwei-Wort-Sätze bildet, ist eine logopädische Abklärung sinnvoll. Frühförderung vor dem Schuleintritt ist besonders effektiv, da das Gehirn in den ersten Lebensjahren besonders plastisch ist." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann Logopädie bei Lese-Rechtschreib-Schwäche (Legasthenie) helfen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Logopädie kann die Lese-Rechtschreib-Schwäche (LRS/Legasthenie) im Rahmen eines logopädischen Behandlungskonzepts mitbehandeln, insbesondere wenn phonologische Bewusstheit und Sprachverarbeitungsprozesse betroffen sind. Eine ärztliche Heilmittelverordnung ist erforderlich." }
+    }
+  ]
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
@@ -25,7 +57,7 @@ const schema = {
   serviceTitle="Sprachstörungen: Diagnose und Therapie in Duisburg"
   breadcrumbLabel="Sprachstörungen"
   tags={['Sprachentwicklung', 'Aphasie', 'Frühförderung', 'Zweisprachig']}
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/sprachstoerungen' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/dil-bozuklugu' },

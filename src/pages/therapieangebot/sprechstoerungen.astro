@@ -1,6 +1,38 @@
 ---
 import ServicePage from '../../layouts/ServicePage.astro';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was sind Sprechstörungen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sprechstörungen betreffen die motorische Ausführung des Sprechens – also wie Laute, Silben und Wörter produziert werden. Im Gegensatz zu Sprachstörungen ist die zugrunde liegende Sprachkompetenz (Wortschatz, Grammatik) dabei häufig intakt." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ab wann ist Stottern beim Kind behandlungsbedürftig?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ein leichtes Stottern im Alter von 2–4 Jahren ist häufig normal. Wenn Ihr Kind jedoch mehr als 3 Monate lang stottert, sichtbaren Leidensdruck zeigt oder Vermeidungsverhalten entwickelt, empfehlen wir eine logopädische Abklärung. Bei frühem Therapiebeginn sind die Erfolgschancen besonders gut." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Stottern und Poltern?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Beim Stottern kommt es zu Wiederholungen, Dehnungen und Blockierungen beim Sprechen, oft begleitet von Leidensdruck. Poltern (Cluttering) ist überhastetes, unrhythmisches Sprechen mit undeutlicher Artikulation – Betroffene nehmen ihr eigenes Sprechen oft kaum als auffällig wahr." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie wird Dysarthrie nach einem Schlaganfall behandelt?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die Dysarthrietherapie verbessert die Verständlichkeit durch gezielte Übungen der Sprechmuskulatur, Atemsteuerung und Artikulationsdeutlichkeit. Ziele sind bessere Artikulation, optimierte Stimmgebung und Prosodie sowie Kompensationsstrategien. Bei schwerer Ausprägung werden auch Kommunikationshilfen eingesetzt." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist Lispeln und kann es behandelt werden?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lispeln (Sigmatismus) ist eine fehlerhafte Aussprache der S-Laute, zum Beispiel mit der Zunge zwischen den Zähnen (interdental) oder seitlich (lateral). Es ist sehr gut therapierbar: Mit spielerischen, altersgerechten Übungen und gezieltem Artikulationstraining lässt sich eine klare Aussprache entwickeln." }
+    }
+  ]
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
@@ -25,7 +57,7 @@ const schema = {
   serviceTitle="Sprechstörungen: Stottern, Lispeln & mehr"
   breadcrumbLabel="Sprechstörungen"
   tags={['Stottern', 'Lispeln', 'Dysarthrie', 'Sprechapraxie']}
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/sprechstoerungen' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/konusma-bozuklugu' },

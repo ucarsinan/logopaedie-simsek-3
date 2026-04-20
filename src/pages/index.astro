@@ -25,12 +25,24 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": item.a }
   }))
 };
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://logopaedie-simsek.de/#business",
+  "review": t.testimonials.items.map(item => ({
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": item.stars, "bestRating": 5 },
+    "author": { "@type": "Person", "name": item.author },
+    "reviewBody": item.quote,
+    "publisher": { "@type": "Organization", "name": "Praxis für Logopädie Şimşek" }
+  }))
+};
 ---
 
 <Layout
-  title="Praxis für Logopädie Şimşek Duisburg – Sprach- & Stimmtherapie DE/TR"
+  title="Logopädie Duisburg | Praxis Şimşek – Sprachtherapie Deutsch & Türkisch"
   description="Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR."
-  additionalSchemas={[faqSchema]}
+  additionalSchemas={[faqSchema, reviewSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/anasayfa/' },

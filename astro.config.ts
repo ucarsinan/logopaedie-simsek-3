@@ -8,6 +8,7 @@ export default defineConfig({
   output: 'static',
   adapter: vercel(),
   redirects: {
+    // Old /leistungen/ structure
     '/leistungen/': '/therapieangebot/',
     '/leistungen/sprachstoerungen': '/therapieangebot/sprachstoerungen',
     '/leistungen/sprachstoerungen/': '/therapieangebot/sprachstoerungen/',
@@ -21,6 +22,15 @@ export default defineConfig({
     '/leistungen/kinder-und-jugendliche/': '/therapieangebot/kinder-und-jugendliche/',
     '/leistungen/erwachsene': '/therapieangebot/erwachsene',
     '/leistungen/erwachsene/': '/therapieangebot/erwachsene/',
+    // Old WordPress site structure (preserves backlinks & Google index entries)
+    '/therapie/': '/therapieangebot/',
+    '/therapie/therapie-bei-erwachsenen/': '/therapieangebot/erwachsene/',
+    '/therapie/therapie-bei-kindern-und-jugendlichen/': '/therapieangebot/kinder-und-jugendliche/',
+    '/stimmtherapie/': '/therapieangebot/stimmtherapie/',
+    '/informationen/': '/',
+    '/anfahrt/': '/kontakt/',
+    '/jobs/': '/karriere/',
+    '/praxis/': '/',
   },
   integrations: [sitemap({
     filter: (page) => ![

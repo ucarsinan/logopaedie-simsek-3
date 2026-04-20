@@ -11,12 +11,23 @@ const personSchema = {
   "@type": "Person",
   "name": "Emel Şimşek-Uçar",
   "jobTitle": "Staatlich anerkannte Logopädin",
+  "url": `${siteUrl}/team`,
+  "description": "Staatlich anerkannte Logopädin und Gründerin der Praxis für Logopädie Şimşek in Duisburg. Spezialisiert auf zweisprachige Diagnostik und Therapie auf Deutsch und Türkisch. Mehr als 10 Jahre klinische Erfahrung in der Sprachtherapie für Kinder und Erwachsene.",
   "worksFor": {
     "@type": "MedicalOrganization",
     "name": "Praxis für Logopädie Şimşek",
     "url": siteUrl
   },
-  "knowsLanguage": ["de", "tr"],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "German" },
+    { "@type": "Language", "name": "Turkish" }
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Logopädin",
+    "occupationalCategory": "Therapeutin",
+    "skills": "Sprachtherapie, Stimmtherapie, Dysphagietherapie, Frühförderung, Aphasietherapie, Zweisprachige Diagnostik"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Tonhallenstraße 21",

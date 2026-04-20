@@ -73,6 +73,10 @@ const jsonLd = {
         "name": "Emel Şimşek-Uçar",
         "jobTitle": s.founder_title
       },
+      "sameAs": [
+        "https://www.facebook.com/logopaediesimsek/",
+        "https://goo.gl/maps/cGPVX58woxP2"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": s.offer_catalog_name,
@@ -123,9 +127,9 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     {additionalSchemas.map(schema => (
-      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
 
     <!-- robots -->
