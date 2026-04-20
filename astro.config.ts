@@ -11,17 +11,11 @@ export default defineConfig({
     // Old /leistungen/ structure
     '/leistungen/': '/therapieangebot/',
     '/leistungen/sprachstoerungen': '/therapieangebot/sprachstoerungen',
-    '/leistungen/sprachstoerungen/': '/therapieangebot/sprachstoerungen/',
     '/leistungen/sprechstoerungen': '/therapieangebot/sprechstoerungen',
-    '/leistungen/sprechstoerungen/': '/therapieangebot/sprechstoerungen/',
     '/leistungen/stimmtherapie': '/therapieangebot/stimmtherapie',
-    '/leistungen/stimmtherapie/': '/therapieangebot/stimmtherapie/',
     '/leistungen/schluckstoerungen': '/therapieangebot/schluckstoerungen',
-    '/leistungen/schluckstoerungen/': '/therapieangebot/schluckstoerungen/',
     '/leistungen/kinder-und-jugendliche': '/therapieangebot/kinder-und-jugendliche',
-    '/leistungen/kinder-und-jugendliche/': '/therapieangebot/kinder-und-jugendliche/',
     '/leistungen/erwachsene': '/therapieangebot/erwachsene',
-    '/leistungen/erwachsene/': '/therapieangebot/erwachsene/',
     // Old WordPress site structure (preserves backlinks & Google index entries)
     '/therapie/': '/therapieangebot/',
     '/therapie/therapie-bei-erwachsenen/': '/therapieangebot/erwachsene/',
