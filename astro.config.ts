@@ -7,6 +7,21 @@ export default defineConfig({
   site: 'https://logopaedie-simsek.de',
   output: 'static',
   adapter: vercel(),
+  redirects: {
+    '/leistungen/': '/therapieangebot/',
+    '/leistungen/sprachstoerungen': '/therapieangebot/sprachstoerungen',
+    '/leistungen/sprachstoerungen/': '/therapieangebot/sprachstoerungen/',
+    '/leistungen/sprechstoerungen': '/therapieangebot/sprechstoerungen',
+    '/leistungen/sprechstoerungen/': '/therapieangebot/sprechstoerungen/',
+    '/leistungen/stimmtherapie': '/therapieangebot/stimmtherapie',
+    '/leistungen/stimmtherapie/': '/therapieangebot/stimmtherapie/',
+    '/leistungen/schluckstoerungen': '/therapieangebot/schluckstoerungen',
+    '/leistungen/schluckstoerungen/': '/therapieangebot/schluckstoerungen/',
+    '/leistungen/kinder-und-jugendliche': '/therapieangebot/kinder-und-jugendliche',
+    '/leistungen/kinder-und-jugendliche/': '/therapieangebot/kinder-und-jugendliche/',
+    '/leistungen/erwachsene': '/therapieangebot/erwachsene',
+    '/leistungen/erwachsene/': '/therapieangebot/erwachsene/',
+  },
   integrations: [sitemap({
     filter: (page) => ![
       'https://logopaedie-simsek.de/impressum/',

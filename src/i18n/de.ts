@@ -11,7 +11,7 @@ export const de = {
     aria_menu_close: "Menü schließen",
     links: {
       home: "/",
-      therapy: "/leistungen/",
+      therapy: "/therapieangebot/",
       team: "/team/",
       karriere: "/karriere/",
       contact: "/kontakt/",
@@ -28,7 +28,7 @@ export const de = {
     tagline: "Sprachtherapie Duisburg",
     nav_label: "Footer-Navigation",
     links: {
-      services: { label: "Leistungen", href: "/leistungen/" },
+      services: { label: "Therapieangebot", href: "/therapieangebot/" },
       insurance: { label: "Kostenübernahme", href: "/kostenuebernahme/" },
       team: { label: "Team", href: "/team/" },
       karriere: { label: "Karriere", href: "/karriere/" },
@@ -46,7 +46,7 @@ export const de = {
     description:
       "Zweisprachige Sprachtherapie auf Deutsch und Türkisch für alle Altersgruppen – von der Frühförderung bis zum Seniorenalter. Mit Herz und Verstand.",
     cta_primary: "Termin anfragen",
-    cta_secondary: "Leistungen entdecken",
+    cta_secondary: "Therapieangebot entdecken",
     badge_station: "2 min. vom Hauptbahnhof",
     badge_lang: "Deutsch & Türkisch",
     badge_homevisit: "Hausbesuche möglich",
@@ -67,36 +67,36 @@ export const de = {
     stat_floor_value: "3. OG",
   },
   services: {
-    section_label: "Unser Leistungsangebot",
+    section_label: "Unser Therapieangebot",
     heading: "Alle Bereiche der Logopädie",
     description:
       "Wir behandeln das vollständige Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.",
     more: "Mehr erfahren",
-    overview: "Alle Leistungen im Überblick",
+    overview: "Therapieangebot im Überblick",
     items: [
       {
         title: "Sprachstörungen",
         text: "Diagnostik und Therapie bei Beeinträchtigungen im Sprachverstehen und Sprachausdruck – von der kindlichen Sprachentwicklungsverzögerung bis zur erworbenen Aphasie nach Schlaganfall.",
         tags: ["Sprachentwicklung", "Aphasie", "Frühförderung"],
-        href: "/leistungen/sprachstoerungen",
+        href: "/therapieangebot/sprachstoerungen",
       },
       {
         title: "Sprechstörungen",
         text: "Behandlung motorisch bedingter Sprechstörungen sowie Redefluss- und Aussprachestörungen. Ob Stottern, Poltern oder Lispeln – wir begleiten Sie auf Ihrem Weg.",
         tags: ["Dysarthrie", "Stottern", "Lispeln", "Sprechapraxie"],
-        href: "/leistungen/sprechstoerungen",
+        href: "/therapieangebot/sprechstoerungen",
       },
       {
         title: "Stimmstörungen",
         text: "Therapie bei funktionellen und organischen Stimmstörungen. Wir helfen dabei, die Stimme als wichtigstes Kommunikationsmittel zu stärken und langfristig zu schützen.",
         tags: ["Dysphonie", "Stimme", "Funktionell"],
-        href: "/leistungen/stimmtherapie",
+        href: "/therapieangebot/stimmtherapie",
       },
       {
         title: "Schluckstörungen (Dysphagie)",
         text: "Diagnostik und Therapie von Schluckstörungen bei Erwachsenen und Kindern – zur Sicherung der Ernährung, Lebensqualität und Vermeidung von Folgeerkrankungen.",
         tags: ["Dysphagie", "Schlucken", "Ernährung"],
-        href: "/leistungen/schluckstoerungen",
+        href: "/therapieangebot/schluckstoerungen",
       },
     ],
   },
@@ -289,12 +289,12 @@ export const de = {
     business_description:
       "Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR.",
     founder_title: "Staatlich geprüfte Logopädin",
-    offer_catalog_name: "Logopädische Leistungen",
+    offer_catalog_name: "Logopädisches Therapieangebot",
     services: [
-      { name: "Sprachtherapie", url: "/leistungen/sprachstoerungen" },
-      { name: "Sprechtherapie", url: "/leistungen/sprechstoerungen" },
-      { name: "Stimmtherapie", url: "/leistungen/stimmtherapie" },
-      { name: "Dysphagietherapie", url: "/leistungen/schluckstoerungen" },
+      { name: "Sprachtherapie", url: "/therapieangebot/sprachstoerungen" },
+      { name: "Sprechtherapie", url: "/therapieangebot/sprechstoerungen" },
+      { name: "Stimmtherapie", url: "/therapieangebot/stimmtherapie" },
+      { name: "Dysphagietherapie", url: "/therapieangebot/schluckstoerungen" },
     ],
   },
 };

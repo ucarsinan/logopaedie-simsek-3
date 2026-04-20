@@ -8,14 +8,14 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Logopädie für Kinder und Jugendliche Duisburg",
   "description": "Logopädische Therapie für Kinder und Jugendliche in Duisburg. Sprachentwicklungsverzögerung, Stottern, LRS, Aussprache und mehr.",
-  "url": `${siteUrl}/leistungen/kinder-und-jugendliche`,
+  "url": `${siteUrl}/therapieangebot/kinder-und-jugendliche`,
   "about": { "@type": "MedicalCondition", "name": "Sprachentwicklungsstörung" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": `${siteUrl}/leistungen` },
-      { "@type": "ListItem", "position": 3, "name": "Kinder und Jugendliche", "item": `${siteUrl}/leistungen/kinder-und-jugendliche` }
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapieangebot` },
+      { "@type": "ListItem", "position": 3, "name": "Kinder und Jugendliche", "item": `${siteUrl}/therapieangebot/kinder-und-jugendliche` }
     ]
   }
 };
@@ -29,13 +29,13 @@ const schema = {
   tags={['Frühförderung', 'Sprachentwicklung', 'Stottern', 'LRS']}
   additionalSchemas={[schema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/leistungen/kinder-und-jugendliche` },
-    { lang: 'x-default', url: `${siteUrl}/leistungen/kinder-und-jugendliche` },
+    { lang: 'de', url: `${siteUrl}/therapieangebot/kinder-und-jugendliche` },
+    { lang: 'x-default', url: `${siteUrl}/therapieangebot/kinder-und-jugendliche` },
   ]}
   relatedServices={[
-    { title: 'Sprachstörungen', href: '/leistungen/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Grammatik' },
-    { title: 'Sprechstörungen', href: '/leistungen/sprechstoerungen/', description: 'Stottern, Lispeln, Ausspracheprobleme' },
-    { title: 'Logopädie für Erwachsene', href: '/leistungen/erwachsene/', description: 'Aphasie, Dysarthrie, Stimmstörungen' },
+    { title: 'Sprachstörungen', href: '/therapieangebot/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Grammatik' },
+    { title: 'Sprechstörungen', href: '/therapieangebot/sprechstoerungen/', description: 'Stottern, Lispeln, Ausspracheprobleme' },
+    { title: 'Logopädie für Erwachsene', href: '/therapieangebot/erwachsene/', description: 'Aphasie, Dysarthrie, Stimmstörungen' },
   ]}
 >
   <h2>Wann braucht mein Kind Logopädie?</h2>

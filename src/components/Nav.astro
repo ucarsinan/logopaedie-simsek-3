@@ -3,10 +3,13 @@ import { useTranslations } from '../i18n/index';
 
 interface Props {
   lang?: 'de' | 'tr';
+  alternateUrl?: string;
 }
 
-const { lang = 'de' } = Astro.props;
-const t = useTranslations(lang).nav;
+const { lang = 'de', alternateUrl } = Astro.props;
+const translations = useTranslations(lang);
+const t = translations.nav;
+const th = translations.header;
 ---
 
 <nav class="fixed left-0 right-0 z-[1000] bg-surface border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label={t.aria_main} transition:name="site-nav">
@@ -94,6 +97,20 @@ const t = useTranslations(lang).nav;
     <a href={t.links.contact} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       {t.contact}</a>
+
+    {alternateUrl && (
+      <div class="pt-3">
+        <a
+          href={alternateUrl}
+          class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-[6px] border border-border text-[.8125rem] font-semibold tracking-[.06em] uppercase text-text-muted hover:text-primary hover:border-primary transition-colors duration-200"
+          aria-label={th.lang_label}
+          title={th.lang_title}
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          {th.lang_short} – {th.lang_title}
+        </a>
+      </div>
+    )}
   </div>
 </div>
 

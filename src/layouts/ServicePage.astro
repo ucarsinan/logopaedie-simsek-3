@@ -44,8 +44,8 @@ const {
 const isTR = lang === 'tr';
 const t = {
   home: isTR ? 'Ana Sayfa' : 'Startseite',
-  services: isTR ? 'Hizmetler' : 'Leistungen',
-  servicesHref: isTR ? '/terapi/' : '/leistungen',
+  services: isTR ? 'Terapi Alanları' : 'Therapieangebot',
+  servicesHref: isTR ? '/terapi/' : '/therapieangebot',
   appointment: isTR ? 'Randevu Talebi' : 'Termin anfragen',
   ctaHeading: isTR ? 'İlk adıma hazır mısınız?' : 'Bereit für den ersten Schritt?',
   ctaText: isTR
@@ -53,14 +53,14 @@ const t = {
     : 'Vereinbaren Sie jetzt Ihr kostenloses Erstgespräch in unserer Praxis in Duisburg – auf Deutsch oder Türkisch.',
   ctaButton: isTR ? 'Randevu Talebi' : 'Termin anfragen',
   moreInfo: isTR ? 'Daha fazla bilgi' : 'Mehr erfahren',
-  relatedHeading: isTR ? 'Diğer Hizmetler' : 'Weitere Leistungen',
+  relatedHeading: isTR ? 'Diğer Terapi Alanları' : 'Weitere Therapiebereiche',
   kontaktHref: isTR ? '/tr/#kontakt' : '/#kontakt',
 };
 ---
 
 <Layout title={title} description={description} additionalSchemas={additionalSchemas} lang={lang} hreflangAlternates={hreflangAlternates}>
   <Header lang={lang} {...(alternateUrl !== undefined && { alternateUrl })} />
-  <Nav lang={lang} />
+  <Nav lang={lang} {...(alternateUrl !== undefined && { alternateUrl })} />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
     <!-- Breadcrumb -->
     <nav class="bg-bg-alt border-b border-border" aria-label={isTR ? 'İçerik Yolu' : 'Breadcrumb'}>

@@ -69,12 +69,12 @@ export const tr: Translations = {
     stat_floor_value: "3. Kat",
   },
   services: {
-    section_label: "Hizmet Teklifimiz",
+    section_label: "Terapi Alanlarımız",
     heading: "Dil ve Konuşma Terapisinin Tüm Alanları",
     description:
       "Çocuklar, yetişkinler ve yaşlılar için tüm dil ve konuşma bozukluklarını tedavi ediyoruz.",
     more: "Daha fazla bilgi",
-    overview: "Tüm Hizmetlere Genel Bakış",
+    overview: "Tüm Terapi Alanlarına Genel Bakış",
     items: [
       {
         title: "Dil Bozuklukları",
@@ -296,12 +296,12 @@ export const tr: Translations = {
     business_description:
       "Duisburg'da dil, konuşma ve ses terapisi alanında uzmanlaşmış logoterapi kliniği. Çocuklar ve yetişkinler için iki dilli (DE/TR) terapi.",
     founder_title: "Devlet Onaylı Logoped",
-    offer_catalog_name: "Logoterapi Hizmetleri",
+    offer_catalog_name: "Logoterapi Alanları",
     services: [
-      { name: "Dil Terapisi", url: "/leistungen/sprachstoerungen" },
-      { name: "Konuşma Terapisi", url: "/leistungen/sprechstoerungen" },
-      { name: "Ses Terapisi", url: "/leistungen/stimmtherapie" },
-      { name: "Yutma Terapisi", url: "/leistungen/schluckstoerungen" },
+      { name: "Dil Terapisi", url: "/therapieangebot/sprachstoerungen" },
+      { name: "Konuşma Terapisi", url: "/therapieangebot/sprechstoerungen" },
+      { name: "Ses Terapisi", url: "/therapieangebot/stimmtherapie" },
+      { name: "Yutma Terapisi", url: "/therapieangebot/schluckstoerungen" },
     ],
   },
 };
