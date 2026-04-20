@@ -62,7 +62,7 @@ export const de = {
     stat_bilingual: "Zweisprachige Versorgung DE & TR",
     stat_areas: "Therapiebereiche für alle Altersgruppen",
     stat_station: "vom Duisburger Hauptbahnhof",
-    stat_floor: "Barrierefrei per Aufzug erreichbar",
+    stat_floor: "Per Aufzug erreichbar",
     stat_station_value: "2 min",
     stat_floor_value: "3. OG",
   },
@@ -106,7 +106,7 @@ export const de = {
     description:
       "Lichtdurchflutete Therapieräume mit hochwertigem Therapiematerial, kindgerechten Spielbereichen und bester Anbindung an den öffentlichen Nahverkehr.",
     address_label: "Adresse",
-    address_sub: "3. Obergeschoss · Barrierefrei per Aufzug",
+    address_sub: "3. Obergeschoss · Per Aufzug",
     hours_label: "Öffnungszeiten",
     hours_weekdays: "Montag – Freitag",
     hours_weekend: "Wochenende",
@@ -117,7 +117,7 @@ export const de = {
     feature_rooms: "Moderne, lichtdurchflutete Therapieräume",
     feature_kids: "Kindgerechte Spielbereiche",
     feature_materials: "Hochwertiges, aktuelles Therapiematerial",
-    feature_accessible: "Barrierefrei – Aufzug im Gebäude",
+    feature_accessible: "Aufzug im Gebäude",
     map_open: "In Google Maps öffnen",
     map_address_sub: "Tonhallenstraße 21, 3. OG",
     call: "Anrufen",
@@ -258,8 +258,7 @@ export const de = {
     phone_cta_sub:
       "Rufen Sie uns direkt an – wir beraten Sie gerne und helfen Ihnen schnell und unkompliziert weiter.",
     phone_cta_hours_label: "Erreichbar",
-    phone_cta_bilingual:
-      "Beratung auch auf <strong>Türkisch</strong> möglich.",
+    phone_cta_bilingual: "Beratung auch auf <strong>Türkisch</strong> möglich.",
     info_phone_label: "Telefon",
     info_phone_hours: "Mo–Fr 08:00–18:00 Uhr",
     info_email_label: "E-Mail",

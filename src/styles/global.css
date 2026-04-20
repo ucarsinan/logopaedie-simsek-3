@@ -123,7 +123,7 @@
 
 @utility btn-primary {
   background: var(--color-primary);
-  color: #fff;
+  color: #fff !important;
   border-color: var(--color-primary);
   &:hover {
     background: var(--color-primary-dark);
@@ -135,7 +135,7 @@
 
 @utility btn-accent {
   background: var(--color-accent);
-  color: #fff;
+  color: #fff !important;
   border-color: var(--color-accent);
   &:hover {
     background: var(--color-accent-dark);
@@ -158,7 +158,7 @@
 
 @utility btn-outline-white {
   background: transparent;
-  color: #fff;
+  color: #fff !important;
   border-color: rgba(255, 255, 255, 0.5);
   &:hover {
     background: rgba(255, 255, 255, 0.12);
