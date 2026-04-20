@@ -9,7 +9,7 @@ const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).nav;
 ---
 
-<nav class="fixed left-0 right-0 z-[1000] bg-surface/95 backdrop-blur-sm border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label={t.aria_main}>
+<nav class="fixed left-0 right-0 z-[1000] bg-surface border-b border-border top-[var(--header-h)]" id="site-nav" role="navigation" aria-label={t.aria_main} transition:name="site-nav">
   <div class="container flex items-center h-[var(--nav-h)] gap-1">
     <!-- Desktop links -->
     <ul class="flex items-center h-full gap-0.5 max-[991px]:hidden" role="list">
@@ -137,24 +137,37 @@ const t = useTranslations(lang).nav;
 </style>
 
 <script>
-  const hamburger = document.getElementById('hamburger') as HTMLButtonElement;
-  const mobileMenu = document.getElementById('mobileMenu') as HTMLElement;
+  function initNav() {
+    const hamburger = document.getElementById('hamburger') as HTMLButtonElement;
+    const mobileMenu = document.getElementById('mobileMenu') as HTMLElement;
+    if (!hamburger || !mobileMenu) return;
 
-  function setOpen(open: boolean) {
-    mobileMenu.dataset.open = String(open);
-    hamburger.dataset.open = String(open);
-    hamburger.setAttribute('aria-expanded', String(open));
-    const pageLang = document.documentElement.lang;
-    hamburger.setAttribute('aria-label', open
-      ? (pageLang === 'tr' ? 'Menüyü kapat' : 'Menü schließen')
-      : (pageLang === 'tr' ? 'Menüyü aç' : 'Menü öffnen'));
+    function setOpen(open: boolean) {
+      mobileMenu.dataset.open = String(open);
+      hamburger.dataset.open = String(open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      const pageLang = document.documentElement.lang;
+      hamburger.setAttribute('aria-label', open
+        ? (pageLang === 'tr' ? 'Menüyü kapat' : 'Menü schließen')
+        : (pageLang === 'tr' ? 'Menüyü aç' : 'Menü öffnen'));
+    }
+
+    hamburger.addEventListener('click', () => {
+      setOpen(mobileMenu.dataset.open !== 'true');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => setOpen(false));
+    });
   }
 
-  hamburger.addEventListener('click', () => {
-    setOpen(mobileMenu.dataset.open !== 'true');
+  // Close mobile menu before navigating away
+  document.addEventListener('astro:before-preparation', () => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('hamburger');
+    if (mobileMenu) mobileMenu.dataset.open = 'false';
+    if (hamburger) { hamburger.dataset.open = 'false'; hamburger.setAttribute('aria-expanded', 'false'); }
   });
 
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', () => setOpen(false));
-  });
+  document.addEventListener('astro:page-load', initNav);
 </script>

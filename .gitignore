@@ -1,3 +1,7 @@
+# Claude Code
+.superpowers/
+.claude/
+
 # Dependencies
 node_modules/
 

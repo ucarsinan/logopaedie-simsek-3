@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import { useTranslations } from '../i18n/index';
 
 interface HreflangAlternate {
@@ -133,38 +134,45 @@ const jsonLd = {
         ? 'noindex, nofollow'
         : 'index, follow'
     } />
+
+    <!-- View Transitions: eliminates page-reload flash on navigation -->
+    <ClientRouter />
   </head>
   <body>
     <slot />
     <script>
-      // Scroll Reveal
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      function initPage() {
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      // Smooth Scroll
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-          const id = (anchor as HTMLAnchorElement).getAttribute('href');
-          if (id === '#') return;
-          const target = document.querySelector(id!);
-          if (target) {
-            e.preventDefault();
-            const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
-            const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 50;
-            window.scrollTo({
-              top: target.getBoundingClientRect().top + window.scrollY - headerH - navH - 16,
-              behavior: 'smooth',
-            });
-          }
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', (e) => {
+            const id = (anchor as HTMLAnchorElement).getAttribute('href');
+            if (id === '#') return;
+            const target = document.querySelector(id!);
+            if (target) {
+              e.preventDefault();
+              const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
+              const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 50;
+              window.scrollTo({
+                top: target.getBoundingClientRect().top + window.scrollY - headerH - navH - 16,
+                behavior: 'smooth',
+              });
+            }
+          });
         });
-      });
+      }
+
+      document.addEventListener('astro:page-load', initPage);
     </script>
   </body>
 </html>

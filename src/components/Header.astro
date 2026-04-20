@@ -10,7 +10,7 @@ const { lang = 'de', alternateUrl } = Astro.props;
 const t = useTranslations(lang).header;
 ---
 
-<header class="fixed top-0 left-0 right-0 z-[1001] h-[var(--header-h)] bg-white border-b border-border shadow-[0_1px_4px_rgba(0,0,0,.06)]" id="site-header" role="banner">
+<header class="fixed top-0 left-0 right-0 z-[1001] h-[var(--header-h)] bg-white border-b border-border shadow-[0_1px_4px_rgba(0,0,0,.06)]" id="site-header" role="banner" transition:name="site-header">
   <div class="container flex items-center justify-between h-full">
     <!-- Logo -->
     <a href={t.home_href} class="flex items-center gap-3.5 text-text shrink-0 min-w-0 no-underline" aria-label="Praxis für Logopädie Şimşek – Startseite">
@@ -64,8 +64,19 @@ const t = useTranslations(lang).header;
 </header>
 
 <script>
-  const siteHeader = document.getElementById('site-header') as HTMLElement;
+  // Apply correct shadow on every navigation (scroll position may differ)
+  document.addEventListener('astro:page-load', () => {
+    const siteHeader = document.getElementById('site-header') as HTMLElement;
+    if (!siteHeader) return;
+    siteHeader.style.boxShadow = window.scrollY > 10
+      ? '0 2px 12px rgba(0,0,0,.1)'
+      : '0 1px 4px rgba(0,0,0,.06)';
+  });
+
+  // Single scroll listener referencing the element by id each time
   window.addEventListener('scroll', () => {
+    const siteHeader = document.getElementById('site-header');
+    if (!siteHeader) return;
     siteHeader.style.boxShadow = window.scrollY > 10
       ? '0 2px 12px rgba(0,0,0,.1)'
       : '0 1px 4px rgba(0,0,0,.06)';
