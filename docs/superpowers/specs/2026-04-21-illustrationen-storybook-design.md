@@ -16,7 +16,9 @@ Alle bestehenden Website-Bilder sind KI-generierte photorealistische Fotos. Dies
 ## Stil-Guide
 
 ### Stil
-**Storybook / Organic** — weiche Farbflächen, organische Formen, leicht aquarellhafte Texturen. Warm, lebendig, einladend. Kein Foto-Realismus.
+**Modern Warm Illustration** — smooth digital painting, clean soft color fills, contemporary Scandinavian children's book style. Warm, lebendig, modern. Kein Foto-Realismus, kein Vintage-Look.
+
+> **Validiert:** ChatGPT GPT-4o trifft diesen Stil sehr gut. Copilot tendiert zu Vintage — daher ChatGPT bevorzugen.
 
 ### Farben (immer in Prompts nennen)
 | Token | Hex | Verwendung |
@@ -30,16 +32,23 @@ Alle bestehenden Website-Bilder sind KI-generierte photorealistische Fotos. Dies
 ### Gesichter
 **Alle Personen von vorne mit sichtbarem Gesicht** — Therapeutin, Kinder, Erwachsene, Senioren. Ausdrucksstark, freundlich, warm.
 
+### Sprache in Bildern
+
+**Immer Deutsch** — Bildkarten, Poster, Schilder im Bild müssen deutsche Wörter zeigen (z.B. "Katze", "Haus", "Apfel"). **Keine englischen Texte** im Bild. **Keine Motivations-Poster** an Wänden.
+
 ### Konsistenz-Prefix (jeden Prompt damit beginnen)
 ```
-Warm storybook illustration, soft organic shapes, gentle watercolor-like textures, 
-friendly expressive faces, teal green and terracotta color palette, 
-cream warm background, NOT photorealistic, NOT photograph, illustrated style only.
+Modern warm illustration, smooth digital painting, clean soft color fills, 
+contemporary Scandinavian children's book style, friendly expressive faces, 
+teal green #2a7f6f and terracotta #c4714f color palette, cream warm background, 
+flat depth with subtle shadows, NOT photorealistic, NOT vintage, NOT watercolor, 
+NOT old-fashioned, contemporary editorial illustration style.
 ```
 
 ### Tool
-- **Primär:** ChatGPT Free (GPT-4o Image Generation)
-- **Backup:** Microsoft Copilot (copilot.microsoft.com) — kostenlos, kein Limit
+
+- **Primär:** ChatGPT Free (GPT-4o Image Generation) — bestes Ergebnis für diesen Stil
+- **Backup:** Microsoft Copilot (copilot.microsoft.com) — kostenlos, aber tendiert zu Vintage-Look
 
 ---
 
