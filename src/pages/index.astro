@@ -9,7 +9,6 @@ import BentoGallery from '../components/sections/BentoGallery.astro';
 import Bilingual from '../components/sections/Bilingual.astro';
 import Team from '../components/sections/Team.astro';
 import Praxis from '../components/sections/Praxis.astro';
-import Testimonials from '../components/sections/Testimonials.astro';
 import Karriere from '../components/sections/Karriere.astro';
 import Faq from '../components/sections/Faq.astro';
 import Kontakt from '../components/sections/Kontakt.astro';
@@ -26,24 +25,12 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": item.a }
   }))
 };
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://logopaedie-simsek.de/#business",
-  "review": t.testimonials.items.map(item => ({
-    "@type": "Review",
-    "reviewRating": { "@type": "Rating", "ratingValue": item.stars, "bestRating": 5 },
-    "author": { "@type": "Person", "name": item.author },
-    "reviewBody": item.quote,
-    "publisher": { "@type": "Organization", "name": "Praxis für Logopädie Şimşek" }
-  }))
-};
 ---
 
 <Layout
   title="Logopädie Duisburg | Praxis Şimşek – Sprachtherapie Deutsch & Türkisch"
   description="Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR."
-  additionalSchemas={[faqSchema, reviewSchema]}
+  additionalSchemas={[faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/anasayfa/' },
@@ -60,7 +47,6 @@ const reviewSchema = {
     <Bilingual />
     <Team />
     <Praxis />
-    <Testimonials />
     <Karriere />
     <Faq />
     <Kontakt />
