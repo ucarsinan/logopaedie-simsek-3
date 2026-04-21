@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import { useTranslations } from '../../i18n/index';
+import emelImg from '../../assets/therapy/team-emel-simsek-ucar.jpg';
+import maraImg from '../../assets/therapy/team-mara-niessalla.png';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -9,11 +12,8 @@ const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).team;
 
 const memberData = [
-  { initials: 'EŞ', name: 'Emel Şimşek-Uçar', isLead: true, avatar: '/avatars/emel.svg' },
-  { initials: 'SP', name: 'Sarah P.', avatar: '/avatars/sarah.svg' },
-  { initials: 'LK', name: 'Lena K.', avatar: '/avatars/lena.svg' },
-  { initials: 'MA', name: 'Mira A.', avatar: '/avatars/mira.svg' },
-  { initials: 'YD', name: 'Yasemin D.', avatar: '/avatars/yasemin.svg' },
+  { initials: 'EŞ', name: 'Emel Şimşek-Uçar', isLead: true, photo: emelImg },
+  { initials: 'MN', name: 'Mara Nießalla', photo: maraImg },
 ];
 
 const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
@@ -28,11 +28,21 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
     </header>
     <div class="grid grid-cols-3 gap-6 max-[860px]:grid-cols-2 max-[540px]:grid-cols-1">
       {members.map((member, index) => (
-        <article class={`bg-surface border border-border rounded-md overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}${member.isLead ? ' [&_.avatar]:w-[88px] [&_.avatar]:h-[88px] [&_.avatar]:text-[2rem] [&_.avatar]:shadow-[0_8px_24px_rgba(42,127,111,.3)] [&_.avatar-bg]:bg-[linear-gradient(135deg,var(--color-primary-light)_0%,var(--color-accent-light)_100%)]' : ''}`}>
-          <div class={`avatar-bg h-[200px] flex items-center justify-center relative overflow-hidden${member.isLead ? '' : ' bg-surface-2'}`}>
-            {member.avatar
-              ? <img src={member.avatar} alt={member.name} class="avatar w-20 h-20 rounded-full object-cover" width="80" height="80" />
-              : <div class="avatar w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display text-[1.75rem] font-semibold">{member.initials}</div>
+        <article class={`bg-surface border border-border rounded-md overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}`}>
+          <div class="h-65 relative overflow-hidden bg-surface-2">
+            {member.photo
+              ? <Image
+                  src={member.photo}
+                  alt={`${member.name} – Logopädin in der Praxis Şimşek Duisburg`}
+                  class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  widths={[320, 480]}
+                  sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 33vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+              : <div class="w-full h-full flex items-center justify-center">
+                  <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center font-display text-[1.75rem] font-semibold">{member.initials}</div>
+                </div>
             }
             {member.badge && (
               <span class="absolute top-4 right-4 bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full">{member.badge}</span>

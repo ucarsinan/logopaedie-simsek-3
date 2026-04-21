@@ -145,28 +145,10 @@ export const tr: Translations = {
           "Muayenehanenin kurucusu ve yöneticisi. İki dilli tanı ve terapi (DE/TR) ile kültürlerarası erken müdahalede uzman.",
       },
       {
-        role: "Dil ve Konuşma Terapisti, B.Sc.",
+        role: "Devlet Onaylı Dil ve Konuşma Terapisti",
         badge: "",
         extra:
-          "Dil ve Konuşma Terapisi Lisans mezunu. Uzmanlık: Çocuklarda dil gelişim bozuklukları. Drama pedagoji ek sertifikası.",
-      },
-      {
-        role: "Dil ve Konuşma Terapisti, B.H.",
-        badge: "",
-        extra:
-          "Dil ve Konuşma Terapisi Sağlık Lisans mezunu. Ses bozuklukları ve disfaji uzmanı. Çocuklara özel ilgi gösteren eğitimci.",
-      },
-      {
-        role: "Dil ve Konuşma Terapisti",
-        badge: "",
-        extra:
-          "Akıcılık bozuklukları (kekemelik, hızlı konuşma) ve konuşma apraksisine odaklanır. Yataklı rehabilitasyonda yıllarca deneyim.",
-      },
-      {
-        role: "Dil ve Konuşma Terapisti",
-        badge: "",
-        extra:
-          "İki dilli dil ve konuşma terapisti (DE/TR). Uzmanlık: Çok dilli çocuklarda dil gelişim bozuklukları ve kültürlerarası aile danışmanlığı.",
+          "Çocuklar ve gençlerde dil gelişimine odaklanan deneyimli terapist. İlk görüşmeden terapinin sonuna kadar empatik bir yaklaşımla eşlik eder.",
       },
     ],
   },

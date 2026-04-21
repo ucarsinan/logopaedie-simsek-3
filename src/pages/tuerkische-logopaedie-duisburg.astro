@@ -1,5 +1,7 @@
 ---
 import ServicePage from '../layouts/ServicePage.astro';
+import { Image } from 'astro:assets';
+import tuerkischImg from '../assets/therapy/tuerkische-logopaedie-familie-duisburg.webp';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
@@ -38,6 +40,18 @@ const schema = {
     { title: 'Logopädie Duisburg', href: '/logopaedie-duisburg/', description: 'Das logopädische Therapieangebot in Duisburg im Überblick' },
   ]}
 >
+  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
+    <Image
+      src={tuerkischImg}
+      alt="Türkische Logopädie für Familien in Duisburg – zweisprachige Therapie Deutsch und Türkisch"
+      class="w-full h-auto block"
+      widths={[400, 720]}
+      sizes="(max-width: 640px) 100vw, 42vw"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+
   <h2>Türkische Logopädie in Duisburg – Praxis Şimşek</h2>
   <p>
     Die Praxis für Logopädie Şimşek ist Ihre spezialisierte Anlaufstelle für

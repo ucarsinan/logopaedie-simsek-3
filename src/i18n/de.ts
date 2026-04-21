@@ -29,7 +29,10 @@ export const de = {
     nav_label: "Footer-Navigation",
     links: {
       services: { label: "Therapieangebot", href: "/therapieangebot/" },
-      tuerkische: { label: "Türkische Logopädie", href: "/tuerkische-logopaedie/" },
+      tuerkische: {
+        label: "Türkische Logopädie",
+        href: "/tuerkische-logopaedie/",
+      },
       insurance: { label: "Kostenübernahme", href: "/kostenuebernahme/" },
       team: { label: "Team", href: "/team/" },
       karriere: { label: "Karriere", href: "/karriere/" },
@@ -140,28 +143,10 @@ export const de = {
           "Gründerin und Leitung der Praxis. Spezialisiert auf zweisprachige Diagnostik und Therapie (DE/TR), mit besonderer Expertise in der interkulturellen Frühförderung.",
       },
       {
-        role: "Logopädin B.Sc.",
+        role: "Staatl. gepr. Logopädin",
         badge: "",
         extra:
-          "Bachelor of Science in Logopädie. Schwerpunkt: Sprachentwicklungsstörungen bei Kindern. Zusatzqualifikation als Theaterpädagogin.",
-      },
-      {
-        role: "Logopädin B.H.",
-        badge: "",
-        extra:
-          "Bachelor of Health in Logopädie. Spezialisiert auf Stimmstörungen und Dysphagie. Ausgebildete Erzieherin mit Herz für Kinder.",
-      },
-      {
-        role: "Logopädin",
-        badge: "",
-        extra:
-          "Fokus auf Redeflusstörungen (Stottern, Poltern) und Sprechapraxie. Mehrjährige Erfahrung in der stationären Rehabilitation.",
-      },
-      {
-        role: "Logopädin",
-        badge: "",
-        extra:
-          "Zweisprachige Logopädin (DE/TR). Schwerpunkt: Sprachentwicklungsstörungen bei mehrsprachig aufwachsenden Kindern und interkulturelle Familienberatung.",
+          "Logopädin mit Schwerpunkt auf Sprachentwicklung bei Kindern und Jugendlichen. Begleitung vom Erstgespräch bis zum Therapieabschluss.",
       },
     ],
   },

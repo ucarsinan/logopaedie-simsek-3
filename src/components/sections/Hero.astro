@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { useTranslations } from '../../i18n/index';
+import heroImg from '../../assets/therapy/hero-photo.webp';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -57,14 +59,14 @@ const t = useTranslations(lang).hero;
 
       <!-- Right: Hero Photo -->
       <div class="hidden lg:flex items-center justify-center reveal reveal-delay-2">
-        <div class="relative w-full">
-          <div class="absolute -inset-3 rounded-4xl bg-[radial-gradient(ellipse_at_center,rgba(42,127,111,0.10)_0%,transparent_70%)] blur-xl pointer-events-none"></div>
-          <img
-            src="/hero-photo.webp"
-            alt="Logopädin mit einem Kind und einem älteren Patienten in einer hellen Therapiepraxis"
-            class="relative w-full h-auto max-h-[95vh] object-cover object-center rounded-[1.25rem] shadow-[0_8px_40px_rgba(28,25,22,0.13)]"
-            width="1024"
-            height="1536"
+        <div class="relative w-full max-w-[480px] mx-auto">
+          <div class="absolute -inset-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(42,127,111,0.12)_0%,transparent_70%)] blur-2xl pointer-events-none"></div>
+          <Image
+            src={heroImg}
+            alt="Logopädin Emel Şimşek-Uçar in der Praxis Duisburg – Sprachtherapie für Kinder und Erwachsene"
+            class="relative w-full h-auto rounded-2xl shadow-xl object-cover"
+            widths={[480, 720, 960]}
+            sizes="(max-width: 1024px) 0vw, 40vw"
             loading="eager"
             decoding="async"
           />

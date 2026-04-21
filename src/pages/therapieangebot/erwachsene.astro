@@ -1,5 +1,7 @@
 ---
 import ServicePage from '../../layouts/ServicePage.astro';
+import { Image } from 'astro:assets';
+import erwachseneImg from '../../assets/therapy/logopaedie-erwachsene-bildkarten-duisburg.webp';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
@@ -38,6 +40,18 @@ const schema = {
     { title: 'Stimmtherapie', href: '/therapieangebot/stimmtherapie/', description: 'Dysphonie, Heiserkeit, ISTP-Methode' },
   ]}
 >
+  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
+    <Image
+      src={erwachseneImg}
+      alt="Bildkarten für die logopädische Therapie mit Erwachsenen in der Praxis Şimşek Duisburg"
+      class="w-full h-auto block"
+      widths={[400, 720]}
+      sizes="(max-width: 640px) 100vw, 42vw"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+
   <h2>Logopädie für Erwachsene – wann ist sie sinnvoll?</h2>
   <p>
     Sprach-, Sprech-, Stimm- und Schluckstörungen können Menschen in jedem Lebensalter

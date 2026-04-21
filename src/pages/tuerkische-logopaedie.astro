@@ -1,5 +1,7 @@
 ---
 import ServicePage from '../layouts/ServicePage.astro';
+import { Image } from 'astro:assets';
+import tuerkischImg from '../assets/therapy/tuerkische-logopaedie-familie-duisburg.webp';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
@@ -38,6 +40,18 @@ const schema = {
     { title: 'Türkische Logopädie Duisburg', href: '/tuerkische-logopaedie-duisburg/', description: 'Lokale Fachpraxis für türkischsprachige Patienten in Duisburg' },
   ]}
 >
+  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
+    <Image
+      src={tuerkischImg}
+      alt="Türkische Logopädie für Familien in Duisburg – zweisprachige Therapie Deutsch und Türkisch"
+      class="w-full h-auto block"
+      widths={[400, 720]}
+      sizes="(max-width: 640px) 100vw, 42vw"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+
   <h2>Türkische Logopädie – was bedeutet das?</h2>
   <p>
     Türkische Logopädie bedeutet, dass Diagnostik, Beratung und Therapie vollständig auf
@@ -90,7 +104,7 @@ const schema = {
     <p>
       <strong>Türkçe konuşuyoruz!</strong> Muayenehanemizde tüm tanı, danışmanlık ve
       terapi hizmetleri Türkçe ve Almanca olarak sunulmaktadır. Türk aileler için
-      ücretsiz ilk görüşme randevusu alabilirsiniz: <a href="tel:+4920334868690">0203 34 86 86 90</a>
+      randevu alabilirsiniz: <a href="tel:+4920334868690">0203 34 86 86 90</a>
     </p>
   </div>
 

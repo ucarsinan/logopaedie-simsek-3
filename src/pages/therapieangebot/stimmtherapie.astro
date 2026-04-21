@@ -1,5 +1,7 @@
 ---
 import ServicePage from '../../layouts/ServicePage.astro';
+import { Image } from 'astro:assets';
+import stimmImg from '../../assets/therapy/stimmtherapie-bildkarten-duisburg.webp';
 
 const schema = {
   "@context": "https://schema.org",
@@ -38,6 +40,18 @@ const schema = {
     { title: 'Schluckstörungen', href: '/therapieangebot/schluckstoerungen', description: 'Dysphagie bei Erwachsenen und Kindern' },
   ]}
 >
+  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
+    <Image
+      src={stimmImg}
+      alt="Bildkarten und Therapiematerialien für die Stimmtherapie in der Praxis Şimşek Duisburg"
+      class="w-full h-auto block"
+      widths={[400, 720]}
+      sizes="(max-width: 640px) 100vw, 42vw"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+
   <h2>Was sind Stimmstörungen?</h2>
   <p>
     Die Stimme ist unser wichtigstes und persönlichstes Kommunikationsinstrument. Stimmstörungen –

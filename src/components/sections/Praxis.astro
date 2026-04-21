@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { useTranslations } from '../../i18n/index';
+import praxisImg from '../../assets/therapy/praxis-simsek-atmosphaere-duisburg.webp';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -9,8 +11,19 @@ const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).praxis;
 ---
 
-<section class="py-24 bg-bg-alt" id="praxis" aria-labelledby="praxis-heading">
-  <div class="container">
+<section class="py-24 bg-bg-alt relative overflow-hidden" id="praxis" aria-labelledby="praxis-heading">
+  <div class="absolute inset-0" aria-hidden="true">
+    <Image
+      src={praxisImg}
+      alt=""
+      class="w-full h-full object-cover object-center opacity-[0.12]"
+      widths={[800, 1400, 1920]}
+      sizes="100vw"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="container relative z-10">
     <div class="flex flex-col gap-3 mb-14">
       <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">{t.section_label}</span>
       <h2 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="praxis-heading">{t.heading}</h2>
@@ -94,6 +107,7 @@ const t = useTranslations(lang).praxis;
         </div>
       </div>
     </div>
+  </div>
   </div>
   <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full mt-20" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">

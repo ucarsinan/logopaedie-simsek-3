@@ -9,7 +9,7 @@ const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).kontakt;
 ---
 
-<section class="py-24 bg-bg-alt" id="kontakt" aria-labelledby="kontakt-heading">
+<section class="py-24 bg-bg-alt [scroll-margin-top:calc(var(--header-h,80px)+var(--nav-h,50px)+16px)]" id="kontakt" aria-labelledby="kontakt-heading">
   <div class="container">
     <header class="text-center mb-14 flex flex-col items-center gap-4">
       <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">{t.section_label}</span>
