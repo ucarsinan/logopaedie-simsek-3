@@ -75,10 +75,10 @@ const localBusinessSchema = {
 
     <!-- Content -->
     <div class="container py-14">
-      <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div class="grid md:grid-cols-2 gap-12">
 
         <!-- Phone-only appointment CTA -->
-        <div class="bg-surface border border-border rounded-md p-9 shadow-sm flex flex-col gap-7">
+        <div class="bg-surface border border-border rounded-md p-9 shadow-sm flex flex-col">
           <!-- Notice -->
           <div class="bg-primary-light border border-[rgba(42,127,111,.25)] rounded-sm px-5 py-4 flex gap-3 items-start">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -86,7 +86,7 @@ const localBusinessSchema = {
           </div>
 
           <!-- Large phone CTA -->
-          <div class="flex flex-col items-center text-center gap-5 py-4">
+          <div class="flex flex-col items-center text-center gap-5 py-4 flex-1 justify-center">
             <div class="w-18 h-18 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_8px_24px_rgba(42,127,111,.35)]" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
@@ -151,9 +151,17 @@ const localBusinessSchema = {
             </div>
           </div>
 
-          <div class="bg-surface border border-border rounded-md p-6 shadow-sm">
-            <h3 class="font-display text-base font-semibold text-text mb-3">Ulaşım</h3>
-            <p class="text-sm text-text-muted mb-3">
+          <div class="bg-surface border border-border rounded-md p-6 shadow-sm text-sm">
+            <p class="font-semibold text-text mb-1">İki Dilli Muayenehane</p>
+            <p class="text-text-muted">Randevu ve danışmanlık Türkçe olarak da mümkündür.</p>
+          </div>
+        </div>
+
+        <!-- Ulaşım & Harita – full width -->
+        <div class="md:col-span-2 bg-surface border border-border rounded-md p-6 shadow-sm md:grid md:grid-cols-[1fr_2fr] md:gap-8 md:items-start" data-google-map>
+          <div class="mb-4 md:mb-0">
+            <h3 class="font-display text-base font-semibold text-text mb-3">Ulaşım & Harita</h3>
+            <p class="text-sm text-text-muted mb-5">
               Duisburg Ana Tren Garı'na yalnızca <strong class="text-text">2 dakika yürüme mesafesi</strong>.<br>
               U79 · König-Heinrich-Platz · S-Bahn / RE / RB Duisburg Hbf
             </p>
@@ -166,30 +174,22 @@ const localBusinessSchema = {
               Google Maps'te Aç
             </a>
           </div>
-
-          <div class="bg-surface border border-border rounded-md p-6 shadow-sm" data-google-map>
-            <h3 class="font-display text-base font-semibold text-text mb-3">Harita</h3>
-            <div class="relative overflow-hidden rounded-sm border border-border bg-bg-alt aspect-[16/10]">
-              <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center" data-google-map-placeholder>
-                <p class="text-sm text-text-muted leading-[1.6] max-w-sm">Google Maps haritası yalnızca onayınızdan sonra yüklenir. Bu sırada Google'a veri aktarılabilir.</p>
-                <button type="button" class="btn btn-primary !min-h-10 !px-4 !py-2 !text-sm" data-google-map-load>Haritayı yükle</button>
-              </div>
-              <iframe
-                hidden
-                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4975.050497490753!2d6.764741934341445!3d51.43014709490562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bf14865595d3%3A0x2c4bfb33dd4326db!2zUHJheGlzIGbDvHIgTG9nb3DDpGRpZSDFnmltxZ9law!5e0!3m2!1sde!2sde!4v1530622945154"
-                title="Google Maps: Praxis für Logopädie Şimşek"
-                class="w-full h-full border-0"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen></iframe>
+          <div class="relative overflow-hidden rounded-sm border border-border bg-bg-alt aspect-video">
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center" data-google-map-placeholder>
+              <p class="text-sm text-text-muted leading-[1.6] max-w-sm">Google Maps haritası yalnızca onayınızdan sonra yüklenir. Bu sırada Google'a veri aktarılabilir.</p>
+              <button type="button" class="btn btn-primary min-h-10! px-4! py-2! text-sm!" data-google-map-load>Haritayı yükle</button>
             </div>
-          </div>
-
-          <div class="bg-surface border border-border rounded-md p-5 text-sm">
-            <p class="font-semibold text-text mb-1">İki Dilli Muayenehane</p>
-            <p class="text-text-muted">Randevu ve danışmanlık Türkçe olarak da mümkündür.</p>
+            <iframe
+              hidden
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4975.050497490753!2d6.764741934341445!3d51.43014709490562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bf14865595d3%3A0x2c4bfb33dd4326db!2zUHJheGlzIGbDvHIgTG9nb3DDpGRpZSDFnmltxZ9law!5e0!3m2!1sde!2sde!4v1530622945154"
+              title="Google Maps: Praxis für Logopädie Şimşek"
+              class="w-full h-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
           </div>
         </div>
+
       </div>
     </div>
 

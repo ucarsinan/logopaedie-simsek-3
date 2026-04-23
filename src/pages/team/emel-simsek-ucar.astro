@@ -1,0 +1,350 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import emelImg from '../../assets/therapy/team-emel-simsek-ucar.jpg';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Emel Şimşek-Uçar",
+  "jobTitle": "Staatlich anerkannte Logopädin",
+  "url": `${siteUrl}/team/emel-simsek-ucar`,
+  "description": "Staatlich anerkannte Logopädin und Gründerin der Praxis für Logopädie Şimşek in Duisburg. Spezialisiert auf zweisprachige Diagnostik und Therapie auf Deutsch und Türkisch. Mehr als 10 Jahre klinische Erfahrung.",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Praxis für Logopädie Şimşek",
+    "url": siteUrl
+  },
+  "knowsLanguage": [
+    { "@type": "Language", "name": "German" },
+    { "@type": "Language", "name": "Turkish" }
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Logopädin",
+    "occupationalCategory": "Therapeutin",
+    "skills": "Sprachtherapie, Stimmtherapie, Dysphagietherapie, Frühförderung, Aphasietherapie, Zweisprachige Diagnostik"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team` },
+    { "@type": "ListItem", "position": 3, "name": "Emel Şimşek-Uçar", "item": `${siteUrl}/team/emel-simsek-ucar` }
+  ]
+};
+
+const schwerpunkte = [
+  {
+    icon: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
+    title: 'Kindersprachtherapie',
+    text: 'Sprachentwicklungsverzögerungen, Lautbildungsstörungen, Stottern, LRS-Prävention',
+  },
+  {
+    icon: `<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>`,
+    title: 'Mehrsprachige Diagnostik DE/TR',
+    text: 'Standardisierte Sprachstandserhebung in beiden Sprachen — Sprachstörung von sprachlicher Unsicherheit unterscheiden',
+  },
+  {
+    icon: `<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>`,
+    title: 'Erwachsenentherapie',
+    text: 'Aphasie, Dysarthrie, Stimmstörungen, Schluckstörungen nach neurologischen Erkrankungen',
+  },
+  {
+    icon: `<path d="M12 22C6.5 22 2 17.5 2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>`,
+    title: 'Frühförderung',
+    text: 'Logopädische Intervention ab dem Säuglingsalter — je früher, desto wirksamer',
+  },
+  {
+    icon: `<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/>`,
+    title: 'Stimmtherapie',
+    text: 'Funktionelle und organische Stimmstörungen, ISTP-Methode, Lax Vox',
+  },
+];
+---
+
+<Layout
+  title="Emel Şimşek-Uçar – Staatlich anerkannte Logopädin | Praxis Şimşek Duisburg"
+  description="Emel Şimşek-Uçar, Praxisinhaberin und staatlich anerkannte Logopädin in Duisburg. Zweisprachige Diagnostik und Therapie auf Deutsch und Türkisch. Über 10 Jahre Erfahrung."
+  additionalSchemas={[personSchema, breadcrumbSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/team/emel-simsek-ucar` },
+    { lang: 'x-default', url: `${siteUrl}/team/emel-simsek-ucar` },
+  ]}
+>
+  <Header />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </li>
+          <li><a href="/team/" class="hover:text-primary transition-colors">Team</a></li>
+          <li aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </li>
+          <li class="text-text font-medium" aria-current="page">Emel Şimşek-Uçar</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-primary-light border-b border-border py-12 pb-10">
+      <div class="container">
+        <span class="text-xs font-semibold tracking-[.12em] uppercase text-primary mb-3 block">
+          Praxisinhaberin · Logopädie Şimşek Duisburg
+        </span>
+        <h1 class="font-display text-[clamp(2.25rem,5vw,3.25rem)] font-semibold text-text leading-tight mb-3">
+          Emel Şimşek-Uçar
+        </h1>
+        <p class="text-primary font-semibold text-[1.0625rem] mb-4">
+          Staatlich anerkannte Logopädin
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">Deutsch &amp; Türkçe</span>
+          <span class="bg-surface border border-border text-text-muted text-xs font-semibold px-3 py-1.5 rounded-full">10+ Jahre Erfahrung</span>
+          <span class="bg-surface border border-border text-text-muted text-xs font-semibold px-3 py-1.5 rounded-full">Kinder &amp; Erwachsene</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Content -->
+    <div class="container py-12">
+      <div class="profile-grid">
+
+        <!-- Sidebar: Photo + Quick Facts -->
+        <aside class="profile-sidebar">
+          <div class="rounded-[var(--radius-lg)] overflow-hidden bg-surface-2 mb-5 shadow-sm">
+            <Image
+              src={emelImg}
+              alt="Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg"
+              class="w-full object-cover object-top"
+              widths={[380, 520, 760]}
+              sizes="(max-width: 860px) 100vw, 380px"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+
+          <!-- Quick facts -->
+          <div class="bg-surface border border-border rounded-[var(--radius-md)] p-5 mb-4">
+            <h2 class="font-semibold text-sm text-text mb-4 tracking-[.04em] uppercase text-text-muted">Kurzprofil</h2>
+            <ul class="space-y-3.5">
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <div>
+                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Qualifikation</div>
+                  <div class="text-sm font-semibold text-text">Staatlich anerkannte Logopädin</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </span>
+                <div>
+                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Sprachen</div>
+                  <div class="text-sm font-semibold text-text">Deutsch &amp; Türkçe</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </span>
+                <div>
+                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Erfahrung</div>
+                  <div class="text-sm font-semibold text-text">Mehr als 10 Jahre</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div>
+                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Standort</div>
+                  <div class="text-sm font-semibold text-text">Duisburg-Mitte</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <a href="/kontakt/" class="btn btn-primary w-full justify-center">Termin anfragen</a>
+        </aside>
+
+        <!-- Bio content -->
+        <div class="prose-section">
+
+          <h2>Über Emel Şimşek-Uçar</h2>
+          <p>
+            Emel Şimşek-Uçar ist <strong>staatlich anerkannte Logopädin</strong> und Gründerin der
+            Praxis für Logopädie Şimşek in Duisburg-Mitte. Mit mehr als zehn Jahren klinischer
+            Erfahrung begleitet sie Kinder, Jugendliche und Erwachsene auf dem Weg zu mehr
+            Kommunikationsfähigkeit.
+          </p>
+          <p>
+            Als zweisprachig aufgewachsene Therapeutin mit Deutsch und Türkisch auf
+            muttersprachlichem Niveau kennt sie die Herausforderungen mehrsprachiger Familien
+            aus eigener Perspektive. Diese Erfahrung fließt direkt in die Diagnostik und Therapie ein:
+            Mehrsprachigkeit wird als Ressource behandelt – nicht als Problem.
+          </p>
+
+          <h2>Schwerpunkte</h2>
+          <div class="focus-grid">
+            {schwerpunkte.map((item) => (
+              <div class="focus-card">
+                <div class="focus-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={item.icon} />
+                </div>
+                <div>
+                  <div class="focus-title">{item.title}</div>
+                  <div class="focus-text">{item.text}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2>Therapiephilosophie</h2>
+          <p>
+            Logopädische Therapie ist dann am wirksamsten, wenn sie im Alltag der Patientin
+            oder des Patienten verankert ist. Emel Şimşek-Uçar legt daher großen Wert auf
+            <strong>Elternarbeit und Angehörigenberatung</strong>: Übungen und Strategien, die zu
+            Hause, in der Kita oder im Alltag fortgeführt werden können, machen den Unterschied
+            zwischen langsamen Fortschritten und echtem Therapieerfolg.
+          </p>
+          <p>
+            Befundberichte, Therapiepläne und Elterngespräche können vollständig auf
+            Türkisch oder Deutsch geführt werden – damit Familien die Therapie wirklich
+            verstehen und aktiv unterstützen können.
+          </p>
+
+          <h2>Sprachen</h2>
+          <p>
+            Die Praxis bietet vollständige Diagnostik, Beratung und Therapie auf <strong>Deutsch und Türkisch</strong>.
+            Dies ist besonders wertvoll für zweisprachig aufwachsende Kinder und türkischsprachige
+            Patientinnen und Patienten, die in ihrer Muttersprache betreut werden möchten.
+          </p>
+
+          <div class="mt-8">
+            <a href="/therapieangebot/" class="btn btn-ghost justify-center">Unser Therapieangebot</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to team -->
+    <div class="border-t border-border bg-bg-alt py-6">
+      <div class="container">
+        <a href="/team/" class="inline-flex items-center gap-2 text-sm font-semibold text-text-muted hover:text-primary transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Zurück zum Team
+        </a>
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .profile-sidebar {
+    position: sticky;
+    top: calc(var(--header-h) + var(--nav-h) + 1.5rem);
+  }
+  @media (max-width: 860px) {
+    .profile-grid {
+      grid-template-columns: 1fr;
+    }
+    .profile-sidebar {
+      position: static;
+    }
+  }
+
+  /* Focus cards */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1rem 0 1.75rem;
+  }
+  @media (max-width: 600px) {
+    .focus-grid { grid-template-columns: 1fr; }
+  }
+  .focus-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .focus-icon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    shrink: 0;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .focus-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+  .focus-text {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  /* Prose */
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-section :global(h2:first-child) { margin-top: 0; }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+</style>

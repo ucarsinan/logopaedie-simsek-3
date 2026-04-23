@@ -61,23 +61,6 @@ const teamSchemas = [
 }
 ];
 
-const teamMembers = [
-  {
-    name: 'Emel Şimşek-Uçar',
-    role: 'Praxisinhaberin · Staatlich anerkannte Logopädin',
-    photo: emelImg,
-    alt: 'Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg',
-    tags: ['Deutsch & Türkçe', '10+ Jahre Erfahrung', 'Kinder & Erwachsene'],
-  },
-  {
-    name: 'Mara Nießalla',
-    role: 'Staatlich geprüfte Logopädin',
-    photo: maraImg,
-    alt: 'Mara Nießalla – Logopädin in der Praxis Şimşek Duisburg',
-    tags: ['Kinder & Jugendliche', 'Sprachentwicklung', 'Diagnostik & Therapie'],
-  },
-];
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -107,126 +90,180 @@ const breadcrumbSchema = {
       <div class="container py-3">
         <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
           <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
-          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </li>
           <li class="text-text font-medium" aria-current="page">Team</li>
         </ol>
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
-      <div class="container">
-        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
-          Unser Team
-        </h1>
-        <p class="text-text-muted text-lg">
-          Logopädie ist Vertrauenssache. Lernen Sie die Menschen hinter der Praxis kennen.
-        </p>
-      </div>
-    </section>
+    <!-- Bento Grid -->
+    <section class="container py-10 pb-16" aria-labelledby="team-heading">
+      <div class="bento">
 
-    <!-- Team Profile -->
-    <div class="container py-14">
-      <div class="prose-section">
+        <!-- ── Emel: Large portrait (spans 2 rows) ── -->
+        <article class="bento-emel relative overflow-hidden rounded-(--radius-lg) group" aria-label="Emel Şimşek-Uçar">
+          <a href="/team/emel-simsek-ucar/" class="absolute inset-0 z-10" aria-label="Zum Profil von Emel Şimşek-Uçar"></a>
+          <Image
+            src={emelImg}
+            alt="Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg"
+            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            widths={[480, 720, 960]}
+            sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
+            loading="eager"
+            decoding="async"
+          />
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
+          <!-- Badge -->
+          <div class="absolute top-5 right-5">
+            <span class="bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+              Praxisinhaberin
+            </span>
+          </div>
+          <!-- Content overlay -->
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <h2 id="team-heading" class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
+              Emel Şimşek-Uçar
+            </h2>
+            <p class="text-white/70 text-sm mb-3 font-medium">Staatlich anerkannte Logopädin</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Deutsch &amp; Türkçe
+              </span>
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                10+ Jahre Erfahrung
+              </span>
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Kinder &amp; Erwachsene
+              </span>
+            </div>
+            <span class="mt-3 inline-flex items-center gap-1 text-white/70 text-xs font-semibold group-hover:text-white transition-colors relative z-20 pointer-events-none">
+              Profil ansehen
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </span>
+          </div>
+        </article>
 
-        <div class="grid grid-cols-2 gap-6 mb-10 max-[860px]:grid-cols-1">
-          {teamMembers.map((member) => (
-            <article class="bg-surface border border-border rounded-md overflow-hidden shadow-sm">
-              <div class="grid grid-cols-[160px_1fr] min-h-45 max-[540px]:grid-cols-1">
-                <div class="relative bg-surface-2 overflow-hidden max-[540px]:h-64">
-                  <Image
-                    src={member.photo}
-                    alt={member.alt}
-                    class="w-full h-full object-cover object-top"
-                    widths={[240, 360, 520]}
-                    sizes="(max-width: 540px) 100vw, 160px"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div class="p-7 flex flex-col justify-center">
-                  <h2 class="font-display text-2xl font-semibold text-text mb-1">{member.name}</h2>
-                  <p class="text-primary font-medium text-sm mb-4">{member.role}</p>
-                  <div class="flex flex-wrap gap-2">
-                    {member.tags.map((tag) => (
-                      <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
+        <!-- ── Title card ── -->
+        <div class="bento-title rounded-(--radius-lg) p-8 flex flex-col justify-between" style="background: var(--color-primary-light);">
+          <span class="text-xs font-semibold tracking-[.12em] uppercase text-primary">Unser Team</span>
+          <div>
+            <p class="font-display text-[clamp(1.875rem,3vw,2.625rem)] font-semibold text-text leading-[1.1] mb-3">
+              Logopädie ist<br><em class="text-primary">Vertrauenssache.</em>
+            </p>
+            <p class="text-text-muted text-[0.9375rem] leading-relaxed max-w-xs">
+              Lernen Sie die Menschen kennen, die jeden Tag für bessere Kommunikation arbeiten.
+            </p>
+          </div>
+          <a href="/kontakt/" class="self-start btn btn-primary text-sm py-3 px-5 mt-2">
+            Termin anfragen
+          </a>
         </div>
 
-        <h2>Über Emel Şimşek-Uçar</h2>
-        <p>
-          Emel Şimşek-Uçar ist <strong>staatlich anerkannte Logopädin</strong> und Gründerin der
-          Praxis für Logopädie Şimşek in Duisburg-Mitte. Mit mehr als zehn Jahren klinischer
-          Erfahrung begleitet sie Kinder, Jugendliche und Erwachsene auf dem Weg zu mehr
-          Kommunikationsfähigkeit.
-        </p>
-        <p>
-          Als zweisprachig aufgewachsene Therapeutin mit Deutsch und Türkisch auf
-          muttersprachlichem Niveau kennt sie die Herausforderungen mehrsprachiger Familien
-          aus eigener Perspektive. Diese Erfahrung fließt direkt in die Diagnostik und Therapie ein:
-          Mehrsprachigkeit wird als Ressource behandelt – nicht als Problem.
-        </p>
+        <!-- ── Stats card ── -->
+        <div class="bento-stats rounded-(--radius-lg) p-6 flex flex-col justify-between" style="background: var(--color-primary);">
+          <div class="space-y-1 mb-6">
+            <div class="font-display text-[3.25rem] font-semibold text-white leading-none">10+</div>
+            <div class="text-white/55 text-xs font-medium leading-snug">Jahre klinische<br>Erfahrung</div>
+          </div>
+          <div class="w-8 h-px mb-6" style="background: rgba(255,255,255,0.2);"></div>
+          <div class="space-y-1">
+            <div class="font-display text-[3.25rem] font-semibold text-white leading-none">2</div>
+            <div class="text-white/55 text-xs font-medium leading-snug">Sprachen auf<br>Muttersprachniveau</div>
+          </div>
+        </div>
 
-        <h2>Schwerpunkte</h2>
-        <ul>
-          <li><strong>Kindersprachtherapie:</strong> Sprachentwicklungsverzögerungen, Lautbildungsstörungen, Stottern, LRS-Prävention</li>
-          <li><strong>Mehrsprachige Diagnostik DE/TR:</strong> Standardisierte Sprachstandserhebung in beiden Sprachen – um Sprachstörung von sprachlicher Unsicherheit zuverlässig zu unterscheiden</li>
-          <li><strong>Erwachsenentherapie:</strong> Aphasie, Dysarthrie, Stimmstörungen, Schluckstörungen nach neurologischen Erkrankungen</li>
-          <li><strong>Frühförderung:</strong> Logopädische Intervention ab dem Säuglingsalter – je früher, desto wirksamer</li>
-          <li><strong>Stimmtherapie:</strong> Funktionelle und organische Stimmstörungen, ISTP-Methode, Lax Vox</li>
-        </ul>
-
-        <h2>Therapiephilosophie</h2>
-        <p>
-          Logopädische Therapie ist dann am wirksamsten, wenn sie im Alltag der Patientin
-          oder des Patienten verankert ist. Emel Şimşek-Uçar legt daher großen Wert auf
-          <strong>Elternarbeit und Angehörigenberatung</strong>: Übungen und Strategien, die zu
-          Hause, in der Kita oder im Alltag fortgeführt werden können, machen den Unterschied
-          zwischen langsamen Fortschritten und echtem Therapieerfolg.
-        </p>
-        <p>
-          Befundberichte, Therapiepläne und Elterngespräche können vollständig auf
-          Türkisch oder Deutsch geführt werden – damit Familien die Therapie wirklich
-          verstehen und aktiv unterstützen können.
-        </p>
-
-        <h2>Über Mara Nießalla</h2>
-        <p>
-          Mara Nießalla ergänzt das Team als <strong>staatlich geprüfte Logopädin</strong>.
-          Ihr Schwerpunkt liegt in der Therapie von Kindern und Jugendlichen, insbesondere
-          bei Fragen rund um Sprachentwicklung, Artikulation und alltagsnahe Übungsstrategien.
-        </p>
-        <p>
-          Sie begleitet Familien vom Erstgespräch bis zum Therapieabschluss mit klarer
-          Diagnostik, nachvollziehbarer Beratung und Übungen, die sich gut in den Alltag
-          übertragen lassen.
-        </p>
-
-        <h2>Sprachen</h2>
-        <p>
-          Die Praxis bietet vollständige Diagnostik, Beratung und Therapie auf <strong>Deutsch und Türkisch</strong>.
-          Dies ist besonders wertvoll für zweisprachig aufwachsende Kinder und türkischsprachige
-          Patientinnen und Patienten, die in ihrer Muttersprache betreut werden möchten.
-        </p>
-
-        <div class="info-box">
-          <p>
-            <strong>Wir wachsen:</strong> Haben Sie Interesse, unser Team zu verstärken?
-            Wir suchen engagierte Logopädinnen und Logopäden.
-            <a href="/karriere/">Zur Stellenanzeige →</a>
+        <!-- ── Languages card ── -->
+        <div class="bento-lang rounded-(--radius-lg) p-6 flex flex-col justify-center gap-4" style="background: var(--color-bg-alt);">
+          <div class="flex gap-2.5 flex-wrap">
+            <span class="bg-surface border border-border text-text font-semibold text-sm px-4 py-2.5 rounded-xl shadow-sm">
+              🇩🇪&nbsp; Deutsch
+            </span>
+            <span class="bg-surface border border-border text-text font-semibold text-sm px-4 py-2.5 rounded-xl shadow-sm">
+              🇹🇷&nbsp; Türkçe
+            </span>
+          </div>
+          <p class="text-text-muted text-xs leading-relaxed">
+            Vollständige Diagnostik, Beratung und Therapie in beiden Sprachen — Mehrsprachigkeit als Ressource, nicht als Hürde.
           </p>
         </div>
 
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="/kontakt/" class="btn btn-primary w-full sm:flex-1 justify-center">Termin anfragen</a>
-          <a href="/therapieangebot/" class="btn btn-ghost w-full sm:flex-1 justify-center">Unser Therapieangebot</a>
+        <!-- ── Mara: Portrait card ── -->
+        <article class="bento-mara rounded-(--radius-lg) overflow-hidden group relative" style="background: var(--color-surface); border: 1px solid var(--color-border);" aria-label="Mara Nießalla">
+          <a href="/team/mara-niessalla/" class="absolute inset-0 z-10" aria-label="Zum Profil von Mara Nießalla"></a>
+          <div class="h-54 overflow-hidden relative">
+            <Image
+              src={maraImg}
+              alt="Mara Nießalla – Logopädin in der Praxis Şimşek Duisburg"
+              class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              widths={[320, 480, 640]}
+              sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-5">
+            <h2 class="font-display text-[1.3125rem] font-semibold text-text mb-1">Mara Nießalla</h2>
+            <p class="text-primary font-semibold text-sm mb-2.5">Staatlich geprüfte Logopädin</p>
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Kinder &amp; Jugendliche</span>
+              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Sprachentwicklung</span>
+              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Diagnostik</span>
+            </div>
+            <p class="text-text-muted text-xs leading-relaxed">
+              Schwerpunkt Kinder und Jugendliche: Sprachentwicklung, Artikulation und alltagsnahe Übungsstrategien.
+            </p>
+          </div>
+        </article>
+
+        <!-- ── Philosophy quote ── -->
+        <div class="bento-phil rounded-(--radius-lg) p-7 flex flex-col justify-center" style="background: var(--color-accent-light);">
+          <svg class="mb-4 shrink-0 opacity-35" width="36" height="36" viewBox="0 0 24 24" fill="var(--color-accent)" aria-hidden="true">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+          </svg>
+          <blockquote class="font-display text-[1.1875rem] italic text-text leading-relaxed mb-4">
+            „Mehrsprachigkeit ist keine Hürde – sie ist eine Ressource."
+          </blockquote>
+          <cite class="text-xs font-semibold tracking-widest uppercase not-italic" style="color: var(--color-accent);">
+            Emel Şimşek-Uçar
+          </cite>
         </div>
 
+        <!-- ── Career CTA ── -->
+        <a href="/karriere/" class="bento-cta rounded-(--radius-lg) p-6 flex flex-col justify-between text-white group transition-opacity hover:opacity-90" style="background: var(--color-accent);">
+          <div>
+            <span class="text-xs font-semibold tracking-[.12em] uppercase text-white/60">Karriere</span>
+            <h3 class="font-display text-[1.5rem] font-semibold text-white mt-2 leading-tight">
+              Wir suchen<br>Verstärkung
+            </h3>
+            <p class="text-white/65 text-xs mt-2.5 leading-relaxed">
+              Engagierte Logopäd:innen für unser Team in Duisburg gesucht.
+            </p>
+          </div>
+          <div
+            class="mt-5 inline-flex items-center justify-center gap-2 text-sm font-semibold rounded-xl px-4 py-3 transition-colors border border-white/30 group-hover:border-white/60"
+            style="background: rgba(255,255,255,0.12);"
+          >
+            Stellenanzeige
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <div class="border-t border-border bg-bg-alt py-8">
+      <div class="container flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <p class="text-text-muted text-sm">Fragen zu unserem Therapieangebot oder Terminanfragen?</p>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a href="/kontakt/" class="btn btn-primary justify-center">Termin anfragen</a>
+          <a href="/therapieangebot/" class="btn btn-ghost justify-center">Therapieangebot</a>
+        </div>
       </div>
     </div>
 
@@ -235,50 +272,56 @@ const breadcrumbSchema = {
 </Layout>
 
 <style>
-  .prose-section :global(h2) {
-    font-family: var(--font-display);
-    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-    font-weight: 600;
-    color: var(--color-text);
-    margin-top: 2.5rem;
-    margin-bottom: 0.75rem;
+  /* ── Bento grid layout ── */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(240px, auto) minmax(200px, auto) minmax(210px, auto);
+    gap: 12px;
+    grid-template-areas:
+      "emel emel title title title"
+      "emel emel stats lang  lang"
+      "mara mara phil  phil  cta";
   }
-  .prose-section :global(p) {
-    font-size: 0.9375rem;
-    color: var(--color-text-muted);
-    line-height: 1.75;
-    margin-bottom: 1rem;
+
+  .bento-emel  { grid-area: emel;  }
+  .bento-title { grid-area: title; }
+  .bento-stats { grid-area: stats; }
+  .bento-lang  { grid-area: lang;  }
+  .bento-mara  { grid-area: mara;  }
+  .bento-phil  { grid-area: phil;  }
+  .bento-cta   { grid-area: cta;   }
+
+  @media (max-width: 860px) {
+    .bento {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+      grid-template-areas:
+        "title title"
+        "emel  mara"
+        "stats lang"
+        "phil  cta";
+    }
+    .bento-emel { min-height: 340px; }
+    .bento-mara { min-height: 340px; }
   }
-  .prose-section :global(ul) {
-    list-style: none;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+
+  @media (max-width: 540px) {
+    .bento {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      grid-template-areas:
+        "title"
+        "emel"
+        "stats"
+        "lang"
+        "mara"
+        "phil"
+        "cta";
+    }
+    .bento-emel { min-height: 380px; }
+    .bento-mara { min-height: 300px; }
   }
-  .prose-section :global(ul li) {
-    font-size: 0.9375rem;
-    color: var(--color-text-muted);
-    padding-left: 1.5rem;
-    position: relative;
-  }
-  .prose-section :global(ul li::before) {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-primary);
-  }
-  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
-  .prose-section :global(a) { color: var(--color-primary); }
-  .info-box {
-    background: var(--color-primary-light);
-    border-left: 3px solid var(--color-primary);
-    border-radius: 0 6px 6px 0;
-    padding: 1.25rem 1.5rem;
-    margin: 1.5rem 0;
-  }
+
 </style>
