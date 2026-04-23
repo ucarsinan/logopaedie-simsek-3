@@ -117,9 +117,12 @@ const breadcrumbSchema = {
           <!-- Gradient overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
           <!-- Badge -->
-          <div class="absolute top-5 right-5">
+          <div class="absolute top-5 right-5 flex flex-col items-end gap-2">
             <span class="bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
               Praxisinhaberin
+            </span>
+            <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+              Logopädin
             </span>
           </div>
           <!-- Content overlay -->
@@ -157,9 +160,6 @@ const breadcrumbSchema = {
               Lernen Sie die Menschen kennen, die jeden Tag für bessere Kommunikation arbeiten.
             </p>
           </div>
-          <a href="/kontakt/" class="self-start btn btn-primary text-sm py-3 px-5 mt-2">
-            Termin anfragen
-          </a>
         </div>
 
         <!-- ── Stats card ── -->
@@ -190,31 +190,44 @@ const breadcrumbSchema = {
           </p>
         </div>
 
-        <!-- ── Mara: Portrait card ── -->
-        <article class="bento-mara rounded-(--radius-lg) overflow-hidden group relative" style="background: var(--color-surface); border: 1px solid var(--color-border);" aria-label="Mara Nießalla">
+        <!-- ── Mara: Large portrait (same style as Emel) ── -->
+        <article class="bento-mara relative overflow-hidden rounded-(--radius-lg) group" aria-label="Mara Nießalla">
           <a href="/team/mara-niessalla/" class="absolute inset-0 z-10" aria-label="Zum Profil von Mara Nießalla"></a>
-          <div class="h-54 overflow-hidden relative">
-            <Image
-              src={maraImg}
-              alt="Mara Nießalla – Logopädin in der Praxis Şimşek Duisburg"
-              class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              widths={[320, 480, 640]}
-              sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
-              loading="lazy"
-              decoding="async"
-            />
+          <Image
+            src={maraImg}
+            alt="Mara Nießalla – Logopädin in der Praxis Şimşek Duisburg"
+            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            widths={[480, 720, 960]}
+            sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
+          <!-- Badge -->
+          <div class="absolute top-5 right-5">
+            <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+              Logopädin
+            </span>
           </div>
-          <div class="p-5">
-            <h2 class="font-display text-[1.3125rem] font-semibold text-text mb-1">Mara Nießalla</h2>
-            <p class="text-primary font-semibold text-sm mb-2.5">Staatlich geprüfte Logopädin</p>
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Kinder &amp; Jugendliche</span>
-              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Sprachentwicklung</span>
-              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">Diagnostik</span>
+          <!-- Content overlay -->
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <h2 class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
+              Mara Nießalla
+            </h2>
+            <p class="text-white/70 text-sm mb-3 font-medium">Staatlich geprüfte Logopädin</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Kinder &amp; Jugendliche
+              </span>
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Sprachentwicklung
+              </span>
             </div>
-            <p class="text-text-muted text-xs leading-relaxed">
-              Schwerpunkt Kinder und Jugendliche: Sprachentwicklung, Artikulation und alltagsnahe Übungsstrategien.
-            </p>
+            <span class="mt-3 inline-flex items-center gap-1 text-white/70 text-xs font-semibold group-hover:text-white transition-colors relative z-20 pointer-events-none">
+              Profil ansehen
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </span>
           </div>
         </article>
 
@@ -279,9 +292,9 @@ const breadcrumbSchema = {
     grid-template-rows: minmax(240px, auto) minmax(200px, auto) minmax(210px, auto);
     gap: 12px;
     grid-template-areas:
-      "emel emel title title title"
-      "emel emel stats lang  lang"
-      "mara mara phil  phil  cta";
+      "emel emel mara mara title"
+      "emel emel mara mara stats"
+      "lang  lang  phil  phil  cta";
   }
 
   .bento-emel  { grid-area: emel;  }
@@ -314,14 +327,14 @@ const breadcrumbSchema = {
       grid-template-areas:
         "title"
         "emel"
+        "mara"
         "stats"
         "lang"
-        "mara"
         "phil"
         "cta";
     }
     .bento-emel { min-height: 380px; }
-    .bento-mara { min-height: 300px; }
+    .bento-mara { min-height: 380px; }
   }
 
 </style>
