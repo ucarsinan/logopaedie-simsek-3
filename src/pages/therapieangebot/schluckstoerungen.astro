@@ -8,16 +8,55 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Dysphagie-Therapie: Schluckstörungen behandeln in Duisburg",
   "description": "Professionelle Diagnostik und Therapie von Schluckstörungen (Dysphagie) in Duisburg – für Erwachsene und Kinder nach Schlaganfall, bei Parkinson oder neurologischen Erkrankungen.",
-  "url": "https://logopaedie-simsek.de/therapieangebot/schluckstoerungen",
+  "url": "https://logopaedie-simsek.de/therapieangebot/schluckstoerungen/",
   "about": { "@type": "MedicalCondition", "name": "Dysphagie" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
-      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": "https://logopaedie-simsek.de/therapieangebot" },
-      { "@type": "ListItem", "position": 3, "name": "Schluckstörungen", "item": "https://logopaedie-simsek.de/therapieangebot/schluckstoerungen" }
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": "https://logopaedie-simsek.de/therapieangebot/" },
+      { "@type": "ListItem", "position": 3, "name": "Schluckstörungen", "item": "https://logopaedie-simsek.de/therapieangebot/schluckstoerungen/" }
     ]
   }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wann sollte ich bei Schluckproblemen einen Logopäden aufsuchen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine logopädische Abklärung ist sinnvoll, wenn Sie häufig beim Essen oder Trinken husten, das Gefühl haben, dass Speisen im Hals stecken bleiben, eine nasse oder gurgelnde Stimme nach dem Essen bemerken, ungewollt abnehmen oder häufige Atemwegsinfekte auftreten. Schluckstörungen sollten zeitnah behandelt werden, da stille Aspiration ohne Therapie zu ernsthaften Folgeerkrankungen führen kann."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten für Schlucktherapie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Dysphagietherapie ist ein anerkanntes Heilmittel und wird bei ärztlicher Verordnung von gesetzlichen Krankenkassen übernommen. Auch Haus- oder Pflegeheimbesuche können verordnet und abgerechnet werden, wenn der Patient nicht mobil ist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann Schlucktherapie auch bei Kindern durchgeführt werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Schlucktherapie ist auch für Kinder geeignet – von Frühgeborenen mit Saugstörungen bis zu Schulkindern. Häufige Indikationen bei Kindern sind orofaziale Fehlfunktionen, oromotorische Schwächen oder Schluckstörungen im Rahmen neurologischer Erkrankungen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bieten Sie Hausbesuche für Schlucktherapie an?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, wir bieten Hausbesuche für Patientinnen und Patienten an, die nicht oder nur eingeschränkt mobil sind – zum Beispiel nach einem Schlaganfall oder bei fortgeschrittener Demenz. Hausbesuche für Dysphagietherapie können ärztlich verordnet werden und werden von der Krankenkasse übernommen."
+      }
+    }
+  ]
 };
 ---
 
@@ -27,11 +66,11 @@ const schema = {
   serviceTitle="Schluckstörungen (Dysphagie): Sicher schlucken lernen"
   breadcrumbLabel="Schluckstörungen"
   tags={['Dysphagie', 'Schlucken', 'Neurologie', 'Rehabilitation']}
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
-    { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/schluckstoerungen' },
-    { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/yutma-bozuklugu' },
-    { lang: 'x-default', url: 'https://logopaedie-simsek.de/therapieangebot/schluckstoerungen' },
+    { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/schluckstoerungen/' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/yutma-bozuklugu/' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/therapieangebot/schluckstoerungen/' },
   ]}
   alternateUrl="/terapi/yutma-bozuklugu"
   relatedServices={[

@@ -40,9 +40,9 @@ const localBusinessSchema = {
   description="Kontakt zur Praxis für Logopädie Şimşek in Duisburg. Termin anfragen, Adresse, Telefon, E-Mail, Öffnungszeiten und Anfahrt. Nur 2 Minuten vom Hauptbahnhof."
   additionalSchemas={[breadcrumbSchema, localBusinessSchema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/kontakt` },
-    { lang: 'tr', url: `${siteUrl}/iletisim` },
-    { lang: 'x-default', url: `${siteUrl}/kontakt` },
+    { lang: 'de', url: `${siteUrl}/kontakt/` },
+    { lang: 'tr', url: `${siteUrl}/iletisim/` },
+    { lang: 'x-default', url: `${siteUrl}/kontakt/` },
   ]}
 >
   <Header alternateUrl="/iletisim" />
@@ -145,6 +145,11 @@ const localBusinessSchema = {
               </address>
             </div>
           </div>
+        </div>
+
+        <!-- Insurance note -->
+        <div class="md:col-span-2 bg-accent-light border border-[rgba(196,113,79,.2)] rounded-md p-6">
+          <p class="text-[.9375rem] text-text leading-[1.7]"><strong>Kassenrezept oder Selbstzahler?</strong><br>Wir arbeiten mit allen gesetzlichen Krankenkassen und nehmen auch Privatpatienten sowie Selbstzahler an. Bei Fragen zur Abrechnung beraten wir Sie gerne.</p>
         </div>
 
         <!-- Anfahrt & Karte – full width -->

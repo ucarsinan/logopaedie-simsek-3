@@ -66,19 +66,19 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team` }
+    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team/` }
   ]
 };
 ---
 
 <Layout
   title="Unser Team – Praxis für Logopädie Şimşek Duisburg"
-  description="Lernen Sie Emel Şimşek-Uçar und Mara Nießalla kennen – das Team der Praxis für Logopädie Şimşek in Duisburg."
+  description="Emel Şimşek-Uçar und Mara Nießalla – das Logopädinnen-Team der Praxis Şimşek in Duisburg. Zweisprachige Sprachtherapie auf Deutsch und Türkisch, über 10 Jahre Erfahrung."
   additionalSchemas={[...teamSchemas, breadcrumbSchema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/team` },
-    { lang: 'tr', url: `${siteUrl}/ekip` },
-    { lang: 'x-default', url: `${siteUrl}/team` },
+    { lang: 'de', url: `${siteUrl}/team/` },
+    { lang: 'tr', url: `${siteUrl}/ekip/` },
+    { lang: 'x-default', url: `${siteUrl}/team/` },
   ]}
 >
   <Header alternateUrl="/ekip" />
@@ -100,6 +100,7 @@ const breadcrumbSchema = {
 
     <!-- Bento Grid -->
     <section class="container py-10 pb-16" aria-labelledby="team-heading">
+      <h1 class="sr-only" id="team-heading">Unser Team – Praxis für Logopädie Şimşek Duisburg</h1>
       <div class="bento">
 
         <!-- ── Emel: Large portrait (spans 2 rows) ── -->
@@ -127,7 +128,7 @@ const breadcrumbSchema = {
           </div>
           <!-- Content overlay -->
           <div class="absolute bottom-0 left-0 right-0 p-6">
-            <h2 id="team-heading" class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
+            <h2 class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
               Emel Şimşek-Uçar
             </h2>
             <p class="text-white/70 text-sm mb-3 font-medium">Staatlich anerkannte Logopädin</p>

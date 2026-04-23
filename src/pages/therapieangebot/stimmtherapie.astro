@@ -8,16 +8,55 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Stimmtherapie: Stimmstörungen behandeln in Duisburg",
   "description": "Logopädische Stimmtherapie in Duisburg bei Dysphonie, Heiserkeit und organischen Stimmstörungen. Für Berufssprecher, Sänger und alle Altersgruppen.",
-  "url": "https://logopaedie-simsek.de/therapieangebot/stimmtherapie",
+  "url": "https://logopaedie-simsek.de/therapieangebot/stimmtherapie/",
   "about": { "@type": "MedicalCondition", "name": "Stimmstörung" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
-      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": "https://logopaedie-simsek.de/therapieangebot" },
-      { "@type": "ListItem", "position": 3, "name": "Stimmtherapie", "item": "https://logopaedie-simsek.de/therapieangebot/stimmtherapie" }
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": "https://logopaedie-simsek.de/therapieangebot/" },
+      { "@type": "ListItem", "position": 3, "name": "Stimmtherapie", "item": "https://logopaedie-simsek.de/therapieangebot/stimmtherapie/" }
     ]
   }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten für Stimmtherapie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, bei ärztlicher Verordnung übernehmen gesetzliche Krankenkassen die Kosten für Stimmtherapie als Heilmittel. Voraussetzung ist eine laryngoskopische Untersuchung durch einen HNO-Arzt und ein entsprechendes Rezept. Privatkassen und Beihilfe übernehmen die Kosten ebenfalls in der Regel vollständig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert eine Stimmtherapie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Dauer einer Stimmtherapie hängt von der Art und Schwere der Stimmstörung ab. Typischerweise umfasst eine Therapie 10 bis 20 Einheiten à 45 Minuten. Bei funktionellen Stimmstörungen sind oft weniger Sitzungen nötig als bei organischen oder neurogenen Stimmstörungen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich vor der Stimmtherapie zum HNO-Arzt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, vor Beginn einer Stimmtherapie ist eine Untersuchung beim HNO-Arzt (Laryngoskopie) dringend empfohlen und für die Verordnung notwendig. Heiserkeit, die länger als 2–3 Wochen anhält, sollte zunächst ärztlich abgeklärt werden, um ernsthafte Erkrankungen auszuschließen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist die Lax-Vox-Methode in der Stimmtherapie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lax Vox® ist eine sanfte, wissenschaftlich fundierte Stimmrehabilitationsmethode, bei der durch einen Schlauch in Wasser geblasen wird. Die entstehenden Vibrationen lockern die Kehlkopfmuskulatur, massieren die Stimmlippen und fördern eine natürliche Schwingung. Die Methode eignet sich besonders bei Stimmknötchen, Stimmödemen und nach Kehlkopfoperationen."
+      }
+    }
+  ]
 };
 ---
 
@@ -27,11 +66,11 @@ const schema = {
   serviceTitle="Stimmtherapie: Ihre Stimme – unsere Expertise"
   breadcrumbLabel="Stimmtherapie"
   tags={['Dysphonie', 'Heiserkeit', 'Stimmbildung', 'Berufssprecher']}
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
-    { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/stimmtherapie' },
-    { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/ses-terapisi' },
-    { lang: 'x-default', url: 'https://logopaedie-simsek.de/therapieangebot/stimmtherapie' },
+    { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/stimmtherapie/' },
+    { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/ses-terapisi/' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/therapieangebot/stimmtherapie/' },
   ]}
   alternateUrl="/terapi/ses-terapisi"
   relatedServices={[

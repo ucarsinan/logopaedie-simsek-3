@@ -121,7 +121,7 @@ const t = {
       <section class="py-14 bg-bg" aria-labelledby="related-heading">
         <div class="container">
           <h2 class="font-display text-2xl font-semibold text-text mb-8" id="related-heading">{t.relatedHeading}</h2>
-          <div class="grid grid-cols-3 gap-5 max-[640px]:grid-cols-1">
+          <div class="grid grid-cols-3 gap-6 max-[860px]:grid-cols-2 max-[640px]:grid-cols-1">
             {relatedServices.map(s => (
               <a href={s.href} class="bg-surface border border-border rounded-md p-6 shadow-sm hover:border-primary hover:-translate-y-0.5 hover:shadow-md transition-[transform,box-shadow,border-color] duration-200 flex flex-col gap-2 no-underline group">
                 <span class="font-semibold text-text group-hover:text-primary transition-colors">{s.title}</span>

@@ -190,7 +190,7 @@ export const de = {
       "Alles Wichtige rund um Logopädie, Kostenübernahme und Terminvereinbarung auf einen Blick.",
     no_question: "Ihre Frage ist nicht dabei?",
     ask_cta: "Direkt anfragen",
-    ask_href: "/#kontakt",
+    ask_href: "/kontakt/",
     items: [
       {
         q: "Was behandeln Logopädinnen und Logopäden?",
