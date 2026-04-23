@@ -13,19 +13,30 @@ const { lang = 'de' } = Astro.props;
 
 const isTR = lang === 'tr';
 
-const cards = isTR
+type BentoCard = {
+  img: typeof babyImg;
+  label: string;
+  sub: string;
+  href: string;
+};
+
+type BentoCards = [BentoCard, BentoCard, BentoCard, BentoCard];
+
+const cards: BentoCards = isTR
   ? [
-      { img: babyImg, label: 'Erken Müdahale', sub: '0–6 Yaş', href: '/terapi/erken-mudahale' },
-      { img: stimmImg, label: 'Ses Terapisi', sub: 'Disfoni & Kısıklık', href: '/terapi/ses-terapisi' },
-      { img: hausImg, label: 'Ev Ziyaretleri', sub: 'Mobil Terapi', href: '/ev-ziyaretleri-duisburg/' },
-      { img: seniImg, label: 'Yetişkin Terapisi', sub: 'Her Yaş İçin', href: '/terapi/yetiskinler' },
+      { img: babyImg, label: 'Erken Müdahale', sub: '0–6 Yaş', href: '/terapi/' },
+      { img: stimmImg, label: 'Ses Terapisi', sub: 'Disfoni & Kısıklık', href: '/terapi/ses-terapisi/' },
+      { img: hausImg, label: 'Ev Ziyaretleri', sub: 'Mobil Terapi', href: '/hausbesuche-duisburg/' },
+      { img: seniImg, label: 'Yetişkin Terapisi', sub: 'Her Yaş İçin', href: '/terapi/' },
     ]
   : [
       { img: babyImg, label: 'Frühförderung', sub: '0–6 Jahre', href: '/fruehfoerderung-duisburg/' },
-      { img: stimmImg, label: 'Stimmtherapie', sub: 'Dysphonie & Heiserkeit', href: '/therapieangebot/stimmtherapie' },
+      { img: stimmImg, label: 'Stimmtherapie', sub: 'Dysphonie & Heiserkeit', href: '/therapieangebot/stimmtherapie/' },
       { img: hausImg, label: 'Hausbesuche', sub: 'Mobile Therapie', href: '/hausbesuche-duisburg/' },
-      { img: seniImg, label: 'Erwachsene & Senioren', sub: 'Für alle Altersgruppen', href: '/therapieangebot/erwachsene' },
+      { img: seniImg, label: 'Erwachsene & Senioren', sub: 'Für alle Altersgruppen', href: '/therapieangebot/erwachsene/' },
     ];
+
+const [primaryCard, voiceCard, homeVisitCard, adultCard] = cards;
 ---
 
 <section class="py-5 bg-bg-alt" aria-label={isTR ? 'Praxisten Görüntüler' : 'Einblicke in die Praxis'}>
@@ -34,13 +45,13 @@ const cards = isTR
 
       <!-- Large cell: col-span-2 row-span-2 -->
       <a
-        href={cards[0].href}
+        href={primaryCard.href}
         class="bento-cell bento-large group reveal"
-        aria-label={cards[0].label}
+        aria-label={primaryCard.label}
       >
         <Image
-          src={cards[0].img}
-          alt={cards[0].label}
+          src={primaryCard.img}
+          alt={primaryCard.label}
           class="bento-img"
           widths={[480, 800, 1100]}
           sizes="(max-width: 900px) 100vw, 50vw"
@@ -49,8 +60,8 @@ const cards = isTR
         />
         <div class="bento-overlay"></div>
         <div class="bento-label">
-          <span class="bento-label-sub">{cards[0].sub}</span>
-          <span class="bento-label-title">{cards[0].label}</span>
+          <span class="bento-label-sub">{primaryCard.sub}</span>
+          <span class="bento-label-title">{primaryCard.label}</span>
         </div>
         <div class="bento-arrow">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
@@ -59,13 +70,13 @@ const cards = isTR
 
       <!-- Medium cell top: col 3 row 1 -->
       <a
-        href={cards[1].href}
+        href={voiceCard.href}
         class="bento-cell bento-medium group reveal reveal-delay-1"
-        aria-label={cards[1].label}
+        aria-label={voiceCard.label}
       >
         <Image
-          src={cards[1].img}
-          alt={cards[1].label}
+          src={voiceCard.img}
+          alt={voiceCard.label}
           class="bento-img"
           widths={[320, 560]}
           sizes="(max-width: 900px) 50vw, 25vw"
@@ -74,20 +85,20 @@ const cards = isTR
         />
         <div class="bento-overlay"></div>
         <div class="bento-label">
-          <span class="bento-label-sub">{cards[1].sub}</span>
-          <span class="bento-label-title">{cards[1].label}</span>
+          <span class="bento-label-sub">{voiceCard.sub}</span>
+          <span class="bento-label-title">{voiceCard.label}</span>
         </div>
       </a>
 
       <!-- Medium cell top: col 4 row 1 -->
       <a
-        href={cards[2].href}
+        href={homeVisitCard.href}
         class="bento-cell bento-medium group reveal reveal-delay-2"
-        aria-label={cards[2].label}
+        aria-label={homeVisitCard.label}
       >
         <Image
-          src={cards[2].img}
-          alt={cards[2].label}
+          src={homeVisitCard.img}
+          alt={homeVisitCard.label}
           class="bento-img"
           widths={[320, 560]}
           sizes="(max-width: 900px) 50vw, 25vw"
@@ -96,20 +107,20 @@ const cards = isTR
         />
         <div class="bento-overlay"></div>
         <div class="bento-label">
-          <span class="bento-label-sub">{cards[2].sub}</span>
-          <span class="bento-label-title">{cards[2].label}</span>
+          <span class="bento-label-sub">{homeVisitCard.sub}</span>
+          <span class="bento-label-title">{homeVisitCard.label}</span>
         </div>
       </a>
 
       <!-- Wide cell: col-span-2 row 2 -->
       <a
-        href={cards[3].href}
+        href={adultCard.href}
         class="bento-cell bento-wide group reveal reveal-delay-3"
-        aria-label={cards[3].label}
+        aria-label={adultCard.label}
       >
         <Image
-          src={cards[3].img}
-          alt={cards[3].label}
+          src={adultCard.img}
+          alt={adultCard.label}
           class="bento-img"
           widths={[480, 800, 1100]}
           sizes="(max-width: 900px) 100vw, 50vw"
@@ -118,8 +129,8 @@ const cards = isTR
         />
         <div class="bento-overlay"></div>
         <div class="bento-label">
-          <span class="bento-label-sub">{cards[3].sub}</span>
-          <span class="bento-label-title">{cards[3].label}</span>
+          <span class="bento-label-sub">{adultCard.sub}</span>
+          <span class="bento-label-title">{adultCard.label}</span>
         </div>
       </a>
 

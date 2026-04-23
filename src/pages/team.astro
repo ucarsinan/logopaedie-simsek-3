@@ -3,10 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import emelImg from '../assets/therapy/team-emel-simsek-ucar.jpg';
+import maraImg from '../assets/therapy/team-mara-niessalla.png';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
-const personSchema = {
+const teamSchemas = [
+{
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Emel Şimşek-Uçar",
@@ -35,7 +39,44 @@ const personSchema = {
     "postalCode": "47051",
     "addressCountry": "DE"
   }
-};
+},
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mara Nießalla",
+  "jobTitle": "Staatlich geprüfte Logopädin",
+  "url": `${siteUrl}/team`,
+  "description": "Staatlich geprüfte Logopädin in der Praxis für Logopädie Şimşek in Duisburg. Schwerpunkt Sprachentwicklung bei Kindern und Jugendlichen.",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Praxis für Logopädie Şimşek",
+    "url": siteUrl
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Logopädin",
+    "occupationalCategory": "Therapeutin",
+    "skills": "Kindersprachtherapie, Sprachentwicklung, Diagnostik, Therapieplanung"
+  }
+}
+];
+
+const teamMembers = [
+  {
+    name: 'Emel Şimşek-Uçar',
+    role: 'Praxisinhaberin · Staatlich anerkannte Logopädin',
+    photo: emelImg,
+    alt: 'Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg',
+    tags: ['Deutsch & Türkçe', '10+ Jahre Erfahrung', 'Kinder & Erwachsene'],
+  },
+  {
+    name: 'Mara Nießalla',
+    role: 'Staatlich geprüfte Logopädin',
+    photo: maraImg,
+    alt: 'Mara Nießalla – Logopädin in der Praxis Şimşek Duisburg',
+    tags: ['Kinder & Jugendliche', 'Sprachentwicklung', 'Diagnostik & Therapie'],
+  },
+];
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -49,8 +90,8 @@ const breadcrumbSchema = {
 
 <Layout
   title="Unser Team – Praxis für Logopädie Şimşek Duisburg"
-  description="Lernen Sie Emel Şimşek-Uçar kennen – staatlich anerkannte Logopädin mit über 10 Jahren Erfahrung. Zweisprachige Therapie auf Deutsch und Türkisch in Duisburg."
-  additionalSchemas={[personSchema, breadcrumbSchema]}
+  description="Lernen Sie Emel Şimşek-Uçar und Mara Nießalla kennen – das Team der Praxis für Logopädie Şimşek in Duisburg."
+  additionalSchemas={[...teamSchemas, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/team` },
     { lang: 'tr', url: `${siteUrl}/ekip` },
@@ -88,19 +129,33 @@ const breadcrumbSchema = {
     <div class="container py-14">
       <div class="prose-section">
 
-        <div class="bg-surface border border-border rounded-md p-8 shadow-sm mb-10 flex gap-8 items-start max-[640px]:flex-col">
-          <div class="w-24 h-24 rounded-sm bg-primary-light flex items-center justify-center text-primary shrink-0" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <div>
-            <h2 class="font-display text-2xl font-semibold text-text mb-1">Emel Şimşek-Uçar</h2>
-            <p class="text-primary font-medium text-sm mb-4">Praxisinhaberin · Staatlich anerkannte Logopädin</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Deutsch & Türkçe</span>
-              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">10+ Jahre Erfahrung</span>
-              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Kinder & Erwachsene</span>
-            </div>
-          </div>
+        <div class="grid grid-cols-2 gap-6 mb-10 max-[860px]:grid-cols-1">
+          {teamMembers.map((member) => (
+            <article class="bg-surface border border-border rounded-md overflow-hidden shadow-sm">
+              <div class="grid grid-cols-[160px_1fr] min-h-45 max-[540px]:grid-cols-1">
+                <div class="relative bg-surface-2 overflow-hidden max-[540px]:h-64">
+                  <Image
+                    src={member.photo}
+                    alt={member.alt}
+                    class="w-full h-full object-cover object-top"
+                    widths={[240, 360, 520]}
+                    sizes="(max-width: 540px) 100vw, 160px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-7 flex flex-col justify-center">
+                  <h2 class="font-display text-2xl font-semibold text-text mb-1">{member.name}</h2>
+                  <p class="text-primary font-medium text-sm mb-4">{member.role}</p>
+                  <div class="flex flex-wrap gap-2">
+                    {member.tags.map((tag) => (
+                      <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
         <h2>Über Emel Şimşek-Uçar</h2>
@@ -138,6 +193,18 @@ const breadcrumbSchema = {
           Befundberichte, Therapiepläne und Elterngespräche können vollständig auf
           Türkisch oder Deutsch geführt werden – damit Familien die Therapie wirklich
           verstehen und aktiv unterstützen können.
+        </p>
+
+        <h2>Über Mara Nießalla</h2>
+        <p>
+          Mara Nießalla ergänzt das Team als <strong>staatlich geprüfte Logopädin</strong>.
+          Ihr Schwerpunkt liegt in der Therapie von Kindern und Jugendlichen, insbesondere
+          bei Fragen rund um Sprachentwicklung, Artikulation und alltagsnahe Übungsstrategien.
+        </p>
+        <p>
+          Sie begleitet Familien vom Erstgespräch bis zum Therapieabschluss mit klarer
+          Diagnostik, nachvollziehbarer Beratung und Übungen, die sich gut in den Alltag
+          übertragen lassen.
         </p>
 
         <h2>Sprachen</h2>

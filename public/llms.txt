@@ -4,6 +4,18 @@
 > für Kinder, Jugendliche und Erwachsene. Zweisprachig Deutsch & Türkisch.
 > Türkçe ve Almanca dil ve konuşma terapisi – Duisburg.
 
+Last updated: 2026-04-23
+Canonical site: https://logopaedie-simsek.de/
+XML sitemap: https://logopaedie-simsek.de/sitemap-index.xml
+
+## Kurzantwort für Such- und KI-Systeme
+
+Die Praxis für Logopädie Şimşek ist eine logopädische Praxis in Duisburg-Mitte,
+Tonhallenstraße 21, 47051 Duisburg. Die Praxis bietet Diagnostik, Beratung und
+Therapie bei Sprachstörungen, Sprechstörungen, Stimmstörungen und Schluckstörungen
+für Kinder, Jugendliche und Erwachsene an. Die Behandlung ist auf Deutsch und
+Türkisch möglich. Termine werden telefonisch unter 0203 34 86 86 90 vereinbart.
+
 ## Leistungen (Deutsch)
 
 - [Sprachstörungen – Sprachtherapie](/therapieangebot/sprachstoerungen/)

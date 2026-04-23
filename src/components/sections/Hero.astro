@@ -17,7 +17,7 @@ const t = useTranslations(lang).hero;
   <div class="absolute rounded-full pointer-events-none z-0 w-[clamp(300px,40vw,580px)] h-[clamp(300px,40vw,580px)] bg-[radial-gradient(circle,rgba(42,127,111,.12)_0%,transparent_70%)] -top-[10%] -right-[10%]" aria-hidden="true"></div>
   <div class="absolute rounded-full pointer-events-none z-0 w-[clamp(200px,30vw,420px)] h-[clamp(200px,30vw,420px)] bg-[radial-gradient(circle,rgba(196,113,79,.10)_0%,transparent_70%)] bottom-[10%] -left-[5%]" aria-hidden="true"></div>
   <div class="container relative z-[1] pt-20 pb-[60px]">
-    <div class="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-12 lg:gap-16 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
       <!-- Left: Text content -->
       <div>
         <div class="inline-flex items-center gap-2 bg-primary-light text-primary text-[.8125rem] font-semibold tracking-[.06em] uppercase px-[14px] py-[6px] rounded-full mb-6 before:content-[''] before:block before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary reveal">{t.badge}</div>
@@ -27,7 +27,7 @@ const t = useTranslations(lang).hero;
         <p class="text-[clamp(1rem,1.5vw,1.1875rem)] text-text-muted leading-[1.7] max-w-[560px] mb-10 reveal reveal-delay-2">
           {t.description}
         </p>
-        <div class="flex flex-wrap gap-3 mb-14 reveal reveal-delay-3">
+        <div class="flex flex-col sm:flex-row lg:flex-nowrap gap-3 mb-14 reveal reveal-delay-3">
           <a href="#kontakt" class="btn btn-accent">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
             {t.cta_primary}

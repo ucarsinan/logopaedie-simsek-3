@@ -7,6 +7,7 @@ interface Props {
 
 const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).footer;
+const year = new Date().getFullYear();
 ---
 
 <footer class="bg-text text-white/70 pt-12 pb-8" role="contentinfo">
@@ -15,6 +16,9 @@ const t = useTranslations(lang).footer;
       <div class="font-display text-[1.1875rem] font-semibold text-white leading-[1.2]">
         Praxis für Logopädie Şimşek
         <span class="block text-xs font-body font-normal text-white/50 tracking-[.06em] uppercase mt-0.5">{t.tagline}</span>
+        <span class="block text-xs font-body font-normal text-white/50 mt-3">
+          Tonhallenstraße 21 · 47051 Duisburg · Tel. 0203 – 34 86 86 90 · Fax 0203 – 34 86 86 91
+        </span>
       </div>
       <nav class="flex gap-6 flex-wrap" aria-label={t.nav_label}>
         <a href={t.links.services.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.services.label}</a>
@@ -25,20 +29,17 @@ const t = useTranslations(lang).footer;
         <a href={t.links.contact.href} class="text-sm text-white/60 transition-colors duration-200 hover:text-white">{t.links.contact.label}</a>
       </nav>
       <div class="flex gap-3">
-        <a href="#" class="w-10 h-10 rounded-sm border border-white/15 flex items-center justify-center text-white/60 transition-[background,color,border-color] duration-200 hover:bg-white/10 hover:text-white hover:border-white/30" aria-label="Instagram" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="#" class="w-10 h-10 rounded-sm border border-white/15 flex items-center justify-center text-white/60 transition-[background,color,border-color] duration-200 hover:bg-white/10 hover:text-white hover:border-white/30" aria-label="Facebook" rel="noopener">
+        <a href="https://www.facebook.com/logopaediesimsek/" target="_blank" class="w-10 h-10 rounded-sm border border-white/15 flex items-center justify-center text-white/60 transition-[background,color,border-color] duration-200 hover:bg-white/10 hover:text-white hover:border-white/30" aria-label="Facebook" rel="noopener noreferrer">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
       </div>
     </div>
     <div class="flex flex-wrap justify-between items-center gap-3 text-[.8125rem]">
-      <p>&copy; 2025 Praxis für Logopädie Şimşek · Emel Şimşek-Uçar · {t.copyright}</p>
+      <p>&copy; {year} Praxis für Logopädie Şimşek · Emel Şimşek-Uçar · {t.copyright}</p>
       <div class="flex gap-5 flex-wrap">
-        <a href="/impressum" class="text-white/50 transition-colors duration-200 hover:text-white">Impressum</a>
-        <a href="/datenschutz" class="text-white/50 transition-colors duration-200 hover:text-white">{t.privacy}</a>
-        <a href="/barrierefreiheit" class="text-white/50 transition-colors duration-200 hover:text-white">{t.accessibility}</a>
+        <a href="/impressum/" class="text-white/50 transition-colors duration-200 hover:text-white">Impressum</a>
+        <a href="/datenschutz/" class="text-white/50 transition-colors duration-200 hover:text-white">{t.privacy}</a>
+        <a href="/barrierefreiheit/" class="text-white/50 transition-colors duration-200 hover:text-white">{t.accessibility}</a>
       </div>
     </div>
   </div>

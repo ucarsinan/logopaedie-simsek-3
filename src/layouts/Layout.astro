@@ -15,19 +15,74 @@ interface Props {
   additionalSchemas?: Record<string, unknown>[];
   lang?: 'de' | 'tr';
   hreflangAlternates?: HreflangAlternate[];
+  lastUpdated?: string;
 }
 
-const { title, description, ogImage = '/therapy/og-logopaedie-simsek-duisburg.webp', additionalSchemas = [], lang = 'de', hreflangAlternates = [] } = Astro.props;
+const {
+  title,
+  description,
+  ogImage = '/therapy/og-logopaedie-simsek-duisburg.webp',
+  additionalSchemas = [],
+  lang = 'de',
+  hreflangAlternates = [],
+  lastUpdated = '2026-04-23',
+} = Astro.props;
 
 const siteUrl = 'https://logopaedie-simsek.de';
-const canonicalUrl = `${siteUrl}${Astro.url.pathname}`;
+const normalizeAbsoluteUrl = (url: string) => {
+  const absoluteUrl = url.startsWith('http')
+    ? url
+    : `${siteUrl}${url.startsWith('/') ? '' : '/'}${url}`;
+  const parsedUrl = new URL(absoluteUrl);
+
+  if (!parsedUrl.pathname.includes('.') && !parsedUrl.pathname.endsWith('/')) {
+    parsedUrl.pathname = `${parsedUrl.pathname}/`;
+  }
+
+  return parsedUrl.toString();
+};
+
+const canonicalUrl = normalizeAbsoluteUrl(`${siteUrl}${Astro.url.pathname}`);
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 const ogLocale = lang === 'tr' ? 'tr_TR' : 'de_DE';
+const alternateOgLocale = lang === 'tr' ? 'de_DE' : 'tr_TR';
+const inLanguage = lang === 'tr' ? 'tr-DE' : 'de-DE';
+const normalizedHreflangAlternates = hreflangAlternates.map((alt) => ({
+  ...alt,
+  url: normalizeAbsoluteUrl(alt.url),
+}));
 const s = useTranslations(lang).schema;
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": `${siteUrl}/`,
+      "name": "Praxis für Logopädie Şimşek",
+      "inLanguage": ["de-DE", "tr-DE"],
+      "publisher": { "@id": `${siteUrl}/#business` }
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalUrl}#webpage`,
+      "url": canonicalUrl,
+      "name": title,
+      "description": description,
+      "inLanguage": inLanguage,
+      "isPartOf": { "@id": `${siteUrl}/#website` },
+      "about": { "@id": `${siteUrl}/#business` },
+      "publisher": { "@id": `${siteUrl}/#business` },
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Emel Şimşek-Uçar",
+        "jobTitle": s.founder_title
+      },
+      "primaryImageOfPage": ogImageUrl,
+      "dateModified": lastUpdated
+    },
     {
       "@type": ["LocalBusiness", "MedicalBusiness"],
       "@id": `${siteUrl}/#business`,
@@ -35,6 +90,7 @@ const jsonLd = {
       "description": s.business_description,
       "url": siteUrl,
       "telephone": "+4920334868690",
+      "faxNumber": "+4920334868691",
       "email": "info@logopaedie-simsek.de",
       "image": `${siteUrl}/logo.png`,
       "logo": `${siteUrl}/logo.png`,
@@ -101,7 +157,7 @@ const jsonLd = {
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- hreflang alternates -->
-    {hreflangAlternates.map(alt => (
+    {normalizedHreflangAlternates.map(alt => (
       <link rel="alternate" hreflang={alt.lang} href={alt.url} />
     ))}
 
@@ -118,19 +174,139 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={alternateOgLocale} />
     <meta property="og:site_name" content="Praxis für Logopädie Şimşek" />
+    <meta property="article:modified_time" content={lastUpdated} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="author" content="Praxis für Logopädie Şimşek" />
+    <meta name="geo.region" content="DE-NW" />
+    <meta name="geo.placename" content="Duisburg" />
+    <meta name="geo.position" content="51.4292;6.7681" />
+    <meta name="ICBM" content="51.4292, 6.7681" />
 
     <!-- JSON-LD Structured Data -->
     <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     {additionalSchemas.map(schema => (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
+
+    {gaMeasurementId && (
+      <script is:inline define:vars={{ gaMeasurementId }}>
+        (function () {
+          var storageKey = 'simsek-cookie-consent';
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+          window.gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            wait_for_update: 500
+          });
+
+          function analyticsAccepted() {
+            try {
+              return localStorage.getItem(storageKey) === 'accepted';
+            } catch {
+              return false;
+            }
+          }
+
+          function loadAnalytics() {
+            if (window.__simsekGaLoaded || !gaMeasurementId) return;
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaMeasurementId);
+            document.head.appendChild(script);
+            window.__simsekGaLoaded = true;
+            window.gtag('js', new Date());
+          }
+
+          function trackPageview() {
+            if (!analyticsAccepted()) return;
+            window.gtag('config', gaMeasurementId, {
+              page_path: location.pathname + location.search,
+              page_title: document.title,
+              anonymize_ip: true
+            });
+          }
+
+          function hideBanner() {
+            var banner = document.getElementById('cookie-consent');
+            if (banner) banner.setAttribute('hidden', '');
+          }
+
+          function showBanner() {
+            var banner = document.getElementById('cookie-consent');
+            if (banner) banner.removeAttribute('hidden');
+          }
+
+          function setConsent(value) {
+            try {
+              localStorage.setItem(storageKey, value);
+            } catch {}
+
+            window.gtag('consent', 'update', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: value === 'accepted' ? 'granted' : 'denied'
+            });
+
+            if (value === 'accepted') {
+              loadAnalytics();
+              trackPageview();
+            }
+            hideBanner();
+          }
+
+          function initConsent() {
+            var banner = document.getElementById('cookie-consent');
+            if (!banner || banner.dataset.ready === 'true') return;
+            banner.dataset.ready = 'true';
+
+            var accept = banner.querySelector('[data-cookie-accept]');
+            var decline = banner.querySelector('[data-cookie-decline]');
+            if (accept) accept.addEventListener('click', function () { setConsent('accepted'); });
+            if (decline) decline.addEventListener('click', function () { setConsent('declined'); });
+
+            var stored = null;
+            try {
+              stored = localStorage.getItem(storageKey);
+            } catch {}
+
+            if (stored === 'accepted') {
+              window.gtag('consent', 'update', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'granted'
+              });
+              loadAnalytics();
+              hideBanner();
+            } else if (stored === 'declined') {
+              hideBanner();
+            } else {
+              showBanner();
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            initConsent();
+            trackPageview();
+          });
+          document.addEventListener('astro:page-load', function () {
+            initConsent();
+            trackPageview();
+          });
+        })();
+      </script>
+    )}
 
     <!-- robots -->
     <meta name="robots" content={
@@ -144,6 +320,17 @@ const jsonLd = {
   </head>
   <body>
     <slot />
+    {gaMeasurementId && (
+      <aside id="cookie-consent" hidden class="fixed bottom-4 left-4 right-4 z-[80] mx-auto max-w-3xl rounded-md border border-border bg-surface p-4 shadow-lg md:flex md:items-center md:justify-between md:gap-5" aria-label="Cookie-Hinweis">
+        <p class="text-sm text-text-muted leading-[1.6] mb-4 md:mb-0">
+          Wir verwenden Google Analytics nur mit Ihrer Zustimmung, um die Website zu verbessern. Ohne Zustimmung wird kein Google-Analytics-Skript geladen.
+        </p>
+        <div class="flex flex-wrap gap-3 shrink-0">
+          <button type="button" class="btn btn-ghost !min-h-10 !px-4 !py-2 !text-sm" data-cookie-decline>Ablehnen</button>
+          <button type="button" class="btn btn-primary !min-h-10 !px-4 !py-2 !text-sm" data-cookie-accept>Akzeptieren</button>
+        </div>
+      </aside>
+    )}
     <script>
       function initPage() {
         // Scroll Reveal
@@ -173,6 +360,21 @@ const jsonLd = {
               });
             }
           });
+        });
+
+        document.querySelectorAll('[data-google-map-load]').forEach(button => {
+          if (button instanceof HTMLButtonElement && button.dataset.ready !== 'true') {
+            button.dataset.ready = 'true';
+            button.addEventListener('click', () => {
+              const wrapper = button.closest('[data-google-map]');
+              const iframe = wrapper?.querySelector('iframe[data-src]');
+              if (iframe instanceof HTMLIFrameElement && iframe.dataset.src) {
+                iframe.src = iframe.dataset.src;
+                iframe.removeAttribute('hidden');
+                button.closest('[data-google-map-placeholder]')?.setAttribute('hidden', '');
+              }
+            });
+          }
         });
       }
 

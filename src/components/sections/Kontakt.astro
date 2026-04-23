@@ -40,9 +40,6 @@ const t = useTranslations(lang).kontakt;
           </a>
           <p class="text-sm text-text-muted">{t.phone_cta_hours_label}: <strong class="text-text">{t.info_phone_hours}</strong></p>
         </div>
-
-        <!-- Bilingual note -->
-        <div class="border-t border-border pt-5 text-[.875rem] text-text-muted text-center leading-[1.65]" set:html={t.phone_cta_bilingual} />
       </div>
       <div class="flex flex-col gap-5">
         <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start reveal reveal-delay-1">
@@ -67,6 +64,15 @@ const t = useTranslations(lang).kontakt;
         </div>
         <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start reveal reveal-delay-3">
           <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          </div>
+          <div>
+            <div class="text-[.8rem] font-bold tracking-[.06em] uppercase text-text-light mb-1">Fax</div>
+            <div class="text-[.9375rem] font-semibold text-text">0203 – 34 86 86 91</div>
+          </div>
+        </div>
+        <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start reveal reveal-delay-4">
+          <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <div>
@@ -75,7 +81,7 @@ const t = useTranslations(lang).kontakt;
             <div class="text-[.8125rem] text-text-muted mt-0.5">{t.info_address_sub}</div>
           </div>
         </div>
-        <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start reveal reveal-delay-4">
+        <div class="bg-surface border border-border rounded-md p-6 shadow-sm flex gap-4 items-start reveal reveal-delay-5">
           <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
@@ -85,9 +91,9 @@ const t = useTranslations(lang).kontakt;
             <div class="text-[.8125rem] text-text-muted mt-0.5">{t.info_lang_sub}</div>
           </div>
         </div>
-        <div class="bg-accent-light border border-[rgba(196,113,79,.2)] rounded-md p-6">
-          <p class="text-[.9375rem] text-text leading-[1.7]" set:html={t.insurance_note} />
-        </div>
+      </div>
+      <div class="bg-accent-light border border-[rgba(196,113,79,.2)] rounded-md p-6 col-span-2 max-[768px]:col-span-1">
+        <p class="text-[.9375rem] text-text leading-[1.7]" set:html={t.insurance_note} />
       </div>
     </div>
   </div>

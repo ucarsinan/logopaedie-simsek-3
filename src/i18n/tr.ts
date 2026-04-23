@@ -31,6 +31,7 @@ export const tr: Translations = {
     nav_label: "Footer Navigasyonu",
     links: {
       services: { label: "Terapi", href: "/terapi/" },
+      tuerkische: { label: "Türkçe Logopedi", href: "/anasayfa/" },
       insurance: { label: "Sigorta", href: "/tr/kostenuebernahme/" },
       team: { label: "Ekip", href: "/ekip/" },
       karriere: { label: "Kariyer", href: "/karriere/" },
@@ -62,6 +63,7 @@ export const tr: Translations = {
     description:
       "Devlet onaylı dil ve konuşma terapisti <strong>Emel Şimşek-Uçar</strong>'ın liderliğinde modern muayenehanemiz; erken çocukluktan yaşlılığa kadar tüm yaş gruplarına kapsamlı tanı, danışmanlık ve terapi hizmeti sunmaktadır.",
     stat_bilingual: "Almanca ve Türkçe İki Dilli Hizmet",
+    stat_areas_value: "Tüm",
     stat_areas: "Tüm Yaş Grupları için Terapi Alanları",
     stat_station: "Duisburg Merkez İstasyonu'ndan",
     stat_floor: "Asansörle Engelsiz Erişim",
@@ -80,7 +82,7 @@ export const tr: Translations = {
         title: "Dil Bozuklukları",
         text: "Dil anlama ve ifade bozukluklarının tanı ve tedavisi – dil gelişim gecikmesinden inme sonrası gelişen afaziye kadar, çocuklar ve yetişkinler için.",
         tags: ["Dil Gelişimi", "Afazi", "Erken Müdahale"],
-        href: "/terapi/dil-bozuklugu",
+        href: "/terapi/dil-bozuklugu/",
       },
       {
         title: "Konuşma Bozuklukları",
@@ -91,19 +93,19 @@ export const tr: Translations = {
           "Artikülasyon Bozukluğu",
           "Konuşma Apraksisi",
         ],
-        href: "/terapi/konusma-bozuklugu",
+        href: "/terapi/konusma-bozuklugu/",
       },
       {
         title: "Ses Bozuklukları",
         text: "Fonksiyonel ve organik ses bozukluklarının tedavisi. En önemli iletişim aracınız olan sesinizi güçlendirip kalıcı olarak korumanıza yardımcı oluyoruz.",
         tags: ["Disfoni", "Ses", "Fonksiyonel"],
-        href: "/terapi/ses-terapisi",
+        href: "/terapi/ses-terapisi/",
       },
       {
         title: "Yutma Bozuklukları (Disfaji)",
         text: "Yetişkinlerde ve çocuklarda yutma bozukluklarının tanı ve tedavisi – güvenli beslenmenin sağlanması, yaşam kalitesinin korunması ve olası komplikasyonların önlenmesi için.",
         tags: ["Disfaji", "Yutma", "Beslenme"],
-        href: "/terapi/yutma-bozuklugu",
+        href: "/terapi/yutma-bozuklugu/",
       },
     ],
   },
@@ -241,7 +243,7 @@ export const tr: Translations = {
     description:
       "Randevular yalnızca telefonla alınmaktadır. Hemen arayın – size veya çocuğunuza en uygun terapi zamanını birlikte bulalım.",
     phone_only_notice:
-      "Randevular yalnızca <strong>telefonla</strong> alınmaktadır. E-posta veya form üzerinden randevu talep edilememektedir.",
+      "Randevular yalnızca <strong>telefonla</strong> alınmaktadır. Genel sorularınız için bize e-posta ile ulaşabilirsiniz. İletişim formu sunmuyoruz.",
     phone_cta_heading: "Hemen Arayın",
     phone_cta_sub:
       "Bizi doğrudan arayın – size yardımcı olmaktan memnuniyet duyarız.",
@@ -251,7 +253,7 @@ export const tr: Translations = {
     info_phone_label: "Telefon",
     info_phone_hours: "Pzt–Cum 08:00–18:00",
     info_email_label: "E-Posta",
-    info_email_hours: "Genel sorular için · Randevu alınmaz",
+    info_email_hours: "Genel sorular için · Randevular telefonla alınır",
     info_address_label: "Adres",
     info_address_sub: "3. Kat · Asansör mevcut · Merkez'e 2 dk.",
     info_lang_label: "Diller",
@@ -259,20 +261,6 @@ export const tr: Translations = {
     info_lang_sub: "Her iki dilde terapi mevcuttur",
     insurance_note:
       "<strong>Sigorta kapsamı mı, bireysel ödeme mi?</strong><br>Tüm yasal sağlık sigortalarıyla çalışıyor, özel sigortalıları ve bireysel ödemeli hastaları da kabul ediyoruz. Ödeme ve sigorta konusundaki tüm sorularınızı yanıtlamaktan memnuniyet duyarız.",
-  },
-  contact_api: {
-    error_invalid_request: "Geçersiz istek.",
-    error_required: "Lütfen tüm zorunlu alanları doldurun.",
-    error_email: "Lütfen geçerli bir e-posta adresi girin.",
-    error_send:
-      "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin veya bizi telefonla arayın.",
-    area_sprache: "Dil Bozuklukları",
-    area_sprechen: "Konuşma Bozuklukları",
-    area_stimme: "Ses Bozuklukları",
-    area_schlucken: "Yutma Bozuklukları (Disfaji)",
-    area_allgemein: "Genel Danışmanlık",
-    subject_prefix: "Yeni randevu talebi –",
-    email_heading: "Yeni Randevu Talebi",
   },
   schema: {
     business_description:

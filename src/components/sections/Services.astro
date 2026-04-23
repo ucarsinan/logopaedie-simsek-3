@@ -27,7 +27,7 @@ const icons = [
     </header>
     <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1">
       {services.map((service, i) => (
-        <article class={`bg-surface border border-border rounded-md p-8 shadow-sm transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary reveal${i > 0 ? ` reveal-delay-${i}` : ''}`}>
+        <a href={service.href} class={`group block bg-surface border border-border rounded-md p-8 shadow-sm no-underline transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary reveal${i > 0 ? ` reveal-delay-${i}` : ''}`} aria-label={`${service.title}: ${t.more}`}>
           <div class="w-13 h-13 rounded-sm bg-primary-light flex items-center justify-center mb-5 text-primary" aria-hidden="true" set:html={icons[i]} />
           <h3 class="font-display text-xl font-semibold mb-2.5 text-text">{service.title}</h3>
           <p class="text-[.9375rem] text-text-muted leading-[1.65]">{service.text}</p>
@@ -36,11 +36,11 @@ const icons = [
               <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
             ))}
           </div>
-          <a href={service.href} class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:underline">
+          <span class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary group-hover:underline">
             {t.more}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-          </a>
-        </article>
+          </span>
+        </a>
       ))}
     </div>
     <div class="flex justify-center mt-10 reveal reveal-delay-3">

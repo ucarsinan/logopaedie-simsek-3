@@ -1,7 +1,7 @@
 export const de = {
   nav: {
     home: "Home",
-    therapy: "Therapie",
+    therapy: "Therapieangebot",
     team: "Team",
     karriere: "Karriere",
     contact: "Kontakt",
@@ -64,6 +64,7 @@ export const de = {
     description:
       "Unter der Leitung der staatlich geprüften Logopädin <strong>Emel Şimşek-Uçar</strong> bietet unsere moderne Praxis fundierte Diagnostik, Beratung und Therapie für Menschen aller Altersgruppen – von der frühen Kindheit bis ins Seniorenalter.",
     stat_bilingual: "Zweisprachige Versorgung DE & TR",
+    stat_areas_value: "Alle",
     stat_areas: "Therapiebereiche für alle Altersgruppen",
     stat_station: "vom Duisburger Hauptbahnhof",
     stat_floor: "Per Aufzug erreichbar",
@@ -82,25 +83,25 @@ export const de = {
         title: "Sprachstörungen",
         text: "Diagnostik und Therapie bei Beeinträchtigungen im Sprachverstehen und Sprachausdruck – von der kindlichen Sprachentwicklungsverzögerung bis zur erworbenen Aphasie nach Schlaganfall.",
         tags: ["Sprachentwicklung", "Aphasie", "Frühförderung"],
-        href: "/therapieangebot/sprachstoerungen",
+        href: "/therapieangebot/sprachstoerungen/",
       },
       {
         title: "Sprechstörungen",
         text: "Behandlung motorisch bedingter Sprechstörungen sowie Redefluss- und Aussprachestörungen. Ob Stottern, Poltern oder Lispeln – wir begleiten Sie auf Ihrem Weg.",
         tags: ["Dysarthrie", "Stottern", "Lispeln", "Sprechapraxie"],
-        href: "/therapieangebot/sprechstoerungen",
+        href: "/therapieangebot/sprechstoerungen/",
       },
       {
         title: "Stimmstörungen",
         text: "Therapie bei funktionellen und organischen Stimmstörungen. Wir helfen dabei, die Stimme als wichtigstes Kommunikationsmittel zu stärken und langfristig zu schützen.",
         tags: ["Dysphonie", "Stimme", "Funktionell"],
-        href: "/therapieangebot/stimmtherapie",
+        href: "/therapieangebot/stimmtherapie/",
       },
       {
         title: "Schluckstörungen (Dysphagie)",
         text: "Diagnostik und Therapie von Schluckstörungen bei Erwachsenen und Kindern – zur Sicherung der Ernährung, Lebensqualität und Vermeidung von Folgeerkrankungen.",
         tags: ["Dysphagie", "Schlucken", "Ernährung"],
-        href: "/therapieangebot/schluckstoerungen",
+        href: "/therapieangebot/schluckstoerungen/",
       },
     ],
   },
@@ -239,7 +240,7 @@ export const de = {
     description:
       "Termine vereinbaren wir ausschließlich telefonisch. Rufen Sie uns einfach an – wir finden gemeinsam den passenden Therapieplatz für Sie oder Ihr Kind.",
     phone_only_notice:
-      "Termine werden ausschließlich <strong>telefonisch</strong> vereinbart. Eine Anfrage per E-Mail oder Kontaktformular ist nicht möglich.",
+      "Termine werden ausschließlich <strong>telefonisch</strong> vereinbart. Per E-Mail erreichen Sie uns für allgemeine Fragen. Ein Kontaktformular bieten wir nicht an.",
     phone_cta_heading: "Jetzt anrufen",
     phone_cta_sub:
       "Rufen Sie uns direkt an – wir beraten Sie gerne und helfen Ihnen schnell und unkompliziert weiter.",
@@ -248,7 +249,7 @@ export const de = {
     info_phone_label: "Telefon",
     info_phone_hours: "Mo–Fr 08:00–18:00 Uhr",
     info_email_label: "E-Mail",
-    info_email_hours: "Für allgemeine Fragen · Keine Terminvereinbarung",
+    info_email_hours: "Für allgemeine Fragen · Termine bitte telefonisch",
     info_address_label: "Adresse",
     info_address_sub: "3. OG · Aufzug vorhanden · 2 min. vom HBf",
     info_lang_label: "Sprachen",
@@ -256,20 +257,6 @@ export const de = {
     info_lang_sub: "Therapie auf Deutsch und Türkisch verfügbar",
     insurance_note:
       "<strong>Kassenrezept oder Selbstzahler?</strong><br>Wir arbeiten mit allen gesetzlichen Krankenkassen und nehmen auch Privatpatienten sowie Selbstzahler an. Bei Fragen zur Abrechnung beraten wir Sie gerne.",
-  },
-  contact_api: {
-    error_invalid_request: "Ungültige Anfrage.",
-    error_required: "Bitte füllen Sie alle Pflichtfelder aus.",
-    error_email: "Bitte geben Sie eine gültige E-Mail-Adresse an.",
-    error_send:
-      "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns per Telefon.",
-    area_sprache: "Sprachstörungen",
-    area_sprechen: "Sprechstörungen",
-    area_stimme: "Stimmstörungen",
-    area_schlucken: "Schluckstörungen (Dysphagie)",
-    area_allgemein: "Allgemeine Beratung",
-    subject_prefix: "Neue Terminanfrage von",
-    email_heading: "Neue Terminanfrage",
   },
   schema: {
     business_description:

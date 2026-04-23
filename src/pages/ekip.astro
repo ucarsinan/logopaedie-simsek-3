@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import emelImg from '../assets/therapy/team-emel-simsek-ucar.jpg';
+import maraImg from '../assets/therapy/team-mara-niessalla.png';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
@@ -34,11 +37,28 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 2, "name": "Ekip", "item": `${siteUrl}/ekip` }
   ]
 };
+
+const teamMembers = [
+  {
+    name: 'Emel Şimşek-Uçar',
+    role: 'Muayenehane Sahibi · Devlet Onaylı Logoped',
+    photo: emelImg,
+    alt: 'Emel Şimşek-Uçar, Praxis für Logopädie Şimşek muayenehanesinin sahibi',
+    tags: ['Deutsch & Türkçe', '10+ Yıl Deneyim', 'Çocuklar & Yetişkinler'],
+  },
+  {
+    name: 'Mara Nießalla',
+    role: 'Devlet Onaylı Logoped',
+    photo: maraImg,
+    alt: 'Mara Nießalla, Praxis für Logopädie Şimşek Duisburg logopedi ekibinden',
+    tags: ['Çocuklar & Gençler', 'Dil Gelişimi', 'Tanı & Terapi'],
+  },
+];
 ---
 
 <Layout
   title="Ekibimiz – Praxis für Logopädie Şimşek Duisburg"
-  description="Emel Şimşek-Uçar ile tanışın – 10 yılı aşkın deneyime sahip devlet onaylı logoped. Duisburg'da Almanca ve Türkçe iki dilli terapi."
+  description="Emel Şimşek-Uçar ve Mara Nießalla ile tanışın – Praxis für Logopädie Şimşek Duisburg ekibi."
   lang="tr"
   additionalSchemas={[personSchema, breadcrumbSchema]}
   hreflangAlternates={[
@@ -78,19 +98,33 @@ const breadcrumbSchema = {
     <div class="container py-14">
       <div class="prose-section">
 
-        <div class="bg-surface border border-border rounded-md p-8 shadow-sm mb-10 flex gap-8 items-start max-[640px]:flex-col">
-          <div class="w-24 h-24 rounded-sm bg-primary-light flex items-center justify-center text-primary shrink-0" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <div>
-            <h2 class="font-display text-2xl font-semibold text-text mb-1">Emel Şimşek-Uçar</h2>
-            <p class="text-primary font-medium text-sm mb-4">Muayenehane Sahibi · Devlet Onaylı Logoped</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Deutsch & Türkçe</span>
-              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">10+ Yıl Deneyim</span>
-              <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">Çocuklar & Yetişkinler</span>
-            </div>
-          </div>
+        <div class="grid grid-cols-2 gap-6 mb-10 max-[860px]:grid-cols-1">
+          {teamMembers.map((member) => (
+            <article class="bg-surface border border-border rounded-md overflow-hidden shadow-sm">
+              <div class="grid grid-cols-[160px_1fr] min-h-45 max-[540px]:grid-cols-1">
+                <div class="relative bg-surface-2 overflow-hidden max-[540px]:h-64">
+                  <Image
+                    src={member.photo}
+                    alt={member.alt}
+                    class="w-full h-full object-cover object-top"
+                    widths={[240, 360, 520]}
+                    sizes="(max-width: 540px) 100vw, 160px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-7 flex flex-col justify-center">
+                  <h2 class="font-display text-2xl font-semibold text-text mb-1">{member.name}</h2>
+                  <p class="text-primary font-medium text-sm mb-4">{member.role}</p>
+                  <div class="flex flex-wrap gap-2">
+                    {member.tags.map((tag) => (
+                      <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
         <h2>Emel Şimşek-Uçar Hakkında</h2>
@@ -107,6 +141,13 @@ const breadcrumbSchema = {
           <li><strong>Yetişkin Terapisi:</strong> Afazi, dizartri, ses bozuklukları, yutma bozuklukları</li>
           <li><strong>Erken Müdahale:</strong> Bebeklik döneminden itibaren logopedik tedavi</li>
         </ul>
+
+        <h2>Mara Nießalla Hakkında</h2>
+        <p>
+          Mara Nießalla ekibimizi <strong>devlet onaylı logoped</strong> olarak tamamlıyor.
+          Özellikle çocuklar ve gençlerde dil gelişimi, artikülasyon ve günlük yaşama uygun
+          egzersiz stratejileri alanlarında çalışmaktadır.
+        </p>
 
         <h2>Diller</h2>
         <p>
