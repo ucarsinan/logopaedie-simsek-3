@@ -274,10 +274,10 @@ export const tr: Translations = {
     founder_title: "Devlet Onaylı Logoped",
     offer_catalog_name: "Logoterapi Alanları",
     services: [
-      { name: "Dil Terapisi", url: "/therapieangebot/sprachstoerungen" },
-      { name: "Konuşma Terapisi", url: "/therapieangebot/sprechstoerungen" },
-      { name: "Ses Terapisi", url: "/therapieangebot/stimmtherapie" },
-      { name: "Yutma Terapisi", url: "/therapieangebot/schluckstoerungen" },
+      { name: "Dil Terapisi", url: "/therapie/sprachstoerungen" },
+      { name: "Konuşma Terapisi", url: "/therapie/sprechstoerungen" },
+      { name: "Ses Terapisi", url: "/therapie/stimmtherapie" },
+      { name: "Yutma Terapisi", url: "/therapie/schluckstoerungen" },
     ],
   },
 };

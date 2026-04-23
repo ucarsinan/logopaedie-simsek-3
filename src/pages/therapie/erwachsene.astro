@@ -10,14 +10,14 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Logopädie für Erwachsene Duisburg",
   "description": "Logopädische Therapie für Erwachsene in Duisburg. Aphasie, Dysarthrie, Stimmstörungen, Schluckstörungen nach Schlaganfall oder neurologischen Erkrankungen.",
-  "url": `${siteUrl}/therapieangebot/erwachsene`,
+  "url": `${siteUrl}/therapie/erwachsene`,
   "about": { "@type": "MedicalCondition", "name": "Aphasie" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapieangebot` },
-      { "@type": "ListItem", "position": 3, "name": "Therapie für Erwachsene", "item": `${siteUrl}/therapieangebot/erwachsene` }
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapie` },
+      { "@type": "ListItem", "position": 3, "name": "Therapie für Erwachsene", "item": `${siteUrl}/therapie/erwachsene` }
     ]
   }
 };
@@ -31,13 +31,13 @@ const schema = {
   tags={['Aphasie', 'Dysarthrie', 'Stimmtherapie', 'Neurologie']}
   additionalSchemas={[schema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/therapieangebot/erwachsene` },
-    { lang: 'x-default', url: `${siteUrl}/therapieangebot/erwachsene` },
+    { lang: 'de', url: `${siteUrl}/therapie/erwachsene` },
+    { lang: 'x-default', url: `${siteUrl}/therapie/erwachsene` },
   ]}
   relatedServices={[
-    { title: 'Sprachstörungen', href: '/therapieangebot/sprachstoerungen/', description: 'Aphasie, Wortfindung, Sprachverständnis' },
-    { title: 'Schluckstörungen', href: '/therapieangebot/schluckstoerungen/', description: 'Dysphagie-Therapie für Erwachsene und Senioren' },
-    { title: 'Stimmtherapie', href: '/therapieangebot/stimmtherapie/', description: 'Dysphonie, Heiserkeit, ISTP-Methode' },
+    { title: 'Sprachstörungen', href: '/therapie/sprachstoerungen/', description: 'Aphasie, Wortfindung, Sprachverständnis' },
+    { title: 'Schluckstörungen', href: '/therapie/schluckstoerungen/', description: 'Dysphagie-Therapie für Erwachsene und Senioren' },
+    { title: 'Stimmtherapie', href: '/therapie/stimmtherapie/', description: 'Dysphonie, Heiserkeit, ISTP-Methode' },
   ]}
 >
   <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
@@ -91,7 +91,7 @@ const schema = {
     Berufssprecher (Lehrerinnen, Erzieherinnen, Sänger, Führungskräfte) und Personen nach
     Kehlkopfoperationen benötigen oft gezielte Stimmtherapie. Wir behandeln funktionelle,
     organische, psychogene und neurogene Stimmstörungen.
-    Mehr Informationen: <a href="/therapieangebot/stimmtherapie/">Stimmtherapie</a>
+    Mehr Informationen: <a href="/therapie/stimmtherapie/">Stimmtherapie</a>
   </p>
 
   <h2>Schluckstörungen (Dysphagie)</h2>
@@ -99,7 +99,7 @@ const schema = {
     Schluckstörungen bei Erwachsenen entstehen häufig nach Schlaganfall, bei neurologischen
     Erkrankungen (Parkinson, MS, ALS), nach Kopf-Hals-Operationen oder im Alter.
     Unbehandelte Dysphagie erhöht das Risiko von Aspirationspneumonie und Mangelernährung.
-    Mehr Informationen: <a href="/therapieangebot/schluckstoerungen/">Schlucktherapie</a>
+    Mehr Informationen: <a href="/therapie/schluckstoerungen/">Schlucktherapie</a>
   </p>
 
   <h2>Stottern bei Erwachsenen</h2>

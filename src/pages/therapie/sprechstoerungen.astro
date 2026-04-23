@@ -40,14 +40,14 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Sprechstörungen behandeln: Stottern, Lispeln, Dysarthrie in Duisburg",
   "description": "Logopädische Therapie bei Stottern, Poltern, Lispeln und Dysarthrie in Duisburg. Professionelle Behandlung für Kinder und Erwachsene.",
-  "url": "https://logopaedie-simsek.de/therapieangebot/sprechstoerungen",
+  "url": "https://logopaedie-simsek.de/therapie/sprechstoerungen",
   "about": { "@type": "MedicalCondition", "name": "Sprechstörung" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://logopaedie-simsek.de" },
-      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": "https://logopaedie-simsek.de/therapieangebot" },
-      { "@type": "ListItem", "position": 3, "name": "Sprechstörungen", "item": "https://logopaedie-simsek.de/therapieangebot/sprechstoerungen" }
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": "https://logopaedie-simsek.de/therapie" },
+      { "@type": "ListItem", "position": 3, "name": "Sprechstörungen", "item": "https://logopaedie-simsek.de/therapie/sprechstoerungen" }
     ]
   }
 };
@@ -61,15 +61,15 @@ const schema = {
   tags={['Stottern', 'Lispeln', 'Dysarthrie', 'Sprechapraxie']}
   additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
-    { lang: 'de', url: 'https://logopaedie-simsek.de/therapieangebot/sprechstoerungen/' },
+    { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/sprechstoerungen/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/konusma-bozuklugu/' },
-    { lang: 'x-default', url: 'https://logopaedie-simsek.de/therapieangebot/sprechstoerungen/' },
+    { lang: 'x-default', url: 'https://logopaedie-simsek.de/therapie/sprechstoerungen/' },
   ]}
   alternateUrl="/terapi/konusma-bozuklugu"
   relatedServices={[
-    { title: 'Sprachstörungen', href: '/therapieangebot/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Frühförderung' },
-    { title: 'Stimmtherapie', href: '/therapieangebot/stimmtherapie/', description: 'Heiserkeit, Dysphonie, funktionelle Stimmstörungen' },
-    { title: 'Schluckstörungen', href: '/therapieangebot/schluckstoerungen/', description: 'Dysphagie bei Erwachsenen und Kindern' },
+    { title: 'Sprachstörungen', href: '/therapie/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Frühförderung' },
+    { title: 'Stimmtherapie', href: '/therapie/stimmtherapie/', description: 'Heiserkeit, Dysphonie, funktionelle Stimmstörungen' },
+    { title: 'Schluckstörungen', href: '/therapie/schluckstoerungen/', description: 'Dysphagie bei Erwachsenen und Kindern' },
   ]}
 >
   <section class="bento-page" aria-label="Sprechstörungen in Duisburg">
@@ -300,8 +300,8 @@ const schema = {
     color: rgba(255, 255, 255, 0.84);
   }
 
-  .bento-card :global(h2),
-  .bento-card__overlay :global(h2) {
+  .bento-grid .bento-card :global(h2),
+  .bento-grid .bento-card__overlay :global(h2) {
     margin: 0 0 0.8rem;
     font-family: var(--font-display);
     font-size: clamp(1.35rem, 2vw, 1.85rem);
@@ -309,7 +309,7 @@ const schema = {
     color: var(--color-text);
   }
 
-  .bento-card__overlay :global(h2) {
+  .bento-grid .bento-card__overlay :global(h2) {
     color: white;
     max-width: 20ch;
   }
@@ -320,32 +320,32 @@ const schema = {
     color: #ffffff !important;
   }
 
-  .bento-card :global(p),
-  .bento-card :global(ul),
-  .bento-card__overlay :global(p) {
+  .bento-grid .bento-card :global(p),
+  .bento-grid .bento-card :global(ul),
+  .bento-grid .bento-card__overlay :global(p) {
     margin: 0;
     font-size: 0.96rem;
     line-height: 1.7;
     color: var(--color-text-muted);
   }
 
-  .bento-card__overlay :global(p) {
+  .bento-grid .bento-card__overlay :global(p) {
     max-width: 56ch;
   }
 
-  .bento-card :global(ul) {
+  .bento-grid .bento-card :global(ul) {
     display: grid;
     gap: 0.7rem;
     padding: 0;
     list-style: none;
   }
 
-  .bento-card :global(li) {
+  .bento-grid .bento-card :global(li) {
     position: relative;
     padding-left: 1rem;
   }
 
-  .bento-card :global(li)::before {
+  .bento-grid .bento-card :global(li)::before {
     content: '';
     position: absolute;
     left: 0;
@@ -356,10 +356,10 @@ const schema = {
     background: var(--color-primary);
   }
 
-  .bento-card--accent :global(h2),
-  .bento-card--accent :global(p),
-  .bento-card--accent :global(a),
-  .bento-card--accent .bento-eyebrow {
+  .bento-grid .bento-card--accent :global(h2),
+  .bento-grid .bento-card--accent :global(p),
+  .bento-grid .bento-card--accent :global(a),
+  .bento-grid .bento-card--accent .bento-eyebrow {
     color: white;
   }
 

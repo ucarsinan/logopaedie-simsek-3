@@ -6,18 +6,26 @@ import sitemap from '@astrojs/sitemap';
 const legacyRedirectPairs = [
   // Old /leistungen/ structure
   ['/leistungen', '/therapie/'],
-  ['/leistungen/sprachstoerungen', '/therapieangebot/sprachstoerungen/'],
-  ['/leistungen/sprechstoerungen', '/therapieangebot/sprechstoerungen/'],
-  ['/leistungen/stimmtherapie', '/therapieangebot/stimmtherapie/'],
-  ['/leistungen/schluckstoerungen', '/therapieangebot/schluckstoerungen/'],
-  ['/leistungen/kinder-und-jugendliche', '/therapieangebot/kinder-und-jugendliche/'],
-  ['/leistungen/erwachsene', '/therapieangebot/erwachsene/'],
+  ['/leistungen/sprachstoerungen', '/therapie/sprachstoerungen/'],
+  ['/leistungen/sprechstoerungen', '/therapie/sprechstoerungen/'],
+  ['/leistungen/stimmtherapie', '/therapie/stimmtherapie/'],
+  ['/leistungen/schluckstoerungen', '/therapie/schluckstoerungen/'],
+  ['/leistungen/kinder-und-jugendliche', '/therapie/kinder-und-jugendliche/'],
+  ['/leistungen/erwachsene', '/therapie/erwachsene/'],
+
+  // Old /therapieangebot/ structure → /therapie/
+  ['/therapieangebot', '/therapie/'],
+  ['/therapieangebot/sprachstoerungen', '/therapie/sprachstoerungen/'],
+  ['/therapieangebot/sprechstoerungen', '/therapie/sprechstoerungen/'],
+  ['/therapieangebot/stimmtherapie', '/therapie/stimmtherapie/'],
+  ['/therapieangebot/schluckstoerungen', '/therapie/schluckstoerungen/'],
+  ['/therapieangebot/kinder-und-jugendliche', '/therapie/kinder-und-jugendliche/'],
+  ['/therapieangebot/erwachsene', '/therapie/erwachsene/'],
 
   // Old WordPress site structure (preserves backlinks & Google index entries)
-  ['/therapieangebot', '/therapie/'],
-  ['/therapie/therapie-bei-erwachsenen', '/therapieangebot/erwachsene/'],
-  ['/therapie/therapie-bei-kindern-und-jugendlichen', '/therapieangebot/kinder-und-jugendliche/'],
-  ['/stimmtherapie', '/therapieangebot/stimmtherapie/'],
+  ['/therapie/therapie-bei-erwachsenen', '/therapie/erwachsene/'],
+  ['/therapie/therapie-bei-kindern-und-jugendlichen', '/therapie/kinder-und-jugendliche/'],
+  ['/stimmtherapie', '/therapie/stimmtherapie/'],
   ['/informationen', '/kostenuebernahme/'],
   ['/praxis', '/#praxis'],
   ['/anfahrt', '/kontakt/'],
