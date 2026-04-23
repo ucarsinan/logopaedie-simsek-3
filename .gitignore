@@ -1,6 +1,7 @@
 # Claude Code
 .superpowers/
 .claude/
+.playwright-cli/
 
 # Dependencies
 node_modules/
@@ -20,3 +21,4 @@ dist/
 
 # OS
 .DS_Store
+.vercel
