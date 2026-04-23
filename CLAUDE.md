@@ -21,11 +21,12 @@ npm run preview   # Build-Preview
 ## Routing / Seitenstruktur
 - `src/pages/index.astro` — Startseite (DE)
 - `src/pages/tr/` — Türkische Seiten
-- `src/pages/therapieangebot/` — Leistungsseiten
+- `src/pages/therapie/index.astro` — Therapie-Übersichtsseite (DE)
+- `src/pages/therapieangebot/` — DE-Leistungsdetailseiten
 - `src/pages/terapi/` — Türkische Leistungsseiten
 - `src/pages/kontakt.astro` / `iletisim.astro` — Kontakt DE/TR
 - `src/pages/karriere.astro` — Jobs
-- Redirects in `astro.config.ts` für alte WordPress-URLs + alte `/leistungen/`-Struktur
+- Redirects in `astro.config.ts` und `vercel.json` für alte WordPress-URLs + alte `/leistungen/`-Struktur
 
 ## i18n
 Übersetzungskeys in `src/i18n/de.ts` und `src/i18n/tr.ts`.
