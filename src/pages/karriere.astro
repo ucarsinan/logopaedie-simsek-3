@@ -56,9 +56,14 @@ const benefits = [
   title="Karriere – Praxis für Logopädie Şimşek Duisburg | Stellenangebote"
   description="Praxis für Logopädie Şimşek Duisburg sucht engagierte Logopädinnen und Logopäden. Überdurchschnittliches Gehalt, tolles Team, zweisprachige Praxis. Jetzt bewerben!"
   additionalSchemas={[jobSchema, breadcrumbSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/karriere/` },
+    { lang: 'tr', url: `${siteUrl}/kariyer/` },
+    { lang: 'x-default', url: `${siteUrl}/karriere/` },
+  ]}
 >
-  <Header />
-  <Nav />
+  <Header alternateUrl="/kariyer/" />
+  <Nav alternateUrl="/kariyer/" />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
 
     <!-- Breadcrumb -->

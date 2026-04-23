@@ -52,6 +52,7 @@ const normalizedHreflangAlternates = hreflangAlternates.map((alt) => ({
   url: normalizeAbsoluteUrl(alt.url),
 }));
 const s = useTranslations(lang).schema;
+const cookieT = useTranslations(lang).cookie;
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
 const jsonLd = {
@@ -321,13 +322,13 @@ const jsonLd = {
   <body>
     <slot />
     {gaMeasurementId && (
-      <aside id="cookie-consent" hidden class="fixed bottom-4 left-4 right-4 z-[80] mx-auto max-w-3xl rounded-md border border-border bg-surface p-4 shadow-lg md:flex md:items-center md:justify-between md:gap-5" aria-label="Cookie-Hinweis">
+      <aside id="cookie-consent" hidden class="fixed bottom-4 left-4 right-4 z-[80] mx-auto max-w-3xl rounded-md border border-border bg-surface p-4 shadow-lg md:flex md:items-center md:justify-between md:gap-5" aria-label={cookieT.aria_label}>
         <p class="text-sm text-text-muted leading-[1.6] mb-4 md:mb-0">
-          Wir verwenden Google Analytics nur mit Ihrer Zustimmung, um die Website zu verbessern. Ohne Zustimmung wird kein Google-Analytics-Skript geladen.
+          {cookieT.text}
         </p>
         <div class="flex flex-wrap gap-3 shrink-0">
-          <button type="button" class="btn btn-ghost !min-h-10 !px-4 !py-2 !text-sm" data-cookie-decline>Ablehnen</button>
-          <button type="button" class="btn btn-primary !min-h-10 !px-4 !py-2 !text-sm" data-cookie-accept>Akzeptieren</button>
+          <button type="button" class="btn btn-ghost !min-h-10 !px-4 !py-2 !text-sm" data-cookie-decline>{cookieT.decline}</button>
+          <button type="button" class="btn btn-primary !min-h-10 !px-4 !py-2 !text-sm" data-cookie-accept>{cookieT.accept}</button>
         </div>
       </aside>
     )}

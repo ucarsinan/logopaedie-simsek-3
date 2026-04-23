@@ -20,8 +20,21 @@ const normalizePath = (path: string) => {
 };
 
 const currentPath = normalizePath(Astro.url.pathname);
+
+const arePathAliases = (a: string, b: string) => {
+  const aliases = new Set(['/therapie', '/therapieangebot']);
+  return aliases.has(a) && aliases.has(b);
+};
+
 const isCurrent = (href: string) => {
   const targetPath = normalizePath(href);
+  if (arePathAliases(targetPath, currentPath)) return true;
+  if (
+    targetPath === '/therapie' &&
+    (currentPath.startsWith('/therapieangebot/') || currentPath === '/therapieangebot')
+  ) {
+    return true;
+  }
   if (targetPath === '/' || targetPath === '/anasayfa') {
     return currentPath === targetPath;
   }

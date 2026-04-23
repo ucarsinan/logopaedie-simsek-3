@@ -1,7 +1,7 @@
 export const de = {
   nav: {
     home: "Home",
-    therapy: "Therapieangebot",
+    therapy: "Therapie",
     team: "Team",
     karriere: "Karriere",
     contact: "Kontakt",
@@ -11,7 +11,7 @@ export const de = {
     aria_menu_close: "Menü schließen",
     links: {
       home: "/",
-      therapy: "/therapieangebot/",
+      therapy: "/therapie/",
       team: "/team/",
       karriere: "/karriere/",
       contact: "/kontakt/",
@@ -28,10 +28,10 @@ export const de = {
     tagline: "Sprachtherapie Duisburg",
     nav_label: "Footer-Navigation",
     links: {
-      services: { label: "Therapieangebot", href: "/therapieangebot/" },
+      services: { label: "Therapie", href: "/therapie/" },
       tuerkische: {
         label: "Türkische Logopädie",
-        href: "/tuerkische-logopaedie/",
+        href: "/tuerkische-logopaedie-duisburg/",
       },
       insurance: { label: "Kostenübernahme", href: "/kostenuebernahme/" },
       team: { label: "Team", href: "/team/" },
@@ -48,7 +48,7 @@ export const de = {
     heading_line2: "Verstehen.",
     heading_line3: "Verbinden.",
     description:
-      "Zweisprachige Sprachtherapie auf Deutsch und Türkisch für alle Altersgruppen – von der Frühförderung bis zum Seniorenalter. Mit Herz und Verstand.",
+      "Zweisprachige Sprachtherapie auf Deutsch und Türkisch – für Kinder, Erwachsene und Senioren. Alle Krankenkassen. Hausbesuche möglich.",
     cta_primary: "Termin anfragen",
     cta_secondary: "Therapieangebot entdecken",
     badge_station: "2 min. vom Hauptbahnhof",
@@ -58,9 +58,9 @@ export const de = {
   },
   about: {
     quote:
-      '„Wirkungsvolle Therapie entsteht nur dort, wo sich <strong>Therapeuten wohl</strong> – und Patienten sich <strong>verstanden fühlen</strong>."',
+      '„Gute Therapie beginnt dort, wo <strong>Therapeuten überzeugt</strong> arbeiten – und Patienten sich <strong>wirklich verstanden fühlen</strong>."',
     section_label: "Über die Praxis",
-    heading: "Logopädie mit Herz und Verstand",
+    heading: "Fundierte Logopädie in Duisburg – für Kinder und Erwachsene",
     description:
       "Unter der Leitung der staatlich geprüften Logopädin <strong>Emel Şimşek-Uçar</strong> bietet unsere moderne Praxis fundierte Diagnostik, Beratung und Therapie für Menschen aller Altersgruppen – von der frühen Kindheit bis ins Seniorenalter.",
     stat_bilingual: "Zweisprachige Versorgung DE & TR",
@@ -147,7 +147,7 @@ export const de = {
         role: "Staatl. gepr. Logopädin",
         badge: "",
         extra:
-          "Logopädin mit Schwerpunkt auf Sprachentwicklung bei Kindern und Jugendlichen. Begleitung vom Erstgespräch bis zum Therapieabschluss.",
+          "Logopädin mit Schwerpunkt auf Sprachentwicklung und Redefluss bei Kindern und Jugendlichen. Einfühlsame Begleitung von der Erstdiagnostik bis zum Therapieabschluss.",
       },
     ],
   },
@@ -257,6 +257,12 @@ export const de = {
     info_lang_sub: "Therapie auf Deutsch und Türkisch verfügbar",
     insurance_note:
       "<strong>Kassenrezept oder Selbstzahler?</strong><br>Wir arbeiten mit allen gesetzlichen Krankenkassen und nehmen auch Privatpatienten sowie Selbstzahler an. Bei Fragen zur Abrechnung beraten wir Sie gerne.",
+  },
+  cookie: {
+    aria_label: "Cookie-Hinweis",
+    text: "Wir verwenden Google Analytics nur mit Ihrer Zustimmung, um die Website zu verbessern. Ohne Zustimmung wird kein Google-Analytics-Skript geladen.",
+    decline: "Ablehnen",
+    accept: "Akzeptieren",
   },
   schema: {
     business_description:

@@ -10,6 +10,7 @@ interface Props {
 
 const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).team;
+const karriereHref = lang === 'tr' ? '/kariyer/' : '#karriere';
 
 const memberData = [
   { initials: 'EŞ', name: 'Emel Şimşek-Uçar', isLead: true, photo: emelImg },
@@ -28,7 +29,7 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
     </header>
     <div class="grid grid-cols-3 gap-6 max-[860px]:grid-cols-2 max-[540px]:grid-cols-1">
       {members.map((member, index) => (
-        <article class={`bg-surface border border-border rounded-md overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}`}>
+        <article class={`group bg-surface border border-border rounded-md overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}`}>
           <div class="h-65 relative overflow-hidden bg-surface-2">
             {member.photo
               ? <Image
@@ -63,7 +64,7 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
           <h3 class="font-display text-[1.1875rem] font-semibold mb-1 text-text">{t.join_heading}</h3>
           <p class="text-sm text-accent font-semibold mb-2.5">{t.join_role}</p>
           <p class="text-[.8125rem] text-text-muted leading-[1.5] mb-4">{t.join_text}</p>
-          <a href="#karriere" class="btn btn-accent text-sm py-[10px] px-5">{t.join_cta}</a>
+          <a href={karriereHref} class="btn btn-accent text-sm py-[10px] px-5">{t.join_cta}</a>
         </div>
       </article>
     </div>

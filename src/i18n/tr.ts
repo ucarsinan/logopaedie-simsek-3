@@ -15,7 +15,7 @@ export const tr: Translations = {
       home: "/anasayfa/",
       therapy: "/terapi/",
       team: "/ekip/",
-      karriere: "/karriere/",
+      karriere: "/kariyer/",
       contact: "/iletisim/",
     },
   },
@@ -34,7 +34,7 @@ export const tr: Translations = {
       tuerkische: { label: "Türkçe Logopedi", href: "/anasayfa/" },
       insurance: { label: "Sigorta", href: "/tr/kostenuebernahme/" },
       team: { label: "Ekip", href: "/ekip/" },
-      karriere: { label: "Kariyer", href: "/karriere/" },
+      karriere: { label: "Kariyer", href: "/kariyer/" },
       contact: { label: "İletişim", href: "/iletisim/" },
     },
     copyright: "Tüm hakları saklıdır",
@@ -261,6 +261,12 @@ export const tr: Translations = {
     info_lang_sub: "Her iki dilde terapi mevcuttur",
     insurance_note:
       "<strong>Sigorta kapsamı mı, bireysel ödeme mi?</strong><br>Tüm yasal sağlık sigortalarıyla çalışıyor, özel sigortalıları ve bireysel ödemeli hastaları da kabul ediyoruz. Ödeme ve sigorta konusundaki tüm sorularınızı yanıtlamaktan memnuniyet duyarız.",
+  },
+  cookie: {
+    aria_label: "Çerez Bildirimi",
+    text: "Web sitemizi geliştirmek için Google Analytics'i yalnızca onayınızla kullanıyoruz. Onay olmadan Google Analytics betiği yüklenmez.",
+    decline: "Reddet",
+    accept: "Kabul et",
   },
   schema: {
     business_description:

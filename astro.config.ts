@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 const legacyRedirectPairs = [
   // Old /leistungen/ structure
-  ['/leistungen', '/therapieangebot/'],
+  ['/leistungen', '/therapie/'],
   ['/leistungen/sprachstoerungen', '/therapieangebot/sprachstoerungen/'],
   ['/leistungen/sprechstoerungen', '/therapieangebot/sprechstoerungen/'],
   ['/leistungen/stimmtherapie', '/therapieangebot/stimmtherapie/'],
@@ -14,7 +14,7 @@ const legacyRedirectPairs = [
   ['/leistungen/erwachsene', '/therapieangebot/erwachsene/'],
 
   // Old WordPress site structure (preserves backlinks & Google index entries)
-  ['/therapie', '/therapieangebot/'],
+  ['/therapieangebot', '/therapie/'],
   ['/therapie/therapie-bei-erwachsenen', '/therapieangebot/erwachsene/'],
   ['/therapie/therapie-bei-kindern-und-jugendlichen', '/therapieangebot/kinder-und-jugendliche/'],
   ['/stimmtherapie', '/therapieangebot/stimmtherapie/'],

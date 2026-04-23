@@ -1,5 +1,7 @@
 ---
 import ServicePage from '../../layouts/ServicePage.astro';
+import { Image } from 'astro:assets';
+import praxisImg from '../../assets/therapy/praxis-simsek-atmosphaere-duisburg.webp';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -70,88 +72,328 @@ const schema = {
     { title: 'Schluckstörungen', href: '/therapieangebot/schluckstoerungen/', description: 'Dysphagie bei Erwachsenen und Kindern' },
   ]}
 >
-  <h2>Was sind Sprachstörungen?</h2>
-  <p>
-    Sprachstörungen beeinträchtigen die Fähigkeit, Sprache zu verstehen oder sich sprachlich auszudrücken.
-    Sie betreffen das <strong>linguistische System</strong> – also Wortschatz, Grammatik, Sprachverständnis
-    und die kommunikative Nutzung von Sprache – unabhängig davon, ob der Sprechapparat selbst betroffen ist.
-  </p>
-  <p>
-    Sprachstörungen können in jedem Lebensalter auftreten: bei Kleinkindern als Entwicklungsverzögerung,
-    bei Schulkindern als umschriebene Sprachentwicklungsstörung und bei Erwachsenen als erworbene Störung
-    nach neurologischen Ereignissen wie einem Schlaganfall.
-  </p>
+  <section class="bento-page" aria-label="Sprachstörungen in Duisburg">
+    <div class="bento-grid">
+      <article class="bento-card bento-card--image">
+        <Image
+          src={praxisImg}
+          alt="Diagnostik und Therapie von Sprachstörungen in der Praxis für Logopädie Şimşek Duisburg"
+          class="bento-card__image"
+          widths={[540, 900, 1200]}
+          sizes="(max-width: 960px) 100vw, 55vw"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="bento-card__overlay">
+          <span class="bento-eyebrow">Sprachdiagnostik</span>
+          <h2>Sprachstörungen früh erkennen und gezielt behandeln</h2>
+          <p>
+            Sprachstörungen betreffen Wortschatz, Grammatik, Sprachverständnis und die
+            kommunikative Nutzung von Sprache. Sie können im Kindesalter beginnen oder
+            nach neurologischen Ereignissen im Erwachsenenalter auftreten.
+          </p>
+        </div>
+      </article>
 
-  <h2>Häufige Sprachstörungen im Überblick</h2>
-  <ul>
-    <li><strong>Sprachentwicklungsverzögerung (SEV):</strong> Kinder entwickeln Sprache langsamer als ihre Altersgruppe – zum Beispiel sprechen sie mit 2 Jahren noch keine ersten Wörter.</li>
-    <li><strong>Umschriebene Sprachentwicklungsstörung (USES/SES):</strong> Qualitative Abweichungen in Grammatik, Wortschatz oder Sprachverständnis, die nicht durch andere Ursachen erklärbar sind.</li>
-    <li><strong>Aphasie:</strong> Erworbene Sprachstörung nach Schlaganfall, Schädel-Hirn-Trauma oder Tumor – betrifft Sprechen, Verstehen, Lesen und Schreiben.</li>
-    <li><strong>Semantisch-pragmatische Störungen:</strong> Schwierigkeiten im situationsangemessenen Sprachgebrauch und im Sprachverständnis in sozialen Kontexten.</li>
-    <li><strong>Lese-Rechtschreib-Schwäche (LRS/Legasthenie):</strong> Störung im schriftsprachlichen Bereich, die logopädisch mitbehandelt werden kann.</li>
-  </ul>
+      <article class="bento-card bento-card--highlight">
+        <span class="bento-eyebrow">Überblick</span>
+        <h2>Wann eine logopädische Abklärung sinnvoll ist</h2>
+        <ul>
+          <li><strong>Kleinkinder:</strong> verspäteter Sprechbeginn oder wenig aktiver Wortschatz</li>
+          <li><strong>Schulkinder:</strong> Auffälligkeiten in Grammatik, Sprachverständnis oder Erzählfähigkeit</li>
+          <li><strong>Erwachsene:</strong> sprachliche Probleme nach Schlaganfall, Trauma oder Tumor</li>
+          <li><strong>Mehrsprachigkeit:</strong> Unsicherheit, ob eine Störung oder normale bilinguale Entwicklung vorliegt</li>
+          <li><strong>Schriftsprachliche Auffälligkeiten:</strong> Begleitung bei LRS und phonologischen Problemen</li>
+        </ul>
+      </article>
 
-  <h2>Sprachtherapie bei Kindern</h2>
-  <p>
-    Bei Kindern beginnen wir mit einer <strong>altersgerechten Diagnostik</strong>, um den genauen Förderbedarf
-    zu ermitteln. Wir setzen standardisierte Testverfahren ein und beobachten das Kind im freien Spiel,
-    um ein vollständiges Bild zu gewinnen.
-  </p>
-  <p>
-    Frühförderung vor dem Schuleintritt ist besonders effektiv, da das Gehirn in den ersten Lebensjahren
-    besonders plastisch ist. Die Therapie ist <strong>spielbasiert, motivierend und auf das einzelne Kind</strong>
-    abgestimmt – und schließt die Familie aktiv ein.
-  </p>
-  <p>Wir behandeln unter anderem:</p>
-  <ul>
-    <li>Verzögerte Sprachentwicklung bei Kindern ab dem 2. Lebensjahr</li>
-    <li>Grammatik- und Wortschatzstörungen im Kindergarten- und Grundschulalter</li>
-    <li>Sprachverständnisprobleme</li>
-    <li>Sprachentwicklung bei mehrsprachig aufwachsenden Kindern (Deutsch/Türkisch)</li>
-    <li>Begleitung bei Lese-Rechtschreib-Schwäche</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Störungsbilder</span>
+        <h2>Häufige Sprachstörungen im Überblick</h2>
+        <ul>
+          <li><strong>SEV:</strong> verlangsamte Sprachentwicklung im Vergleich zu Gleichaltrigen</li>
+          <li><strong>USES/SES:</strong> qualitative Auffälligkeiten in Grammatik, Wortschatz oder Sprachverständnis</li>
+          <li><strong>Aphasie:</strong> erworbene Sprachstörung mit Auswirkungen auf Sprechen, Verstehen, Lesen und Schreiben</li>
+          <li><strong>Semantisch-pragmatische Störungen:</strong> Schwierigkeiten im Sprachgebrauch in sozialen Situationen</li>
+          <li><strong>LRS:</strong> schriftsprachliche Probleme mit sprachverarbeitendem Bezug</li>
+        </ul>
+      </article>
 
-  <h2>Sprachtherapie bei Erwachsenen – Aphasie</h2>
-  <p>
-    Sprachstörungen im Erwachsenenalter entstehen häufig durch neurologische Erkrankungen wie
-    <strong>Schlaganfall</strong>, Schädel-Hirn-Trauma, Tumorerkrankungen des Gehirns oder degenerative
-    Erkrankungen. Die Aphasie betrifft alle sprachlichen Modalitäten: Sprechen, Verstehen, Lesen und Schreiben.
-  </p>
-  <p>
-    Unsere Aphasie-Therapie zielt darauf ab, verloren gegangene Sprachfähigkeiten zurückzugewinnen oder
-    effektive Kompensationsstrategien zu entwickeln. Dabei arbeiten wir eng mit Angehörigen zusammen,
-    die eine wichtige Rolle im Genesungsprozess spielen.
-  </p>
-  <p>Wir behandeln alle Formen der Aphasie, darunter:</p>
-  <ul>
-    <li>Broca-Aphasie (motorisch, non-fluent)</li>
-    <li>Wernicke-Aphasie (sensorisch, fluent)</li>
-    <li>Globale Aphasie (schwerwiegende Beeinträchtigung aller Sprachbereiche)</li>
-    <li>Amnestische Aphasie (Wortfindungsstörungen)</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Kinder</span>
+        <h2>Sprachtherapie bei Kindern ist spielbasiert und präzise</h2>
+        <p>
+          Bei Kindern beginnen wir mit einer <strong>altersgerechten Diagnostik</strong> aus
+          standardisierten Verfahren, Gespräch mit den Eltern und Beobachtung im freien Spiel.
+        </p>
+        <p>
+          Frühförderung vor dem Schuleintritt ist besonders wirksam. Die Therapie bleibt
+          motivierend, strukturiert und eng auf den Entwicklungsstand des Kindes abgestimmt.
+        </p>
+      </article>
 
-  <h2>Zweisprachige Sprachdiagnostik und Therapie</h2>
-  <p>
-    Für mehrsprachig aufwachsende Kinder ist es entscheidend, eine echte Sprachentwicklungsstörung von
-    normalen Phasen des bilingualen Spracherwerbs zu unterscheiden. Fehlerhafte Diagnosen können zu
-    unnötiger Therapie führen – oder notwendige Förderung verzögern.
-  </p>
-  <div class="info-box">
-    <p>
-      Unsere Therapeutinnen sprechen <strong>Deutsch und Türkisch</strong> und können Kinder und Erwachsene
-      in beiden Sprachen diagnostizieren und therapieren. Dieses Angebot ist im Ruhrgebiet selten und
-      schließt eine wichtige Versorgungslücke für türkischsprachige Familien.
-    </p>
-  </div>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Zweisprachigkeit</span>
+        <h2>Deutsch und Türkisch sauber voneinander unterscheiden</h2>
+        <p>
+          Für mehrsprachig aufwachsende Kinder ist es entscheidend, eine tatsächliche
+          Sprachentwicklungsstörung von normalen Phasen des bilingualen Spracherwerbs
+          zu unterscheiden.
+        </p>
+        <p>
+          Unsere Therapeutinnen diagnostizieren und therapieren auf <strong>Deutsch und Türkisch</strong>
+          und schließen damit eine wichtige Versorgungslücke im Ruhrgebiet.
+        </p>
+      </article>
 
-  <h2>Unser Therapieablauf</h2>
-  <p>
-    Jede Behandlung beginnt mit einer <strong>ausführlichen Diagnostik</strong> und Anamnese, in der wir
-    gemeinsam mit Ihnen Therapieziele festlegen. Anschließend erfolgt die strukturierte, individuelle Therapie
-    mit regelmäßiger Verlaufskontrolle. Heimübungen sind ein wichtiger Bestandteil und werden verständlich erklärt.
-  </p>
-  <p>
-    Für Kinder binden wir die Eltern aktiv ein – mit klaren Anleitungen für den Alltag, die Therapiefortschritte
-    im täglichen Leben festigen.
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Kinder im Fokus</span>
+        <h2>Diese Themen behandeln wir bei Kindern besonders häufig</h2>
+        <ul>
+          <li>Verzögerte Sprachentwicklung ab dem 2. Lebensjahr</li>
+          <li>Grammatik- und Wortschatzstörungen im Kindergarten- und Grundschulalter</li>
+          <li>Sprachverständnisprobleme und Schwierigkeiten beim Erzählen</li>
+          <li>Sprachentwicklung bei mehrsprachig aufwachsenden Kindern</li>
+          <li>Begleitung bei Lese-Rechtschreib-Schwäche und phonologischen Auffälligkeiten</li>
+        </ul>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Diagnostik</span>
+        <h2>Jede Therapie startet mit klarer Anamnese und Zielsetzung</h2>
+        <p>
+          Vor der Behandlung klären wir gemeinsam den Befund, definieren Therapieziele
+          und wählen die passenden Schwerpunkte für Alltag, Schule oder neurologische Rehabilitation.
+        </p>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Erwachsene</span>
+        <h2>Aphasie nach neurologischen Ereignissen gezielt behandeln</h2>
+        <p>
+          Sprachstörungen im Erwachsenenalter entstehen häufig durch <strong>Schlaganfall</strong>,
+          Schädel-Hirn-Trauma, Tumorerkrankungen oder degenerative Prozesse. Betroffen sind
+          Sprechen, Verstehen, Lesen und Schreiben.
+        </p>
+        <p>
+          Ziel der Therapie ist es, Sprachfähigkeiten zurückzugewinnen oder alltagstaugliche
+          Kompensationsstrategien zu entwickeln.
+        </p>
+      </article>
+
+      <article class="bento-card bento-card--accent">
+        <span class="bento-eyebrow">DE / TR</span>
+        <h2>Zweisprachige Therapie schafft Sicherheit für Familien und Angehörige.</h2>
+        <p>
+          Gespräche, Befundbesprechungen und praktische Übungen können auf Deutsch oder
+          Türkisch erklärt und begleitet werden.
+        </p>
+      </article>
+
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Aphasieformen</span>
+        <h2>Wir behandeln alle relevanten Formen erworbener Sprachstörungen</h2>
+        <ul>
+          <li><strong>Broca-Aphasie:</strong> motorisch, non-fluent, mit stark erschwerter Sprachproduktion</li>
+          <li><strong>Wernicke-Aphasie:</strong> fluent, mit deutlichen Problemen im Sprachverständnis</li>
+          <li><strong>Globale Aphasie:</strong> schwerwiegende Beeinträchtigung aller Sprachbereiche</li>
+          <li><strong>Amnestische Aphasie:</strong> vor allem Wortfindungsstörungen im Gespräch</li>
+        </ul>
+      </article>
+
+      <article class="bento-card bento-card--soft">
+        <span class="bento-eyebrow">Therapieablauf</span>
+        <h2>Strukturiert, individuell und mit Verlaufskontrolle</h2>
+        <p>
+          Nach der Diagnostik folgt eine individuell abgestimmte Therapie mit regelmäßiger
+          Überprüfung der Fortschritte. Heimübungen und alltagsnahe Strategien gehören fest dazu.
+        </p>
+        <p>
+          Bei Kindern binden wir Eltern aktiv ein, bei Erwachsenen häufig auch Angehörige.
+        </p>
+      </article>
+    </div>
+  </section>
 </ServicePage>
+
+<style>
+  .bento-page {
+    width: 100%;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  .bento-card {
+    grid-column: span 4;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+    min-height: 100%;
+  }
+
+  .bento-card--image {
+    grid-column: span 6;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 0;
+  }
+
+  .bento-card--highlight {
+    grid-column: span 6;
+    background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+  }
+
+  .bento-card--wide {
+    grid-column: span 8;
+  }
+
+  .bento-card--accent {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .bento-card--soft {
+    background: var(--color-primary-light);
+  }
+
+  .bento-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 18, 14, 0.08) 10%,
+      rgba(24, 18, 14, 0.76) 100%
+    );
+  }
+
+  .bento-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+
+  .bento-card--image .bento-eyebrow,
+  .bento-card--accent .bento-eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .bento-card :global(h2),
+  .bento-card__overlay :global(h2) {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .bento-card__overlay :global(h2) {
+    color: white;
+    max-width: 20ch;
+  }
+
+  .bento-card__overlay :global(p),
+  .bento-card__overlay :global(p strong),
+  .bento-card__overlay :global(p a) {
+    color: #ffffff !important;
+  }
+
+  .bento-card :global(p),
+  .bento-card :global(ul),
+  .bento-card__overlay :global(p) {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .bento-card__overlay :global(p) {
+    max-width: 56ch;
+  }
+
+  .bento-card :global(ul) {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento-card :global(li) {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .bento-card :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .bento-card--accent :global(h2),
+  .bento-card--accent :global(p),
+  .bento-card--accent :global(a),
+  .bento-card--accent .bento-eyebrow {
+    color: white;
+  }
+
+  @media (max-width: 960px) {
+    .bento-card,
+    .bento-card--image,
+    .bento-card--highlight,
+    .bento-card--wide {
+      grid-column: span 12;
+    }
+
+    .bento-card--image {
+      min-height: 19rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      gap: 0.875rem;
+    }
+
+    .bento-card {
+      padding: 1.2rem;
+    }
+
+    .bento-card--image {
+      min-height: 17rem;
+    }
+
+    .bento-card__overlay {
+      padding: 1rem;
+    }
+  }
+</style>

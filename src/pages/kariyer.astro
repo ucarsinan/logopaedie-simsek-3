@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+---
+
+<Layout
+  title="Kariyer – Praxis für Logopädie Şimşek Duisburg"
+  description="Praxis für Logopädie Şimşek ekibine katılın. Duisburg'daki kariyer fırsatları, çalışma koşulları ve başvuru bilgileri."
+  lang="tr"
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/karriere/` },
+    { lang: 'tr', url: `${siteUrl}/kariyer/` },
+    { lang: 'x-default', url: `${siteUrl}/karriere/` },
+  ]}
+>
+  <Header lang="tr" alternateUrl="/karriere/" />
+  <Nav lang="tr" alternateUrl="/karriere/" />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+    <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li class="text-text font-medium" aria-current="page">Kariyer</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+      <div class="container">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">Kariyer</h1>
+        <p class="text-text-muted text-lg max-w-2xl">
+          Duisburg'daki ekibimize katılmak ister misiniz? Açık pozisyonlar, çalışma koşulları ve başvuru adımları için kariyer sayfamızı inceleyin.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-14 bg-bg">
+      <div class="container">
+        <div class="bg-surface border border-border rounded-md p-8 shadow-sm flex flex-col gap-5">
+          <p class="text-[.98rem] text-text-muted leading-[1.7]">
+            İlan detayları şu anda Almanca sayfada yayınlanmaktadır. Başvuru süreci Türkçe olarak da desteklenmektedir.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/karriere/" class="btn btn-primary">Kariyer Sayfasını Aç</a>
+            <a href="mailto:info@logopaedie-simsek.de?subject=Kariyer%20Basvurusu" class="btn btn-ghost">E-Posta ile Başvur</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer lang="tr" />
+</Layout>
