@@ -18,7 +18,7 @@ const icons = [
 ];
 ---
 
-<section class="pt-20 pb-24 bg-bg-alt" id="therapieangebot" aria-labelledby="services-heading">
+<section class="py-24 bg-bg-alt" id="therapieangebot" aria-labelledby="services-heading">
   <div class="container">
     <header class="text-center mb-14 flex flex-col items-center gap-4">
       <span class="text-xs font-semibold tracking-widest uppercase text-primary reveal">{t.section_label}</span>
@@ -27,7 +27,7 @@ const icons = [
     </header>
     <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1">
       {services.map((service, i) => (
-        <a href={service.href} class={`group block bg-surface border border-border rounded-md p-8 shadow-sm no-underline transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary reveal${i > 0 ? ` reveal-delay-${i}` : ''}`} aria-label={`${service.title}: ${t.more}`}>
+        <a href={service.href} class={`group block bg-surface border border-border rounded-md p-8 shadow-sm no-underline transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary reveal${i > 0 ? ` reveal-delay-${i}` : ''}`} aria-label={`${service.title}: ${t.more}`}>
           <div class="w-13 h-13 rounded-sm bg-primary-light flex items-center justify-center mb-5 text-primary" aria-hidden="true" set:html={icons[i]} />
           <h3 class="font-display text-xl font-semibold mb-2.5 text-text">{service.title}</h3>
           <p class="text-[.9375rem] text-text-muted leading-[1.65]">{service.text}</p>
