@@ -24,10 +24,14 @@ const legacyRedirectPairs = [
   ['/jobs', '/karriere/'],
 
   // Old Turkish WordPress structure
-  ['/2/tuerkische-logopaedie', '/tuerkische-logopaedie/'],
+  ['/2/tuerkische-logopaedie', '/tuerkische-logopaedie-duisburg/'],
   ['/2/tuerkische-sprachtherapie', '/tuerkische-sprachtherapie/'],
   ['/2/tuerkische-logopaedie-duisburg', '/tuerkische-logopaedie-duisburg/'],
-  ['/2/tuerkische-sprachtherapie-duisburg', '/tuerkische-sprachtherapie-duisburg/'],
+  ['/2/tuerkische-sprachtherapie-duisburg', '/tuerkische-sprachtherapie/'],
+
+  // Consolidate duplicate Turkish SEO pages (cannibalization fix)
+  ['/tuerkische-logopaedie', '/tuerkische-logopaedie-duisburg/'],
+  ['/tuerkische-sprachtherapie-duisburg', '/tuerkische-sprachtherapie/'],
   ['/muayenehane', '/anasayfa/#praxis'],
   ['/ulasim', '/iletisim/'],
   ['/bilgi', '/tr/kostenuebernahme/'],

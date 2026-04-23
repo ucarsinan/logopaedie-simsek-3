@@ -10,13 +10,13 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Türkische Logopädie Duisburg – Türkçe Logopedi Duisburg",
   "description": "Türkische Logopädie in Duisburg – Fachpraxis Şimşek in Duisburg-Mitte. Vollständige Diagnostik und Therapie auf Türkisch und Deutsch. Nur 2 Min. vom Hauptbahnhof.",
-  "url": `${siteUrl}/tuerkische-logopaedie-duisburg`,
+  "url": `${siteUrl}/tuerkische-logopaedie-duisburg/`,
   "inLanguage": ["de", "tr"],
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": "Türkische Logopädie Duisburg", "item": `${siteUrl}/tuerkische-logopaedie-duisburg` }
+      { "@type": "ListItem", "position": 2, "name": "Türkische Logopädie Duisburg", "item": `${siteUrl}/tuerkische-logopaedie-duisburg/` }
     ]
   }
 };
@@ -35,9 +35,9 @@ const schema = {
     { lang: 'x-default', url: `${siteUrl}/tuerkische-logopaedie-duisburg/` },
   ]}
   relatedServices={[
-    { title: 'Türkische Logopädie', href: '/tuerkische-logopaedie/', description: 'Was türkische Logopädie bedeutet und warum sie wichtig ist' },
-    { title: 'Türkische Sprachtherapie Duisburg', href: '/tuerkische-sprachtherapie-duisburg/', description: 'Sprachtherapie auf Türkisch in Duisburg' },
+    { title: 'Türkische Sprachtherapie', href: '/tuerkische-sprachtherapie/', description: 'Diagnostik und Therapie von Sprachstörungen auf Türkisch' },
     { title: 'Logopädie Duisburg', href: '/logopaedie-duisburg/', description: 'Das logopädische Therapieangebot in Duisburg im Überblick' },
+    { title: 'Kostenübernahme', href: '/kostenuebernahme/', description: 'Was zahlt die Krankenkasse für Logopädie?' },
   ]}
 >
   <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
@@ -58,11 +58,6 @@ const schema = {
     <strong>türkische Logopädie in Duisburg</strong>. Unsere Praxis befindet sich zentral
     in Duisburg-Mitte, nur 2 Gehminuten vom Duisburger Hauptbahnhof entfernt – gut
     erreichbar für türkischsprachige Patientinnen und Patienten aus dem gesamten Stadtgebiet.
-  </p>
-  <p>
-    Duisburg Logopedi – Şimşek muayenehanesi, Duisburg merkezinde Almanca ve Türkçe
-    logo­pedi hizmeti sunan uzman bir kliniğimizdir. Merkez istasyona 2 dakika yürüme
-    mesafesindeyiz.
   </p>
 
   <h2>Unsere Praxis in Duisburg</h2>
@@ -87,6 +82,42 @@ const schema = {
     <li><strong>Seniorinnen und Senioren:</strong> Demenz-begleitende Therapie, Dysphagie, Schlaganfall-Nachsorge</li>
   </ul>
 
+  <h2>Warum muttersprachliche Logopädie wichtig ist</h2>
+  <p>
+    Für mehrsprachig aufwachsende Kinder – besonders solche mit Türkisch als Erstsprache –
+    ist eine <strong>muttersprachliche Diagnostik unerlässlich</strong>. Nur so lässt sich
+    zuverlässig unterscheiden, ob eine tatsächliche Sprachstörung vorliegt oder ob es sich
+    um sprachliche Unsicherheiten durch Mehrsprachigkeit handelt. Eine Diagnose, die nur
+    in der Zweitsprache Deutsch gestellt wird, kann zu Fehleinschätzungen führen.
+  </p>
+  <p>
+    Dasselbe gilt für Erwachsene: Wer Türkisch als Muttersprache spricht, kann sich in
+    einer Therapie auf Türkisch besser ausdrücken, besser verstehen und damit bessere
+    Therapieerfolge erzielen.
+  </p>
+
+  <h2>Frühförderung auf Türkisch</h2>
+  <p>
+    In der Frühförderung – bei Kindern bis zum Schuleintritt – ist die Muttersprache die
+    Grundlage für alle weiteren sprachlichen Entwicklungsschritte. Türkische Logopädie
+    in der Frühförderung bedeutet:
+  </p>
+  <ul>
+    <li>Sprachstandserhebung in beiden Sprachen (Türkisch und Deutsch)</li>
+    <li>Diagnostik von Sprachentwicklungsverzögerungen auf muttersprachlicher Basis</li>
+    <li>Therapie in der dominanten oder schwächeren Sprache je nach Bedarf</li>
+    <li>Elternberatung auf Türkisch – damit Eltern die Therapie zu Hause aktiv unterstützen können</li>
+  </ul>
+
+  <h2>Unser türkischsprachiges Therapieangebot</h2>
+  <ul>
+    <li><strong>Sprachtherapie auf Türkisch:</strong> Sprachentwicklungsverzögerung, Grammatikstörungen, Wortschatzaufbau, Aphasie</li>
+    <li><strong>Sprechtherapie auf Türkisch:</strong> Stottern (kekemelik), Poltern, Lispeln, Ausspracheprobleme</li>
+    <li><strong>Stimmtherapie auf Türkisch:</strong> Heiserkeit, Dysphonie, Stimmschulung</li>
+    <li><strong>Schlucktherapie auf Türkisch:</strong> Dysphagie nach Schlaganfall oder bei neurologischen Erkrankungen</li>
+    <li><strong>Beratung auf Türkisch:</strong> Elterngespräche, Therapiebesprechungen, Befundberichte</li>
+  </ul>
+
   <h2>Warum Duisburg der richtige Ort für türkische Logopädie ist</h2>
   <p>
     Duisburg zählt zu den Städten in Deutschland mit dem höchsten Anteil türkischstämmiger
@@ -100,8 +131,6 @@ const schema = {
     <p>
       <strong>Duisburg'daki ailelere:</strong> Çocuğunuzun dil gelişimi konusunda endişeleriniz
       mi var? Bizimle Türkçe veya Almanca iletişime geçebilirsiniz.
-      Telefon: <a href="tel:+4920334868690">0203 34 86 86 90</a> –
-      E-Posta: <a href="mailto:info@logopaedie-simsek.de">info@logopaedie-simsek.de</a>
     </p>
   </div>
 

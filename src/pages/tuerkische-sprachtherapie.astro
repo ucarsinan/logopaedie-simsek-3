@@ -8,13 +8,13 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Türkische Sprachtherapie – Türkçe Dil Terapisi Duisburg",
   "description": "Sprachtherapie auf Türkisch in Duisburg. Für Kinder mit Sprachentwicklungsverzögerung und Erwachsene mit Aphasie oder anderen Sprachstörungen. Türkçe Dil Terapisi.",
-  "url": `${siteUrl}/tuerkische-sprachtherapie`,
+  "url": `${siteUrl}/tuerkische-sprachtherapie/`,
   "inLanguage": ["de", "tr"],
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": "Türkische Sprachtherapie", "item": `${siteUrl}/tuerkische-sprachtherapie` }
+      { "@type": "ListItem", "position": 2, "name": "Türkische Sprachtherapie", "item": `${siteUrl}/tuerkische-sprachtherapie/` }
     ]
   }
 };
@@ -32,9 +32,9 @@ const schema = {
     { lang: 'x-default', url: `${siteUrl}/tuerkische-sprachtherapie/` },
   ]}
   relatedServices={[
-    { title: 'Türkische Logopädie', href: '/tuerkische-logopaedie/', description: 'Vollständige Logopädie auf Türkisch in Duisburg' },
-    { title: 'Türkische Sprachtherapie Duisburg', href: '/tuerkische-sprachtherapie-duisburg/', description: 'Lokale Sprachtherapie für türkischsprachige Familien' },
-    { title: 'Sprachstörungen', href: '/therapieangebot/sprachstoerungen/', description: 'Das Sprachtherapie-Angebot im Überblick' },
+    { title: 'Türkische Logopädie Duisburg', href: '/tuerkische-logopaedie-duisburg/', description: 'Vollständiges Logopädie-Angebot auf Türkisch in Duisburg' },
+    { title: 'Sprachstörungen', href: '/therapieangebot/sprachstoerungen/', description: 'Diagnostik und Therapie von Sprachstörungen im Detail' },
+    { title: 'Kostenübernahme', href: '/kostenuebernahme/', description: 'Was zahlt die Krankenkasse für Logopädie?' },
   ]}
 >
   <h2>Was ist türkische Sprachtherapie?</h2>
@@ -44,11 +44,15 @@ const schema = {
     durchgeführt wird. Praxis Şimşek in Duisburg bietet diese Leistung für Kinder,
     Jugendliche und Erwachsene an.
   </p>
-  <p>
-    Türkçe dil terapisi, dil ve konuşma bozukluklarının Türkçe olarak teşhis ve tedavi
-    edilmesi demektir. Duisburg muayenehanemizde çocuklar, gençler ve yetişkinler için
-    bu hizmeti sunuyoruz.
-  </p>
+
+  <h2>Türkische Sprachtherapie – für wen?</h2>
+  <ul>
+    <li>Kinder mit Türkisch als Muttersprache oder Erstsprache</li>
+    <li>Mehrsprachige Kinder (Türkisch + Deutsch), bei denen eine fundierte Diagnostik in beiden Sprachen nötig ist</li>
+    <li>Erwachsene türkischer Herkunft mit erworbenen Sprachstörungen (z. B. nach Schlaganfall)</li>
+    <li>Familien, die Beratungsgespräche auf Türkisch bevorzugen</li>
+    <li>Patientinnen und Patienten, die sich in der Muttersprache besser ausdrücken können</li>
+  </ul>
 
   <h2>Sprachtherapie für Kinder auf Türkisch</h2>
   <p>
@@ -84,6 +88,11 @@ const schema = {
       Sprachstandserhebung in beiden Sprachen durch (Türkisch und Deutsch). Nur so lässt sich
       eine spezifische Sprachstörung von sprachlicher Unsicherheit durch Mehrsprachigkeit
       zuverlässig unterscheiden.
+    </p>
+    <p>
+      <strong>Türkçe:</strong> Türkçe dil terapisi, dil ve konuşma bozukluklarının Türkçe olarak
+      teşhis ve tedavi edilmesi demektir. Duisburg muayenehanemizde çocuklar, gençler ve
+      yetişkinler için bu hizmeti sunuyoruz.
     </p>
   </div>
 
