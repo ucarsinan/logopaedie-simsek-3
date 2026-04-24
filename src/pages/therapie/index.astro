@@ -64,7 +64,7 @@ const services = [
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
     <!-- Breadcrumb -->
     <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
-      <div class="container py-3">
+      <div class="container py-3 max-[640px]:py-2.5">
         <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
           <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
           <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
@@ -74,11 +74,11 @@ const services = [
     </nav>
 
     <!-- Hero -->
-    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
+    <section class="bg-bg-alt pt-12 max-[640px]:pt-9 pb-9 max-[640px]:pb-7 border-b border-border">
       <div class="container">
         <span class="text-xs font-semibold tracking-widest uppercase text-primary">Leistungsangebot</span>
-        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mt-3 mb-4">Alle Bereiche der Logopädie</h1>
-        <p class="text-[1.0625rem] text-text-muted leading-[1.7] max-w-2xl">
+        <h1 class="font-display text-[clamp(1.85rem,5vw,3rem)] max-[640px]:text-[clamp(1.55rem,8vw,2.1rem)] font-semibold leading-[1.1] text-text mt-3 mb-4">Alle Bereiche der Logopädie</h1>
+        <p class="text-[1.0625rem] max-[640px]:text-[0.97rem] text-text-muted leading-[1.7] max-[640px]:leading-[1.65] max-w-2xl">
           In unserer Praxis in Duisburg behandeln wir das vollständige Spektrum logopädischer Störungsbilder –
           für Kinder, Erwachsene und Senioren. Auf Deutsch und Türkisch.
         </p>
@@ -86,22 +86,22 @@ const services = [
     </section>
 
     <!-- Services Grid -->
-    <section class="py-14 bg-bg">
+    <section class="py-12 max-[640px]:py-9 bg-bg">
       <div class="container">
-        <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1">
+        <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1 max-[640px]:gap-4">
           {services.map(service => (
             <a
               href={service.href}
-              class="bg-surface border border-border rounded-md p-8 shadow-sm hover:border-primary hover:-translate-y-1 hover:shadow-md transition-[transform,box-shadow,border-color] duration-200 flex flex-col gap-4 no-underline group"
+              class="bg-surface border border-border rounded-md max-[640px]:rounded-[20px] p-8 max-[640px]:p-5 shadow-sm hover:border-primary hover:-translate-y-1 hover:shadow-md transition-[transform,box-shadow,border-color] duration-200 flex flex-col gap-4 max-[640px]:gap-3 no-underline group"
             >
-              <div class="w-14 h-14 rounded-sm bg-primary-light flex items-center justify-center text-primary" aria-hidden="true" set:html={service.icon} />
+              <div class="w-14 h-14 max-[640px]:w-11 max-[640px]:h-11 rounded-sm bg-primary-light flex items-center justify-center text-primary" aria-hidden="true" set:html={service.icon} />
               <div>
-                <h2 class="font-display text-xl font-semibold text-text group-hover:text-primary transition-colors mb-2">{service.title}</h2>
-                <p class="text-[.9375rem] text-text-muted leading-[1.65]">{service.description}</p>
+                <h2 class="font-display text-xl max-[640px]:text-[1.3rem] font-semibold text-text group-hover:text-primary transition-colors mb-2">{service.title}</h2>
+                <p class="text-[.9375rem] max-[640px]:text-[0.9rem] text-text-muted leading-[1.65] max-[640px]:leading-[1.6]">{service.description}</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 {service.tags.map(tag => (
-                  <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
+                  <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full max-[640px]:text-[0.7rem] max-[640px]:px-2 max-[640px]:py-0.5">{tag}</span>
                 ))}
               </div>
               <span class="text-sm font-semibold text-primary inline-flex items-center gap-1 mt-auto">
@@ -115,19 +115,19 @@ const services = [
     </section>
 
     <!-- USP Strip -->
-    <section class="py-14 bg-primary" aria-label="Unser Alleinstellungsmerkmal">
+    <section class="py-12 max-[640px]:py-10 bg-primary" aria-label="Unser Alleinstellungsmerkmal">
       <div class="container text-center flex flex-col items-center gap-5">
-        <h2 class="font-display text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white">Zweisprachige Therapie auf Deutsch und Türkisch</h2>
-        <p class="text-white/80 text-[1.0625rem] leading-[1.7] max-w-xl">
+        <h2 class="font-display text-[clamp(1.4rem,3vw,2rem)] max-[640px]:text-[clamp(1.3rem,7vw,1.75rem)] font-semibold text-white">Zweisprachige Therapie auf Deutsch und Türkisch</h2>
+        <p class="text-white/80 text-[1.0625rem] max-[640px]:text-[0.97rem] leading-[1.7] max-w-xl">
           Ein seltenes Angebot im Ruhrgebiet – besonders wertvoll für mehrsprachig aufwachsende Kinder
           und türkischsprachige Erwachsene. Wir schließen eine wichtige Versorgungslücke.
         </p>
-        <a href="/kontakt/" class="btn btn-outline-white">Termin anfragen</a>
+        <a href="/kontakt/" class="btn btn-outline-white max-[640px]:max-w-[20rem]">Termin anfragen</a>
       </div>
     </section>
 
     <!-- Back link -->
-    <div class="container py-10">
+    <div class="container py-9 max-[640px]:py-7">
       <a href="/" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
         Zurück zur Startseite

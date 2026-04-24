@@ -9,8 +9,8 @@ const siteUrl = 'https://logopaedie-simsek.de';
 const jobSchema = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
-  "title": "Logopädin / Logopäde (m/w/d)",
-  "description": "Wir suchen eine engagierte Logopädin / einen engagierten Logopäden für unsere Praxis in Duisburg. Voll- oder Teilzeit, überdurchschnittliches Gehalt, zweisprachiges Team.",
+  "title": "Logopädie (w/m/d)",
+  "description": "Wir suchen Verstärkung im Bereich Logopädie (w/m/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, überdurchschnittliches Gehalt, zweisprachiges Team.",
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
@@ -29,7 +29,7 @@ const jobSchema = {
   "employmentType": ["FULL_TIME", "PART_TIME"],
   "workHours": "Vollzeit oder Teilzeit möglich",
   "industry": "Logopädie / Sprachtherapie",
-  "occupationalCategory": "Logopädin / Logopäde"
+  "occupationalCategory": "Logopädie (w/m/d)"
 };
 
 const breadcrumbSchema = {
@@ -78,7 +78,7 @@ const benefits = [
     </nav>
 
     <!-- Bento Grid -->
-    <h1 class="sr-only">Logopädin / Logopäde (m/w/d) gesucht – Praxis Şimşek Duisburg</h1>
+    <h1 class="sr-only">Logopädie (w/m/d) gesucht – Praxis Şimşek Duisburg</h1>
     <section class="container py-10 pb-16">
       <div class="bento-grid">
 
@@ -91,8 +91,8 @@ const benefits = [
           </div>
           <p class="bento-hero__title">Karriere bei #TeamSimsek</p>
           <p class="bento-hero__subtitle">
-            Wir suchen eine engagierte Logopädin oder einen engagierten Logopäden
-            für unser zweisprachiges Team in Duisburg-Mitte.
+            Wir suchen Verstärkung im Bereich Logopädie (w/m/d)
+            für unser Team in Duisburg-Mitte.
           </p>
           <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="bento-cta-btn">
             Jetzt bewerben
@@ -137,10 +137,6 @@ const benefits = [
             <li>
               <span class="req-check">✓</span>
               <span>Interesse an Kindersprachtherapie und/oder Aphasietherapie</span>
-            </li>
-            <li>
-              <span class="req-check req-check--accent">+</span>
-              <span>Türkischkenntnisse sind ein Plus, aber keine Voraussetzung</span>
             </li>
           </ul>
           <p class="req-welcome">Berufseinsteiger herzlich willkommen!</p>
@@ -192,7 +188,7 @@ const benefits = [
                 Kein Formular, kein Portal. Einfach E-Mail mit Lebenslauf — der Rest kann nachgereicht werden.
               </p>
               <div class="bento-apply__actions">
-                <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="apply-btn apply-btn--primary">
+                <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="apply-btn apply-btn--primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   Bewerbung senden
                 </a>
@@ -515,6 +511,7 @@ const benefits = [
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: 1.125rem 1rem;
+    position: relative;
     transition: box-shadow 0.18s;
   }
   .benefit-item:hover {
@@ -736,6 +733,23 @@ const benefits = [
   @media (max-width: 900px) {
     .bento-grid { grid-template-columns: repeat(2, 1fr); }
     .bento-hero { grid-column: span 2; }
+    .bento-stats {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem 1.25rem;
+      align-items: start;
+    }
+    .bento-stats__divider { display: none; }
+    .bento-stats > :nth-child(1),
+    .bento-stats > :nth-child(2),
+    .bento-stats > :nth-child(3) { grid-column: 1; }
+    .bento-stats > :nth-child(5) { grid-column: 2; grid-row: 1; }
+    .bento-stats > :nth-child(6) { grid-column: 2; grid-row: 2 / span 2; }
+    .bento-stats > :nth-child(8) { grid-column: 3; grid-row: 1; }
+    .bento-stats > :nth-child(9) { grid-column: 3; grid-row: 2 / span 2; }
+    .bento-stats__number { font-size: 2.7rem; }
+    .bento-stats__langs { gap: 0.35rem; }
     .bento-requirements { grid-column: span 2; }
     .bento-benefits-all { grid-column: span 2; }
     .benefits-inner-grid { grid-template-columns: repeat(2, 1fr); }
@@ -751,11 +765,39 @@ const benefits = [
   @media (max-width: 560px) {
     .bento-grid { grid-template-columns: 1fr; gap: 10px; }
     .bento-hero,
+    .bento-stats,
     .bento-requirements,
     .bento-benefits-all,
     .bento-apply,
     .bento-note { grid-column: span 1; }
+    .bento-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .bento-stats__divider {
+      display: block;
+    }
     .benefits-inner-grid { grid-template-columns: 1fr; }
+    .benefit-item {
+      padding: 1rem;
+      min-height: 0;
+    }
+    .benefit-icon {
+      position: absolute;
+      top: 0.95rem;
+      right: 0.95rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      opacity: 0.78;
+    }
+    .benefit-title {
+      max-width: calc(100% - 2.4rem);
+      padding-right: 0;
+    }
+    .benefit-desc {
+      max-width: calc(100% - 2.4rem);
+    }
     .bento-apply__sub { max-width: none; }
   }
 </style>

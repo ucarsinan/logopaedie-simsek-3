@@ -240,7 +240,7 @@ export const de = {
     description:
       "Termine vereinbaren wir ausschließlich telefonisch. Rufen Sie uns einfach an – wir finden gemeinsam den passenden Therapieplatz für Sie oder Ihr Kind.",
     phone_only_notice:
-      "Termine werden ausschließlich <strong>telefonisch</strong> vereinbart. Per E-Mail erreichen Sie uns für allgemeine Fragen. Ein Kontaktformular bieten wir nicht an.",
+      "Termine werden ausschließlich <strong>telefonisch</strong> vereinbart.",
     phone_cta_heading: "Jetzt anrufen",
     phone_cta_sub:
       "Rufen Sie uns direkt an – wir beraten Sie gerne und helfen Ihnen schnell und unkompliziert weiter.",
