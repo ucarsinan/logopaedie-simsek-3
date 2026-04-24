@@ -40,138 +40,323 @@ const schema = {
     { title: 'Logopädie für Erwachsene', href: '/therapie/erwachsene/', description: 'Aphasie, Dysarthrie, Stimmstörungen' },
   ]}
 >
-  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
-    <Image
-      src={kinderImg}
-      alt="Spielerische Logopädie für Kinder und Jugendliche in der Praxis Şimşek Duisburg"
-      class="w-full h-auto block"
-      widths={[400, 720]}
-      sizes="(max-width: 640px) 100vw, 42vw"
-      loading="lazy"
-      decoding="async"
-    />
-  </figure>
+  <section class="bento-page" aria-label="Logopädie für Kinder und Jugendliche in Duisburg">
+    <div class="bento-grid">
+      <article class="bento-card bento-card--image">
+        <Image
+          src={kinderImg}
+          alt="Spielerische Logopädie für Kinder und Jugendliche in der Praxis Şimşek Duisburg"
+          class="bento-card__image"
+          widths={[540, 900, 1200]}
+          sizes="(max-width: 960px) 100vw, 55vw"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="bento-card__overlay">
+          <span class="bento-eyebrow">Kindertherapie</span>
+          <h2>Spielerisch, präzise und auf den Entwicklungsstand abgestimmt</h2>
+          <p>
+            Je früher eine Sprach- oder Sprechstörung erkannt und behandelt wird, desto
+            besser sind die Therapieerfolge. Logopädische Therapie ist ab dem
+            Säuglingsalter möglich.
+          </p>
+        </div>
+      </article>
 
-  <h2>Wann braucht mein Kind Logopädie?</h2>
-  <p>
-    Kinder entwickeln Sprache in einem natürlichen Tempo – aber manchmal brauchen sie
-    gezielte Unterstützung. Je früher eine Sprach- oder Sprechstörung erkannt und behandelt
-    wird, desto besser sind die Therapieerfolge. Logopädische Therapie ist ab dem
-    <strong>Säuglingsalter</strong> möglich.
-  </p>
+      <article class="bento-card bento-card--highlight">
+        <span class="bento-eyebrow">Sprachliche Meilensteine</span>
+        <h2>Orientierungsrahmen für eine altersgerechte Sprachentwicklung</h2>
+        <ul>
+          <li><strong>12 Monate:</strong> erstes „Mama" oder „Papa", versteht einfache Wörter</li>
+          <li><strong>18 Monate:</strong> mindestens 10 verständliche Wörter</li>
+          <li><strong>2 Jahre:</strong> mindestens 50 Wörter, erste Zwei-Wort-Sätze</li>
+          <li><strong>3 Jahre:</strong> Drei-Wort-Sätze, für Bezugspersonen verständlich</li>
+          <li><strong>4 Jahre:</strong> vollständige Sätze, Fragen stellen</li>
+          <li><strong>5–6 Jahre:</strong> alle Laute korrekt, Reimen, Silbentrennen</li>
+        </ul>
+      </article>
 
-  <h3>Sprachliche Meilensteine – ein Orientierungsrahmen</h3>
-  <p>
-    Diese Richtwerte helfen Eltern, den Sprachstand ihres Kindes einzuschätzen.
-    Einzelne Abweichungen sind normal – bei mehreren Auffälligkeiten empfiehlt sich
-    eine logopädische Abklärung:
-  </p>
-  <ul>
-    <li><strong>12 Monate:</strong> Erstes „Mama" oder „Papa", zeigt auf Dinge, versteht einfache Wörter</li>
-    <li><strong>18 Monate:</strong> Mindestens 10 verständliche Wörter, zeigt auf Körperteile</li>
-    <li><strong>2 Jahre:</strong> Mindestens 50 Wörter, erste Zwei-Wort-Sätze („Ball haben", „Papa da")</li>
-    <li><strong>3 Jahre:</strong> Drei-Wort-Sätze, für Bezugspersonen gut verständlich</li>
-    <li><strong>4 Jahre:</strong> Vollständige Sätze, für Fremde gut verständlich, Fragen stellen</li>
-    <li><strong>5–6 Jahre:</strong> Alle Laute korrekt, komplexe Sätze, Reimen, Silbentrennen</li>
-  </ul>
-  <p>
-    Hinweise, die eine logopädische Abklärung sinnvoll machen:
-  </p>
-  <ul>
-    <li>Das Kind spricht deutlich weniger als Gleichaltrige</li>
-    <li>Die Aussprache ist auch mit 4–5 Jahren noch schwer verständlich</li>
-    <li>Das Kind stottert oder klingt unflüssig</li>
-    <li>Es hat Schwierigkeiten, Anweisungen zu verstehen</li>
-    <li>Es weigert sich zu sprechen oder wirkt sozial gehemmt</li>
-    <li>Es hat Probleme beim Lesen- und Schreibenlernen</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Störungsbilder</span>
+        <h2>Häufige Störungsbilder bei Kindern und Jugendlichen</h2>
+        <ul>
+          <li><strong>Sprachentwicklungsverzögerung:</strong> Wortschatz, Grammatik, Sprachverständnis</li>
+          <li><strong>Dyslalie:</strong> Lispeln, Sigmatismus, Lautbildungsprobleme</li>
+          <li><strong>Stottern:</strong> Redeflussstörungen, früh gut behandelbar</li>
+          <li><strong>LRS / Legasthenie:</strong> phonologische Bewusstheit und Laut-Buchstaben-Wissen</li>
+          <li><strong>AVWS:</strong> auditive Verarbeitungs- und Wahrnehmungsstörungen</li>
+          <li><strong>Poltern:</strong> überhastetes Sprechen mit mangelnder Selbstwahrnehmung</li>
+        </ul>
+      </article>
 
-  <h2>Behandelte Störungsbilder bei Kindern und Jugendlichen</h2>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Warnsignale</span>
+        <h2>Wann eine logopädische Abklärung sinnvoll ist</h2>
+        <ul>
+          <li>Das Kind spricht deutlich weniger als Gleichaltrige</li>
+          <li>Die Aussprache ist auch mit 4–5 Jahren noch schwer verständlich</li>
+          <li>Das Kind stottert oder klingt unflüssig</li>
+          <li>Es hat Schwierigkeiten, Anweisungen zu verstehen</li>
+          <li>Es weigert sich zu sprechen oder wirkt sozial gehemmt</li>
+          <li>Probleme beim Lesen- und Schreibenlernen</li>
+        </ul>
+      </article>
 
-  <h3>Sprachentwicklungsverzögerung und -störung</h3>
-  <p>
-    Das häufigste Störungsbild: Das Kind entwickelt Sprache langsamer als erwartet oder
-    zeigt anhaltende Defizite in Wortschatz, Grammatik oder Sprachverständnis. Wir
-    unterscheiden zwischen vorübergehenden Verzögerungen und spezifischen
-    Sprachentwicklungsstörungen (SSES) und passen die Therapie entsprechend an.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Mehrsprachigkeit</span>
+        <h2>Deutsch und Türkisch präzise einschätzen</h2>
+        <p>
+          Bei mehrsprachigen Kindern führen wir die Diagnostik in <strong>beiden Sprachen</strong>
+          durch. So unterscheiden wir zuverlässig zwischen sprachlicher Unsicherheit durch
+          Mehrsprachigkeit und einer tatsächlichen Sprachentwicklungsstörung.
+        </p>
+        <p>
+          Mehrsprachigkeit ist eine Ressource, keine Störung.
+        </p>
+      </article>
 
-  <h3>Störungen der Lautbildung (Dyslalie)</h3>
-  <p>
-    Einzelne Laute oder Lautverbindungen werden falsch oder undeutlich gebildet –
-    z. B. Lispeln (Sigmatismus), Probleme mit R, CH oder anderen Lauten. Gezielte
-    Aussprache­therapie hilft, die korrekten Lautmuster zu festigen.
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Unser Therapieansatz</span>
+        <h2>Spielbasiert, alltagsnah und mit Eltern als aktiven Partnern</h2>
+        <ul>
+          <li><strong>Eltern als Partner:</strong> Regelmäßige Elterngespräche mit konkreten Übungsideen für zuhause</li>
+          <li><strong>Spielbasiertes Lernen:</strong> Therapieintegriertes Spiel – das Kind erlebt es nicht als „Üben"</li>
+          <li><strong>Schulkinder & Jugendliche:</strong> altersgerechte Methoden, die zum Entwicklungsstand passen</li>
+          <li><strong>Transparenz:</strong> Eltern erhalten nach jeder Therapiephase einen Befundbericht</li>
+          <li><strong>Frühförderung:</strong> vor dem Schuleintritt besonders wirksam – das Gehirn ist besonders plastisch</li>
+        </ul>
+      </article>
 
-  <h3>Stottern (Redeflussstörungen)</h3>
-  <p>
-    Stottern bei Kindern ist häufig und nicht selbstverschuldet. Therapie sollte zeitnah
-    beginnen, da frühe Behandlung die Chancen auf vollständige Remission deutlich erhöht.
-    Wir arbeiten mit kindgerechten Methoden, die Sprechen als positives Erlebnis erfahrbar machen.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Erster Termin</span>
+        <h2>Anamnese, Diagnostik und individueller Therapieplan</h2>
+        <p>
+          Beim Erstgespräch fragen wir nach Sprachentwicklung, Familie und schulischem Umfeld.
+          Darauf folgt eine altersgerechte Diagnostik mit standardisierten Tests und
+          Sprachbeobachtung im Spiel.
+        </p>
+      </article>
 
-  <h3>Lese-Rechtschreib-Schwäche (LRS / Legasthenie)</h3>
-  <p>
-    LRS ist keine Faulheit und kein Intelligenzproblem – sie hat neurologische Ursachen.
-    Logopädische Therapie trainiert die phonologische Bewusstheit, das Laut-Buchstaben-Wissen
-    und die Verarbeitungsgeschwindigkeit. Wir arbeiten eng mit Schule und Eltern zusammen.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">LRS & Stottern</span>
+        <h2>Spezialgebiete mit besonderer Erfahrung in unserer Praxis</h2>
+        <p>
+          Stottern ist nicht selbstverschuldet – frühe Therapie erhöht die Chancen auf
+          vollständige Remission deutlich. Bei LRS trainieren wir phonologische Bewusstheit
+          und arbeiten eng mit Schule und Eltern zusammen.
+        </p>
+      </article>
 
-  <h3>Auditive Verarbeitungs- und Wahrnehmungsstörungen (AVWS)</h3>
-  <p>
-    Kinder mit AVWS hören zwar, haben aber Schwierigkeiten, Gehörtes zu unterscheiden,
-    zu speichern oder zu verarbeiten. Das äußert sich in Aufmerksamkeitsproblemen,
-    Verständnisschwierigkeiten und schulischen Leistungsdefiziten.
-  </p>
+      <article class="bento-card bento-card--accent">
+        <span class="bento-eyebrow">Kostenfrei</span>
+        <h2>Kinder und Jugendliche unter 18 sind von Zuzahlungen befreit.</h2>
+        <p>
+          Kinderärzte, HNO-Ärzte, Kinderpsychiater und andere Fachärzte können
+          eine Heilmittelverordnung ausstellen.
+        </p>
+      </article>
 
-  <h3>Poltern</h3>
-  <p>
-    Poltern ist eine Redeflussstörung mit überhöhtem Sprechtempo, undeutlicher Aussprache
-    und mangelnder Selbstwahrnehmung. Therapie fokussiert auf Sprechtempokontrolle und
-    kommunikative Bewusstheit.
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Verordnung</span>
+        <h2>Wer Logopädie für Kinder verordnen kann</h2>
+        <ul>
+          <li>Kinderärzte und Allgemeinmediziner</li>
+          <li>HNO-Ärzte und Phoniatriker</li>
+          <li>Kinderpsychiater und Neuropädiater</li>
+          <li>Für den ersten Termin wird eine Heilmittelverordnung vom Arzt benötigt</li>
+        </ul>
+      </article>
 
-  <h3>Mehrsprachige Kinder</h3>
-  <p>
-    Mehrsprachigkeit ist eine Ressource, keine Störung. Bei mehrsprachigen Kindern –
-    insbesondere mit Türkisch als Erstsprache – führen wir die Diagnostik in beiden
-    Sprachen durch. So unterscheiden wir zuverlässig zwischen sprachlicher Unsicherheit
-    durch Mehrsprachigkeit und einer tatsächlichen Sprachentwicklungsstörung.
-    Mehr dazu: <a href="/tuerkische-logopaedie/">Türkische Logopädie Duisburg</a>
-  </p>
-
-  <div class="info-box">
-    <p>
-      <strong>Wer verordnet Logopädie für Kinder?</strong> Kinderärzte, Allgemeinmediziner,
-      HNO-Ärzte, Kinderpsychiater und andere Fachärzte können eine Heilmittelverordnung
-      ausstellen. Kinder und Jugendliche unter 18 Jahren sind von Zuzahlungen befreit.
-      Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
-    </p>
-  </div>
-
-  <h2>Unser Therapieansatz für Kinder</h2>
-  <p>
-    Kindertherapie bei Praxis Şimşek ist spielerisch, alltagsnah und kindgerecht.
-    Wir arbeiten nach anerkannten Therapiemethoden – individuell angepasst an das
-    Alter, den Entwicklungsstand und die Persönlichkeit des Kindes.
-  </p>
-  <ul>
-    <li><strong>Eltern als Partner:</strong> Regelmäßige Elterngespräche mit konkreten Übungsideen für zuhause – so bleibt die Therapie nicht auf die Praxisstunde beschränkt</li>
-    <li><strong>Spielbasiertes Lernen:</strong> Besonders bei Kleinkindern setzen wir auf therapieintegriertes Spiel, das das Kind nicht als „Üben" erlebt</li>
-    <li><strong>Schulkinder & Jugendliche:</strong> Alltagsnahe, altersgerechte Methoden – kein „Kleinkindkram", sondern Techniken, die zum Entwicklungsstand passen</li>
-    <li><strong>Transparenz:</strong> Eltern erhalten nach jeder Therapiephase einen Befundbericht und Rückmeldung zum Fortschritt</li>
-  </ul>
-
-  <h2>Wie läuft der erste Termin ab?</h2>
-  <p>
-    Beim Erstgespräch nehmen wir uns Zeit für eine ausführliche <strong>Anamnese</strong>:
-    Wir fragen nach der Sprachentwicklung, der Familie, der Kita- oder Schulsituation und
-    dem sprachlichen Umfeld. Danach folgt eine altersgerechte <strong>Diagnostik</strong>
-    – je nach Störungsbild mit standardisierten Tests und Sprachbeobachtung im Spiel.
-    Für den ersten Termin benötigen Sie eine Heilmittelverordnung vom Kinderarzt oder Facharzt.
-  </p>
-  <p>
-    Für türkischsprachige Familien bieten wir Elterngespräche und Beratung vollständig
-    auf Türkisch an.
-  </p>
+      <article class="bento-card bento-card--soft">
+        <span class="bento-eyebrow">DE / TR</span>
+        <h2>Beratung und Therapie auch vollständig auf Türkisch</h2>
+        <p>
+          Türkischsprachige Familien erhalten Elterngespräche und Beratung vollständig auf
+          Türkisch – von der Erstdiagnostik bis zum Therapieabschluss.
+        </p>
+      </article>
+    </div>
+  </section>
 </ServicePage>
+
+<style>
+  .bento-page {
+    width: 100%;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  .bento-card {
+    grid-column: span 4;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+    min-height: 100%;
+  }
+
+  .bento-card--image {
+    grid-column: span 6;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 0;
+  }
+
+  .bento-card--highlight {
+    grid-column: span 6;
+    background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+  }
+
+  .bento-card--wide {
+    grid-column: span 8;
+  }
+
+  .bento-card--accent {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .bento-card--soft {
+    background: var(--color-primary-light);
+  }
+
+  .bento-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 18, 14, 0.08) 10%,
+      rgba(24, 18, 14, 0.76) 100%
+    );
+  }
+
+  .bento-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+
+  .bento-card--image .bento-eyebrow,
+  .bento-card--accent .bento-eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .bento-grid .bento-card :global(h2),
+  .bento-grid .bento-card__overlay :global(h2) {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .bento-grid .bento-card__overlay :global(h2) {
+    color: white;
+    max-width: 20ch;
+  }
+
+  .bento-card__overlay :global(p),
+  .bento-card__overlay :global(p strong),
+  .bento-card__overlay :global(p a) {
+    color: #ffffff !important;
+  }
+
+  .bento-grid .bento-card :global(p),
+  .bento-grid .bento-card :global(ul),
+  .bento-grid .bento-card__overlay :global(p) {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .bento-grid .bento-card__overlay :global(p) {
+    max-width: 56ch;
+  }
+
+  .bento-grid .bento-card :global(ul) {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento-grid .bento-card :global(li) {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .bento-grid .bento-card :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .bento-grid .bento-card--accent :global(h2),
+  .bento-grid .bento-card--accent :global(p),
+  .bento-grid .bento-card--accent :global(a),
+  .bento-grid .bento-card--accent .bento-eyebrow {
+    color: white;
+  }
+
+  @media (max-width: 960px) {
+    .bento-card,
+    .bento-card--image,
+    .bento-card--highlight,
+    .bento-card--wide {
+      grid-column: span 12;
+    }
+
+    .bento-card--image {
+      min-height: 19rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      gap: 0.875rem;
+    }
+
+    .bento-card {
+      padding: 1.2rem;
+    }
+
+    .bento-card--image {
+      min-height: 17rem;
+    }
+
+    .bento-card__overlay {
+      padding: 1rem;
+    }
+  }
+</style>

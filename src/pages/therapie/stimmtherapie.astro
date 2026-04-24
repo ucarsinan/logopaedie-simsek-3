@@ -79,115 +79,329 @@ const faqSchema = {
     { title: 'Schluckstörungen', href: '/therapie/schluckstoerungen/', description: 'Dysphagie bei Erwachsenen und Kindern' },
   ]}
 >
-  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
-    <Image
-      src={stimmImg}
-      alt="Bildkarten und Therapiematerialien für die Stimmtherapie in der Praxis Şimşek Duisburg"
-      class="w-full h-auto block"
-      widths={[400, 720]}
-      sizes="(max-width: 640px) 100vw, 42vw"
-      loading="lazy"
-      decoding="async"
-    />
-  </figure>
+  <section class="bento-page" aria-label="Stimmtherapie in Duisburg">
+    <div class="bento-grid">
+      <article class="bento-card bento-card--image">
+        <Image
+          src={stimmImg}
+          alt="Bildkarten und Therapiematerialien für die Stimmtherapie in der Praxis Şimşek Duisburg"
+          class="bento-card__image"
+          widths={[540, 900, 1200]}
+          sizes="(max-width: 960px) 100vw, 55vw"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="bento-card__overlay">
+          <span class="bento-eyebrow">Stimmdiagnostik</span>
+          <h2>Stimmstörungen erkennen, behandeln und vorbeugen</h2>
+          <p>
+            Heiserkeit, Stimmversagen oder Schmerzen beim Sprechen können Zeichen einer
+            behandlungsbedürftigen Stimmstörung sein. Logopädische Stimmtherapie ist
+            häufig sehr effektiv – und vermeidet operative Eingriffe.
+          </p>
+        </div>
+      </article>
 
-  <h2>Was sind Stimmstörungen?</h2>
-  <p>
-    Die Stimme ist unser wichtigstes und persönlichstes Kommunikationsinstrument. Stimmstörungen –
-    medizinisch als <strong>Dysphonie</strong> bezeichnet – umfassen alle Veränderungen von Stimmklang,
-    Stimmstärke oder Stimmausdauer, die von der altersentsprechenden Norm abweichen und die
-    Kommunikation oder das Wohlbefinden beeinträchtigen.
-  </p>
-  <p>
-    Heiserkeit, rauhe Stimme, Stimmversagen, Tonlosigkeit oder Schmerzen beim Sprechen können
-    Zeichen einer behandlungsbedürftigen Stimmstörung sein. Logopädische Stimmtherapie ist
-    häufig sehr effektiv und kann operative Eingriffe vermeiden oder deren Ergebnis sichern.
-  </p>
+      <article class="bento-card bento-card--highlight">
+        <span class="bento-eyebrow">Betroffene Berufsgruppen</span>
+        <h2>Wer besonders von Stimmstörungen betroffen ist</h2>
+        <ul>
+          <li><strong>Lehrerinnen und Lehrer:</strong> hohe tägliche Stimmbelastung</li>
+          <li><strong>Erzieherinnen und Erzieher:</strong> lautes Sprechen in Gruppen</li>
+          <li><strong>Sängerinnen und Sänger:</strong> professioneller Stimmgebrauch</li>
+          <li><strong>Call-Center-Mitarbeiterinnen:</strong> dauerhaftes Telefonsprechen</li>
+          <li><strong>Führungskräfte:</strong> Präsentationen und Konferenzen</li>
+          <li><strong>Nach Erkrankungen:</strong> Kehlkopfoperationen, COVID-19-Folgen</li>
+        </ul>
+      </article>
 
-  <h2>Arten von Stimmstörungen</h2>
-  <ul>
-    <li><strong>Funktionelle Stimmstörungen:</strong> Entstehen durch falsche Stimmtechnik, Überbelastung, ungünstige Sprechangewohnheiten oder chronischen Stress – ohne strukturelle Schädigung der Stimmlippen.</li>
-    <li><strong>Organische Stimmstörungen:</strong> Strukturelle Veränderungen der Stimmlippen wie Knötchen, Polypen, Ödeme oder Narben – oft als Folge chronischer funktioneller Fehlbelastung.</li>
-    <li><strong>Psychogene Stimmstörungen:</strong> Durch psychische Belastung ausgelöste Stimmverluste oder -einschränkungen ohne organischen Befund (z. B. psychogene Aphonie).</li>
-    <li><strong>Neurogene Stimmstörungen:</strong> Nach Recurrensparese (Stimmbandlähmung), neurologischen Erkrankungen oder Operationen im Halsbereich.</li>
-    <li><strong>Stimmstörungen bei Kindern:</strong> Z. B. Stimmknötchen durch übermäßiges Schreien oder lautes Sprechen.</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Störungsbilder</span>
+        <h2>Arten von Stimmstörungen im Überblick</h2>
+        <ul>
+          <li><strong>Funktionell:</strong> Fehlbelastung ohne strukturelle Schädigung</li>
+          <li><strong>Organisch:</strong> Knötchen, Polypen, Ödeme oder Narben</li>
+          <li><strong>Psychogen:</strong> psychisch bedingter Stimmverlust</li>
+          <li><strong>Neurogen:</strong> nach Recurrensparese oder neurologischen Erkrankungen</li>
+          <li><strong>Kinder:</strong> Stimmknötchen durch übermäßiges Schreien</li>
+        </ul>
+      </article>
 
-  <h2>Wer ist besonders betroffen?</h2>
-  <p>
-    Stimmstörungen betreffen besonders Berufsgruppen mit hoher täglicher Stimmbelastung:
-  </p>
-  <ul>
-    <li>Lehrerinnen und Lehrer</li>
-    <li>Erzieherinnen und Erzieher</li>
-    <li>Sängerinnen und Sänger</li>
-    <li>Schauspielerinnen und Schauspieler</li>
-    <li>Call-Center-Mitarbeiterinnen</li>
-    <li>Führungskräfte mit vielen Präsentationen</li>
-  </ul>
-  <p>
-    Auch nach Kehlkopfoperationen, bei anhaltender Heiserkeit ohne erkennbare Ursache oder
-    nach schweren Erkrankungen (z. B. COVID-19) ist eine logopädische Stimmtherapie sinnvoll.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">ISTP-Methode</span>
+        <h2>Integrative Stimmtherapie nach Evemarie Haupt</h2>
+        <p>
+          In unserer Praxis arbeiten wir nach der <strong>ISTP-Methode</strong> –
+          Atmung, Haltung, Bewegung und Wahrnehmung vereint in einem ganzheitlichen
+          Therapiekonzept.
+        </p>
+        <ul>
+          <li>„Stimme ist Balance" – Gleichgewicht von Körper, Atem und Klang</li>
+          <li>„Wohlgefühl bringt Wohlklang" – Entspannung als Basis gesunder Stimme</li>
+          <li>„Wo Druck ist, kann keine Schwingung sein" – Überspannung lösen</li>
+        </ul>
+      </article>
 
-  <div class="info-box">
-    <p>
-      <strong>Wann zum Arzt?</strong> Heiserkeit, die länger als 2–3 Wochen anhält, sollte zunächst
-      ärztlich abgeklärt werden (HNO). Erst nach einer laryngoskopischen Untersuchung beginnen wir
-      mit der Stimmtherapie – so ist die Behandlung sicher und zielgerichtet.
-    </p>
-  </div>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Lax Vox®</span>
+        <h2>Schonende Stimmrehabilitation durch Wasserblase</h2>
+        <p>
+          Bei Lax Vox® wird durch ein Schlauchsystem in Wasser geblasen – die Vibrationen
+          massieren die Stimmlippen sanft und fördern die natürliche Schwingung.
+        </p>
+        <p>
+          Besonders wirksam bei Stimmknötchen, Ödemen und nach Stimmoperationen sowie
+          als Aufwärmübung für Berufssprecher.
+        </p>
+      </article>
 
-  <h2>Unser Therapieansatz</h2>
-  <p>
-    Wir beginnen mit einer <strong>gründlichen Stimmdiagnostik</strong>: Wir erheben Ihre Stimmanamnese,
-    analysieren Ihre Stimmqualität und sprechen die Befunde mit Ihrem behandelnden HNO-Arzt ab.
-    Darauf aufbauend entwickeln wir einen individuellen Therapieplan.
-  </p>
-  <p>Typische Therapiebausteine der Stimmtherapie:</p>
-  <ul>
-    <li><strong>Stimmhygiene:</strong> Verhaltensregeln zum Schutz der Stimme im Alltag</li>
-    <li><strong>Atemschulung:</strong> Aufbau einer stützenden Atemtechnik als Basis der Stimmgebung</li>
-    <li><strong>Resonanzübungen:</strong> Optimierung des Klangkörpers und Lockerung der Artikulationsorgane</li>
-    <li><strong>Stimmeinsatz und Phonationsübungen:</strong> Abbau von Überspannung, weicher Stimmeinsatz</li>
-    <li><strong>Körperarbeit:</strong> Haltung, Entspannung und Körperbewusstsein als Grundlage gesunden Sprechens</li>
-    <li><strong>Transfer in den Alltag:</strong> Übertragung der erlernten Techniken auf reale Sprechsituationen</li>
-  </ul>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Therapiebausteine</span>
+        <h2>Typische Elemente einer logopädischen Stimmtherapie</h2>
+        <ul>
+          <li><strong>Stimmhygiene:</strong> Verhaltensregeln zum Schutz der Stimme im Alltag</li>
+          <li><strong>Atemschulung:</strong> Aufbau einer stützenden Atemtechnik als Basis der Stimmgebung</li>
+          <li><strong>Resonanzübungen:</strong> Optimierung des Klangkörpers und Lockerung der Artikulationsorgane</li>
+          <li><strong>Phonationsübungen:</strong> Abbau von Überspannung, weicher Stimmeinsatz</li>
+          <li><strong>Körperarbeit:</strong> Haltung, Entspannung und Körperbewusstsein</li>
+          <li><strong>Transfer:</strong> Übertragung erlernter Techniken auf reale Sprechsituationen</li>
+        </ul>
+      </article>
 
-  <h2>Unser Therapieansatz: ISTP – Integrative Stimmtherapie</h2>
-  <p>
-    In unserer Praxis arbeiten wir nach der <strong>ISTP-Methode</strong> – der Integrativen
-    Stimmtherapie und Stimmpädagogik nach <em>Evemarie Haupt</em>. ISTP vereint Atmung,
-    Haltung, Bewegung und Wahrnehmung zu einem ganzheitlichen Therapiekonzept.
-  </p>
-  <p>Drei Grundsätze leiten unsere Stimmarbeit:</p>
-  <ul>
-    <li><strong>„Stimme ist Balance"</strong> – Stimme entsteht im Gleichgewicht von Körper, Atem und Klang</li>
-    <li><strong>„Wohlgefühl bringt Wohlklang"</strong> – Entspannung und Körperbewusstsein sind die Basis einer gesunden Stimme</li>
-    <li><strong>„Wo Druck ist, kann keine Schwingung sein"</strong> – Überspannung und Druck blockieren die freie Stimmgebung</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Wichtiger Hinweis</span>
+        <h2>Vor der Therapie: HNO-Untersuchung notwendig</h2>
+        <p>
+          Heiserkeit, die länger als 2–3 Wochen anhält, sollte zunächst ärztlich abgeklärt
+          werden. Erst nach einer <strong>laryngoskopischen Untersuchung</strong> beginnen
+          wir mit der Stimmtherapie – so ist die Behandlung sicher und zielgerichtet.
+        </p>
+      </article>
 
-  <h2>Lax Vox® – Schonende Stimmrehabilitation</h2>
-  <p>
-    Als ergänzendes Therapieinstrument setzen wir <strong>Lax Vox®</strong> ein – eine
-    wasserblasengestützte Methode zur Stimmrehabilitation. Bei dieser Technik wird durch
-    ein Schlauchsystem in Wasser geblasen, was folgende Effekte erzeugt:
-  </p>
-  <ul>
-    <li>Massage der Schleimhäute im Vokaltrakt</li>
-    <li>Sanfte Lockerung von Kiefer und Zunge</li>
-    <li>Entspannung der Kehlkopfmuskulatur</li>
-    <li>Stimulierung der natürlichen Schwingungsfähigkeit der Stimmlippen</li>
-  </ul>
-  <p>
-    Lax Vox® ist besonders geeignet bei Stimmknötchen, Stimmlippenödemen, nach Stimmoperationen
-    sowie als Aufwärmübung für Berufssprecher.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Diagnostik</span>
+        <h2>Stimmanalyse als Grundlage jeder Behandlung</h2>
+        <p>
+          Wir erheben Ihre Stimmanamnese, analysieren Ihre Stimmqualität und sprechen
+          die Befunde mit Ihrem behandelnden HNO-Arzt ab. Darauf aufbauend entwickeln
+          wir einen individuellen Therapieplan.
+        </p>
+      </article>
 
-  <h2>Präventive Stimmbildung</h2>
-  <p>
-    Neben der Behandlung bestehender Stimmstörungen bieten wir auch präventive Stimmbildungskurse
-    für stimmintensive Berufsgruppen an. Wer seine Stimme kennt und pflegt, schützt sich langfristig
-    vor Erkrankungen und Ausfällen. Sprechen Sie uns an.
-  </p>
+      <article class="bento-card bento-card--accent">
+        <span class="bento-eyebrow">DE / TR</span>
+        <h2>Stimmtherapie auf Deutsch oder Türkisch – ganz nach Ihren Bedürfnissen.</h2>
+        <p>
+          Türkischsprachige Patientinnen und Patienten können die gesamte Therapie
+          vollständig auf Türkisch in Anspruch nehmen.
+        </p>
+      </article>
+
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Kassenleistung</span>
+        <h2>Kostenübernahme durch gesetzliche und private Krankenkassen</h2>
+        <ul>
+          <li>Stimmtherapie ist ein anerkanntes Heilmittel bei ärztlicher Verordnung</li>
+          <li>Verordnende Fachärzte: HNO-Ärzte, Phoniatriker, Neurologen</li>
+          <li>Laryngoskopische Untersuchung als Voraussetzung für die Verordnung</li>
+          <li>Privatkassen und Beihilfe übernehmen die Kosten in der Regel vollständig</li>
+        </ul>
+      </article>
+
+      <article class="bento-card bento-card--soft">
+        <span class="bento-eyebrow">Prävention</span>
+        <h2>Stimmbildung als Schutz vor zukünftigen Erkrankungen</h2>
+        <p>
+          Neben der Behandlung bestehender Stimmstörungen bieten wir präventive
+          Stimmbildungskurse für stimmintensive Berufsgruppen an.
+        </p>
+        <p>
+          Wer seine Stimme kennt und pflegt, schützt sich langfristig vor
+          Erkrankungen und Ausfällen.
+        </p>
+      </article>
+    </div>
+  </section>
 </ServicePage>
+
+<style>
+  .bento-page {
+    width: 100%;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  .bento-card {
+    grid-column: span 4;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+    min-height: 100%;
+  }
+
+  .bento-card--image {
+    grid-column: span 6;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 0;
+  }
+
+  .bento-card--highlight {
+    grid-column: span 6;
+    background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+  }
+
+  .bento-card--wide {
+    grid-column: span 8;
+  }
+
+  .bento-card--accent {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .bento-card--soft {
+    background: var(--color-primary-light);
+  }
+
+  .bento-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 18, 14, 0.08) 10%,
+      rgba(24, 18, 14, 0.76) 100%
+    );
+  }
+
+  .bento-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+
+  .bento-card--image .bento-eyebrow,
+  .bento-card--accent .bento-eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .bento-grid .bento-card :global(h2),
+  .bento-grid .bento-card__overlay :global(h2) {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .bento-grid .bento-card__overlay :global(h2) {
+    color: white;
+    max-width: 20ch;
+  }
+
+  .bento-card__overlay :global(p),
+  .bento-card__overlay :global(p strong),
+  .bento-card__overlay :global(p a) {
+    color: #ffffff !important;
+  }
+
+  .bento-grid .bento-card :global(p),
+  .bento-grid .bento-card :global(ul),
+  .bento-grid .bento-card__overlay :global(p) {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .bento-grid .bento-card__overlay :global(p) {
+    max-width: 56ch;
+  }
+
+  .bento-grid .bento-card :global(ul) {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento-grid .bento-card :global(li) {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .bento-grid .bento-card :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .bento-grid .bento-card--accent :global(h2),
+  .bento-grid .bento-card--accent :global(p),
+  .bento-grid .bento-card--accent :global(a),
+  .bento-grid .bento-card--accent .bento-eyebrow {
+    color: white;
+  }
+
+  @media (max-width: 960px) {
+    .bento-card,
+    .bento-card--image,
+    .bento-card--highlight,
+    .bento-card--wide {
+      grid-column: span 12;
+    }
+
+    .bento-card--image {
+      min-height: 19rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      gap: 0.875rem;
+    }
+
+    .bento-card {
+      padding: 1.2rem;
+    }
+
+    .bento-card--image {
+      min-height: 17rem;
+    }
+
+    .bento-card__overlay {
+      padding: 1rem;
+    }
+  }
+</style>

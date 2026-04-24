@@ -40,119 +40,320 @@ const schema = {
     { title: 'Stimmtherapie', href: '/therapie/stimmtherapie/', description: 'Dysphonie, Heiserkeit, ISTP-Methode' },
   ]}
 >
-  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
-    <Image
-      src={erwachseneImg}
-      alt="Bildkarten für die logopädische Therapie mit Erwachsenen in der Praxis Şimşek Duisburg"
-      class="w-full h-auto block"
-      widths={[400, 720]}
-      sizes="(max-width: 640px) 100vw, 42vw"
-      loading="lazy"
-      decoding="async"
-    />
-  </figure>
+  <section class="bento-page" aria-label="Logopädie für Erwachsene in Duisburg">
+    <div class="bento-grid">
+      <article class="bento-card bento-card--image">
+        <Image
+          src={erwachseneImg}
+          alt="Bildkarten für die logopädische Therapie mit Erwachsenen in der Praxis Şimşek Duisburg"
+          class="bento-card__image"
+          widths={[540, 900, 1200]}
+          sizes="(max-width: 960px) 100vw, 55vw"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="bento-card__overlay">
+          <span class="bento-eyebrow">Erwachsenentherapie</span>
+          <h2>Logopädie für Erwachsene – gezielt und kassenfinanziert</h2>
+          <p>
+            Sprach-, Sprech-, Stimm- und Schluckstörungen treffen Menschen in jedem
+            Lebensalter – häufig als Folge neurologischer Erkrankungen, nach Operationen
+            oder durch berufliche Überbelastung.
+          </p>
+        </div>
+      </article>
 
-  <h2>Logopädie für Erwachsene – wann ist sie sinnvoll?</h2>
-  <p>
-    Sprach-, Sprech-, Stimm- und Schluckstörungen können Menschen in jedem Lebensalter
-    treffen – häufig als Folge neurologischer Erkrankungen, nach Operationen oder durch
-    berufliche Überbelastung. Logopädische Therapie für Erwachsene ist ein anerkannter
-    Teil der medizinischen Versorgung und wird von den Krankenkassen übernommen.
-  </p>
+      <article class="bento-card bento-card--highlight">
+        <span class="bento-eyebrow">Überblick</span>
+        <h2>Wann Logopädie für Erwachsene sinnvoll ist</h2>
+        <ul>
+          <li><strong>Nach Schlaganfall:</strong> Aphasie, Dysarthrie, Schluckstörungen</li>
+          <li><strong>Neurologische Erkrankungen:</strong> Parkinson, Multiple Sklerose, ALS</li>
+          <li><strong>Stimmprobleme:</strong> Dysphonie, Heiserkeit, Stimmerschöpfung</li>
+          <li><strong>Stottern:</strong> auch im Erwachsenenalter effektiv behandelbar</li>
+          <li><strong>Demenz:</strong> Erhalt der Alltagskommunikation und Angehörigenberatung</li>
+          <li><strong>Nach Operationen:</strong> Hals, Kopf, Kehlkopf</li>
+        </ul>
+      </article>
 
-  <h2>Neurologisch bedingte Sprach- und Sprechstörungen</h2>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Aphasie</span>
+        <h2>Sprachverlust nach Schlaganfall gezielt behandeln</h2>
+        <p>
+          Aphasie ist eine erworbene Sprachstörung – meist durch Schlaganfall, Hirnblutung,
+          Tumor oder Schädel-Hirn-Trauma. Betroffen sind Sprechen, Verstehen, Lesen und Schreiben.
+        </p>
+        <p>
+          Ziel der Therapie ist die Wiederherstellung sprachlicher Fähigkeiten oder die
+          Entwicklung alltagstauglicher Kompensationsstrategien.
+        </p>
+      </article>
 
-  <h3>Aphasie – Sprachverlust nach Schlaganfall</h3>
-  <p>
-    Aphasie ist eine erworbene Sprachstörung infolge einer Hirnschädigung – meist
-    durch Schlaganfall, aber auch durch Hirnblutung, Tumor oder Schädel-Hirn-Trauma.
-    Betroffene haben Schwierigkeiten beim Sprechen, Verstehen, Lesen und/oder Schreiben.
-    Logopädische Aphasie-Therapie zielt auf die Wiederherstellung oder Kompensation
-    der sprachlichen Fähigkeiten.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Dysarthrie & Apraxie</span>
+        <h2>Neurologische Sprechstörungen verständlich machen</h2>
+        <p>
+          Dysarthrie entsteht durch Schädigung des Nervensystems und äußert sich in
+          undeutlicher, verlangsamter oder monotoner Sprache. Ursachen sind Schlaganfall,
+          Parkinson, MS und ALS.
+        </p>
+        <p>
+          Bei der Sprechapraxie ist die motorische Planung gestört – trotz intakter
+          Muskulatur sprechen Betroffene unflüssig oder machen inkonsistente Fehler.
+        </p>
+      </article>
 
-  <h3>Dysarthrie</h3>
-  <p>
-    Dysarthrie bezeichnet Sprechstörungen durch Schädigungen des zentralen oder peripheren
-    Nervensystems – erkennbar an undeutlicher, verlangsamter oder monotoner Sprache.
-    Ursachen: Schlaganfall, Parkinson, Multiple Sklerose, ALS und andere neurologische
-    Erkrankungen.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Demenz</span>
+        <h2>Kommunikation erhalten und Angehörige begleiten</h2>
+        <p>
+          Bei Demenzerkrankungen verschlechtert sich die Kommunikationsfähigkeit
+          schrittweise. Logopädische Therapie zielt auf den Erhalt der Alltagskommunikation
+          und unterstützt Angehörige mit konkreten Strategien.
+        </p>
+      </article>
 
-  <h3>Sprechapraxie</h3>
-  <p>
-    Bei der Sprechapraxie ist die motorische Planung und Koordination der Sprechbewegungen
-    gestört – trotz intakter Muskulatur. Betroffene suchen nach der richtigen
-    Lautstellung, sprechen unflüssig oder machen inkonsistente Fehler.
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Erster Termin</span>
+        <h2>So läuft der erste logopädische Termin für Erwachsene ab</h2>
+        <ul>
+          <li>Ausführliche Anamnese zu Krankengeschichte, Beschwerden und Medikamenten</li>
+          <li>Strukturierte Sprachdiagnostik mit standardisierten Tests je nach Störungsbild</li>
+          <li>Befundbesprechung und gemeinsame Zieldefinition</li>
+          <li>Erstellung eines individuellen Therapieplans</li>
+          <li>Türkischsprachige Patienten erhalten die gesamte Diagnostik auf Türkisch</li>
+        </ul>
+      </article>
 
-  <h2>Stimmstörungen bei Erwachsenen</h2>
-  <p>
-    Berufssprecher (Lehrerinnen, Erzieherinnen, Sänger, Führungskräfte) und Personen nach
-    Kehlkopfoperationen benötigen oft gezielte Stimmtherapie. Wir behandeln funktionelle,
-    organische, psychogene und neurogene Stimmstörungen.
-    Mehr Informationen: <a href="/therapie/stimmtherapie/">Stimmtherapie</a>
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Stottern</span>
+        <h2>Stottern im Erwachsenenalter effektiv und ganzheitlich behandeln</h2>
+        <p>
+          Stottern ist nicht nur ein Kindheitsproblem. Moderne Therapiekonzepte verbinden
+          Sprechtechnik, Kommunikationstraining und den Abbau von Vermeidungsverhalten.
+        </p>
+      </article>
 
-  <h2>Schluckstörungen (Dysphagie)</h2>
-  <p>
-    Schluckstörungen bei Erwachsenen entstehen häufig nach Schlaganfall, bei neurologischen
-    Erkrankungen (Parkinson, MS, ALS), nach Kopf-Hals-Operationen oder im Alter.
-    Unbehandelte Dysphagie erhöht das Risiko von Aspirationspneumonie und Mangelernährung.
-    Mehr Informationen: <a href="/therapie/schluckstoerungen/">Schlucktherapie</a>
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Standort</span>
+        <h2>Praxis in Duisburg-Mitte – barrierefrei erreichbar</h2>
+        <p>
+          Unsere Praxis liegt nur 2 Minuten vom Hauptbahnhof Duisburg entfernt. Aufzug
+          vorhanden. Wir behandeln Patienten aus dem gesamten Stadtgebiet und dem Ruhrgebiet.
+        </p>
+      </article>
 
-  <h2>Stottern bei Erwachsenen</h2>
-  <p>
-    Stottern (Redeflussstörungen) ist nicht nur ein Kindheitsproblem – viele Erwachsene
-    stottern und leiden unter den kommunikativen und sozialen Einschränkungen. Modernes
-    Stottertherapie-Konzepte verbinden Sprechtechnik, Kommunikationstraining und den
-    Abbau von Vermeidungsverhalten.
-  </p>
+      <article class="bento-card bento-card--accent">
+        <span class="bento-eyebrow">DE / TR</span>
+        <h2>Vollständige Therapie auf Deutsch oder Türkisch – von der Anamnese bis zum Abschluss.</h2>
+        <p>
+          Türkischsprachige Erwachsene können unsere Therapie vollständig auf Türkisch
+          in Anspruch nehmen.
+        </p>
+      </article>
 
-  <h2>Demenz und altersbedingte Kommunikationsstörungen</h2>
-  <p>
-    Bei Demenzerkrankungen verschlechtert sich die Kommunikationsfähigkeit schrittweise.
-    Logopädische Therapie in der Begleitung von Demenzpatienten zielt auf den Erhalt
-    der Alltagskommunikation und die Unterstützung von Angehörigen.
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Kostenübernahme</span>
+        <h2>Logopädie für Erwachsene ist eine Kassenleistung</h2>
+        <ul>
+          <li>Gesetzliche und private Krankenkassen übernehmen die Kosten bei Heilmittelverordnung</li>
+          <li>Verordnende Fachärzte: Neurologen, HNO-Ärzte, Internisten, Allgemeinmediziner, Phoniatriker</li>
+          <li>Erwachsene zahlen 10 % Zuzahlung plus 10 € Rezeptgebühr</li>
+          <li>Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a></li>
+        </ul>
+      </article>
 
-  <div class="info-box">
-    <p>
-      <strong>Zweisprachige Therapie:</strong> Türkischsprachige Erwachsene können unsere
-      Therapie vollständig auf Türkisch in Anspruch nehmen – von der Erstdiagnostik bis
-      zum Therapieabschluss. Mehr dazu:
-      <a href="/tuerkische-logopaedie/">Türkische Logopädie Duisburg</a>
-    </p>
-  </div>
-
-  <h2>Wie läuft der erste Termin ab?</h2>
-  <p>
-    Der erste Termin beginnt mit einer ausführlichen <strong>Anamnese</strong>: Wir besprechen
-    Ihre Krankengeschichte, aktuelle Beschwerden, Medikamente und Alltagseinschränkungen.
-    Anschließend führen wir eine strukturierte <strong>Sprachdiagnostik</strong> durch –
-    je nach Störungsbild mit standardisierten Tests für Sprache, Sprechen, Stimme oder Schlucken.
-    Auf Basis des Befunds erstellen wir gemeinsam mit Ihnen einen individuellen Therapieplan.
-  </p>
-  <p>
-    Für türkischsprachige Patientinnen und Patienten verläuft der gesamte Prozess –
-    von der Anamnese bis zum Therapieabschluss – vollständig auf Türkisch.
-  </p>
-
-  <h2>Logopädie für Erwachsene in Duisburg</h2>
-  <p>
-    Unsere Praxis liegt in <strong>Duisburg-Mitte</strong>, nur 2 Minuten vom Hauptbahnhof
-    entfernt. Wir behandeln Patientinnen und Patienten aus dem gesamten Stadtgebiet –
-    aus Duisburg-Innenstadt, Rheinhausen, Hamborn, Hochfeld, Meiderich und dem Ruhrgebiet.
-    Aufzug vorhanden.
-  </p>
-
-  <h2>Verordnung und Kostenübernahme</h2>
-  <p>
-    Logopädische Therapie für Erwachsene wird von gesetzlichen und privaten Krankenkassen
-    übernommen, wenn eine <strong>Heilmittelverordnung</strong> (Rezept) vorliegt.
-    Verordnende Fachärzte: Neurologen, HNO-Ärzte, Internisten, Allgemeinmediziner,
-    Phoniatriker und weitere. Erwachsene zahlen 10% Zuzahlung plus 10 € Rezeptgebühr.
-    Alle Details: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
-  </p>
+      <article class="bento-card bento-card--soft">
+        <span class="bento-eyebrow">Stimme & Schlucken</span>
+        <h2>Stimmtherapie und Dysphagietherapie auch mit Hausbesuchen</h2>
+        <p>
+          Berufssprecher und Personen nach Kehlkopfoperationen profitieren von gezielter
+          Stimmtherapie. Schluckstörungen behandeln wir auch mit Hausbesuchen – für
+          bettlägerige oder mobilitätseingeschränkte Patientinnen.
+        </p>
+      </article>
+    </div>
+  </section>
 </ServicePage>
+
+<style>
+  .bento-page {
+    width: 100%;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  .bento-card {
+    grid-column: span 4;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+    min-height: 100%;
+  }
+
+  .bento-card--image {
+    grid-column: span 6;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 0;
+  }
+
+  .bento-card--highlight {
+    grid-column: span 6;
+    background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+  }
+
+  .bento-card--wide {
+    grid-column: span 8;
+  }
+
+  .bento-card--accent {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .bento-card--soft {
+    background: var(--color-primary-light);
+  }
+
+  .bento-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 18, 14, 0.08) 10%,
+      rgba(24, 18, 14, 0.76) 100%
+    );
+  }
+
+  .bento-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+
+  .bento-card--image .bento-eyebrow,
+  .bento-card--accent .bento-eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .bento-grid .bento-card :global(h2),
+  .bento-grid .bento-card__overlay :global(h2) {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .bento-grid .bento-card__overlay :global(h2) {
+    color: white;
+    max-width: 20ch;
+  }
+
+  .bento-card__overlay :global(p),
+  .bento-card__overlay :global(p strong),
+  .bento-card__overlay :global(p a) {
+    color: #ffffff !important;
+  }
+
+  .bento-grid .bento-card :global(p),
+  .bento-grid .bento-card :global(ul),
+  .bento-grid .bento-card__overlay :global(p) {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .bento-grid .bento-card__overlay :global(p) {
+    max-width: 56ch;
+  }
+
+  .bento-grid .bento-card :global(ul) {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento-grid .bento-card :global(li) {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .bento-grid .bento-card :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .bento-grid .bento-card--accent :global(h2),
+  .bento-grid .bento-card--accent :global(p),
+  .bento-grid .bento-card--accent :global(a),
+  .bento-grid .bento-card--accent .bento-eyebrow {
+    color: white;
+  }
+
+  @media (max-width: 960px) {
+    .bento-card,
+    .bento-card--image,
+    .bento-card--highlight,
+    .bento-card--wide {
+      grid-column: span 12;
+    }
+
+    .bento-card--image {
+      min-height: 19rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      gap: 0.875rem;
+    }
+
+    .bento-card {
+      padding: 1.2rem;
+    }
+
+    .bento-card--image {
+      min-height: 17rem;
+    }
+
+    .bento-card__overlay {
+      padding: 1rem;
+    }
+  }
+</style>
