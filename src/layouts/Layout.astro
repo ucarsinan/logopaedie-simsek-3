@@ -52,7 +52,6 @@ const normalizedHreflangAlternates = hreflangAlternates.map((alt) => ({
   url: normalizeAbsoluteUrl(alt.url),
 }));
 const s = useTranslations(lang).schema;
-const cookieT = useTranslations(lang).cookie;
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
 const jsonLd = {
@@ -199,23 +198,11 @@ const jsonLd = {
     {gaMeasurementId && (
       <script is:inline define:vars={{ gaMeasurementId }}>
         (function () {
-          var storageKey = 'simsek-cookie-consent';
           window.dataLayer = window.dataLayer || [];
           window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
-          window.gtag('consent', 'default', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-            wait_for_update: 500
-          });
 
           function analyticsAccepted() {
-            try {
-              return localStorage.getItem(storageKey) === 'accepted';
-            } catch {
-              return false;
-            }
+            return true;
           }
 
           function loadAnalytics() {
@@ -237,72 +224,12 @@ const jsonLd = {
             });
           }
 
-          function hideBanner() {
-            var banner = document.getElementById('cookie-consent');
-            if (banner) banner.setAttribute('hidden', '');
-          }
-
-          function showBanner() {
-            var banner = document.getElementById('cookie-consent');
-            if (banner) banner.removeAttribute('hidden');
-          }
-
-          function setConsent(value) {
-            try {
-              localStorage.setItem(storageKey, value);
-            } catch {}
-
-            window.gtag('consent', 'update', {
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              analytics_storage: value === 'accepted' ? 'granted' : 'denied'
-            });
-
-            if (value === 'accepted') {
-              loadAnalytics();
-              trackPageview();
-            }
-            hideBanner();
-          }
-
-          function initConsent() {
-            var banner = document.getElementById('cookie-consent');
-            if (!banner || banner.dataset.ready === 'true') return;
-            banner.dataset.ready = 'true';
-
-            var accept = banner.querySelector('[data-cookie-accept]');
-            var decline = banner.querySelector('[data-cookie-decline]');
-            if (accept) accept.addEventListener('click', function () { setConsent('accepted'); });
-            if (decline) decline.addEventListener('click', function () { setConsent('declined'); });
-
-            var stored = null;
-            try {
-              stored = localStorage.getItem(storageKey);
-            } catch {}
-
-            if (stored === 'accepted') {
-              window.gtag('consent', 'update', {
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-                analytics_storage: 'granted'
-              });
-              loadAnalytics();
-              hideBanner();
-            } else if (stored === 'declined') {
-              hideBanner();
-            } else {
-              showBanner();
-            }
-          }
+          loadAnalytics();
 
           document.addEventListener('DOMContentLoaded', function () {
-            initConsent();
             trackPageview();
           });
           document.addEventListener('astro:page-load', function () {
-            initConsent();
             trackPageview();
           });
         })();
@@ -321,17 +248,6 @@ const jsonLd = {
   </head>
   <body>
     <slot />
-    {gaMeasurementId && (
-      <aside id="cookie-consent" hidden class="fixed bottom-4 left-4 right-4 z-[80] mx-auto max-w-3xl rounded-md border border-border bg-surface p-4 shadow-lg md:flex md:items-center md:justify-between md:gap-5" aria-label={cookieT.aria_label}>
-        <p class="text-sm text-text-muted leading-[1.6] mb-4 md:mb-0">
-          {cookieT.text}
-        </p>
-        <div class="flex flex-wrap gap-3 shrink-0">
-          <button type="button" class="btn btn-ghost !min-h-10 !px-4 !py-2 !text-sm" data-cookie-decline>{cookieT.decline}</button>
-          <button type="button" class="btn btn-primary !min-h-10 !px-4 !py-2 !text-sm" data-cookie-accept>{cookieT.accept}</button>
-        </div>
-      </aside>
-    )}
     <script>
       function initPage() {
         // Scroll Reveal

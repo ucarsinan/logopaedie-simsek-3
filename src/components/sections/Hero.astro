@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { useTranslations } from '../../i18n/index';
-import heroImg from '../../assets/therapy/about-section-kind-senior-therapeutin.webp';
+import heroImg from '../../assets/therapy/hero-generated-logopaedie-simsek.png';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -12,12 +12,24 @@ const t = useTranslations(lang).hero;
 ---
 
 <section
-  class="min-h-svh pt-[calc(var(--header-h)+var(--nav-h))] flex flex-col justify-center relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[image:var(--noise-bg)] before:pointer-events-none before:z-0"
+  class="min-h-svh lg:min-h-[clamp(680px,78svh,820px)] pt-[calc(var(--header-h)+var(--nav-h))] flex flex-col justify-center relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[image:var(--noise-bg)] before:pointer-events-none before:z-0"
   aria-labelledby="hero-heading">
+  <div class="absolute inset-0 z-0 hidden lg:block overflow-hidden bg-[linear-gradient(90deg,#faf6ef_0%,#f8f4ed_52%,#f5efe7_100%)]" aria-hidden="true">
+    <Image
+      src={heroImg}
+      alt=""
+      class="absolute inset-y-0 right-0 w-full h-full object-contain object-right"
+      widths={[1280, 1600, 2200]}
+      sizes="100vw"
+      loading="eager"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(250,246,239,0.98)_0%,rgba(250,246,239,0.95)_32%,rgba(250,246,239,0.72)_50%,rgba(250,246,239,0.2)_72%,rgba(250,246,239,0.08)_100%)]"></div>
+  </div>
   <div class="absolute rounded-full pointer-events-none z-0 w-[clamp(300px,40vw,580px)] h-[clamp(300px,40vw,580px)] bg-[radial-gradient(circle,rgba(42,127,111,.12)_0%,transparent_70%)] -top-[10%] -right-[10%]" aria-hidden="true"></div>
   <div class="absolute rounded-full pointer-events-none z-0 w-[clamp(200px,30vw,420px)] h-[clamp(200px,30vw,420px)] bg-[radial-gradient(circle,rgba(196,113,79,.10)_0%,transparent_70%)] bottom-[10%] -left-[5%]" aria-hidden="true"></div>
   <div class="container relative z-[1] pt-16 pb-12 max-[640px]:pt-10 max-[640px]:pb-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-[640px]:gap-8 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] gap-12 lg:gap-16 max-[640px]:gap-8 items-start">
       <!-- Left: Text content -->
       <div>
         <div class="inline-flex items-center gap-2 bg-primary-light text-primary text-[.8125rem] max-[640px]:text-[0.72rem] font-semibold tracking-[.06em] uppercase px-[14px] py-[6px] max-[640px]:px-3 max-[640px]:py-1.5 rounded-full mb-6 max-[640px]:mb-4 before:content-[''] before:block before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary reveal">{t.badge}</div>
@@ -38,41 +50,27 @@ const t = useTranslations(lang).hero;
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
           </a>
         </div>
-        <div class="grid grid-cols-2 gap-3 max-[420px]:gap-2 reveal reveal-delay-4">
-          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-2 text-sm font-medium text-text-muted shadow-sm min-w-0 max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
+        <div class="grid grid-cols-2 lg:flex lg:flex-wrap lg:items-stretch gap-3 lg:gap-2.5 max-[420px]:gap-2 reveal reveal-delay-4">
+          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-[1.2rem] px-4 py-3 text-sm font-medium text-text-muted shadow-sm min-w-0 min-h-[4.5rem] h-full lg:flex-[1_1_10.5rem] lg:max-w-[12rem] lg:rounded-full lg:px-3 lg:py-2.5 lg:min-h-[3.4rem] lg:text-[0.84rem] xl:px-3.5 xl:py-2.5 max-[640px]:rounded-full max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:min-h-0 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            <span class="min-w-0 text-balance">{t.badge_station}</span>
+            <span class="min-w-0 text-balance leading-[1.3] lg:line-clamp-2">{t.badge_station}</span>
           </span>
-          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-2 text-sm font-medium text-text-muted shadow-sm min-w-0 max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
+          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-[1.2rem] px-4 py-3 text-sm font-medium text-text-muted shadow-sm min-w-0 min-h-[4.5rem] h-full lg:flex-[1_1_10.5rem] lg:max-w-[12rem] lg:rounded-full lg:px-3 lg:py-2.5 lg:min-h-[3.4rem] lg:text-[0.84rem] xl:px-3.5 xl:py-2.5 max-[640px]:rounded-full max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:min-h-0 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span class="min-w-0 text-balance">{t.badge_lang}</span>
+            <span class="min-w-0 text-balance leading-[1.3] lg:line-clamp-2">{t.badge_lang}</span>
           </span>
-          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-2 text-sm font-medium text-text-muted shadow-sm min-w-0 max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
+          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-[1.2rem] px-4 py-3 text-sm font-medium text-text-muted shadow-sm min-w-0 min-h-[4.5rem] h-full lg:flex-[1_1_10.5rem] lg:max-w-[12rem] lg:rounded-full lg:px-3 lg:py-2.5 lg:min-h-[3.4rem] lg:text-[0.84rem] xl:px-3.5 xl:py-2.5 max-[640px]:rounded-full max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:min-h-0 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span class="min-w-0 text-balance">{t.badge_homevisit}</span>
+            <span class="min-w-0 text-balance leading-[1.3] lg:line-clamp-2">{t.badge_homevisit}</span>
           </span>
-          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-2 text-sm font-medium text-text-muted shadow-sm min-w-0 max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
+          <span class="inline-flex items-center gap-2 bg-surface border border-border rounded-[1.2rem] px-4 py-3 text-sm font-medium text-text-muted shadow-sm min-w-0 min-h-[4.5rem] h-full lg:flex-[1_1_10.5rem] lg:max-w-[12rem] lg:rounded-full lg:px-3 lg:py-2.5 lg:min-h-[3.4rem] lg:text-[0.84rem] xl:px-3.5 xl:py-2.5 max-[640px]:rounded-full max-[640px]:px-3.5 max-[640px]:py-2.5 max-[640px]:min-h-0 max-[640px]:text-[0.9rem] max-[420px]:text-[0.82rem] max-[420px]:gap-1.5 [&_svg]:text-primary [&_svg]:shrink-0">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span class="min-w-0 text-balance">{t.badge_age}</span>
+            <span class="min-w-0 text-balance leading-[1.3] lg:line-clamp-2">{t.badge_age}</span>
           </span>
         </div>
       </div>
 
-      <!-- Right: Hero Photo -->
-      <div class="hidden lg:flex items-center justify-center reveal reveal-delay-2">
-        <div class="relative w-full max-w-[480px] mx-auto">
-          <div class="absolute -inset-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(42,127,111,0.12)_0%,transparent_70%)] blur-2xl pointer-events-none"></div>
-          <Image
-            src={heroImg}
-            alt="Logopädische Therapiesituation in der Praxis Şimşek in Duisburg mit Kind und Senior"
-            class="relative w-full h-auto rounded-2xl shadow-xl object-cover"
-            widths={[480, 720, 960]}
-            sizes="(max-width: 1024px) 0vw, 40vw"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-      </div>
+      <div class="hidden lg:block" aria-hidden="true"></div>
     </div>
   </div>
   <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full" aria-hidden="true">
