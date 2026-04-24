@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { useTranslations } from '../../i18n/index';
-import heroImg from '../../assets/therapy/hero-photo.webp';
+import heroImg from '../../assets/therapy/about-section-kind-senior-therapeutin.webp';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -21,7 +21,7 @@ const t = useTranslations(lang).hero;
       <!-- Left: Text content -->
       <div>
         <div class="inline-flex items-center gap-2 bg-primary-light text-primary text-[.8125rem] max-[640px]:text-[0.72rem] font-semibold tracking-[.06em] uppercase px-[14px] py-[6px] max-[640px]:px-3 max-[640px]:py-1.5 rounded-full mb-6 max-[640px]:mb-4 before:content-[''] before:block before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary reveal">{t.badge}</div>
-        <h1 class="sr-only" id="hero-heading">Logopädie Duisburg – Praxis Şimşek: Sprachtherapie auf Deutsch und Türkisch</h1>
+        <h1 class="sr-only" id="hero-heading">Logopädie Duisburg – Praxis Şimşek: Logopädie auf Deutsch und Türkisch</h1>
         <p class="font-display text-[clamp(2.15rem,7vw,5.5rem)] max-[640px]:text-[clamp(1.85rem,11vw,2.85rem)] font-semibold leading-[1.05] max-[640px]:leading-[1.02] tracking-[-0.02em] text-text mb-6 max-[640px]:mb-4 [&_em]:italic [&_em]:text-primary reveal reveal-delay-1" aria-hidden="true">
           {t.heading_line1}<br><em>{t.heading_line2}</em><br>{t.heading_line3}
         </p>
@@ -64,7 +64,7 @@ const t = useTranslations(lang).hero;
           <div class="absolute -inset-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(42,127,111,0.12)_0%,transparent_70%)] blur-2xl pointer-events-none"></div>
           <Image
             src={heroImg}
-            alt="Logopädin Emel Şimşek-Uçar in der Praxis Duisburg – Sprachtherapie für Kinder und Erwachsene"
+            alt="Logopädische Therapiesituation in der Praxis Şimşek in Duisburg mit Kind und Senior"
             class="relative w-full h-auto rounded-2xl shadow-xl object-cover"
             widths={[480, 720, 960]}
             sizes="(max-width: 1024px) 0vw, 40vw"

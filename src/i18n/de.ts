@@ -48,7 +48,7 @@ export const de = {
     heading_line2: "Verstehen.",
     heading_line3: "Verbinden.",
     description:
-      "Zweisprachige Sprachtherapie auf Deutsch und Türkisch – für Kinder, Erwachsene und Senioren. Alle Krankenkassen. Hausbesuche möglich.",
+      "Zweisprachige Logopädie auf Deutsch und Türkisch – für Kinder, Erwachsene und Senioren. Alle Krankenkassen. Hausbesuche möglich.",
     cta_primary: "Termin anfragen",
     cta_secondary: "Therapieangebot entdecken",
     badge_station: "2 min. vom Hauptbahnhof",
