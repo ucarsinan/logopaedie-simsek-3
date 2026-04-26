@@ -18,19 +18,17 @@ Türkisch möglich. Termine werden telefonisch unter 0203 34 86 86 90 vereinbart
 
 ## Leistungen (Deutsch)
 
-- [Sprachstörungen – Sprachtherapie](/therapieangebot/sprachstoerungen/)
-- [Sprechstörungen – Sprechtherapie](/therapieangebot/sprechstoerungen/)
-- [Stimmtherapie – ISTP, Lax Vox](/therapieangebot/stimmtherapie/)
-- [Schluckstörungen – Dysphagietherapie](/therapieangebot/schluckstoerungen/)
-- [Therapie für Kinder und Jugendliche](/therapieangebot/kinder-und-jugendliche/)
-- [Therapie für Erwachsene](/therapieangebot/erwachsene/)
+- [Sprachstörungen – Sprachtherapie](/therapie/sprachstoerungen/)
+- [Sprechstörungen – Sprechtherapie](/therapie/sprechstoerungen/)
+- [Stimmtherapie – ISTP, Lax Vox](/therapie/stimmtherapie/)
+- [Schluckstörungen – Dysphagietherapie](/therapie/schluckstoerungen/)
+- [Therapie für Kinder und Jugendliche](/therapie/kinder-und-jugendliche/)
+- [Therapie für Erwachsene](/therapie/erwachsene/)
 
 ## Türkische Logopädie / Türkçe Logopedi
 
-- [Türkische Logopädie Duisburg](/tuerkische-logopaedie/)
+- [Türkische Logopädie Duisburg](/tuerkische-logopaedie-duisburg/)
 - [Türkische Sprachtherapie Duisburg](/tuerkische-sprachtherapie/)
-- [Türkische Logopädie Duisburg – lokal](/tuerkische-logopaedie-duisburg/)
-- [Türkische Sprachtherapie Duisburg – lokal](/tuerkische-sprachtherapie-duisburg/)
 
 ## Türkçe Hizmetler
 
