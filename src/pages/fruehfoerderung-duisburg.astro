@@ -66,82 +66,318 @@ const faqSchema = {
     { title: 'Türkische Logopädie', href: '/tuerkische-logopaedie/', description: 'Zweisprachige Therapie auf Deutsch und Türkisch' },
   ]}
 >
-  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
-    <Image
-      src={fruehImg}
-      alt="Spielerische Frühförderung für Kleinkinder in der logopädischen Praxis Şimşek Duisburg"
-      class="w-full h-auto block"
-      widths={[400, 720]}
-      sizes="(max-width: 640px) 100vw, 42vw"
-      loading="lazy"
-      decoding="async"
-    />
-  </figure>
+  <section class="bento-page" aria-label="Logopädische Frühförderung in Duisburg">
+    <div class="bento-grid">
+      <article class="bento-card bento-card--image">
+        <Image
+          src={fruehImg}
+          alt="Spielerische Frühförderung für Kleinkinder in der logopädischen Praxis Şimşek Duisburg"
+          class="bento-card__image"
+          widths={[540, 900, 1200]}
+          sizes="(max-width: 960px) 100vw, 55vw"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="bento-card__overlay">
+          <span class="bento-eyebrow">0-6 Jahre</span>
+          <h2>Früh handeln, Sprache spielerisch stärken</h2>
+          <p>
+            Logopädische Frühförderung erkennt und behandelt sprachliche Auffälligkeiten,
+            bevor sie den Alltag, den Schuleintritt oder die soziale Teilhabe erschweren.
+          </p>
+        </div>
+      </article>
 
-  <h2>Was ist logopädische Frühförderung?</h2>
-  <p>
-    Logopädische Frühförderung bezeichnet die frühzeitige Erkennung und Behandlung von
-    Störungen in der Sprachentwicklung bei Säuglingen, Kleinkindern und Vorschulkindern.
-    Das Ziel: Sprachliche Grundlagen legen, bevor sich Verzögerungen verfestigen und den
-    Schuleintritt, das Lernen und die soziale Teilhabe beeinträchtigen.
-  </p>
-  <p>
-    Das Gehirn ist in den ersten Lebensjahren besonders plastisch – Veränderungen und
-    Förderimpulse wirken in diesem Fenster deutlich effektiver als zu einem späteren Zeitpunkt.
-    <strong>Früh zu handeln lohnt sich.</strong>
-  </p>
+      <article class="bento-card bento-card--highlight">
+        <span class="bento-eyebrow">Überblick</span>
+        <h2>Wann Frühförderung sinnvoll ist</h2>
+        <ul>
+          <li><strong>Säuglinge:</strong> Saug-, Trink- oder Fütterstörungen</li>
+          <li><strong>Mit 12 Monaten:</strong> kein Zeigen, Winken oder erstes "Mama" / "Papa"</li>
+          <li><strong>Mit 18 Monaten:</strong> weniger als 10 Wörter im aktiven Wortschatz</li>
+          <li><strong>Mit 24 Monaten:</strong> noch keine Zwei-Wort-Verbindungen</li>
+          <li><strong>Mit 3 Jahren:</strong> das Kind wird von Fremden kaum verstanden</li>
+          <li><strong>Mit 4-5 Jahren:</strong> Grammatik-, Wortschatz- oder Ausspracheprobleme</li>
+        </ul>
+      </article>
 
-  <h2>Wann sollte mein Kind zur Frühförderung?</h2>
-  <p>Die folgenden Zeichen können auf eine Sprachentwicklungsverzögerung hinweisen:</p>
-  <ul>
-    <li><strong>Mit 12 Monaten:</strong> Kein Zeigen, kein Winken, kein "Mama" oder "Papa"</li>
-    <li><strong>Mit 18 Monaten:</strong> Weniger als 10 Wörter im aktiven Wortschatz</li>
-    <li><strong>Mit 24 Monaten:</strong> Noch keine Zwei-Wort-Verbindungen (z. B. "Mama da")</li>
-    <li><strong>Mit 3 Jahren:</strong> Fremde verstehen das Kind kaum; kein Fragenstellen</li>
-    <li><strong>Mit 4–5 Jahren:</strong> Auffällige Grammatikfehler, eingeschränkter Wortschatz, Lautbildungsprobleme</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Was bedeutet das?</span>
+        <h2>Sprachliche Grundlagen entstehen in den ersten Lebensjahren</h2>
+        <p>
+          Frühförderung bezeichnet die frühe Diagnostik und Therapie bei Säuglingen,
+          Kleinkindern und Vorschulkindern. Das Gehirn ist in dieser Phase besonders
+          lernfähig, deshalb können passende Impulse viel bewirken.
+        </p>
+      </article>
 
-  <div class="info-box">
-    <p>
-      <strong>Unsicherheit ist kein Grund zu warten.</strong> Wenn Sie das Gefühl haben,
-      dass die Sprachentwicklung Ihres Kindes nicht stimmt, empfehlen wir eine logopädische
-      Abklärung. Sie dauert ca. 45–60 Minuten und gibt Ihnen Klarheit.
-    </p>
-  </div>
+      <article class="bento-card bento-card--accent">
+        <span class="bento-eyebrow">Wichtig</span>
+        <h2>Unsicherheit ist kein Grund zu warten.</h2>
+        <p>
+          Wenn Sie das Gefühl haben, dass die Sprachentwicklung Ihres Kindes nicht stimmt,
+          empfehlen wir eine logopädische Abklärung. Sie dauert ca. 45-60 Minuten und gibt
+          Ihnen Klarheit.
+        </p>
+      </article>
 
-  <h2>Frühförderung bei mehrsprachig aufwachsenden Kindern</h2>
-  <p>
-    Kinder, die mit zwei oder mehr Sprachen aufwachsen, zeigen manchmal eine verzögerte
-    Sprachentwicklung in einer der Sprachen – das ist normal. Problematisch wird es, wenn
-    Rückstände in <em>allen</em> Sprachen bestehen oder wenn die Entwicklung deutlich hinter
-    gleichaltrigen einsprachigen Kindern zurückliegt.
-  </p>
-  <p>
-    Eine zuverlässige Unterscheidung zwischen einer <strong>echten Sprachentwicklungsstörung</strong>
-    und normalen Phasen des bilingualen Spracherwerbs ist nur möglich, wenn die Diagnostik in
-    <em>beiden</em> Sprachen erfolgt. In unserer Praxis sprechen wir Deutsch und Türkisch – und können
-    Kinder daher in beiden Sprachen vollständig einschätzen und behandeln.
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Mehrsprachigkeit</span>
+        <h2>Deutsch und Türkisch zuverlässig einschätzen</h2>
+        <p>
+          Bei mehrsprachig aufwachsenden Kindern ist entscheidend, ob Rückstände in einer
+          Sprache oder in allen Sprachen bestehen. Unsere Diagnostik auf Deutsch und Türkisch
+          hilft, eine Sprachentwicklungsstörung von normalem bilingualem Erwerb zu unterscheiden.
+        </p>
+      </article>
 
-  <h2>Was passiert beim Ersttermin?</h2>
-  <p>
-    Beim Ersttermin führen wir eine ausführliche <strong>Anamnese mit den Eltern</strong> durch und
-    erheben den Sprachentwicklungsstand des Kindes mit standardisierten, altersgerechten Tests.
-    Die Diagnostik erfolgt spielerisch, damit das Kind sich wohlfühlt.
-  </p>
-  <p>
-    Im Anschluss besprechen wir gemeinsam, ob und welche Therapie sinnvoll ist, welche Therapieziele
-    wir anstreben und wie Sie die Entwicklung Ihres Kindes zu Hause unterstützen können.
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Erster Termin</span>
+        <h2>So läuft die Frühförderung in unserer Praxis ab</h2>
+        <ul>
+          <li>Ausführliches Elterngespräch zur bisherigen Entwicklung und Alltagssituation</li>
+          <li>Spielerische, altersgerechte Diagnostik statt Prüfungssituation</li>
+          <li>Standardisierte Tests je nach Alter und Fragestellung</li>
+          <li>Besprechung der Ergebnisse mit klaren nächsten Schritten</li>
+          <li>Konkrete Hinweise, wie Eltern die Entwicklung zu Hause unterstützen können</li>
+        </ul>
+      </article>
 
-  <h2>Frühförderung und Krankenkasse</h2>
-  <p>
-    Logopädische Frühförderung ist ein anerkanntes <strong>Heilmittel</strong>. Bei vorliegender
-    Heilmittelverordnung (Rezept) – ausgestellt vom Kinderarzt, HNO-Arzt oder Kinderpsychiater –
-    übernehmen gesetzliche und private Krankenkassen die Kosten.
-    <strong>Kinder unter 18 Jahren sind vollständig von Zuzahlungen befreit.</strong>
-  </p>
-  <p>
-    Mehr dazu: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
-  </p>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Therapie</span>
+        <h2>Spielerisch, alltagsnah und mit Elternberatung</h2>
+        <p>
+          Kinder lernen Sprache über Beziehung, Spiel und Wiederholung. Deshalb verbinden
+          wir gezielte Therapieziele mit Materialien, die Kinder motivieren, und beziehen
+          Eltern eng in die Förderung ein.
+        </p>
+      </article>
+
+      <article class="bento-card bento-card--soft">
+        <span class="bento-eyebrow">Kosten</span>
+        <h2>Kinder unter 18 Jahren sind zuzahlungsbefreit</h2>
+        <p>
+          Logopädische Frühförderung ist ein Heilmittel. Bei ärztlicher Verordnung übernehmen
+          gesetzliche und private Krankenkassen die Kosten.
+        </p>
+        <a class="bento-link" href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Verordnung</span>
+        <h2>Diese Ärzte können Logopädie verordnen</h2>
+        <ul>
+          <li>Kinderärzte und Allgemeinmediziner</li>
+          <li>HNO-Ärzte und Phoniatriker</li>
+          <li>Kinderpsychiater und Neurologen</li>
+          <li>Bei Fütter- oder Schluckthemen auch spezialisierte Fachärzte</li>
+        </ul>
+      </article>
+
+      <article class="bento-card bento-card--wide bento-card--highlight">
+        <span class="bento-eyebrow">Kontakt</span>
+        <h2>Abklärung für Ihr Kind in Duisburg vereinbaren</h2>
+        <p>
+          Sprechen Sie uns an, wenn Sie Fragen zur Sprachentwicklung, Mehrsprachigkeit oder
+          zur Verordnung haben. Beratung ist auf Deutsch und Türkisch möglich.
+        </p>
+        <a class="bento-link" href="/kontakt/">Termin anfragen</a>
+      </article>
+    </div>
+  </section>
 </ServicePage>
+
+<style>
+  .bento-page {
+    width: 100%;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  .bento-card {
+    grid-column: span 4;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+    min-height: 100%;
+  }
+
+  .bento-card--image {
+    grid-column: span 6;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 0;
+  }
+
+  .bento-card--highlight {
+    grid-column: span 6;
+    background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+  }
+
+  .bento-card--wide {
+    grid-column: span 8;
+  }
+
+  .bento-card--accent {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .bento-card--soft {
+    background: var(--color-primary-light);
+  }
+
+  .bento-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 18, 14, 0.08) 10%,
+      rgba(24, 18, 14, 0.76) 100%
+    );
+  }
+
+  .bento-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+
+  .bento-card--image .bento-eyebrow,
+  .bento-card--accent .bento-eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .bento-grid .bento-card :global(h2),
+  .bento-grid .bento-card__overlay :global(h2) {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .bento-grid .bento-card__overlay :global(h2) {
+    color: white;
+    max-width: 20ch;
+  }
+
+  .bento-card__overlay :global(p),
+  .bento-card__overlay :global(p strong),
+  .bento-card__overlay :global(p a) {
+    color: #ffffff !important;
+  }
+
+  .bento-grid .bento-card :global(p),
+  .bento-grid .bento-card :global(ul),
+  .bento-grid .bento-card__overlay :global(p) {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .bento-grid .bento-card__overlay :global(p) {
+    max-width: 56ch;
+  }
+
+  .bento-grid .bento-card :global(ul) {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento-grid .bento-card :global(li) {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .bento-grid .bento-card :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .bento-grid .bento-card--accent :global(h2),
+  .bento-grid .bento-card--accent :global(p),
+  .bento-grid .bento-card--accent :global(a),
+  .bento-grid .bento-card--accent .bento-eyebrow {
+    color: white;
+  }
+
+  .bento-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .bento-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 960px) {
+    .bento-card,
+    .bento-card--image,
+    .bento-card--highlight,
+    .bento-card--wide {
+      grid-column: span 12;
+    }
+
+    .bento-card--image {
+      min-height: 19rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      gap: 0.875rem;
+    }
+
+    .bento-card {
+      padding: 1.2rem;
+    }
+
+    .bento-card--image {
+      min-height: 17rem;
+    }
+
+    .bento-card__overlay {
+      padding: 1rem;
+    }
+  }
+</style>

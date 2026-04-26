@@ -61,79 +61,317 @@ const faqSchema = {
     { title: 'Sprachstörungen (Aphasie)', href: '/therapie/sprachstoerungen/', description: 'Aphasietherapie nach Schlaganfall oder Schädel-Hirn-Trauma' },
   ]}
 >
-  <figure class="float-right ml-8 mb-4 w-[42%] max-[640px]:float-none max-[640px]:w-full max-[640px]:ml-0 rounded-xl overflow-hidden shadow-md">
-    <Image
-      src={hausImg}
-      alt="Mobile Logopädie beim Hausbesuch in Duisburg – Therapie im vertrauten Lebensumfeld"
-      class="w-full h-auto block"
-      widths={[400, 720]}
-      sizes="(max-width: 640px) 100vw, 42vw"
-      loading="lazy"
-      decoding="async"
-    />
-  </figure>
+  <section class="bento-page" aria-label="Logopädische Hausbesuche in Duisburg">
+    <div class="bento-grid">
+      <article class="bento-card bento-card--image">
+        <Image
+          src={hausImg}
+          alt="Mobile Logopädie beim Hausbesuch in Duisburg – Therapie im vertrauten Lebensumfeld"
+          class="bento-card__image"
+          widths={[540, 900, 1200]}
+          sizes="(max-width: 960px) 100vw, 55vw"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="bento-card__overlay">
+          <span class="bento-eyebrow">Mobile Therapie</span>
+          <h2>Logopädie zu Hause, wenn der Praxisweg nicht möglich ist</h2>
+          <p>
+            Wir kommen zu Patientinnen und Patienten in Duisburg, wenn Mobilität,
+            neurologische Erkrankungen oder Pflegebedarf den Besuch in der Praxis erschweren.
+          </p>
+        </div>
+      </article>
 
-  <h2>Logopädie zu Hause – wenn der Weg in die Praxis nicht möglich ist</h2>
-  <p>
-    Manche Patientinnen und Patienten können unsere Praxis in Duisburg-Mitte nicht oder nur
-    schwer aufsuchen – etwa nach einem Schlaganfall, bei fortgeschrittenen neurologischen
-    Erkrankungen wie Parkinson oder ALS, bei eingeschränkter Mobilität oder in der häuslichen
-    Pflege. In diesen Fällen kommen wir zu Ihnen.
-  </p>
-  <p>
-    Ein weiterer Vorteil: Gerade bei Kindern und Senioren kann die Therapie im vertrauten
-    Lebensumfeld <strong>therapeutisch wertvoller</strong> sein als in der Praxis – das
-    Gelernte lässt sich direkt in den Alltag einbetten.
-  </p>
+      <article class="bento-card bento-card--highlight">
+        <span class="bento-eyebrow">Geeignet für</span>
+        <h2>Wann ein Hausbesuch sinnvoll ist</h2>
+        <ul>
+          <li><strong>Nach Schlaganfall:</strong> Aphasie, Dysarthrie oder Dysphagie</li>
+          <li><strong>Neurologische Erkrankungen:</strong> Parkinson, Multiple Sklerose, ALS, Demenz</li>
+          <li><strong>Pflegebedürftigkeit:</strong> Therapie zu Hause oder in Pflegeeinrichtungen</li>
+          <li><strong>Senioren:</strong> eingeschränkte Mobilität oder fehlende Fahrmöglichkeit</li>
+          <li><strong>Kinder:</strong> wenn Therapie im vertrauten Umfeld sinnvoller ist</li>
+          <li><strong>Schluckstörungen:</strong> alltagsnahe Dysphagietherapie beim Essen und Trinken</li>
+        </ul>
+      </article>
 
-  <h2>Für wen sind Hausbesuche geeignet?</h2>
-  <ul>
-    <li><strong>Patienten nach Schlaganfall</strong> mit Aphasie, Dysarthrie oder Dysphagie, die noch nicht mobil genug für Praxisbesuche sind</li>
-    <li><strong>Menschen mit neurologischen Erkrankungen</strong> (Parkinson, Multiple Sklerose, ALS, Demenz)</li>
-    <li><strong>Pflegebedürftige</strong> in häuslicher Pflege oder Pflegeeinrichtungen in Duisburg</li>
-    <li><strong>Senioren</strong> mit eingeschränkter Mobilität oder ohne Fahrmöglichkeit</li>
-    <li><strong>Kinder</strong>, bei denen die Therapie im häuslichen Umfeld sinnvoller ist</li>
-    <li><strong>Patienten mit Schluckstörungen (Dysphagie)</strong>, bei denen eine Therapie im Alltagskontext wichtig ist</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Alltagsnah</span>
+        <h2>Therapie dort, wo Kommunikation stattfindet</h2>
+        <p>
+          Im häuslichen Umfeld lassen sich Übungen direkt an echte Alltagssituationen anbinden:
+          Gespräche am Tisch, sichere Nahrungsaufnahme, Angehörigenkommunikation oder Routinen
+          in der Pflege.
+        </p>
+      </article>
 
-  <h2>Was wird beim Hausbesuch therapiert?</h2>
-  <p>
-    Logopädische Hausbesuche umfassen das gleiche Spektrum wie die Praxistherapie:
-  </p>
-  <ul>
-    <li><a href="/therapie/sprachstoerungen/"><strong>Aphasie-Therapie</strong></a> – Sprachfähigkeiten nach Schlaganfall oder Hirnverletzung zurückgewinnen</li>
-    <li><a href="/therapie/sprechstoerungen/"><strong>Dysarthrie-Therapie</strong></a> – Verständlichkeit beim Sprechen verbessern</li>
-    <li><a href="/therapie/schluckstoerungen/"><strong>Dysphagie-Therapie</strong></a> – Sichere Nahrungsaufnahme fördern und Aspirationsrisiko senken</li>
-    <li><a href="/therapie/stimmtherapie/"><strong>Stimmtherapie</strong></a> – Stimmklang und -ausdauer verbessern</li>
-    <li><strong>Angehörigenberatung</strong> – Pflegende anleiten, die Therapie im Alltag zu unterstützen</li>
-  </ul>
+      <article class="bento-card">
+        <span class="bento-eyebrow">Therapiebereiche</span>
+        <h2>Das gleiche Spektrum wie in der Praxis</h2>
+        <ul>
+          <li><a href="/therapie/sprachstoerungen/"><strong>Aphasie-Therapie:</strong></a> Sprache nach Schlaganfall zurückgewinnen</li>
+          <li><a href="/therapie/sprechstoerungen/"><strong>Dysarthrie-Therapie:</strong></a> Verständlichkeit verbessern</li>
+          <li><a href="/therapie/schluckstoerungen/"><strong>Dysphagie-Therapie:</strong></a> sicheres Schlucken fördern</li>
+          <li><a href="/therapie/stimmtherapie/"><strong>Stimmtherapie:</strong></a> Stimme und Belastbarkeit stärken</li>
+        </ul>
+      </article>
 
-  <h2>Zweisprachige Hausbesuche auf Deutsch und Türkisch</h2>
-  <p>
-    Viele ältere türkischsprachige Patienten in Duisburg sprechen vorwiegend Türkisch – besonders
-    nach einem Schlaganfall, wenn die zuerst erworbene Sprache dominanter wird. Wir können
-    Hausbesuche und alle therapeutischen Leistungen vollständig auf <strong>Türkisch und Deutsch</strong>
-    anbieten. Das ist im Ruhrgebiet außergewöhnlich und macht echten Unterschied im Therapieerfolg.
-  </p>
+      <article class="bento-card bento-card--accent">
+        <span class="bento-eyebrow">DE / TR</span>
+        <h2>Hausbesuche auf Deutsch und Türkisch.</h2>
+        <p>
+          Gerade ältere türkischsprachige Patientinnen und Patienten profitieren davon,
+          wenn Therapie, Angehörigenberatung und Befundgespräche in der vertrauten Sprache
+          stattfinden können.
+        </p>
+      </article>
 
-  <h2>Kosten & Kassenabrechnung</h2>
-  <p>
-    Hausbesuche können über eine ärztliche Heilmittelverordnung kassenfinanziert werden.
-    Voraussetzung ist, dass der verordnende Arzt auf der Verordnung den Hausbesuch vermerkt
-    und die medizinische Notwendigkeit begründet. Gesetzliche und private Krankenkassen
-    übernehmen die Kosten bei vorliegender Verordnung.
-  </p>
-  <p>
-    Bitte klären Sie die Verordnung vorab mit Ihrem Haus- oder Facharzt. Wir unterstützen
-    Sie gerne dabei. Mehr Informationen: <a href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
-  </p>
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Ablauf</span>
+        <h2>So organisieren wir logopädische Hausbesuche in Duisburg</h2>
+        <ul>
+          <li>Kurze telefonische Klärung der Situation und des Stadtteils</li>
+          <li>Prüfung, ob eine Heilmittelverordnung mit Hausbesuch vorliegt</li>
+          <li>Ersttermin mit Anamnese, Diagnostik und Therapiezielen vor Ort</li>
+          <li>Therapieplanung passend zu Alltag, Mobilität und Angehörigenunterstützung</li>
+          <li>Bei Bedarf Abstimmung mit Angehörigen, Pflege oder behandelnden Ärzten</li>
+        </ul>
+      </article>
 
-  <div class="info-box">
-    <p>
-      <strong>Hausbesuche in Duisburg anfragen:</strong> Rufen Sie uns unter
-      <a href="tel:+4920334868690">0203 34 86 86 90</a> an. Wir klären gemeinsam,
-      ob ein Hausbesuch für Sie sinnvoll ist, und besprechen das weitere Vorgehen.
-      Beratung auch auf Türkisch möglich.
-    </p>
-  </div>
+      <article class="bento-card bento-card--soft">
+        <span class="bento-eyebrow">Verordnung</span>
+        <h2>Hausbesuche sind bei medizinischer Notwendigkeit kassenfinanzierbar</h2>
+        <p>
+          Voraussetzung ist eine ärztliche Heilmittelverordnung, auf der der Hausbesuch
+          vermerkt und medizinisch begründet ist.
+        </p>
+        <a class="bento-link" href="/kostenuebernahme/">Kosten & Kostenübernahme</a>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Duisburg</span>
+        <h2>Versorgung im Stadtgebiet und der näheren Umgebung</h2>
+        <p>
+          Wir bieten Hausbesuche in Duisburg und Umgebung an, unter anderem in Duisburg-Mitte,
+          Duisburg-West, Rheinhausen, Hamborn, Marxloh und Meiderich. Bitte sprechen Sie uns
+          direkt an, damit wir Ihren Standort prüfen können.
+        </p>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Angehörige</span>
+        <h2>Beratung macht Therapie im Alltag wirksamer</h2>
+        <p>
+          Angehörige und Pflegende erhalten konkrete Hinweise, wie sie Kommunikation,
+          Sprechen oder Schlucken außerhalb der Therapieeinheiten sicher unterstützen können.
+        </p>
+      </article>
+
+      <article class="bento-card bento-card--wide bento-card--highlight">
+        <span class="bento-eyebrow">Anfrage</span>
+        <h2>Hausbesuch in Duisburg besprechen</h2>
+        <p>
+          Rufen Sie uns an oder schreiben Sie uns. Wir klären gemeinsam, ob ein Hausbesuch
+          möglich und sinnvoll ist, welche Verordnung benötigt wird und wie es weitergeht.
+        </p>
+        <a class="bento-link" href="tel:+4920334868690">0203 34 86 86 90</a>
+      </article>
+    </div>
+  </section>
 </ServicePage>
+
+<style>
+  .bento-page {
+    width: 100%;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+
+  .bento-card {
+    grid-column: span 4;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+    min-height: 100%;
+  }
+
+  .bento-card--image {
+    grid-column: span 6;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 0;
+  }
+
+  .bento-card--highlight {
+    grid-column: span 6;
+    background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+  }
+
+  .bento-card--wide {
+    grid-column: span 8;
+  }
+
+  .bento-card--accent {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .bento-card--soft {
+    background: var(--color-primary-light);
+  }
+
+  .bento-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .bento-card__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 18, 14, 0.08) 10%,
+      rgba(24, 18, 14, 0.76) 100%
+    );
+  }
+
+  .bento-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+
+  .bento-card--image .bento-eyebrow,
+  .bento-card--accent .bento-eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .bento-grid .bento-card :global(h2),
+  .bento-grid .bento-card__overlay :global(h2) {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .bento-grid .bento-card__overlay :global(h2) {
+    color: white;
+    max-width: 20ch;
+  }
+
+  .bento-card__overlay :global(p),
+  .bento-card__overlay :global(p strong),
+  .bento-card__overlay :global(p a) {
+    color: #ffffff !important;
+  }
+
+  .bento-grid .bento-card :global(p),
+  .bento-grid .bento-card :global(ul),
+  .bento-grid .bento-card__overlay :global(p) {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .bento-grid .bento-card__overlay :global(p) {
+    max-width: 56ch;
+  }
+
+  .bento-grid .bento-card :global(ul) {
+    display: grid;
+    gap: 0.7rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento-grid .bento-card :global(li) {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .bento-grid .bento-card :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .bento-grid .bento-card--accent :global(h2),
+  .bento-grid .bento-card--accent :global(p),
+  .bento-grid .bento-card--accent :global(a),
+  .bento-grid .bento-card--accent .bento-eyebrow {
+    color: white;
+  }
+
+  .bento-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .bento-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 960px) {
+    .bento-card,
+    .bento-card--image,
+    .bento-card--highlight,
+    .bento-card--wide {
+      grid-column: span 12;
+    }
+
+    .bento-card--image {
+      min-height: 19rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      gap: 0.875rem;
+    }
+
+    .bento-card {
+      padding: 1.2rem;
+    }
+
+    .bento-card--image {
+      min-height: 17rem;
+    }
+
+    .bento-card__overlay {
+      padding: 1rem;
+    }
+  }
+</style>
