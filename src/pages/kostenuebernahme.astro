@@ -13,7 +13,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Übernimmt die Krankenkasse die Kosten für Logopädie?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Gesetzliche und private Krankenkassen übernehmen die Kosten logopädischer Therapie, wenn eine ärztliche Heilmittelverordnung vorliegt. Erwachsene zahlen 10% Zuzahlung plus 10 € Rezeptgebühr. Kinder und Jugendliche unter 18 Jahren sind von Zuzahlungen befreit." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Gesetzliche Krankenkassen übernehmen logopädische Therapie bei medizinischer Indikation und gültiger Heilmittelverordnung abzüglich der gesetzlichen Zuzahlung. Erwachsene zahlen in der Regel 10 % Zuzahlung plus 10 € Rezeptgebühr. Kinder und Jugendliche unter 18 Jahren sind von dieser Zuzahlung befreit. Bei privaten Krankenkassen hängt die Erstattung vom jeweiligen Tarif ab." }
     },
     {
       "@type": "Question",
@@ -23,17 +23,17 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Was kostet Logopädie als Selbstzahler?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ohne Rezept können Sie als Selbstzahler Logopädie in Anspruch nehmen. Die Kosten richten sich nach dem Heilmittelkatalog. Bitte kontaktieren Sie uns für aktuelle Informationen zu Selbstzahlertarifen." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Ohne Rezept können Sie bestimmte logopädische Leistungen als Selbstzahler in Anspruch nehmen, zum Beispiel Beratung oder präventive Stimmbildung. Die Kosten richten sich nach Behandlungsumfang und Honorarvereinbarung. Bitte kontaktieren Sie uns für aktuelle Informationen zu Selbstzahlertarifen." }
     },
     {
       "@type": "Question",
       "name": "Wie viel zahle ich als Erwachsener selbst?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Als gesetzlich versicherter Erwachsener zahlen Sie 10% der Therapiekosten selbst, zuzüglich einer einmaligen Rezeptgebühr von 10 € pro Heilmittelverordnung. Die Krankenkasse übernimmt den Rest." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Als gesetzlich versicherter Erwachsener zahlen Sie in der Regel 10 % der Therapiekosten selbst, zuzüglich einer Rezeptgebühr von 10 € pro Heilmittelverordnung. Die Krankenkasse übernimmt den verbleibenden Anteil, sofern eine gültige Verordnung vorliegt." }
     },
     {
       "@type": "Question",
       "name": "Müssen Kinder zuzahlen?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Nein. Kinder und Jugendliche unter 18 Jahren sind vollständig von Zuzahlungen befreit. Die Krankenkasse übernimmt alle Therapiekosten." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Nein. Kinder und Jugendliche unter 18 Jahren sind von der gesetzlichen Zuzahlung befreit, wenn eine gültige Heilmittelverordnung vorliegt." }
     }
   ]
 };
@@ -80,8 +80,9 @@ const breadcrumbSchema = {
           Kosten & Kostenübernahme
         </h1>
         <p class="text-text-muted text-lg max-[640px]:text-[0.97rem]">
-          Logopädische Therapie ist ein Heilmittel – und wird von gesetzlichen und privaten
-          Krankenkassen übernommen. Hier erfahren Sie alles über Rezept, Zuzahlung und Selbstzahler.
+          Logopädische Therapie ist ein Heilmittel. Bei medizinischer Indikation und gültiger
+          Heilmittelverordnung übernehmen gesetzliche Krankenkassen den Großteil der Kosten;
+          bei Privatversicherten richtet sich die Erstattung nach dem jeweiligen Tarif.
         </p>
       </div>
     </section>
@@ -94,16 +95,17 @@ const breadcrumbSchema = {
           <h2>Kostenübernahme durch die Krankenkasse</h2>
           <p>
             Eine ärztlich verordnete logopädische Behandlung ist als <strong>Heilmittel</strong>
-            Teil der medizinischen Grundversorgung. Sowohl gesetzliche (GKV) als auch private
-            Krankenkassen (PKV) tragen die Kosten – vorausgesetzt, es liegt eine
-            Heilmittelverordnung (Rezept) vor.
+            Teil der medizinischen Versorgung. Gesetzliche Krankenkassen tragen die Kosten
+            abzüglich der gesetzlichen Zuzahlung, wenn eine medizinische Indikation und eine
+            gültige Heilmittelverordnung (Rezept) vorliegen. Bei privaten Krankenkassen hängt
+            die Erstattung vom individuellen Tarif ab.
           </p>
         </article>
 
         <aside class="bento-tile bento-tile--soft">
           <span class="bento-kicker">Kosten</span>
           <h2>Kurzüberblick</h2>
-          <p>Mit ärztlicher Heilmittelverordnung übernehmen gesetzliche und private Krankenkassen die Behandlung. Kinder unter 18 Jahren sind zuzahlungsbefreit.</p>
+          <p>Mit gültiger ärztlicher Heilmittelverordnung übernehmen gesetzliche Krankenkassen den Großteil der Behandlungskosten. Kinder unter 18 Jahren sind von der gesetzlichen Zuzahlung befreit.</p>
           <p><a href="tel:+4920334868690">0203 34 86 86 90</a></p>
         </aside>
 
@@ -130,8 +132,8 @@ const breadcrumbSchema = {
           <h2>Was zahle ich selbst?</h2>
           <h3>Kinder und Jugendliche</h3>
           <p>
-            <strong>Keine Zuzahlung.</strong> Kinder und Jugendliche bis zur Vollendung des
-            18. Lebensjahres sind vollständig von Zuzahlungen befreit.
+            <strong>Keine gesetzliche Zuzahlung.</strong> Kinder und Jugendliche bis zur
+            Vollendung des 18. Lebensjahres sind von der gesetzlichen Zuzahlung befreit.
           </p>
           <h3>Erwachsene</h3>
           <ul>
@@ -148,8 +150,8 @@ const breadcrumbSchema = {
           <h2>Privat Versicherte</h2>
           <p>
             Privatversicherte werden nach Heilmittelverordnung behandelt. Die Abrechnung
-            richtet sich nach dem Heilmittelkatalog. Bitte klären Sie die Kostenübernahme
-            vorab mit Ihrer privaten Krankenversicherung.
+            erfolgt auf Grundlage einer privaten Honorarvereinbarung. Bitte klären Sie die
+            Kostenübernahme vorab mit Ihrer privaten Krankenversicherung.
           </p>
         </section>
 
@@ -157,8 +159,8 @@ const breadcrumbSchema = {
           <span class="bento-kicker">Selbstzahler</span>
           <h2>Therapie ohne Rezept</h2>
           <p>
-            Sie können logopädische Therapie auch ohne Rezept als Selbstzahler in Anspruch
-            nehmen – zum Beispiel für präventive Stimmbildung oder einen raschen Termin.
+            Sie können bestimmte logopädische Leistungen auch ohne Rezept als Selbstzahler
+            in Anspruch nehmen – zum Beispiel Beratung oder präventive Stimmbildung.
           </p>
           <p>
             Für aktuelle Selbstzahlertarife beraten wir Sie persönlich.
@@ -192,8 +194,8 @@ const breadcrumbSchema = {
           <span class="bento-kicker">Gut zu wissen</span>
           <h2>Wir helfen bei der Klärung</h2>
           <p>
-            Wir arbeiten mit allen gesetzlichen und privaten Krankenkassen zusammen.
-            Wenn Sie unsicher sind, ob Ihre Krankenkasse die Kosten übernimmt, rufen Sie uns an.
+            Wir arbeiten mit gesetzlichen Krankenkassen, Privatversicherten und Selbstzahlern.
+            Wenn Sie unsicher sind, welche Verordnung oder Abrechnung für Sie passt, rufen Sie uns an.
           </p>
           <p><a href="tel:+4920334868690">0203 34 86 86 90</a></p>
         </aside>

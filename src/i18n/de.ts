@@ -48,7 +48,7 @@ export const de = {
     heading_line2: "Verstehen.",
     heading_line3: "Verbinden.",
     description:
-      "Zweisprachige Logopädie auf Deutsch und Türkisch – für Kinder, Erwachsene und Senioren. Alle Krankenkassen. Hausbesuche möglich.",
+      "Zweisprachige Logopädie auf Deutsch und Türkisch – für Kinder, Erwachsene und Senioren. Kassenrezept, Privatpatienten und Selbstzahler. Hausbesuche möglich.",
     cta_primary: "Termin anfragen",
     cta_secondary: "Therapieangebot entdecken",
     badge_station: "2 min. vom Hauptbahnhof",
@@ -75,7 +75,7 @@ export const de = {
     section_label: "Unser Therapieangebot",
     heading: "Alle Bereiche der Logopädie",
     description:
-      "Wir behandeln das vollständige Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.",
+      "Wir behandeln ein breites Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.",
     more: "Mehr erfahren",
     overview: "Therapieangebot im Überblick",
     items: [
@@ -206,7 +206,7 @@ export const de = {
       },
       {
         q: "Übernimmt die Krankenkasse die Kosten der Therapie?",
-        a: "Gesetzliche Krankenkassen übernehmen bei vorliegender Heilmittelverordnung den Großteil der Therapiekosten. Sie leisten in der Regel eine Zuzahlung von 10 % der Verordnungskosten plus 10 € Rezeptgebühr pro Verordnung. Privatpatienten rechnen direkt über ihre Versicherung ab. Wir arbeiten mit allen gesetzlichen und privaten Krankenkassen zusammen.",
+        a: "Gesetzliche Krankenkassen übernehmen bei medizinischer Indikation und gültiger Heilmittelverordnung den Großteil der Therapiekosten. Erwachsene leisten in der Regel eine Zuzahlung von 10 % der Verordnungskosten plus 10 € Rezeptgebühr pro Verordnung; Kinder und Jugendliche unter 18 Jahren sind davon befreit. Bei Privatpatienten hängt die Erstattung vom jeweiligen Tarif ab.",
       },
       {
         q: "Was passiert beim ersten Termin?",
@@ -222,7 +222,7 @@ export const de = {
       },
       {
         q: "Bieten Sie Therapie auf Türkisch an?",
-        a: "Ja – wir bieten vollständige Diagnostik, Beratung und Therapie auf Deutsch und Türkisch an. Besonders für mehrsprachig aufwachsende Kinder und türkischsprachige Erwachsene ist diese interkulturelle Kompetenz ein großer Vorteil. Im Raum Duisburg ist dieses Angebot selten und schließt eine wichtige Versorgungslücke.",
+        a: "Ja – wir bieten Diagnostik, Beratung und Therapie auf Deutsch und Türkisch an. Besonders für mehrsprachig aufwachsende Kinder und türkischsprachige Erwachsene ist diese interkulturelle Kompetenz ein großer Vorteil. Im Raum Duisburg ist dieses Angebot selten und schließt eine wichtige Versorgungslücke.",
       },
       {
         q: "Sind Hausbesuche in Duisburg möglich?",
