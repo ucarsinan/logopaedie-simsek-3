@@ -250,7 +250,7 @@ export const tr: Translations = {
     phone_cta_heading: "Hemen Arayın",
     phone_cta_sub:
       "Bizi doğrudan arayın – size yardımcı olmaktan memnuniyet duyarız.",
-    phone_cta_hours_label: "Ulaşılabilirlik",
+    phone_cta_hours_label: "Telefon Saatleri",
     info_phone_label: "Telefon",
     info_phone_hours: "Pzt–Cum 08:00–18:00",
     info_email_label: "E-Posta",
