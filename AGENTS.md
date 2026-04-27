@@ -1,7 +1,7 @@
 # logopaedie-simsek-3 – AGENTS.md
 
 ## Was ist das?
-Finale Website für Logopädie-Praxis Şimşek (logopaedie-simsek.de).
+Finale Website für Praxis für Logopädie Şimşek (logopaedie-simsek.de).
 Ersetzt alle POC-Varianten (logopaedie-simsek, logopaedie-copy).
 
 ## Stack
@@ -31,6 +31,10 @@ npm run preview   # Build-Preview
 ## i18n
 Übersetzungskeys in `src/i18n/de.ts` und `src/i18n/tr.ts`.
 Neue Keys immer in **beiden** Dateien ergänzen.
+
+## Naming / Terminologie
+- **Eigenname:** Die Praxis heißt immer exakt `Praxis für Logopädie Şimşek`. Dieser Name wird weder im Deutschen noch im Türkischen übersetzt, abgekürzt oder durch anderssprachige Praxisnamen ersetzt.
+- **Türkischer Fachbegriff:** Für die therapeutische Fachbezeichnung im Türkischen ausschließlich in der Türkei übliche Begriffe verwenden, insbesondere `dil ve konuşma terapisi` und `dil ve konuşma terapisti`.
 
 ## Deploy
 - **Domain:** logopaedie-simsek.de

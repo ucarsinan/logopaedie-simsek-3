@@ -31,7 +31,7 @@ export const tr: Translations = {
     nav_label: "Footer Navigasyonu",
     links: {
       services: { label: "Terapi", href: "/terapi/" },
-      tuerkische: { label: "Türkçe Logopedi", href: "/anasayfa/" },
+      tuerkische: { label: "Türkçe Dil ve Konuşma Terapisi", href: "/anasayfa/" },
       insurance: { label: "Sigorta", href: "/tr/kostenuebernahme/" },
       team: { label: "Ekip", href: "/ekip/" },
       karriere: { label: "Kariyer", href: "/kariyer/" },
@@ -270,12 +270,12 @@ export const tr: Translations = {
   },
   schema: {
     business_description:
-      "Duisburg'da dil, konuşma ve ses terapisi alanında uzmanlaşmış logoterapi kliniği. Çocuklar ve yetişkinler için iki dilli (DE/TR) terapi.",
-    founder_title: "Devlet Onaylı Logoped",
-    offer_catalog_name: "Logoterapi Alanları",
+      "Duisburg'da dil, konuşma, ses ve yutma alanlarında hizmet veren dil ve konuşma terapisi muayenehanesi. Çocuklar ve yetişkinler için iki dilli (DE/TR) terapi.",
+    founder_title: "Devlet Onaylı Dil ve Konuşma Terapisti",
+    offer_catalog_name: "Dil ve Konuşma Terapisi Alanları",
     services: [
-      { name: "Dil Terapisi", url: "/therapie/sprachstoerungen" },
-      { name: "Konuşma Terapisi", url: "/therapie/sprechstoerungen" },
+      { name: "Dil Bozuklukları Terapisi", url: "/therapie/sprachstoerungen" },
+      { name: "Konuşma Bozuklukları Terapisi", url: "/therapie/sprechstoerungen" },
       { name: "Ses Terapisi", url: "/therapie/stimmtherapie" },
       { name: "Yutma Terapisi", url: "/therapie/schluckstoerungen" },
     ],

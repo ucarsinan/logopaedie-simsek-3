@@ -30,7 +30,7 @@ export const de = {
     links: {
       services: { label: "Therapie", href: "/therapie/" },
       tuerkische: {
-        label: "Türkische Logopädie",
+        label: "Türkische Sprach- und Sprechtherapie",
         href: "/tuerkische-logopaedie-duisburg/",
       },
       insurance: { label: "Kostenübernahme", href: "/kostenuebernahme/" },
