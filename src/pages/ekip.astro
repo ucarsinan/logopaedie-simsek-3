@@ -37,28 +37,11 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 2, "name": "Ekip", "item": `${siteUrl}/ekip` }
   ]
 };
-
-const teamMembers = [
-  {
-    name: 'Emel Şimşek-Uçar',
-    role: 'Muayenehane Sahibi · Devlet Onaylı Dil ve Konuşma Terapisti',
-    photo: emelImg,
-    alt: 'Emel Şimşek-Uçar, Praxis für Logopädie Şimşek muayenehanesinin sahibi',
-    tags: ['Deutsch & Türkçe', '10+ Yıl Deneyim', 'Çocuklar & Yetişkinler'],
-  },
-  {
-    name: 'Mara Nießalla',
-    role: 'Devlet Onaylı Dil ve Konuşma Terapisti',
-    photo: maraImg,
-    alt: 'Mara Nießalla, Praxis für Logopädie Şimşek Duisburg ekibinden',
-    tags: ['Çocuklar & Gençler', 'Dil Gelişimi', 'Tanı & Terapi'],
-  },
-];
 ---
 
 <Layout
   title="Ekibimiz – Praxis für Logopädie Şimşek Duisburg"
-  description="Emel Şimşek-Uçar ve Mara Nießalla ile tanışın – Praxis für Logopädie Şimşek Duisburg ekibi."
+  description="Emel Şimşek-Uçar ve Mara Nießalla ile tanışın – Praxis für Logopädie Şimşek Duisburg ekibi. Almanca ve Türkçe dil terapisi, 10 yılı aşkın deneyim."
   lang="tr"
   additionalSchemas={[personSchema, breadcrumbSchema]}
   hreflangAlternates={[
@@ -76,103 +59,184 @@ const teamMembers = [
       <div class="container py-3">
         <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
           <li><a href="/anasayfa/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
-          <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
+          <li aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </li>
           <li class="text-text font-medium" aria-current="page">Ekip</li>
         </ol>
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
-      <div class="container">
-        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">
-          Ekibimiz
-        </h1>
-        <p class="text-text-muted text-lg">
-          Dil ve konuşma terapisi güven işidir. Muayenehanemizdeki insanlarla tanışın.
-        </p>
+    <!-- Bento Grid -->
+    <section class="container py-10 pb-16" aria-labelledby="ekip-heading">
+      <h1 class="sr-only" id="ekip-heading">Ekibimiz – Praxis für Logopädie Şimşek Duisburg</h1>
+      <div class="bento">
+
+        <!-- ── Emel: Large portrait (spans 2 rows) ── -->
+        <article class="bento-emel relative overflow-hidden rounded-(--radius-lg) group" aria-label="Emel Şimşek-Uçar">
+          <Image
+            src={emelImg}
+            alt="Emel Şimşek-Uçar – Muayenehane sahibi ve dil terapisti, Duisburg"
+            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            widths={[480, 720, 960]}
+            sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
+            loading="eager"
+            decoding="async"
+          />
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
+          <!-- Badge -->
+          <div class="absolute top-5 right-5 flex flex-col items-end gap-2">
+            <span class="bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+              Muayenehane Sahibi
+            </span>
+            <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+              Dil Terapisti
+            </span>
+          </div>
+          <!-- Content overlay -->
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <h2 class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
+              Emel Şimşek-Uçar
+            </h2>
+            <p class="text-white/70 text-sm mb-3 font-medium">Devlet Onaylı Dil ve Konuşma Terapisti</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Almanca &amp; Türkçe
+              </span>
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                10+ Yıl Deneyim
+              </span>
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Çocuklar &amp; Yetişkinler
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Title card ── -->
+        <div class="bento-title rounded-(--radius-lg) p-8 flex flex-col justify-between" style="background: var(--color-primary-light);">
+          <span class="text-xs font-semibold tracking-[.12em] uppercase text-primary">Ekibimiz</span>
+          <div>
+            <p class="font-display text-[clamp(1.875rem,3vw,2.625rem)] font-semibold text-text leading-[1.1] mb-3">
+              Dil terapisi<br><em class="text-primary">güven işidir.</em>
+            </p>
+            <p class="text-text-muted text-[0.9375rem] leading-relaxed max-w-xs">
+              Her gün daha iyi iletişim için çalışan insanlarla tanışın.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── Stats card ── -->
+        <div class="bento-stats rounded-(--radius-lg) p-6 flex flex-col justify-between" style="background: var(--color-primary);">
+          <div class="space-y-1 mb-6">
+            <div class="font-display text-[3.25rem] font-semibold text-white leading-none">10+</div>
+            <div class="text-white/55 text-xs font-medium leading-snug">Yıllık klinik<br>deneyim</div>
+          </div>
+          <div class="w-8 h-px mb-6" style="background: rgba(255,255,255,0.2);"></div>
+          <div class="space-y-1">
+            <div class="font-display text-[3.25rem] font-semibold text-white leading-none">2</div>
+            <div class="text-white/55 text-xs font-medium leading-snug">Anadil<br>düzeyinde dil</div>
+          </div>
+        </div>
+
+        <!-- ── Languages card ── -->
+        <div class="bento-lang rounded-(--radius-lg) p-6 flex flex-col justify-center gap-4" style="background: var(--color-bg-alt);">
+          <div class="flex gap-2.5 flex-wrap">
+            <span class="bg-surface border border-border text-text font-semibold text-sm px-4 py-2.5 rounded-xl shadow-sm">
+              🇩🇪&nbsp; Almanca
+            </span>
+            <span class="bg-surface border border-border text-text font-semibold text-sm px-4 py-2.5 rounded-xl shadow-sm">
+              🇹🇷&nbsp; Türkçe
+            </span>
+          </div>
+          <p class="text-text-muted text-xs leading-relaxed">
+            Her iki dilde tam tanı, danışmanlık ve terapi — çok dillilik engel değil, kaynaktır.
+          </p>
+        </div>
+
+        <!-- ── Mara: Large portrait ── -->
+        <article class="bento-mara relative overflow-hidden rounded-(--radius-lg) group" aria-label="Mara Nießalla">
+          <Image
+            src={maraImg}
+            alt="Mara Nießalla – Praxis für Logopädie Şimşek Duisburg'da dil terapisti"
+            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            widths={[480, 720, 960]}
+            sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
+          <!-- Badge -->
+          <div class="absolute top-5 right-5">
+            <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+              Dil Terapisti
+            </span>
+          </div>
+          <!-- Content overlay -->
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <h2 class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
+              Mara Nießalla
+            </h2>
+            <p class="text-white/70 text-sm mb-3 font-medium">Devlet Onaylı Dil ve Konuşma Terapisti</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Çocuklar &amp; Gençler
+              </span>
+              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                Dil Gelişimi
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Philosophy quote ── -->
+        <div class="bento-phil rounded-(--radius-lg) p-7 flex flex-col justify-center" style="background: var(--color-accent-light);">
+          <svg class="mb-4 shrink-0 opacity-35" width="36" height="36" viewBox="0 0 24 24" fill="var(--color-accent)" aria-hidden="true">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+          </svg>
+          <blockquote class="font-display text-[1.1875rem] italic text-text leading-relaxed mb-4">
+            „Çok dillilik bir engel değil – bir kaynaktır."
+          </blockquote>
+          <cite class="text-xs font-semibold tracking-widest uppercase not-italic" style="color: var(--color-accent);">
+            Emel Şimşek-Uçar
+          </cite>
+        </div>
+
+        <!-- ── Career CTA ── -->
+        <a href="/kariyer/" class="bento-cta rounded-(--radius-lg) p-6 flex flex-col justify-between text-white group transition-opacity hover:opacity-90" style="background: var(--color-accent);">
+          <div>
+            <span class="text-xs font-semibold tracking-[.12em] uppercase text-white/60">Kariyer</span>
+            <h3 class="font-display text-[1.5rem] font-semibold text-white mt-2 leading-tight">
+              Ekip arıyoruz
+            </h3>
+            <p class="text-white/65 text-xs mt-2.5 leading-relaxed">
+              Duisburg'daki ekibimiz için deneyimli dil terapistleri aranıyor.
+            </p>
+          </div>
+          <div
+            class="mt-5 inline-flex items-center justify-center gap-2 text-sm font-semibold rounded-xl px-4 py-3 transition-colors border border-white/30 group-hover:border-white/60"
+            style="background: rgba(255,255,255,0.12);"
+          >
+            İş İlanı
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+        </a>
+
       </div>
     </section>
 
-    <!-- Team Profile -->
-    <div class="container py-14">
-      <div class="bento-page-grid">
-
-        <section class="bento-tile bento-tile--full">
-          <span class="bento-kicker">Ekip</span>
-          <div class="grid grid-cols-2 gap-6 max-[860px]:grid-cols-1">
-          {teamMembers.map((member) => (
-            <article class="bento-tile overflow-hidden !p-0">
-              <div class="grid grid-cols-[140px_1fr] min-h-40 max-[540px]:grid-cols-[112px_1fr]">
-                <div class="relative bg-surface-2 overflow-hidden">
-                  <Image
-                    src={member.photo}
-                    alt={member.alt}
-                    class="w-full h-full object-cover object-top"
-                    widths={[240, 360, 520]}
-                    sizes="(max-width: 540px) 112px, 140px"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div class="p-6 max-[540px]:p-4 flex flex-col justify-center">
-                  <h2 class="font-display text-2xl max-[540px]:text-xl font-semibold text-text mb-1">{member.name}</h2>
-                  <p class="text-primary font-medium text-sm mb-4">{member.role}</p>
-                  <div class="flex flex-wrap gap-2">
-                    {member.tags.map((tag) => (
-                      <span class="bg-primary-light text-primary-dark text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
+    <!-- CTA Strip -->
+    <div class="border-t border-border bg-bg-alt py-8">
+      <div class="container flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <p class="text-text-muted text-sm">Terapi hizmetleri veya randevu talebi için sorularınız mı var?</p>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a href="/iletisim/" class="btn btn-primary justify-center">Randevu Talebi</a>
+          <a href="/terapi/" class="btn btn-ghost justify-center">Terapi Hizmetleri</a>
         </div>
-        </section>
-
-        <article class="prose-section bento-tile bento-tile--wide bento-tile--highlight">
-        <h2>Emel Şimşek-Uçar Hakkında</h2>
-        <p>
-          Emel Şimşek-Uçar, <strong>devlet onaylı dil ve konuşma terapisti</strong> ve Duisburg-Mitte'deki
-          Praxis für Logopädie Şimşek'in kurucusudur. On yılı aşkın klinik deneyimiyle
-          çocukları, gençleri ve yetişkinleri daha iyi iletişim kurabilmeleri yolunda desteklemektedir.
-        </p>
-
-        <h2>Uzmanlık Alanları</h2>
-        <ul>
-          <li><strong>Çocuklarda Dil ve Konuşma Terapisi:</strong> Dil gelişim gecikmeleri, artikülasyon bozuklukları, kekemelik, okuma-yazma güçlüğü desteği</li>
-          <li><strong>Çok Dillilik:</strong> İki dilli büyüyen çocuklarda (Almanca/Türkçe) tanı ve terapi</li>
-          <li><strong>Yetişkin Terapisi:</strong> Afazi, dizartri, ses bozuklukları, yutma bozuklukları</li>
-          <li><strong>Erken Müdahale:</strong> Bebeklik döneminden itibaren dil ve konuşma terapisi desteği</li>
-        </ul>
-
-        <h2>Mara Nießalla Hakkında</h2>
-        <p>
-          Mara Nießalla ekibimizi <strong>devlet onaylı dil ve konuşma terapisti</strong> olarak tamamlıyor.
-          Özellikle çocuklar ve gençlerde dil gelişimi, artikülasyon ve günlük yaşama uygun
-          egzersiz stratejileri alanlarında çalışmaktadır.
-        </p>
-
-        <h2>Diller</h2>
-        <p>
-          Muayenehane; tam tanı, danışmanlık ve terapi hizmetini <strong>Almanca ve Türkçe</strong>
-          olarak sunmaktadır. Bu durum özellikle iki dilli büyüyen çocuklar ve ana dillerinde
-          bakım almak isteyen Türkçe konuşan hastalar için büyük bir değer taşımaktadır.
-        </p>
-        </article>
-
-        <aside class="bento-tile bento-tile--soft">
-          <span class="bento-kicker">Kariyer</span>
-          <h2>Büyüyoruz</h2>
-          <p>
-            Ekibimizi güçlendirmek ister misiniz? Deneyimli dil ve konuşma terapisti arıyoruz.
-          </p>
-          <div class="mt-6 flex gap-4 flex-wrap">
-            <a href="/kariyer/" class="btn btn-primary">İş ilanına git</a>
-            <a href="/iletisim/" class="btn btn-ghost">Randevu Talebi</a>
-          </div>
-        </aside>
-
       </div>
     </div>
 
@@ -181,50 +245,55 @@ const teamMembers = [
 </Layout>
 
 <style>
-  .prose-section :global(h2) {
-    font-family: var(--font-display);
-    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-    font-weight: 600;
-    color: var(--color-text);
-    margin-top: 2.5rem;
-    margin-bottom: 0.75rem;
+  /* ── Bento grid layout ── */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(240px, auto) minmax(200px, auto) minmax(210px, auto);
+    gap: 12px;
+    grid-template-areas:
+      "emel emel mara mara title"
+      "emel emel mara mara stats"
+      "lang  lang  phil  phil  cta";
   }
-  .prose-section :global(p) {
-    font-size: 0.9375rem;
-    color: var(--color-text-muted);
-    line-height: 1.75;
-    margin-bottom: 1rem;
+
+  .bento-emel  { grid-area: emel;  }
+  .bento-title { grid-area: title; }
+  .bento-stats { grid-area: stats; }
+  .bento-lang  { grid-area: lang;  }
+  .bento-mara  { grid-area: mara;  }
+  .bento-phil  { grid-area: phil;  }
+  .bento-cta   { grid-area: cta;   }
+
+  @media (max-width: 860px) {
+    .bento {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+      grid-template-areas:
+        "title title"
+        "emel  mara"
+        "stats lang"
+        "phil  cta";
+    }
+    .bento-emel { min-height: 340px; }
+    .bento-mara { min-height: 340px; }
   }
-  .prose-section :global(ul) {
-    list-style: none;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .prose-section :global(ul li) {
-    font-size: 0.9375rem;
-    color: var(--color-text-muted);
-    padding-left: 1.5rem;
-    position: relative;
-  }
-  .prose-section :global(ul li::before) {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-primary);
-  }
-  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
-  .prose-section :global(a) { color: var(--color-primary); }
-  .info-box {
-    background: var(--color-primary-light);
-    border-left: 3px solid var(--color-primary);
-    border-radius: 0 6px 6px 0;
-    padding: 1.25rem 1.5rem;
-    margin: 1.5rem 0;
+
+  @media (max-width: 540px) {
+    .bento {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      grid-template-areas:
+        "title"
+        "emel"
+        "mara"
+        "stats"
+        "lang"
+        "phil"
+        "cta";
+    }
+    .bento-emel { min-height: 380px; }
+    .bento-mara { min-height: 380px; }
   }
 </style>

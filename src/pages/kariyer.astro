@@ -5,12 +5,68 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 const siteUrl = 'https://logopaedie-simsek.de';
+
+const jobSchema = {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Dil ve Konuşma Terapisti (e/k/d)",
+  "description": "Duisburg'daki muayenehanemiz için dil ve konuşma terapisi alanında destek arıyoruz (e/k/d). Tam veya yarı zamanlı, ortalamanın üzerinde maaş, iki dilli ekip (Almanca-Türkçe). 4 günlük hafta mümkün.",
+  "datePosted": new Date().toISOString().split('T')[0],
+  "validThrough": "2026-12-31",
+  "directApply": true,
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Praxis für Logopädie Şimşek",
+    "sameAs": siteUrl,
+    "logo": `${siteUrl}/logo.png`
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tonhallenstraße 21",
+      "addressLocality": "Duisburg",
+      "postalCode": "47051",
+      "addressRegion": "Nordrhein-Westfalen",
+      "addressCountry": "DE"
+    }
+  },
+  "employmentType": ["FULL_TIME", "PART_TIME"],
+  "workHours": "Haftada 20–40 saat",
+  "industry": "Sağlık Hizmetleri",
+  "occupationalCategory": "29-1127.00",
+  "jobBenefits": "4 günlük hafta mümkün, %100 eğitim masrafları karşılanır, ortalamanın üzerinde maaş, Almanca-Türkçe iki dilli ekip, Duisburg Ana Tren Garı yakınında merkezi konum",
+  "qualifications": "Devlet onaylı dil ve konuşma terapisti (e/k/d). Yeni mezunlar başvurabilir.",
+  "skills": "Pediatri, Nöroloji, Kekemelik terapisi, Afazi, Dizartri, Disfaji, Okuma-yazma güçlüğü, DGG, İki dilli terapi Almanca-Türkçe",
+  "responsibilities": "Pediatri, nöroloji ve kekemelik/hızlı konuşma alanlarında logopedik tanı ve terapinin uygulanması. Almanca ve Türkçe iki dilli çalışma imkânı.",
+  "employerOverview": "Praxis für Logopädie Şimşek, iki dilli ekibiyle Duisburg'da uzmanlaşmış bir dil terapisi muayenehanesidir. Odak alanları: Pediatri, Nöroloji, Kekemelik/Hızlı Konuşma. Duisburg Ana Tren Garı yakınında merkezi konum."
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": `${siteUrl}/anasayfa/` },
+    { "@type": "ListItem", "position": 2, "name": "Kariyer", "item": `${siteUrl}/kariyer/` }
+  ]
+};
+
+const benefits = [
+  { icon: "💰", title: "Ortalamanın Üzerinde Maaş", desc: "Adil ve şeffaf ücretlendirme" },
+  { icon: "🤝", title: "Yapılandırılmış İşe Başlangıç", desc: "Başından itibaren yanınızdayız" },
+  { icon: "💬", title: "Samimi Ekip", desc: "Açık iletişim, karşılıklı destek" },
+  { icon: "🏢", title: "Modern Terapi Odaları", desc: "Merkezi konumda, iyi donanımlı odalar" },
+  { icon: "📚", title: "Eğitim Desteği", desc: "Mesleki gelişiminizi destekliyoruz" },
+  { icon: "⏰", title: "Esnek Çalışma Saatleri", desc: "Tam veya yarı zamanlı – 4 günlük hafta da mümkün" },
+  { icon: "🚇", title: "Merkezi Konum", desc: "Duisburg Ana Tren Garı'na yürüyerek, toplu taşımayla kolay erişim" },
+];
 ---
 
 <Layout
-  title="Kariyer – Praxis für Logopädie Şimşek Duisburg"
-  description="Praxis für Logopädie Şimşek ekibine katılın. Duisburg'daki kariyer fırsatları, çalışma koşulları ve başvuru bilgileri."
+  title="Kariyer – Praxis für Logopädie Şimşek Duisburg | İş İlanları"
+  description="Praxis für Logopädie Şimşek Duisburg, dil ve konuşma terapisti arıyor. Ortalamanın üzerinde maaş, harika ekip, iki dilli muayenehane. Hemen başvurun!"
   lang="tr"
+  additionalSchemas={[jobSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/karriere/` },
     { lang: 'tr', url: `${siteUrl}/kariyer/` },
@@ -20,6 +76,8 @@ const siteUrl = 'https://logopaedie-simsek.de';
   <Header lang="tr" alternateUrl="/karriere/" />
   <Nav lang="tr" alternateUrl="/karriere/" />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
     <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
       <div class="container py-3">
         <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
@@ -30,105 +88,713 @@ const siteUrl = 'https://logopaedie-simsek.de';
       </div>
     </nav>
 
-    <section class="bg-bg-alt pt-14 pb-10 border-b border-border">
-      <div class="container">
-        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.1] text-text mb-4">Kariyer</h1>
-        <p class="text-text-muted text-lg max-w-2xl">
-          Duisburg'daki ekibimize katılmak ister misiniz? Açık pozisyonlar, çalışma koşulları ve başvuru adımları için kariyer sayfamızı inceleyin.
-        </p>
-      </div>
-    </section>
+    <!-- Bento Grid -->
+    <h1 class="sr-only">Dil Terapisti (e/k/d) aranıyor – Praxis für Logopädie Şimşek Duisburg</h1>
+    <section class="container py-10 pb-16">
+      <div class="bento-grid">
 
-    <section class="py-14 bg-bg">
-      <div class="container">
-        <div class="bento-page-grid">
-          <div class="bento-tile bento-tile--wide bento-tile--highlight">
-            <span class="bento-kicker">Başvuru</span>
-            <h2>Kariyer bilgileri</h2>
-            <p>
-              İlan detayları şu anda Almanca sayfada yayınlanmaktadır. Başvuru süreci Türkçe olarak da desteklenmektedir.
+        <!-- HERO CARD -->
+        <div class="bento-card bento-hero">
+          <div class="bento-hero__tags">
+            <span class="tag tag--green">Duisburg</span>
+            <span class="tag tag--green">Tam / Yarı Zamanlı</span>
+            <span class="tag tag--green">4 Günlük Hafta Mümkün</span>
+            <span class="tag tag--accent">Hemen Başlanabilir</span>
+          </div>
+          <p class="bento-hero__title">Kariyer, #TeamSimsek'te başlıyor</p>
+          <p class="bento-hero__subtitle">
+            Duisburg-Mitte'deki ekibimiz için dil ve konuşma terapisti (e/k/d) arıyoruz.
+          </p>
+          <a href="mailto:info@logopaedie-simsek.de?subject=Ba%C5%9Fvuru%20%E2%80%93%20Dil%20ve%20Konu%C5%9Fma%20Terapisti&body=Sayg%C4%B1de%C4%9Fer%20Bayan%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0AMuayenehanenizdeki%20dil%20ve%20konu%C5%9Fma%20terapisti%20pozisyonu%20i%C3%A7in%20ba%C5%9Fvuruyorum.%0A%0ASayg%C4%B1lar%C4%B1mla%0A" class="bento-cta-btn">
+            Hemen Başvur
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14 0M12 5l7 7-7 7"/></svg>
+          </a>
+          <div class="bento-hero__deco" aria-hidden="true"></div>
+        </div>
+
+        <!-- STATS CARD -->
+        <div class="bento-card bento-stats">
+          <p class="bento-stats__label">Deneyim</p>
+          <p class="bento-stats__number">10+</p>
+          <p class="bento-stats__desc">Duisburg'da yıllık pratik deneyim</p>
+          <div class="bento-stats__divider"></div>
+          <p class="bento-stats__label">Diller</p>
+          <p class="bento-stats__langs">
+            <span>🇩🇪 Almanca</span>
+            <span>🇹🇷 Türkçe</span>
+          </p>
+          <div class="bento-stats__divider"></div>
+          <p class="bento-stats__label">Terapi Alanları</p>
+          <p class="bento-stats__desc">Erken müdahaleden geriatriye</p>
+        </div>
+
+        <!-- BEKLENTILER CARD -->
+        <div class="bento-card bento-requirements">
+          <div class="bento-section-tag">Beklentilerimiz</div>
+          <h2 class="bento-card__title">Profiliniz</h2>
+          <ul class="req-list">
+            <li>
+              <span class="req-check">✓</span>
+              <span>Devlet tarafından tanınan dil ve konuşma terapistliği diploması</span>
+            </li>
+            <li>
+              <span class="req-check">✓</span>
+              <span>Bağımsız ve esnek çalışma biçimi</span>
+            </li>
+            <li>
+              <span class="req-check">✓</span>
+              <span>Hastalarla empatik ilişki kurabilmek</span>
+            </li>
+            <li>
+              <span class="req-check">✓</span>
+              <span>Çocuk dil terapisi ve/veya afazi terapisine ilgi</span>
+            </li>
+          </ul>
+          <p class="req-welcome">Yeni mezunlar memnuniyetle karşılanır!</p>
+        </div>
+
+        <!-- HAKKIMIZDA CARD -->
+        <div class="bento-card bento-about">
+          <div class="bento-section-tag bento-section-tag--accent">Hakkımızda</div>
+          <h2 class="bento-card__title">Praxis für Logopädie Şimşek</h2>
+          <p class="bento-about__text">
+            10 yılı aşkın deneyimiyle Duisburg-Mitte'de yerleşik dil terapisi muayenehanesi.
+            Almanca ve Türkçe iki dilli hizmet sunan bölgedeki nadir muayenehanelerden biri.
+          </p>
+          <div class="bento-about__tag-row">
+            <span class="mini-tag">Erken Müdahale</span>
+            <span class="mini-tag">Afazi</span>
+            <span class="mini-tag">Geriatri</span>
+            <span class="mini-tag">Çocuk Terapisi</span>
+          </div>
+        </div>
+
+        <!-- AVANTAJLAR CARD -->
+        <div class="bento-card bento-benefits-all">
+          <div class="bento-benefits-all__header">
+            <div class="bento-section-tag">Sunduklarımız</div>
+            <h2 class="bento-card__title bento-card__title--large">Avantajlarınız</h2>
+          </div>
+          <div class="benefits-inner-grid">
+            {benefits.map((b, i) => (
+              <div class={`benefit-item benefit-item--${i}`}>
+                <span class="benefit-icon">{b.icon}</span>
+                <h3 class="benefit-title">{b.title}</h3>
+                <p class="benefit-desc">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- PORTAL BRIDGE CARD -->
+        <div class="bento-card bento-portal">
+          <div class="bento-portal__left">
+            <div class="bento-section-tag bento-section-tag--accent">Kariyer Portalı</div>
+            <h2 class="bento-card__title">Pozisyon Hakkında Daha Fazla Bilgi</h2>
+            <p class="bento-portal__text">
+              Maaş hesaplayıcı, başvuru ipuçları ve doğrudan WhatsApp iletişimi — hepsi kariyer portalımız LogopädieJobs.de'de.
             </p>
-          </div>
-          <div class="bento-tile bento-tile--soft">
-            <span class="bento-kicker">İletişim</span>
-            <h2>Başvuru gönder</h2>
-            <p>Başvurunuzu e-posta ile gönderebilir veya Almanca kariyer sayfasındaki tüm detayları inceleyebilirsiniz.</p>
-            <div class="flex flex-wrap gap-3 mt-5">
-              <a href="https://wa.me/4920334868690?text=Merhaba%2C%20dil%20ve%20konu%C5%9Fma%20terapisti%20pozisyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88ZM20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.49 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.49-8.42Z"/></svg>
-                WhatsApp ile Yaz
-              </a>
-              <a href="/karriere/" class="btn btn-primary">Kariyer Sayfasını Aç</a>
-              <a href="mailto:info@logopaedie-simsek.de?subject=Kariyer%20Basvurusu" class="btn btn-ghost">E-Posta ile Başvur</a>
-            </div>
-          </div>
-          <div class="bento-tile bento-tile--portal">
-            <span class="bento-kicker bento-kicker--accent">Kariyer Portalı</span>
-            <h2>Daha fazla detay</h2>
-            <p>Maaş hesaplayıcı, başvuru ipuçları ve doğrudan WhatsApp iletişimi — kariyer portalımızda her şey var.</p>
-            <div class="portal-features">
-              <span class="portal-pill">🧮 Maaş Hesaplayıcı</span>
-              <span class="portal-pill">📖 Başvuru Rehberi</span>
-              <span class="portal-pill">📅 4 Günlük Hafta</span>
-            </div>
             <a
               href="https://xn--logopdiejobs-kcb.de/?utm_source=logopaedie-simsek.de&utm_medium=kariyer&utm_campaign=portal-bridge"
-              class="btn btn-portal mt-5"
+              class="portal-link-btn"
               target="_blank"
               rel="noopener"
             >
-              Kariyer Portalına Git
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              LogopädieJobs.de'ye Git
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </a>
           </div>
+          <div class="bento-portal__features">
+            <div class="portal-feature">
+              <span class="portal-feature__icon">🧮</span>
+              <span class="portal-feature__label">Maaş Hesaplayıcı</span>
+            </div>
+            <div class="portal-feature">
+              <span class="portal-feature__icon">📖</span>
+              <span class="portal-feature__label">Rehber & SSS</span>
+            </div>
+            <div class="portal-feature">
+              <span class="portal-feature__icon">💬</span>
+              <span class="portal-feature__label">WhatsApp İletişim</span>
+            </div>
+            <div class="portal-feature">
+              <span class="portal-feature__icon">📅</span>
+              <span class="portal-feature__label">4 Günlük Hafta Bilgisi</span>
+            </div>
+          </div>
         </div>
+
+        <!-- BAŞVURU CTA CARD -->
+        <div class="bento-card bento-apply">
+          <div class="bento-apply__deco" aria-hidden="true"></div>
+          <div class="bento-apply__layout">
+
+            <!-- Left: Headline + CTAs -->
+            <div class="bento-apply__left">
+              <div class="bento-section-tag bento-section-tag--light">Başvuru</div>
+              <h2 class="bento-apply__title">Hemen<br>Başlayın</h2>
+              <p class="bento-apply__sub">
+                E-posta, telefon veya WhatsApp — CV yeterli başlangıç için.
+              </p>
+              <div class="bento-apply__actions">
+                <a href="https://wa.me/4920334868690?text=Merhaba%2C%20dil%20ve%20konu%C5%9Fma%20terapisti%20pozisyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="apply-btn apply-btn--whatsapp" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88ZM20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.49 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.49-8.42Z"/></svg>
+                  WhatsApp
+                </a>
+                <a href="mailto:info@logopaedie-simsek.de?subject=Ba%C5%9Fvuru%20%E2%80%93%20Dil%20ve%20Konu%C5%9Fma%20Terapisti%20(e%2Fk%2Fd)&body=Sayg%C4%B1de%C4%9Fer%20Bayan%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0AMuayenehanenizdeki%20dil%20ve%20konu%C5%9Fma%20terapisti%20pozisyonu%20i%C3%A7in%20ba%C5%9Fvuruyorum.%0A%0ASayg%C4%B1lar%C4%B1mla%0A" class="apply-btn apply-btn--primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  Başvuru Gönder
+                </a>
+                <a href="tel:+4920334868690" class="apply-btn apply-btn--outline">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.15 3.4 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+                  0203 – 34 86 86 90
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Contact card -->
+            <div class="bento-apply__right">
+              <div class="bento-apply__contact-card">
+                <div class="bento-apply__contact-header">
+                  <div class="bento-apply__avatar" aria-hidden="true">EŞ</div>
+                  <div>
+                    <div class="bento-apply__name">Emel Şimşek-Uçar</div>
+                    <div class="bento-apply__role">Muayenehane Sahibi · İletişim Kişisi</div>
+                  </div>
+                </div>
+                <div class="bento-apply__contact-rows">
+                  <div class="contact-row">
+                    <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Tonhallenstraße 21, 47051 Duisburg</span>
+                  </div>
+                  <div class="contact-row">
+                    <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>info@logopaedie-simsek.de</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STAJ — tam satır -->
+        <div class="bento-card bento-note">
+          <div class="bento-note__inner">
+            <svg class="bento-note__ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <h3 class="bento-note__title">Staj Yerleri</h3>
+              <p class="bento-note__text">
+                Şu an yurt dışından gelen öğrencilere staj imkânı sunulamamaktadır.
+                Yurt içi başvurular için doğrudan bizimle iletişime geçebilirsiniz.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
+
   </main>
   <Footer lang="tr" />
+</Layout>
+
 <style>
-  .btn-whatsapp {
+  /* ─── Bento Grid Layout ─── */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  /* ─── Base Card ─── */
+  .bento-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .bento-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  /* ─── Hero Card ─── */
+  .bento-hero {
+    grid-column: span 2;
+    background: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    padding: 2.25rem;
+  }
+  .bento-hero__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+  }
+  .tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .tag--green {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .tag--accent {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .bento-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .bento-hero__subtitle {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    max-width: 42ch;
+  }
+  .bento-cta-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: #25D366;
-    color: #fff;
+    gap: 8px;
+    background: #fff;
+    color: var(--color-primary);
     font-weight: 600;
-    font-size: 0.875rem;
-    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem;
+    padding: 0.625rem 1.375rem;
     border-radius: var(--radius-sm);
     text-decoration: none;
     transition: background 0.18s, transform 0.18s;
   }
-  .btn-whatsapp:hover {
-    background: #1da851;
-    transform: translateY(-1px);
+  .bento-cta-btn:hover {
+    background: var(--color-bg-alt);
+    transform: translateX(2px);
+  }
+  .bento-hero__deco {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    pointer-events: none;
   }
 
-  .bento-tile--portal {
-    border: 1px solid var(--color-accent);
-    background: var(--color-surface);
+  /* ─── Stats Card ─── */
+  .bento-stats {
+    background: var(--color-bg-alt);
+    border-color: var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
-  .bento-kicker--accent {
-    color: var(--color-accent) !important;
-    background: var(--color-accent-light) !important;
+  .bento-stats__label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
   }
-  .portal-features {
+  .bento-stats__number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .bento-stats__desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .bento-stats__divider {
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+    margin: 1rem 0;
+  }
+  .bento-stats__langs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  /* ─── Beklentiler Card ─── */
+  .bento-requirements {
+    grid-column: span 2;
+  }
+  .bento-section-tag {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 0.875rem;
+  }
+  .bento-section-tag--accent {
+    color: var(--color-accent);
+    background: var(--color-accent-light);
+  }
+  .bento-section-tag--light {
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.15);
+  }
+  .bento-card__title {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+  .bento-card__title--large {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .req-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-bottom: 1rem;
+  }
+  .req-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+  .req-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+  .req-welcome {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    padding: 0.5rem 0.875rem;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
+
+  /* ─── Hakkımızda Card ─── */
+  .bento-about {
+    background: var(--color-surface-2);
+  }
+  .bento-about__text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+  .bento-about__tag-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 1rem;
+    gap: 6px;
   }
-  .portal-pill {
-    font-size: 0.775rem;
+  .mini-tag {
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-text-muted);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+
+  /* ─── Avantajlar Card ─── */
+  .bento-benefits-all {
+    grid-column: span 3;
+    background: var(--color-surface);
+  }
+  .bento-benefits-all__header {
+    margin-bottom: 1.25rem;
+  }
+  .benefits-inner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .benefit-item {
     background: var(--color-bg-alt);
     border: 1px solid var(--color-border);
-    padding: 4px 10px;
-    border-radius: 999px;
+    border-radius: var(--radius-md);
+    padding: 1.125rem 1rem;
+    position: relative;
+    transition: box-shadow 0.18s;
   }
-  .btn-portal {
+  .benefit-item:hover {
+    box-shadow: var(--shadow-sm);
+  }
+  .benefit-icon {
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    opacity: 0.85;
+  }
+  .benefit-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+  }
+  .benefit-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  /* ─── Note Card ─── */
+  .bento-note {
+    grid-column: span 3;
+    background: var(--color-primary-light);
+    border-color: var(--color-border);
+    padding: 1.125rem 1.5rem;
+  }
+  .bento-note:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .bento-note__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+  .bento-note__ico {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 1px;
+  }
+  .bento-note__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  .bento-note__text {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* ─── Başvuru CTA Card ─── */
+  .bento-apply {
+    grid-column: span 3;
+    background: var(--color-text);
+    border-color: var(--color-text);
+    padding: 2.5rem;
+  }
+  .bento-apply__deco {
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+  .bento-apply__layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .bento-apply__left {
+    flex: 1;
+    min-width: 0;
+  }
+  .bento-apply .bento-section-tag {
+    margin-bottom: 0.75rem;
+  }
+  .bento-apply__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+  }
+  .bento-apply__sub {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    max-width: 38ch;
+  }
+  .bento-apply__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .apply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.7rem 1.375rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+  .apply-btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .apply-btn--primary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  }
+  .apply-btn--outline {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .apply-btn--outline:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.4);
+    color: #fff;
+  }
+  .apply-btn--whatsapp {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  }
+  .apply-btn--whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+  }
+  .bento-apply__right {
+    flex-shrink: 0;
+    width: 280px;
+  }
+  .bento-apply__contact-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.375rem;
+  }
+  .bento-apply__contact-header {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .bento-apply__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0.04em;
+  }
+  .bento-apply__name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .bento-apply__role {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+  .bento-apply__contact-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.5;
+  }
+  .contact-row__ico {
+    flex-shrink: 0;
+    margin-top: 2px;
+    opacity: 0.55;
+  }
+
+  /* ─── Portal Bridge Card ─── */
+  .bento-portal {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    padding: 2rem 2.25rem;
+  }
+  .bento-portal__left {
+    flex-shrink: 0;
+    width: 300px;
+  }
+  .bento-portal__text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    max-width: 44ch;
+  }
+  .portal-link-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -141,10 +807,111 @@ const siteUrl = 'https://logopaedie-simsek.de';
     border-radius: var(--radius-sm);
     transition: background 0.18s, color 0.18s;
   }
-  .btn-portal:hover {
+  .portal-link-btn:hover {
     background: var(--color-accent);
     color: #fff;
   }
-</style>
+  .bento-portal__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  .portal-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.125rem 1.125rem;
+  }
+  .portal-feature__icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .portal-feature__label {
+    font-size: 0.8375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
 
-</Layout>
+  /* ─── Responsive ─── */
+  @media (max-width: 900px) {
+    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento-hero { grid-column: span 2; }
+    .bento-portal { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .bento-portal__left { width: 100%; }
+    .bento-portal__features { grid-template-columns: repeat(4, 1fr); }
+    .bento-stats {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem 1.25rem;
+      align-items: start;
+    }
+    .bento-stats__divider { display: none; }
+    .bento-stats > :nth-child(1),
+    .bento-stats > :nth-child(2),
+    .bento-stats > :nth-child(3) { grid-column: 1; }
+    .bento-stats > :nth-child(5) { grid-column: 2; grid-row: 1; }
+    .bento-stats > :nth-child(6) { grid-column: 2; grid-row: 2 / span 2; }
+    .bento-stats > :nth-child(8) { grid-column: 3; grid-row: 1; }
+    .bento-stats > :nth-child(9) { grid-column: 3; grid-row: 2 / span 2; }
+    .bento-stats__number { font-size: 2.7rem; }
+    .bento-stats__langs { gap: 0.35rem; }
+    .bento-requirements { grid-column: span 2; }
+    .bento-benefits-all { grid-column: span 2; }
+    .benefits-inner-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento-apply { grid-column: span 2; }
+    .bento-note { grid-column: span 2; }
+  }
+
+  @media (max-width: 860px) {
+    .bento-apply__layout { flex-direction: column; gap: 2rem; }
+    .bento-apply__right { width: 100%; }
+  }
+
+  @media (max-width: 560px) {
+    .bento-grid { grid-template-columns: 1fr; gap: 10px; }
+    .bento-hero,
+    .bento-stats,
+    .bento-requirements,
+    .bento-benefits-all,
+    .bento-portal,
+    .bento-apply,
+    .bento-note { grid-column: span 1; }
+    .bento-portal__features { grid-template-columns: repeat(2, 1fr); }
+    .bento-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .bento-stats__divider {
+      display: block;
+    }
+    .benefits-inner-grid { grid-template-columns: 1fr; }
+    .benefit-item {
+      padding: 1rem;
+      min-height: 0;
+    }
+    .benefit-icon {
+      position: absolute;
+      top: 0.95rem;
+      right: 0.95rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      opacity: 0.78;
+    }
+    .benefit-title {
+      max-width: calc(100% - 2.4rem);
+      padding-right: 0;
+    }
+    .benefit-desc {
+      max-width: calc(100% - 2.4rem);
+    }
+    .bento-apply__sub { max-width: none; }
+  }
+</style>
