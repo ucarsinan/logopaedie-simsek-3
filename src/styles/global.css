@@ -221,3 +221,154 @@
     transition: none;
   }
 }
+
+/* ─── Shared Bento Page Utilities ─── */
+.bento-page-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.bento-page-grid--compact {
+  gap: 0.875rem;
+}
+
+.bento-tile {
+  grid-column: span 4;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(28, 25, 22, 0.06);
+}
+
+.bento-tile--wide {
+  grid-column: span 8;
+}
+
+.bento-tile--half {
+  grid-column: span 6;
+}
+
+.bento-tile--full {
+  grid-column: span 12;
+}
+
+.bento-tile--soft {
+  background: var(--color-primary-light);
+}
+
+.bento-tile--warm {
+  background: var(--color-accent-light);
+}
+
+.bento-tile--highlight {
+  background: linear-gradient(180deg, rgba(112, 90, 74, 0.08), rgba(255, 255, 255, 0.96));
+}
+
+.bento-tile--accent {
+  background: var(--color-primary);
+  color: white;
+}
+
+.bento-tile--accent :is(h2, h3, p, a, strong),
+.bento-tile--accent .bento-kicker {
+  color: white !important;
+}
+
+.bento-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+}
+
+.bento-tile :is(h2, h3) {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-display);
+  color: var(--color-text);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  text-wrap: balance;
+}
+
+.bento-tile h2 {
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+}
+
+.bento-tile h3 {
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+}
+
+.bento-tile :is(p, ul, address) {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.bento-tile :is(p, ul, address) + :is(p, ul, h3) {
+  margin-top: 0.9rem;
+}
+
+.bento-tile ul {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0;
+  list-style: none;
+}
+
+.bento-tile li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.bento-tile li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.bento-tile a:not(.btn) {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bento-tile a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .bento-tile,
+  .bento-tile--wide,
+  .bento-tile--half,
+  .bento-tile--full {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-page-grid {
+    gap: 0.875rem;
+  }
+
+  .bento-tile {
+    border-radius: 8px;
+    padding: 1.2rem;
+  }
+
+  .bento-tile h2 {
+    font-size: clamp(1.25rem, 6.5vw, 1.6rem);
+  }
+}

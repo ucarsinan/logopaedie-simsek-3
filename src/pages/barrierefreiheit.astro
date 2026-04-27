@@ -12,11 +12,11 @@ import Footer from '../components/Footer.astro';
   <Header />
   <Nav />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))] min-h-[60vh]">
-    <div class="container py-20 max-w-3xl">
+    <div class="container py-16 max-w-5xl">
       <h1 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold mb-10 text-text">Barrierefreiheitserklärung</h1>
 
-      <div class="flex flex-col gap-8 text-[.9375rem] text-text-muted leading-[1.7]">
-        <section>
+      <div class="bento-page-grid text-[.9375rem] text-text-muted leading-[1.7]">
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">Geltungsbereich</h2>
           <p>
             Diese Barrierefreiheitserklärung gilt für die Website der Praxis für Logopädie Şimşek unter
@@ -24,7 +24,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">Stand der Vereinbarkeit mit den Anforderungen</h2>
           <p>
             Diese Website ist mit den Anforderungen der Web Content Accessibility Guidelines (WCAG 2.1)
@@ -33,7 +33,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">Technische Merkmale</h2>
           <ul class="list-disc list-inside flex flex-col gap-1">
             <li>Semantisches HTML5 mit strukturierten Überschriften</li>
@@ -47,7 +47,7 @@ import Footer from '../components/Footer.astro';
           </ul>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">Bekannte Einschränkungen</h2>
           <ul class="list-disc list-inside flex flex-col gap-1">
             <li>Google Maps-Karte (externer Dienst) ist eingeschränkt barrierefrei</li>
@@ -55,7 +55,7 @@ import Footer from '../components/Footer.astro';
           </ul>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">Feedback und Kontakt</h2>
           <p>
             Wenn Sie auf Barrieren auf unserer Website stoßen oder Fragen zur Barrierefreiheit haben,
@@ -69,7 +69,7 @@ import Footer from '../components/Footer.astro';
           <p class="mt-2">Wir bemühen uns, auf Ihr Feedback innerhalb von 5 Werktagen zu antworten.</p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">Durchsetzungsverfahren</h2>
           <p>
             Wenn Sie nach Ihrem Feedback von uns keine zufriedenstellende Antwort erhalten haben,
@@ -83,7 +83,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <p class="text-sm text-text-light italic border-t border-border pt-6">
+        <p class="bento-tile bento-tile--full text-sm text-text-light italic">
           Diese Erklärung wurde am 27. März 2026 erstellt und wird regelmäßig aktualisiert.
         </p>
       </div>

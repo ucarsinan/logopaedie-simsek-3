@@ -12,11 +12,11 @@ import Footer from '../components/Footer.astro';
   <Header />
   <Nav />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))] min-h-[60vh]">
-    <div class="container py-20 max-w-3xl">
+    <div class="container py-16 max-w-5xl">
       <h1 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold mb-10 text-text">Datenschutzerklärung</h1>
 
-      <div class="flex flex-col gap-8 text-[.9375rem] text-text-muted leading-[1.7]">
-        <section>
+      <div class="bento-page-grid text-[.9375rem] text-text-muted leading-[1.7]">
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">1. Datenschutz auf einen Blick</h2>
           <h3 class="font-semibold text-text mb-1">Allgemeine Hinweise</h3>
           <p>
@@ -26,7 +26,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">2. Verantwortliche Stelle</h2>
           <p>
             Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br /><br />
@@ -40,7 +40,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">3. Datenerfassung auf dieser Website</h2>
           <h3 class="font-semibold text-text mb-1">Kontaktaufnahme per Telefon oder E-Mail</h3>
           <p>
@@ -63,7 +63,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">4. Hosting</h2>
           <p>
             Diese Website wird bei Vercel Inc., 340 Pine Street, Suite 600, San Francisco, California 94104, USA
@@ -78,7 +78,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">5. Schriftarten</h2>
           <p>
             Diese Website nutzt lokal eingebundene Schriftarten. Beim Aufruf der Seiten werden keine Schriftarten
@@ -86,7 +86,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">6. Google Analytics</h2>
           <p>
             Diese Website kann Google Analytics 4, einen Webanalysedienst der Google Ireland Limited, Gordon House,
@@ -106,7 +106,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">7. Google Maps</h2>
           <p>
             Auf der Kontaktseite kann eine Karte von Google Maps eingebunden werden. Anbieter ist Google Ireland
@@ -116,7 +116,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <section>
+        <section class="bento-tile bento-tile--half">
           <h2 class="font-semibold text-text text-lg mb-2">8. Ihre Rechte</h2>
           <p>Sie haben jederzeit das Recht:</p>
           <ul class="list-disc list-inside mt-2 flex flex-col gap-1">
@@ -137,7 +137,7 @@ import Footer from '../components/Footer.astro';
           </p>
         </section>
 
-        <p class="text-sm text-text-light italic border-t border-border pt-6">
+        <p class="bento-tile bento-tile--full text-sm text-text-light italic">
           Stand: April 2026.
         </p>
       </div>

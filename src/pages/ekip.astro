@@ -96,25 +96,27 @@ const teamMembers = [
 
     <!-- Team Profile -->
     <div class="container py-14">
-      <div class="prose-section">
+      <div class="bento-page-grid">
 
-        <div class="grid grid-cols-2 gap-6 mb-10 max-[860px]:grid-cols-1">
+        <section class="bento-tile bento-tile--full">
+          <span class="bento-kicker">Ekip</span>
+          <div class="grid grid-cols-2 gap-6 max-[860px]:grid-cols-1">
           {teamMembers.map((member) => (
-            <article class="bg-surface border border-border rounded-md overflow-hidden shadow-sm">
-              <div class="grid grid-cols-[160px_1fr] min-h-45 max-[540px]:grid-cols-1">
-                <div class="relative bg-surface-2 overflow-hidden max-[540px]:h-64">
+            <article class="bento-tile overflow-hidden !p-0">
+              <div class="grid grid-cols-[140px_1fr] min-h-40 max-[540px]:grid-cols-[112px_1fr]">
+                <div class="relative bg-surface-2 overflow-hidden">
                   <Image
                     src={member.photo}
                     alt={member.alt}
                     class="w-full h-full object-cover object-top"
                     widths={[240, 360, 520]}
-                    sizes="(max-width: 540px) 100vw, 160px"
+                    sizes="(max-width: 540px) 112px, 140px"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
-                <div class="p-7 flex flex-col justify-center">
-                  <h2 class="font-display text-2xl font-semibold text-text mb-1">{member.name}</h2>
+                <div class="p-6 max-[540px]:p-4 flex flex-col justify-center">
+                  <h2 class="font-display text-2xl max-[540px]:text-xl font-semibold text-text mb-1">{member.name}</h2>
                   <p class="text-primary font-medium text-sm mb-4">{member.role}</p>
                   <div class="flex flex-wrap gap-2">
                     {member.tags.map((tag) => (
@@ -126,7 +128,9 @@ const teamMembers = [
             </article>
           ))}
         </div>
+        </section>
 
+        <article class="prose-section bento-tile bento-tile--wide bento-tile--highlight">
         <h2>Emel Şimşek-Uçar Hakkında</h2>
         <p>
           Emel Şimşek-Uçar, <strong>devlet onaylı logoped</strong> ve Duisburg-Mitte'deki
@@ -155,19 +159,19 @@ const teamMembers = [
           olarak sunmaktadır. Bu durum özellikle iki dilli büyüyen çocuklar ve ana dillerinde
           bakım almak isteyen Türkçe konuşan hastalar için büyük bir değer taşımaktadır.
         </p>
+        </article>
 
-        <div class="info-box">
+        <aside class="bento-tile bento-tile--soft">
+          <span class="bento-kicker">Kariyer</span>
+          <h2>Büyüyoruz</h2>
           <p>
-            <strong>Büyüyoruz:</strong> Ekibimizi güçlendirmek ister misiniz?
-            Deneyimli logoped arıyoruz.
-            <a href="/kariyer/">İş ilanına git →</a>
+            Ekibimizi güçlendirmek ister misiniz? Deneyimli logoped arıyoruz.
           </p>
-        </div>
-
-        <div class="mt-8 flex gap-4 flex-wrap">
-          <a href="/iletisim/" class="btn btn-primary">Randevu Talebi</a>
-          <a href="/terapi/" class="btn btn-ghost">Hizmetlerimiz</a>
-        </div>
+          <div class="mt-6 flex gap-4 flex-wrap">
+            <a href="/kariyer/" class="btn btn-primary">İş ilanına git</a>
+            <a href="/iletisim/" class="btn btn-ghost">Randevu Talebi</a>
+          </div>
+        </aside>
 
       </div>
     </div>
