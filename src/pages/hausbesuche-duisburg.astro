@@ -367,11 +367,41 @@ const faqSchema = {
     }
 
     .bento-card--image {
-      min-height: 17rem;
+      min-height: 0;
+      padding: 1rem;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
     }
 
     .bento-card__overlay {
-      padding: 1rem;
+      position: static;
+      padding: 1rem 0 0;
+      background: none;
+    }
+
+    .bento-card__image {
+      height: 13.5rem;
+      border-radius: 6px;
+    }
+
+    .bento-card--image .bento-eyebrow {
+      color: var(--color-primary);
+    }
+
+    .bento-grid .bento-card__overlay :global(h2) {
+      color: var(--color-text);
+      max-width: none;
+    }
+
+    .bento-card__overlay :global(p),
+    .bento-card__overlay :global(p strong),
+    .bento-card__overlay :global(p a) {
+      color: var(--color-text-muted) !important;
+    }
+
+    .bento-card__overlay :global(strong),
+    .bento-card__overlay :global(a) {
+      color: var(--color-text) !important;
     }
   }
 </style>
