@@ -245,7 +245,6 @@ export const de = {
     phone_cta_sub:
       "Rufen Sie uns direkt an – wir beraten Sie gerne und helfen Ihnen schnell und unkompliziert weiter.",
     phone_cta_hours_label: "Erreichbar",
-    phone_cta_bilingual: "Beratung auch auf <strong>Türkisch</strong> möglich.",
     info_phone_label: "Telefon",
     info_phone_hours: "Mo–Fr 08:00–18:00 Uhr",
     info_email_label: "E-Mail",

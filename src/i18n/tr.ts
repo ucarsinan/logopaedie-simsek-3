@@ -21,7 +21,7 @@ export const tr: Translations = {
   },
   header: {
     location: "Duisburg Dil ve Konuşma Terapisi",
-    lang_label: "Deutsche Version aufrufen",
+    lang_label: "Almanca siteye geç",
     lang_title: "Deutsch",
     lang_short: "DE",
     home_href: "/anasayfa/",
@@ -31,7 +31,10 @@ export const tr: Translations = {
     nav_label: "Footer Navigasyonu",
     links: {
       services: { label: "Terapi", href: "/terapi/" },
-      tuerkische: { label: "Türkçe Dil ve Konuşma Terapisi", href: "/anasayfa/" },
+      tuerkische: {
+        label: "Türkçe Dil ve Konuşma Terapisi",
+        href: "/anasayfa/",
+      },
       insurance: { label: "Sigorta", href: "/tr/kostenuebernahme/" },
       team: { label: "Ekip", href: "/ekip/" },
       karriere: { label: "Kariyer", href: "/kariyer/" },
@@ -47,7 +50,7 @@ export const tr: Translations = {
     heading_line2: "Anlayın.",
     heading_line3: "Bağlanın.",
     description:
-      "Tüm yaş grupları için Almanca ve Türkçe iki dilli dil ve konuşma terapisi – erken müdahaleden yaşlılığa kadar. Kalp ve akılla.",
+      "Tüm yaş grupları için Almanca ve Türkçe iki dilli dil ve konuşma terapisi – erken müdahaleden yaşlılığa kadar.",
     cta_primary: "Randevu Talebi",
     cta_secondary: "Hizmetleri Keşfet",
     badge_station: "Merkez'e 2 dk.",
@@ -57,16 +60,16 @@ export const tr: Translations = {
   },
   about: {
     quote:
-      '„Etkili bir terapi ancak <strong>terapistlerin kendileri iyi </strong> ve hastaların kendilerini<strong> güvende hissettikleri</strong> bir ortamda ortaya çıkar."',
+      '"Etkili bir terapi ancak <strong>terapistlerin kendilerini iyi hissettikleri</strong> ve hastaların kendilerini<strong> güvende hissettikleri</strong> bir ortamda ortaya çıkar."',
     section_label: "Muayenehane Hakkında",
-    heading: "Kalp ve Akılla Dil ve Konuşma Terapisi",
+    heading: "Dil ve Konuşma Terapisi",
     description:
       "Devlet onaylı dil ve konuşma terapisti <strong>Emel Şimşek-Uçar</strong>'ın liderliğinde modern muayenehanemiz; erken çocukluktan yaşlılığa kadar tüm yaş gruplarına kapsamlı tanı, danışmanlık ve terapi hizmeti sunmaktadır.",
     stat_bilingual: "Almanca ve Türkçe İki Dilli Hizmet",
     stat_areas_value: "Tüm",
     stat_areas: "Tüm Yaş Grupları için Terapi Alanları",
     stat_station: "Duisburg Merkez İstasyonu'ndan",
-    stat_floor: "Asansörle Engelsiz Erişim",
+    stat_floor: "Asansörle Erişim",
     stat_station_value: "2 dk",
     stat_floor_value: "3. Kat",
   },
@@ -115,7 +118,7 @@ export const tr: Translations = {
     description:
       "Yüksek kaliteli terapi materyalleriyle donatılmış, çocuklara özel oyun alanlarına sahip ve toplu taşımaya kolayca erişilebilen ışık dolu terapi odaları.",
     address_label: "Adres",
-    address_sub: "3. Kat · Asansörle Engelsiz Erişim",
+    address_sub: "3. Kat · Asansörle Erişim",
     hours_label: "Çalışma Saatleri",
     hours_weekdays: "Pazartesi – Cuma",
     hours_weekend: "Hafta Sonu",
@@ -126,7 +129,7 @@ export const tr: Translations = {
     feature_rooms: "Modern, ışık dolu terapi odaları",
     feature_kids: "Çocuklara özel oyun alanları",
     feature_materials: "Yüksek kaliteli, güncel terapi materyalleri",
-    feature_accessible: "Engelsiz erişim – binada asansör mevcut",
+    feature_accessible: "Binada asansör mevcut",
     map_open: "Google Maps'te Aç",
     map_address_sub: "Tonhallenstraße 21, 3. Kat",
     call: "Ara",
@@ -161,7 +164,7 @@ export const tr: Translations = {
       "Gerçek hasta deneyimleri – gizlilik koruması için anonimleştirilmiştir.",
     footnote:
       "Alıntılar gerçek hasta deneyimlerine dayanmakta olup gizlilik nedeniyle anonimleştirilmiştir.",
-    stars_aria_template: "{n} yıldız üzerinden 5",
+    stars_aria_template: "5 üzerinden {n} yıldız",
     items: [
       {
         quote:
@@ -205,11 +208,11 @@ export const tr: Translations = {
       },
       {
         q: "Dil ve konuşma terapisi için reçete gerekli mi?",
-        a: "Sigorta kapsamındaki terapi için aile hekiminizden veya uzman doktorunuzdan tıbbi reçete almanız gerekmektedir. Bireysel ödeme yapacaksanız reçetesiz randevu alabilirsiniz.",
+        a: "Sigorta kapsamındaki terapi için aile hekiminizden veya uzman hekiminizden reçete almanız gerekmektedir. Bireysel ödeme yapacaksanız reçetesiz randevu alabilirsiniz.",
       },
       {
         q: "Sağlık sigortası dil ve konuşma terapisi masraflarını karşılar mı?",
-        a: "Yasal sağlık sigortalıları, geçerli reçete ile terapi masraflarının büyük bölümünü karşılar. Genellikle tedavi ücretinin %10'u artı 10 € reçete ücreti katkı payı ödenir. Tüm yasal ve özel sigortalarla çalışıyoruz.",
+        a: "Yasal sağlık sigortalıları, geçerli reçete ile terapi masraflarının büyük bölümünü karşılar. Genellikle tedavi ücretinin %10'u ve reçete başına 10 € katkı payı ödenir. Tüm yasal ve özel sigortalarla çalışıyoruz.",
       },
       {
         q: "İlk seans nasıl geçer?",
@@ -243,13 +246,11 @@ export const tr: Translations = {
     description:
       "Randevular yalnızca telefonla alınmaktadır. Hemen arayın – size veya çocuğunuza en uygun terapi zamanını birlikte bulalım.",
     phone_only_notice:
-      "Randevular yalnızca <strong>telefonla</strong> alınmaktadır. Genel sorularınız için bize e-posta ile ulaşabilirsiniz. İletişim formu sunmuyoruz.",
+      "Randevular yalnızca <strong>telefonla</strong> alınmaktadır.",
     phone_cta_heading: "Hemen Arayın",
     phone_cta_sub:
       "Bizi doğrudan arayın – size yardımcı olmaktan memnuniyet duyarız.",
     phone_cta_hours_label: "Ulaşılabilirlik",
-    phone_cta_bilingual:
-      "Danışmanlık <strong>Türkçe</strong> olarak da mümkündür.",
     info_phone_label: "Telefon",
     info_phone_hours: "Pzt–Cum 08:00–18:00",
     info_email_label: "E-Posta",
@@ -275,7 +276,10 @@ export const tr: Translations = {
     offer_catalog_name: "Dil ve Konuşma Terapisi Alanları",
     services: [
       { name: "Dil Bozuklukları Terapisi", url: "/therapie/sprachstoerungen" },
-      { name: "Konuşma Bozuklukları Terapisi", url: "/therapie/sprechstoerungen" },
+      {
+        name: "Konuşma Bozuklukları Terapisi",
+        url: "/therapie/sprechstoerungen",
+      },
       { name: "Ses Terapisi", url: "/therapie/stimmtherapie" },
       { name: "Yutma Terapisi", url: "/therapie/schluckstoerungen" },
     ],
