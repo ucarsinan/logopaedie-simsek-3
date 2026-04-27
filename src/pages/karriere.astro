@@ -9,12 +9,16 @@ const siteUrl = 'https://logopaedie-simsek.de';
 const jobSchema = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
-  "title": "Logopädie (w/m/d)",
-  "description": "Wir suchen Verstärkung im Bereich Logopädie (w/m/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, überdurchschnittliches Gehalt, zweisprachiges Team.",
+  "title": "Logopäde / Sprachtherapeut (m/w/d)",
+  "description": "Wir suchen Verstärkung im Bereich Logopädie (m/w/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, überdurchschnittliches Gehalt, zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche möglich.",
+  "datePosted": new Date().toISOString().split('T')[0],
+  "validThrough": "2026-12-31",
+  "directApply": true,
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
-    "sameAs": siteUrl
+    "sameAs": siteUrl,
+    "logo": `${siteUrl}/logo.png`
   },
   "jobLocation": {
     "@type": "Place",
@@ -23,13 +27,19 @@ const jobSchema = {
       "streetAddress": "Tonhallenstraße 21",
       "addressLocality": "Duisburg",
       "postalCode": "47051",
+      "addressRegion": "Nordrhein-Westfalen",
       "addressCountry": "DE"
     }
   },
   "employmentType": ["FULL_TIME", "PART_TIME"],
-  "workHours": "Vollzeit oder Teilzeit möglich",
-  "industry": "Logopädie / Sprachtherapie",
-  "occupationalCategory": "Logopädie (w/m/d)"
+  "workHours": "20–40 Stunden pro Woche",
+  "industry": "Gesundheitswesen",
+  "occupationalCategory": "29-1127.00",
+  "jobBenefits": "4-Tage-Woche möglich, 100% Fortbildungskosten übernommen, überdurchschnittliches Gehalt, bilinguales Team Deutsch-Türkisch, zentrale Lage am Hbf Duisburg",
+  "qualifications": "Staatlich anerkannte/r Logopäde/Logopädin oder Sprachtherapeut/in (m/w/d). Berufsanfänger willkommen.",
+  "skills": "Pädiatrie, Neurologie, Stottertherapie, Aphasie, Dysarthrie, Dysphagie, LRS, SES, bilinguale Therapie Deutsch-Türkisch",
+  "responsibilities": "Durchführung logopädischer Diagnostik und Therapie in den Bereichen Pädiatrie, Neurologie und Stottern/Poltern. Bilinguales Arbeiten in Deutsch und Türkisch möglich.",
+  "employerOverview": "Praxis für Logopädie Şimşek ist eine spezialisierte Praxis in Duisburg mit bilingualen Team. Schwerpunkte: Pädiatrie, Neurologie, Stottern/Poltern. Zentrale Lage am Duisburger Hauptbahnhof."
 };
 
 const breadcrumbSchema = {
