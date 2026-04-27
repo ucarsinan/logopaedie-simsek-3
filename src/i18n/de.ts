@@ -198,7 +198,7 @@ export const de = {
       },
       {
         q: "Ab welchem Alter kann mein Kind zur Logopädie?",
-        a: "Logopädische Therapie ist ab dem Säuglingsalter möglich – auch bei Saugstörungen von Neugeborenen. Je früher eine Sprachentwicklungsverzögerung erkannt und behandelt wird, desto besser sind die Therapieerfolge. Frühförderung vor dem Schuleintritt ist besonders wirkungsvoll.",
+        a: "Logopädische Therapie ist je nach Indikation ab dem Säuglingsalter möglich – etwa bei Saug-, Trink- oder Fütterproblemen. Bei Auffälligkeiten in der Sprachentwicklung ist eine frühe Abklärung sinnvoll, damit Förderbedarf rechtzeitig erkannt und passende Unterstützung eingeleitet werden kann.",
       },
       {
         q: "Brauche ich ein ärztliches Rezept für Logopädie?",
@@ -218,7 +218,7 @@ export const de = {
       },
       {
         q: "Wie oft ist Therapie pro Woche notwendig?",
-        a: "Empfohlen werden je nach Störungsbild 1–2 Therapieeinheiten pro Woche. Regelmäßiges Üben zwischen den Terminen ist ein wichtiger Bestandteil der Therapie und entscheidend für nachhaltige Fortschritte. Wir geben Ihnen konkrete Heimübungen mit.",
+        a: "Empfohlen werden je nach Störungsbild häufig 1–2 Therapieeinheiten pro Woche; die genaue Frequenz richtet sich nach Verordnung, Befund und Therapieziel. Regelmäßiges Üben zwischen den Terminen unterstützt nachhaltige Fortschritte. Wir geben Ihnen konkrete Heimübungen mit.",
       },
       {
         q: "Bieten Sie Therapie auf Türkisch an?",
@@ -230,7 +230,7 @@ export const de = {
       },
       {
         q: "Was ist der Unterschied zwischen Sprach- und Sprechstörungen?",
-        a: "Sprachstörungen betreffen das linguistische System – also Wortschatz, Grammatik oder Sprachverständnis (z. B. Aphasie, Sprachentwicklungsverzögerung). Sprechstörungen betreffen die motorische Ausführung des Sprechens – also wie Laute und Wörter produziert werden (z. B. Stottern, Lispeln, Dysarthrie). Beide Bereiche können auch gleichzeitig auftreten.",
+        a: "Sprachstörungen betreffen sprachliche Fähigkeiten wie Wortschatz, Grammatik, Sprachverständnis oder Wortfindung (z. B. Sprachentwicklungsstörung, Aphasie). Sprechstörungen betreffen die motorische Ausführung oder den Redefluss – also wie Laute, Silben und Wörter gebildet oder flüssig gesprochen werden (z. B. Stottern, Sigmatismus/Lispeln, Dysarthrie). Beide Bereiche können auch gleichzeitig betroffen sein.",
       },
     ],
   },

@@ -15,7 +15,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Ab wann ist Stottern beim Kind behandlungsbedürftig?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ein leichtes Stottern im Alter von 2–4 Jahren ist häufig normal. Wenn Ihr Kind jedoch mehr als 3 Monate lang stottert, sichtbaren Leidensdruck zeigt oder Vermeidungsverhalten entwickelt, empfehlen wir eine logopädische Abklärung. Bei frühem Therapiebeginn sind die Erfolgschancen besonders gut." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Entwicklungsbedingte Sprechunflüssigkeiten kommen im Alter von 2–4 Jahren häufig vor. Wenn Ihr Kind jedoch über mehrere Monate deutliche Wiederholungen, Dehnungen oder Blockierungen zeigt, sichtbar belastet ist oder Sprechen vermeidet, empfehlen wir eine logopädische Abklärung. Frühe Beratung kann helfen, den Verlauf günstig zu beeinflussen." }
     },
     {
       "@type": "Question",
@@ -25,12 +25,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Wie wird Dysarthrie nach einem Schlaganfall behandelt?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Die Dysarthrietherapie verbessert die Verständlichkeit durch gezielte Übungen der Sprechmuskulatur, Atemsteuerung und Artikulationsdeutlichkeit. Ziele sind bessere Artikulation, optimierte Stimmgebung und Prosodie sowie Kompensationsstrategien. Bei schwerer Ausprägung werden auch Kommunikationshilfen eingesetzt." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Die Dysarthrietherapie zielt darauf ab, Verständlichkeit und kommunikative Teilhabe zu verbessern. Geübt werden je nach Befund Artikulation, Atem- und Stimmkoordination, Sprechtempo, Prosodie und alltagsnahe Kompensationsstrategien. Bei schwerer Ausprägung können auch Kommunikationshilfen sinnvoll sein." }
     },
     {
       "@type": "Question",
       "name": "Was ist Lispeln und kann es behandelt werden?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Lispeln (Sigmatismus) ist eine fehlerhafte Aussprache der S-Laute, zum Beispiel mit der Zunge zwischen den Zähnen (interdental) oder seitlich (lateral). Es ist sehr gut therapierbar: Mit spielerischen, altersgerechten Übungen und gezieltem Artikulationstraining lässt sich eine klare Aussprache entwickeln." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Lispeln (Sigmatismus) ist eine abweichende Aussprache der S-Laute, zum Beispiel mit der Zunge zwischen den Zähnen (interdental) oder seitlich (lateral). Mit altersgerechten Übungen und gezieltem Artikulationstraining lässt sich die Lautbildung häufig gut verbessern." }
     }
   ]
 };
@@ -113,7 +113,7 @@ const schema = {
         <ul>
           <li><strong>Stottern:</strong> Wiederholungen, Dehnungen und Blockierungen</li>
           <li><strong>Poltern:</strong> überhastetes, unrhythmisches Sprechen mit verminderter Selbstwahrnehmung</li>
-          <li><strong>Dyslalie / Sigmatismus:</strong> fehlerhafte Lautbildung, besonders der S-Laute</li>
+          <li><strong>Aussprachestörungen / Sigmatismus:</strong> abweichende Lautbildung, besonders der S-Laute</li>
           <li><strong>Dysarthrie:</strong> neurologisch bedingte Einschränkung von Artikulation, Atmung und Prosodie</li>
           <li><strong>Sprechapraxie:</strong> Planungsstörung der Sprechbewegungen</li>
           <li><strong>Rhinophonie:</strong> veränderte Nasalität beim Sprechen</li>
@@ -124,9 +124,9 @@ const schema = {
         <span class="bento-eyebrow">Stottern</span>
         <h2>Stottertherapie verbindet Technik und Entlastung</h2>
         <p>
-          Stottern beginnt meist im Alter von 2 bis 6 Jahren. Unsere Therapie kombiniert
-          <strong> Sprechflüssigkeitstechniken</strong> wie weichen Stimmeinsatz oder Verlangsamung
-          mit psychosozialer Begleitung.
+          Stottern beginnt häufig im Vorschulalter. Unsere Therapie kombiniert je nach
+          Befund Methoden zur Veränderung der Sprechweise oder des Umgangs mit Stottern
+          mit Beratung und psychosozialer Entlastung.
         </p>
         <p>
           Damit arbeiten wir nicht nur an der Sprechweise, sondern auch an Vermeideverhalten,
@@ -138,7 +138,7 @@ const schema = {
         <span class="bento-eyebrow">Kinder</span>
         <h2>Aussprachestörungen bei Kindern früh korrigieren</h2>
         <p>
-          Lispeln, Sigmatismus und andere Aussprachefehler können die schulische Entwicklung
+          Sigmatismus und andere Lautbildungs- oder Aussprachestörungen können die schulische Entwicklung
           und das Selbstvertrauen beeinflussen. Mit spielerischen Übungen fördern wir eine
           <strong> klare und verständliche Aussprache</strong>.
         </p>
@@ -151,9 +151,10 @@ const schema = {
         <span class="bento-eyebrow">Elternhinweis</span>
         <h2>Bei anhaltendem Stottern ist frühe Abklärung sinnvoll</h2>
         <p>
-          Ein leichtes Stottern zwischen dem 2. und 4. Lebensjahr kann vorübergehend sein.
-          Wenn Ihr Kind jedoch länger als drei Monate stottert, sichtbaren Leidensdruck zeigt
-          oder beginnt, Sprechen zu vermeiden, empfehlen wir eine logopädische Abklärung.
+          Entwicklungsbedingte Sprechunflüssigkeiten können zwischen dem 2. und 4. Lebensjahr
+          vorübergehend auftreten. Wenn Ihr Kind jedoch über mehrere Monate deutliche Wiederholungen,
+          Dehnungen oder Blockierungen zeigt, sichtbaren Leidensdruck hat oder Sprechen vermeidet,
+          empfehlen wir eine logopädische Abklärung.
         </p>
       </article>
 
@@ -161,7 +162,7 @@ const schema = {
         <span class="bento-eyebrow">Poltern</span>
         <h2>Poltern wird oft übersehen, ist aber gut behandelbar</h2>
         <p>
-          Betroffene sprechen häufig überhetzt und undeutlich, ohne sich dessen ausreichend
+          Betroffene sprechen häufig sehr schnell, unregelmäßig und undeutlich, ohne sich dessen ausreichend
           bewusst zu sein. Ein zentraler Teil der Therapie ist deshalb die Verbesserung
           von Selbstwahrnehmung, Sprechtempo und Struktur im Ausdruck.
         </p>
@@ -175,7 +176,7 @@ const schema = {
           Schädel-Hirn-Trauma können Sprechmuskulatur und Sprechplanung beeinträchtigt sein.
         </p>
         <p>
-          Ziel ist eine bessere Verständlichkeit im Alltag und der sichere Umgang mit verbliebenen Ressourcen.
+          Ziel ist eine bessere Verständlichkeit im Alltag und der gezielte Umgang mit vorhandenen Ressourcen.
         </p>
       </article>
 
