@@ -56,8 +56,7 @@ const isCurrent = (href: string) => {
 
     <!-- Mobile: address + phone (tablet only, 768–991px) -->
     <a href="https://goo.gl/maps/cGPVX58woxP2" target="_blank" rel="noopener noreferrer"
-       class="shadow-xl/20 hidden max-[767px]:hidden items-center justify-center gap-2 h-10 px-5 rounded-[6px] bg-topbar-green text-[#1C1916] text-[.8125rem] font-medium tracking-[.04em] uppercase no-underline whitespace-nowrap leading-[1.2] transition-colors duration-200 hover:bg-[#7ab52f] shrink-0 [&_svg]:shrink-0"
-       aria-label="Adresse öffnen">
+       class="shadow-xl/20 hidden max-[767px]:hidden items-center justify-center gap-2 h-10 px-5 rounded-[6px] bg-topbar-green text-[#1C1916] text-[.8125rem] font-medium tracking-[.04em] uppercase no-underline whitespace-nowrap leading-[1.2] transition-colors duration-200 hover:bg-[#7ab52f] shrink-0 [&_svg]:shrink-0">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
       Tonhallenstr. 21 – 47051 Duisburg
     </a>
@@ -71,8 +70,7 @@ const isCurrent = (href: string) => {
         Tonhallenstr. 21
       </a>
       <a href="tel:+4920334868690"
-         class="shadow-xl/20 inline-flex items-center justify-center gap-1 px-2 max-[640px]:px-1.5 h-8 rounded-[6px] bg-topbar-green text-[#1C1916] text-[.6875rem] max-[640px]:text-[0.62rem] font-semibold no-underline whitespace-nowrap transition-colors duration-200 hover:bg-[#7ab52f]"
-         aria-label="Jetzt anrufen: 0203 34 86 86 90">
+         class="shadow-xl/20 inline-flex items-center justify-center gap-1 px-2 max-[640px]:px-1.5 h-8 rounded-[6px] bg-topbar-green text-[#1C1916] text-[.6875rem] max-[640px]:text-[0.62rem] font-semibold no-underline whitespace-nowrap transition-colors duration-200 hover:bg-[#7ab52f]">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         0203 – 34 86 86 90
       </a>
@@ -98,21 +96,23 @@ const isCurrent = (href: string) => {
   id="mobileMenu"
   data-open="false"
   role="navigation"
-  aria-label={t.aria_mobile}>
+  aria-label={t.aria_mobile}
+  aria-hidden="true"
+  inert>
   <div class="px-5 max-[640px]:px-4 pb-6 pt-2">
-    <a href={t.links.home} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={t.links.home} tabindex="-1" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
       {t.home}</a>
-    <a href={t.links.therapy} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={t.links.therapy} tabindex="-1" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
       {t.therapy}</a>
-    <a href={t.links.team} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={t.links.team} tabindex="-1" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
       {t.team}</a>
-    <a href={t.links.karriere} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={t.links.karriere} tabindex="-1" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
       {t.karriere}</a>
-    <a href={t.links.contact} class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
+    <a href={t.links.contact} tabindex="-1" class="mobile-link inline-flex items-center gap-3 w-full text-[.9375rem] font-medium text-text py-3 border-b border-border transition-colors duration-200 hover:text-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-muted" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       {t.contact}</a>
 
@@ -120,8 +120,9 @@ const isCurrent = (href: string) => {
       <div class="pt-3">
         <a
           href={normalizedAlternateUrl}
+          tabindex="-1"
           class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-[6px] border border-border text-[.8125rem] font-semibold tracking-[.06em] uppercase text-text-muted hover:text-primary hover:border-primary transition-colors duration-200"
-          aria-label={th.lang_label}
+          aria-label={`${th.lang_short} – ${th.lang_title}: ${th.lang_label}`}
           title={th.lang_title}
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -179,6 +180,15 @@ const isCurrent = (href: string) => {
 
     function setOpen(open: boolean) {
       mobileMenu.dataset.open = String(open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      mobileMenu.toggleAttribute('inert', !open);
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        if (open) {
+          link.removeAttribute('tabindex');
+        } else {
+          link.setAttribute('tabindex', '-1');
+        }
+      });
       hamburger.dataset.open = String(open);
       hamburger.setAttribute('aria-expanded', String(open));
       const pageLang = document.documentElement.lang;
@@ -201,6 +211,11 @@ const isCurrent = (href: string) => {
     const mobileMenu = document.getElementById('mobileMenu');
     const hamburger = document.getElementById('hamburger');
     if (mobileMenu) mobileMenu.dataset.open = 'false';
+    if (mobileMenu) {
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      mobileMenu.setAttribute('inert', '');
+      mobileMenu.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
+    }
     if (hamburger) { hamburger.dataset.open = 'false'; hamburger.setAttribute('aria-expanded', 'false'); }
   });
 

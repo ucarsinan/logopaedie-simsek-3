@@ -27,13 +27,13 @@ const icons = [
     </header>
     <div class="grid grid-cols-2 gap-6 max-[640px]:grid-cols-1 max-[640px]:gap-4">
       {services.map((service, i) => (
-        <a href={service.href} class={`group block bg-surface border border-border rounded-md p-8 shadow-sm no-underline transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary reveal max-[640px]:rounded-[20px] max-[640px]:p-6${i > 0 ? ` reveal-delay-${i}` : ''}`} aria-label={`${service.title}: ${t.more}`}>
+        <a href={service.href} class={`group block bg-surface border border-border rounded-md p-8 shadow-sm no-underline transition-[transform,box-shadow,border-color] duration-250 ease-out hover:-translate-y-1 hover:shadow-md hover:border-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary reveal max-[640px]:rounded-[20px] max-[640px]:p-6${i > 0 ? ` reveal-delay-${i}` : ''}`}>
           <div class="w-13 h-13 rounded-sm bg-primary-light flex items-center justify-center mb-5 text-primary max-[640px]:w-11 max-[640px]:h-11 max-[640px]:mb-4" aria-hidden="true" set:html={icons[i]} />
           <h3 class="font-display text-xl font-semibold mb-2.5 text-text max-[640px]:text-[1.45rem] max-[640px]:leading-[1.15] max-[640px]:mb-2">{service.title}</h3>
           <p class="text-[.9375rem] text-text-muted leading-[1.65] max-[640px]:text-[0.9rem] max-[640px]:leading-[1.55]">{service.text}</p>
           <div class="flex flex-wrap gap-2 mt-4 max-[640px]:mt-3">
             {service.tags.map(tag => (
-              <span class="bg-primary-light text-primary text-xs font-semibold px-2.5 py-1 rounded-full max-[640px]:text-[0.7rem] max-[640px]:px-2 max-[640px]:py-0.5">{tag}</span>
+              <span class="bg-primary-light text-primary-dark text-xs font-semibold px-2.5 py-1 rounded-full max-[640px]:text-[0.7rem] max-[640px]:px-2 max-[640px]:py-0.5">{tag}</span>
             ))}
           </div>
           <span class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary group-hover:underline max-[640px]:mt-4">
