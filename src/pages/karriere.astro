@@ -47,7 +47,7 @@ const benefits = [
   { icon: "💬", title: "Kollegiales Team", desc: "Offene Kommunikation, gegenseitige Unterstützung" },
   { icon: "🏢", title: "Moderne Praxisräume", desc: "Gut ausgestattete Therapieräume in zentraler Lage" },
   { icon: "📚", title: "Fortbildungsunterstützung", desc: "Wir fördern Ihre fachliche Weiterentwicklung" },
-  { icon: "⏰", title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit nach Absprache" },
+  { icon: "⏰", title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit – auch 4-Tage-Woche möglich" },
   { icon: "🚇", title: "Zentrale Lage", desc: "Direkt am Duisburger Hauptbahnhof, gut per ÖPNV erreichbar" },
 ];
 ---
@@ -87,6 +87,7 @@ const benefits = [
           <div class="bento-hero__tags">
             <span class="tag tag--green">Duisburg</span>
             <span class="tag tag--green">Voll- / Teilzeit</span>
+            <span class="tag tag--green">4-Tage-Woche möglich</span>
             <span class="tag tag--accent">Sofort verfügbar</span>
           </div>
           <p class="bento-hero__title">Karriere bei #TeamSimsek</p>
@@ -175,6 +176,44 @@ const benefits = [
           </div>
         </div>
 
+        <!-- PORTAL BRIDGE CARD -->
+        <div class="bento-card bento-portal">
+          <div class="bento-portal__left">
+            <div class="bento-section-tag bento-section-tag--accent">Karriereportal</div>
+            <h2 class="bento-card__title">Mehr Details zur Stelle</h2>
+            <p class="bento-portal__text">
+              Gehaltsrechner, Bewerbertipps und direkte WhatsApp-Anfrage — alles auf unserem Karriereportal.
+            </p>
+            <a
+              href="https://xn--logopdiejobs-kcb.de/?utm_source=logopaedie-simsek.de&utm_medium=karriere&utm_campaign=portal-bridge"
+              class="portal-link-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Zum Karriereportal
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+          </div>
+          <div class="bento-portal__features">
+            <div class="portal-feature">
+              <span class="portal-feature__icon">🧮</span>
+              <span class="portal-feature__label">Gehaltsrechner</span>
+            </div>
+            <div class="portal-feature">
+              <span class="portal-feature__icon">📖</span>
+              <span class="portal-feature__label">Ratgeber & FAQs</span>
+            </div>
+            <div class="portal-feature">
+              <span class="portal-feature__icon">💬</span>
+              <span class="portal-feature__label">WhatsApp-Kontakt</span>
+            </div>
+            <div class="portal-feature">
+              <span class="portal-feature__icon">📅</span>
+              <span class="portal-feature__label">4-Tage-Woche-Infos</span>
+            </div>
+          </div>
+        </div>
+
         <!-- BEWERBUNG CTA CARD -->
         <div class="bento-card bento-apply">
           <div class="bento-apply__deco" aria-hidden="true"></div>
@@ -185,9 +224,13 @@ const benefits = [
               <div class="bento-section-tag bento-section-tag--light">Bewerbung</div>
               <h2 class="bento-apply__title">Jetzt<br>durchstarten</h2>
               <p class="bento-apply__sub">
-                Kein Formular, kein Portal. Einfach E-Mail mit Lebenslauf — der Rest kann nachgereicht werden.
+                Einfach E-Mail, Anruf oder WhatsApp — der Lebenslauf reicht für den Anfang.
               </p>
               <div class="bento-apply__actions">
+                <a href="https://wa.me/4920334868690?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20Stelle%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de%20in%20Ihrer%20Praxis." class="apply-btn apply-btn--whatsapp" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+                  WhatsApp
+                </a>
                 <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="apply-btn apply-btn--primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   Bewerbung senden
@@ -729,10 +772,90 @@ const benefits = [
     letter-spacing: 0.02em;
   }
 
+  /* ─── WhatsApp Button ─── */
+  .apply-btn--whatsapp {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  }
+  .apply-btn--whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+  }
+
+  /* ─── Portal Bridge Card ─── */
+  .bento-portal {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    padding: 2rem 2.25rem;
+  }
+  .bento-portal__left {
+    flex-shrink: 0;
+    width: 300px;
+  }
+  .bento-portal__text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    max-width: 44ch;
+  }
+  .portal-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    border: 1.5px solid var(--color-accent);
+    padding: 0.55rem 1.125rem;
+    border-radius: var(--radius-sm);
+    transition: background 0.18s, color 0.18s;
+  }
+  .portal-link-btn:hover {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .bento-portal__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  .portal-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.125rem 1.125rem;
+  }
+  .portal-feature__icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .portal-feature__label {
+    font-size: 0.8375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
+
   /* ─── Responsive ─── */
   @media (max-width: 900px) {
     .bento-grid { grid-template-columns: repeat(2, 1fr); }
     .bento-hero { grid-column: span 2; }
+    .bento-portal { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .bento-portal__left { width: 100%; }
+    .bento-portal__features { grid-template-columns: repeat(4, 1fr); }
     .bento-stats {
       grid-column: span 2;
       display: grid;
@@ -768,8 +891,10 @@ const benefits = [
     .bento-stats,
     .bento-requirements,
     .bento-benefits-all,
+    .bento-portal,
     .bento-apply,
     .bento-note { grid-column: span 1; }
+    .bento-portal__features { grid-template-columns: repeat(2, 1fr); }
     .bento-stats {
       display: flex;
       flex-direction: column;
