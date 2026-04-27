@@ -138,7 +138,13 @@ const localBusinessSchema = {
               <div class="text-[.8125rem] text-text-muted mt-0.5">Genel sorular için · Randevular telefonla alınır</div>
             </div>
           </div>
-          <div class="bento-tile bento-tile--full !p-0 !border-0 !shadow-none flex gap-4 max-[640px]:gap-3 items-start">
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bento-tile bento-tile--full !p-0 !border-0 !shadow-none flex gap-4 max-[640px]:gap-3 items-start no-underline rounded-sm transition-colors hover:bg-primary-light/45 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4"
+            aria-label="Adresi Google Maps'te aç"
+          >
             <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
@@ -149,7 +155,7 @@ const localBusinessSchema = {
                 <div class="text-[.8125rem] text-text-muted mt-0.5">3. kat · Asansör mevcut</div>
               </address>
             </div>
-          </div>
+          </a>
 
           <div class="bento-tile bento-tile--full bento-tile--soft !p-4 text-sm">
             <p class="font-semibold text-text mb-1">İki Dilli Muayenehane</p>
@@ -158,8 +164,8 @@ const localBusinessSchema = {
         </div>
 
         <!-- Ulaşım & Harita – full width -->
-        <div class="bento-tile bento-tile--full md:grid md:grid-cols-[1fr_2fr] md:gap-8 md:items-start" data-google-map>
-          <div class="mb-4 md:mb-0">
+        <div class="bento-tile bento-tile--full md:grid md:grid-cols-[1fr_2fr] md:gap-8 md:items-stretch" data-google-map>
+          <div class="mb-4 md:mb-0 md:flex md:flex-col md:h-full">
             <h3 class="font-display text-base font-semibold text-text mb-3">Ulaşım & Harita</h3>
             <p class="text-sm text-text-muted mb-5">
               Duisburg Ana Tren Garı'na yalnızca <strong class="text-text">2 dakika yürüme mesafesi</strong>.<br>
@@ -169,7 +175,7 @@ const localBusinessSchema = {
               href="https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-primary w-full justify-center"
+              class="btn btn-primary w-full justify-center md:mt-auto"
             >
               Google Maps'te Aç
             </a>
