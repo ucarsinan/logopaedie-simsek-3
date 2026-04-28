@@ -75,9 +75,9 @@ export const tr: Translations = {
   },
   services: {
     section_label: "Terapi Alanlarımız",
-    heading: "Dil ve Konuşma Terapisinin Tüm Alanları",
+    heading: "Dil ve Konuşma Terapisi Alanlarımız",
     description:
-      "Çocuklar, yetişkinler ve yaşlılar için tüm dil ve konuşma bozukluklarını tedavi ediyoruz.",
+      "Çocuklar, yetişkinler ve yaşlılar için geniş bir terapi yelpazesi sunuyoruz.",
     more: "Daha fazla bilgi",
     overview: "Tüm Terapi Alanlarına Genel Bakış",
     items: [

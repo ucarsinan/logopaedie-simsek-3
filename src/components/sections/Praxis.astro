@@ -44,16 +44,16 @@ const t = useTranslations(lang).praxis;
           <div class="w-11 h-11 bg-primary-light rounded-sm flex items-center justify-center text-primary shrink-0" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <div>
+          <div class="min-w-0 flex-1">
             <div class="text-[.8rem] font-bold tracking-[.06em] uppercase text-text-light mb-0.75">{t.hours_label}</div>
-            <div class="mt-2 flex flex-col gap-2">
-              <div class="flex justify-between text-sm">
+            <div class="mt-2 grid max-w-sm gap-2">
+              <div class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-6 text-sm">
                 <span class="text-text-muted">{t.hours_weekdays}</span>
-                <span class="font-semibold text-text">08:00 – 18:00</span>
+                <span class="font-semibold tabular-nums text-text">08:00 – 18:00</span>
               </div>
-              <div class="flex justify-between text-sm">
+              <div class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-6 text-sm">
                 <span class="text-text-muted">{t.hours_weekend}</span>
-                <span class="text-text-light italic">{t.hours_closed}</span>
+                <span class="font-medium text-text-muted">{t.hours_closed}</span>
               </div>
             </div>
           </div>

@@ -73,7 +73,7 @@ export const de = {
   },
   services: {
     section_label: "Unser Therapieangebot",
-    heading: "Alle Bereiche der Logopädie",
+    heading: "Unser Therapieangebot in Duisburg",
     description:
       "Wir behandeln ein breites Spektrum logopädischer Störungsbilder – für Kinder, Erwachsene und Senioren.",
     more: "Mehr erfahren",
