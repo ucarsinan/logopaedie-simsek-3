@@ -130,6 +130,9 @@ export const tr: Translations = {
     feature_kids: "Çocuklara özel oyun alanları",
     feature_materials: "Yüksek kaliteli, güncel terapi materyalleri",
     feature_accessible: "Binada asansör mevcut",
+    room_image_alt:
+      "Duisburg'daki Praxis für Logopädie Şimşek içinde çocuklara uygun masa, sandalyeler ve oyun alanı bulunan aydınlık terapi odası",
+    room_image_label: "Terapi odasından görünüm",
     map_open: "Google Maps'te Aç",
     map_address_sub: "Tonhallenstraße 21, 3. Kat",
     call: "Ara",

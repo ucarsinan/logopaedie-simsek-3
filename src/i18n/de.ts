@@ -123,6 +123,9 @@ export const de = {
     feature_kids: "Kindgerechte Spielbereiche",
     feature_materials: "Hochwertiges, aktuelles Therapiematerial",
     feature_accessible: "Aufzug im Gebäude",
+    room_image_alt:
+      "Heller Therapieraum der Praxis für Logopädie Şimşek in Duisburg mit kindgerechtem Tisch, Stühlen und Spielbereich",
+    room_image_label: "Einblick in den Therapieraum",
     map_open: "In Google Maps öffnen",
     map_address_sub: "Tonhallenstraße 21, 3. OG",
     call: "Anrufen",

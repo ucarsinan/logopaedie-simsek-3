@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import entranceImg from '../assets/therapy/praxis-simsek-eingang-wartebereich-duisburg.webp';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
@@ -74,8 +76,21 @@ const localBusinessSchema = {
     </section>
 
     <!-- Content -->
-    <div class="container py-12 max-[640px]:py-9">
-      <div class="bento-page-grid">
+    <section class="relative overflow-hidden">
+      <Image
+        src={entranceImg}
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover object-center opacity-[0.32]"
+        widths={[960, 1400, 1920]}
+        sizes="100vw"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        aria-hidden="true"
+      />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,248,245,.56)_0%,rgba(250,248,245,.68)_38%,rgba(250,248,245,.78)_100%)]" aria-hidden="true"></div>
+      <div class="container relative z-10 py-12 max-[640px]:py-9">
+        <div class="bento-page-grid">
 
         <!-- Phone-only appointment CTA -->
         <div class="bento-tile bento-tile--half flex flex-col">
@@ -92,7 +107,7 @@ const localBusinessSchema = {
             </div>
             <div>
               <h2 class="font-display text-[1.5rem] max-[640px]:text-[1.3rem] font-semibold text-text mb-1.5">Hemen Arayın</h2>
-              <p class="text-text-muted text-[.9375rem] max-[640px]:text-[0.9rem] leading-[1.65] max-w-xs">Bizi doğrudan arayın – size yardımcı olmaktan memnuniyet duyarız.</p>
+              <p class="text-text-muted text-[.9375rem] max-[640px]:text-[0.9rem] leading-[1.65] max-w-xs">Randevu ayarlamak için çalışma saatleri içinde telefonla ulaşabilirsiniz.</p>
             </div>
             <a href="tel:+4920334868690" class="btn btn-primary w-full justify-center text-[1.0625rem] max-[640px]:text-[1rem] py-4 max-[640px]:py-3.5">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l.9-1.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -154,14 +169,9 @@ const localBusinessSchema = {
           </a>
         </div>
 
-        <!-- Sigorta notu -->
-        <div class="bento-tile bento-tile--full bento-tile--warm">
-          <p class="text-[.9375rem] max-[640px]:text-[0.9rem] text-text leading-[1.7] max-[640px]:leading-[1.65]"><strong>Kamu sigortası mı, özel mi, yoksa bireysel ödeme mi?</strong><br>Tüm kamu sağlık sigortalarıyla ve özel hastalarla çalışıyor, bireysel ödeme seçeneği de sunuyoruz. Ödeme hakkında sorularınız varsa memnuniyetle bilgi veririz.</p>
-        </div>
-
         <!-- Ulaşım & Harita – full width -->
-        <div class="bento-tile bento-tile--full md:grid md:grid-cols-[1fr_2fr] md:gap-8 md:items-stretch" data-google-map>
-          <div class="mb-4 md:mb-0 md:flex md:flex-col md:h-full">
+        <div class="bento-tile bento-tile--full p-5 max-[640px]:p-4 md:grid md:grid-cols-[minmax(15rem,0.85fr)_minmax(0,2.15fr)] md:gap-6 md:items-stretch" data-google-map>
+          <div class="mb-4 md:mb-0 md:flex md:flex-col md:h-full md:py-1">
             <h3 class="font-display text-base font-semibold text-text mb-3">Ulaşım & Harita</h3>
             <p class="text-sm text-text-muted mb-5">
               Duisburg Ana Tren Garı'na yalnızca <strong class="text-text">2 dakika yürüme mesafesi</strong>.<br>
@@ -176,10 +186,14 @@ const localBusinessSchema = {
               Google Maps'te Aç
             </a>
           </div>
-          <div class="relative overflow-hidden rounded-sm border border-border bg-bg-alt aspect-video">
-            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center" data-google-map-placeholder>
-              <p class="text-sm text-text-muted leading-[1.6] max-w-sm">Google Maps haritası yalnızca onayınızdan sonra yüklenir. Bu sırada Google'a veri aktarılabilir.</p>
-              <button type="button" class="btn btn-primary min-h-10! px-4! py-2! text-sm!" data-google-map-load>Haritayı yükle</button>
+          <div class="relative min-h-64 max-[640px]:min-h-72 h-full overflow-hidden rounded-sm border border-border bg-[linear-gradient(135deg,#f3ede5_0%,#e6f4f1_100%)] shadow-inner">
+            <div class="absolute inset-0 bg-[image:var(--noise-bg)] opacity-60" aria-hidden="true"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8 max-[640px]:p-5 text-center" data-google-map-placeholder>
+              <div class="w-12 h-12 rounded-full bg-surface border border-border shadow-sm flex items-center justify-center text-primary" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <p class="text-sm text-text-muted leading-[1.65] max-w-md">Google Maps haritası yalnızca onayınızdan sonra yüklenir. Bu sırada Google'a veri aktarılabilir.</p>
+              <button type="button" class="btn btn-primary min-h-11! px-5! py-2.5! text-sm!" data-google-map-load>Haritayı yükle</button>
             </div>
             <iframe
               hidden
@@ -192,8 +206,9 @@ const localBusinessSchema = {
           </div>
         </div>
 
+        </div>
       </div>
-    </div>
+    </section>
 
   </main>
   <Footer lang="tr" />

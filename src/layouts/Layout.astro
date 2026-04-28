@@ -164,7 +164,7 @@ const jsonLd = {
     <!-- Favicons -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#2a7f6f" />
 
     <!-- Open Graph -->
@@ -251,7 +251,37 @@ const jsonLd = {
   <body>
     <slot />
     <script>
+      function restoreLandmarkVisibility() {
+        document.querySelectorAll('#site-header[aria-hidden="true"], #site-nav[aria-hidden="true"], main[aria-hidden="true"], footer[aria-hidden="true"]').forEach(el => {
+          el.removeAttribute('aria-hidden');
+        });
+      }
+
+      function initLandmarkGuard() {
+        restoreLandmarkVisibility();
+
+        if (document.documentElement.dataset.landmarkGuardReady === 'true') return;
+        document.documentElement.dataset.landmarkGuardReady = 'true';
+
+        const observer = new MutationObserver((mutations) => {
+          for (const mutation of mutations) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'aria-hidden') {
+              restoreLandmarkVisibility();
+              break;
+            }
+          }
+        });
+
+        observer.observe(document.body, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ['aria-hidden'],
+        });
+      }
+
       function initPage() {
+        initLandmarkGuard();
+
         // Scroll Reveal
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
