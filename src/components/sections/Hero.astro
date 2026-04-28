@@ -12,7 +12,7 @@ const t = useTranslations(lang).hero;
 ---
 
 <section
-  class="min-h-svh lg:min-h-[clamp(680px,78svh,820px)] pt-[calc(var(--header-h)+var(--nav-h))] flex flex-col justify-center relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[image:var(--noise-bg)] before:pointer-events-none before:z-0"
+  class="min-h-svh max-[640px]:min-h-0 lg:min-h-[clamp(680px,78svh,820px)] pt-[calc(var(--header-h)+var(--nav-h))] flex flex-col justify-center max-[640px]:justify-start relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[image:var(--noise-bg)] before:pointer-events-none before:z-0"
   aria-labelledby="hero-heading">
   <div class="absolute inset-0 z-0 hidden lg:block overflow-hidden bg-[linear-gradient(90deg,#faf6ef_0%,#f8f4ed_52%,#f5efe7_100%)]" aria-hidden="true">
     <Image
@@ -34,7 +34,7 @@ const t = useTranslations(lang).hero;
       <div>
         <div class="inline-flex items-center gap-2 bg-primary-light text-primary-dark text-[.8125rem] max-[640px]:text-[0.72rem] font-semibold tracking-[.06em] uppercase px-[14px] py-[6px] max-[640px]:px-3 max-[640px]:py-1.5 rounded-full mb-6 max-[640px]:mb-4 before:content-[''] before:block before:w-1.5 before:h-1.5 before:rounded-full before:bg-primary-dark reveal">{t.badge}</div>
         <h1 class="sr-only" id="hero-heading">Logopädie Duisburg – Praxis für Logopädie Şimşek: Logopädie auf Deutsch und Türkisch</h1>
-        <p class="font-display text-[clamp(2.15rem,7vw,5.5rem)] max-[640px]:text-[clamp(1.85rem,11vw,2.85rem)] font-semibold leading-[1.05] max-[640px]:leading-[1.02] tracking-[-0.02em] text-text mb-6 max-[640px]:mb-4 [&_em]:italic [&_em]:text-primary reveal reveal-delay-1" aria-hidden="true">
+        <p class="font-display text-[clamp(2.15rem,7vw,5.5rem)] max-[640px]:text-[2.55rem] max-[380px]:text-[2.4rem] font-semibold leading-[1.05] max-[640px]:leading-[1.08] tracking-[-0.02em] max-[640px]:tracking-normal text-text mb-6 max-[640px]:mb-5 max-[640px]:max-w-[18rem] [&_em]:italic [&_em]:text-primary reveal reveal-delay-1" aria-hidden="true">
           {t.heading_line1}<br><em>{t.heading_line2}</em><br>{t.heading_line3}
         </p>
         <p class="text-[clamp(1rem,1.5vw,1.1875rem)] max-[640px]:text-[0.97rem] text-text-muted leading-[1.7] max-[640px]:leading-[1.6] max-w-[560px] mb-10 max-[640px]:mb-6 reveal reveal-delay-2">
