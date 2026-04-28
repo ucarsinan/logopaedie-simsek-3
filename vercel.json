@@ -102,6 +102,8 @@
     { "source": "/tuerkische-logopaedie/", "destination": "/tuerkische-logopaedie-duisburg/", "permanent": true },
     { "source": "/tuerkische-logopaedie/:path*", "destination": "/tuerkische-logopaedie-duisburg/", "permanent": true },
     { "source": "/tuerkische-sprachtherapie-duisburg/", "destination": "/tuerkische-sprachtherapie/", "permanent": true },
-    { "source": "/tuerkische-sprachtherapie-duisburg/:path*", "destination": "/tuerkische-sprachtherapie/", "permanent": true }
+    { "source": "/tuerkische-sprachtherapie-duisburg/:path*", "destination": "/tuerkische-sprachtherapie/", "permanent": true },
+
+    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true }
   ]
 }
