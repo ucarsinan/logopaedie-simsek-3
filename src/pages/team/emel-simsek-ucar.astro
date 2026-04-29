@@ -70,11 +70,6 @@ const schwerpunkte = [
     title: 'Frühförderung',
     text: 'Logopädische Intervention ab dem Säuglingsalter — je früher, desto wirksamer',
   },
-  {
-    icon: `<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/>`,
-    title: 'Stimmtherapie',
-    text: 'Funktionelle und organische Stimmstörungen, ISTP-Methode, Lax Vox',
-  },
 ];
 ---
 
@@ -112,7 +107,7 @@ const schwerpunkte = [
     <section class="bg-primary-light border-b border-border py-12 pb-10">
       <div class="container">
         <span class="text-xs font-semibold tracking-[.12em] uppercase text-primary mb-3 block">
-          Praxisinhaberin · Logopädie <span lang="tr">Şimşek</span> Duisburg
+          Praxisinhaberin · Praxis für Logopädie <span lang="tr">Şimşek</span> Duisburg
         </span>
         <h1 class="font-display text-[clamp(2.25rem,5vw,3.25rem)] font-semibold text-text leading-tight mb-3">
           Emel Şimşek-Uçar
@@ -129,71 +124,74 @@ const schwerpunkte = [
     </section>
 
     <!-- Profile Content -->
-    <div class="container py-12">
+    <div class="container py-10 max-[640px]:py-7">
       <div class="profile-grid bento-page-grid">
 
         <!-- Sidebar: Photo + Quick Facts -->
-        <aside class="profile-sidebar bento-tile">
-          <div class="rounded-[var(--radius-lg)] overflow-hidden bg-surface-2 mb-5 shadow-sm">
+        <aside class="profile-sidebar">
+          <div class="profile-photo-card bento-tile">
             <Image
               src={emelImg}
               alt="Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg"
-              class="w-full object-cover object-top"
+              class="profile-photo"
               widths={[380, 520, 760]}
-              sizes="(max-width: 860px) 100vw, 380px"
+              sizes="(max-width: 860px) 100vw, 320px"
               loading="eager"
               decoding="async"
             />
           </div>
 
           <!-- Quick facts -->
-          <div class="bg-surface border border-border rounded-[var(--radius-md)] p-5 mb-4">
-            <h2 class="font-semibold text-sm text-text mb-4 tracking-[.04em] uppercase text-text-muted">Kurzprofil</h2>
-            <ul class="space-y-3.5">
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+          <div class="profile-card bento-tile bento-tile--soft">
+            <div class="profile-card-head">
+              <span>Kurzprofil</span>
+              <strong>Emel Şimşek-Uçar</strong>
+            </div>
+            <ul class="profile-facts">
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Qualifikation</div>
-                  <div class="text-sm font-semibold text-text">Staatlich anerkannte Logopädin</div>
+                  <div class="profile-fact-label">Qualifikation</div>
+                  <div class="profile-fact-value">Staatlich anerkannte Logopädin</div>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Sprachen</div>
-                  <div class="text-sm font-semibold text-text">Deutsch &amp; Türkçe</div>
+                  <div class="profile-fact-label">Sprachen</div>
+                  <div class="profile-fact-value">Deutsch &amp; Türkçe</div>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Erfahrung</div>
-                  <div class="text-sm font-semibold text-text">Mehr als 10 Jahre</div>
+                  <div class="profile-fact-label">Erfahrung</div>
+                  <div class="profile-fact-value">Mehr als 10 Jahre</div>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Standort</div>
-                  <div class="text-sm font-semibold text-text">Duisburg-Mitte</div>
+                  <div class="profile-fact-label">Standort</div>
+                  <div class="profile-fact-value">Duisburg-Mitte</div>
                 </div>
               </li>
             </ul>
           </div>
 
-          <a href="/kontakt/" class="btn btn-primary w-full justify-center">Termin anfragen</a>
+          <a href="/kontakt/" class="btn btn-primary w-full justify-center mt-4">Termin anfragen</a>
         </aside>
 
         <!-- Bio content -->
-        <article class="prose-section bento-tile bento-tile--highlight">
+        <article class="profile-content prose-section bento-tile bento-tile--highlight">
 
           <h2>Über Emel Şimşek-Uçar</h2>
           <p>
@@ -269,21 +267,113 @@ const schwerpunkte = [
 
 <style>
   .profile-grid {
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 3rem;
     align-items: start;
   }
   .profile-sidebar {
+    grid-column: span 4;
     position: sticky;
     top: calc(var(--header-h) + var(--nav-h) + 1.5rem);
+    display: grid;
+    gap: 0.875rem;
+    min-width: 0;
+  }
+  .profile-sidebar > .bento-tile {
+    grid-column: 1 / -1;
+  }
+  .profile-content.bento-tile {
+    grid-column: span 8;
+  }
+  .profile-photo-card {
+    overflow: hidden;
+    padding: 0;
+    background: var(--color-surface-2);
+  }
+  .profile-photo {
+    display: block;
+    width: 100%;
+    height: clamp(15rem, 26vw, 18.5rem);
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  .profile-card {
+    background:
+      linear-gradient(180deg, rgba(230, 244, 241, 0.58), rgba(255, 255, 255, 0.94)),
+      var(--color-surface);
+    padding: 1.15rem;
+  }
+  .profile-card-head {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .profile-card-head span {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+  .profile-card-head strong {
+    display: block;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+  .profile-facts {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .profile-facts li {
+    display: grid;
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: center;
+    min-width: 0;
+    padding-left: 0;
+  }
+  .profile-facts li::before {
+    content: none;
+    display: none;
+  }
+  .profile-fact-icon {
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 8px;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-fact-label {
+    color: var(--color-text-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .profile-fact-value {
+    color: var(--color-text);
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.35;
   }
   @media (max-width: 860px) {
-    .profile-grid {
-      grid-template-columns: 1fr;
-    }
     .profile-sidebar {
+      grid-column: span 12;
       position: static;
+    }
+    .profile-content.bento-tile {
+      grid-column: span 12;
+    }
+    .profile-photo {
+      height: clamp(16rem, 72vw, 21rem);
     }
   }
 

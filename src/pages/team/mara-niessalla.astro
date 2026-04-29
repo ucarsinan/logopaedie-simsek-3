@@ -14,7 +14,7 @@ const personSchema = {
   "name": "Mara Nießalla",
   "jobTitle": "Staatlich geprüfte Logopädin",
   "url": `${siteUrl}/team/mara-niessalla`,
-  "description": "Staatlich geprüfte Logopädin in der Praxis für Logopädie Şimşek in Duisburg. Schwerpunkt Sprachentwicklung bei Kindern und Jugendlichen.",
+  "description": "Staatlich geprüfte Logopädin in der Praxis für Logopädie Şimşek in Duisburg. Mara Nießalla arbeitet überwiegend mit Erwachsenen, macht bei Bedarf Hausbesuche und behandelt auch Kinder und Jugendliche.",
   "worksFor": {
     "@type": "MedicalOrganization",
     "name": "Praxis für Logopädie Şimşek",
@@ -24,7 +24,7 @@ const personSchema = {
     "@type": "Occupation",
     "name": "Logopädin",
     "occupationalCategory": "Therapeutin",
-    "skills": "Kindersprachtherapie, Sprachentwicklung, Diagnostik, Therapieplanung"
+    "skills": "Erwachsenentherapie, Hausbesuche, Kindersprachtherapie, Diagnostik, Therapieplanung"
   }
 };
 
@@ -40,31 +40,31 @@ const breadcrumbSchema = {
 
 const schwerpunkte = [
   {
-    icon: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
-    title: 'Kindersprachtherapie',
-    text: 'Gezielte Förderung von Sprache, Sprechen und Kommunikation bei Kindern und Jugendlichen',
-  },
-  {
-    icon: `<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>`,
-    title: 'Sprachentwicklung',
-    text: 'Begleitung und Unterstützung bei verzögerter oder auffälliger Sprachentwicklung',
-  },
-  {
-    icon: `<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>`,
-    title: 'Diagnostik',
-    text: 'Strukturierte Eingangsdiagnostik zur genauen Einschätzung des Sprachentwicklungsstands',
+    icon: `<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>`,
+    title: 'Erwachsenentherapie',
+    text: 'Therapie bei Sprach-, Sprech-, Stimm- und Schluckbeschwerden im Erwachsenenalter',
   },
   {
     icon: `<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>`,
-    title: 'Alltagsnahe Übungsstrategien',
-    text: 'Übungen, die sich einfach in Kita und Alltag integrieren lassen — für nachhaltigen Therapieerfolg',
+    title: 'Hausbesuche bei Bedarf',
+    text: 'Logopädische Behandlung zu Hause, wenn ein Praxisbesuch nicht gut möglich ist',
+  },
+  {
+    icon: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
+    title: 'Kinder & Jugendliche',
+    text: 'Auch jüngere Patientinnen und Patienten werden je nach Bedarf therapeutisch begleitet',
+  },
+  {
+    icon: `<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>`,
+    title: 'Diagnostik & Therapieplanung',
+    text: 'Strukturierte Einschätzung, klare Ziele und Übungen für den Alltag',
   },
 ];
 ---
 
 <Layout
   title="Mara Nießalla – Staatlich geprüfte Logopädin | Praxis für Logopädie Şimşek Duisburg"
-  description="Mara Nießalla, staatlich geprüfte Logopädin bei der Praxis für Logopädie Şimşek in Duisburg. Schwerpunkt Sprachentwicklung, Diagnostik und Therapie bei Kindern und Jugendlichen."
+  description="Mara Nießalla, staatlich geprüfte Logopädin bei der Praxis für Logopädie Şimşek in Duisburg. Überwiegend Erwachsenentherapie, Hausbesuche bei Bedarf und auch Therapie für Kinder und Jugendliche."
   additionalSchemas={[personSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/team/mara-niessalla` },
@@ -96,7 +96,7 @@ const schwerpunkte = [
     <section class="bg-bg-alt border-b border-border py-12 pb-10">
       <div class="container">
         <span class="text-xs font-semibold tracking-[.12em] uppercase text-text-muted mb-3 block">
-          Therapeutin · Logopädie Şimşek Duisburg
+          Therapeutin · Praxis für Logopädie Şimşek Duisburg
         </span>
         <h1 class="font-display text-[clamp(2.25rem,5vw,3.25rem)] font-semibold text-text leading-tight mb-3">
           Mara Nießalla
@@ -105,8 +105,9 @@ const schwerpunkte = [
           Staatlich geprüfte Logopädin
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="bg-primary-light text-primary-dark text-xs font-semibold px-3 py-1.5 rounded-full">Kinder &amp; Jugendliche</span>
-          <span class="bg-surface border border-border text-text-muted text-xs font-semibold px-3 py-1.5 rounded-full">Sprachentwicklung</span>
+          <span class="bg-primary-light text-primary-dark text-xs font-semibold px-3 py-1.5 rounded-full">Erwachsene</span>
+          <span class="bg-surface border border-border text-text-muted text-xs font-semibold px-3 py-1.5 rounded-full">Hausbesuche bei Bedarf</span>
+          <span class="bg-surface border border-border text-text-muted text-xs font-semibold px-3 py-1.5 rounded-full">Auch Kinder &amp; Jugendliche</span>
           <span class="bg-surface border border-border text-text-muted text-xs font-semibold px-3 py-1.5 rounded-full">Diagnostik &amp; Therapie</span>
         </div>
       </div>
@@ -117,69 +118,82 @@ const schwerpunkte = [
       <div class="profile-grid bento-page-grid">
 
         <!-- Sidebar: Photo + Quick Facts -->
-        <aside class="profile-sidebar bento-tile">
-          <div class="rounded-[var(--radius-lg)] overflow-hidden bg-surface-2 mb-5 shadow-sm">
+        <aside class="profile-sidebar">
+          <div class="profile-photo-card bento-tile">
             <Image
               src={maraImg}
               alt="Mara Nießalla – Logopädin in der Praxis für Logopädie Şimşek Duisburg"
-              class="w-full object-cover object-top"
+              class="profile-photo"
               widths={[380, 520, 640]}
-              sizes="(max-width: 860px) 100vw, 380px"
+              sizes="(max-width: 860px) 100vw, 320px"
               loading="eager"
               decoding="async"
             />
           </div>
 
           <!-- Quick facts -->
-          <div class="bg-surface border border-border rounded-[var(--radius-md)] p-5 mb-4">
-            <h2 class="font-semibold text-sm text-text mb-4 tracking-[.04em] uppercase text-text-muted">Kurzprofil</h2>
-            <ul class="space-y-3.5">
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+          <div class="profile-card bento-tile bento-tile--soft">
+            <div class="profile-card-head">
+              <span>Kurzprofil</span>
+              <strong>Mara Nießalla</strong>
+            </div>
+            <ul class="profile-facts">
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Qualifikation</div>
-                  <div class="text-sm font-semibold text-text">Staatlich geprüfte Logopädin</div>
+                  <div class="profile-fact-label">Qualifikation</div>
+                  <div class="profile-fact-value">Staatlich geprüfte Logopädin</div>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Schwerpunkt</div>
-                  <div class="text-sm font-semibold text-text">Kinder &amp; Jugendliche</div>
+                  <div class="profile-fact-label">Schwerpunkt</div>
+                  <div class="profile-fact-value">Erwachsene</div>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <span class="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+              <li>
+                <span class="profile-fact-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </span>
+                <div>
+                  <div class="profile-fact-label">Hausbesuche</div>
+                  <div class="profile-fact-value">Bei Bedarf möglich</div>
+                </div>
+              </li>
+              <li>
+                <span class="profile-fact-icon">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 </span>
                 <div>
-                  <div class="text-[.7rem] text-text-muted font-medium uppercase tracking-wide">Standort</div>
-                  <div class="text-sm font-semibold text-text">Duisburg-Mitte</div>
+                  <div class="profile-fact-label">Standort</div>
+                  <div class="profile-fact-value">Duisburg-Mitte</div>
                 </div>
               </li>
             </ul>
           </div>
 
-          <a href="/kontakt/" class="btn btn-primary w-full justify-center">Termin anfragen</a>
+          <a href="/kontakt/" class="btn btn-primary w-full justify-center mt-1">Termin anfragen</a>
         </aside>
 
         <!-- Bio content -->
-        <article class="prose-section bento-tile bento-tile--highlight">
+        <article class="profile-content prose-section bento-tile bento-tile--highlight">
 
           <h2>Über Mara Nießalla</h2>
           <p>
             Mara Nießalla ergänzt das Team als <strong>staatlich geprüfte Logopädin</strong>.
-            Ihr Schwerpunkt liegt in der Therapie von Kindern und Jugendlichen, insbesondere
-            bei Fragen rund um Sprachentwicklung, Artikulation und alltagsnahe Übungsstrategien.
+            Sie arbeitet überwiegend mit erwachsenen Patientinnen und Patienten und bietet
+            bei Bedarf auch Hausbesuche an.
           </p>
           <p>
-            Sie begleitet Familien vom Erstgespräch bis zum Therapieabschluss mit klarer
-            Diagnostik, nachvollziehbarer Beratung und Übungen, die sich gut in den Alltag
-            übertragen lassen.
+            Gleichzeitig behandelt sie auch Kinder und Jugendliche, wenn eine logopädische
+            Begleitung sinnvoll ist. Vom Erstgespräch bis zum Therapieabschluss achtet sie
+            auf klare Diagnostik, nachvollziehbare Beratung und Übungen, die sich gut in den
+            Alltag übertragen lassen.
           </p>
 
           <h2>Schwerpunkte</h2>
@@ -199,15 +213,15 @@ const schwerpunkte = [
 
           <h2>Therapieansatz</h2>
           <p>
-            Im Mittelpunkt jeder Therapiestunde steht das Kind mit seinen individuellen
-            Stärken und Bedürfnissen. Mara Nießalla legt besonderen Wert auf
-            <strong>alltagsnahe Übungsstrategien</strong>, die Eltern und Bezugspersonen
-            einfach in den Alltag einbauen können — weil Therapie auch zu Hause stattfindet.
+            Im Mittelpunkt jeder Therapiestunde stehen die individuellen Ziele und
+            Möglichkeiten der Patientin oder des Patienten. Mara Nießalla legt besonderen
+            Wert auf <strong>alltagsnahe Übungsstrategien</strong>, die sich zu Hause,
+            im Beruf oder im Familienalltag fortführen lassen.
           </p>
           <p>
             Klare Befundkommunikation und transparente Therapieplanung ermöglichen es
-            Familien, aktiv am Therapieprozess teilzunehmen und den Fortschritt
-            zu begleiten.
+            Patientinnen, Patienten und Angehörigen, den Therapieprozess gut zu verstehen
+            und Fortschritte aktiv zu begleiten.
           </p>
 
           <div class="mt-8">
@@ -234,21 +248,113 @@ const schwerpunkte = [
 
 <style>
   .profile-grid {
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 3rem;
     align-items: start;
   }
   .profile-sidebar {
+    grid-column: span 4;
     position: sticky;
     top: calc(var(--header-h) + var(--nav-h) + 1.5rem);
+    display: grid;
+    gap: 0.875rem;
+    min-width: 0;
+  }
+  .profile-sidebar > .bento-tile {
+    grid-column: 1 / -1;
+  }
+  .profile-content.bento-tile {
+    grid-column: span 8;
+  }
+  .profile-photo-card {
+    overflow: hidden;
+    padding: 0;
+    background: var(--color-surface-2);
+  }
+  .profile-photo {
+    display: block;
+    width: 100%;
+    height: clamp(15rem, 26vw, 18.5rem);
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  .profile-card {
+    background:
+      linear-gradient(180deg, rgba(230, 244, 241, 0.58), rgba(255, 255, 255, 0.94)),
+      var(--color-surface);
+    padding: 1.15rem;
+  }
+  .profile-card-head {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .profile-card-head span {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+  .profile-card-head strong {
+    display: block;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+  .profile-facts {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .profile-facts li {
+    display: grid;
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: center;
+    min-width: 0;
+    padding-left: 0;
+  }
+  .profile-facts li::before {
+    content: none;
+    display: none;
+  }
+  .profile-fact-icon {
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 8px;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-fact-label {
+    color: var(--color-text-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .profile-fact-value {
+    color: var(--color-text);
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.35;
   }
   @media (max-width: 860px) {
-    .profile-grid {
-      grid-template-columns: 1fr;
-    }
     .profile-sidebar {
+      grid-column: span 12;
       position: static;
+    }
+    .profile-content.bento-tile {
+      grid-column: span 12;
+    }
+    .profile-photo {
+      height: clamp(16rem, 72vw, 21rem);
     }
   }
 
