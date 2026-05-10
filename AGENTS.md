@@ -40,3 +40,8 @@ Neue Keys immer in **beiden** Dateien ergänzen.
 - **Domain:** logopaedie-simsek.de
 - **Adapter:** Vercel (`@astrojs/vercel`)
 - Config-Datei: `vercel.json`
+
+## Aktions-Tracking
+Nach jeder Dateiänderung diese Zeile in ~/Development/personal-assistant/orchestration/current-state.md anhängen:
+`[HH:MM] <projektname> | <EDIT|BASH> <datei-oder-befehl>`
+Max. 15 Zeilen behalten (älteste löschen). So kann die nächste KI nahtlos übernehmen.
