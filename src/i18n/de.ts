@@ -42,6 +42,180 @@ export const de = {
     privacy: "Datenschutz",
     accessibility: "Barrierefreiheit",
   },
+  breadcrumb: {
+    aria: "Breadcrumb",
+    home: "Startseite",
+  },
+  service_page: {
+    services: "Therapie",
+    appointment: "Termin anfragen",
+    cta_heading: "Bereit für den ersten Schritt?",
+    cta_text:
+      "Vereinbaren Sie jetzt Ihr Erstgespräch in unserer Praxis in Duisburg – auf Deutsch oder Türkisch.",
+    cta_button: "Termin anfragen",
+    more_info: "Mehr erfahren",
+    related_heading: "Weitere Therapiebereiche",
+  },
+  therapy_overview: {
+    title: "Therapieangebot | Praxis für Logopädie Şimşek Duisburg",
+    description:
+      "Therapiebereiche der Praxis für Logopädie Şimşek in Duisburg: Sprachstörungen, Sprechstörungen, Stimmtherapie und Dysphagie – für Kinder und Erwachsene.",
+    section_label: "Unsere Therapiebereiche",
+    heading: "Logopädie in Duisburg",
+    intro:
+      "In unserer Praxis in Duisburg bieten wir Therapie in den Bereichen Sprache, Sprechen, Stimme und Schlucken für Kinder, Erwachsene und Senioren an – auf Deutsch und Türkisch.",
+    image_alt:
+      "Praxis für Logopädie Şimşek Duisburg: Sprach- und Sprechtherapie für Kinder, Erwachsene und Senioren",
+    usp_aria: "Unser besonderes Angebot",
+    usp_heading: "Zweisprachige Therapie auf Deutsch und Türkisch",
+    usp_text:
+      "Ein seltenes Angebot im Ruhrgebiet – besonders wertvoll für zweisprachig aufwachsende Kinder und türkischsprachige Erwachsene.",
+    back_home: "Zurück zur Startseite",
+  },
+  bento_gallery: {
+    aria_label: "Einblicke in die Praxis",
+    cards: {
+      early: { label: "Frühförderung", sub: "0–6 Jahre" },
+      voice: { label: "Stimmtherapie", sub: "Dysphonie & Heiserkeit" },
+      home_visit: { label: "Hausbesuche", sub: "Mobile Therapie" },
+      adults: {
+        label: "Erwachsene & Senioren",
+        sub: "Für alle Altersgruppen",
+      },
+    },
+  },
+  contact_page: {
+    title: "Kontakt & Anfahrt – Praxis für Logopädie Şimşek Duisburg",
+    description:
+      "Kontakt zur Praxis für Logopädie Şimşek in Duisburg. Telefon, E-Mail, Adresse, Öffnungszeiten und Anfahrt. Termine werden telefonisch vereinbart.",
+    hero_heading: "Kontakt & Anfahrt",
+    hero_subtitle: "Tonhallenstraße 21, 47051 Duisburg · 3. OG · Aufzug vorhanden",
+    phone_text:
+      "Für die Terminvereinbarung erreichen Sie uns während der Telefonzeiten.",
+    fax_label: "Fax",
+    address_maps_aria: "Adresse in Google Maps öffnen",
+    map_heading: "Anfahrt & Karte",
+    map_description:
+      "Nur <strong class=\"text-text\">2 Gehminuten vom Duisburger Hauptbahnhof</strong> entfernt.<br>U79 · König-Heinrich-Platz · S-Bahn / RE / RB Duisburg Hbf",
+    map_placeholder:
+      "Die Google Maps-Karte wird erst nach Ihrer Zustimmung geladen. Dabei können Daten an Google übertragen werden.",
+    map_load_button: "Karte laden",
+    map_iframe_title: "Google Maps: Praxis für Logopädie Şimşek",
+  },
+  team_page: {
+    title: "Unser Team – Praxis für Logopädie Şimşek Duisburg",
+    description:
+      "Lernen Sie Emel Şimşek-Uçar und Mara Nießalla kennen – das Team der Praxis für Logopädie Şimşek Duisburg. Logopädie auf Deutsch und Türkisch, über 10 Jahre Erfahrung.",
+    sr_heading: "Unser Team – Praxis für Logopädie Şimşek Duisburg",
+    emel_alt: "Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg",
+    mara_alt: "Mara Nießalla – Logopädin bei Praxis für Logopädie Şimşek Duisburg",
+    owner_badge: "Praxisinhaberin",
+    therapist_badge: "Logopädin",
+    experience_chip: "10+ Jahre Erfahrung",
+    patients_chip: "Kinder & Erwachsene",
+    mara_chips: ["Erwachsene", "Hausbesuche bei Bedarf", "Auch Kinder und Jugendliche"],
+    title_label: "Unser Team",
+    title_line: "Logopädie ist Vertrauenssache.",
+    title_emphasis: "Vertrauenssache.",
+    title_description:
+      "Lernen Sie die Menschen kennen, die täglich an besserer Kommunikation arbeiten.",
+    stats_experience: "Jahre klinische Erfahrung",
+    stats_languages: "Sprachen auf muttersprachlichem Niveau",
+    language_note:
+      "Diagnostik, Beratung und Therapie in beiden Sprachen – Mehrsprachigkeit ist keine Hürde, sondern eine Ressource.",
+    quote: "Mehrsprachigkeit ist keine Hürde – sie ist eine Ressource.",
+    career_label: "Karriere",
+    career_heading: "Wir suchen Verstärkung",
+    career_text: "Für unser Team in Duisburg suchen wir erfahrene Logopädinnen.",
+    job_link: "Stellenanzeige",
+    cta_question: "Haben Sie Fragen zu Therapieangebot oder Terminvereinbarung?",
+  },
+  career_page: {
+    schema: {
+      title: "Logopäde/in (w/m/d)",
+      description:
+        "Wir suchen Verstärkung im Bereich Logopädie (w/m/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, faire Vergütung, zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche nach Absprache möglich.",
+      work_hours: "20-40 Stunden pro Woche",
+      industry: "Gesundheitswesen",
+      job_benefits:
+        "4-Tage-Woche nach Absprache möglich, Fortbildungsunterstützung, faire Vergütung, Deutsch-Türkisch zweisprachiges Team, zentrale Lage am Duisburger Hauptbahnhof",
+      qualifications:
+        "Staatlich anerkannte Logopädin / staatlich anerkannter Logopäde (w/m/d). Berufseinsteigerinnen und Berufseinsteiger willkommen.",
+      skills:
+        "Deutsch-Türkisch mehrsprachige Diagnostik, Frühförderung, Kindersprachtherapie, Aphasie, Dysarthrie, Stimmtherapie, Dysphagie, Hausbesuche bei Bedarf",
+      responsibilities:
+        "Diagnostik und Therapie für Kinder, Jugendliche und Erwachsene. Zweisprachiges Arbeiten auf Deutsch und Türkisch sowie Hausbesuche bei Bedarf möglich.",
+      employer_overview:
+        "Praxis für Logopädie Şimşek ist eine spezialisierte Praxis in Duisburg mit zweisprachigem Team. Schwerpunkte: mehrsprachige Diagnostik, Frühförderung, Kindersprachtherapie, Erwachsenentherapie und Hausbesuche bei Bedarf. Zentrale Lage am Duisburger Hauptbahnhof.",
+    },
+    title: "Logopäde/in Duisburg | Karriere bei Praxis für Logopädie Şimşek",
+    description:
+      "Praxis für Logopädie Şimşek Duisburg sucht engagierte Logopädinnen und Logopäden. Faire Vergütung, kollegiales Team, zweisprachige Praxis. Jetzt bewerben!",
+    sr_heading:
+      "Logopädie (w/m/d) gesucht – Praxis für Logopädie Şimşek Duisburg",
+    tags: {
+      location: "Duisburg",
+      time: "Voll / Teilzeit",
+      week: "4-Tage-Woche nach Absprache",
+      current: "Aktuelle Stelle",
+    },
+    hero_title: "Karriere startet im #TeamSimsek",
+    hero_subtitle:
+      "Für unser Team in Duisburg-Mitte suchen wir Logopädinnen und Logopäden (w/m/d).",
+    apply_now: "Jetzt bewerben",
+    stats_experience_label: "Erfahrung",
+    stats_experience_desc: "Jahre Praxiserfahrung in Duisburg",
+    languages_label: "Sprachen",
+    therapy_areas_label: "Therapiebereiche",
+    therapy_areas_desc: "Kinder, Erwachsene und Hausbesuche",
+    expectations_label: "Das bringen Sie mit",
+    profile_heading: "Ihr Profil",
+    requirements: [
+      "Staatlich anerkannter Abschluss in Logopädie",
+      "Selbstständige und flexible Arbeitsweise",
+      "Empathischer Umgang mit Patientinnen und Patienten",
+      "Interesse an Kinder-, Erwachsenen- und/oder mehrsprachiger Therapie",
+    ],
+    welcome: "Berufseinsteigerinnen und Berufseinsteiger sind willkommen!",
+    about_label: "Über uns",
+    about_text:
+      "Etablierte Logopädiepraxis in Duisburg-Mitte mit über zehn Jahren Erfahrung. Eine Praxis in der Region mit zweisprachigem Angebot auf Deutsch und Türkisch.",
+    mini_tags: ["Frühförderung", "Erwachsene", "DE/TR", "Hausbesuche"],
+    offers_label: "Was wir bieten",
+    benefits_heading: "Ihre Vorteile",
+    benefits: [
+      { title: "Faire Vergütung", desc: "Transparente Vergütung klären wir im persönlichen Gespräch" },
+      { title: "Strukturierte Einarbeitung", desc: "Wir begleiten Sie von Anfang an" },
+      { title: "Kollegiales Team", desc: "Offene Kommunikation und gegenseitige Unterstützung" },
+      { title: "Moderne Therapieräume", desc: "Gut ausgestattete Räume in zentraler Lage" },
+      { title: "Fortbildungsunterstützung", desc: "Wir unterstützen Ihre fachliche Entwicklung" },
+      { title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit – 4-Tage-Woche nach Absprache möglich" },
+      { title: "Zentrale Lage", desc: "Gut erreichbar am Duisburger Hauptbahnhof" },
+    ],
+    portal_label: "Karriereportal",
+    portal_heading: "Mehr Informationen zur Stelle",
+    portal_text:
+      "Gehaltsrechner, Bewerbungstipps und direkte Kontaktaufnahme – alles im Karriereportal LogopädieJobs.de.",
+    portal_button: "Zu LogopädieJobs.de",
+    portal_features: [
+      "Gehaltsrechner",
+      "Ratgeber & FAQ",
+      "Direkter Kontakt",
+      "Infos zur 4-Tage-Woche",
+    ],
+    application_label: "Bewerbung",
+    application_heading_line1: "Jetzt",
+    application_heading_line2: "starten",
+    application_sub: "E-Mail oder Telefon – ein Lebenslauf reicht für den Start.",
+    send_application: "Bewerbung senden",
+    contact_role: "Praxisinhaberin · Ansprechpartnerin für Bewerbungen",
+    internship_heading: "Praktikumsplätze",
+    internship_text:
+      "Aktuell können wir keine Praktikumsplätze für Studierende aus dem Ausland anbieten. Für inländische Anfragen können Sie uns direkt kontaktieren.",
+    mail_subject: "Bewerbung – Logopädie (w/m/d)",
+    mail_body:
+      "Sehr geehrte Frau Şimşek-Uçar,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle im Bereich Logopädie (w/m/d) in Ihrer Praxis.\n\nMit freundlichen Grüßen\n",
+  },
   hero: {
     badge: "Logopädie in Duisburg",
     heading_line1: "Sprechen.",

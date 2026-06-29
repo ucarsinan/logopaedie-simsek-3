@@ -5,42 +5,29 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
 import therapyOverviewImg from '../../assets/therapy/therapy-overview-all-ages-logopaedie.png';
+import { useTranslations } from '../../i18n/index';
 
-const services = [
-  {
-    title: 'Dil Bozuklukları',
-    description: 'Dil gelişim gecikmeleri, inme sonrası afazi, erken müdahale – çocuklar ve yetişkinler için.',
-    tags: ['Dil Gelişimi', 'Afazi', 'Erken Müdahale'],
-    href: '/terapi/dil-bozuklugu/',
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10"/><path d="M7 12h6"/><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
-  },
-  {
-    title: 'Konuşma Bozuklukları',
-    description: 'Kekemelik, hızlı konuşma, artikülasyon bozuklukları ve dizartri gibi motor kaynaklı konuşma bozuklukları.',
-    tags: ['Kekemelik', 'Artikülasyon', 'Dizartri'],
-    href: '/terapi/konusma-bozuklugu/',
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18v3"/><path d="M8 21h8"/><path d="M7 9a5 5 0 0 1 10 0v2a5 5 0 0 1-10 0z"/><path d="M4 10v1a8 8 0 0 0 16 0v-1"/><path d="M10 8h4"/></svg>`,
-  },
-  {
-    title: 'Ses Terapisi',
-    description: 'Fonksiyonel ve organik ses bozuklukları – kısıklık, disfoni, ameliyat sonrası veya meslek sesi kullananlar için.',
-    tags: ['Disfoni', 'Kısıklık', 'Ses Eğitimi'],
-    href: '/terapi/ses-terapisi/',
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h2l2-5 4 10 3-8 2 3h5"/><path d="M4 18c3-2 6-2 9 0 2 1.3 4 1.3 7 0"/></svg>`,
-  },
-  {
-    title: 'Yutma Bozuklukları (Disfaji)',
-    description: 'Yetişkinlerde ve çocuklarda disfajinin tanı ve tedavisi – inme, Parkinson veya diğer nörolojik hastalıklarda.',
-    tags: ['Disfaji', 'Yutma', 'Nöroloji'],
-    href: '/terapi/yutma-bozuklugu/',
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c4 2 6 5 6 9a6 6 0 0 1-6 6"/><path d="M16 3c-2 2-3 5-3 8 0 5 3 8 7 10"/><path d="M6 21h5"/><path d="M7 14c1.5.8 3 .8 4 0"/></svg>`,
-  },
+const t = useTranslations('tr');
+const page = t.therapy_overview;
+const serviceIcons = [
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10"/><path d="M7 12h6"/><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18v3"/><path d="M8 21h8"/><path d="M7 9a5 5 0 0 1 10 0v2a5 5 0 0 1-10 0z"/><path d="M4 10v1a8 8 0 0 0 16 0v-1"/><path d="M10 8h4"/></svg>`,
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h2l2-5 4 10 3-8 2 3h5"/><path d="M4 18c3-2 6-2 9 0 2 1.3 4 1.3 7 0"/></svg>`,
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c4 2 6 5 6 9a6 6 0 0 1-6 6"/><path d="M16 3c-2 2-3 5-3 8 0 5 3 8 7 10"/><path d="M6 21h5"/><path d="M7 14c1.5.8 3 .8 4 0"/></svg>`,
 ];
+
+const services = t.services.items.map((service, index) => ({
+  title: service.title,
+  description: service.text,
+  tags: service.tags,
+  href: service.href,
+  icon: serviceIcons[index] ?? "",
+}));
 ---
 
 <Layout
-  title="Hizmetler | Praxis für Logopädie Şimşek Duisburg"
-  description="Duisburg'daki Praxis für Logopädie Şimşek'in terapi alanları: dil bozuklukları, konuşma bozuklukları, ses terapisi ve disfaji – çocuklar ve yetişkinler için."
+  title={page.title}
+  description={page.description}
   lang="tr"
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/' },
@@ -52,12 +39,12 @@ const services = [
   <Nav lang="tr" alternateUrl="/therapie/" />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
     <!-- Breadcrumb -->
-    <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
+    <nav class="bg-bg-alt border-b border-border" aria-label={t.breadcrumb.aria}>
       <div class="container py-3 max-[640px]:py-2.5">
         <ol class="flex items-center gap-2 text-sm text-text-muted" role="list">
-          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">{t.breadcrumb.home}</a></li>
           <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
-          <li class="text-text font-medium" aria-current="page">Hizmetler</li>
+          <li class="text-text font-medium" aria-current="page">{t.footer.links.services.label}</li>
         </ol>
       </div>
     </nav>
@@ -65,12 +52,9 @@ const services = [
     <!-- Hero -->
     <section class="bg-bg-alt pt-12 max-[640px]:pt-9 pb-9 max-[640px]:pb-7 border-b border-border">
       <div class="container">
-        <span class="text-xs font-semibold tracking-widest uppercase text-primary">Terapi Alanlarımız</span>
-        <h1 class="font-display text-[clamp(1.85rem,5vw,3rem)] max-[640px]:text-[clamp(1.55rem,8vw,2.1rem)] font-semibold leading-[1.1] text-text mt-3 mb-4">Dil ve Konuşma Terapisi - Duisburg</h1>
-        <p class="text-[1.0625rem] max-[640px]:text-[0.97rem] text-text-muted leading-[1.7] max-[640px]:leading-[1.65] max-w-2xl">
-          Duisburg'daki muayenehanemizde çocuklar, yetişkinler ve yaşlılar için dil, konuşma,
-          ses ve yutma alanlarında terapi sunuyoruz. Almanca ve Türkçe olarak.
-        </p>
+        <span class="text-xs font-semibold tracking-widest uppercase text-primary">{page.section_label}</span>
+        <h1 class="font-display text-[clamp(1.85rem,5vw,3rem)] max-[640px]:text-[clamp(1.55rem,8vw,2.1rem)] font-semibold leading-[1.1] text-text mt-3 mb-4">{page.heading}</h1>
+        <p class="text-[1.0625rem] max-[640px]:text-[0.97rem] text-text-muted leading-[1.7] max-[640px]:leading-[1.65] max-w-2xl">{page.intro}</p>
       </div>
     </section>
 
@@ -80,7 +64,7 @@ const services = [
         <div class="mb-7 max-[640px]:mb-5 w-full overflow-hidden rounded-md border border-border bg-surface shadow-sm h-72 max-[640px]:h-48">
           <Image
             src={therapyOverviewImg}
-            alt="Praxis für Logopädie Şimşek Duisburg'da çocuklar, yetişkinler ve yaşlılar için dil ve konuşma terapisi"
+            alt={page.image_alt}
             class="h-full w-full object-cover object-center opacity-95"
             widths={[900, 1400, 1819]}
             sizes="(max-width: 640px) 100vw, 72rem"
@@ -114,14 +98,11 @@ const services = [
     </section>
 
     <!-- USP Strip -->
-    <section class="py-12 max-[640px]:py-10 bg-primary" aria-label="Fark Yaratan Özelliğimiz">
+    <section class="py-12 max-[640px]:py-10 bg-primary" aria-label={page.usp_aria}>
       <div class="container text-center flex flex-col items-center gap-5">
-        <h2 class="font-display text-[clamp(1.4rem,3vw,2rem)] max-[640px]:text-[clamp(1.3rem,7vw,1.75rem)] font-semibold text-white">Almanca ve Türkçe İki Dilli Terapi</h2>
-        <p class="text-white/80 text-[1.0625rem] max-[640px]:text-[0.97rem] leading-[1.7] max-w-xl">
-          Ruhr Bölgesi'nde nadir bulunan bir hizmet – özellikle iki dilli büyüyen çocuklar
-          ve Türkçe konuşan yetişkinler için büyük değer taşıyor.
-        </p>
-        <a href="/iletisim/" class="btn btn-outline-white max-[640px]:max-w-[20rem]">Randevu Talebi</a>
+        <h2 class="font-display text-[clamp(1.4rem,3vw,2rem)] max-[640px]:text-[clamp(1.3rem,7vw,1.75rem)] font-semibold text-white">{page.usp_heading}</h2>
+        <p class="text-white/80 text-[1.0625rem] max-[640px]:text-[0.97rem] leading-[1.7] max-w-xl">{page.usp_text}</p>
+        <a href="/iletisim/" class="btn btn-outline-white max-[640px]:max-w-[20rem]">{t.service_page.cta_button}</a>
       </div>
     </section>
 
@@ -131,7 +112,7 @@ const services = [
         <div class="bento-tile bento-tile--full bento-tile--soft">
           <a href="/anasayfa/" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-            Ana Sayfaya Dön
+            {page.back_home}
           </a>
         </div>
       </div>

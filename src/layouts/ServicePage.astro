@@ -3,6 +3,7 @@ import Layout from './Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/index';
 
 interface HreflangAlternate {
   lang: string;
@@ -42,18 +43,17 @@ const {
 } = Astro.props;
 
 const isTR = lang === 'tr';
+const translations = useTranslations(lang);
 const t = {
-  home: isTR ? 'Ana Sayfa' : 'Startseite',
-  services: isTR ? 'Terapi Alanları' : 'Therapie',
+  home: translations.breadcrumb.home,
+  services: translations.service_page.services,
   servicesHref: isTR ? '/terapi/' : '/therapie/',
-  appointment: isTR ? 'Randevu Talebi' : 'Termin anfragen',
-  ctaHeading: isTR ? 'İlk adıma hazır mısınız?' : 'Bereit für den ersten Schritt?',
-  ctaText: isTR
-    ? 'Duisburg\'daki muayenehanemizde Almanca veya Türkçe ilk görüşmenizi şimdi ayarlayın.'
-    : 'Vereinbaren Sie jetzt Ihr Erstgespräch in unserer Praxis in Duisburg – auf Deutsch oder Türkisch.',
-  ctaButton: isTR ? 'Randevu Talebi' : 'Termin anfragen',
-  moreInfo: isTR ? 'Daha fazla bilgi' : 'Mehr erfahren',
-  relatedHeading: isTR ? 'Diğer Terapi Alanları' : 'Weitere Therapiebereiche',
+  appointment: translations.service_page.appointment,
+  ctaHeading: translations.service_page.cta_heading,
+  ctaText: translations.service_page.cta_text,
+  ctaButton: translations.service_page.cta_button,
+  moreInfo: translations.service_page.more_info,
+  relatedHeading: translations.service_page.related_heading,
   kontaktHref: isTR ? '/iletisim/' : '/kontakt/',
 };
 ---
@@ -63,7 +63,7 @@ const t = {
   <Nav lang={lang} {...(alternateUrl !== undefined && { alternateUrl })} />
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
     <!-- Breadcrumb -->
-    <nav class="bg-bg-alt border-b border-border" aria-label={isTR ? 'İçerik Yolu' : 'Breadcrumb'}>
+    <nav class="bg-bg-alt border-b border-border" aria-label={translations.breadcrumb.aria}>
       <div class="container py-3 max-[640px]:py-2.5">
         <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
           <li><a href={isTR ? '/anasayfa/' : '/'} class="hover:text-primary transition-colors">{t.home}</a></li>
@@ -105,7 +105,7 @@ const t = {
     </div>
 
     <!-- CTA Banner -->
-    <section class="bg-primary py-12 max-[640px]:py-10" aria-label={isTR ? 'Randevu Talebi' : 'Termin anfragen'}>
+    <section class="bg-primary py-12 max-[640px]:py-10" aria-label={t.ctaButton}>
       <div class="container text-center flex flex-col items-center gap-5">
         <h2 class="font-display text-[clamp(1.4rem,3vw,2.25rem)] max-[640px]:text-[clamp(1.3rem,7vw,1.8rem)] font-semibold text-white leading-[1.2]">{t.ctaHeading}</h2>
         <p class="text-white/80 text-lg max-[640px]:text-[0.97rem] max-w-xl">{t.ctaText}</p>

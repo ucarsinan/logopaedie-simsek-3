@@ -4,6 +4,7 @@ import babyImg from '../../assets/therapy/fruehfoerderung-logopaedie-kind-duisbu
 import stimmImg from '../../assets/therapy/stimmtherapie-bildkarten-duisburg.webp';
 import hausImg from '../../assets/therapy/hausbesuche-logopaedie-duisburg.webp';
 import seniImg from '../../assets/therapy/logopaedie-erwachsene-bildkarten-duisburg.webp';
+import { useTranslations } from '../../i18n/index';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -12,6 +13,7 @@ interface Props {
 const { lang = 'de' } = Astro.props;
 
 const isTR = lang === 'tr';
+const t = useTranslations(lang).bento_gallery;
 
 type BentoCard = {
   img: typeof babyImg;
@@ -24,22 +26,22 @@ type BentoCards = [BentoCard, BentoCard, BentoCard, BentoCard];
 
 const cards: BentoCards = isTR
   ? [
-      { img: babyImg, label: 'Erken Müdahale', sub: '0–6 Yaş', href: '/terapi/' },
-      { img: stimmImg, label: 'Ses Terapisi', sub: 'Disfoni & Kısıklık', href: '/terapi/ses-terapisi/' },
-      { img: hausImg, label: 'Ev Ziyaretleri', sub: 'Mobil Terapi', href: '/hausbesuche-duisburg/' },
-      { img: seniImg, label: 'Yetişkin Terapisi', sub: 'Her Yaş İçin', href: '/terapi/' },
+      { img: babyImg, label: t.cards.early.label, sub: t.cards.early.sub, href: '/terapi/' },
+      { img: stimmImg, label: t.cards.voice.label, sub: t.cards.voice.sub, href: '/terapi/ses-terapisi/' },
+      { img: hausImg, label: t.cards.home_visit.label, sub: t.cards.home_visit.sub, href: '/hausbesuche-duisburg/' },
+      { img: seniImg, label: t.cards.adults.label, sub: t.cards.adults.sub, href: '/terapi/' },
     ]
   : [
-      { img: babyImg, label: 'Frühförderung', sub: '0–6 Jahre', href: '/fruehfoerderung-duisburg/' },
-      { img: stimmImg, label: 'Stimmtherapie', sub: 'Dysphonie & Heiserkeit', href: '/therapie/stimmtherapie/' },
-      { img: hausImg, label: 'Hausbesuche', sub: 'Mobile Therapie', href: '/hausbesuche-duisburg/' },
-      { img: seniImg, label: 'Erwachsene & Senioren', sub: 'Für alle Altersgruppen', href: '/therapie/erwachsene/' },
+      { img: babyImg, label: t.cards.early.label, sub: t.cards.early.sub, href: '/fruehfoerderung-duisburg/' },
+      { img: stimmImg, label: t.cards.voice.label, sub: t.cards.voice.sub, href: '/therapie/stimmtherapie/' },
+      { img: hausImg, label: t.cards.home_visit.label, sub: t.cards.home_visit.sub, href: '/hausbesuche-duisburg/' },
+      { img: seniImg, label: t.cards.adults.label, sub: t.cards.adults.sub, href: '/therapie/erwachsene/' },
     ];
 
 const [primaryCard, voiceCard, homeVisitCard, adultCard] = cards;
 ---
 
-<section class="py-5 bg-bg-alt" aria-label={isTR ? 'Praxisten Görüntüler' : 'Einblicke in die Praxis'}>
+<section class="py-5 bg-bg-alt" aria-label={t.aria_label}>
   <div class="container">
     <div class="bento-grid">
 

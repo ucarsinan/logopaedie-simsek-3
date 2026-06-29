@@ -3,15 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/index';
 
 const siteUrl = 'https://logopaedie-simsek.de';
+const t = useTranslations('tr');
+const page = t.career_page;
+const applyHref = `mailto:info@logopaedie-simsek.de?subject=${encodeURIComponent(page.mail_subject)}&body=${encodeURIComponent(page.mail_body)}`;
+const benefitIcons = ["💰", "🤝", "💬", "🏢", "📚", "⏰", "🚇"];
+const portalFeatureIcons = ["🧮", "📖", "📞", "📅"];
 
 const jobSchema = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
-  "title": "Dil ve Konuşma Terapisti (e/k/d)",
-  "description": "Duisburg'daki muayenehanemiz için dil ve konuşma terapisi alanında destek arıyoruz (e/k/d). Tam veya yarı zamanlı, ortalamanın üzerinde maaş, iki dilli ekip (Almanca-Türkçe). 4 günlük hafta mümkün.",
-  "datePosted": new Date().toISOString().split('T')[0],
+  "title": page.schema.title,
+  "description": page.schema.description,
+  "datePosted": "2026-04-23",
   "validThrough": "2026-12-31",
   "directApply": true,
   "hiringOrganization": {
@@ -32,39 +38,34 @@ const jobSchema = {
     }
   },
   "employmentType": ["FULL_TIME", "PART_TIME"],
-  "workHours": "Haftada 20–40 saat",
-  "industry": "Sağlık Hizmetleri",
+  "workHours": page.schema.work_hours,
+  "industry": page.schema.industry,
   "occupationalCategory": "29-1127.00",
-  "jobBenefits": "4 günlük hafta mümkün, %100 eğitim masrafları karşılanır, ortalamanın üzerinde maaş, Almanca-Türkçe iki dilli ekip, Duisburg Ana Tren Garı yakınında merkezi konum",
-  "qualifications": "Devlet onaylı dil ve konuşma terapisti (e/k/d). Yeni mezunlar başvurabilir.",
-  "skills": "Pediatri, Nöroloji, Kekemelik terapisi, Afazi, Dizartri, Disfaji, Okuma-yazma güçlüğü, DGG, İki dilli terapi Almanca-Türkçe",
-  "responsibilities": "Pediatri, nöroloji ve kekemelik/hızlı konuşma alanlarında dil ve konuşma terapisi tanı ve uygulaması. Almanca ve Türkçe iki dilli çalışma imkânı.",
-  "employerOverview": "Praxis für Logopädie Şimşek, iki dilli ekibiyle Duisburg'da uzmanlaşmış bir dil terapisi muayenehanesidir. Odak alanları: Pediatri, Nöroloji, Kekemelik/Hızlı Konuşma. Duisburg Ana Tren Garı yakınında merkezi konum."
+  "jobBenefits": page.schema.job_benefits,
+  "qualifications": page.schema.qualifications,
+  "skills": page.schema.skills,
+  "responsibilities": page.schema.responsibilities,
+  "employerOverview": page.schema.employer_overview
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": `${siteUrl}/anasayfa/` },
-    { "@type": "ListItem", "position": 2, "name": "Kariyer", "item": `${siteUrl}/kariyer/` }
+    { "@type": "ListItem", "position": 1, "name": t.breadcrumb.home, "item": `${siteUrl}/anasayfa/` },
+    { "@type": "ListItem", "position": 2, "name": t.nav.karriere, "item": `${siteUrl}/kariyer/` }
   ]
 };
 
-const benefits = [
-  { icon: "💰", title: "Ortalamanın Üzerinde Maaş", desc: "Adil ve şeffaf ücretlendirme" },
-  { icon: "🤝", title: "Yapılandırılmış İşe Başlangıç", desc: "Başından itibaren yanınızdayız" },
-  { icon: "💬", title: "Samimi Ekip", desc: "Açık iletişim, karşılıklı destek" },
-  { icon: "🏢", title: "Modern Terapi Odaları", desc: "Merkezi konumda, iyi donanımlı odalar" },
-  { icon: "📚", title: "Eğitim Desteği", desc: "Mesleki gelişiminizi destekliyoruz" },
-  { icon: "⏰", title: "Esnek Çalışma Saatleri", desc: "Tam veya yarı zamanlı – 4 günlük hafta da mümkün" },
-  { icon: "🚇", title: "Merkezi Konum", desc: "Duisburg Ana Tren Garı'na yürüyerek, toplu taşımayla kolay erişim" },
-];
+const benefits = page.benefits.map((benefit, index) => ({
+  icon: benefitIcons[index] ?? "",
+  ...benefit,
+}));
 ---
 
 <Layout
-  title="Logoped İş İlanı Duisburg | Praxis Şimşek – Hemen Başvur"
-  description="Duisburg'da logoped/konuşma terapisti arıyoruz. 4 günlük hafta mümkün, ortalamanın üzerinde maaş, Almanca-Türkçe iki dilli ekip. Praxis Şimşek – hemen başvurun!"
+  title={page.title}
+  description={page.description}
   lang="tr"
   additionalSchemas={[jobSchema, breadcrumbSchema]}
   hreflangAlternates={[
@@ -78,35 +79,33 @@ const benefits = [
   <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
 
     <!-- Breadcrumb -->
-    <nav class="bg-bg-alt border-b border-border" aria-label="İçerik Yolu">
+    <nav class="bg-bg-alt border-b border-border" aria-label={t.breadcrumb.aria}>
       <div class="container py-3">
         <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
-          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li><a href="/anasayfa/" class="hover:text-primary transition-colors">{t.breadcrumb.home}</a></li>
           <li aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></li>
-          <li class="text-text font-medium" aria-current="page">Kariyer</li>
+          <li class="text-text font-medium" aria-current="page">{t.nav.karriere}</li>
         </ol>
       </div>
     </nav>
 
     <!-- Bento Grid -->
-    <h1 class="sr-only">Logoped / Konuşma Terapisti (e/k/d) aranıyor – Praxis Şimşek Duisburg</h1>
+    <h1 class="sr-only">{page.sr_heading}</h1>
     <section class="container py-10 pb-16">
       <div class="bento-grid">
 
         <!-- HERO CARD -->
         <div class="bento-card bento-hero">
           <div class="bento-hero__tags">
-            <span class="tag tag--green">Duisburg</span>
-            <span class="tag tag--green">Tam / Yarı Zamanlı</span>
-            <span class="tag tag--green">4 Günlük Hafta Mümkün</span>
-            <span class="tag tag--accent">Hemen Başlanabilir</span>
+            <span class="tag tag--green">{page.tags.location}</span>
+            <span class="tag tag--green">{page.tags.time}</span>
+            <span class="tag tag--green">{page.tags.week}</span>
+            <span class="tag tag--accent">{page.tags.current}</span>
           </div>
-          <p class="bento-hero__title">Kariyer, #TeamSimsek'te başlıyor</p>
-          <p class="bento-hero__subtitle">
-            Duisburg-Mitte'deki ekibimiz için dil ve konuşma terapisti (e/k/d) arıyoruz.
-          </p>
-          <a href="mailto:info@logopaedie-simsek.de?subject=Ba%C5%9Fvuru%20%E2%80%93%20Dil%20ve%20Konu%C5%9Fma%20Terapisti&body=Sayg%C4%B1de%C4%9Fer%20Bayan%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0AMuayenehanenizdeki%20dil%20ve%20konu%C5%9Fma%20terapisti%20pozisyonu%20i%C3%A7in%20ba%C5%9Fvuruyorum.%0A%0ASayg%C4%B1lar%C4%B1mla%0A" class="bento-cta-btn">
-            Hemen Başvur
+          <p class="bento-hero__title">{page.hero_title}</p>
+          <p class="bento-hero__subtitle">{page.hero_subtitle}</p>
+          <a href={applyHref} class="bento-cta-btn">
+            {page.apply_now}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14 0M12 5l7 7-7 7"/></svg>
           </a>
           <div class="bento-hero__deco" aria-hidden="true"></div>
@@ -114,66 +113,52 @@ const benefits = [
 
         <!-- STATS CARD -->
         <div class="bento-card bento-stats">
-          <p class="bento-stats__label">Deneyim</p>
+          <p class="bento-stats__label">{page.stats_experience_label}</p>
           <p class="bento-stats__number">10+</p>
-          <p class="bento-stats__desc">Duisburg'da yıllık pratik deneyim</p>
+          <p class="bento-stats__desc">{page.stats_experience_desc}</p>
           <div class="bento-stats__divider"></div>
-          <p class="bento-stats__label">Diller</p>
+          <p class="bento-stats__label">{page.languages_label}</p>
           <p class="bento-stats__langs">
             <span>🇩🇪 Almanca</span>
             <span>🇹🇷 Türkçe</span>
           </p>
           <div class="bento-stats__divider"></div>
-          <p class="bento-stats__label">Terapi Alanları</p>
-          <p class="bento-stats__desc">Erken müdahaleden geriatriye</p>
+          <p class="bento-stats__label">{page.therapy_areas_label}</p>
+          <p class="bento-stats__desc">{page.therapy_areas_desc}</p>
         </div>
 
         <!-- BEKLENTILER CARD -->
         <div class="bento-card bento-requirements">
-          <div class="bento-section-tag">Beklentilerimiz</div>
-          <h2 class="bento-card__title">Profiliniz</h2>
+          <div class="bento-section-tag">{page.expectations_label}</div>
+          <h2 class="bento-card__title">{page.profile_heading}</h2>
           <ul class="req-list">
-            <li>
-              <span class="req-check">✓</span>
-              <span>Devlet tarafından tanınan dil ve konuşma terapistliği diploması</span>
-            </li>
-            <li>
-              <span class="req-check">✓</span>
-              <span>Bağımsız ve esnek çalışma biçimi</span>
-            </li>
-            <li>
-              <span class="req-check">✓</span>
-              <span>Hastalarla empatik ilişki kurabilmek</span>
-            </li>
-            <li>
-              <span class="req-check">✓</span>
-              <span>Çocuk dil terapisi ve/veya afazi terapisine ilgi</span>
-            </li>
+            {page.requirements.map(requirement => (
+              <li>
+                <span class="req-check">✓</span>
+                <span>{requirement}</span>
+              </li>
+            ))}
           </ul>
-          <p class="req-welcome">Yeni mezunlar memnuniyetle karşılanır!</p>
+          <p class="req-welcome">{page.welcome}</p>
         </div>
 
         <!-- HAKKIMIZDA CARD -->
         <div class="bento-card bento-about">
-          <div class="bento-section-tag bento-section-tag--accent">Hakkımızda</div>
+          <div class="bento-section-tag bento-section-tag--accent">{page.about_label}</div>
           <h2 class="bento-card__title">Praxis für Logopädie Şimşek</h2>
-          <p class="bento-about__text">
-            10 yılı aşkın deneyimiyle Duisburg-Mitte'de yerleşik dil terapisi muayenehanesi.
-            Almanca ve Türkçe iki dilli hizmet sunan bölgedeki nadir muayenehanelerden biri.
-          </p>
+          <p class="bento-about__text">{page.about_text}</p>
           <div class="bento-about__tag-row">
-            <span class="mini-tag">Erken Müdahale</span>
-            <span class="mini-tag">Afazi</span>
-            <span class="mini-tag">Geriatri</span>
-            <span class="mini-tag">Çocuk Terapisi</span>
+            {page.mini_tags.map(tag => (
+              <span class="mini-tag">{tag}</span>
+            ))}
           </div>
         </div>
 
         <!-- AVANTAJLAR CARD -->
         <div class="bento-card bento-benefits-all">
           <div class="bento-benefits-all__header">
-            <div class="bento-section-tag">Sunduklarımız</div>
-            <h2 class="bento-card__title bento-card__title--large">Avantajlarınız</h2>
+            <div class="bento-section-tag">{page.offers_label}</div>
+            <h2 class="bento-card__title bento-card__title--large">{page.benefits_heading}</h2>
           </div>
           <div class="benefits-inner-grid">
             {benefits.map((b, i) => (
@@ -189,38 +174,26 @@ const benefits = [
         <!-- PORTAL BRIDGE CARD -->
         <div class="bento-card bento-portal">
           <div class="bento-portal__left">
-            <div class="bento-section-tag bento-section-tag--accent">Kariyer Portalı</div>
-            <h2 class="bento-card__title">Pozisyon Hakkında Daha Fazla Bilgi</h2>
-            <p class="bento-portal__text">
-              Maaş hesaplayıcı, başvuru ipuçları ve doğrudan iletişim - hepsi kariyer portalımız LogopädieJobs.de'de.
-            </p>
+            <div class="bento-section-tag bento-section-tag--accent">{page.portal_label}</div>
+            <h2 class="bento-card__title">{page.portal_heading}</h2>
+            <p class="bento-portal__text">{page.portal_text}</p>
             <a
               href="https://xn--logopdiejobs-kcb.de/?utm_source=logopaedie-simsek.de&utm_medium=kariyer&utm_campaign=portal-bridge"
               class="portal-link-btn"
               target="_blank"
               rel="noopener"
             >
-              LogopädieJobs.de'ye Git
+              {page.portal_button}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </a>
           </div>
           <div class="bento-portal__features">
-            <div class="portal-feature">
-              <span class="portal-feature__icon">🧮</span>
-              <span class="portal-feature__label">Maaş Hesaplayıcı</span>
-            </div>
-            <div class="portal-feature">
-              <span class="portal-feature__icon">📖</span>
-              <span class="portal-feature__label">Rehber & SSS</span>
-            </div>
-            <div class="portal-feature">
-              <span class="portal-feature__icon">📞</span>
-              <span class="portal-feature__label">Doğrudan İletişim</span>
-            </div>
-            <div class="portal-feature">
-              <span class="portal-feature__icon">📅</span>
-              <span class="portal-feature__label">4 Günlük Hafta Bilgisi</span>
-            </div>
+            {page.portal_features.map((feature, index) => (
+              <div class="portal-feature">
+                <span class="portal-feature__icon">{portalFeatureIcons[index]}</span>
+                <span class="portal-feature__label">{feature}</span>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -231,15 +204,13 @@ const benefits = [
 
             <!-- Left: Headline + CTAs -->
             <div class="bento-apply__left">
-              <div class="bento-section-tag bento-section-tag--light">Başvuru</div>
-              <h2 class="bento-apply__title">Hemen<br>Başlayın</h2>
-              <p class="bento-apply__sub">
-                E-posta veya telefon - CV başlangıç için yeterli.
-              </p>
+              <div class="bento-section-tag bento-section-tag--light">{page.application_label}</div>
+              <h2 class="bento-apply__title">{page.application_heading_line1}<br>{page.application_heading_line2}</h2>
+              <p class="bento-apply__sub">{page.application_sub}</p>
               <div class="bento-apply__actions">
-                <a href="mailto:info@logopaedie-simsek.de?subject=Ba%C5%9Fvuru%20%E2%80%93%20Dil%20ve%20Konu%C5%9Fma%20Terapisti%20(e%2Fk%2Fd)&body=Sayg%C4%B1de%C4%9Fer%20Bayan%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0AMuayenehanenizdeki%20dil%20ve%20konu%C5%9Fma%20terapisti%20pozisyonu%20i%C3%A7in%20ba%C5%9Fvuruyorum.%0A%0ASayg%C4%B1lar%C4%B1mla%0A" class="apply-btn apply-btn--primary">
+                <a href={applyHref} class="apply-btn apply-btn--primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  Başvuru Gönder
+                  {page.send_application}
                 </a>
                 <a href="tel:+4920334868690" class="apply-btn apply-btn--outline">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.15 3.4 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
@@ -255,7 +226,7 @@ const benefits = [
                   <div class="bento-apply__avatar" aria-hidden="true">EŞ</div>
                   <div>
                     <div class="bento-apply__name">Emel Şimşek-Uçar</div>
-                    <div class="bento-apply__role">Muayenehane Sahibi · İletişim Kişisi</div>
+                    <div class="bento-apply__role">{page.contact_role}</div>
                   </div>
                 </div>
                 <div class="bento-apply__contact-rows">
@@ -279,11 +250,8 @@ const benefits = [
           <div class="bento-note__inner">
             <svg class="bento-note__ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
             <div>
-              <h3 class="bento-note__title">Staj Yerleri</h3>
-              <p class="bento-note__text">
-                Şu an yurt dışından gelen öğrencilere staj imkânı sunulamamaktadır.
-                Yurt içi başvurular için doğrudan bizimle iletişime geçebilirsiniz.
-              </p>
+              <h3 class="bento-note__title">{page.internship_heading}</h3>
+              <p class="bento-note__text">{page.internship_text}</p>
             </div>
           </div>
         </div>

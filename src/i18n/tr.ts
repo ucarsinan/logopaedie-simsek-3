@@ -44,6 +44,178 @@ export const tr: Translations = {
     privacy: "Gizlilik",
     accessibility: "Erişilebilirlik",
   },
+  breadcrumb: {
+    aria: "Gezinti yolu",
+    home: "Ana Sayfa",
+  },
+  service_page: {
+    services: "Terapi alanları",
+    appointment: "Randevu için arayın",
+    cta_heading: "İlk adım için hazır mısınız?",
+    cta_text:
+      "Duisburg'daki muayenehanemizde Almanca veya Türkçe görüşme için bizi arayın.",
+    cta_button: "Randevu için arayın",
+    more_info: "Daha fazla bilgi",
+    related_heading: "Diğer terapi alanları",
+  },
+  therapy_overview: {
+    title: "Terapi alanları | Praxis für Logopädie Şimşek Duisburg",
+    description:
+      "Duisburg'daki Praxis für Logopädie Şimşek'in terapi alanları: dil bozuklukları, konuşma bozuklukları, ses terapisi ve disfaji – çocuklar ve yetişkinler için.",
+    section_label: "Terapi alanlarımız",
+    heading: "Duisburg'da dil ve konuşma terapisi",
+    intro:
+      "Duisburg'daki muayenehanemizde çocuklar, yetişkinler ve yaşlılar için dil, konuşma, ses ve yutma alanlarında Almanca ve Türkçe terapi sunuyoruz.",
+    image_alt:
+      "Praxis für Logopädie Şimşek Duisburg'da çocuklar, yetişkinler ve yaşlılar için dil ve konuşma terapisi",
+    usp_aria: "İki dilli hizmetimiz",
+    usp_heading: "Almanca ve Türkçe iki dilli terapi",
+    usp_text:
+      "Ruhr Bölgesi'nde nadir bulunan bir hizmet – özellikle iki dilli büyüyen çocuklar ve Türkçe konuşan yetişkinler için büyük değer taşıyor.",
+    back_home: "Anasayfaya dön",
+  },
+  bento_gallery: {
+    aria_label: "Muayenehaneden görüntüler",
+    cards: {
+      early: { label: "Erken destek", sub: "0-6 yaş" },
+      voice: { label: "Ses terapisi", sub: "Disfoni ve kısıklık" },
+      home_visit: { label: "Ev ziyaretleri", sub: "Mobil terapi" },
+      adults: { label: "Yetişkin terapisi", sub: "Her yaş için" },
+    },
+  },
+  contact_page: {
+    title: "İletişim ve konum – Praxis für Logopädie Şimşek Duisburg",
+    description:
+      "Duisburg'daki Praxis für Logopädie Şimşek ile iletişime geçin. Telefon, e-posta, adres, çalışma saatleri ve konum bilgisi. Randevular telefonla alınır.",
+    hero_heading: "İletişim ve konum",
+    hero_subtitle: "Tonhallenstraße 21, 47051 Duisburg · 3. kat · Asansör mevcut",
+    phone_text:
+      "Randevu için çalışma saatleri içinde telefonla ulaşabilirsiniz.",
+    fax_label: "Faks",
+    address_maps_aria: "Adresi Google Maps'te aç",
+    map_heading: "Ulaşım ve harita",
+    map_description:
+      "Duisburg Hbf'ye yalnızca <strong class=\"text-text\">2 dakika yürüme mesafesinde</strong>.<br>U79 · König-Heinrich-Platz · S-Bahn / RE / RB Duisburg Hbf",
+    map_placeholder:
+      "Google Maps haritası yalnızca onayınızdan sonra yüklenir. Bu sırada Google'a veri aktarılabilir.",
+    map_load_button: "Haritayı yükle",
+    map_iframe_title: "Google Maps: Praxis für Logopädie Şimşek",
+  },
+  team_page: {
+    title: "Ekibimiz – Praxis für Logopädie Şimşek Duisburg",
+    description:
+      "Emel Şimşek-Uçar ve Mara Nießalla ile tanışın – Praxis für Logopädie Şimşek Duisburg ekibi. Almanca ve Türkçe dil ve konuşma terapisi, 10 yılı aşkın deneyim.",
+    sr_heading: "Ekibimiz – Praxis für Logopädie Şimşek Duisburg",
+    emel_alt: "Emel Şimşek-Uçar – muayenehane sahibi ve dil ve konuşma terapisti, Duisburg",
+    mara_alt: "Mara Nießalla – Praxis für Logopädie Şimşek Duisburg'da dil ve konuşma terapisti",
+    owner_badge: "Muayenehane sahibi",
+    therapist_badge: "Dil ve konuşma terapisti",
+    experience_chip: "10+ yıl deneyim",
+    patients_chip: "Çocuklar ve yetişkinler",
+    mara_chips: ["Yetişkinler", "Gerekirse ev ziyareti", "Çocuklar ve gençler de"],
+    title_label: "Ekibimiz",
+    title_line: "Dil ve konuşma terapisi güven işidir.",
+    title_emphasis: "güven işidir.",
+    title_description:
+      "Her gün daha iyi iletişim için çalışan insanlarla tanışın.",
+    stats_experience: "Yıllık klinik deneyim",
+    stats_languages: "Anadil düzeyinde dil",
+    language_note:
+      "Her iki dilde değerlendirme, danışmanlık ve terapi — çok dillilik engel değil, kaynaktır.",
+    quote: "Çok dillilik bir engel değil – bir kaynaktır.",
+    career_label: "Kariyer",
+    career_heading: "Ekip arıyoruz",
+    career_text:
+      "Duisburg'daki ekibimiz için deneyimli dil ve konuşma terapistleri arıyoruz.",
+    job_link: "İş ilanı",
+    cta_question: "Terapi hizmetleri veya randevu için sorularınız mı var?",
+  },
+  career_page: {
+    schema: {
+      title: "Dil ve konuşma terapisti (m/w/d)",
+      description:
+        "Duisburg'daki muayenehanemiz için dil ve konuşma terapisti arıyoruz (m/w/d). Tam veya yarı zamanlı, adil ücretlendirme, Almanca-Türkçe iki dilli ekip. 4 günlük çalışma haftası görüşmede değerlendirilebilir.",
+      work_hours: "Haftada 20-40 saat",
+      industry: "Sağlık hizmetleri",
+      job_benefits:
+        "4 günlük çalışma haftası görüşmede değerlendirilebilir, eğitim desteği, adil ücretlendirme, Almanca-Türkçe iki dilli ekip, Duisburg Hbf yakınında merkezi konum",
+      qualifications:
+        "Devlet tarafından tanınan dil ve konuşma terapistliği diploması. Yeni mezunlar başvurabilir.",
+      skills:
+        "Almanca-Türkçe çok dilli değerlendirme, erken destek, çocuklarda dil ve konuşma terapisi, afazi, dizartri, ses terapisi, disfaji, gerektiğinde ev ziyaretleri",
+      responsibilities:
+        "Çocuklar, gençler ve yetişkinler için dil ve konuşma terapisi değerlendirmesi ve terapi uygulaması. Almanca ve Türkçe iki dilli çalışma ve gerektiğinde ev ziyaretleri mümkündür.",
+      employer_overview:
+        "Praxis für Logopädie Şimşek, iki dilli ekibiyle Duisburg'da uzmanlaşmış bir dil ve konuşma terapisi muayenehanesidir. Odak alanları: çok dilli değerlendirme, erken destek, çocuklarda dil ve konuşma terapisi, yetişkin terapisi ve gerektiğinde ev ziyaretleri. Duisburg Hbf yakınında merkezi konum.",
+    },
+    title: "Dil ve konuşma terapisti Duisburg | Praxis für Logopädie Şimşek",
+    description:
+      "Duisburg'da dil ve konuşma terapisti arıyoruz. 4 günlük çalışma haftası görüşmede değerlendirilebilir, adil ücretlendirme, Almanca-Türkçe iki dilli ekip. Praxis für Logopädie Şimşek – hemen başvurun!",
+    sr_heading:
+      "Dil ve konuşma terapisti (m/w/d) aranıyor – Praxis für Logopädie Şimşek Duisburg",
+    tags: {
+      location: "Duisburg",
+      time: "Tam / yarı zamanlı",
+      week: "4 günlük hafta görüşmeye bağlı",
+      current: "Güncel ilan",
+    },
+    hero_title: "Kariyeriniz #TeamSimsek'te başlasın",
+    hero_subtitle:
+      "Duisburg-Mitte'deki ekibimiz için dil ve konuşma terapisti (m/w/d) arıyoruz.",
+    apply_now: "Hemen başvurun",
+    stats_experience_label: "Deneyim",
+    stats_experience_desc: "Duisburg'da 10+ yıllık klinik deneyim",
+    languages_label: "Diller",
+    therapy_areas_label: "Terapi alanları",
+    therapy_areas_desc: "Çocuklar, yetişkinler ve ev ziyaretleri",
+    expectations_label: "Beklentilerimiz",
+    profile_heading: "Profiliniz",
+    requirements: [
+      "Devlet tarafından tanınan dil ve konuşma terapistliği diploması",
+      "Bağımsız ve esnek çalışma biçimi",
+      "Hastalarla empatik ilişki kurabilmek",
+      "Çocuk, yetişkin ve/veya çok dilli terapiye ilgi",
+    ],
+    welcome: "Yeni mezunların başvurularını da memnuniyetle değerlendiriyoruz.",
+    about_label: "Hakkımızda",
+    about_text:
+      "Duisburg-Mitte'de 10 yılı aşkın deneyime sahip dil ve konuşma terapisi muayenehanesi. Almanca ve Türkçe iki dilli hizmet sunan bölgedeki nadir muayenehanelerden biri.",
+    mini_tags: ["Erken destek", "Yetişkinler", "DE/TR", "Ev ziyaretleri"],
+    offers_label: "Sunduklarımız",
+    benefits_heading: "Sunduğumuz imkanlar",
+    benefits: [
+      { title: "Adil ücretlendirme", desc: "Şeffaf ücretlendirme kişisel görüşmede netleşir" },
+      { title: "Planlı oryantasyon", desc: "Başından itibaren yanınızdayız" },
+      { title: "Samimi ekip", desc: "Açık iletişim ve karşılıklı destek" },
+      { title: "Modern terapi odaları", desc: "Merkezi konumda, iyi donanımlı odalar" },
+      { title: "Eğitim desteği", desc: "Mesleki gelişiminizi destekliyoruz" },
+      { title: "Esnek çalışma saatleri", desc: "Tam veya yarı zamanlı – 4 günlük çalışma haftası görüşmede değerlendirilebilir" },
+      { title: "Merkezi konum", desc: "Duisburg Hbf'ye yürüyerek kolay erişim" },
+    ],
+    portal_label: "Kariyer portalı",
+    portal_heading: "Pozisyon hakkında daha fazla bilgi",
+    portal_text:
+      "Maaş hesaplayıcı, başvuru ipuçları ve doğrudan iletişim – hepsi kariyer portalımız LogopädieJobs.de'de.",
+    portal_button: "LogopädieJobs.de'ye git",
+    portal_features: [
+      "Maaş hesaplayıcı",
+      "Rehber ve SSS",
+      "Doğrudan iletişim",
+      "4 günlük hafta bilgisi",
+    ],
+    application_label: "Başvuru",
+    application_heading_line1: "Hemen",
+    application_heading_line2: "başlayın",
+    application_sub: "E-posta veya telefon – başlangıç için CV yeterli.",
+    send_application: "Başvurunuzu gönderin",
+    contact_role: "Kurucu terapist · Başvurular için iletişim",
+    internship_heading: "Staj imkanları",
+    internship_text:
+      "Şu an yurt dışından gelen öğrencilere staj imkanı sunulamamaktadır. Almanya içinden gelen başvurular için doğrudan bizimle iletişime geçebilirsiniz.",
+    mail_subject: "Başvuru – Dil ve konuşma terapisti",
+    mail_body:
+      "Saygıdeğer Bayan Şimşek-Uçar,\n\nMuayenehanenizdeki dil ve konuşma terapisti pozisyonu için başvuruyorum.\n\nSaygılarımla\n",
+  },
   hero: {
     badge: "Duisburg'da dil ve konuşma terapisi",
     heading_line1: "Konuşun.",
