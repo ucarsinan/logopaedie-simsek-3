@@ -324,7 +324,7 @@ export const de = {
         role: "Staatl. gepr. Logopädin",
         badge: "",
         extra:
-          "Logopädin mit Schwerpunkt auf Sprachentwicklung und Redefluss bei Kindern und Jugendlichen. Einfühlsame Begleitung von der Erstdiagnostik bis zum Therapieabschluss.",
+          "Logopädin mit Schwerpunkt auf Erwachsenentherapie, Hausbesuchen bei Bedarf und klarer Therapieplanung. Sie begleitet auch Kinder und Jugendliche, wenn logopädische Unterstützung sinnvoll ist.",
       },
     ],
   },

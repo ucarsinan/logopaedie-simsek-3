@@ -57,6 +57,7 @@ const legacyRedirects = Object.fromEntries(legacyRedirectPairs);
 export default defineConfig({
   site: 'https://logopaedie-simsek.de',
   output: 'static',
+  trailingSlash: 'always',
   adapter: vercel(),
   redirects: legacyRedirects,
   integrations: [sitemap({

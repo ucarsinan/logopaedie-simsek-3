@@ -13,7 +13,7 @@ const personSchema = {
   "@type": "Person",
   "name": "Mara Nießalla",
   "jobTitle": "Staatlich geprüfte Logopädin",
-  "url": `${siteUrl}/team/mara-niessalla`,
+  "url": `${siteUrl}/team/mara-niessalla/`,
   "description": "Staatlich geprüfte Logopädin in der Praxis für Logopädie Şimşek in Duisburg. Mara Nießalla arbeitet überwiegend mit Erwachsenen, macht bei Bedarf Hausbesuche und behandelt auch Kinder und Jugendliche.",
   "worksFor": {
     "@type": "MedicalOrganization",
@@ -33,8 +33,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team` },
-    { "@type": "ListItem", "position": 3, "name": "Mara Nießalla", "item": `${siteUrl}/team/mara-niessalla` }
+    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team/` },
+    { "@type": "ListItem", "position": 3, "name": "Mara Nießalla", "item": `${siteUrl}/team/mara-niessalla/` }
   ]
 };
 
@@ -67,8 +67,8 @@ const schwerpunkte = [
   description="Mara Nießalla, staatlich geprüfte Logopädin bei der Praxis für Logopädie Şimşek in Duisburg. Überwiegend Erwachsenentherapie, Hausbesuche bei Bedarf und auch Therapie für Kinder und Jugendliche."
   additionalSchemas={[personSchema, breadcrumbSchema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/team/mara-niessalla` },
-    { lang: 'x-default', url: `${siteUrl}/team/mara-niessalla` },
+    { lang: 'de', url: `${siteUrl}/team/mara-niessalla/` },
+    { lang: 'x-default', url: `${siteUrl}/team/mara-niessalla/` },
   ]}
 >
   <Header />

@@ -8,49 +8,10 @@ const siteUrl = 'https://logopaedie-simsek.de';
 
 const schema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["LocalBusiness", "MedicalBusiness"],
-      "@id": `${siteUrl}/#business`,
-      "name": "Praxis für Logopädie Şimşek",
-      "description": "Logopädische Praxis in Duisburg – Sprach-, Sprech-, Stimm- und Schlucktherapie für Kinder und Erwachsene. Zweisprachig Deutsch & Türkisch.",
-      "url": siteUrl,
-      "telephone": "+4920334868690",
-      "email": "info@logopaedie-simsek.de",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Tonhallenstraße 21",
-        "addressLocality": "Duisburg",
-        "postalCode": "47051",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 51.4292,
-        "longitude": 6.7681
-      },
-      "hasMap": "https://goo.gl/maps/cGPVX58woxP2",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "18:00"
-        }
-      ],
-      "availableLanguage": [
-        { "@type": "Language", "name": "German" },
-        { "@type": "Language", "name": "Turkish" }
-      ],
-      "areaServed": { "@type": "City", "name": "Duisburg" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-        { "@type": "ListItem", "position": 2, "name": "Logopädie Duisburg", "item": `${siteUrl}/logopaedie-duisburg` }
-      ]
-    }
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Logopädie Duisburg", "item": `${siteUrl}/logopaedie-duisburg/` }
   ]
 };
 ---

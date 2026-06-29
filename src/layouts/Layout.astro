@@ -52,7 +52,6 @@ const normalizedHreflangAlternates = hreflangAlternates.map((alt) => ({
   url: normalizeAbsoluteUrl(alt.url),
 }));
 const s = useTranslations(lang).schema;
-const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -88,7 +87,7 @@ const jsonLd = {
       "@id": `${siteUrl}/#business`,
       "name": "Praxis für Logopädie Şimşek",
       "description": s.business_description,
-      "url": siteUrl,
+      "url": `${siteUrl}/`,
       "telephone": "+4920334868690",
       "faxNumber": "+4920334868691",
       "email": "info@logopaedie-simsek.de",
@@ -138,7 +137,7 @@ const jsonLd = {
         "name": s.offer_catalog_name,
         "itemListElement": s.services.map(sv => ({
           "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": sv.name, "url": `${siteUrl}${sv.url}` }
+          "itemOffered": { "@type": "Service", "name": sv.name, "url": normalizeAbsoluteUrl(sv.url) }
         }))
       }
     }
@@ -194,49 +193,6 @@ const jsonLd = {
     {additionalSchemas.map(schema => (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
-
-    {gaMeasurementId && (
-      <script is:inline define:vars={{ gaMeasurementId }}>
-        (function () {
-          window.dataLayer = window.dataLayer || [];
-          window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
-
-          function analyticsAccepted() {
-            return true;
-          }
-
-          function loadAnalytics() {
-            if (window.__simsekGaLoaded || !gaMeasurementId) return;
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaMeasurementId);
-            document.head.appendChild(script);
-            window.__simsekGaLoaded = true;
-            window.gtag('js', new Date());
-          }
-
-          function trackPageview() {
-            if (!analyticsAccepted()) return;
-            window.gtag('config', gaMeasurementId, {
-              page_path: location.pathname + location.search,
-              page_title: document.title,
-              anonymize_ip: true,
-              storage: 'none',       // kein GA-Cookie → kein Consent-Banner nötig (DSGVO)
-              client_storage: 'none'
-            });
-          }
-
-          loadAnalytics();
-
-          document.addEventListener('DOMContentLoaded', function () {
-            trackPageview();
-          });
-          document.addEventListener('astro:page-load', function () {
-            trackPageview();
-          });
-        })();
-      </script>
-    )}
 
     <!-- robots -->
     <meta name="robots" content={

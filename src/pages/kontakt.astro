@@ -13,34 +13,16 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-    { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": `${siteUrl}/kontakt` }
+    { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": `${siteUrl}/kontakt/` }
   ]
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Praxis für Logopädie Şimşek",
-  "url": siteUrl,
-  "telephone": "+4920334868690",
-  "faxNumber": "+4920334868691",
-  "email": "info@logopaedie-simsek.de",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Tonhallenstraße 21",
-    "addressLocality": "Duisburg",
-    "postalCode": "47051",
-    "addressCountry": "DE"
-  },
-  "openingHours": "Mo-Fr 08:00-18:00",
-  "hasMap": "https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
-};
 ---
 
 <Layout
   title="Kontakt & Anfahrt – Praxis für Logopädie Şimşek Duisburg"
   description="Kontakt zur Praxis für Logopädie Şimşek in Duisburg. Termin anfragen, Adresse, Telefon, E-Mail, Öffnungszeiten und Anfahrt. Nur 2 Minuten vom Hauptbahnhof."
-  additionalSchemas={[breadcrumbSchema, localBusinessSchema]}
+  additionalSchemas={[breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/kontakt/` },
     { lang: 'tr', url: `${siteUrl}/iletisim/` },

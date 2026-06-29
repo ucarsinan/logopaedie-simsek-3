@@ -10,14 +10,14 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Logopädie für Kinder und Jugendliche Duisburg",
   "description": "Logopädische Therapie für Kinder und Jugendliche in Duisburg. Sprachentwicklungsverzögerung, Stottern, LRS, Aussprache und mehr.",
-  "url": `${siteUrl}/therapie/kinder-und-jugendliche`,
+  "url": `${siteUrl}/therapie/kinder-und-jugendliche/`,
   "about": { "@type": "MedicalCondition", "name": "Sprachentwicklungsstörung" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapie` },
-      { "@type": "ListItem", "position": 3, "name": "Kinder und Jugendliche", "item": `${siteUrl}/therapie/kinder-und-jugendliche` }
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapie/` },
+      { "@type": "ListItem", "position": 3, "name": "Kinder und Jugendliche", "item": `${siteUrl}/therapie/kinder-und-jugendliche/` }
     ]
   }
 };
@@ -31,8 +31,8 @@ const schema = {
   tags={['Frühförderung', 'Sprachentwicklung', 'Stottern', 'LRS']}
   additionalSchemas={[schema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/therapie/kinder-und-jugendliche` },
-    { lang: 'x-default', url: `${siteUrl}/therapie/kinder-und-jugendliche` },
+    { lang: 'de', url: `${siteUrl}/therapie/kinder-und-jugendliche/` },
+    { lang: 'x-default', url: `${siteUrl}/therapie/kinder-und-jugendliche/` },
   ]}
   relatedServices={[
     { title: 'Sprachstörungen', href: '/therapie/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Grammatik' },

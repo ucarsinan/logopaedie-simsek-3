@@ -211,7 +211,7 @@ export const tr: Translations = {
     contact_role: "Kurucu terapist · Başvurular için iletişim",
     internship_heading: "Staj imkanları",
     internship_text:
-      "Şu an yurt dışından gelen öğrencilere staj imkanı sunulamamaktadır. Almanya içinden gelen başvurular için doğrudan bizimle iletişime geçebilirsiniz.",
+      "Şu an Almanya dışından gelen öğrencilere staj imkanı sunulamamaktadır. Almanya içinden gelen başvurular için doğrudan bizimle iletişime geçebilirsiniz.",
     mail_subject: "Başvuru – Dil ve konuşma terapisti",
     mail_body:
       "Saygıdeğer Bayan Şimşek-Uçar,\n\nMuayenehanenizdeki dil ve konuşma terapisti pozisyonu için başvuruyorum.\n\nSaygılarımla\n",
@@ -328,7 +328,7 @@ export const tr: Translations = {
         role: "Dil ve konuşma terapisti",
         badge: "",
         extra:
-          "Çocuklar ve gençlerde dil gelişimine odaklanan deneyimli terapist. İlk görüşmeden terapinin sonuna kadar empatik bir yaklaşımla eşlik eder.",
+          "Ağırlıklı olarak yetişkin terapisi, gerektiğinde ev ziyaretleri ve anlaşılır terapi planlamasına odaklanır. Gerekli durumlarda çocuk ve gençlere de dil ve konuşma terapisi desteği verir.",
       },
     ],
   },

@@ -10,14 +10,14 @@ const schema = {
   "@type": "MedicalWebPage",
   "name": "Logopädie für Erwachsene Duisburg",
   "description": "Logopädische Therapie für Erwachsene in Duisburg. Aphasie, Dysarthrie, Stimmstörungen, Schluckstörungen nach Schlaganfall oder neurologischen Erkrankungen.",
-  "url": `${siteUrl}/therapie/erwachsene`,
+  "url": `${siteUrl}/therapie/erwachsene/`,
   "about": { "@type": "MedicalCondition", "name": "Aphasie" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapie` },
-      { "@type": "ListItem", "position": 3, "name": "Therapie für Erwachsene", "item": `${siteUrl}/therapie/erwachsene` }
+      { "@type": "ListItem", "position": 2, "name": "Therapieangebot", "item": `${siteUrl}/therapie/` },
+      { "@type": "ListItem", "position": 3, "name": "Therapie für Erwachsene", "item": `${siteUrl}/therapie/erwachsene/` }
     ]
   }
 };
@@ -31,8 +31,8 @@ const schema = {
   tags={['Aphasie', 'Dysarthrie', 'Stimmtherapie', 'Neurologie']}
   additionalSchemas={[schema]}
   hreflangAlternates={[
-    { lang: 'de', url: `${siteUrl}/therapie/erwachsene` },
-    { lang: 'x-default', url: `${siteUrl}/therapie/erwachsene` },
+    { lang: 'de', url: `${siteUrl}/therapie/erwachsene/` },
+    { lang: 'x-default', url: `${siteUrl}/therapie/erwachsene/` },
   ]}
   relatedServices={[
     { title: 'Sprachstörungen', href: '/therapie/sprachstoerungen/', description: 'Aphasie, Wortfindung, Sprachverständnis' },

@@ -1,4 +1,5 @@
 {
+  "trailingSlash": true,
   "redirects": [
     { "source": "/", "has": [{ "type": "query", "key": "p", "value": "54" }], "destination": "/", "permanent": true },
     { "source": "/", "has": [{ "type": "query", "key": "p", "value": "113" }], "destination": "/#praxis", "permanent": true },

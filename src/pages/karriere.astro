@@ -10,8 +10,8 @@ const jobSchema = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
   "title": "Logopäde / Sprachtherapeut (m/w/d)",
-  "description": "Wir suchen Verstärkung im Bereich Logopädie (m/w/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, überdurchschnittliches Gehalt, zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche möglich.",
-  "datePosted": new Date().toISOString().split('T')[0],
+  "description": "Wir suchen Verstärkung im Bereich Logopädie (m/w/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, faire Vergütung, zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche nach Absprache möglich.",
+  "datePosted": "2026-04-23",
   "validThrough": "2026-12-31",
   "directApply": true,
   "hiringOrganization": {
@@ -35,11 +35,11 @@ const jobSchema = {
   "workHours": "20–40 Stunden pro Woche",
   "industry": "Gesundheitswesen",
   "occupationalCategory": "29-1127.00",
-  "jobBenefits": "4-Tage-Woche möglich, 100% Fortbildungskosten übernommen, überdurchschnittliches Gehalt, bilinguales Team Deutsch-Türkisch, zentrale Lage am Hbf Duisburg",
+  "jobBenefits": "4-Tage-Woche nach Absprache möglich, Fortbildungsunterstützung, faire Vergütung, bilinguales Team Deutsch-Türkisch, zentrale Lage am Hbf Duisburg",
   "qualifications": "Staatlich anerkannte/r Logopäde/Logopädin oder Sprachtherapeut/in (m/w/d). Berufsanfänger willkommen.",
-  "skills": "Pädiatrie, Neurologie, Stottertherapie, Aphasie, Dysarthrie, Dysphagie, LRS, SES, bilinguale Therapie Deutsch-Türkisch",
-  "responsibilities": "Durchführung logopädischer Diagnostik und Therapie in den Bereichen Pädiatrie, Neurologie und Stottern/Poltern. Bilinguales Arbeiten in Deutsch und Türkisch möglich.",
-  "employerOverview": "Praxis für Logopädie Şimşek ist eine spezialisierte Praxis in Duisburg mit zweisprachigem Team. Schwerpunkte: Pädiatrie, Neurologie, Stottern/Poltern. Zentrale Lage am Duisburger Hauptbahnhof."
+  "skills": "Mehrsprachige Diagnostik Deutsch-Türkisch, Frühförderung, Kindersprachtherapie, Aphasie, Dysarthrie, Stimmtherapie, Dysphagie, Hausbesuche bei Bedarf",
+  "responsibilities": "Durchführung logopädischer Diagnostik und Therapie für Kinder, Jugendliche und Erwachsene. Bilinguales Arbeiten in Deutsch und Türkisch sowie Hausbesuche bei Bedarf möglich.",
+  "employerOverview": "Praxis für Logopädie Şimşek ist eine spezialisierte Praxis in Duisburg mit zweisprachigem Team. Schwerpunkte: mehrsprachige Diagnostik, Frühförderung, Kindersprachtherapie, Erwachsenentherapie und Hausbesuche bei Bedarf. Zentrale Lage am Duisburger Hauptbahnhof."
 };
 
 const breadcrumbSchema = {
@@ -52,19 +52,19 @@ const breadcrumbSchema = {
 };
 
 const benefits = [
-  { icon: "💰", title: "Überdurchschnittliches Gehalt", desc: "Faire und transparente Vergütung" },
+  { icon: "💰", title: "Faire Vergütung", desc: "Transparente Vergütung im persönlichen Gespräch" },
   { icon: "🤝", title: "Strukturierte Einarbeitung", desc: "Wir begleiten Sie von Beginn an" },
   { icon: "💬", title: "Kollegiales Team", desc: "Offene Kommunikation, gegenseitige Unterstützung" },
   { icon: "🏢", title: "Moderne Praxisräume", desc: "Gut ausgestattete Therapieräume in zentraler Lage" },
   { icon: "📚", title: "Fortbildungsunterstützung", desc: "Wir fördern Ihre fachliche Weiterentwicklung" },
-  { icon: "⏰", title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit – auch 4-Tage-Woche möglich" },
+  { icon: "⏰", title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit – 4-Tage-Woche nach Absprache möglich" },
   { icon: "🚇", title: "Zentrale Lage", desc: "Direkt am Duisburger Hauptbahnhof, gut per ÖPNV erreichbar" },
 ];
 ---
 
 <Layout
-  title="Logopäde/in Duisburg | Karriere bei Praxis Şimşek"
-  description="Praxis für Logopädie Şimşek Duisburg sucht engagierte Logopädinnen und Logopäden. Überdurchschnittliches Gehalt, tolles Team, zweisprachige Praxis. Jetzt bewerben!"
+  title="Logopäde/in Duisburg | Karriere bei Praxis für Logopädie Şimşek"
+  description="Praxis für Logopädie Şimşek Duisburg sucht engagierte Logopädinnen und Logopäden. Faire Vergütung, kollegiales Team, zweisprachige Praxis. Jetzt bewerben!"
   additionalSchemas={[jobSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/karriere/` },
@@ -97,8 +97,8 @@ const benefits = [
           <div class="bento-hero__tags">
             <span class="tag tag--green">Duisburg</span>
             <span class="tag tag--green">Voll- / Teilzeit</span>
-            <span class="tag tag--green">4-Tage-Woche möglich</span>
-            <span class="tag tag--accent">Sofort verfügbar</span>
+            <span class="tag tag--green">4-Tage-Woche nach Absprache</span>
+            <span class="tag tag--accent">Aktuell gesucht</span>
           </div>
           <p class="bento-hero__title">Karriere bei #TeamSimsek</p>
           <p class="bento-hero__subtitle">
@@ -125,7 +125,7 @@ const benefits = [
           </p>
           <div class="bento-stats__divider"></div>
           <p class="bento-stats__label">Therapiebereiche</p>
-          <p class="bento-stats__desc">Frühförderung bis Geriatrie</p>
+          <p class="bento-stats__desc">Kinder, Erwachsene und Hausbesuche</p>
         </div>
 
         <!-- ANFORDERUNGEN CARD -->
@@ -147,7 +147,7 @@ const benefits = [
             </li>
             <li>
               <span class="req-check">✓</span>
-              <span>Interesse an Kindersprachtherapie und/oder Aphasietherapie</span>
+              <span>Interesse an Kinder-, Erwachsenen- und/oder mehrsprachiger Therapie</span>
             </li>
           </ul>
           <p class="req-welcome">Berufseinsteiger herzlich willkommen!</p>
@@ -163,9 +163,9 @@ const benefits = [
           </p>
           <div class="bento-about__tag-row">
             <span class="mini-tag">Frühförderung</span>
-            <span class="mini-tag">Aphasie</span>
-            <span class="mini-tag">Geriatrie</span>
-            <span class="mini-tag">Kindertherapie</span>
+            <span class="mini-tag">Erwachsene</span>
+            <span class="mini-tag">DE/TR</span>
+            <span class="mini-tag">Hausbesuche</span>
           </div>
         </div>
 
