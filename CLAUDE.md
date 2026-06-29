@@ -1,13 +1,13 @@
 # logopaedie-simsek-3 – CLAUDE.md
 
 ## Was ist das?
-Finale Website für Logopädie-Praxis Şimşek (logopaedie-simsek.de).
+Finale Website für Praxis für Logopädie Şimşek (logopaedie-simsek.de).
 Ersetzt alle POC-Varianten (logopaedie-simsek, logopaedie-copy).
 
 ## Stack
 - **Astro 6** · Static Output (`output: 'static'`) · Vercel Adapter
 - **Tailwind CSS v4** (`@tailwindcss/vite`)
-- **Resend** — Kontaktformular-E-Mail
+- **Kontaktfluss** — Termine ausschließlich telefonisch; E-Mail nur für allgemeine Fragen
 - **i18n** — Deutsch + Türkisch (`src/i18n/de.ts`, `tr.ts`, `index.ts`)
 - **Sitemap** — `@astrojs/sitemap` (impressum/datenschutz/barrierefreiheit gefiltert)
 
@@ -20,11 +20,11 @@ npm run preview   # Build-Preview
 
 ## Routing / Seitenstruktur
 - `src/pages/index.astro` — Startseite (DE)
-- `src/pages/tr/` — Türkische Seiten
-- `src/pages/therapie/index.astro` — Therapie-Übersichtsseite (DE)
-- `src/pages/therapieangebot/` — DE-Leistungsdetailseiten
+- Türkische Hauptseiten: `anasayfa.astro`, `iletisim.astro`, `ekip.astro`, `kariyer.astro`; `src/pages/tr/` nur für einzelne Info-/Legacy-Seiten wie Kostenübernahme
+- `src/pages/therapie/` — DE-Übersichts- und Leistungsdetailseiten
+- `src/pages/therapieangebot/` — Legacy-Redirect auf `/therapie/`
 - `src/pages/terapi/` — Türkische Leistungsseiten
-- `src/pages/kontakt.astro` / `iletisim.astro` — Kontakt DE/TR
+- `src/pages/kontakt.astro` / `iletisim.astro` — Kontakt DE/TR mit Telefon-CTA und optional geladener Google Map
 - `src/pages/karriere.astro` — Jobs
 - Redirects in `astro.config.ts` und `vercel.json` für alte WordPress-URLs + alte `/leistungen/`-Struktur
 

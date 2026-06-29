@@ -4,8 +4,8 @@
 > Letzter Stand: ~/Development/personal-assistant/orchestration/current-state.md
 
 ## Projekt
-Website für Logopädie-Praxis Simsek. Finale Version.
-Stack: Astro + Preact
+Website für Praxis für Logopädie Şimşek. Finale Version.
+Stack: Astro 6 Static Site + Tailwind CSS v4 + Vercel Adapter
 
 ## Projekt-Regeln
 → Siehe CLAUDE.md (gilt für alle KIs)
