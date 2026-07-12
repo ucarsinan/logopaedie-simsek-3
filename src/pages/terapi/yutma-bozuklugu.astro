@@ -18,6 +18,33 @@ const schema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Yutma güçlüğü (disfaji) tehlikeli midir?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Evet, tedavi edilmezse ciddi olabilir. Yiyecek veya sıvının yanlışlıkla soluk borusuna kaçması aspirasyon pnömonisine yol açabilir; ayrıca yetersiz beslenme ve kilo kaybı riski taşır. Bu nedenle erken tanı ve terapi büyük önem taşır." }
+    },
+    {
+      "@type": "Question",
+      "name": "İnme sonrası yutma bozukluğu geçer mi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "İnme sonrası disfaji sıklıkla görülür ve birçok hastada zamanla ve düzenli terapiyle belirgin ölçüde iyileşir. Erken başlayan yutma terapisi, güvenli beslenmeyi yeniden kazanma sürecini hızlandırır." }
+    },
+    {
+      "@type": "Question",
+      "name": "Yutma bozukluğu olan biri normal yemek yiyebilir mi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bu, bozukluğun ciddiyetine bağlıdır. Bazı hastalar kıvam uyarlaması (örn. koyulaştırılmış sıvılar, püre kıvamında yemekler) ile güvenle beslenebilirken, kas güçlendirme egzersizleriyle zamanla normal kıvamlara geçiş sağlanabilir. Terapi planı her zaman bireysel olarak belirlenir." }
+    },
+    {
+      "@type": "Question",
+      "name": "Hastane veya bakım evindeyken de terapi alabilir miyiz?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Evet. Disfaji terapisi yatarak tedavi veya rehabilitasyon sürecine paralel yürütülebilir, taburculuk sonrası muayenehanemizde devam edebilir ya da gerektiğinde ev ziyareti şeklinde sunulabilir." }
+    }
+  ]
+};
 ---
 
 <ServicePage
@@ -27,7 +54,7 @@ const schema = {
   breadcrumbLabel="Yutma Bozuklukları"
   tags={['Disfaji', 'Yutma', 'Nöroloji', 'Rehabilitasyon']}
   lang="tr"
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/schluckstoerungen/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/yutma-bozuklugu/' },
@@ -112,6 +139,33 @@ const schema = {
     Disfaji yalnızca hastayı değil, tüm aileyi etkiler. Bu nedenle terapimize yakınları da dahil ediyoruz:
     Güvenli yemek hazırlama, yutmayı destekleyici tekniklerin uygulanması ve acil durumlar için
     net yönergeler sunuyoruz.
+  </p>
+
+  <h2>Sıkça Sorulan Sorular</h2>
+  <h3>Yutma güçlüğü (disfaji) tehlikeli midir?</h3>
+  <p>
+    Evet, tedavi edilmezse ciddi olabilir. Yiyecek veya sıvının yanlışlıkla soluk borusuna
+    kaçması aspirasyon pnömonisine yol açabilir; ayrıca yetersiz beslenme ve kilo kaybı riski
+    taşır. Bu nedenle erken tanı ve terapi büyük önem taşır.
+  </p>
+  <h3>İnme sonrası yutma bozukluğu geçer mi?</h3>
+  <p>
+    İnme sonrası disfaji sıklıkla görülür ve birçok hastada zamanla ve düzenli terapiyle
+    belirgin ölçüde iyileşir. Erken başlayan yutma terapisi, güvenli beslenmeyi yeniden
+    kazanma sürecini hızlandırır.
+  </p>
+  <h3>Yutma bozukluğu olan biri normal yemek yiyebilir mi?</h3>
+  <p>
+    Bu, bozukluğun ciddiyetine bağlıdır. Bazı hastalar kıvam uyarlaması (örn. koyulaştırılmış
+    sıvılar, püre kıvamında yemekler) ile güvenle beslenebilirken, kas güçlendirme
+    egzersizleriyle zamanla normal kıvamlara geçiş sağlanabilir. Terapi planı her zaman
+    bireysel olarak belirlenir.
+  </p>
+  <h3>Hastane veya bakım evindeyken de terapi alabilir miyiz?</h3>
+  <p>
+    Evet. Disfaji terapisi yatarak tedavi veya rehabilitasyon sürecine paralel yürütülebilir,
+    taburculuk sonrası muayenehanemizde devam edebilir ya da gerektiğinde ev ziyareti şeklinde
+    sunulabilir.
   </p>
     </article>
     <aside class="bento-tile bento-tile--soft">

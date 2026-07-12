@@ -18,6 +18,33 @@ const schema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kekemelik kendiliğinden geçer mi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Küçük çocuklarda görülen konuşma akıcısızlıkları bazen kendiliğinden düzelebilir, ancak 6 aydan uzun süren, güçlü bedensel gerilim eşlik eden ya da çocuğu rahatsız eden kekemelik belirtilerinde erken terapiye başlamak önemlidir. Erken müdahale, kalıcı kekemeliğe dönüşme riskini azaltır." }
+    },
+    {
+      "@type": "Question",
+      "name": "Artikülasyon bozukluğu (yanlış ses söyleme) hangi yaşta tedavi edilmeli?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Çoğu ses hatası 4–5 yaşına kadar kendiliğinden düzelir. Bu yaştan sonra hâlâ belirgin ses hataları varsa veya konuşma anlaşılırlığı akranlarına göre düşükse, bir değerlendirme önerilir." }
+    },
+    {
+      "@type": "Question",
+      "name": "Dizartri ile kekemelik arasındaki fark nedir?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kekemelik bir akıcılık bozukluğudur ve genellikle çocuklukta başlar; dizartri ise inme veya Parkinson gibi nörolojik hastalıklar sonucu konuşma kaslarının zayıflamasından kaynaklanan bir motor konuşma bozukluğudur ve her yaşta ortaya çıkabilir. İkisi de farklı terapi yaklaşımları gerektirir." }
+    },
+    {
+      "@type": "Question",
+      "name": "Yetişkinlikte kekemelik terapisi hâlâ işe yarar mı?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Evet. Yetişkinlerde kekemelik terapisi akıcılığı artırmaya, konuşma kaygısını azaltmaya ve iletişimde özgüveni yeniden kazanmaya odaklanır. Kekemelik yılların içinde yerleşmiş olsa da, bireyselleştirilmiş teknikler günlük hayatta somut fark yaratabilir." }
+    }
+  ]
+};
 ---
 
 <ServicePage
@@ -27,7 +54,7 @@ const schema = {
   breadcrumbLabel="Konuşma Bozuklukları"
   tags={['Kekemelik', 'Artikülasyon Bozukluğu', 'Dizartri', 'Konuşma Apraksisi']}
   lang="tr"
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/sprechstoerungen/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/konusma-bozuklugu/' },
@@ -108,6 +135,34 @@ const schema = {
   <p>
     Terapi temposu ve hedefleri size özel belirlenir – hem mesleki hem günlük yaşam
     gereklilikleri gözetilerek.
+  </p>
+
+  <h2>Sıkça Sorulan Sorular</h2>
+  <h3>Kekemelik kendiliğinden geçer mi?</h3>
+  <p>
+    Küçük çocuklarda görülen konuşma akıcısızlıkları bazen kendiliğinden düzelebilir, ancak
+    6 aydan uzun süren, güçlü bedensel gerilim eşlik eden ya da çocuğu rahatsız eden kekemelik
+    belirtilerinde erken terapiye başlamak önemlidir. Erken müdahale, kalıcı kekemeliğe
+    dönüşme riskini azaltır.
+  </p>
+  <h3>Artikülasyon bozukluğu (yanlış ses söyleme) hangi yaşta tedavi edilmeli?</h3>
+  <p>
+    Çoğu ses hatası 4–5 yaşına kadar kendiliğinden düzelir. Bu yaştan sonra hâlâ belirgin
+    ses hataları varsa veya konuşma anlaşılırlığı akranlarına göre düşükse, bir değerlendirme
+    önerilir.
+  </p>
+  <h3>Dizartri ile kekemelik arasındaki fark nedir?</h3>
+  <p>
+    Kekemelik bir akıcılık bozukluğudur ve genellikle çocuklukta başlar; dizartri ise inme
+    veya Parkinson gibi nörolojik hastalıklar sonucu konuşma kaslarının zayıflamasından
+    kaynaklanan bir motor konuşma bozukluğudur ve her yaşta ortaya çıkabilir. İkisi de farklı
+    terapi yaklaşımları gerektirir.
+  </p>
+  <h3>Yetişkinlikte kekemelik terapisi hâlâ işe yarar mı?</h3>
+  <p>
+    Evet. Yetişkinlerde kekemelik terapisi akıcılığı artırmaya, konuşma kaygısını azaltmaya
+    ve iletişimde özgüveni yeniden kazanmaya odaklanır. Kekemelik yılların içinde yerleşmiş
+    olsa da, bireyselleştirilmiş teknikler günlük hayatta somut fark yaratabilir.
   </p>
     </article>
     <aside class="bento-tile bento-tile--soft">
