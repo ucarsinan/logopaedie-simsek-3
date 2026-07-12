@@ -10,7 +10,8 @@ User-agent: Bingbot
 Allow: /
 Disallow: /api/
 
-User-agent: GPTBot
+# AI answer engines & assistants — retrieval/citation on user request: allowed
+User-agent: PerplexityBot
 Allow: /
 Disallow: /api/
 
@@ -18,20 +19,35 @@ User-agent: ChatGPT-User
 Allow: /
 Disallow: /api/
 
-User-agent: PerplexityBot
+User-agent: OAI-SearchBot
 Allow: /
 Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+# Model-training crawlers: disallowed
+User-agent: GPTBot
+Disallow: /
 
 User-agent: ClaudeBot
-Allow: /
-Disallow: /api/
+Disallow: /
 
 User-agent: anthropic-ai
-Allow: /
-Disallow: /api/
+Disallow: /
 
 User-agent: Google-Extended
-Allow: /
-Disallow: /api/
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
 
 Sitemap: https://logopaedie-simsek.de/sitemap-index.xml

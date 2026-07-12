@@ -218,6 +218,7 @@ export const tr: Translations = {
   },
   hero: {
     badge: "Duisburg'da dil ve konuşma terapisi",
+    h1_prefix: "Duisburg'da dil ve konuşma terapisi – Praxis für Logopädie Şimşek:",
     heading_line1: "Konuşun.",
     heading_line2: "Anlayın.",
     heading_line3: "Bağlanın.",
