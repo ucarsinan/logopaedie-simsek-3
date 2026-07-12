@@ -14,12 +14,21 @@ const schema = {
     { "@type": "ListItem", "position": 2, "name": "Logopädie Duisburg", "item": `${siteUrl}/logopaedie-duisburg/` }
   ]
 };
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Logopädie Duisburg – Praxis für Logopädie Şimşek",
+  "description": "Logopädische Praxis in Duisburg-Mitte – nur 2 Minuten vom Hauptbahnhof. Sprach-, Sprech-, Stimm- und Schlucktherapie für Kinder und Erwachsene.",
+  "url": `${siteUrl}/logopaedie-duisburg/`,
+  "about": { "@type": "MedicalCondition", "name": "Sprach-, Sprech-, Stimm- und Schluckstörungen" }
+};
 ---
 
 <Layout
   title="Logopädie Duisburg | Sprach- & Sprechtherapie Şimşek"
-  description="Logopädische Praxis in Duisburg-Mitte – nur 2 Minuten vom Hauptbahnhof. Sprach-, Sprech-, Stimm- und Schlucktherapie für Kinder und Erwachsene. Zweisprachig Deutsch & Türkisch."
-  additionalSchemas={[schema]}
+  description="Logopädische Praxis in Duisburg-Mitte – nur 2 Minuten vom Hauptbahnhof. Sprach-, Sprech-, Stimm- und Schlucktherapie für Kinder und Erwachsene."
+  additionalSchemas={[pageSchema, schema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/logopaedie-duisburg/` },
     { lang: 'x-default', url: `${siteUrl}/logopaedie-duisburg/` },

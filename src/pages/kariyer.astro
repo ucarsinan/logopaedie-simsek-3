@@ -90,7 +90,6 @@ const benefits = page.benefits.map((benefit, index) => ({
     </nav>
 
     <!-- Bento Grid -->
-    <h1 class="sr-only">{page.sr_heading}</h1>
     <section class="container py-10 pb-16">
       <div class="bento-grid">
 
@@ -102,7 +101,7 @@ const benefits = page.benefits.map((benefit, index) => ({
             <span class="tag tag--green">{page.tags.week}</span>
             <span class="tag tag--accent">{page.tags.current}</span>
           </div>
-          <p class="bento-hero__title">{page.hero_title}</p>
+          <h1 class="bento-hero__title"><span class="sr-only">{page.sr_heading}: </span>{page.hero_title}</h1>
           <p class="bento-hero__subtitle">{page.hero_subtitle}</p>
           <a href={applyHref} class="bento-cta-btn">
             {page.apply_now}

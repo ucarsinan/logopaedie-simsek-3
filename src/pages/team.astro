@@ -57,6 +57,13 @@ const teamSchemas = [
     "name": "Logopädin",
     "occupationalCategory": "Therapeutin",
     "skills": "Erwachsenentherapie, Hausbesuche, Kindersprachtherapie, Diagnostik, Therapieplanung"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
   }
 }
 ];
@@ -73,7 +80,7 @@ const breadcrumbSchema = {
 
 <Layout
   title="Unser Team – Praxis für Logopädie Şimşek Duisburg"
-  description="Emel Şimşek-Uçar und Mara Nießalla – das Logopädinnen-Team der Praxis für Logopädie Şimşek in Duisburg. Zweisprachige Logopädie auf Deutsch und Türkisch, über 10 Jahre Erfahrung."
+  description="Emel Şimşek-Uçar und Mara Nießalla – das Logopädinnen-Team der Praxis für Logopädie Şimşek in Duisburg. Deutsch & Türkisch, über 10 Jahre Erfahrung."
   additionalSchemas={[...teamSchemas, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/team/` },

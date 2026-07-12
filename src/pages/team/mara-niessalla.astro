@@ -25,6 +25,13 @@ const personSchema = {
     "name": "Logopädin",
     "occupationalCategory": "Therapeutin",
     "skills": "Erwachsenentherapie, Hausbesuche, Kindersprachtherapie, Diagnostik, Therapieplanung"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
   }
 };
 
@@ -63,8 +70,8 @@ const schwerpunkte = [
 ---
 
 <Layout
-  title="Mara Nießalla – Staatlich geprüfte Logopädin | Praxis für Logopädie Şimşek Duisburg"
-  description="Mara Nießalla, staatlich geprüfte Logopädin bei der Praxis für Logopädie Şimşek in Duisburg. Überwiegend Erwachsenentherapie, Hausbesuche bei Bedarf und auch Therapie für Kinder und Jugendliche."
+  title="Mara Nießalla – Logopädin | Praxis für Logopädie Şimşek Duisburg"
+  description="Mara Nießalla, staatlich geprüfte Logopädin bei der Praxis für Logopädie Şimşek in Duisburg. Erwachsenentherapie, Hausbesuche und Therapie für Kinder."
   additionalSchemas={[personSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/team/mara-niessalla/` },

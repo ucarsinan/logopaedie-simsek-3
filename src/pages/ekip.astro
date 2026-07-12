@@ -34,6 +34,25 @@ const personSchema = {
   }
 };
 
+const maraPersonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mara Nießalla",
+  "jobTitle": maraRole,
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Praxis für Logopädie Şimşek",
+    "url": siteUrl
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tonhallenstraße 21",
+    "addressLocality": "Duisburg",
+    "postalCode": "47051",
+    "addressCountry": "DE"
+  }
+};
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -48,7 +67,7 @@ const breadcrumbSchema = {
   title={page.title}
   description={page.description}
   lang="tr"
-  additionalSchemas={[personSchema, breadcrumbSchema]}
+  additionalSchemas={[personSchema, maraPersonSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/team/` },
     { lang: 'tr', url: `${siteUrl}/ekip/` },
@@ -212,9 +231,9 @@ const breadcrumbSchema = {
         <a href="/kariyer/" class="bento-cta rounded-(--radius-lg) p-6 flex flex-col justify-between text-white group transition-opacity hover:opacity-90" style="background: var(--color-accent);">
           <div>
             <span class="text-xs font-semibold tracking-[.12em] uppercase text-white/60">{page.career_label}</span>
-            <h3 class="font-display text-[1.5rem] font-semibold text-white mt-2 leading-tight">
+            <h2 class="font-display text-[1.5rem] font-semibold text-white mt-2 leading-tight">
               {page.career_heading}
-            </h3>
+            </h2>
             <p class="text-white/65 text-xs mt-2.5 leading-relaxed">
               {page.career_text}
             </p>
