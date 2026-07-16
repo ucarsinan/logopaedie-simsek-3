@@ -35,7 +35,7 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
     <div class="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[540px]:grid-cols-1 max-[640px]:gap-4">
       {members.map((member, index) => (
         <article class={`group bg-surface border border-border rounded-md max-[640px]:rounded-[20px] overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}`}>
-          <div class="h-65 max-[640px]:h-58 relative overflow-hidden bg-surface-2">
+          <div class="h-78 max-[640px]:h-70 relative overflow-hidden bg-surface-2">
             {member.photo
               ? <Image
                   src={member.photo}
