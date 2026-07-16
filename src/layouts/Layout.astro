@@ -205,6 +205,13 @@ const jsonLd = {
         : 'index, follow'
     } />
 
+    <!-- Without JS the reveal animation must never hide content -->
+    <noscript>
+      <style>
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+
     <!-- View Transitions: eliminates page-reload flash on navigation -->
     <ClientRouter />
   </head>
@@ -240,6 +247,9 @@ const jsonLd = {
         });
       }
 
+      // Elements still waiting to be revealed (re-collected on every navigation)
+      let pendingReveals: Set<Element> = new Set();
+
       function initPage() {
         initLandmarkGuard();
 
@@ -248,11 +258,36 @@ const jsonLd = {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('reveal-visible');
+              pendingReveals.delete(entry.target);
               observer.unobserve(entry.target);
             }
           });
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        pendingReveals = new Set(document.querySelectorAll('.reveal:not(.reveal-visible)'));
+        pendingReveals.forEach(el => observer.observe(el));
+
+        // Fallback: fast flick-scrolling can cross the whole viewport between
+        // two observer callbacks, so those entries never report isIntersecting.
+        // Reveal anything whose top has passed the viewport bottom.
+        if (document.documentElement.dataset.revealFallbackReady !== 'true') {
+          document.documentElement.dataset.revealFallbackReady = 'true';
+          let ticking = false;
+          const revealPassed = () => {
+            ticking = false;
+            pendingReveals.forEach(el => {
+              if (el.getBoundingClientRect().top < window.innerHeight - 40) {
+                el.classList.add('reveal-visible');
+                pendingReveals.delete(el);
+              }
+            });
+          };
+          window.addEventListener('scroll', () => {
+            if (!ticking && pendingReveals.size) {
+              ticking = true;
+              requestAnimationFrame(revealPassed);
+            }
+          }, { passive: true });
+        }
 
         document.querySelectorAll('[data-google-map-load]').forEach(button => {
           if (button instanceof HTMLButtonElement && button.dataset.ready !== 'true') {
