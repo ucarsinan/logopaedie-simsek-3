@@ -107,13 +107,13 @@ export const de = {
     description:
       "Lernen Sie Emel Şimşek-Uçar und Mara Nießalla kennen – das Team der Praxis für Logopädie Şimşek Duisburg. Logopädie auf Deutsch und Türkisch, über 10 Jahre Erfahrung.",
     sr_heading: "Unser Team – Praxis für Logopädie Şimşek Duisburg",
-    emel_alt: "Emel Şimşek-Uçar – Praxisinhaberin und Logopädin in Duisburg",
+    emel_alt: "Emel Şimşek-Uçar – Logopädin in Duisburg",
     mara_alt: "Mara Nießalla – Logopädin bei Praxis für Logopädie Şimşek Duisburg",
     owner_badge: "Praxisinhaberin",
     therapist_badge: "Logopädin",
     experience_chip: "10+ Jahre Erfahrung",
     patients_chip: "Kinder & Erwachsene",
-    mara_chips: ["Erwachsene", "Hausbesuche bei Bedarf", "Auch Kinder und Jugendliche"],
+    mara_chips: ["Erwachsene", "Hausbesuche bei Bedarf", "Kinder und Jugendliche"],
     title_label: "Unser Team",
     title_line: "Logopädie ist Vertrauenssache.",
     title_emphasis: "Vertrauenssache.",
@@ -163,11 +163,6 @@ export const de = {
     hero_subtitle:
       "Für unser Team in Duisburg-Mitte suchen wir Logopädinnen und Logopäden (w/m/d).",
     apply_now: "Jetzt bewerben",
-    stats_experience_label: "Erfahrung",
-    stats_experience_desc: "Jahre Praxiserfahrung in Duisburg",
-    languages_label: "Sprachen",
-    therapy_areas_label: "Therapiebereiche",
-    therapy_areas_desc: "Kinder, Erwachsene und Hausbesuche",
     expectations_label: "Das bringen Sie mit",
     profile_heading: "Ihr Profil",
     requirements: [
@@ -236,7 +231,7 @@ export const de = {
     section_label: "Über die Praxis",
     heading: "Fundierte Logopädie in Duisburg – für Kinder und Erwachsene",
     description:
-      "Unter der Leitung der staatlich geprüften Logopädin <strong>Emel Şimşek-Uçar</strong> bietet unsere moderne Praxis fundierte Diagnostik, Beratung und Therapie für Menschen aller Altersgruppen – von der frühen Kindheit bis ins Seniorenalter.",
+      "Unter der Leitung der staatlich anerkannten Logopädin <strong>Emel Şimşek-Uçar</strong> bietet unsere moderne Praxis fundierte Diagnostik, Beratung und Therapie für Menschen aller Altersgruppen – von der frühen Kindheit bis ins Seniorenalter.",
     stat_bilingual: "Zweisprachige Versorgung DE & TR",
     stat_areas_value: "Alle",
     stat_areas: "Therapiebereiche für alle Altersgruppen",
@@ -443,7 +438,7 @@ export const de = {
   schema: {
     business_description:
       "Logopädische Praxis in Duisburg – spezialisiert auf Sprach-, Sprech- und Stimmtherapie für Kinder und Erwachsene. Zweisprachig DE/TR.",
-    founder_title: "Staatlich geprüfte Logopädin",
+    founder_title: "Staatlich anerkannte Logopädin",
     offer_catalog_name: "Logopädisches Therapieangebot",
     services: [
       { name: "Sprachtherapie", url: "/therapie/sprachstoerungen" },

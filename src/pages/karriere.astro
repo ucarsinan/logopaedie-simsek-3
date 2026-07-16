@@ -59,6 +59,7 @@ const benefits = [
   { icon: "📚", title: "Fortbildungsunterstützung", desc: "Wir fördern Ihre fachliche Weiterentwicklung" },
   { icon: "⏰", title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit – 4-Tage-Woche nach Absprache möglich" },
   { icon: "🚇", title: "Zentrale Lage", desc: "Direkt am Duisburger Hauptbahnhof, gut per ÖPNV erreichbar" },
+  { icon: "🌐", title: "Zweisprachiges Team", desc: "Fachlicher Austausch und Zusammenarbeit auf Deutsch und Türkisch" },
 ];
 ---
 
@@ -112,20 +113,20 @@ const benefits = [
           <div class="bento-hero__deco" aria-hidden="true"></div>
         </div>
 
-        <!-- STATS CARD -->
-        <div class="bento-card bento-stats">
-          <p class="bento-stats__label">Erfahrung</p>
-          <p class="bento-stats__number">10+</p>
-          <p class="bento-stats__desc">Jahre Praxiserfahrung in Duisburg</p>
-          <div class="bento-stats__divider"></div>
-          <p class="bento-stats__label">Sprachen</p>
-          <p class="bento-stats__langs">
-            <span>🇩🇪 Deutsch</span>
-            <span>🇹🇷 Türkisch</span>
+        <!-- ÜBER UNS CARD -->
+        <div class="bento-card bento-about">
+          <div class="bento-section-tag bento-section-tag--accent">Über uns</div>
+          <h2 class="bento-card__title">Praxis für Logopädie Şimşek</h2>
+          <p class="bento-about__text">
+            Etablierte Logopädiepraxis in Duisburg-Mitte mit über zehn Jahren Erfahrung.
+            Eine Praxis in der Region mit zweisprachigem Angebot auf Deutsch und Türkisch.
           </p>
-          <div class="bento-stats__divider"></div>
-          <p class="bento-stats__label">Therapiebereiche</p>
-          <p class="bento-stats__desc">Kinder, Erwachsene und Hausbesuche</p>
+          <div class="bento-about__tag-row">
+            <span class="mini-tag">Frühförderung</span>
+            <span class="mini-tag">Erwachsene</span>
+            <span class="mini-tag">DE/TR</span>
+            <span class="mini-tag">Hausbesuche</span>
+          </div>
         </div>
 
         <!-- ANFORDERUNGEN CARD -->
@@ -151,22 +152,6 @@ const benefits = [
             </li>
           </ul>
           <p class="req-welcome">Berufseinsteiger herzlich willkommen!</p>
-        </div>
-
-        <!-- ÜBER UNS CARD -->
-        <div class="bento-card bento-about">
-          <div class="bento-section-tag bento-section-tag--accent">Über uns</div>
-          <h2 class="bento-card__title">Praxis für Logopädie Şimşek</h2>
-          <p class="bento-about__text">
-            Etablierte Logopädiepraxis in Duisburg-Mitte mit über zehn Jahren Erfahrung.
-            Eine Praxis in der Region mit zweisprachigem Angebot auf Deutsch und Türkisch.
-          </p>
-          <div class="bento-about__tag-row">
-            <span class="mini-tag">Frühförderung</span>
-            <span class="mini-tag">Erwachsene</span>
-            <span class="mini-tag">DE/TR</span>
-            <span class="mini-tag">Hausbesuche</span>
-          </div>
         </div>
 
         <!-- BENEFITS CARD (unified) -->
@@ -391,55 +376,9 @@ const benefits = [
     pointer-events: none;
   }
 
-  /* ─── Stats Card ─── */
-  .bento-stats {
-    background: var(--color-bg-alt);
-    border-color: var(--color-border);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .bento-stats__label {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    margin-bottom: 4px;
-  }
-  .bento-stats__number {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .bento-stats__desc {
-    font-size: 0.8125rem;
-    color: var(--color-text-muted);
-    line-height: 1.4;
-    margin-bottom: 0;
-  }
-  .bento-stats__divider {
-    width: 100%;
-    height: 1px;
-    background: var(--color-border);
-    margin: 1rem 0;
-  }
-  .bento-stats__langs {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 0.875rem;
-    color: var(--color-text);
-    font-weight: 500;
-    margin-bottom: 0;
-  }
-
   /* ─── Anforderungen Card ─── */
   .bento-requirements {
-    grid-column: span 2;
+    grid-column: span 3;
   }
   .bento-section-tag {
     display: inline-block;
@@ -850,23 +789,7 @@ const benefits = [
     .bento-portal { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
     .bento-portal__left { width: 100%; }
     .bento-portal__features { grid-template-columns: repeat(4, 1fr); }
-    .bento-stats {
-      grid-column: span 2;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem 1.25rem;
-      align-items: start;
-    }
-    .bento-stats__divider { display: none; }
-    .bento-stats > :nth-child(1),
-    .bento-stats > :nth-child(2),
-    .bento-stats > :nth-child(3) { grid-column: 1; }
-    .bento-stats > :nth-child(5) { grid-column: 2; grid-row: 1; }
-    .bento-stats > :nth-child(6) { grid-column: 2; grid-row: 2 / span 2; }
-    .bento-stats > :nth-child(8) { grid-column: 3; grid-row: 1; }
-    .bento-stats > :nth-child(9) { grid-column: 3; grid-row: 2 / span 2; }
-    .bento-stats__number { font-size: 2.7rem; }
-    .bento-stats__langs { gap: 0.35rem; }
+    .bento-about { grid-column: span 2; }
     .bento-requirements { grid-column: span 2; }
     .bento-benefits-all { grid-column: span 2; }
     .benefits-inner-grid { grid-template-columns: repeat(2, 1fr); }
@@ -882,21 +805,12 @@ const benefits = [
   @media (max-width: 560px) {
     .bento-grid { grid-template-columns: 1fr; gap: 10px; }
     .bento-hero,
-    .bento-stats,
     .bento-requirements,
     .bento-benefits-all,
     .bento-portal,
     .bento-apply,
     .bento-note { grid-column: span 1; }
     .bento-portal__features { grid-template-columns: repeat(2, 1fr); }
-    .bento-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .bento-stats__divider {
-      display: block;
-    }
     .benefits-inner-grid { grid-template-columns: 1fr; }
     .benefit-item {
       padding: 1rem;

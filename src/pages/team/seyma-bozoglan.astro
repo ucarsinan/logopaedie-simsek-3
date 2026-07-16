@@ -1,0 +1,112 @@
+---
+import TeamProfileLayout from '../../layouts/TeamProfileLayout.astro';
+import seymaImg from '../../assets/therapy/team-seyma-bozoglan.jpg';
+
+const siteUrl = 'https://logopaedie-simsek.de';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Şeyma Bozoğlan",
+  "jobTitle": "Staatlich anerkannte Logopädin",
+  "url": `${siteUrl}/team/seyma-bozoglan/`,
+  "description": "Staatlich anerkannte Logopädin in der Praxis für Logopädie Şimşek in Duisburg. Şeyma Bozoğlan behandelt zweisprachig auf Deutsch und Türkisch, beide auf Muttersprachniveau, mit den Schwerpunkten Kindersprachtherapie und Aphasietherapie.",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Praxis für Logopädie Şimşek",
+    "url": siteUrl
+  },
+  "knowsLanguage": [
+    { "@type": "Language", "name": "German" },
+    { "@type": "Language", "name": "Turkish" }
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Logopädin",
+    "occupationalCategory": "Therapeutin",
+    "skills": "Kindersprachtherapie, Aphasietherapie, Zweisprachige Diagnostik"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
+    { "@type": "ListItem", "position": 2, "name": "Team", "item": `${siteUrl}/team/` },
+    { "@type": "ListItem", "position": 3, "name": "Şeyma Bozoğlan", "item": `${siteUrl}/team/seyma-bozoglan/` }
+  ]
+};
+
+const facts = [
+  {
+    icon: `<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>`,
+    label: 'Qualifikation',
+    value: 'Staatlich anerkannte Logopädin',
+  },
+  {
+    icon: `<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>`,
+    label: 'Sprachen',
+    value: 'Deutsch & Türkçe (beide Muttersprache)',
+  },
+  {
+    icon: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
+    label: 'Schwerpunkte',
+    value: 'Kindersprache & Aphasie',
+  },
+  {
+    icon: `<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>`,
+    label: 'Standort',
+    value: 'Duisburg-Mitte',
+  },
+];
+
+const schwerpunkte = [
+  {
+    icon: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`,
+    title: 'Kindersprachtherapie',
+    text: 'Sprachentwicklungsförderung und logopädische Therapie bei Kindern',
+  },
+  {
+    icon: `<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>`,
+    title: 'Aphasietherapie',
+    text: 'Sprachtherapie bei Erwachsenen nach Schlaganfall oder anderen neurologischen Erkrankungen',
+  },
+];
+---
+
+<TeamProfileLayout
+  title="Şeyma Bozoğlan – Staatlich anerkannte Logopädin | Praxis für Logopädie Şimşek Duisburg"
+  description="Şeyma Bozoğlan, staatlich anerkannte Logopädin in der Praxis für Logopädie Şimşek in Duisburg. Zweisprachig auf Deutsch und Türkisch, Schwerpunkte Kindersprache und Aphasie."
+  additionalSchemas={[personSchema, breadcrumbSchema]}
+  hreflangAlternates={[
+    { lang: 'de', url: `${siteUrl}/team/seyma-bozoglan/` },
+    { lang: 'x-default', url: `${siteUrl}/team/seyma-bozoglan/` },
+  ]}
+  name="Şeyma Bozoğlan"
+  heroEyebrow="Logopädin · Praxis für Logopädie Şimşek Duisburg"
+  heroVariant="neutral"
+  qualification="Staatlich anerkannte Logopädin"
+  badges={[
+    { label: 'Deutsch & Türkçe (Muttersprache)', variant: 'soft' },
+    { label: 'Kindersprache' },
+    { label: 'Aphasie' },
+  ]}
+  photo={seymaImg}
+  photoAlt="Şeyma Bozoğlan – Logopädin in der Praxis für Logopädie Şimşek Duisburg"
+  facts={facts}
+  schwerpunkte={schwerpunkte}
+>
+  <Fragment slot="intro">
+    <h2>Über Şeyma Bozoğlan</h2>
+    <p>
+      Şeyma Bozoğlan ist <strong>staatlich anerkannte Logopädin</strong> in der Praxis für
+      Logopädie Şimşek in Duisburg. Sie behandelt zweisprachig auf Deutsch und Türkisch –
+      beide Sprachen spricht sie auf <strong>Muttersprachniveau</strong>.
+    </p>
+    <p>
+      Ihre fachlichen Schwerpunkte liegen in der <strong>Kindersprachtherapie</strong> sowie
+      der <strong>Aphasietherapie</strong> bei Erwachsenen.
+    </p>
+  </Fragment>
+</TeamProfileLayout>

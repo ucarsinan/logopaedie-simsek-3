@@ -104,15 +104,15 @@ export const tr: Translations = {
   team_page: {
     title: "Ekibimiz – Praxis für Logopädie Şimşek Duisburg",
     description:
-      "Emel Şimşek-Uçar ve Mara Nießalla ile tanışın – Praxis für Logopädie Şimşek Duisburg ekibi. Almanca ve Türkçe dil ve konuşma terapisi, 10 yılı aşkın deneyim.",
+      "Emel Şimşek-Uçar, Mara Nießalla, Kristina Imping ve Şeyma Bozoğlan ile tanışın – Praxis für Logopädie Şimşek Duisburg ekibi. Almanca ve Türkçe dil ve konuşma terapisi, 10 yılı aşkın deneyim.",
     sr_heading: "Ekibimiz – Praxis für Logopädie Şimşek Duisburg",
-    emel_alt: "Emel Şimşek-Uçar – muayenehane sahibi ve dil ve konuşma terapisti, Duisburg",
+    emel_alt: "Emel Şimşek-Uçar – Praxis für Logopädie Şimşek Duisburg'da dil ve konuşma terapisti",
     mara_alt: "Mara Nießalla – Praxis für Logopädie Şimşek Duisburg'da dil ve konuşma terapisti",
     owner_badge: "Muayenehane sahibi",
     therapist_badge: "Dil ve konuşma terapisti",
     experience_chip: "10+ yıl deneyim",
     patients_chip: "Çocuklar ve yetişkinler",
-    mara_chips: ["Yetişkinler", "Gerekirse ev ziyareti", "Çocuklar ve gençler de"],
+    mara_chips: ["Yetişkinler", "Gerekirse ev ziyareti", "Çocuklar ve gençler"],
     title_label: "Ekibimiz",
     title_line: "Dil ve konuşma terapisi güven işidir.",
     title_emphasis: "güven işidir.",
@@ -124,7 +124,7 @@ export const tr: Translations = {
       "Her iki dilde değerlendirme, danışmanlık ve terapi — çok dillilik engel değil, kaynaktır.",
     quote: "Çok dillilik bir engel değil – bir kaynaktır.",
     career_label: "Kariyer",
-    career_heading: "Ekip arıyoruz",
+    career_heading: "Ekip arkadaşı arıyoruz",
     career_text:
       "Duisburg'daki ekibimiz için deneyimli dil ve konuşma terapistleri arıyoruz.",
     job_link: "İş ilanı",
@@ -163,11 +163,6 @@ export const tr: Translations = {
     hero_subtitle:
       "Duisburg-Mitte'deki ekibimiz için dil ve konuşma terapisti (m/w/d) arıyoruz.",
     apply_now: "Hemen başvurun",
-    stats_experience_label: "Deneyim",
-    stats_experience_desc: "Duisburg'da 10+ yıllık klinik deneyim",
-    languages_label: "Diller",
-    therapy_areas_label: "Terapi alanları",
-    therapy_areas_desc: "Çocuklar, yetişkinler ve ev ziyaretleri",
     expectations_label: "Beklentilerimiz",
     profile_heading: "Profiliniz",
     requirements: [
@@ -191,6 +186,7 @@ export const tr: Translations = {
       { title: "Eğitim desteği", desc: "Mesleki gelişiminizi destekliyoruz" },
       { title: "Esnek çalışma saatleri", desc: "Tam veya yarı zamanlı – 4 günlük çalışma haftası görüşmede değerlendirilebilir" },
       { title: "Merkezi konum", desc: "Duisburg Hbf'ye yürüyerek kolay erişim" },
+      { title: "İki dilli ekip", desc: "Almanca ve Türkçe ortak çalışma ve mesleki alışveriş" },
     ],
     portal_label: "Kariyer portalı",
     portal_heading: "Pozisyon hakkında daha fazla bilgi",

@@ -4,35 +4,151 @@ import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
-import emelImg from '../assets/therapy/team-emel-simsek-ucar.jpg';
-import maraImg from '../assets/therapy/team-mara-niessalla.png';
 import { useTranslations } from '../i18n/index';
+import emelImg from '../assets/therapy/team-emel-simsek-ucar-grid.jpg';
+import maraImg from '../assets/therapy/team-mara-niessalla-grid.jpg';
+import kristinaImg from '../assets/therapy/team-kristina-imping-grid.jpg';
+import seymaImg from '../assets/therapy/team-seyma-bozoglan-grid.jpg';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 const t = useTranslations('tr');
 const page = t.team_page;
-const emelRole = t.team.members[0]?.role ?? page.therapist_badge;
-const maraRole = t.team.members[1]?.role ?? page.therapist_badge;
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Emel Şimşek-Uçar",
-  "jobTitle": emelRole,
-  "worksFor": {
-    "@type": "MedicalOrganization",
-    "name": "Praxis für Logopädie Şimşek",
-    "url": siteUrl
-  },
-  "knowsLanguage": ["de", "tr"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Tonhallenstraße 21",
-    "addressLocality": "Duisburg",
-    "postalCode": "47051",
-    "addressCountry": "DE"
-  }
+// ── Ekip veri modeli (team.astro ile aynı yapı, Türkçe içerikle) ──
+type TeamMember = {
+  slug: string;
+  name: string;
+  jobTitle: string;
+  roleBadge: string;
+  isLead: boolean;
+  img: ImageMetadata;
+  imgAlt: string;
+  loading: 'eager' | 'lazy';
+  tags: string[];
+  schema: {
+    description: string;
+    hasOccupation: Record<string, unknown>;
+    knowsLanguage?: Record<string, unknown>[];
+    address?: Record<string, unknown>;
+  };
 };
+
+const members: TeamMember[] = [
+  {
+    slug: 'emel-simsek-ucar',
+    name: 'Emel Şimşek-Uçar',
+    jobTitle: 'Dil ve Konuşma Terapisti',
+    roleBadge: page.therapist_badge,
+    isLead: true,
+    img: emelImg,
+    imgAlt: page.emel_alt,
+    loading: 'eager',
+    tags: [t.kontakt.info_lang_value, page.experience_chip, page.patients_chip],
+    schema: {
+      description: 'Praxis für Logopädie Şimşek Duisburg\'da dil ve konuşma terapisti ve muayenehanenin kurucusu. Almanca ve Türkçe iki dilli değerlendirme ve terapide uzmanlaşmıştır. 10 yılı aşkın klinik deneyime sahiptir.',
+      knowsLanguage: [
+        { '@type': 'Language', name: 'German' },
+        { '@type': 'Language', name: 'Turkish' },
+      ],
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: page.therapist_badge,
+        occupationalCategory: 'Terapist',
+        skills: 'Dil terapisi, ses terapisi, disfaji terapisi, erken destek, afazi terapisi, iki dilli tanı',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Tonhallenstraße 21',
+        addressLocality: 'Duisburg',
+        postalCode: '47051',
+        addressCountry: 'DE',
+      },
+    },
+  },
+  {
+    slug: 'mara-niessalla',
+    name: 'Mara Nießalla',
+    jobTitle: 'Dil ve Konuşma Terapisti',
+    roleBadge: page.therapist_badge,
+    isLead: false,
+    img: maraImg,
+    imgAlt: page.mara_alt,
+    loading: 'lazy',
+    tags: page.mara_chips,
+    schema: {
+      description: 'Praxis für Logopädie Şimşek Duisburg\'da dil ve konuşma terapisti. Ağırlıklı olarak yetişkin terapisi, gerektiğinde ev ziyaretleri ve çocuk ve genç terapisi sunmaktadır.',
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: page.therapist_badge,
+        occupationalCategory: 'Terapist',
+        skills: 'Yetişkin terapisi, ev ziyaretleri, çocuk dili terapisi, tanı, terapi planlaması',
+      },
+    },
+  },
+  {
+    slug: 'kristina-imping',
+    name: 'Kristina Imping',
+    jobTitle: 'Dil ve Konuşma Terapisti',
+    roleBadge: page.therapist_badge,
+    isLead: false,
+    img: kristinaImg,
+    imgAlt: `Kristina Imping – Praxis für Logopädie Şimşek Duisburg'da dil ve konuşma terapisti`,
+    loading: 'lazy',
+    tags: ['Hayvan destekli terapi', 'Beslenme Bozukluğu', 'Uzun yıllara dayanan deneyim'],
+    schema: {
+      description: 'Praxis für Logopädie Şimşek Duisburg\'da dil ve konuşma terapisti. Kristina Imping, hayvan destekli terapi ve beslenme bozukluklarının tedavisinde uzmanlaşmıştır ve uzun yıllara dayanan klinik deneyime sahiptir.',
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: page.therapist_badge,
+        occupationalCategory: 'Terapist',
+        skills: 'Hayvan destekli terapi, beslenme bozukluğu',
+      },
+    },
+  },
+  {
+    slug: 'seyma-bozoglan',
+    name: 'Şeyma Bozoğlan',
+    jobTitle: 'Dil ve Konuşma Terapisti',
+    roleBadge: page.therapist_badge,
+    isLead: false,
+    img: seymaImg,
+    imgAlt: `Şeyma Bozoğlan – Praxis für Logopädie Şimşek Duisburg'da dil ve konuşma terapisti`,
+    loading: 'lazy',
+    tags: [t.kontakt.info_lang_value, 'Çocuk Dili Terapisi', 'Afazi'],
+    schema: {
+      description: 'Praxis für Logopädie Şimşek Duisburg\'da dil ve konuşma terapisti. Şeyma Bozoğlan, Almanca ve Türkçe olmak üzere iki dilde (her ikisi de anadil seviyesinde) terapi vermektedir; uzmanlık alanları çocuk dili terapisi ve afazi terapisidir.',
+      knowsLanguage: [
+        { '@type': 'Language', name: 'German' },
+        { '@type': 'Language', name: 'Turkish' },
+      ],
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: page.therapist_badge,
+        occupationalCategory: 'Terapist',
+        skills: 'Çocuk dili terapisi, afazi terapisi, iki dilli tanı',
+      },
+    },
+  },
+];
+
+const leadMember = members.find((m) => m.isLead) ?? members[0];
+
+const teamSchemas = members.map((member) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: member.name,
+  jobTitle: member.jobTitle,
+  url: `${siteUrl}/ekip/`,
+  description: member.schema.description,
+  worksFor: {
+    '@type': 'MedicalOrganization',
+    name: 'Praxis für Logopädie Şimşek',
+    url: siteUrl,
+  },
+  ...(member.schema.knowsLanguage ? { knowsLanguage: member.schema.knowsLanguage } : {}),
+  hasOccupation: member.schema.hasOccupation,
+  ...(member.schema.address ? { address: member.schema.address } : {}),
+}));
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -48,7 +164,7 @@ const breadcrumbSchema = {
   title={page.title}
   description={page.description}
   lang="tr"
-  additionalSchemas={[personSchema, breadcrumbSchema]}
+  additionalSchemas={[...teamSchemas, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/team/` },
     { lang: 'tr', url: `${siteUrl}/ekip/` },
@@ -77,71 +193,67 @@ const breadcrumbSchema = {
       <h1 class="sr-only" id="ekip-heading">{page.sr_heading}</h1>
       <div class="bento">
 
-        <!-- ── Emel: Large portrait (spans 2 rows) ── -->
-        <article class="bento-emel relative overflow-hidden rounded-(--radius-lg) group" aria-label="Emel Şimşek-Uçar">
-          <Image
-            src={emelImg}
-            alt={page.emel_alt}
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-            widths={[480, 720, 960]}
-            sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
-            loading="eager"
-            decoding="async"
-          />
-          <!-- Gradient overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
-          <!-- Badge -->
-          <div class="absolute top-5 right-5 flex flex-col items-end gap-2">
-            <span class="bg-accent text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
-              {page.owner_badge}
-            </span>
-            <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
-              {page.therapist_badge}
-            </span>
-          </div>
-          <!-- Content overlay -->
-          <div class="absolute bottom-0 left-0 right-0 p-6">
-            <h2 class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
-              Emel Şimşek-Uçar
-            </h2>
-            <p class="text-white/70 text-sm mb-3 font-medium">{emelRole}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
-                {t.kontakt.info_lang_value}
-              </span>
-              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
-                {page.experience_chip}
-              </span>
-              <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
-                {page.patients_chip}
+        <!-- ── Ekip üyeleri (veri odaklı, 2–4 eşdeğer kart) ── -->
+        <div class="bento-members" style={`--member-count: ${members.length};`}>
+        {members.map((member) => (
+          <article class="bento-member relative overflow-hidden rounded-(--radius-lg) group" aria-label={member.name}>
+            <Image
+              src={member.img}
+              alt={member.imgAlt}
+              class="bento-member-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              widths={[480, 720, 960]}
+              sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
+              loading={member.loading}
+              decoding="async"
+            />
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
+            <!-- Badge -->
+            <div class="absolute top-5 right-5 flex flex-col items-end gap-2">
+              <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
+                {member.roleBadge}
               </span>
             </div>
-          </div>
-        </article>
+            <!-- Content overlay -->
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h2 class="font-display text-[1.3rem] font-semibold text-white leading-tight mb-1 whitespace-nowrap overflow-hidden text-ellipsis">
+                {member.name}
+              </h2>
+              <div class="flex flex-col items-start gap-2">
+                {member.tags.map((tag) => (
+                  <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+        </div>
 
-        <!-- ── Title card ── -->
-        <div class="bento-title rounded-(--radius-lg) p-8 flex flex-col justify-between" style="background: var(--color-primary-light);">
-          <span class="text-xs font-semibold tracking-[.12em] uppercase text-primary">{page.title_label}</span>
+        <!-- ── Bilgi kartları (Başlık, İstatistik, Diller, Alıntı, Kariyer CTA) ── -->
+        <div class="bento-info">
+
+        <!-- ── Ekip Bilgisi: Başlık + Kennzahlen birleştirildi ── -->
+        <div class="bento-teaminfo rounded-(--radius-lg) p-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6" style="background: var(--color-primary-light);">
           <div>
-            <p class="font-display text-[clamp(1.875rem,3vw,2.625rem)] font-semibold text-text leading-[1.1] mb-3">
-              Dil ve konuşma terapisi<br><em class="text-primary">{page.title_emphasis}</em>
+            <span class="text-xs font-semibold tracking-[.12em] uppercase text-primary mb-3 block">{page.title_label}</span>
+            <p class="font-display text-[clamp(1.75rem,2.6vw,2.25rem)] font-semibold text-text leading-[1.15] mb-2">
+              Dil ve konuşma terapisi <em class="text-primary">{page.title_emphasis}</em>
             </p>
-            <p class="text-text-muted text-[0.9375rem] leading-relaxed max-w-xs">
+            <p class="text-text-muted text-[0.9375rem] leading-relaxed max-w-md">
               {page.title_description}
             </p>
           </div>
-        </div>
-
-        <!-- ── Stats card ── -->
-        <div class="bento-stats rounded-(--radius-lg) p-6 flex flex-col justify-between" style="background: var(--color-primary);">
-          <div class="space-y-1 mb-6">
-            <div class="font-display text-[3.25rem] font-semibold text-white leading-none">10+</div>
-            <div class="text-white/55 text-xs font-medium leading-snug">{page.stats_experience}</div>
-          </div>
-          <div class="w-8 h-px mb-6" style="background: rgba(255,255,255,0.2);"></div>
-          <div class="space-y-1">
-            <div class="font-display text-[3.25rem] font-semibold text-white leading-none">2</div>
-            <div class="text-white/55 text-xs font-medium leading-snug">{page.stats_languages}</div>
+          <div class="flex gap-8 shrink-0">
+            <div>
+              <div class="font-display text-[2.75rem] font-semibold text-primary leading-none">{members.length}</div>
+              <div class="text-text-muted text-xs font-medium leading-snug mt-1">Dil ve Konuşma<br>Terapisti</div>
+            </div>
+            <div>
+              <div class="font-display text-[2.75rem] font-semibold text-primary leading-none">2</div>
+              <div class="text-text-muted text-xs font-medium leading-snug mt-1">{page.stats_languages}</div>
+            </div>
           </div>
         </div>
 
@@ -155,67 +267,32 @@ const breadcrumbSchema = {
               🇹🇷&nbsp; Türkçe
             </span>
           </div>
-          <p class="text-text-muted text-xs leading-relaxed">
-            {page.language_note}
+          <p class="text-text-muted text-sm font-medium leading-relaxed">
+            Almanca ve Türkçe dillerinde değerlendirme, danışmanlık ve terapi.
           </p>
         </div>
-
-        <!-- ── Mara: Large portrait ── -->
-        <article class="bento-mara relative overflow-hidden rounded-(--radius-lg) group" aria-label="Mara Nießalla">
-          <Image
-            src={maraImg}
-            alt={page.mara_alt}
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-            widths={[480, 720, 960]}
-            sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 40vw"
-            loading="lazy"
-            decoding="async"
-          />
-          <!-- Gradient overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-[#1c1916]/70 via-[#1c1916]/15 to-transparent"></div>
-          <!-- Badge -->
-          <div class="absolute top-5 right-5">
-            <span class="bg-primary text-white text-[.7rem] font-bold tracking-[.06em] uppercase px-3 py-1.5 rounded-full shadow-md">
-              {page.therapist_badge}
-            </span>
-          </div>
-          <!-- Content overlay -->
-          <div class="absolute bottom-0 left-0 right-0 p-6">
-            <h2 class="font-display text-[1.625rem] font-semibold text-white leading-tight mb-1">
-              Mara Nießalla
-            </h2>
-            <p class="text-white/70 text-sm mb-3 font-medium">{maraRole}</p>
-            <div class="flex flex-wrap gap-2">
-              {page.mara_chips.map(chip => (
-                <span class="bg-white/15 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
-                  {chip}
-                </span>
-              ))}
-            </div>
-          </div>
-        </article>
 
         <!-- ── Philosophy quote ── -->
         <div class="bento-phil rounded-(--radius-lg) p-7 flex flex-col justify-center" style="background: var(--color-accent-light);">
           <svg class="mb-4 shrink-0 opacity-35" width="36" height="36" viewBox="0 0 24 24" fill="var(--color-accent)" aria-hidden="true">
             <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
           </svg>
-          <blockquote class="font-display text-[1.1875rem] italic text-text leading-relaxed mb-4">
+          <blockquote class="font-display text-[1.1875rem] font-medium italic text-text leading-relaxed mb-4">
             „{page.quote}"
           </blockquote>
-          <cite class="text-xs font-semibold tracking-widest uppercase not-italic" style="color: var(--color-accent);">
-            Emel Şimşek-Uçar
+          <cite class="text-sm font-semibold tracking-widest uppercase not-italic" style="color: var(--color-accent);">
+            {leadMember.name}
           </cite>
         </div>
 
         <!-- ── Career CTA ── -->
         <a href="/kariyer/" class="bento-cta rounded-(--radius-lg) p-6 flex flex-col justify-between text-white group transition-opacity hover:opacity-90" style="background: var(--color-accent);">
           <div>
-            <span class="text-xs font-semibold tracking-[.12em] uppercase text-white/60">{page.career_label}</span>
+            <span class="text-xs font-bold tracking-[.12em] uppercase text-white/80">{page.career_label}</span>
             <h3 class="font-display text-[1.5rem] font-semibold text-white mt-2 leading-tight">
               {page.career_heading}
             </h3>
-            <p class="text-white/65 text-xs mt-2.5 leading-relaxed">
+            <p class="text-white/90 text-sm font-medium mt-2.5 leading-relaxed">
               {page.career_text}
             </p>
           </div>
@@ -230,6 +307,7 @@ const breadcrumbSchema = {
           </div>
         </a>
 
+        </div>
       </div>
     </section>
 
@@ -249,55 +327,52 @@ const breadcrumbSchema = {
 </Layout>
 
 <style>
-  /* ── Bento grid layout ── */
-  .bento {
+  /*
+   * ── Bento grid layout ──
+   * team.astro ile aynı yapı: kişi kartları için ayrı bir grid, altında 5
+   * bilgi kartı için ayrı bir grid. Bu, her iki alanı da üye sayısından
+   * (2–4) bağımsız ve öngörülebilir tutar.
+   */
+  .bento-members {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(240px, auto) minmax(200px, auto) minmax(210px, auto);
+    grid-template-columns: repeat(var(--member-count, 4), 1fr);
     gap: 12px;
-    grid-template-areas:
-      "emel mara title"
-      "emel mara stats"
-      "lang  phil  cta";
+    margin-bottom: 12px;
   }
 
-  .bento-emel  { grid-area: emel;  }
-  .bento-title { grid-area: title; }
-  .bento-stats { grid-area: stats; }
-  .bento-lang  { grid-area: lang;  }
-  .bento-mara  { grid-area: mara;  }
-  .bento-phil  { grid-area: phil;  }
-  .bento-cta   { grid-area: cta;   }
+  .bento-member {
+    min-height: 460px;
+  }
+
+  .bento-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .bento-teaminfo { grid-column: 1 / -1; }
 
   @media (max-width: 860px) {
-    .bento {
+    .bento-members {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      gap: 10px;
-      grid-template-areas:
-        "title title"
-        "emel  mara"
-        "stats lang"
-        "phil  cta";
     }
-    .bento-emel { min-height: 340px; }
-    .bento-mara { min-height: 340px; }
+    .bento-member {
+      min-height: 340px;
+    }
+    .bento-info {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 540px) {
-    .bento {
+    .bento-members {
       grid-template-columns: 1fr;
-      gap: 10px;
-      grid-template-areas:
-        "title"
-        "emel"
-        "mara"
-        "stats"
-        "lang"
-        "phil"
-        "cta";
     }
-    .bento-emel { min-height: 380px; }
-    .bento-mara { min-height: 380px; }
+    .bento-member {
+      min-height: 380px;
+    }
+    .bento-info {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

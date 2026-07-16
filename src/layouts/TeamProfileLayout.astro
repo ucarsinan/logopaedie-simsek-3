@@ -1,0 +1,397 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface HreflangAlternate {
+  lang: string;
+  url: string;
+}
+
+interface Fact {
+  /** Raw inner SVG markup (paths/circles/etc.), rendered with set:html */
+  icon: string;
+  label: string;
+  value: string;
+}
+
+interface Schwerpunkt {
+  /** Raw inner SVG markup (paths/circles/etc.), rendered with set:html */
+  icon: string;
+  title: string;
+  text: string;
+}
+
+interface Badge {
+  label: string;
+  /** 'solid' = filled primary, 'soft' = light primary, 'outline' (default) = neutral surface */
+  variant?: 'solid' | 'soft' | 'outline';
+}
+
+interface Props {
+  // SEO / <Layout> passthrough
+  title: string;
+  description: string;
+  additionalSchemas?: Record<string, unknown>[];
+  hreflangAlternates?: HreflangAlternate[];
+
+  // Breadcrumb + identity
+  name: string;
+
+  // Hero
+  /** Raw HTML allowed (e.g. a nested <span lang="tr"> for pronunciation hints), rendered with set:html */
+  heroEyebrow: string;
+  /** 'highlight' = primary-tinted hero background + primary eyebrow; 'neutral' (default) = bg-alt background + muted eyebrow */
+  heroVariant?: 'highlight' | 'neutral';
+  qualification: string;
+  badges: Badge[];
+
+  // Sidebar: photo + quick facts
+  photo: ImageMetadata;
+  photoAlt: string;
+  photoWidths?: number[];
+  facts: Fact[];
+
+  // Bio: Schwerpunkte-Karten (rendered between the "intro" and "outro" slots)
+  schwerpunkte: Schwerpunkt[];
+
+  // Fine-tuning to preserve pre-existing per-page spacing differences
+  contentContainerClass?: string;
+  ctaMarginClass?: string;
+}
+
+const {
+  title,
+  description,
+  additionalSchemas = [],
+  hreflangAlternates = [],
+  name,
+  heroEyebrow,
+  heroVariant = 'neutral',
+  qualification,
+  badges,
+  photo,
+  photoAlt,
+  photoWidths = [380, 520, 640],
+  facts,
+  schwerpunkte,
+  contentContainerClass = 'container py-10 max-[640px]:py-7',
+  ctaMarginClass = 'mt-4',
+} = Astro.props;
+
+const badgeVariantClass: Record<NonNullable<Badge['variant']>, string> = {
+  solid: 'bg-primary text-white',
+  soft: 'bg-primary-light text-primary-dark',
+  outline: 'bg-surface border border-border text-text-muted',
+};
+
+const heroBgClass = heroVariant === 'highlight' ? 'bg-primary-light' : 'bg-bg-alt';
+const heroEyebrowClass = heroVariant === 'highlight' ? 'text-primary' : 'text-text-muted';
+---
+
+<Layout
+  title={title}
+  description={description}
+  additionalSchemas={additionalSchemas}
+  hreflangAlternates={hreflangAlternates}
+>
+  <Header />
+  <Nav />
+  <main class="pt-[calc(var(--header-h)+var(--nav-h))]">
+
+    <!-- Breadcrumb -->
+    <nav class="bg-bg-alt border-b border-border" aria-label="Breadcrumb">
+      <div class="container py-3">
+        <ol class="flex items-center gap-2 text-sm text-text-muted flex-wrap" role="list">
+          <li><a href="/" class="hover:text-primary transition-colors">Startseite</a></li>
+          <li aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </li>
+          <li><a href="/team/" class="hover:text-primary transition-colors">Team</a></li>
+          <li aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </li>
+          <li class="text-text font-medium" aria-current="page">{name}</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class={`${heroBgClass} border-b border-border py-12 pb-10`}>
+      <div class="container">
+        <span class={`text-xs font-semibold tracking-[.12em] uppercase ${heroEyebrowClass} mb-3 block`} set:html={heroEyebrow} />
+        <h1 class="font-display text-[clamp(2.25rem,5vw,3.25rem)] font-semibold text-text leading-tight mb-3">
+          {name}
+        </h1>
+        <p class="text-primary font-semibold text-[1.0625rem] mb-4">
+          {qualification}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          {badges.map((badge) => (
+            <span class={`${badgeVariantClass[badge.variant ?? 'outline']} text-xs font-semibold px-3 py-1.5 rounded-full`}>{badge.label}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Content -->
+    <div class={contentContainerClass}>
+      <div class="profile-grid bento-page-grid">
+
+        <!-- Sidebar: Photo + Quick Facts -->
+        <aside class="profile-sidebar">
+          <div class="profile-photo-card bento-tile">
+            <Image
+              src={photo}
+              alt={photoAlt}
+              class="profile-photo"
+              widths={photoWidths}
+              sizes="(max-width: 860px) 100vw, 320px"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+
+          <!-- Quick facts -->
+          <div class="profile-card bento-tile bento-tile--soft">
+            <div class="profile-card-head">
+              <span>Kurzprofil</span>
+              <strong>{name}</strong>
+            </div>
+            <ul class="profile-facts">
+              {facts.map((fact) => (
+                <li>
+                  <span class="profile-fact-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={fact.icon} />
+                  </span>
+                  <div>
+                    <div class="profile-fact-label">{fact.label}</div>
+                    <div class="profile-fact-value">{fact.value}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <a href="/kontakt/" class={`btn btn-primary w-full justify-center ${ctaMarginClass}`}>Termin anfragen</a>
+        </aside>
+
+        <!-- Bio content -->
+        <article class="profile-content prose-section bento-tile bento-tile--highlight">
+
+          <slot name="intro" />
+
+          <h2>Schwerpunkte</h2>
+          <div class="focus-grid">
+            {schwerpunkte.map((item) => (
+              <div class="focus-card">
+                <div class="focus-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={item.icon} />
+                </div>
+                <div>
+                  <div class="focus-title">{item.title}</div>
+                  <div class="focus-text">{item.text}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <slot name="outro" />
+
+          <div class="mt-8">
+            <a href="/therapie/" class="btn btn-ghost justify-center">Unser Therapieangebot</a>
+          </div>
+
+        </article>
+      </div>
+    </div>
+
+    <!-- Back to team -->
+    <div class="border-t border-border bg-bg-alt py-6">
+      <div class="container">
+        <a href="/team/" class="inline-flex items-center gap-2 text-sm font-semibold text-text-muted hover:text-primary transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Zurück zum Team
+        </a>
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .profile-grid {
+    align-items: start;
+  }
+  .profile-sidebar {
+    grid-column: span 4;
+    position: sticky;
+    top: calc(var(--header-h) + var(--nav-h) + 1.5rem);
+    display: grid;
+    gap: 0.875rem;
+    min-width: 0;
+  }
+  .profile-sidebar > .bento-tile {
+    grid-column: 1 / -1;
+  }
+  .profile-content.bento-tile {
+    grid-column: span 8;
+  }
+  .profile-photo-card {
+    overflow: hidden;
+    padding: 0;
+    background: var(--color-surface-2);
+  }
+  .profile-photo {
+    display: block;
+    width: 100%;
+    height: clamp(15rem, 26vw, 18.5rem);
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  .profile-card {
+    background:
+      linear-gradient(180deg, rgba(230, 244, 241, 0.58), rgba(255, 255, 255, 0.94)),
+      var(--color-surface);
+    padding: 1.15rem;
+  }
+  .profile-card-head {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .profile-card-head span {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+  .profile-card-head strong {
+    display: block;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+  .profile-facts {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .profile-facts li {
+    display: grid;
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: center;
+    min-width: 0;
+    padding-left: 0;
+  }
+  .profile-facts li::before {
+    content: none;
+    display: none;
+  }
+  .profile-fact-icon {
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 8px;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-fact-label {
+    color: var(--color-text-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .profile-fact-value {
+    color: var(--color-text);
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  @media (max-width: 860px) {
+    .profile-sidebar {
+      grid-column: span 12;
+      position: static;
+    }
+    .profile-content.bento-tile {
+      grid-column: span 12;
+    }
+    .profile-photo {
+      height: clamp(16rem, 72vw, 21rem);
+    }
+  }
+
+  /* Focus cards */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1rem 0 1.75rem;
+  }
+  @media (max-width: 600px) {
+    .focus-grid { grid-template-columns: 1fr; }
+  }
+  .focus-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .focus-icon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .focus-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+  .focus-text {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  /* Prose */
+  .prose-section :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-section :global(h2:first-child) { margin-top: 0; }
+  .prose-section :global(p) {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose-section :global(strong) { font-weight: 600; color: var(--color-text); }
+</style>

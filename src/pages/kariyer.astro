@@ -9,7 +9,7 @@ const siteUrl = 'https://logopaedie-simsek.de';
 const t = useTranslations('tr');
 const page = t.career_page;
 const applyHref = `mailto:info@logopaedie-simsek.de?subject=${encodeURIComponent(page.mail_subject)}&body=${encodeURIComponent(page.mail_body)}`;
-const benefitIcons = ["💰", "🤝", "💬", "🏢", "📚", "⏰", "🚇"];
+const benefitIcons = ["💰", "🤝", "💬", "🏢", "📚", "⏰", "🚇", "🌐"];
 const portalFeatureIcons = ["🧮", "📖", "📞", "📅"];
 
 const jobSchema = {
@@ -111,20 +111,16 @@ const benefits = page.benefits.map((benefit, index) => ({
           <div class="bento-hero__deco" aria-hidden="true"></div>
         </div>
 
-        <!-- STATS CARD -->
-        <div class="bento-card bento-stats">
-          <p class="bento-stats__label">{page.stats_experience_label}</p>
-          <p class="bento-stats__number">10+</p>
-          <p class="bento-stats__desc">{page.stats_experience_desc}</p>
-          <div class="bento-stats__divider"></div>
-          <p class="bento-stats__label">{page.languages_label}</p>
-          <p class="bento-stats__langs">
-            <span>🇩🇪 Almanca</span>
-            <span>🇹🇷 Türkçe</span>
-          </p>
-          <div class="bento-stats__divider"></div>
-          <p class="bento-stats__label">{page.therapy_areas_label}</p>
-          <p class="bento-stats__desc">{page.therapy_areas_desc}</p>
+        <!-- HAKKIMIZDA CARD -->
+        <div class="bento-card bento-about">
+          <div class="bento-section-tag bento-section-tag--accent">{page.about_label}</div>
+          <h2 class="bento-card__title">Praxis für Logopädie Şimşek</h2>
+          <p class="bento-about__text">{page.about_text}</p>
+          <div class="bento-about__tag-row">
+            {page.mini_tags.map(tag => (
+              <span class="mini-tag">{tag}</span>
+            ))}
+          </div>
         </div>
 
         <!-- BEKLENTILER CARD -->
@@ -140,18 +136,6 @@ const benefits = page.benefits.map((benefit, index) => ({
             ))}
           </ul>
           <p class="req-welcome">{page.welcome}</p>
-        </div>
-
-        <!-- HAKKIMIZDA CARD -->
-        <div class="bento-card bento-about">
-          <div class="bento-section-tag bento-section-tag--accent">{page.about_label}</div>
-          <h2 class="bento-card__title">Praxis für Logopädie Şimşek</h2>
-          <p class="bento-about__text">{page.about_text}</p>
-          <div class="bento-about__tag-row">
-            {page.mini_tags.map(tag => (
-              <span class="mini-tag">{tag}</span>
-            ))}
-          </div>
         </div>
 
         <!-- AVANTAJLAR CARD -->
@@ -359,55 +343,9 @@ const benefits = page.benefits.map((benefit, index) => ({
     pointer-events: none;
   }
 
-  /* ─── Stats Card ─── */
-  .bento-stats {
-    background: var(--color-bg-alt);
-    border-color: var(--color-border);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .bento-stats__label {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    margin-bottom: 4px;
-  }
-  .bento-stats__number {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .bento-stats__desc {
-    font-size: 0.8125rem;
-    color: var(--color-text-muted);
-    line-height: 1.4;
-    margin-bottom: 0;
-  }
-  .bento-stats__divider {
-    width: 100%;
-    height: 1px;
-    background: var(--color-border);
-    margin: 1rem 0;
-  }
-  .bento-stats__langs {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 0.875rem;
-    color: var(--color-text);
-    font-weight: 500;
-    margin-bottom: 0;
-  }
-
   /* ─── Beklentiler Card ─── */
   .bento-requirements {
-    grid-column: span 2;
+    grid-column: span 3;
   }
   .bento-section-tag {
     display: inline-block;
@@ -799,23 +737,7 @@ const benefits = page.benefits.map((benefit, index) => ({
     .bento-portal { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
     .bento-portal__left { width: 100%; }
     .bento-portal__features { grid-template-columns: repeat(4, 1fr); }
-    .bento-stats {
-      grid-column: span 2;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem 1.25rem;
-      align-items: start;
-    }
-    .bento-stats__divider { display: none; }
-    .bento-stats > :nth-child(1),
-    .bento-stats > :nth-child(2),
-    .bento-stats > :nth-child(3) { grid-column: 1; }
-    .bento-stats > :nth-child(5) { grid-column: 2; grid-row: 1; }
-    .bento-stats > :nth-child(6) { grid-column: 2; grid-row: 2 / span 2; }
-    .bento-stats > :nth-child(8) { grid-column: 3; grid-row: 1; }
-    .bento-stats > :nth-child(9) { grid-column: 3; grid-row: 2 / span 2; }
-    .bento-stats__number { font-size: 2.7rem; }
-    .bento-stats__langs { gap: 0.35rem; }
+    .bento-about { grid-column: span 2; }
     .bento-requirements { grid-column: span 2; }
     .bento-benefits-all { grid-column: span 2; }
     .benefits-inner-grid { grid-template-columns: repeat(2, 1fr); }
@@ -831,21 +753,12 @@ const benefits = page.benefits.map((benefit, index) => ({
   @media (max-width: 560px) {
     .bento-grid { grid-template-columns: 1fr; gap: 10px; }
     .bento-hero,
-    .bento-stats,
     .bento-requirements,
     .bento-benefits-all,
     .bento-portal,
     .bento-apply,
     .bento-note { grid-column: span 1; }
     .bento-portal__features { grid-template-columns: repeat(2, 1fr); }
-    .bento-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .bento-stats__divider {
-      display: block;
-    }
     .benefits-inner-grid { grid-template-columns: 1fr; }
     .benefit-item {
       padding: 1rem;
