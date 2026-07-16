@@ -21,6 +21,28 @@ const schema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ab wann sollte ich mein Kind logopädisch abklären lassen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wenn Ihr Kind deutlich weniger spricht als Gleichaltrige, mit 4–5 Jahren noch schwer verständlich spricht, stottert oder Schwierigkeiten hat, Anweisungen zu verstehen, ist eine frühzeitige logopädische Abklärung sinnvoll. Je früher eine mögliche Störung erkannt wird, desto gezielter kann sie behandelt werden." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wächst sich eine Sprachauffälligkeit nicht einfach aus?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bei manchen Kindern gleichen sich leichte Verzögerungen von selbst aus. Ein Teil der Kinder entwickelt jedoch ohne gezielte Förderung anhaltende Sprachprobleme, die sich später auf die schulische Entwicklung auswirken können. Eine Abklärung gibt Sicherheit, unabhängig vom weiteren Verlauf." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie läuft die Therapie bei mehrsprachigen Kindern ab?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Wir führen die Diagnostik in beiden Sprachen durch – Deutsch und Türkisch –, um mehrsprachigkeitstypische Entwicklungserscheinungen von einer tatsächlichen Sprachentwicklungsstörung zu unterscheiden. Mehrsprachigkeit selbst ist keine Störung, sondern eine Ressource." }
+    }
+  ]
+};
 ---
 
 <ServicePage
@@ -29,7 +51,7 @@ const schema = {
   serviceTitle="Logopädie für Kinder und Jugendliche"
   breadcrumbLabel="Kinder und Jugendliche"
   tags={['Frühförderung', 'Sprachentwicklung', 'Stottern', 'LRS']}
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/therapie/kinder-und-jugendliche/` },
     { lang: 'x-default', url: `${siteUrl}/therapie/kinder-und-jugendliche/` },
@@ -37,7 +59,7 @@ const schema = {
   relatedServices={[
     { title: 'Sprachstörungen', href: '/therapie/sprachstoerungen/', description: 'Sprachentwicklungsverzögerung, Aphasie, Grammatik' },
     { title: 'Sprechstörungen', href: '/therapie/sprechstoerungen/', description: 'Stottern, Lispeln, Ausspracheprobleme' },
-    { title: 'Logopädie für Erwachsene', href: '/therapie/erwachsene/', description: 'Aphasie, Dysarthrie, Stimmstörungen' },
+    { title: 'Logopädische Frühförderung Duisburg', href: '/fruehfoerderung-duisburg/', description: 'Früherkennung und Therapie für Kleinkinder ab dem Säuglingsalter' },
   ]}
 >
   <section class="bento-page" aria-label="Logopädie für Kinder und Jugendliche in Duisburg">
@@ -56,9 +78,10 @@ const schema = {
           <span class="bento-eyebrow">Kindertherapie</span>
           <h2>Spielerisch, präzise und auf den Entwicklungsstand abgestimmt</h2>
           <p>
-            Eine frühe Abklärung hilft, Förderbedarf rechtzeitig zu erkennen und passende
-            Unterstützung einzuleiten. Logopädische Therapie ist je nach Indikation ab dem
-            Säuglingsalter möglich.
+            Logopädische Therapie für Kinder und Jugendliche behandelt Sprach-, Sprech- und
+            Stimmentwicklung sowie Schluckstörungen – von ersten Auffälligkeiten im
+            Kleinkindalter bis zum Schulalter. Eine frühe Abklärung hilft, Förderbedarf
+            rechtzeitig zu erkennen und passende Unterstützung einzuleiten.
           </p>
         </div>
       </article>
@@ -173,6 +196,37 @@ const schema = {
         <p>
           Türkischsprachige Familien erhalten Elterngespräche und Beratung vollständig auf
           Türkisch – von der Erstdiagnostik bis zum Therapieabschluss.
+        </p>
+      </article>
+
+      <article class="bento-card bento-card--wide">
+        <span class="bento-eyebrow">Häufig gefragt</span>
+        <h2>Ab wann sollte ich mein Kind logopädisch abklären lassen?</h2>
+        <p>
+          Wenn Ihr Kind deutlich weniger spricht als Gleichaltrige, mit 4–5 Jahren noch
+          schwer verständlich spricht, stottert oder Schwierigkeiten hat, Anweisungen zu
+          verstehen, ist eine frühzeitige logopädische Abklärung sinnvoll. Je früher eine
+          mögliche Störung erkannt wird, desto gezielter kann sie behandelt werden.
+        </p>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Häufig gefragt</span>
+        <h2>Wächst sich eine Sprachauffälligkeit nicht einfach aus?</h2>
+        <p>
+          Bei manchen Kindern gleichen sich leichte Verzögerungen von selbst aus. Ein Teil
+          der Kinder entwickelt jedoch ohne gezielte Förderung anhaltende Sprachprobleme,
+          die sich später auf die schulische Entwicklung auswirken können.
+        </p>
+      </article>
+
+      <article class="bento-card">
+        <span class="bento-eyebrow">Häufig gefragt</span>
+        <h2>Wie läuft die Therapie bei mehrsprachigen Kindern ab?</h2>
+        <p>
+          Wir führen die Diagnostik in beiden Sprachen durch – Deutsch und Türkisch –, um
+          mehrsprachigkeitstypische Entwicklungserscheinungen von einer tatsächlichen
+          Sprachentwicklungsstörung zu unterscheiden.
         </p>
       </article>
     </div>

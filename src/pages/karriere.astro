@@ -17,7 +17,12 @@ const jobSchema = {
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
-    "sameAs": siteUrl,
+    "url": siteUrl,
+    "sameAs": [
+      "https://www.facebook.com/logopaediesimsek/",
+      "https://maps.app.goo.gl/yNSy6v8qxmapZZwJ9",
+      "https://xn--logopdiejobs-kcb.de/"
+    ],
     "logo": `${siteUrl}/logo.png`
   },
   "jobLocation": {
@@ -89,7 +94,6 @@ const benefits = [
     </nav>
 
     <!-- Bento Grid -->
-    <h1 class="sr-only">Logopädie (w/m/d) gesucht – Praxis für Logopädie Şimşek Duisburg</h1>
     <section class="container py-10 pb-16">
       <div class="bento-grid">
 
@@ -101,7 +105,7 @@ const benefits = [
             <span class="tag tag--green">4-Tage-Woche nach Absprache</span>
             <span class="tag tag--accent">Aktuell gesucht</span>
           </div>
-          <p class="bento-hero__title">Karriere bei #TeamSimsek</p>
+          <h1 class="bento-hero__title"><span class="sr-only">Logopädie (w/m/d) gesucht – Praxis für Logopädie Şimşek Duisburg: </span>Karriere bei #TeamSimsek</h1>
           <p class="bento-hero__subtitle">
             Wir suchen Verstärkung im Bereich Logopädie (w/m/d)
             für unser Team in Duisburg-Mitte.

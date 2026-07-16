@@ -50,11 +50,29 @@ const services = [
     icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/><path d="M16 4h3v4"/></svg>`,
   },
 ];
+
+const siteUrl = 'https://logopaedie-simsek.de';
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Therapie | Praxis für Logopädie Şimşek Duisburg",
+  "url": `${siteUrl}/therapie/`,
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": service.title,
+      "url": `${siteUrl}${service.href}`
+    }))
+  }
+};
 ---
 
 <Layout
   title="Therapie | Praxis für Logopädie Şimşek Duisburg"
   description="Das Therapieangebot der Praxis für Logopädie Şimşek in Duisburg: Sprachstörungen, Sprechstörungen, Stimmtherapie und Dysphagie – für Kinder und Erwachsene."
+  additionalSchemas={[collectionSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/' },

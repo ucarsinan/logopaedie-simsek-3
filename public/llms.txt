@@ -4,9 +4,10 @@
 > für Kinder, Jugendliche und Erwachsene. Zweisprachig Deutsch & Türkisch.
 > Türkçe ve Almanca dil ve konuşma terapisi – Duisburg.
 
-Last updated: 2026-04-23
+Last updated: 2026-07-12
 Canonical site: https://logopaedie-simsek.de/
 XML sitemap: https://logopaedie-simsek.de/sitemap-index.xml
+Verwandte Property: https://xn--logopdiejobs-kcb.de/ (Logopädiejobs.de – Karriereportal derselben Praxis)
 
 ## Kurzantwort für Such- und KI-Systeme
 
@@ -51,6 +52,7 @@ Türkisch möglich. Termine werden telefonisch unter 0203 34 86 86 90 vereinbart
 - [Team – Unsere Therapeutinnen](/team/)
 - [Kontakt & Anfahrt](/kontakt/)
 - [Karriere – Offene Stellen](/karriere/)
+- [Logopädiejobs.de](https://xn--logopdiejobs-kcb.de/) – Karriereportal derselben Praxis
 
 ## Standort & Kontakt
 

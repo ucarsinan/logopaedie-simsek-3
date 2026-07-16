@@ -18,16 +18,43 @@ const schema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ses kısıklığım ne zaman endişe verici hale gelir?",
+      "acceptedAnswer": { "@type": "Answer", "text": "İki haftadan uzun süren ses kısıklığında bir KBB uzmanına başvurulması önerilir. Muayenede organik bir neden bulunmazsa, ses terapisiyle ses kullanımınızı ve tekniklerinizi yeniden yapılandırarak sesinizi koruyabilirsiniz." }
+    },
+    {
+      "@type": "Question",
+      "name": "Öğretmenler için ses terapisi neden özellikle önemlidir?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Öğretmenlik gibi meslekler günlük yoğun ses kullanımı gerektirdiği için fonksiyonel ses bozuklukları ve ses nodülleri bu grupta sık görülür. Ses terapisi; doğru nefes tekniği, rezonans ve ses hijyeni ile hem sesi korur hem de mesleki performansı destekler." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ses terapisi ameliyatın yerini tutar mı?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bazı durumlarda evet – fonksiyonel ses bozukluklarının çoğu ameliyat gerektirmeden ses terapisiyle düzelir. Ses tellerinde yapısal değişiklik varsa terapi genellikle tıbbi tedaviyle birlikte, ameliyat öncesi ve sonrasında da uygulanır." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ses terapisi kaç seans sürer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Süre, ses bozukluğunun türüne ve şiddetine göre değişir. Fonksiyonel ses bozukluklarında birkaç hafta içinde belirgin iyileşme görülebilirken, nörolojik veya organik nedenli bozukluklarda süreç daha uzun olabilir. İlk tanı görüşmesinde size özel bir tahmini süre paylaşırız." }
+    }
+  ]
+};
 ---
 
 <ServicePage
   title="Ses Terapisi ve Ses Bozuklukları | Praxis für Logopädie Şimşek Duisburg"
-  description="Duisburg'da dil ve konuşma terapisi kapsamında ses terapisi – disfoni, kısıklık ve fonksiyonel ses bozukluklarında. Meslek sesi kullananlar, öğretmenler, şarkıcılar ve tüm yaş grupları için."
+  description="Duisburg'da ses terapisi – disfoni, kısıklık ve fonksiyonel ses bozukluklarında. Meslek sesi kullananlar, öğretmenler, şarkıcılar ve tüm yaş grupları için."
   serviceTitle="Ses Terapisi: Sesiniz – Uzmanlığımız"
   breadcrumbLabel="Ses Terapisi"
   tags={['Disfoni', 'Kısıklık', 'Ses Eğitimi', 'Meslek Sesi']}
   lang="tr"
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/stimmtherapie/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/ses-terapisi/' },
@@ -114,6 +141,33 @@ const schema = {
       Dilediğiniz zaman randevu alabilirsiniz.
     </p>
   </div>
+
+  <h2>Sıkça Sorulan Sorular</h2>
+  <h3>Ses kısıklığım ne zaman endişe verici hale gelir?</h3>
+  <p>
+    İki haftadan uzun süren ses kısıklığında bir KBB uzmanına başvurulması önerilir. Muayenede
+    organik bir neden bulunmazsa, ses terapisiyle ses kullanımınızı ve tekniklerinizi yeniden
+    yapılandırarak sesinizi koruyabilirsiniz.
+  </p>
+  <h3>Öğretmenler için ses terapisi neden özellikle önemlidir?</h3>
+  <p>
+    Öğretmenlik gibi meslekler günlük yoğun ses kullanımı gerektirdiği için fonksiyonel ses
+    bozuklukları ve ses nodülleri bu grupta sık görülür. Ses terapisi; doğru nefes tekniği,
+    rezonans ve ses hijyeni ile hem sesi korur hem de mesleki performansı destekler.
+  </p>
+  <h3>Ses terapisi ameliyatın yerini tutar mı?</h3>
+  <p>
+    Bazı durumlarda evet – fonksiyonel ses bozukluklarının çoğu ameliyat gerektirmeden ses
+    terapisiyle düzelir. Ses tellerinde yapısal değişiklik varsa terapi genellikle tıbbi
+    tedaviyle birlikte, ameliyat öncesi ve sonrasında da uygulanır.
+  </p>
+  <h3>Ses terapisi kaç seans sürer?</h3>
+  <p>
+    Süre, ses bozukluğunun türüne ve şiddetine göre değişir. Fonksiyonel ses bozukluklarında
+    birkaç hafta içinde belirgin iyileşme görülebilirken, nörolojik veya organik nedenli
+    bozukluklarda süreç daha uzun olabilir. İlk tanı görüşmesinde size özel bir tahmini süre
+    paylaşırız.
+  </p>
     </article>
     <aside class="bento-tile bento-tile--soft">
       <span class="bento-kicker">İletişim</span>

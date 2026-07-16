@@ -18,6 +18,33 @@ const schema = {
     ]
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Çocuğumun dil gelişimi geç mi kalıyor, yoksa bu normal bir aşama mı?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Çocukların dil gelişimi bireysel farklılıklar gösterebilir, ancak bazı işaretler erken değerlendirme gerektirir: 18–24 aylıkken hâlâ ilk kelimelerini söylememek veya 3 yaşında iki kelimelik cümleler kuramamak gibi. Böyle durumlarda erken bir değerlendirme hem endişenizi giderir hem de gerekiyorsa zaman kazandırır." }
+    },
+    {
+      "@type": "Question",
+      "name": "Afazi tamamen iyileşir mi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "İyileşme; inmenin şiddetine, hasarın yerine ve terapiye başlama zamanına göre değişir. Birçok hasta dil becerilerini kısmen veya büyük ölçüde yeniden kazanır, özellikle terapiye erken başlandığında ve yakınların sürece dahil olduğunda." }
+    },
+    {
+      "@type": "Question",
+      "name": "İki dilli çocuklarda dil bozukluğu nasıl anlaşılır?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Çok dilli büyüyen çocuklarda dilin her ikisinde de değerlendirme yapmak önemlidir. Sadece bir dilde zayıflık çoğunlukla normal iki dilli gelişimin bir parçasıdır; asıl dil bozukluğu her iki dilde de görülür. Almanca ve Türkçe konuşan terapistlerimiz bu ayrımı güvenilir şekilde yapabiliyor." }
+    },
+    {
+      "@type": "Question",
+      "name": "Dil bozukluğu için hangi doktor sevk yazabilir?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Çocuk doktorları, aile hekimleri, KBB uzmanları ve nörologlar dil ve konuşma terapisi için Heilmittelverordnung (sağlık hizmeti reçetesi) yazabilir. Reçeteyle birlikte tedavi masraflarının büyük kısmı yasal sağlık sigortası tarafından karşılanır." }
+    }
+  ]
+};
 ---
 
 <ServicePage
@@ -27,7 +54,7 @@ const schema = {
   breadcrumbLabel="Dil Bozuklukları"
   tags={['Dil Gelişimi', 'Afazi', 'Erken Müdahale', 'İki Dilli']}
   lang="tr"
-  additionalSchemas={[schema]}
+  additionalSchemas={[schema, faqSchema]}
   hreflangAlternates={[
     { lang: 'de', url: 'https://logopaedie-simsek.de/therapie/sprachstoerungen/' },
     { lang: 'tr', url: 'https://logopaedie-simsek.de/terapi/dil-bozuklugu/' },
@@ -122,6 +149,34 @@ const schema = {
   <p>
     Çocuklarda aileleri aktif olarak dahil ediyoruz – terapi kazanımlarını günlük yaşamda
     pekiştirecek net yönergeler sunuyoruz.
+  </p>
+
+  <h2>Sıkça Sorulan Sorular</h2>
+  <h3>Çocuğumun dil gelişimi geç mi kalıyor, yoksa bu normal bir aşama mı?</h3>
+  <p>
+    Çocukların dil gelişimi bireysel farklılıklar gösterebilir, ancak bazı işaretler erken
+    değerlendirme gerektirir: 18–24 aylıkken hâlâ ilk kelimelerini söylememek veya 3 yaşında
+    iki kelimelik cümleler kuramamak gibi. Böyle durumlarda erken bir değerlendirme hem
+    endişenizi giderir hem de gerekiyorsa zaman kazandırır.
+  </p>
+  <h3>Afazi tamamen iyileşir mi?</h3>
+  <p>
+    İyileşme; inmenin şiddetine, hasarın yerine ve terapiye başlama zamanına göre değişir.
+    Birçok hasta dil becerilerini kısmen veya büyük ölçüde yeniden kazanır, özellikle
+    terapiye erken başlandığında ve yakınların sürece dahil olduğunda.
+  </p>
+  <h3>İki dilli çocuklarda dil bozukluğu nasıl anlaşılır?</h3>
+  <p>
+    Çok dilli büyüyen çocuklarda dilin her ikisinde de değerlendirme yapmak önemlidir.
+    Sadece bir dilde zayıflık çoğunlukla normal iki dilli gelişimin bir parçasıdır; asıl
+    dil bozukluğu her iki dilde de görülür. Almanca ve Türkçe konuşan terapistlerimiz bu
+    ayrımı güvenilir şekilde yapabiliyor.
+  </p>
+  <h3>Dil bozukluğu için hangi doktor sevk yazabilir?</h3>
+  <p>
+    Çocuk doktorları, aile hekimleri, KBB uzmanları ve nörologlar dil ve konuşma terapisi
+    için Heilmittelverordnung (sağlık hizmeti reçetesi) yazabilir. Reçeteyle birlikte tedavi
+    masraflarının büyük kısmı yasal sağlık sigortası tarafından karşılanır.
   </p>
     </article>
     <aside class="bento-tile bento-tile--soft">

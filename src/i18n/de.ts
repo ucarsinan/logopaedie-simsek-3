@@ -213,6 +213,7 @@ export const de = {
   },
   hero: {
     badge: "Logopädie in Duisburg",
+    h1_prefix: "Logopädie Duisburg – Praxis für Logopädie Şimşek:",
     heading_line1: "Sprechen.",
     heading_line2: "Verstehen.",
     heading_line3: "Verbinden.",

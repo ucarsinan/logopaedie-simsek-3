@@ -20,32 +20,13 @@ const breadcrumbSchema = {
   ]
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Praxis für Logopädie Şimşek",
-  "url": siteUrl,
-  "telephone": "+4920334868690",
-  "faxNumber": "+4920334868691",
-  "email": "info@logopaedie-simsek.de",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Tonhallenstraße 21",
-    "addressLocality": "Duisburg",
-    "postalCode": "47051",
-    "addressCountry": "DE"
-  },
-  "openingHours": "Mo-Fr 08:00-18:00",
-  "hasMap": "https://www.google.com/maps/dir/?api=1&destination=Tonhallenstra%C3%9Fe+21%2C+47051+Duisburg"
-};
-
 ---
 
 <Layout
   title={page.title}
   description={page.description}
   lang="tr"
-  additionalSchemas={[breadcrumbSchema, localBusinessSchema]}
+  additionalSchemas={[breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/kontakt/` },
     { lang: 'tr', url: `${siteUrl}/iletisim/` },

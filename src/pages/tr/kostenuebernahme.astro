@@ -14,12 +14,39 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 2, "name": "Sigorta ve Ödeme", "item": `${siteUrl}/tr/kostenuebernahme/` }
   ]
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Reçetesiz dil ve konuşma terapisi alabilir miyim?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Evet, danışmanlık gibi bazı hizmetlerden reçetesiz, özel ödeme yaparak faydalanabilirsiniz. Ancak yasal sağlık sigortasının masrafları karşılaması için geçerli bir Heilmittelverordnung (sağlık hizmeti reçetesi) gereklidir." }
+    },
+    {
+      "@type": "Question",
+      "name": "Reçetem sona ererse ne olur?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tedaviye devam edilmesi gerekiyorsa, reçeteyi yazan hekiminizden yeni bir Heilmittelverordnung talep etmeniz yeterlidir. Süreç hakkında sizi bilgilendirir, gerekirse hekiminizle koordinasyonu kolaylaştırırız." }
+    },
+    {
+      "@type": "Question",
+      "name": "Özel sigortam masrafları tam karşılar mı?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bu, sigorta tarifenize bağlıdır. Bazı özel sigortalar masrafların tamamını, bazıları belirli bir oranını karşılar. Tedaviye başlamadan önce sigorta şirketinizle görüşmenizi öneririz." }
+    },
+    {
+      "@type": "Question",
+      "name": "Katkı payını ödeyemiyorsam ne yapabilirim?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yasal katkı payı muafiyeti ve üst sınırları hakkında sağlık sigortanızdan bilgi alabilirsiniz. Bu konudaki sorularınızda size Türkçe veya Almanca destek olabiliriz." }
+    }
+  ]
+};
 ---
 
 <Layout
   title="Sigorta Kapsamı ve Ödeme – Praxis für Logopädie Şimşek Duisburg"
   description="Dil ve konuşma terapisi hizmetlerinin sağlık sigortası tarafından karşılanması hakkında bilgiler. Reçete, katkı payı ve özel ödeme seçenekleri. Türkçe bilgi."
-  additionalSchemas={[breadcrumbSchema]}
+  additionalSchemas={[breadcrumbSchema, faqSchema]}
   lang="tr"
   hreflangAlternates={[
     { lang: 'tr', url: `${siteUrl}/tr/kostenuebernahme/` },
@@ -116,6 +143,31 @@ const breadcrumbSchema = {
             Telefon: <a href="tel:+4920334868690">0203 34 86 86 90</a>
           </p>
         </div>
+
+        <h2>Sıkça Sorulan Sorular</h2>
+        <h3>Reçetesiz dil ve konuşma terapisi alabilir miyim?</h3>
+        <p>
+          Evet, danışmanlık gibi bazı hizmetlerden reçetesiz, özel ödeme yaparak
+          faydalanabilirsiniz. Ancak yasal sağlık sigortasının masrafları karşılaması için
+          geçerli bir Heilmittelverordnung (sağlık hizmeti reçetesi) gereklidir.
+        </p>
+        <h3>Reçetem sona ererse ne olur?</h3>
+        <p>
+          Tedaviye devam edilmesi gerekiyorsa, reçeteyi yazan hekiminizden yeni bir
+          Heilmittelverordnung talep etmeniz yeterlidir. Süreç hakkında sizi bilgilendirir,
+          gerekirse hekiminizle koordinasyonu kolaylaştırırız.
+        </p>
+        <h3>Özel sigortam masrafları tam karşılar mı?</h3>
+        <p>
+          Bu, sigorta tarifenize bağlıdır. Bazı özel sigortalar masrafların tamamını,
+          bazıları belirli bir oranını karşılar. Tedaviye başlamadan önce sigorta
+          şirketinizle görüşmenizi öneririz.
+        </p>
+        <h3>Katkı payını ödeyemiyorsam ne yapabilirim?</h3>
+        <p>
+          Yasal katkı payı muafiyeti ve üst sınırları hakkında sağlık sigortanızdan bilgi
+          alabilirsiniz. Bu konudaki sorularınızda size Türkçe veya Almanca destek olabiliriz.
+        </p>
 
         <p class="mt-6">
           <a href="/kostenuebernahme/">→ Almanca versiyonu okuyun (Kosten & Kostenübernahme)</a>
