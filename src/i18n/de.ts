@@ -308,22 +308,31 @@ export const de = {
     description:
       "Hochqualifizierte Logopädinnen mit interdisziplinären Hintergründen – vereint durch Fachkompetenz, Herzlichkeit und echte Leidenschaft für die Therapie.",
     join_heading: "Du fehlst noch hier!",
-    join_role: "Werde Teil des Teams",
     join_text:
       "Wir suchen engagierte Kolleginnen und Kollegen, die mit uns wachsen möchten.",
     join_cta: "Jetzt bewerben",
+    view_all: "Lerne das ganze Team kennen",
     members: [
       {
         role: "Staatl. gepr. Logopädin",
         badge: "Praxisleitung",
         extra:
-          "Gründerin und Leitung der Praxis. Spezialisiert auf zweisprachige Diagnostik und Therapie (DE/TR), mit besonderer Expertise in der interkulturellen Frühförderung.",
+          "Zweisprachige Diagnostik & Therapie (DE/TR), interkulturelle Frühförderung",
       },
       {
         role: "Staatl. gepr. Logopädin",
         badge: "",
-        extra:
-          "Logopädin mit Schwerpunkt auf Erwachsenentherapie, Hausbesuchen bei Bedarf und klarer Therapieplanung. Sie begleitet auch Kinder und Jugendliche, wenn logopädische Unterstützung sinnvoll ist.",
+        extra: "Erwachsenentherapie, Hausbesuche bei Bedarf",
+      },
+      {
+        role: "Staatl. gepr. Logopädin",
+        badge: "",
+        extra: "Tiergestützte Therapie & Fütterstörungen",
+      },
+      {
+        role: "Staatl. gepr. Logopädin",
+        badge: "",
+        extra: "Zweisprachige Therapie (DE/TR), Kindersprache & Aphasie",
       },
     ],
   },

@@ -1,8 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import { useTranslations } from '../../i18n/index';
-import emelImg from '../../assets/therapy/team-emel-simsek-ucar.jpg';
-import maraImg from '../../assets/therapy/team-mara-niessalla.jpg';
+import emelImg from '../../assets/therapy/team-emel-simsek-ucar-grid.jpg';
+import maraImg from '../../assets/therapy/team-mara-niessalla-grid.jpg';
+import kristinaImg from '../../assets/therapy/team-kristina-imping-grid.jpg';
+import seymaImg from '../../assets/therapy/team-seyma-bozoglan-grid.jpg';
 
 interface Props {
   lang?: 'de' | 'tr';
@@ -11,10 +13,13 @@ interface Props {
 const { lang = 'de' } = Astro.props;
 const t = useTranslations(lang).team;
 const karriereHref = lang === 'tr' ? '/kariyer/' : '#karriere';
+const teamHref = lang === 'tr' ? '/ekip/' : '/team/';
 
 const memberData = [
   { initials: 'EŞ', name: 'Emel Şimşek-Uçar', isLead: true, photo: emelImg },
   { initials: 'MN', name: 'Mara Nießalla', photo: maraImg },
+  { initials: 'KI', name: 'Kristina Imping', photo: kristinaImg },
+  { initials: 'ŞB', name: 'Şeyma Bozoğlan', photo: seymaImg },
 ];
 
 const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
@@ -27,7 +32,7 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
       <h2 class="font-display text-[clamp(1.85rem,4vw,2.75rem)] max-[640px]:text-[clamp(1.6rem,8vw,2.1rem)] font-semibold leading-[1.15] text-text reveal reveal-delay-1" id="team-heading">#TeamSimsek</h2>
       <p class="text-[1.0625rem] max-[640px]:text-[0.97rem] text-text-muted leading-[1.7] max-[640px]:leading-[1.65] max-w-150 reveal reveal-delay-2">{t.description}</p>
     </header>
-    <div class="grid grid-cols-3 gap-6 max-[860px]:grid-cols-2 max-[540px]:grid-cols-1 max-[640px]:gap-4">
+    <div class="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[540px]:grid-cols-1 max-[640px]:gap-4">
       {members.map((member, index) => (
         <article class={`group bg-surface border border-border rounded-md max-[640px]:rounded-[20px] overflow-hidden shadow-sm transition-[transform,box-shadow] duration-250 ease-out hover:-translate-y-1 hover:shadow-md reveal${index === 0 ? '' : ` reveal-delay-${index}`}`}>
           <div class="h-65 max-[640px]:h-58 relative overflow-hidden bg-surface-2">
@@ -37,7 +42,7 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
                   alt={`${member.name} – Logopädin in der Praxis für Logopädie Şimşek Duisburg`}
                   class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   widths={[320, 480]}
-                  sizes="(max-width: 540px) 100vw, (max-width: 860px) 50vw, 33vw"
+                  sizes="(max-width: 540px) 100vw, (max-width: 1000px) 50vw, 25vw"
                   loading="lazy"
                   decoding="async"
                 />
@@ -56,17 +61,16 @@ const members = memberData.map((m, i) => ({ ...m, ...t.members[i] }));
           </div>
         </article>
       ))}
-      <article class="bg-[linear-gradient(135deg,var(--color-accent-light),var(--color-primary-light))] border-2 border-dashed border-border rounded-md max-[640px]:rounded-[20px] overflow-hidden flex flex-col reveal reveal-delay-5">
-        <div class="h-[200px] max-[640px]:h-[160px] flex items-center justify-center bg-transparent">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary opacity-50"><path d="M12 5v14M5 12h14"/></svg>
-        </div>
-        <div class="p-6 max-[640px]:p-5 text-center flex flex-col items-center justify-center flex-1 pt-0">
-          <h3 class="font-display text-[1.1875rem] max-[640px]:text-[1.1rem] font-semibold mb-1 text-text">{t.join_heading}</h3>
-          <p class="text-sm text-accent font-semibold mb-2.5">{t.join_role}</p>
-          <p class="text-[.8125rem] text-text-muted leading-[1.5] mb-4">{t.join_text}</p>
-          <a href={karriereHref} class="btn btn-accent text-sm py-[10px] px-5 max-[640px]:w-full max-[640px]:justify-center">{t.join_cta}</a>
-        </div>
-      </article>
+    </div>
+    <div class="mt-10 max-[640px]:mt-8 text-center reveal reveal-delay-4">
+      <a href={teamHref} class="btn btn-primary">{t.view_all}</a>
+    </div>
+    <div class="mt-8 max-[640px]:mt-6 bg-[linear-gradient(135deg,var(--color-accent-light),var(--color-primary-light))] border-2 border-dashed border-border rounded-md max-[640px]:rounded-[20px] p-6 max-[640px]:p-5 flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-center max-[720px]:text-center reveal reveal-delay-5">
+      <div>
+        <h3 class="font-display text-[1.1875rem] max-[640px]:text-[1.1rem] font-semibold mb-1 text-text">{t.join_heading}</h3>
+        <p class="text-sm text-text-muted leading-[1.5]">{t.join_text}</p>
+      </div>
+      <a href={karriereHref} class="btn btn-accent text-sm py-[10px] px-5 shrink-0 max-[640px]:w-full max-[640px]:justify-center">{t.join_cta}</a>
     </div>
   </div>
   <div class="block w-full overflow-hidden leading-0 [&_svg]:block [&_svg]:w-full mt-14 max-[640px]:mt-10" aria-hidden="true">

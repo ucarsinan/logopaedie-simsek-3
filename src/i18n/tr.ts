@@ -314,21 +314,30 @@ export const tr: Translations = {
     description:
       "Farklı uzmanlık geçmişlerine sahip, yüksek nitelikli dil ve konuşma terapistleri – mesleki yetkinlik, samimi yaklaşım ve terapiye bağlılıkla bir araya gelmiş.",
     join_heading: "Siz de burada olabilirsiniz!",
-    join_role: "Ekibe katılın",
     join_text: "Bizimle birlikte büyümek isteyen motive meslektaşlar arıyoruz.",
     join_cta: "Hemen başvurun",
+    view_all: "Tüm ekibi yakından tanıyın",
     members: [
       {
         role: "Dil ve konuşma terapisti",
         badge: "Muayenehane yöneticisi",
         extra:
-          "Muayenehanenin kurucusu ve yöneticisi. İki dilli değerlendirme ve terapi (DE/TR) ile kültürlerarası erken destek alanında deneyimli.",
+          "İki dilli değerlendirme ve terapi (DE/TR), kültürlerarası erken destek",
       },
       {
         role: "Dil ve konuşma terapisti",
         badge: "",
-        extra:
-          "Ağırlıklı olarak yetişkin terapisi, gerektiğinde ev ziyaretleri ve anlaşılır terapi planlamasına odaklanır. Gerekli durumlarda çocuk ve gençlere de dil ve konuşma terapisi desteği verir.",
+        extra: "Yetişkin terapisi, gerektiğinde ev ziyaretleri",
+      },
+      {
+        role: "Dil ve konuşma terapisti",
+        badge: "",
+        extra: "Hayvan destekli terapi ve beslenme bozuklukları",
+      },
+      {
+        role: "Dil ve konuşma terapisti",
+        badge: "",
+        extra: "İki dilli terapi (DE/TR), çocuk dili ve afazi terapisi",
       },
     ],
   },
