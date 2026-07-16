@@ -1,6 +1,9 @@
 import type { Translations } from "./de";
 
 export const tr: Translations = {
+  a11y: {
+    skip_to_content: "İçeriğe geç",
+  },
   nav: {
     home: "Anasayfa",
     therapy: "Terapi",

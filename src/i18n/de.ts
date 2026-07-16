@@ -1,4 +1,7 @@
 export const de = {
+  a11y: {
+    skip_to_content: "Zum Inhalt springen",
+  },
   nav: {
     home: "Home",
     therapy: "Therapie",

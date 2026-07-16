@@ -59,7 +59,8 @@
 @media (max-width: 600px) {
   :root {
     --header-h: 64px;
-    --nav-h: 40px;
+    /* 48px keeps the compact CTAs at a 44px touch target (WCAG 2.5.8 / EAA) */
+    --nav-h: 48px;
   }
 }
 
@@ -82,9 +83,33 @@
 /* ─── Base ─── */
 @layer base {
   html {
-    scroll-behavior: smooth;
     font-size: 16px;
     scrollbar-gutter: stable;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  /* Anchor targets clear the fixed header + nav (works for in-page
+     clicks AND directly opened hash URLs like /#faq) */
+  [id] {
+    scroll-margin-top: calc(var(--header-h) + var(--nav-h) + 16px);
+  }
+  a,
+  button {
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 2px;
+  }
+  /* Dark surfaces need a light focus ring for 3:1 contrast */
+  footer :focus-visible,
+  .bg-primary :focus-visible,
+  .bg-text :focus-visible,
+  .bento-apply :focus-visible {
+    outline-color: #fff;
   }
   body {
     font-family: var(--font-body);
@@ -94,6 +119,27 @@
     overflow-x: clip;
     scrollbar-gutter: stable;
   }
+}
+
+/* ─── Skip Link (WCAG 2.4.1) ─── */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1100;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-dark);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transform: translateY(calc(-100% - 16px));
+}
+.skip-link:focus-visible {
+  transform: none;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /* ─── Container ─── */
@@ -119,7 +165,12 @@
   font-family: var(--font-body);
   font-size: 0.9375rem;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   white-space: nowrap;
   cursor: pointer;
   border: 2px solid transparent;

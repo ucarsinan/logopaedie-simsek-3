@@ -51,7 +51,9 @@ const normalizedHreflangAlternates = hreflangAlternates.map((alt) => ({
   ...alt,
   url: normalizeAbsoluteUrl(alt.url),
 }));
-const s = useTranslations(lang).schema;
+const translations = useTranslations(lang);
+const s = translations.schema;
+const skipLabel = translations.a11y.skip_to_content;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -207,6 +209,7 @@ const jsonLd = {
     <ClientRouter />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">{skipLabel}</a>
     <slot />
     <script>
       function restoreLandmarkVisibility() {
@@ -250,24 +253,6 @@ const jsonLd = {
           });
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', (e) => {
-            const id = (anchor as HTMLAnchorElement).getAttribute('href');
-            if (id === '#') return;
-            const target = document.querySelector(id!);
-            if (target) {
-              e.preventDefault();
-              const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
-              const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 50;
-              window.scrollTo({
-                top: target.getBoundingClientRect().top + window.scrollY - headerH - navH - 16,
-                behavior: 'smooth',
-              });
-            }
-          });
-        });
 
         document.querySelectorAll('[data-google-map-load]').forEach(button => {
           if (button instanceof HTMLButtonElement && button.dataset.ready !== 'true') {

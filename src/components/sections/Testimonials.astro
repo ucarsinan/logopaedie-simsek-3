@@ -20,7 +20,7 @@ const testimonials = t.items;
     <div class="grid grid-cols-3 gap-6 max-[860px]:grid-cols-1">
       {testimonials.map((item, i) => (
         <article class={`bg-surface border border-border rounded-md p-8 shadow-sm flex flex-col gap-5 reveal${i > 0 ? ` reveal-delay-${i}` : ''}`}>
-          <div class="flex gap-0.5" aria-label={t.stars_aria_template.replace('{n}', String(item.stars))}>
+          <div class="flex gap-0.5" role="img" aria-label={t.stars_aria_template.replace('{n}', String(item.stars))}>
             {Array.from({ length: item.stars }).map(() => (
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-accent" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             ))}
