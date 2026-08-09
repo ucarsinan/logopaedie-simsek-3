@@ -17,9 +17,8 @@ const jobSchema = {
   "@type": "JobPosting",
   "title": page.schema.title,
   "description": page.schema.description,
-  "datePosted": "2026-04-23",
-  "validThrough": "2026-12-31",
-  "directApply": true,
+  "datePosted": "2026-08-09",
+  "validThrough": "2027-02-08",
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
@@ -38,6 +37,16 @@ const jobSchema = {
     }
   },
   "employmentType": ["FULL_TIME", "PART_TIME"],
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "EUR",
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": 22,
+      "maxValue": 26,
+      "unitText": "HOUR"
+    }
+  },
   "workHours": page.schema.work_hours,
   "industry": page.schema.industry,
   "occupationalCategory": "29-1127.00",
@@ -99,6 +108,7 @@ const benefits = page.benefits.map((benefit, index) => ({
             <span class="tag tag--green">{page.tags.location}</span>
             <span class="tag tag--green">{page.tags.time}</span>
             <span class="tag tag--green">{page.tags.week}</span>
+            <span class="tag tag--green">{page.tags.salary}</span>
             <span class="tag tag--accent">{page.tags.current}</span>
           </div>
           <h1 class="bento-hero__title"><span class="sr-only">{page.sr_heading}: </span>{page.hero_title}</h1>

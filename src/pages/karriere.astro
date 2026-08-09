@@ -10,10 +10,9 @@ const jobSchema = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
   "title": "Logopäde / Sprachtherapeut (m/w/d)",
-  "description": "Wir suchen Verstärkung im Bereich Logopädie (m/w/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, faire Vergütung, zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche nach Absprache möglich.",
-  "datePosted": "2026-04-23",
-  "validThrough": "2026-12-31",
-  "directApply": true,
+  "description": "Wir suchen Verstärkung im Bereich Logopädie (m/w/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, 22–26 € brutto pro Stunde (bei Vollzeit 3.600–4.300 € brutto im Monat), zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche nach Absprache möglich, Berufseinsteiger willkommen.",
+  "datePosted": "2026-08-09",
+  "validThrough": "2027-02-08",
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
@@ -37,6 +36,16 @@ const jobSchema = {
     }
   },
   "employmentType": ["FULL_TIME", "PART_TIME"],
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "EUR",
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": 22,
+      "maxValue": 26,
+      "unitText": "HOUR"
+    }
+  },
   "workHours": "20–40 Stunden pro Woche",
   "industry": "Gesundheitswesen",
   "occupationalCategory": "29-1127.00",
@@ -57,7 +66,7 @@ const breadcrumbSchema = {
 };
 
 const benefits = [
-  { icon: "💰", title: "Faire Vergütung", desc: "Transparente Vergütung im persönlichen Gespräch" },
+  { icon: "💰", title: "22–26 € pro Stunde", desc: "Bei Vollzeit (38,5 Std.) 3.600–4.300 € brutto im Monat, zzgl. Urlaubs- und Weihnachtsgratifikation" },
   { icon: "🤝", title: "Strukturierte Einarbeitung", desc: "Wir begleiten Sie von Beginn an" },
   { icon: "💬", title: "Kollegiales Team", desc: "Offene Kommunikation, gegenseitige Unterstützung" },
   { icon: "🏢", title: "Moderne Praxisräume", desc: "Gut ausgestattete Therapieräume in zentraler Lage" },
@@ -70,7 +79,7 @@ const benefits = [
 
 <Layout
   title="Logopäde/in Duisburg | Karriere bei Praxis für Logopädie Şimşek"
-  description="Praxis für Logopädie Şimşek Duisburg sucht engagierte Logopädinnen und Logopäden. Faire Vergütung, kollegiales Team, zweisprachige Praxis. Jetzt bewerben!"
+  description="Praxis für Logopädie Şimşek Duisburg sucht Logopädinnen und Logopäden: 22–26 € brutto/Std. (Vollzeit 3.600–4.300 €), 4-Tage-Woche möglich, zweisprachiges Team. Jetzt bewerben!"
   additionalSchemas={[jobSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/karriere/` },
@@ -103,12 +112,13 @@ const benefits = [
             <span class="tag tag--green">Duisburg</span>
             <span class="tag tag--green">Voll- / Teilzeit</span>
             <span class="tag tag--green">4-Tage-Woche nach Absprache</span>
+            <span class="tag tag--green">22–26 € / Stunde</span>
             <span class="tag tag--accent">Aktuell gesucht</span>
           </div>
           <h1 class="bento-hero__title"><span class="sr-only">Logopädie (w/m/d) gesucht – Praxis für Logopädie Şimşek Duisburg: </span>Karriere bei #TeamSimsek</h1>
           <p class="bento-hero__subtitle">
-            Wir suchen Verstärkung im Bereich Logopädie (w/m/d)
-            für unser Team in Duisburg-Mitte.
+            Wir suchen Verstärkung im Bereich Logopädie (w/m/d) für unser Team in Duisburg-Mitte –
+            mit 22–26 € brutto pro Stunde, je nach Erfahrung.
           </p>
           <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="bento-cta-btn">
             Jetzt bewerben

@@ -137,7 +137,7 @@ export const tr: Translations = {
     schema: {
       title: "Dil ve konuşma terapisti (m/w/d)",
       description:
-        "Duisburg'daki muayenehanemiz için dil ve konuşma terapisti arıyoruz (m/w/d). Tam veya yarı zamanlı, adil ücretlendirme, Almanca-Türkçe iki dilli ekip. 4 günlük çalışma haftası görüşmede değerlendirilebilir.",
+        "Duisburg'daki muayenehanemiz için dil ve konuşma terapisti arıyoruz (m/w/d). Tam veya yarı zamanlı, saat başı brüt 22–26 € (tam zamanlıda ayda brüt 3.600–4.300 €), Almanca-Türkçe iki dilli ekip. 4 günlük çalışma haftası görüşmede değerlendirilebilir, yeni mezunlar başvurabilir.",
       work_hours: "Haftada 20-40 saat",
       industry: "Sağlık hizmetleri",
       job_benefits:
@@ -153,13 +153,14 @@ export const tr: Translations = {
     },
     title: "Dil ve konuşma terapisti Duisburg | Praxis für Logopädie Şimşek",
     description:
-      "Duisburg'da dil ve konuşma terapisti arıyoruz. 4 günlük çalışma haftası görüşmede değerlendirilebilir, adil ücretlendirme, Almanca-Türkçe iki dilli ekip. Praxis für Logopädie Şimşek – hemen başvurun!",
+      "Duisburg'da dil ve konuşma terapisti arıyoruz. Saat başı brüt 22–26 € (tam zamanlıda 3.600–4.300 €), 4 günlük çalışma haftası mümkün, Almanca-Türkçe iki dilli ekip. Praxis für Logopädie Şimşek – hemen başvurun!",
     sr_heading:
       "Dil ve konuşma terapisti (m/w/d) aranıyor – Praxis für Logopädie Şimşek Duisburg",
     tags: {
       location: "Duisburg",
       time: "Tam / yarı zamanlı",
       week: "4 günlük hafta görüşmeye bağlı",
+      salary: "Saat başı brüt 22–26 €",
       current: "Güncel ilan",
     },
     hero_title: "Kariyeriniz #TeamSimsek'te başlasın",
@@ -182,7 +183,7 @@ export const tr: Translations = {
     offers_label: "Sunduklarımız",
     benefits_heading: "Sunduğumuz imkanlar",
     benefits: [
-      { title: "Adil ücretlendirme", desc: "Şeffaf ücretlendirme kişisel görüşmede netleşir" },
+      { title: "Saat başı brüt 22–26 €", desc: "Tam zamanlıda (38,5 saat) ayda brüt 3.600–4.300 €, ayrıca tatil ve yılbaşı ikramiyesi" },
       { title: "Planlı oryantasyon", desc: "Başından itibaren yanınızdayız" },
       { title: "Samimi ekip", desc: "Açık iletişim ve karşılıklı destek" },
       { title: "Modern terapi odaları", desc: "Merkezi konumda, iyi donanımlı odalar" },
