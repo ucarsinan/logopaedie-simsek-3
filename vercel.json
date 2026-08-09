@@ -1,6 +1,8 @@
 {
   "trailingSlash": true,
   "redirects": [
+    { "source": "/yetiskinlerde-dil-ve-konusma-bozukluklari", "destination": "/terapi/", "permanent": true },
+    { "source": "/yetiskinlerde-dil-ve-konusma-bozukluklari/", "destination": "/terapi/", "permanent": true },
     { "source": "/", "has": [{ "type": "query", "key": "p", "value": "54" }], "destination": "/", "permanent": true },
     { "source": "/", "has": [{ "type": "query", "key": "p", "value": "113" }], "destination": "/#praxis", "permanent": true },
     { "source": "/", "has": [{ "type": "query", "key": "p", "value": "125" }], "destination": "/team/", "permanent": true },
