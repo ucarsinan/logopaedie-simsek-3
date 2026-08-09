@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import BewerbungForm from '../components/BewerbungForm.astro';
 
 const siteUrl = 'https://logopaedie-simsek.de';
 
@@ -35,6 +36,7 @@ const jobSchema = {
       "addressCountry": "DE"
     }
   },
+  ...(import.meta.env.PUBLIC_WEB3FORMS_KEY ? { "directApply": true } : {}),
   "employmentType": ["FULL_TIME", "PART_TIME"],
   "baseSalary": {
     "@type": "MonetaryAmount",
@@ -63,6 +65,20 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
     { "@type": "ListItem", "position": 2, "name": "Karriere", "item": `${siteUrl}/karriere/` }
   ]
+};
+
+const formLabels = {
+  name: "Name",
+  contact: "Telefon oder E-Mail",
+  message: "Kurze Nachricht (optional)",
+  submit: "Bewerbung absenden",
+  sending: "Wird gesendet …",
+  success_title: "Danke für deine Bewerbung!",
+  success_text: "Wir melden uns innerhalb von 48 Stunden persönlich bei dir.",
+  error_text: "Das hat leider nicht geklappt. Bitte versuche es erneut oder schreib direkt an info@logopaedie-simsek.de.",
+  privacy_before: "Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Bearbeitung deiner Bewerbung zu. Details in der",
+  privacy_link: "Datenschutzerklärung",
+  or_direct: "Oder direkt:",
 };
 
 const benefits = [
@@ -233,9 +249,11 @@ const benefits = [
               <div class="bento-section-tag bento-section-tag--light">Bewerbung</div>
               <h2 class="bento-apply__title">Jetzt<br>durchstarten</h2>
               <p class="bento-apply__sub">
-                Einfach E-Mail oder Anruf - der Lebenslauf reicht für den Anfang.
+                Drei Felder reichen – der Lebenslauf kann später kommen.
+                Wir melden uns innerhalb von 48 Stunden.
               </p>
-              <div class="bento-apply__actions">
+              <BewerbungForm labels={formLabels} mailSubject="Bewerbung im Bereich Logopädie (w/m/d)" />
+              <div class="bento-apply__actions" hidden>
                 <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="apply-btn apply-btn--primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   Bewerbung senden

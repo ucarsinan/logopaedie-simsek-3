@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import BewerbungForm from '../components/BewerbungForm.astro';
 import { useTranslations } from '../i18n/index';
 
 const siteUrl = 'https://logopaedie-simsek.de';
@@ -36,6 +37,7 @@ const jobSchema = {
       "addressCountry": "DE"
     }
   },
+  ...(import.meta.env.PUBLIC_WEB3FORMS_KEY ? { "directApply": true } : {}),
   "employmentType": ["FULL_TIME", "PART_TIME"],
   "baseSalary": {
     "@type": "MonetaryAmount",
@@ -200,7 +202,8 @@ const benefits = page.benefits.map((benefit, index) => ({
               <div class="bento-section-tag bento-section-tag--light">{page.application_label}</div>
               <h2 class="bento-apply__title">{page.application_heading_line1}<br>{page.application_heading_line2}</h2>
               <p class="bento-apply__sub">{page.application_sub}</p>
-              <div class="bento-apply__actions">
+              <BewerbungForm labels={page.form} mailSubject={page.mail_subject} />
+              <div class="bento-apply__actions" hidden>
                 <a href={applyHref} class="apply-btn apply-btn--primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   {page.send_application}

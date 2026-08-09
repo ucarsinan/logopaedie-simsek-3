@@ -212,6 +212,19 @@ export const tr: Translations = {
     internship_heading: "Staj imkanları",
     internship_text:
       "Şu an Almanya dışından gelen öğrencilere staj imkanı sunulamamaktadır. Almanya içinden gelen başvurular için doğrudan bizimle iletişime geçebilirsiniz.",
+    form: {
+      name: "Ad Soyad",
+      contact: "Telefon veya e-posta",
+      message: "Kısa mesaj (isteğe bağlı)",
+      submit: "Başvuruyu gönder",
+      sending: "Gönderiliyor …",
+      success_title: "Başvurunuz için teşekkürler!",
+      success_text: "48 saat içinde size kişisel olarak dönüş yapacağız.",
+      error_text: "Maalesef gönderilemedi. Lütfen tekrar deneyin veya doğrudan info@logopaedie-simsek.de adresine yazın.",
+      privacy_before: "Göndererek, başvurunuzun işlenmesi için verilerinizin kullanılmasını kabul etmiş olursunuz. Ayrıntılar:",
+      privacy_link: "Gizlilik politikası",
+      or_direct: "Veya doğrudan:",
+    },
     mail_subject: "Başvuru – Dil ve konuşma terapisti",
     mail_body:
       "Saygıdeğer Bayan Şimşek-Uçar,\n\nMuayenehanenizdeki dil ve konuşma terapisti pozisyonu için başvuruyorum.\n\nSaygılarımla\n",
