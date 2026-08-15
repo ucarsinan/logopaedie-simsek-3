@@ -132,6 +132,9 @@ const members: TeamMember[] = [
 ];
 
 const leadMember = members.find((m) => m.isLead) ?? members[0];
+if (!leadMember) {
+  throw new Error('Team page requires at least one member.');
+}
 
 const teamSchemas = members.map((member) => ({
   '@context': 'https://schema.org',

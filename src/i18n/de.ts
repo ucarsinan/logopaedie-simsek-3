@@ -160,6 +160,7 @@ export const de = {
       location: "Duisburg",
       time: "Voll / Teilzeit",
       week: "4-Tage-Woche nach Absprache",
+      salary: "22–26 € brutto pro Stunde",
       current: "Aktuelle Stelle",
     },
     hero_title: "Karriere startet im #TeamSimsek",
@@ -210,6 +211,21 @@ export const de = {
     internship_heading: "Praktikumsplätze",
     internship_text:
       "Aktuell können wir keine Praktikumsplätze für Studierende aus dem Ausland anbieten. Für inländische Anfragen können Sie uns direkt kontaktieren.",
+    form: {
+      name: "Name",
+      contact: "Telefon oder E-Mail",
+      message: "Kurze Nachricht (optional)",
+      submit: "Bewerbung absenden",
+      sending: "Wird gesendet …",
+      success_title: "Danke für deine Bewerbung!",
+      success_text: "Wir melden uns innerhalb von 48 Stunden persönlich bei dir.",
+      error_text:
+        "Das hat leider nicht geklappt. Bitte versuche es erneut oder schreib direkt an info@logopaedie-simsek.de.",
+      privacy_before:
+        "Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Bearbeitung deiner Bewerbung zu. Details in der",
+      privacy_link: "Datenschutzerklärung",
+      or_direct: "Oder direkt:",
+    },
     mail_subject: "Bewerbung – Logopädie (w/m/d)",
     mail_body:
       "Sehr geehrte Frau Şimşek-Uçar,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle im Bereich Logopädie (w/m/d) in Ihrer Praxis.\n\nMit freundlichen Grüßen\n",
