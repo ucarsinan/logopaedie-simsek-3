@@ -20,9 +20,9 @@ Confidence: high
 - Not approved: Weitere Arbeitgeberversprechen, Brand-/Token-Umbau, Tracking-Ausbau, Social/Ads, Vercel-/DNS-/Indexierungsaktionen und sonstige Website-Aenderungen ausserhalb eines begrenzten Auftrags.
 
 ## Reality Findings
-- Local evidence: `main` ist auf `8582e32` sauber mit `origin/main` synchron; die Karriereimplementierung, DE/TR-Paritaet und der Bewerbungsfluss sind versioniert.
+- Local evidence: `main` ist auf `32eb8e9` sauber mit `origin/main` synchron; die Karriereimplementierung, DE/TR-Paritaet und der Bewerbungsfluss sind versioniert.
 - Live evidence: Die deutschen und tuerkischen Karriereseiten zeigen die neuen Arbeitsbedingungen und das kurze Formular; Telefon, E-Mail und Post bleiben als alternative Bewerbungswege sichtbar.
-- Branch evidence: Drei lokale Alt-Branches und der verbliebene Remote-Claude-Branch sind vollstaendig in `main` enthalten. Ein temporaerer, ueberholter detached Worktree ist noch registriert.
+- Branch evidence: Die drei vollstaendig gemergten lokalen Alt-Branches und der temporaere detached Worktree wurden am 30.08.2026 entfernt. Der abweichende Zwischenstand liegt in `stash@{0}` mit der Kennzeichnung `archive: superseded pre-release worktree 2026-08-30`; der gemergte Remote-Claude-Branch blieb unangetastet.
 - Best-practice implication: Keine weitere visuelle oder SEO-Ausweitung, bevor zentrale Brand-, Asset-, Mess- und Datenschutzentscheidungen getroffen sind.
 - Key uncertainty: Conversion-/Kontaktleistung, Foto- und Logorechte, Mess-Owner sowie Search-Console-/Rich-Results-Stand.
 
@@ -30,12 +30,12 @@ Confidence: high
 - Missing essentials: Logo-Master, Foto-/Rechteregister, formale Brandfreigabe, Hiring-/Retention-Baseline, Messplan und aktuelle externe SEO-/Accessibility-Evidenz.
 - Drift warnings: Mehr Landingpages, Designsystem-Migration, Social-/Ads-Produktion oder LLM-Optimierung ohne Nachweis, dass sie den Fachkraefteengpass loesen.
 - Risks: Build und visuelle QA belegen keine qualifizierten Kontakte, Einstellungen oder langfristige Bindung; Vercel Analytics ist im zentralen Datenschutz-/Messrahmen noch nicht vollstaendig dokumentiert.
-- Technical debt: Alte Branches und der temporaere Worktree duerfen erst nach separater Freigabe entfernt werden.
+- Technical debt: Der gemergte Remote-Claude-Branch und der lokale Archiv-Stash bleiben als klar bezeichnete, nicht aktive Wiederherstellungsreferenzen bestehen.
 
 ## Next Logical Step
-1. Step: Den dokumentierten Branch-/Worktree-Cleanup separat freigeben und danach Logo/Fotos/Rechte sowie den Mess-/Datenschutzrahmen in der zentralen Strategie klaeren.
+1. Step: Logo-Master, Fotos, Einwilligungen, Nutzungsrechte und Asset-Owner in der zentralen Strategie fuer `GATE-003` klaeren.
    Why: Der enge Employer-Truth-Release ist live; weitere Produktarbeit braucht belastbare Assets und Messung statt zusaetzlicher Oberflaeche.
-   Validation: Keine ueberholten Git-Referenzen, dokumentierte Assetrechte, freigegebene Brandbasis und definierte KPI/Owner/Aufbewahrung.
+   Validation: Dokumentierte Assetrechte, freigegebene verwendbare Varianten und benannte Asset-Owner.
    Stop/continue rule: Keine neue Website-, Tracking-, Social- oder Kampagnenarbeit vor dem jeweiligen zentralen Gate.
 
 ## Do Not Build Yet
