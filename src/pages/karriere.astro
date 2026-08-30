@@ -6,14 +6,14 @@ import Footer from '../components/Footer.astro';
 import BewerbungForm from '../components/BewerbungForm.astro';
 
 const siteUrl = 'https://logopaedie-simsek.de';
+const applyHref = `mailto:info@logopaedie-simsek.de?subject=${encodeURIComponent('Unverbindliches Kennenlernen – Logopädie / Sprachtherapie')}&body=${encodeURIComponent('Hallo Frau Şimşek-Uçar,\n\nich interessiere mich für eine Stelle in Ihrer Praxis und würde Sie und das Team gern unverbindlich kennenlernen.\n\nViele Grüße\n')}`;
 
 const jobSchema = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
-  "title": "Logopäde / Sprachtherapeut (m/w/d)",
-  "description": "Wir suchen Verstärkung im Bereich Logopädie (m/w/d) für unsere Praxis in Duisburg. Voll- oder Teilzeit, 22–26 € brutto pro Stunde (bei Vollzeit 3.600–4.300 € brutto im Monat), zweisprachiges Team (Deutsch-Türkisch). 4-Tage-Woche nach Absprache möglich, Berufseinsteiger willkommen.",
+  "title": "Logopädin / Logopäde / Sprachtherapeutin / Sprachtherapeut (m/w/d)",
+  "description": "<p>Die Praxis für Logopädie Şimşek sucht mehrere staatlich anerkannte und zugelassene Logopädinnen, Logopäden, Sprachtherapeutinnen und Sprachtherapeuten (m/w/d) für unbefristete Stellen in Duisburg.</p><p>Vollzeit umfasst 38,5 Wochenstunden; Teilzeit mit variablem Stundenumfang und eine Vier-Tage-Woche sind möglich. Die Vergütung beträgt je nach Erfahrung 22–26 EUR brutto pro Stunde, bei Vollzeit ungefähr 3.600–4.300 EUR brutto pro Monat. Zusätzlich wird jedes Jahr Weihnachtsgeld gezahlt.</p><p>Aufgaben sind Diagnostik und Therapie für Menschen aller Altersgruppen, Dokumentation, Berichte, Beratung und Organisation. Eigene fachliche Schwerpunkte sind erwünscht. Die Terminplanung erfolgt eigenständig auf Vertrauensbasis mit iPrax.</p><p>Vorausgesetzt werden eine staatlich anerkannte und zugelassene Ausbildung oder ein Studium in Logopädie beziehungsweise Sprachtherapie sowie sehr gute Deutschkenntnisse. Berufserfahrung, Türkischkenntnisse, Führerschein und fertige Spezialisierungen sind nicht erforderlich.</p>",
   "datePosted": "2026-08-09",
-  "validThrough": "2027-02-08",
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
@@ -48,14 +48,15 @@ const jobSchema = {
       "unitText": "HOUR"
     }
   },
-  "workHours": "20–40 Stunden pro Woche",
+  "workHours": "Vollzeit 38,5 Stunden pro Woche; Teilzeit mit variablem Stundenumfang; Vier-Tage-Woche möglich",
   "industry": "Gesundheitswesen",
   "occupationalCategory": "29-1127.00",
-  "jobBenefits": "4-Tage-Woche nach Absprache möglich, Fortbildungsunterstützung, faire Vergütung, bilinguales Team Deutsch-Türkisch, zentrale Lage am Hbf Duisburg",
-  "qualifications": "Staatlich anerkannte/r Logopäde/Logopädin oder Sprachtherapeut/in (m/w/d). Berufsanfänger willkommen.",
-  "skills": "Mehrsprachige Diagnostik Deutsch-Türkisch, Frühförderung, Kindersprachtherapie, Aphasie, Dysarthrie, Stimmtherapie, Dysphagie, Hausbesuche bei Bedarf",
-  "responsibilities": "Durchführung logopädischer Diagnostik und Therapie für Kinder, Jugendliche und Erwachsene. Bilinguales Arbeiten in Deutsch und Türkisch sowie Hausbesuche bei Bedarf möglich.",
-  "employerOverview": "Praxis für Logopädie Şimşek ist eine spezialisierte Praxis in Duisburg mit zweisprachigem Team. Schwerpunkte: mehrsprachige Diagnostik, Frühförderung, Kindersprachtherapie, Erwachsenentherapie und Hausbesuche bei Bedarf. Zentrale Lage am Duisburger Hauptbahnhof."
+  "jobBenefits": "30 Urlaubstage bei einer Fünf-Tage-Woche, Heiligabend und Silvester frei, jährliches Weihnachtsgeld, Fortbildungsunterstützung mit zusätzlichen freien Tagen, strukturierte Einarbeitung, iPad mit privater Nutzung, nach Möglichkeit Parkplatz, sonst Parkkostenunterstützung",
+  "qualifications": "Staatlich anerkannte und zugelassene Logopädin, staatlich anerkannter und zugelassener Logopäde oder entsprechend anerkannte Sprachtherapie-Qualifikation nach Ausbildung oder Studium; sehr gute Deutschkenntnisse",
+  "experienceRequirements": "Berufserfahrung ist nicht erforderlich; Berufsanfängerinnen und Berufsanfänger sind willkommen",
+  "skills": "Eigene Schwerpunkte in Pädiatrie, Neurologie, Stottern, Poltern, Stimme, Aussprache oder weiteren logopädischen Bereichen sind willkommen und können nach Einstieg aufgebaut werden",
+  "responsibilities": "Diagnostik und Therapie für Menschen aller Altersgruppen; Dokumentation, Berichte, Eltern- und Angehörigenberatung sowie organisatorische Aufgaben. Hausbesuche sind nur auf eigenen Wunsch möglich.",
+  "employerOverview": "Praxis für Logopädie Şimşek in Duisburg mit vierköpfigem Team, flachen Hierarchien, wöchentlichem Erfahrungsaustausch und strukturierter Einarbeitung."
 };
 
 const breadcrumbSchema = {
@@ -74,28 +75,27 @@ const formLabels = {
   submit: "Bewerbung absenden",
   sending: "Wird gesendet …",
   success_title: "Danke für deine Bewerbung!",
-  success_text: "Wir melden uns innerhalb von 48 Stunden persönlich bei dir.",
+  success_text: "Danke! Wir melden uns persönlich bei dir.",
   error_text: "Das hat leider nicht geklappt. Bitte versuche es erneut oder schreib direkt an info@logopaedie-simsek.de.",
   privacy_before: "Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Bearbeitung deiner Bewerbung zu. Details in der",
   privacy_link: "Datenschutzerklärung",
-  or_direct: "Oder direkt:",
 };
 
 const benefits = [
-  { icon: "💰", title: "22–26 € pro Stunde", desc: "Bei Vollzeit (38,5 Std.) 3.600–4.300 € brutto im Monat, zzgl. Urlaubs- und Weihnachtsgratifikation" },
-  { icon: "🤝", title: "Strukturierte Einarbeitung", desc: "Wir begleiten Sie von Beginn an" },
-  { icon: "💬", title: "Kollegiales Team", desc: "Offene Kommunikation, gegenseitige Unterstützung" },
-  { icon: "🏢", title: "Moderne Praxisräume", desc: "Gut ausgestattete Therapieräume in zentraler Lage" },
-  { icon: "📚", title: "Fortbildungsunterstützung", desc: "Wir fördern Ihre fachliche Weiterentwicklung" },
-  { icon: "⏰", title: "Flexible Arbeitszeiten", desc: "Voll- oder Teilzeit – 4-Tage-Woche nach Absprache möglich" },
-  { icon: "🚇", title: "Zentrale Lage", desc: "Direkt am Duisburger Hauptbahnhof, gut per ÖPNV erreichbar" },
-  { icon: "🌐", title: "Zweisprachiges Team", desc: "Fachlicher Austausch und Zusammenarbeit auf Deutsch und Türkisch" },
+  { icon: "💰", title: "22–26 € pro Stunde", desc: "Bei Vollzeit ungefähr 3.600–4.300 € brutto im Monat – zusätzlich wird jedes Jahr Weihnachtsgeld gezahlt." },
+  { icon: "🏖️", title: "30 Urlaubstage", desc: "Bei fünf Arbeitstagen; anteilig bei weniger Tagen. Heiligabend und Silvester sind frei." },
+  { icon: "🤝", title: "Intensive Einarbeitung", desc: "Dein Terminplan wächst schrittweise und eine Ansprechperson ist jederzeit für dich da." },
+  { icon: "📚", title: "Fortbildungsunterstützung", desc: "Finanzielle Unterstützung, zusätzliche freie Tage und freie Auswahl deiner Fortbildungen." },
+  { icon: "⏰", title: "Flexible Arbeitsmodelle", desc: "38,5 Stunden Vollzeit, variable Teilzeit und eine Vier-Tage-Woche sind möglich." },
+  { icon: "🗓️", title: "Eigene Planung", desc: "Du planst Termine, Pausen und Puffer auf Vertrauensbasis selbst; regelmäßige Überstunden sowie Wochenend- und Feiertagsarbeit sind nicht vorgesehen; Ausnahmen werden ausgeglichen." },
+  { icon: "📱", title: "iPad und Material", desc: "iPad mit iPrax und benötigter Software, auch privat nutzbar, plus benötigtes Therapiematerial." },
+  { icon: "🚗", title: "Parken und Verpflegung", desc: "Nach Möglichkeit Parkplatz, sonst Parkkostenunterstützung; dazu kostenlose Snacks, Getränke und Küche." },
 ];
 ---
 
 <Layout
-  title="Logopäde/in Duisburg | Karriere bei Praxis für Logopädie Şimşek"
-  description="Praxis für Logopädie Şimşek Duisburg sucht Logopädinnen und Logopäden: 22–26 € brutto/Std. (Vollzeit 3.600–4.300 €), 4-Tage-Woche möglich, zweisprachiges Team. Jetzt bewerben!"
+  title="Logopäd:in / Sprachtherapeut:in (m/w/d) in Duisburg | #TeamSimsek"
+  description="Mehrere unbefristete Stellen für Logopäd:innen und Sprachtherapeut:innen in Duisburg: 22–26 € brutto pro Stunde, 38,5 Stunden Vollzeit, variable Teilzeit und Vier-Tage-Woche."
   additionalSchemas={[jobSchema, breadcrumbSchema]}
   hreflangAlternates={[
     { lang: 'de', url: `${siteUrl}/karriere/` },
@@ -127,16 +127,13 @@ const benefits = [
           <div class="bento-hero__tags">
             <span class="tag tag--green">Duisburg</span>
             <span class="tag tag--green">Voll- / Teilzeit</span>
-            <span class="tag tag--green">4-Tage-Woche nach Absprache</span>
+            <span class="tag tag--green">4-Tage-Woche</span>
             <span class="tag tag--green">22–26 € / Stunde</span>
-            <span class="tag tag--accent">Aktuell gesucht</span>
+            <span class="tag tag--accent">Mehrere Stellen offen</span>
           </div>
-          <h1 class="bento-hero__title"><span class="sr-only">Logopädie (w/m/d) gesucht – Praxis für Logopädie Şimşek Duisburg: </span>Karriere bei #TeamSimsek</h1>
-          <p class="bento-hero__subtitle">
-            Wir suchen Verstärkung im Bereich Logopädie (w/m/d) für unser Team in Duisburg-Mitte –
-            mit 22–26 € brutto pro Stunde, je nach Erfahrung.
-          </p>
-          <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20als%20Logop%C3%A4din%20%2F%20Logop%C3%A4de%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="bento-cta-btn">
+          <h1 class="bento-hero__title"><span class="sr-only">Logopädin / Logopäde / Sprachtherapeutin / Sprachtherapeut (m/w/d) gesucht – Praxis für Logopädie Şimşek Duisburg: </span>Karriere bei #TeamSimsek</h1>
+          <p class="bento-hero__subtitle">Wir suchen mehrere Logopäd:innen und Sprachtherapeut:innen für unbefristete Stellen in Duisburg-Mitte – mit 22–26 € brutto pro Stunde, je nach Erfahrung.</p>
+          <a href={applyHref} class="bento-cta-btn">
             Jetzt bewerben
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14 0M12 5l7 7-7 7"/></svg>
           </a>
@@ -162,33 +159,33 @@ const benefits = [
         <!-- ANFORDERUNGEN CARD -->
         <div class="bento-card bento-requirements">
           <div class="bento-section-tag">Was wir uns wünschen</div>
-          <h2 class="bento-card__title">Ihr Profil</h2>
+          <h2 class="bento-card__title">Dein Profil</h2>
           <ul class="req-list">
             <li>
               <span class="req-check">✓</span>
-              <span>Abgeschlossene staatliche Ausbildung als Logopädin / Logopäde</span>
+              <span>Staatlich anerkannte und zugelassene Ausbildung oder Studium in Logopädie beziehungsweise Sprachtherapie</span>
             </li>
             <li>
               <span class="req-check">✓</span>
-              <span>Selbstständige und flexible Arbeitsweise</span>
+              <span>Sehr gute Deutschkenntnisse</span>
             </li>
             <li>
               <span class="req-check">✓</span>
-              <span>Einfühlungsvermögen im Umgang mit Patientinnen und Patienten</span>
+              <span>Interesse an eigenständiger Therapie- und Terminplanung</span>
             </li>
             <li>
               <span class="req-check">✓</span>
-              <span>Interesse an Kinder-, Erwachsenen- und/oder mehrsprachiger Therapie</span>
+              <span>Eigene Sprachen und fachliche Interessen sind willkommen, aber keine Voraussetzung</span>
             </li>
           </ul>
-          <p class="req-welcome">Berufseinsteiger herzlich willkommen!</p>
+          <p class="req-welcome">Berufsanfänger:innen sind ausdrücklich willkommen.</p>
         </div>
 
         <!-- BENEFITS CARD (unified) -->
         <div class="bento-card bento-benefits-all">
           <div class="bento-benefits-all__header">
             <div class="bento-section-tag">Was wir bieten</div>
-            <h2 class="bento-card__title bento-card__title--large">Ihre Vorteile</h2>
+            <h2 class="bento-card__title bento-card__title--large">Deine Vorteile</h2>
           </div>
           <div class="benefits-inner-grid">
             {benefits.map((b, i) => (
@@ -239,6 +236,16 @@ const benefits = [
           </div>
         </div>
 
+        <!-- ARBEITSALLTAG CARD -->
+        <div class="bento-card bento-note">
+          <div class="bento-note__inner">
+            <div>
+              <h2 class="bento-note__title">Dein Arbeitsalltag</h2>
+              <p class="bento-note__text">Du behandelst Menschen aller Altersgruppen und setzt eigene fachliche Schwerpunkte. Therapieeinheiten dauern je nach Verordnung 30, 45 oder 60 Minuten. Dokumentation, Berichte und Organisation sind eingeplante Arbeitszeit. Hausbesuche sind keine Voraussetzung und nur auf deinen Wunsch möglich.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- BEWERBUNG CTA CARD -->
         <div class="bento-card bento-apply">
           <div class="bento-apply__deco" aria-hidden="true"></div>
@@ -247,14 +254,11 @@ const benefits = [
             <!-- Left: Headline + CTAs -->
             <div class="bento-apply__left">
               <div class="bento-section-tag bento-section-tag--light">Bewerbung</div>
-              <h2 class="bento-apply__title">Jetzt<br>durchstarten</h2>
-              <p class="bento-apply__sub">
-                Drei Felder reichen – der Lebenslauf kann später kommen.
-                Wir melden uns innerhalb von 48 Stunden.
-              </p>
-              <BewerbungForm labels={formLabels} mailSubject="Bewerbung im Bereich Logopädie (w/m/d)" />
+              <h2 class="bento-apply__title">Jetzt durchstarten</h2>
+              <p class="bento-apply__sub">Drei Felder reichen – ein Lebenslauf ist freiwillig. Du kannst dich außerdem telefonisch, per E-Mail oder per Post melden.</p>
+              <BewerbungForm labels={formLabels} mailSubject="Unverbindliches Kennenlernen – Logopädie / Sprachtherapie" />
               <div class="bento-apply__actions" hidden>
-                <a href="mailto:info@logopaedie-simsek.de?subject=Bewerbung%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)&body=Sehr%20geehrte%20Frau%20%C5%9Eim%C5%9Fek-U%C3%A7ar%2C%0A%0Ahiermit%20bewerbe%20ich%20mich%20auf%20die%20ausgeschriebene%20Stelle%20im%20Bereich%20Logop%C3%A4die%20(w%2Fm%2Fd)%20in%20Ihrer%20Praxis.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="apply-btn apply-btn--primary">
+                <a href={applyHref} class="apply-btn apply-btn--primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   Bewerbung senden
                 </a>
@@ -279,6 +283,10 @@ const benefits = [
                   <div class="contact-row">
                     <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                     <span>Tonhallenstraße 21, 47051 Duisburg</span>
+                  </div>
+                  <div class="contact-row">
+                    <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.15 3.4 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+                    <span>0203 – 34 86 86 90</span>
                   </div>
                   <div class="contact-row">
                     <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -609,7 +617,7 @@ const benefits = [
   }
   .bento-apply__layout {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem;
   }
   .bento-apply__left {
@@ -632,7 +640,7 @@ const benefits = [
     color: rgba(255,255,255,0.58);
     line-height: 1.65;
     margin-bottom: 1.75rem;
-    max-width: 38ch;
+    width: 100%;
   }
   .bento-apply__actions {
     display: flex;
@@ -869,6 +877,5 @@ const benefits = [
     .benefit-desc {
       max-width: calc(100% - 2.4rem);
     }
-    .bento-apply__sub { max-width: none; }
   }
 </style>

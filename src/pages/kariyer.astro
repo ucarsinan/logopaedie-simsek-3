@@ -10,7 +10,7 @@ const siteUrl = 'https://logopaedie-simsek.de';
 const t = useTranslations('tr');
 const page = t.career_page;
 const applyHref = `mailto:info@logopaedie-simsek.de?subject=${encodeURIComponent(page.mail_subject)}&body=${encodeURIComponent(page.mail_body)}`;
-const benefitIcons = ["💰", "🤝", "💬", "🏢", "📚", "⏰", "🚇", "🌐"];
+const benefitIcons = ["💰", "🏖️", "🤝", "📚", "⏰", "🗓️", "📱", "🚗"];
 const portalFeatureIcons = ["🧮", "📖", "📞", "📅"];
 
 const jobSchema = {
@@ -19,7 +19,6 @@ const jobSchema = {
   "title": page.schema.title,
   "description": page.schema.description,
   "datePosted": "2026-08-09",
-  "validThrough": "2027-02-08",
   "hiringOrganization": {
     "@type": "Organization",
     "name": "Praxis für Logopädie Şimşek",
@@ -54,6 +53,7 @@ const jobSchema = {
   "occupationalCategory": "29-1127.00",
   "jobBenefits": page.schema.job_benefits,
   "qualifications": page.schema.qualifications,
+  "experienceRequirements": "İş deneyimi gerekli değildir; mesleğe yeni başlayanlar başvurabilir",
   "skills": page.schema.skills,
   "responsibilities": page.schema.responsibilities,
   "employerOverview": page.schema.employer_overview
@@ -192,6 +192,16 @@ const benefits = page.benefits.map((benefit, index) => ({
           </div>
         </div>
 
+        <!-- ÇALIŞMA GÜNÜ CARD -->
+        <div class="bento-card bento-note">
+          <div class="bento-note__inner">
+            <div>
+              <h2 class="bento-note__title">Çalışma günün</h2>
+              <p class="bento-note__text">Her yaştan kişiyi tedavi eder ve kendi mesleki odaklarını seçersin. Terapi birimleri reçeteye göre 30, 45 veya 60 dakika sürer. Dokümantasyon, raporlar ve organizasyon çalışma süresine dahildir. Ev ziyaretleri zorunlu değildir ve yalnızca kendi isteğinle yapılır.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- BAŞVURU CTA CARD -->
         <div class="bento-card bento-apply">
           <div class="bento-apply__deco" aria-hidden="true"></div>
@@ -200,7 +210,7 @@ const benefits = page.benefits.map((benefit, index) => ({
             <!-- Left: Headline + CTAs -->
             <div class="bento-apply__left">
               <div class="bento-section-tag bento-section-tag--light">{page.application_label}</div>
-              <h2 class="bento-apply__title">{page.application_heading_line1}<br>{page.application_heading_line2}</h2>
+              <h2 class="bento-apply__title">{page.application_heading_line1} {page.application_heading_line2}</h2>
               <p class="bento-apply__sub">{page.application_sub}</p>
               <BewerbungForm labels={page.form} mailSubject={page.mail_subject} />
               <div class="bento-apply__actions" hidden>
@@ -229,6 +239,10 @@ const benefits = page.benefits.map((benefit, index) => ({
                   <div class="contact-row">
                     <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                     <span>Tonhallenstraße 21, 47051 Duisburg</span>
+                  </div>
+                  <div class="contact-row">
+                    <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.15 3.4 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+                    <span>0203 – 34 86 86 90</span>
                   </div>
                   <div class="contact-row">
                     <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -552,7 +566,7 @@ const benefits = page.benefits.map((benefit, index) => ({
   }
   .bento-apply__layout {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem;
   }
   .bento-apply__left {
@@ -575,7 +589,7 @@ const benefits = page.benefits.map((benefit, index) => ({
     color: rgba(255,255,255,0.58);
     line-height: 1.65;
     margin-bottom: 1.75rem;
-    max-width: 38ch;
+    width: 100%;
   }
   .bento-apply__actions {
     display: flex;
@@ -797,6 +811,5 @@ const benefits = page.benefits.map((benefit, index) => ({
     .benefit-desc {
       max-width: calc(100% - 2.4rem);
     }
-    .bento-apply__sub { max-width: none; }
   }
 </style>
