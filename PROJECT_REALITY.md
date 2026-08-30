@@ -14,8 +14,9 @@ Confidence: high
 ## Current State
 - Implemented: Astro 6 Static Site mit Tailwind CSS v4, Vercel Adapter, DE/TR-Seiten, Therapie-, Team-, Karriere-, Kontakt- und Legal-Seiten, JSON-LD, Sitemap und Legacy-Redirects.
 - Released: Die Employer-Truth-Harmonisierung wurde mit Commit `8582e32` auf `main` gepusht und am 30.08.2026 auf `https://logopaedie-simsek.de/karriere/` sowie `/kariyer/` live verifiziert.
+- Implemented: Die bestehende Praxis-Bildmarke liegt zusätzlich zum PNG-Fallback als echter, frei skalierbarer SVG-Master in `public/logo.svg` vor. `public/favicon.svg` verwendet dieselben Vektorformen ohne eingebettete Rasterdaten; der Header nutzt den proportional dargestellten SVG-Master.
 - Released: Vollzeit 38,5 Stunden, variable Teilzeit, Vier-Tage-Woche, Verguetung, Weihnachtsgeld, Urlaub, Einarbeitung, Qualifikation, Ausstattung und Bewerbung entsprechen der freigegebenen Arbeitgeberwahrheit.
-- Verified locally: Der letzte vollstaendige Check meldete 0 Fehler, 0 Warnungen, einen bestehenden Inline-Script-Hinweis und einen erfolgreichen Build mit 34 Seiten; Desktop- und Mobile-QA der Karriereseiten sind erfolgt.
+- Verified locally: Der SVG-Master enthält ausschließlich Vektorformen und die drei Legacy-Farben `#2085C2`, `#7FB719` und `#C6C5C6`. Konturvergleich, 16-/32-/48-Pixel-Faviconprüfung sowie Desktop-/Mobile-QA des Headers sind erfolgt. Der letzte vollstaendige Website-Check meldete 0 Fehler, 0 Warnungen, einen bestehenden Inline-Script-Hinweis und einen erfolgreichen Build mit 34 Seiten.
 - Measurement: Vercel Web Analytics wird live geladen. Google Analytics wird in dieser Codebasis nicht geladen.
 - Not approved: Weitere Arbeitgeberversprechen, Brand-/Token-Umbau, Tracking-Ausbau, Social/Ads, Vercel-/DNS-/Indexierungsaktionen und sonstige Website-Aenderungen ausserhalb eines begrenzten Auftrags.
 
@@ -24,17 +25,17 @@ Confidence: high
 - Live evidence: Die deutschen und tuerkischen Karriereseiten zeigen die neuen Arbeitsbedingungen und das kurze Formular; Telefon, E-Mail und Post bleiben als alternative Bewerbungswege sichtbar.
 - Branch evidence: Die drei vollstaendig gemergten lokalen Alt-Branches und der temporaere detached Worktree wurden am 30.08.2026 entfernt. Der abweichende Zwischenstand liegt in `stash@{0}` mit der Kennzeichnung `archive: superseded pre-release worktree 2026-08-30`; der gemergte Remote-Claude-Branch blieb unangetastet.
 - Best-practice implication: Keine weitere visuelle oder SEO-Ausweitung, bevor zentrale Brand-, Asset-, Mess- und Datenschutzentscheidungen getroffen sind.
-- Key uncertainty: Conversion-/Kontaktleistung, Foto- und Logorechte, Mess-Owner sowie Search-Console-/Rich-Results-Stand.
+- Key uncertainty: Conversion-/Kontaktleistung, dokumentierte Logo-/Fotorechte und Asset-Owner, weitere Kanalvarianten, Mess-Owner sowie Search-Console-/Rich-Results-Stand.
 
 ## Gaps And Risks
-- Missing essentials: Logo-Master, Foto-/Rechteregister, formale Brandfreigabe, Hiring-/Retention-Baseline, Messplan und aktuelle externe SEO-/Accessibility-Evidenz.
+- Missing essentials: dokumentierte Logo-/Fotorechte und Asset-Owner, weitere kanalgeeignete Logo-Varianten, Foto-/Rechteregister, formale Brandfreigabe, Hiring-/Retention-Baseline, Messplan und aktuelle externe SEO-/Accessibility-Evidenz.
 - Drift warnings: Mehr Landingpages, Designsystem-Migration, Social-/Ads-Produktion oder LLM-Optimierung ohne Nachweis, dass sie den Fachkraefteengpass loesen.
 - Risks: Build und visuelle QA belegen keine qualifizierten Kontakte, Einstellungen oder langfristige Bindung; Vercel Analytics ist im zentralen Datenschutz-/Messrahmen noch nicht vollstaendig dokumentiert.
 - Technical debt: Der gemergte Remote-Claude-Branch und der lokale Archiv-Stash bleiben als klar bezeichnete, nicht aktive Wiederherstellungsreferenzen bestehen.
 
 ## Next Logical Step
-1. Step: Logo-Master, Fotos, Einwilligungen, Nutzungsrechte und Asset-Owner in der zentralen Strategie fuer `GATE-003` klaeren.
-   Why: Der enge Employer-Truth-Release ist live; weitere Produktarbeit braucht belastbare Assets und Messung statt zusaetzlicher Oberflaeche.
+1. Step: Fotos, Einwilligungen, Nutzungsrechte, Asset-Owner und die noch benoetigten Kanalvarianten in der zentralen Strategie fuer `GATE-003` klaeren.
+   Why: Der technische SVG-Master fuer Bildmarke und Favicon ist hergestellt; die organisatorische und kanalweite Asset-Freigabe ist damit noch nicht abgeschlossen.
    Validation: Dokumentierte Assetrechte, freigegebene verwendbare Varianten und benannte Asset-Owner.
    Stop/continue rule: Keine neue Website-, Tracking-, Social- oder Kampagnenarbeit vor dem jeweiligen zentralen Gate.
 
