@@ -217,13 +217,15 @@ export const de = {
       contact: "Telefon oder E-Mail",
       message: "Kurze Nachricht (optional)",
       submit: "Bewerbung absenden",
+  mail_submit: "E-Mail vorbereiten",
+  mail_hint: "Der Button öffnet einen Entwurf in deiner Mail-App. Bitte sende die E-Mail dort selbst ab. Erst dann erreicht uns deine Bewerbung.",
       sending: "Wird gesendet …",
       success_title: "Danke für deine Bewerbung!",
       success_text: "Danke! Wir melden uns persönlich bei dir.",
       error_text:
         "Das hat leider nicht geklappt. Bitte versuche es erneut oder schreib direkt an info@logopaedie-simsek.de.",
       privacy_before:
-        "Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Bearbeitung deiner Bewerbung zu. Details in der",
+        "Wir verarbeiten deine Angaben zur Bearbeitung deiner Bewerbung. Details in der",
       privacy_link: "Datenschutzerklärung",
     },
     mail_subject: "Unverbindliches Kennenlernen – Logopädie / Sprachtherapie",

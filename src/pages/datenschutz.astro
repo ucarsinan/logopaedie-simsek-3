@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+const webFormConfigured = !!import.meta.env.PUBLIC_WEB3FORMS_KEY;
 ---
 
 <Layout
@@ -57,7 +59,7 @@ import Footer from '../components/Footer.astro';
           <p>
             Wenn Sie uns telefonisch oder per E-Mail kontaktieren, verarbeiten wir die von Ihnen mitgeteilten
             Kontaktdaten und Inhalte zwecks Bearbeitung Ihrer Anfrage und für den Fall von Anschlussfragen.
-            Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+            Für die technische Bereitstellung des E-Mail-Postfachs nutzen wir STRATO.
           </p>
           <p class="mt-2">
             Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre
@@ -67,12 +69,25 @@ import Footer from '../components/Footer.astro';
           </p>
           <h3 class="font-semibold text-text mb-1 mt-4">Bewerbungsformular</h3>
           <p>
-            Auf unserer Karriereseite können Sie sich über ein Formular bewerben. Verarbeitet werden die von
-            Ihnen eingegebenen Angaben (Name, Kontaktdaten, Nachricht) ausschließlich zur Bearbeitung Ihrer
-            Bewerbung (Art. 6 Abs. 1 lit. b DSGVO, § 26 BDSG). Für die technische Übermittlung nutzen wir den
-            Dienst Web3Forms; dabei wird Ihre Eingabe an uns per E-Mail weitergeleitet und nicht dauerhaft
-            beim Dienstleister gespeichert. Ihre Bewerbungsdaten löschen wir spätestens sechs Monate nach
-            Abschluss des Bewerbungsverfahrens, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+            Wir verarbeiten Ihre Angaben (Name, Kontaktdaten, Nachricht und freiwillig übermittelte Unterlagen),
+            soweit dies für die Entscheidung über die Begründung eines Beschäftigungsverhältnisses erforderlich ist
+            (§ 26 Abs. 1 BDSG). Ein Lebenslauf ist für den Erstkontakt freiwillig.
+          </p>
+          {webFormConfigured ? (
+            <p class="mt-2">Das Formular übermittelt Ihre Angaben über Web3Forms an unser E-Mail-Postfach.
+              Informationen des Anbieters: <a href="https://web3forms.com/privacy" class="text-primary underline">Web3Forms-Datenschutz</a>.
+            </p>
+          ) : (
+            <p class="mt-2">Das Formular bereitet eine E-Mail in Ihrem E-Mail-Programm vor. Erst wenn Sie diese
+              dort absenden, wird Ihre Bewerbung an info@logopaedie-simsek.de übermittelt. Sie können uns auch
+              direkt per E-Mail kontaktieren. Für den Versand gelten zusätzlich die Datenschutzbedingungen Ihres E-Mail-Anbieters.
+            </p>
+          )}
+          <p class="mt-2">Unser Praxispostfach wird bei STRATO betrieben. Die Bearbeitung erfolgt durch die dafür
+            zuständigen Personen in der Praxis. Unnötige Arbeitskopien werden nach Gebrauch gelöscht.
+            Daten erfolgloser oder zurückgezogener Bewerbungen werden spätestens sechs Monate nach Abschluss
+            des Verfahrens gelöscht. Es wird kein Talentpool angelegt. Bei einer Einstellung werden erforderliche
+            Angaben für das Beschäftigungsverhältnis weiterverarbeitet.
           </p>
           <h3 class="font-semibold text-text mb-1 mt-4">Server-Log-Dateien</h3>
           <p>
@@ -107,15 +122,16 @@ import Footer from '../components/Footer.astro';
         </section>
 
         <section class="bento-tile bento-tile--half">
-          <h2 class="font-semibold text-text text-lg mb-2">6. Google Analytics</h2>
-          <p>
-            Diese Website lädt derzeit kein Google Analytics und kein Google-Analytics-Skript. Es findet keine
-            Webanalyse über Google Analytics statt.
-          </p>
-          <p class="mt-2">
-            Sollte künftig Webanalyse eingesetzt werden, wird diese Datenschutzerklärung vorab aktualisiert und
-            eine erforderliche Einwilligung eingeholt, bevor entsprechende Skripte geladen werden.
-          </p>
+          <h2 class="font-semibold text-text text-lg mb-2">6. Webanalyse</h2>
+          <p>Wir verwenden Vercel Web Analytics zur statistischen Auswertung und Verbesserung unseres Webauftritts.
+            Ausgewertet werden unter anderem Seitenaufrufe, Herkunftsseiten, Zeitpunkt, ungefähre Region sowie
+            Geräte-, Betriebssystem- und Browserinformationen. Vercel verwendet hierfür keine Drittanbieter-Cookies.
+            Die Besucherzuordnung erfolgt nach Angaben des Anbieters über einen aus der Anfrage gebildeten Hash;
+            die zugehörige Sitzung wird nach 24 Stunden verworfen. Dies ist nicht die Speicherdauer sämtlicher Statistikdaten.
+            Wir verwenden keine eigenen Analyse-Events zur Erfassung von Bewerbungsinhalten.</p>
+          <p class="mt-2">Weitere Informationen: <a href="https://vercel.com/docs/analytics/privacy-policy" class="text-primary underline">Vercel Web Analytics</a>.
+            Google Analytics wird auf dieser Website nicht geladen.</p>
+          <!-- Vor Veröffentlichung: Rechtsgrundlage, Aufbewahrung und Anbieterrollen abschließend prüfen. -->
         </section>
 
         <section class="bento-tile bento-tile--half">
@@ -150,7 +166,7 @@ import Footer from '../components/Footer.astro';
         </section>
 
         <p class="bento-tile bento-tile--full text-sm text-text-light italic">
-          Stand: April 2026.
+          Stand: September 2026.
         </p>
       </div>
 
