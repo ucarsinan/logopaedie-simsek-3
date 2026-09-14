@@ -169,7 +169,10 @@ const benefits = page.benefits.map((benefit, index) => ({
         <!-- PORTAL BRIDGE CARD -->
         <div class="bento-card bento-portal">
           <div class="bento-portal__left">
-            <div class="bento-section-tag bento-section-tag--accent">{page.portal_label}</div>
+            <div class="portal-brand">
+              <div class="bento-section-tag bento-section-tag--accent">{page.portal_label}</div>
+              <img src="/logopaediejobs-logo.svg" alt="LogopädieJobs" width="225" height="103" class="portal-brand__logo" loading="lazy" />
+            </div>
             <h2 class="bento-card__title">{page.portal_heading}</h2>
             <p class="bento-portal__text">{page.portal_text}</p>
             <a
@@ -710,6 +713,15 @@ const benefits = page.benefits.map((benefit, index) => ({
     flex-shrink: 0;
     width: 300px;
   }
+  .portal-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .portal-brand .bento-section-tag { margin-bottom: 0; }
+  .portal-brand__logo { width: 96px; height: auto; flex-shrink: 0; }
   .bento-portal__text {
     font-size: 0.9rem;
     color: var(--color-text-muted);
