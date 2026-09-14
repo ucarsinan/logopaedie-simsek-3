@@ -137,7 +137,7 @@ export const de = {
     schema: {
       title: "Logopädin / Logopäde / Sprachtherapeutin / Sprachtherapeut (m/w/d)",
       description:
-        "Die Praxis für Logopädie Şimşek sucht mehrere staatlich anerkannte und zugelassene Logopäd:innen und Sprachtherapeut:innen (m/w/d) für unbefristete Stellen in Duisburg. Vollzeit umfasst 38,5 Wochenstunden; Teilzeit mit variablem Stundenumfang und eine Vier-Tage-Woche sind möglich. Die Vergütung beträgt je nach Erfahrung 22–26 EUR brutto pro Stunde, bei Vollzeit ungefähr 3.600–4.300 EUR brutto pro Monat. Zusätzlich wird jedes Jahr Weihnachtsgeld gezahlt. Berufserfahrung, Türkischkenntnisse, Führerschein und fertige Spezialisierungen sind nicht erforderlich.",
+        "Die Praxis für Logopädie Şimşek sucht mehrere staatlich anerkannte und zugelassene Logopäd:innen und Sprachtherapeut:innen (m/w/d) für unbefristete Stellen in Duisburg. Vollzeit umfasst 38,5 Wochenstunden; Teilzeit mit variablem Stundenumfang und eine Vier-Tage-Woche sind möglich. Die Vergütung beträgt je nach Erfahrung 23–26 EUR brutto pro Stunde, bei Vollzeit ungefähr 3.840–4.338 EUR brutto pro Monat. Zusätzlich wird jedes Jahr Weihnachtsgeld gezahlt. Berufserfahrung, Türkischkenntnisse, Führerschein und fertige Spezialisierungen sind nicht erforderlich.",
       work_hours: "Vollzeit 38,5 Stunden pro Woche; Teilzeit mit variablem Stundenumfang; Vier-Tage-Woche möglich",
       industry: "Gesundheitswesen",
       job_benefits:
@@ -153,19 +153,19 @@ export const de = {
     },
     title: "Logopäd:in / Sprachtherapeut:in (m/w/d) in Duisburg | #TeamSimsek",
     description:
-      "Mehrere unbefristete Stellen für Logopäd:innen und Sprachtherapeut:innen in Duisburg: 22–26 € brutto pro Stunde, 38,5 Stunden Vollzeit, variable Teilzeit und Vier-Tage-Woche.",
+      "Mehrere unbefristete Stellen für Logopäd:innen und Sprachtherapeut:innen in Duisburg: 23–26 € brutto pro Stunde, 38,5 Stunden Vollzeit, variable Teilzeit und Vier-Tage-Woche.",
     sr_heading:
       "Logopädin / Logopäde / Sprachtherapeutin / Sprachtherapeut (m/w/d) gesucht – Praxis für Logopädie Şimşek Duisburg",
     tags: {
       location: "Duisburg",
       time: "Voll- / Teilzeit",
       week: "4-Tage-Woche",
-      salary: "22–26 € / Stunde",
+      salary: "23–26 € / Stunde",
       current: "Mehrere Stellen offen",
     },
     hero_title: "Karriere bei #TeamSimsek",
     hero_subtitle:
-      "Wir suchen mehrere Logopäd:innen und Sprachtherapeut:innen für unbefristete Stellen in Duisburg-Mitte – mit 22–26 € brutto pro Stunde, je nach Erfahrung.",
+      "Wir suchen mehrere Logopäd:innen und Sprachtherapeut:innen für unbefristete Stellen in Duisburg-Mitte – mit 23–26 € brutto pro Stunde, je nach Erfahrung.",
     apply_now: "Unverbindlich kennenlernen",
     expectations_label: "Was wir uns wünschen",
     profile_heading: "Dein Profil",
@@ -183,7 +183,7 @@ export const de = {
     offers_label: "Was wir bieten",
     benefits_heading: "Deine Vorteile",
     benefits: [
-      { title: "22–26 € pro Stunde", desc: "Bei Vollzeit ungefähr 3.600–4.300 € brutto im Monat – zusätzlich wird jedes Jahr Weihnachtsgeld gezahlt." },
+      { title: "23–26 € pro Stunde", desc: "Bei Vollzeit ungefähr 3.840–4.338 € brutto im Monat – zusätzlich wird jedes Jahr Weihnachtsgeld gezahlt." },
       { title: "30 Urlaubstage", desc: "Bei fünf Arbeitstagen; anteilig bei weniger Tagen. Heiligabend und Silvester sind frei." },
       { title: "Intensive Einarbeitung", desc: "Dein Terminplan wächst schrittweise und eine Ansprechperson ist jederzeit für dich da." },
       { title: "Fortbildungsunterstützung", desc: "Finanzielle Unterstützung, zusätzliche freie Tage und freie Auswahl deiner Fortbildungen." },

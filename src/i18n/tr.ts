@@ -137,7 +137,7 @@ export const tr: Translations = {
     schema: {
       title: "Dil ve konuşma terapisti (m/w/d)",
       description:
-        "<p>Praxis für Logopädie Şimşek, Duisburg'da süresiz pozisyonlar için birden fazla devlet tarafından tanınmış ve çalışma izni bulunan logopedist ve dil ve konuşma terapisti (m/w/d) arıyor.</p><p>Tam zamanlı çalışma haftada 38,5 saattir; değişken saatli yarı zamanlı çalışma ve dört günlük çalışma haftası mümkündür. Ücret deneyime göre saat başı brüt 22–26 EUR, tam zamanlıda ayda yaklaşık brüt 3.600–4.300 EUR'dur. Ayrıca her yıl Noel ikramiyesi ödenir.</p><p>Görevler, her yaştan kişi için değerlendirme ve terapi, dokümantasyon, raporlar, danışmanlık ve organizasyonu kapsar. Kendi mesleki uzmanlık alanları memnuniyetle karşılanır. Randevu planlaması iPrax ile güven esasına göre bağımsız olarak yapılır.</p><p>Devlet tarafından tanınan ve çalışma izni bulunan logopedi ya da dil ve konuşma terapisi eğitimi veya üniversite mezuniyeti ile çok iyi Almanca bilgisi gereklidir. İş deneyimi, Türkçe bilgisi, ehliyet ve hazır uzmanlıklar gerekli değildir.</p>",
+        "<p>Praxis für Logopädie Şimşek, Duisburg'da süresiz pozisyonlar için birden fazla devlet tarafından tanınmış ve çalışma izni bulunan logopedist ve dil ve konuşma terapisti (m/w/d) arıyor.</p><p>Tam zamanlı çalışma haftada 38,5 saattir; değişken saatli yarı zamanlı çalışma ve dört günlük çalışma haftası mümkündür. Ücret deneyime göre saat başı brüt 23–26 EUR, tam zamanlıda ayda yaklaşık brüt 3.840–4.338 EUR'dur. Ayrıca her yıl Noel ikramiyesi ödenir.</p><p>Görevler, her yaştan kişi için değerlendirme ve terapi, dokümantasyon, raporlar, danışmanlık ve organizasyonu kapsar. Kendi mesleki uzmanlık alanları memnuniyetle karşılanır. Randevu planlaması iPrax ile güven esasına göre bağımsız olarak yapılır.</p><p>Devlet tarafından tanınan ve çalışma izni bulunan logopedi ya da dil ve konuşma terapisi eğitimi veya üniversite mezuniyeti ile çok iyi Almanca bilgisi gereklidir. İş deneyimi, Türkçe bilgisi, ehliyet ve hazır uzmanlıklar gerekli değildir.</p>",
       work_hours: "Tam zamanlı haftada 38,5 saat; değişken saatli yarı zamanlı çalışma; dört günlük çalışma haftası mümkün",
       industry: "Sağlık hizmetleri",
       job_benefits:
@@ -153,14 +153,14 @@ export const tr: Translations = {
     },
     title: "Dil ve konuşma terapisti (m/w/d), Duisburg | #TeamSimsek",
     description:
-      "Duisburg'da birden fazla süresiz pozisyon: saat başı brüt 22–26 €, haftada 38,5 saat tam zamanlı çalışma, değişken yarı zamanlı çalışma ve dört günlük çalışma haftası.",
+      "Duisburg'da birden fazla süresiz pozisyon: saat başı brüt 23–26 €, haftada 38,5 saat tam zamanlı çalışma, değişken yarı zamanlı çalışma ve dört günlük çalışma haftası.",
     sr_heading:
       "Dil ve konuşma terapisti (m/w/d) aranıyor – Praxis für Logopädie Şimşek Duisburg",
     tags: {
       location: "Duisburg",
       time: "Tam / yarı zamanlı",
       week: "4 günlük çalışma haftası",
-      salary: "Saat başı brüt 22–26 €",
+      salary: "Saat başı brüt 23–26 €",
       current: "Birden fazla açık pozisyon",
     },
     hero_title: "Kariyeriniz #TeamSimsek'te başlasın",
@@ -183,7 +183,7 @@ export const tr: Translations = {
     offers_label: "Sunduklarımız",
     benefits_heading: "Sunduğumuz imkanlar",
     benefits: [
-      { title: "Saat başı brüt 22–26 €", desc: "Tam zamanlıda ayda yaklaşık brüt 3.600–4.300 €; ayrıca her yıl Noel ikramiyesi." },
+      { title: "Saat başı brüt 23–26 €", desc: "Tam zamanlıda ayda yaklaşık brüt 3.840–4.338 €; ayrıca her yıl Noel ikramiyesi." },
       { title: "30 gün izin", desc: "Beş günlük haftada; daha az çalışma gününde orantılı. 24 ve 31 Aralık tatil." },
       { title: "Yoğun işe alışma süreci", desc: "Randevu planın adım adım oluşturulur ve her zaman bir iletişim kişin vardır." },
       { title: "Eğitim desteği", desc: "Mali destek, ek izin günleri ve eğitimini kendin seçme özgürlüğü." },
