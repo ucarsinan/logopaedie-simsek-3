@@ -206,31 +206,15 @@ export const de = {
     application_label: "Bewerbung",
     application_heading_line1: "Jetzt",
     application_heading_line2: "starten",
-    application_sub: "Drei Felder reichen – ein Lebenslauf ist freiwillig. Du kannst dich außerdem telefonisch, per E-Mail oder per Post melden.",
-    send_application: "Bewerbung senden",
+    application_sub: "Für den Erstkontakt genügen dein Name und eine Rückkontaktmöglichkeit – ein Lebenslauf ist nicht erforderlich.",
+    application_primary_cta: "Unverbindlich Kontakt aufnehmen",
+    application_whatsapp_cta: "WhatsApp für Bewerbungen",
+    application_call_cta: "Jetzt anrufen",
+    application_email_cta: "E-Mail schreiben",
     contact_role: "Praxisinhaberin · Ansprechpartnerin für Bewerbungen",
     internship_heading: "Praktikumsplätze",
     internship_text:
       "Aktuell können wir keine Praktikumsplätze für Studierende aus dem Ausland anbieten. Für inländische Anfragen kannst du uns direkt kontaktieren.",
-    form: {
-      name: "Name",
-      contact: "Telefon oder E-Mail",
-      message: "Kurze Nachricht (optional)",
-      submit: "Bewerbung absenden",
-  mail_submit: "E-Mail vorbereiten",
-  mail_hint: "Der Button öffnet einen Entwurf in deiner Mail-App. Bitte sende die E-Mail dort selbst ab. Erst dann erreicht uns deine Bewerbung.",
-      sending: "Wird gesendet …",
-      success_title: "Danke für deine Bewerbung!",
-      success_text: "Danke! Wir melden uns persönlich bei dir.",
-      error_text:
-        "Das hat leider nicht geklappt. Bitte versuche es erneut oder schreib direkt an info@logopaedie-simsek.de.",
-      privacy_before:
-        "Wir verarbeiten deine Angaben zur Bearbeitung deiner Bewerbung. Details in der",
-      privacy_link: "Datenschutzerklärung",
-    },
-    mail_subject: "Unverbindliches Kennenlernen – Logopädie / Sprachtherapie",
-    mail_body:
-      "Hallo Frau Şimşek-Uçar,\n\nich interessiere mich für eine Stelle in Ihrer Praxis und würde Sie und das Team gern unverbindlich kennenlernen.\n\nViele Grüße\n",
   },
   hero: {
     badge: "Logopädie in Duisburg",

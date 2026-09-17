@@ -4,7 +4,6 @@ import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
-const webFormConfigured = !!import.meta.env.PUBLIC_WEB3FORMS_KEY;
 ---
 
 <Layout
@@ -26,7 +25,7 @@ const webFormConfigured = !!import.meta.env.PUBLIC_WEB3FORMS_KEY;
       </div>
     </nav>
     <div class="container py-16 max-w-5xl">
-      <h1 class="font-display text-[clamp(2rem,4vw,2.75rem)] font-semibold mb-10 text-text">Datenschutzerklärung</h1>
+      <h1 class="font-display text-[1.625rem] min-[360px]:text-[2rem] md:text-[2.75rem] font-semibold mb-10 text-text break-words hyphens-auto">Datenschutzerklärung</h1>
 
       <div class="bento-page-grid text-[.9375rem] text-text-muted leading-[1.7]">
         <section class="bento-tile bento-tile--half">
@@ -68,27 +67,50 @@ const webFormConfigured = !!import.meta.env.PUBLIC_WEB3FORMS_KEY;
             Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten
             Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
           </p>
-          <h3 class="font-semibold text-text mb-1 mt-4">Bewerbungsformular</h3>
+          <h3 class="font-semibold text-text mb-1 mt-4">Bewerbungsanfragen über LogopädieJobs.de</h3>
           <p>
-            Wir verarbeiten Ihre Angaben (Name, Kontaktdaten, Nachricht und freiwillig übermittelte Unterlagen),
+            Wenn Sie das Bewerbungsformular auf LogopädieJobs.de nutzen, werden Ihre Angaben über Vercel an unser
+            bei STRATO betriebenes Praxispostfach übermittelt. Wir verarbeiten Name, Kontaktdaten und eine
+            freiwillige Nachricht,
             soweit dies für die Entscheidung über die Begründung eines Beschäftigungsverhältnisses erforderlich ist
-            (§ 26 Abs. 1 BDSG). Ein Lebenslauf ist für den Erstkontakt freiwillig.
+            (§ 26 Abs. 1 BDSG). Für den Erstkontakt genügen Ihr Name und eine Rückkontaktmöglichkeit; ein Lebenslauf
+            ist nicht erforderlich.
           </p>
-          {webFormConfigured ? (
-            <p class="mt-2">Das Formular übermittelt Ihre Angaben über Web3Forms an unser E-Mail-Postfach.
-              Informationen des Anbieters: <a href="https://web3forms.com/privacy" class="text-primary underline">Web3Forms-Datenschutz</a>.
-            </p>
-          ) : (
-            <p class="mt-2">Das Formular bereitet eine E-Mail in Ihrem E-Mail-Programm vor. Erst wenn Sie diese
-              dort absenden, wird Ihre Bewerbung an info@logopaedie-simsek.de übermittelt. Sie können uns auch
-              direkt per E-Mail kontaktieren. Für den Versand gelten zusätzlich die Datenschutzbedingungen Ihres E-Mail-Anbieters.
-            </p>
-          )}
           <p class="mt-2">Unser Praxispostfach wird bei STRATO betrieben. Die Bearbeitung erfolgt durch die dafür
             zuständigen Personen in der Praxis. Unnötige Arbeitskopien werden nach Gebrauch gelöscht.
             Daten erfolgloser oder zurückgezogener Bewerbungen werden spätestens sechs Monate nach Abschluss
             des Verfahrens gelöscht. Es wird kein Talentpool angelegt. Bei einer Einstellung werden erforderliche
             Angaben für das Beschäftigungsverhältnis weiterverarbeitet.
+          </p>
+          <p class="mt-2">Für Bewerbungen ist das gesonderte Postfach
+            <a href="mailto:social@logopaedie-simsek.de" class="text-primary underline">social@logopaedie-simsek.de</a>
+            vorgesehen. Das allgemeine Praxispostfach bleibt für Praxis- und Patient:innenanliegen bestehen.</p>
+          <h3 class="font-semibold text-text mb-1 mt-4">WhatsApp für Bewerbungen</h3>
+          <p>
+            Der Link „WhatsApp für Bewerbungen“ wird ausschließlich auf den Karriereflächen dieser Website
+            angeboten und öffnet freiwillig WhatsApp. Er dient ausschließlich der Kommunikation über Bewerbungen;
+            die Nutzung ist nicht erforderlich. Alternativ können Sie das Bewerbungsformular auf LogopädieJobs.de,
+            Telefon oder E-Mail nutzen. Dieser Kanal dient nicht der Patient:innenkommunikation. Bitte senden Sie
+            darüber keine Gesundheitsdaten, Therapiedetails oder Terminwünsche.
+          </p>
+          <p class="mt-2">
+            Wir verarbeiten die im Chat mitgeteilten Kontaktdaten und Inhalte sowie freiwillig übermittelte Dateien,
+            soweit dies für die Entscheidung über die Begründung eines Beschäftigungsverhältnisses erforderlich ist
+            (§ 26 Abs. 1 BDSG). Regelmäßigen Zugriff auf die Inhalte hat ausschließlich Emel Şimşek-Uçar. Die
+            Verarbeitung erfolgt für die Dauer des Bewerbungsverfahrens; nach Absage oder Rückzug werden Chats und
+            freiwillige Anhänge spätestens nach sechs Monaten auf kontrollierten Geräten, aus Downloads und aus
+            technisch beeinflussbaren Backups gelöscht.
+          </p>
+          <p class="mt-2">
+            Anbieter von WhatsApp für Personen im Europäischen Wirtschaftsraum ist WhatsApp Ireland Limited;
+            WhatsApp gehört zur Meta-Unternehmensgruppe. Dabei können Nutzungs-, Geräte- und
+            Verbindungsdaten sowie Chatdaten durch WhatsApp verarbeitet und auch international übermittelt werden.
+            Informationen dazu finden Sie in der
+            <a href="https://www.whatsapp.com/legal/privacy-policy-eea" class="text-primary underline">Datenschutzrichtlinie von WhatsApp</a>
+            und in den
+            <a href="https://www.whatsapp.com/legal/business-terms" class="text-primary underline">WhatsApp Business Terms</a>.
+            Die Hinweise zu unserer Facebook-Seite in Abschnitt 9 gelten nicht als Rechtsgrundlage für diesen
+            Bewerbungsweg.
           </p>
           <h3 class="font-semibold text-text mb-1 mt-4">Server-Log-Dateien</h3>
           <p>
@@ -200,8 +222,8 @@ const webFormConfigured = !!import.meta.env.PUBLIC_WEB3FORMS_KEY;
             Zugriff haben die mit der Seitenbetreuung befassten Personen der Praxis. Öffentliche Kommentare und
             Reaktionen sind auch für andere Personen sichtbar. Bitte veröffentlichen oder senden Sie über Facebook
             keine Gesundheitsdaten, Therapiedetails oder Bewerbungsunterlagen. Termine vereinbaren Sie ausschließlich
-            telefonisch; für Bewerbungen nutzen Sie bitte die Kontaktmöglichkeiten auf unserer
-            <a href="/karriere/#bewerbung" class="text-primary underline">Karriereseite</a>.
+            telefonisch; für Bewerbungen nutzen Sie bitte das zentrale Kontaktformular auf der
+            <a href="https://xn--logopdiejobs-kcb.de/jobs/logopaedin-sprachtherapeut-duisburg/#bewerbung" class="text-primary underline">konkreten Stellenanzeige auf LogopädieJobs.de</a>.
             Eine Nutzung von Facebook ist dafür nicht erforderlich.
           </p>
 

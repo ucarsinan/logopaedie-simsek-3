@@ -3,10 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import BewerbungForm from '../components/BewerbungForm.astro';
+import RecruitingWhatsAppLink from '../components/RecruitingWhatsAppLink.astro';
+import { RECRUITING_EMAIL, RECRUITING_EMAIL_HREF, RECRUITING_PHONE_DISPLAY, RECRUITING_PHONE_HREF } from '../lib/recruiting-whatsapp.mjs';
+import { useTranslations } from '../i18n/index';
 
 const siteUrl = 'https://logopaedie-simsek.de';
-const applyHref = `mailto:info@logopaedie-simsek.de?subject=${encodeURIComponent('Unverbindliches Kennenlernen – Logopädie / Sprachtherapie')}&body=${encodeURIComponent('Hallo Frau Şimşek-Uçar,\n\nich interessiere mich für eine Stelle in Ihrer Praxis und würde Sie und das Team gern unverbindlich kennenlernen.\n\nViele Grüße\n')}`;
+const applicationUrl = 'https://xn--logopdiejobs-kcb.de/jobs/logopaedin-sprachtherapeut-duisburg/#bewerbung';
+const careerPage = useTranslations('de').career_page;
 
 const jobSchema = {
   "@context": "https://schema.org",
@@ -36,7 +39,7 @@ const jobSchema = {
       "addressCountry": "DE"
     }
   },
-  ...(import.meta.env.PUBLIC_WEB3FORMS_KEY ? { "directApply": true } : {}),
+  "directApply": true,
   "employmentType": ["FULL_TIME", "PART_TIME"],
   "baseSalary": {
     "@type": "MonetaryAmount",
@@ -66,21 +69,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 1, "name": "Startseite", "item": `${siteUrl}/` },
     { "@type": "ListItem", "position": 2, "name": "Karriere", "item": `${siteUrl}/karriere/` }
   ]
-};
-
-const formLabels = {
-  name: "Name",
-  contact: "Telefon oder E-Mail",
-  message: "Kurze Nachricht (optional)",
-  submit: "Bewerbung absenden",
-  mail_submit: "E-Mail vorbereiten",
-  mail_hint: "Der Button öffnet einen Entwurf in deiner Mail-App. Bitte sende die E-Mail dort selbst ab. Erst dann erreicht uns deine Bewerbung.",
-  sending: "Wird gesendet …",
-  success_title: "Danke für deine Bewerbung!",
-  success_text: "Danke! Wir melden uns persönlich bei dir.",
-  error_text: "Das hat leider nicht geklappt. Bitte versuche es erneut oder schreib direkt an info@logopaedie-simsek.de.",
-  privacy_before: "Wir verarbeiten deine Angaben zur Bearbeitung deiner Bewerbung. Details in der",
-  privacy_link: "Datenschutzerklärung",
 };
 
 const benefits = [
@@ -135,8 +123,8 @@ const benefits = [
           </div>
           <h1 class="bento-hero__title"><span class="sr-only">Logopädin / Logopäde / Sprachtherapeutin / Sprachtherapeut (m/w/d) gesucht – Praxis für Logopädie Şimşek Duisburg: </span>Karriere bei #TeamSimsek</h1>
           <p class="bento-hero__subtitle">Wir suchen mehrere Logopäd:innen und Sprachtherapeut:innen für unbefristete Stellen in Duisburg-Mitte – mit 23–26 € brutto pro Stunde, je nach Erfahrung.</p>
-          <a href={applyHref} class="bento-cta-btn">
-            Jetzt bewerben
+          <a href={applicationUrl} class="bento-cta-btn" target="_blank" rel="noopener">
+            Unverbindlich Kontakt aufnehmen
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14 0M12 5l7 7-7 7"/></svg>
           </a>
           <div class="bento-hero__deco" aria-hidden="true"></div>
@@ -260,16 +248,20 @@ const benefits = [
             <div class="bento-apply__left">
               <div class="bento-section-tag bento-section-tag--light">Bewerbung</div>
               <h2 class="bento-apply__title">Jetzt durchstarten</h2>
-              <p class="bento-apply__sub">Drei Felder reichen – ein Lebenslauf ist freiwillig. Du kannst dich außerdem telefonisch, per E-Mail oder per Post melden.</p>
-              <BewerbungForm labels={formLabels} mailSubject="Unverbindliches Kennenlernen – Logopädie / Sprachtherapie" />
-              <div class="bento-apply__actions" hidden>
-                <a href={applyHref} class="apply-btn apply-btn--primary">
+              <p class="bento-apply__sub">Für den Erstkontakt genügen dein Name und eine Rückkontaktmöglichkeit – ein Lebenslauf ist nicht erforderlich.</p>
+              <div class="bento-apply__actions">
+                <a href={applicationUrl} class="apply-btn apply-btn--primary" target="_blank" rel="noopener">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  Bewerbung senden
+                  Unverbindlich Kontakt aufnehmen
                 </a>
-                <a href="tel:+4920334868690" class="apply-btn apply-btn--outline">
+                <RecruitingWhatsAppLink label={careerPage.application_whatsapp_cta} />
+                <a href={RECRUITING_PHONE_HREF} class="apply-btn apply-btn--outline">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.15 3.4 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
-                  0203 – 34 86 86 90
+                  Jetzt anrufen
+                </a>
+                <a href={RECRUITING_EMAIL_HREF} class="apply-btn apply-btn--outline">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  E-Mail schreiben
                 </a>
               </div>
             </div>
@@ -291,11 +283,11 @@ const benefits = [
                   </div>
                   <div class="contact-row">
                     <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.15 3.4 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
-                    <span>0203 – 34 86 86 90</span>
+                    <span>{RECRUITING_PHONE_DISPLAY}</span>
                   </div>
                   <div class="contact-row">
                     <svg class="contact-row__ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <span>info@logopaedie-simsek.de</span>
+                    <span>{RECRUITING_EMAIL}</span>
                   </div>
                 </div>
               </div>
@@ -656,6 +648,7 @@ const benefits = [
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    min-height: 44px;
     font-size: 0.875rem;
     font-weight: 600;
     padding: 0.7rem 1.375rem;
@@ -668,6 +661,10 @@ const benefits = [
       transform 0.18s ease,
       box-shadow 0.18s ease;
     white-space: nowrap;
+  }
+  .apply-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
   }
   .apply-btn--primary {
     background: var(--color-primary);
@@ -870,6 +867,22 @@ const benefits = [
     .bento-portal,
     .bento-apply,
     .bento-note { grid-column: span 1; }
+    .bento-card,
+    .bento-hero,
+    .bento-apply { padding: 1.25rem; }
+    .bento-cta-btn,
+    .apply-btn {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
+      line-height: 1.4;
+    }
+    .bento-cta-btn { flex-wrap: wrap; }
+    .bento-apply__actions {
+      width: 100%;
+      flex-direction: column;
+    }
     .bento-portal__features { grid-template-columns: repeat(2, 1fr); }
     .benefits-inner-grid { grid-template-columns: 1fr; }
     .benefit-item {

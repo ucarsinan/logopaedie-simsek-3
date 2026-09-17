@@ -1,0 +1,66 @@
+---
+import { WHATSAPP_HREF } from '../lib/recruiting-whatsapp.mjs';
+
+interface Props {
+  label?: string;
+  class?: string;
+  href?: string;
+}
+
+const {
+  label = 'WhatsApp für Bewerbungen',
+  class: className = '',
+  href = WHATSAPP_HREF,
+} = Astro.props;
+const classes = ['recruiting-whatsapp-button', className].filter(Boolean).join(' ');
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={label}
+  class={classes}
+>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M20 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-3.8-1L3 20l1.2-4a8.5 8.5 0 1 1 15.8-4.5Z"/>
+    <path d="M9.3 8.8c.2-.5.4-.5.7-.5h.4c.2 0 .5 0 .6.5l.6 1.5c.1.2.1.5 0 .7l-.5.7c.4.8 1 1.4 1.8 1.8l.7-.5c.2-.1.5-.1.7 0l1.5.6c.5.2.5.4.5.6v.4c0 .3 0 .5-.5.7-.5.2-1.6.3-3-.3-1-.4-2.2-1.5-2.6-2.5-.6-1.4-.5-2.5-.3-3Z"/>
+  </svg>
+  <slot>{label}</slot>
+</a>
+
+<style>
+  .recruiting-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    background: #25d366;
+    color: #102118;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.18s, transform 0.18s;
+  }
+
+  .recruiting-whatsapp-button:hover {
+    background: #20bd5c;
+    transform: translateY(-1px);
+  }
+
+  .recruiting-whatsapp-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 640px) {
+    .recruiting-whatsapp-button {
+      width: 100%;
+    }
+  }
+</style>
