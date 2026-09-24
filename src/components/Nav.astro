@@ -86,7 +86,7 @@ const isCurrent = (href: string) => {
 
 <!-- Mobile menu (slide-down) -->
 <div
-  class="fixed left-0 right-0 bg-surface z-[999] border-b border-border shadow-md top-[calc(var(--header-h)+var(--nav-h))] transition-[max-height,opacity] duration-300 ease-in-out max-h-0 opacity-0 overflow-hidden data-[open=true]:max-h-[500px] data-[open=true]:opacity-100"
+  class="fixed left-0 right-0 bg-surface z-[999] border-b border-border shadow-md top-[calc(var(--header-h)+var(--nav-h))] transition-[max-height,opacity] duration-300 ease-in-out max-h-0 opacity-0 overflow-x-hidden overflow-y-auto overscroll-contain data-[open=true]:max-h-[calc(100dvh-var(--header-h)-var(--nav-h))] data-[open=true]:opacity-100"
   id="mobileMenu"
   data-open="false"
   role="navigation"
@@ -116,7 +116,7 @@ const isCurrent = (href: string) => {
         <a
           href={normalizedAlternateUrl}
           tabindex="-1"
-          class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-[6px] border border-border text-[.8125rem] font-semibold tracking-[.06em] uppercase text-text-muted hover:text-primary hover:border-primary transition-colors duration-200"
+          class="inline-flex items-center justify-center gap-2 w-full min-h-11 py-2.5 rounded-[6px] border border-border text-[.8125rem] font-semibold tracking-[.06em] uppercase text-text-muted hover:text-primary hover:border-primary transition-colors duration-200"
           aria-label={`${th.lang_short} – ${th.lang_title}: ${th.lang_label}`}
           title={th.lang_title}
         >
@@ -131,6 +131,7 @@ const isCurrent = (href: string) => {
 <style>
   .nav-link {
     display: inline-flex;
+    min-height: 44px;
     align-items: center;
     gap: 6px;
     padding: 6px 12px;
@@ -158,7 +159,7 @@ const isCurrent = (href: string) => {
   .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: 0;
     left: 12px;
     right: 12px;
     height: 2px;

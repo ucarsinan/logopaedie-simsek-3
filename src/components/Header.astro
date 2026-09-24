@@ -65,6 +65,12 @@ const normalizedAlternateUrl = alternateUrl && !alternateUrl.includes('#') && !a
   </div>
 </header>
 
+<style>
+  header a {
+    min-height: 44px;
+  }
+</style>
+
 <script>
   // Apply correct shadow on every navigation (scroll position may differ)
   document.addEventListener('astro:page-load', () => {
