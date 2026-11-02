@@ -56,7 +56,7 @@ export const tr: Translations = {
     appointment: "Randevu için arayın",
     cta_heading: "İlk adım için hazır mısınız?",
     cta_text:
-      "Duisburg'daki muayenehanemizde Almanca veya Türkçe görüşme için bizi arayın.",
+      "Lütfen şikâyetlerinizin önce bir hekim tarafından değerlendirilmesini sağlayın. Dil ve konuşma terapisi gerekiyorsa, hekim Heilmittelverordnung (dil ve konuşma terapisi için hekim reçetesi) düzenlenip düzenlenmeyeceğine karar verir. Muayenehanemizde dil ve konuşma terapisine yönelik bireysel danışmanlık, logopedik değerlendirme ve tedavi yalnızca bu reçete mevcut olduğunda yapılır. Randevu ve faturalandırmayla ilgili idari sorularınız için reçete almadan önce de bizi Almanca veya Türkçe telefonla arayabilirsiniz.",
     cta_button: "Randevu için arayın",
     more_info: "Daha fazla bilgi",
     related_heading: "Diğer terapi alanları",
@@ -393,7 +393,7 @@ export const tr: Translations = {
       },
       {
         q: "Dil ve konuşma terapisi için reçete gerekli mi?",
-        a: "Sigorta kapsamındaki terapi için aile hekiminizden veya uzman hekiminizden Heilmittelverordnung (doktorun verdiği terapi reçetesi / tedavi reçetesi) almanız gerekir. Kendiniz ödeme yapmak isterseniz reçetesiz de randevu için arayabilirsiniz.",
+        a: "Lütfen şikâyetlerinizin önce bir hekim tarafından değerlendirilmesini sağlayın. Dil ve konuşma terapisi gerekiyorsa, hekim Heilmittelverordnung (dil ve konuşma terapisi için hekim reçetesi) düzenlenip düzenlenmeyeceğine karar verir. Muayenehanemizde dil ve konuşma terapisine yönelik bireysel danışmanlık, logopedik değerlendirme ve tedavi yalnızca bu reçete mevcut olduğunda yapılır. Randevu ve faturalandırmayla ilgili idari sorularınız için reçete almadan önce de bizi telefonla arayabilirsiniz.",
       },
       {
         q: "Sağlık sigortası dil ve konuşma terapisi masraflarını karşılar mı?",

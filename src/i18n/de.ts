@@ -54,7 +54,7 @@ export const de = {
     appointment: "Termin anfragen",
     cta_heading: "Bereit für den ersten Schritt?",
     cta_text:
-      "Vereinbaren Sie jetzt Ihr Erstgespräch in unserer Praxis in Duisburg – auf Deutsch oder Türkisch.",
+      "Bitte lassen Sie Beschwerden zuerst ärztlich abklären. Wenn Logopädie erforderlich ist, entscheidet die ärztliche Praxis über eine Heilmittelverordnung. Erst mit vorliegender Verordnung erfolgen individuelle logopädische Beratung, Diagnostik und Behandlung in unserer Praxis. Allgemeine Fragen zu Terminen und Abrechnung beantworten wir vorab telefonisch auf Deutsch oder Türkisch.",
     cta_button: "Termin anfragen",
     more_info: "Mehr erfahren",
     related_heading: "Weitere Therapiebereiche",
@@ -389,7 +389,7 @@ export const de = {
       },
       {
         q: "Brauche ich ein ärztliches Rezept für Logopädie?",
-        a: "Für eine kassenfinanzierte Therapie benötigen Sie eine Heilmittelverordnung (Rezept) von Ihrem Haus- oder Facharzt. Als Selbstzahler können Sie auch ohne Rezept einen Termin in unserer Praxis vereinbaren. Rufen Sie uns gerne an – wir beraten Sie.",
+        a: "Bitte lassen Sie Beschwerden zuerst ärztlich abklären. Wenn Logopädie erforderlich ist, entscheidet die ärztliche Praxis über eine Heilmittelverordnung. Erst mit vorliegender Verordnung erfolgen individuelle logopädische Beratung, Diagnostik und Behandlung in unserer Praxis. Allgemeine Fragen zu Terminen und Abrechnung beantworten wir vorab telefonisch.",
       },
       {
         q: "Übernimmt die Krankenkasse die Kosten der Therapie?",
