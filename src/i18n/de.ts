@@ -28,7 +28,7 @@ export const de = {
     home_href: "/",
   },
   footer: {
-    tagline: "Sprachtherapie Duisburg",
+    tagline: "Logopädie Duisburg",
     nav_label: "Footer-Navigation",
     links: {
       services: { label: "Therapie", href: "/therapie/" },
